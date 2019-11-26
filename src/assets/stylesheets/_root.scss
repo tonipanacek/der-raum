@@ -1,0 +1,43 @@
+:root {
+  --blue: $blue;
+  --red: $red;
+  --yellow: $yellow;
+  --green: $green;
+  --black: $black;
+  --white: $white;
+  --gray: $light;
+  --gray-dark: $dark;
+  --light: $light;
+  --dark: $dark;
+  --font-family-sans-serif: $main-font;
+  --font-family-monospace: $monospace-font;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $black;
+  text-align: left;
+  background-color: $white;
+}
