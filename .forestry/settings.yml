@@ -19,11 +19,11 @@ sections:
   label: Projekte
   create: all
   match: "**/*"
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: derRaum
+public_path: https://res.cloudinary.com/tonipanoche/image/upload/derRaum
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":filename, :year/:filename:"
 build:
   install_dependencies_command: npm install
   preview_docker_image: node:10
