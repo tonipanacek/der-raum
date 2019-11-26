@@ -5,13 +5,18 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: ''
-  label: Über
+  path: uber
+  label: Leistung
   create: all
   match: "**/*"
 - type: directory
-  path: ''
+  path: leistung
   label: Leistung
+  create: all
+  match: "**/*"
+- type: directory
+  path: projekte
+  label: Projekte
   create: all
   match: "**/*"
 upload_dir: uploads
