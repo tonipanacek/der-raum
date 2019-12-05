@@ -1,4 +1,12 @@
 ---
 label: Uber
 hide_body: false
-fields: []
+fields:
+- name: main_page
+  type: blocks
+  label: Main Page
+  template_types:
+  - image-and-text
+  config:
+    min: 
+    max: 
