@@ -9,6 +9,9 @@ sections:
   label: Uber
   create: all
   match: "**/*"
+  templates:
+  - image-and-text
+  - just-text
 - type: directory
   path: leistung
   label: Leistung
