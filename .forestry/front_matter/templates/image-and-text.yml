@@ -1,4 +1,25 @@
 ---
 label: Image and Text
 hide_body: true
-fields: []
+fields:
+- name: image_and_text
+  type: blocks
+  label: Image and Text
+  template_types: []
+  config:
+    min: 
+    max: 
+- name: main_image
+  type: file
+  config:
+    maxSize: 250
+  label: Main Image
+- name: main_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Main Text
