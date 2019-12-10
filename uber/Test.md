@@ -1,7 +1,7 @@
 ---
 main_page:
 - template: image-and-text
-  main_image: https://res.cloudinary.com/tonipanoche/image/upload/derRaum/v1574779801/derRaum/003_Kueche-Insel-Eiche-weiss-lackiert.gif
+  main_image: https://res.cloudinary.com/tonipanoche/image/upload/derRaum/v1575557644/derRaum/:filename%2C%20:year/derraum_-2049_pm2fwn.jpg
   main_text: Für dieses lichtdurchflutete Dachappartement in Berlin-Friedrichshain
     realisieren wir nach Plänen des Architekturbüros Club Marginal sämtliche Möbeleinbauten
     für Flurgarderobe, Küche, Schlaf- und Kinderzimmer, sowie Bad mit den jeweiligen
@@ -12,5 +12,8 @@ main_page:
     Ton in den Raum davor ab. Rundherum ein begeisterndes architektonisches Statement,
     zu dem wir in engster Zusammenarbeit beitragen konnten.
   image_and_text: []
+- template: image-and-text
+  main_image: ''
+  main_text: ''
 
 ---
