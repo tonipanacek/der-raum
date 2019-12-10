@@ -1,8 +1,8 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path:
-webhook_url:
+admin_path: 
+webhook_url: 
 sections:
 - type: directory
   path: uber
@@ -30,11 +30,9 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: 'derRaum/:filename:'
 build:
-  preview_docker_image: node:10
+  preview_output_directory: public
   install_dependencies_command: yarn install
-  instant_preview_command: npm run forestry:preview
+  preview_docker_image: node:10
   mount_path: "/srv"
-  working_dir: "/srv/src"
-  preview_output_directory: "src/dist"
-  preview_env:
-  - ENV=staging
+  working_dir: "/srv"
+  instant_preview_command: npm run forestry:preview
