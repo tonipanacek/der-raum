@@ -1,0 +1,36 @@
+@import "color";
+
+$border-width: 0.3em;
+
+@function border($key) {
+  // Create a `color` function to easily get any color value, i.e, `color(brand)`
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@each $name, $color in $colors {
+  // Create foreground and background utility classes automatically for every color
+ .border\:#{"" + $name}, .b\:#{"" + $name} {
+   border: $color $border-width solid !important;
+  }
+
+ .border-top\:#{"" + $name}, .bt\:#{"" + $name} {
+   border-top: $color $border-width solid !important;
+  }
+
+ .border-bottom\:#{"" + $name}, .bb\:#{"" + $name} {
+   border-bottom: $color $border-width solid !important;
+  }
+
+ .border-left\:#{"" + $name}, .bb\:#{"" + $name} {
+   border-left: $color $border-width solid !important;
+  }
+
+ .border-right\:#{"" + $name}, .bb\:#{"" + $name} {
+   border-right: $color $border-width solid !important;
+  }
+}

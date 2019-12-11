@@ -1,0 +1,49 @@
+$colors: (
+  black: #333333,
+  dark: #5D5D5D,
+  light: #B3B3B3,
+  blue: #182E3D,
+  red: #FB5356,
+  yellow: #F5CB5C,
+  green: #71BF5D,
+  pink: #F9CAD2,
+  white: white
+);
+
+@function color($key) {
+  // Create a `color` function to easily get any color value, i.e, `color(brand)`
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@each $name, $color in $colors {
+  // Create foreground and background utility classes automatically for every color
+ .color\:#{"" + $name}, .c\:#{"" + $name} {
+   color: $color !important;
+  }
+
+  .background\:#{"" + $name}, .bg\:#{"" + $name} {
+    background-color: $color !important;
+  }
+
+  .fill\:#{"" + $name}, .f\:#{"" + $name} {
+    // Creates a 50% opacity fill of the specified color—good for overlays on map
+    fill: $color !important;
+  }
+
+  .fill\:#{"" + $name}\:light, .f\:#{"" + $name}\:l, .f\:#{"" + $name}\:light{
+    // Creates a 50% opacity fill of the specified color—good for overlays on map
+    fill: rgba($color, 0.5) !important;
+  }
+}
+
+// Use `"" + $name` to prevent "did you mean to interpolate" SCSS error message
+
+body {
+  color: color(dark);
+  background-color: color(white);
+}

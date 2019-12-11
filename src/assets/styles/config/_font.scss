@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+$fonts: (
+  main: (Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
+  header: (Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
+);
+
+@function font($key) {
+  // Create a `font` function to easily get any font value, i.e, `font(brand)`
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $fonts.";
+  @return null;
+}
+
+@each $name, $font in $fonts {
+  // Create font utility classes
+ .font\:#{$name}, .c\:#{$name} {
+   font-family: $font !important;
+  }
+}
+
+@mixin smallCaps {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+body {
+  font-family: font(main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: font(header);
+}
+
+code, pre {
+  font-family: font(main);
+}

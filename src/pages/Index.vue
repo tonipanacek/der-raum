@@ -1,29 +1,30 @@
 <template>
   <Layout>
     <Container>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <h1>Hello, world!</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-  </Container>
+      <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+      <h1>Hallo, welt!</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+      </p>
+      <div class="home-images flex">
+        <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557304/derRaum/:filename%2C%20:year/derraum_-1436_qidbrs.jpg"/>
+        <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557480/derRaum/:filename%2C%20:year/derraum_-1096_bkzaxm.jpg"/>
+        <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557644/derRaum/:filename%2C%20:year/derraum_-2049_pm2fwn.jpg""/>
+      </div>
+    </Container>
   </Layout>
 </template>
 
 <script>
-import Container from '~/components/Container';
-export default {
-  metaInfo: {
-    title: 'Der Raum'
-  },
-  components: {
-    Container
+  import Container from '~/components/Container';
+  export default {
+    metaInfo: {
+      title: 'Der Raum'
+    },
+    components: {
+      Container
+    }
   }
-}
 </script>
 
 <style>

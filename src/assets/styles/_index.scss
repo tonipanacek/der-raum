@@ -1,0 +1,19 @@
+@import 'config/index';
+@import 'helpers/index';
+
+
+// Global styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  margin: 0;
+}

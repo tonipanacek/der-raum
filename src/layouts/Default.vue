@@ -1,12 +1,12 @@
 <template>
   <div class="layout">
-    <Stack id="right-sidebar">
+    <Stack id="left-sidebar">
       <Navbar />
     </Stack>
     <main class="main">
       <slot/>
     </main>
-    <Stack id="left-sidebar">
+    <Stack id="right-sidebar">
       <div>
         <p>De/En</p>
       </div>
@@ -32,9 +32,11 @@ export default {
 }
 .main{
   width: 60%;
+  flex-grow: 1;
   padding-bottom: $stack-space;
 }
-#right-sidebar {
+#left-sidebar {
   padding: $stack-space $stack-space * 3;
+  width: 40ch;
 }
 </style>

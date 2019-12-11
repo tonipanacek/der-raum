@@ -1,0 +1,25 @@
+$shadows: (
+  light: 0 1px 18px rgba(0,0,0,0.08),
+  dark: 0 3px 18px rgba(0,0,0,0.15)
+);
+
+@function shadow($key) {
+  // Create a `shadow` function to easily get any shadow value, i.e, `shadow(brand)`
+  @if map-has-key($shadows, $key) {
+    @return map-get($shadows, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $shadows.";
+  @return null;
+}
+
+@each $name, $shadow in $shadows {
+  // Create shadow utility classes
+ .box-shadow\:#{$name}, .bs\:#{$name} {
+   box-shadow: $shadow !important;
+  }
+
+ .text-shadow\:#{$name}, .ts\:#{$name} {
+   text-shadow: $shadow !important;
+  }
+}
