@@ -1,13 +1,19 @@
 // Flex
 .flex{
+  display: flex;
   &-center, &-centered{
-    display: flex;
     justify-content: center;
     align-items: center;
   }
   &-left{
-    display: flex;
     justify-content: left;
+    align-items: center;
+  }
+  &-column{
+    flex-direction: column;
+  }
+  &-sb {
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -30,6 +36,19 @@
 }
 
 // Title
+
+/* the mixin (simplified version) */
+@mixin pseudo($type) {
+
+    content: "";
+    position: absolute;
+    display: block;
+    // width: 100%;
+    @if($type == width) {
+        width: 60%;
+    }
+}
+
 .title{
   text-transform: uppercase;
   font-weight: 300;
@@ -40,6 +59,14 @@
   margin: spacing(sm) 0;
   text-decoration: none;
   color: color(dark);
+  position: relative;
+  // &::after {
+  //   @include pseudo(width);
+  //   height: 2px;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-color: color(light);
+  // }
 }
 
 

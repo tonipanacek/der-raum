@@ -12,9 +12,6 @@ export default {
 
 <style lang="scss">
   .container{
-    max-width: $container-min-width;
-    // margin: 0 auto;
-    // flex-basis: $container-min-width;
     flex-grow: 1;
     flex-shrink: 1;
   }
