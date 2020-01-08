@@ -45,3 +45,5 @@ fields:
     schema:
       format: markdown
   label: German Description
+pages:
+- content/about/team.md
