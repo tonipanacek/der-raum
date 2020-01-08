@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: 'Stack'
-}
+  name: 'Stack',
+};
 </script>
 
 <style lang="scss">

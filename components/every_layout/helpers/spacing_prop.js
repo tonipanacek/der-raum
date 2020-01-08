@@ -2,9 +2,9 @@ export default {
   spacing: {
     type: String,
     default: 'sm',
-    validator (value) {
+    validator(value) {
       // The value must match one of these strings
-      return ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
-    }
-  }
-}
+      return ['xs', 'sm', 'md', 'lg', 'xl'].includes(value);
+    },
+  },
+};

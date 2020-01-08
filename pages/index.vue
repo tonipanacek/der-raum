@@ -9,16 +9,16 @@
 </template>
 
 <script>
-import Container from '~/components/Container'
+import Container from '~/components/Container';
 
 export default {
   metaInfo: {
-    title: 'Der Raum'
+    title: 'Der Raum',
   },
   components: {
-    Container
-  }
-}
+    Container,
+  },
+};
 </script>
 
 <style scoped lang="scss">

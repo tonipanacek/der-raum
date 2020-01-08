@@ -5,18 +5,18 @@
 </template>
 
 <script>
-import spacingProp from './helpers/spacing_prop'
+import spacingProp from './helpers/spacing_prop';
 
 export default {
   name: 'LBox',
   props: {
     invert: {
       type: Boolean,
-      default: false
+      default: false,
     },
-    ...spacingProp
-  }
-}
+    ...spacingProp,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

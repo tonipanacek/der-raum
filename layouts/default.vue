@@ -15,22 +15,28 @@
             En
           </nuxt-link>
         </p>
-        <p><nuxt-link :to="localePath('legal')">Legal</nuxt-link> / <nuxt-link :to="localePath('privacy')">Privacy</nuxt-link></p>
+        <p>
+          <nuxt-link :to="localePath('legal')">
+            Legal
+          </nuxt-link> / <nuxt-link :to="localePath('privacy')">
+            Privacy
+          </nuxt-link>
+        </p>
       </div>
     </Stack>
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue'
-import Stack from '~/components/Stack.vue'
+import Navbar from '~/components/Navbar.vue';
+import Stack from '~/components/Stack.vue';
 
 export default {
   components: {
     Navbar,
-    Stack
-  }
-}
+    Stack,
+  },
+};
 </script>
 
 <style scoped lang="scss">
