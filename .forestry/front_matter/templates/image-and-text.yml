@@ -48,3 +48,4 @@ fields:
   label: English Description
 pages:
 - content/about/team.md
+- content/services/design.md
