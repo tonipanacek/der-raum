@@ -1,6 +1,7 @@
 ---
 label: Image and Text
 hide_body: true
+display_field: de_title
 fields:
 - name: title
   type: text
