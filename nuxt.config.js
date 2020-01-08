@@ -56,11 +56,13 @@ export default {
     locales: [
       {
         code: 'en',
-        file: 'en.js'
+        file: 'en.js',
+        iso: 'en-US'
       },
       {
         code: 'de',
-        file: 'de.js'
+        file: 'de.js',
+        iso: 'de-DE'
       }
     ],
     strategy: 'prefix_except_default',
