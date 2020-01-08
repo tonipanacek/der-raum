@@ -24,3 +24,5 @@ fields:
       format: markdown
   description: Description for the page
   label: Description
+pages:
+- content/de/about/team.md
