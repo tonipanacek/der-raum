@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/de/about
+  path: content/about
   label: Uber
   create: documents
   match: "**/*"
@@ -13,14 +13,14 @@ sections:
   - image-and-text
   - just-text
 - type: directory
-  path: leistung
+  path: content/services
   label: Leistung
   create: documents
   match: "**/*"
   templates:
   - leistung
 - type: directory
-  path: projekte
+  path: content/projects
   label: Projekte
   create: all
   match: "**/*"
