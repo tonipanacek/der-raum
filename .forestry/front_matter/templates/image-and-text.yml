@@ -39,5 +39,3 @@ fields:
     schema:
       format: markdown
   label: German Description
-pages:
-- content/de/about/team.md

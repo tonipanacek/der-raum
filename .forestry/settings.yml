@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: content/rooms
+  label: Räume
+  create: all
+  match: "**/*"
+  templates:
+  - image-and-text
+- type: directory
   path: content/about
   label: Uber
   create: documents
