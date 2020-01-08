@@ -63,6 +63,7 @@ export default {
         file: 'de.js'
       }
     ],
+    strategy: 'prefix_except_default',
     defaultLocale: 'de',
     vueI18n: {
       fallbackLocale: 'de'

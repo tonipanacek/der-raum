@@ -11,7 +11,7 @@
         <p>
           <nuxt-link :to="switchLocalePath('de')">
             De
-          </nuxt-link> / <nuxt-link :to="switchLocalePath('de')">
+          </nuxt-link> / <nuxt-link :to="switchLocalePath('en')">
             En
           </nuxt-link>
         </p>
@@ -37,6 +37,19 @@ export default {
 .layout {
   margin-top: spacing(lg);
 }
+
+a, a:hover, a:focus, a:visited {
+  transition: color 500ms ease;
+  text-decoration: none;
+  color: color(light);
+  &:hover {
+    color: darken(color(light), 10%);
+  }
+  &.nuxt-link-exact-active {
+    color: color(dark);
+  }
+}
+
 .main{
   flex-grow: 1;
   padding-bottom: $stack-space;
