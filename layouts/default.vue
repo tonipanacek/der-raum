@@ -28,15 +28,15 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue';
-import Stack from '~/components/Stack.vue';
+import Navbar from '~/components/Navbar'
+import Stack from '~/components/Stack'
 
 export default {
   components: {
     Navbar,
-    Stack,
-  },
-};
+    Stack
+  }
+}
 </script>
 
 <style scoped lang="scss">

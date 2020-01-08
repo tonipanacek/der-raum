@@ -3,6 +3,6 @@ export default {
     projects: 'Projects',
     services: 'Services',
     about: 'About',
-    contact: 'Contact',
-  },
-};
+    contact: 'Contact'
+  }
+}

@@ -9,11 +9,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ],
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
   /*
   ** Customize the progress-bar color
@@ -34,7 +34,7 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
@@ -43,13 +43,13 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    'nuxt-i18n',
+    'nuxt-i18n'
   ],
   // SCSS resources
   styleResources: {
     scss: [
-      'assets/styles/main.scss',
-    ],
+      'assets/styles/main.scss'
+    ]
   },
   // Localization
   i18n: {
@@ -57,26 +57,26 @@ export default {
       {
         code: 'en',
         file: 'en.js',
-        iso: 'en-US',
+        iso: 'en-US'
       },
       {
         code: 'de',
         file: 'de.js',
-        iso: 'de-DE',
-      },
+        iso: 'de-DE'
+      }
     ],
     strategy: 'prefix_except_default',
     defaultLocale: 'de',
     vueI18n: {
-      fallbackLocale: 'de',
+      fallbackLocale: 'de'
     },
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
+      cookieKey: 'i18n_redirected'
     },
     seo: true,
     lazy: true,
-    langDir: 'lang/',
+    langDir: 'lang/'
   },
   /*
   ** Axios module configuration
@@ -91,7 +91,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-    },
-  },
-};
+    extend (config, ctx) {
+    }
+  }
+}

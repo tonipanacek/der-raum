@@ -37,14 +37,14 @@
 </template>
 
 <script>
-import Stack from '~/components/Stack.vue';
+import Stack from '~/components/Stack'
 
 export default {
   name: 'Navbar',
   components: {
-    Stack,
-  },
-};
+    Stack
+  }
+}
 </script>
 
 <style lang="scss">
