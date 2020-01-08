@@ -2,12 +2,19 @@
 label: Image and Text
 hide_body: true
 fields:
-- name: main_image
+- name: image
   type: file
   config:
     maxSize: 250
-  label: Main Image
-- name: main_text
+  label: Image
+  description: Solo image for the page
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Title for the page -- shown before the description
+- name: description
   type: textarea
   default: ''
   config:
@@ -15,4 +22,5 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Main Text
+  description: Description for the page
+  label: Description
