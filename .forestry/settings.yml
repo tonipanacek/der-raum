@@ -13,7 +13,7 @@ sections:
   - image-and-text
 - type: directory
   path: content/about
-  label: Uber
+  label: Über
   create: documents
   match: "**/*"
   templates:
