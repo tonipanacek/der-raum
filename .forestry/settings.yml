@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: uber
+  path: content/de/about
   label: Uber
   create: documents
   match: "**/*"
