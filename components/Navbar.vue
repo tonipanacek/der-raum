@@ -57,12 +57,12 @@ export default {
     .nav-item {
       transition: color 500ms ease;
       &:hover {
-        color: darken(color(light), 10%);
+        color: color(dark);
       }
     }
 
     .nuxt-link-exact-active {
-      color: color(dark);
+      color: color(black);
       font-weight: 600;
       &:hover {
         color: color(dark);
