@@ -18,19 +18,20 @@ sections:
   match: "**/*"
   templates:
   - image-and-text
-  - just-text
 - type: directory
   path: content/services
   label: Leistung
   create: documents
   match: "**/*"
   templates:
-  - leistung
+  - image-and-text
 - type: directory
   path: content/projects
   label: Projekte
   create: all
   match: "**/*"
+  templates:
+  - image-and-text
 upload_dir: derRaum
 public_path: https://res.cloudinary.com/tonipanoche/image/upload/derRaum
 front_matter_path: ''
