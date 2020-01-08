@@ -1,20 +1,32 @@
 {
   "name": "der-raum",
+  "version": "1.0.0",
+  "description": "Landing page for Berlin-based interior design firm Der Raum",
+  "author": "Obst Digital",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "forestry:preview": "gridsome develop"
+    "develop": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@gridsome/source-filesystem": "^0.6.2",
-    "gh-pages": "^2.1.1",
-    "gridsome": "^0.6.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.3.1",
-    "sharp": "^0.23.0",
-    "style-resources-loader": "^1.2.1",
-    "vue-svg-loader": "^0.12.0"
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "node-sass": "^4.13.0",
+    "nuxt": "^2.0.0",
+    "nuxt-i18n": "^6.4.1",
+    "sass-loader": "^8.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-vue": "^6.1.2"
   }
 }
