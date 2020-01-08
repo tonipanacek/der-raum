@@ -1,16 +1,13 @@
 <template>
   <Layout>
     <div class="full-main">
-      <slot/>
+      <p>Partner 1</p>
+      <p>Partner 2</p>
+      <p>Partner 3</p>
+      <p>Partner 4</p>
     </div>
   </Layout>
 </template>
-
-<script>
-  export default {
-    name: 'Standard'
-  }
-</script>
 
 <style lang="scss">
   .full-main {

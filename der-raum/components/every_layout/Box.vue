@@ -1,14 +1,14 @@
 <template>
   <div class="`box ${spacing}`">
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <script>
-import spacingProp from './helpers/spacing_prop';
+import spacingProp from './helpers/spacing_prop'
 
 export default {
-  name: 'l-box',
+  name: 'LBox',
   props: {
     invert: {
       type: Boolean,
