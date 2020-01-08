@@ -1,7 +1,7 @@
 <template>
-  <article class="service">
-    <img :src="attrs.image" alt="Image of service">
-    <div class="service-text">
+  <article class="about">
+    <img :src="attrs.image" :alt="attrs.title">
+    <div class="about-text">
       <h1>
         {{ spacedTitle(t('title')) }}
       </h1>
@@ -19,7 +19,7 @@ export default {
     try {
       const slug = params.slug;
       // get current page data
-      const page = await import(`~/content/services/${slug}.md`);
+      const page = await import(`~/content/about/${slug}.md`);
       return {
         page,
         slug
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .service {
+  .about {
     max-width: 110ch;
     img, p {
       max-width: 110ch;

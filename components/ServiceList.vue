@@ -1,61 +1,66 @@
 <template>
-  <div class="services flex">
-      <div class="service">
-          <NuxtLink
-                v-for="service in sortedServices"
-                :key="service.attributes.title"
-                :to="`/blog/${formatSlug(service.attributes.title)}`"
-            >
-          <img :src="service.attributes.image" :alt="service.attributes.title">
-          <h3 class="service-title">{{ service.attributes.title }}</h3>
-          </NuxtLink>
-      </div>
-  </div>
+  <Cluster>
+    <div class="service-list">
+      <NuxtLink
+        v-for="service in sortedServices"
+        :key="service.attributes.title"
+        :to="`/services/${formatSlug(service.attributes.title)}`"
+        class="service-link"
+        :id="service.attributes.title"
+      >
+        <img :src="service.attributes.image" :alt="service.attributes.title">
+        <h3 class="service-title">
+          {{ service.attributes.title }}
+        </h3>
+      </NuxtLink>
+    </div>
+  </Cluster>
 </template>
 
 <script>
-    export default {
-        props: {
-            services: {
-                type: Array,
-                required: true
-            }
-        },
-        computed: {
-            sortedServices() {
-                const sortedServices = this.services
-                sortedServices.sort((a,b) => {
-                    const dateA = new Date(a.attributes.date);
-                    const dateB = new Date(b.attributes.date);
-                    if (a.attributes.position < b.attributes.position) {
-                        return 1;
-                    }
-                    if (a.attributes.position > b.attributes.position) {
-                        return -1;
-                    }
-                    return 0;
-                })
-                return sortedServices
-            }
-        },
-        methods: {
-            formatSlug(title) {
-                const regex = / /gi;
-                return title.toLowerCase().trim().replace(regex, "-")
-            }
-        }
+import Cluster from '~/components/Cluster'
+export default {
+  components: {
+    Cluster
+  },
+  props: {
+    services: {
+      type: Array,
+      required: true
     }
+  },
+  computed: {
+    sortedServices () {
+      const sortedServices = this.services
+      sortedServices.sort((a, b) => {
+        if (a.attributes.position > b.attributes.position) {
+          return 1
+        }
+        if (a.attributes.position < b.attributes.position) {
+          return -1
+        }
+        return 0
+      })
+      return sortedServices
+    }
+  },
+  methods: {
+    formatSlug (title) {
+      const regex = / /gi
+      return title.toLowerCase().trim().replace(regex, '-')
+    }
+  }
+}
 </script>
 
 <style lang="scss">
-  .project-title {
-    color: color(light);
-    @include smallCaps;
-  }
+.service-title {
+  @include smallCaps;
+  color: color(light);
+  font-weight: 600;
+}
 
-  .project-link {
-    text-decoration: none;
-  }
+.service-link {
+  text-decoration: none;
+}
 </style>
-
-
