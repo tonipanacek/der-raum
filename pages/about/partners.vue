@@ -1,12 +1,10 @@
 <template>
-  <Layout>
-    <div class="full-main">
-      <p>Partner 1</p>
-      <p>Partner 2</p>
-      <p>Partner 3</p>
-      <p>Partner 4</p>
-    </div>
-  </Layout>
+  <div class="full-main">
+    <p>Partner 1</p>
+    <p>Partner 2</p>
+    <p>Partner 3</p>
+    <p>Partner 4</p>
+  </div>
 </template>
 
 <style lang="scss">
