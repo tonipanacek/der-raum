@@ -8,21 +8,36 @@ fields:
     maxSize: 250
   label: Image
   description: Solo image for the page
-- name: title
+- name: en_title
   type: text
   config:
-    required: false
-  label: Title
+    required: true
+  label: English Title
   description: Title for the page -- shown before the description
-- name: description
+- name: de_title
+  type: text
+  config:
+    required: true
+  label: German Title
+  description: Title for the page -- shown before the description
+- name: en_description
   type: textarea
   default: ''
   config:
     required: false
-    wysiwyg: false
+    wysiwyg: true
     schema:
       format: markdown
   description: Description for the page
-  label: Description
+  label: English Description
+- name: de_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: German Description
 pages:
 - content/de/about/team.md
