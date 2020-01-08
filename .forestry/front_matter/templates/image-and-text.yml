@@ -2,6 +2,12 @@
 label: Image and Text
 hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Page Name
+  description: "Must be in English (for secret coding reasons \U0001F647‍♂️)"
 - name: image
   type: file
   config:
