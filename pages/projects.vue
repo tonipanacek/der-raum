@@ -1,5 +1,5 @@
 <template>
   <h1>
-    I AM TEMPLATE HI
+    HI, I AM PROJECTS OVERVIEW
   </h1>
 </template>
