@@ -15,7 +15,7 @@
             En
           </nuxt-link>
         </p>
-        <p>Legal / Privacy</p>
+        <p><nuxt-link :to="localePath('legal')">Legal</nuxt-link> / <nuxt-link :to="localePath('privacy')">Privacy</nuxt-link></p>
       </div>
     </Stack>
   </div>
