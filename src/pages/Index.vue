@@ -1,10 +1,10 @@
 <template>
   <Layout>
     <Container>
-      <div class="home-images flex">
+      <div class="home-images">
         <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557304/derRaum/:filename%2C%20:year/derraum_-1436_qidbrs.jpg"/>
-        <!-- <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557480/derRaum/:filename%2C%20:year/derraum_-1096_bkzaxm.jpg"/>
-        <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557644/derRaum/:filename%2C%20:year/derraum_-2049_pm2fwn.jpg""/> -->
+        <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557480/derRaum/:filename%2C%20:year/derraum_-1096_bkzaxm.jpg"/>
+        <g-image src="https://res.cloudinary.com/tonipanoche/image/upload/v1575557644/derRaum/:filename%2C%20:year/derraum_-2049_pm2fwn.jpg"/>
       </div>
     </Container>
   </Layout>

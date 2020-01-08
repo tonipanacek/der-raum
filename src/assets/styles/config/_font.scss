@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 
 $fonts: (
   main: (Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
@@ -23,8 +23,10 @@ $fonts: (
 }
 
 @mixin smallCaps {
-  letter-spacing: 0.2em;
+  font-size: .9em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
+  color: color(light);
 }
 
 .small {
@@ -32,6 +34,10 @@ $fonts: (
   &-very {
     font-size: 0.5em;
   }
+}
+
+.bold {
+  font-weight: 600;
 }
 
 body {

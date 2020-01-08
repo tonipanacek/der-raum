@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="layout flex">
     <Stack id="left-sidebar">
       <Navbar />
     </Stack>
@@ -7,7 +7,7 @@
       <slot/>
     </main>
     <Stack id="right-sidebar">
-      <div class="right-sidebar small-very">
+      <div class="right-stack small-very">
         <p>De / En</p>
         <p>Legal / Privacy</p>
       </div>
@@ -29,12 +29,9 @@ export default {
 
 <style lang="scss">
 .layout {
-  display: flex;
   margin-top: spacing(lg);
 }
-
 .main{
-  width: 60%;
   flex-grow: 1;
   padding-bottom: $stack-space;
 }
@@ -44,7 +41,7 @@ export default {
 }
 #right-sidebar {
   padding-right: 2rem;
-  .right-sidebar {
+  .right-stack{
     height: 90vh;
     display: flex;
     justify-content: space-between;
