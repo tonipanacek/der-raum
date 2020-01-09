@@ -1,17 +1,15 @@
 <template>
-  <Layout>
-    <div class="full-main">
-      <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
-      <div class="about-text flex-sb">
-        <div class="address">
-          <h2>Der Raum</h2>
-        </div>
-        <div class="hours">
-          <h3>Hours</h3>
-        </div>
+  <div class="full-main">
+    <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
+    <div class="about-text flex-sb">
+      <div class="address">
+        <h2>Der Raum</h2>
+      </div>
+      <div class="hours">
+        <h3>Hours</h3>
       </div>
     </div>
-  </Layout>
+  </div>
 </template>
 
 <script>

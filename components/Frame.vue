@@ -1,5 +1,5 @@
 <template>
-  <div class="frame" style="--n: n; --d: d">
+  <div class="frame" :style="{'--n': n, '--d': d}">
     <slot />
   </div>
 </template>
