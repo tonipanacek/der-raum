@@ -25,3 +25,28 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .about {
+    max-width: 110ch;
+    img, p {
+      max-width: 110ch;
+    }
+    p {
+      line-height: 2rem;
+      color: color(light);
+    }
+    img {
+      object-fit: cover;
+      max-height: 70vh;
+      width: 110ch;
+    }
+    h1 {
+      @include smallCaps;
+      color: color(dark);
+    }
+    &-text {
+      display: inline-block;
+    }
+  }
+</style>
