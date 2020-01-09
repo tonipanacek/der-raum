@@ -13,6 +13,11 @@ const translatePage = {
     $tp (term) {
       // Short for 'translate page'. Automatically loads attrs from `this.page` (the loaded markdown content)
       return this.$ta(get(this.page, 'attributes', {}), term)
+    },
+    formatSlug (title) {
+      if (!title) { return '' }
+      const regex = / /gi
+      return title.toLowerCase().trim().replace(regex, '-')
     }
   }
 }

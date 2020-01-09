@@ -1,8 +1,8 @@
 <template>
-  <article class="service">
+  <article class="about">
     <h1>{{ $tp('title') }}</h1>
     <p>{{ $tp('description') }}</p>
-    <img :src="$tp('image')" alt="Image of service">
+    <img :src="$tp('image')" alt="Image corresponding to about page">
   </article>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     try {
       const slug = params.slug;
       // get current page data
-      const page = await import(`~/content/services/${slug}.md`);
+      const page = await import(`~/content/about/${slug}.md`);
       return {
         page,
         slug
