@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { get } from 'lodash'
+
 export default {
   async asyncData () {
     // create context via webpack to map over all blog services
@@ -14,6 +16,18 @@ export default {
     return {
       services
     }
+  },
+  mounted () {
+    const services = this.$data.services
+    const service = get(services, '0', {})
+    const slug = this.formatSlug(get(service, 'attributes.title', ''))
+    const redirectPath = this.localePath({
+      name: 'services-slug',
+      params: {
+        slug
+      }
+    })
+    this.$router.push(redirectPath)
   }
 }
 </script>
