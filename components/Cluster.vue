@@ -1,14 +1,17 @@
 <template>
-<div class="cluster spacing">
-  <slot/>
-</div>
+  <div :class="`cluster ${spacing}`">
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'cluster',
+  name: "Cluster",
   props: {
-    spacing: String
+    spacing: {
+      type: String,
+      default: "sm"
+    }
   }
 }
 </script>
@@ -32,7 +35,6 @@ export default {
       & > * {
         margin: spacing(md) / 2;
       }
-
     }
   }
   &.lg {
@@ -41,7 +43,6 @@ export default {
       & > * {
         margin: spacing(lg) / 2;
       }
-
     }
   }
   &.v-align\:top > * {

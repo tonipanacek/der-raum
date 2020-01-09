@@ -1,6 +1,8 @@
 <template>
   <div class="full-main">
-    <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
+    <img
+      src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png"
+    />
     <div class="about-text flex-sb">
       <div class="address">
         <h2>Der Raum</h2>
@@ -14,9 +16,9 @@
 
 <script>
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
-      title: 'contact'
+      title: "contact"
     }
   }
 }
@@ -24,7 +26,8 @@ export default {
 
 <style lang="scss">
 .full-main {
-  img, .about-text {
+  img,
+  .about-text {
     max-width: 110ch;
   }
   img {
@@ -32,7 +35,8 @@ export default {
     max-height: 70vh;
     width: 110ch;
   }
-  h2, h3 {
+  h2,
+  h3 {
     @include smallCaps;
     color: color(dark);
     font-weight: 600;

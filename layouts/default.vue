@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar'
-import Stack from '~/components/Stack'
-import RightSidebar from '~/components/RightSidebar'
+import Navbar from "~/components/Navbar"
+import Stack from "~/components/Stack"
+import RightSidebar from "~/components/RightSidebar"
 
 export default {
   components: {
@@ -29,7 +29,10 @@ export default {
   margin-top: spacing(lg);
 }
 
-a, a:hover, a:focus, a:visited {
+a,
+a:hover,
+a:focus,
+a:visited {
   transition: color 500ms ease;
   text-decoration: none;
   color: color(light);
@@ -41,7 +44,7 @@ a, a:hover, a:focus, a:visited {
   }
 }
 
-.main{
+.main {
   flex-grow: 1;
   padding-bottom: $stack-space;
 }
@@ -51,7 +54,7 @@ a, a:hover, a:focus, a:visited {
 }
 #right-sidebar {
   padding-right: 2rem;
-  .right-stack{
+  .right-stack {
     height: 90vh;
     display: flex;
     justify-content: space-between;
