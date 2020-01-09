@@ -32,7 +32,7 @@ sections:
   match: "**/*"
   templates:
   - image-and-text
-upload_dir: derRaum
+upload_dir: ''
 public_path: https://res.cloudinary.com/tonipanoche/image/upload/derRaum
 front_matter_path: ''
 use_front_matter_path: false
