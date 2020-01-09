@@ -3,10 +3,10 @@
     <div class="service-list">
       <NuxtLink
         v-for="service in sortedServices"
+        :id="service.attributes.title"
         :key="service.attributes.title"
         :to="`/services/${formatSlug(service.attributes.title)}`"
         class="service-link"
-        :id="service.attributes.title"
       >
         <img :src="service.attributes.image" :alt="service.attributes.title">
         <h3 class="service-title">
@@ -19,6 +19,7 @@
 
 <script>
 import Cluster from '~/components/Cluster'
+// import Frame from '~/components/Frame'
 export default {
   components: {
     Cluster
@@ -54,13 +55,29 @@ export default {
 </script>
 
 <style lang="scss">
+.service-list {
+  display: flex;
+  flex-flow: row-wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: space-between;
+  // padding: 0 $sidebar-space $sidebar-space $sidebar-space;
+}
 .service-title {
   @include smallCaps;
   color: color(light);
   font-weight: 600;
 }
-
 .service-link {
   text-decoration: none;
+}
+#Design {
+  margin-left: spacing(lg);
+}
+#Planning {
+  // margin-right: $stack-space * 4;
+}
+#Production {
+  margin-top: -$stack-space * 7;
 }
 </style>

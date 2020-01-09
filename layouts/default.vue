@@ -65,7 +65,7 @@ a, a:hover, a:focus, a:visited {
   width: 40ch;
 }
 #right-sidebar {
-  padding-right: 2rem;
+  padding: 0 2rem;
   .right-stack{
     height: 90vh;
     display: flex;

@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="full-main">
-      <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png" />
+      <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
       <div class="about-text flex-sb">
         <div class="address">
           <h2>Der Raum</h2>

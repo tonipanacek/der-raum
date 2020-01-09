@@ -1,12 +1,12 @@
 <template>
-<div class="cluster spacing">
-  <slot/>
-</div>
+  <div class="cluster spacing">
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'cluster',
+  name: 'Cluster',
   props: {
     spacing: String
   }
