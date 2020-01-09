@@ -10,7 +10,7 @@
       >
         <img :src="service.attributes.image" :alt="service.attributes.title" />
         <h3 class="service-title">
-          {{ service.attributes.title }}
+          {{ $ta(service.attributes, 'title') }}
         </h3>
       </NuxtLink>
     </div>
@@ -79,6 +79,9 @@ export default {
 }
 #Planning {
   // margin-right: $stack-space * 4;
+  img {
+    max-height: 60vh;
+  }
 }
 #Production {
   margin-top: -$stack-space * 7;
