@@ -1,34 +1,36 @@
 <template>
-  <div class="layout flex">
-    <Stack id="left-sidebar">
-      <Navbar />
-    </Stack>
-    <main class="main">
-      <nuxt />
-    </main>
-    <RightSidebar />
-  </div>
+  <Stack id="right-sidebar">
+    <div class="right-stack small-very">
+      <p>
+        <nuxt-link :to="switchLocalePath('de')">
+          De
+        </nuxt-link> / <nuxt-link :to="switchLocalePath('en')">
+          En
+        </nuxt-link>
+      </p>
+      <p>
+        <nuxt-link :to="localePath('impressum')">
+          {{ $t('rightSidebar.impressum') }}
+        </nuxt-link> / <nuxt-link :to="localePath('privacy')">
+          {{ $t('rightSidebar.privacy') }}
+        </nuxt-link>
+      </p>
+    </div>
+  </Stack>
 </template>
 
 <script>
-import Navbar from '~/components/Navbar'
 import Stack from '~/components/Stack'
-import RightSidebar from '~/components/RightSidebar'
 
 export default {
+  name: 'RightSidebar',
   components: {
-    Navbar,
-    Stack,
-    RightSidebar
+    Stack
   }
 }
 </script>
 
 <style scoped lang="scss">
-.layout {
-  margin-top: spacing(lg);
-}
-
 a, a:hover, a:focus, a:visited {
   transition: color 500ms ease;
   text-decoration: none;
@@ -41,14 +43,6 @@ a, a:hover, a:focus, a:visited {
   }
 }
 
-.main{
-  flex-grow: 1;
-  padding-bottom: $stack-space;
-}
-#left-sidebar {
-  padding: 0 $stack-space * 3;
-  width: 40ch;
-}
 #right-sidebar {
   padding-right: 2rem;
   .right-stack{

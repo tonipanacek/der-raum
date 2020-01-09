@@ -4,5 +4,9 @@ export default {
     services: 'Leistung',
     about: 'Über',
     contact: 'Kontakt'
+  },
+  rightSidebar: {
+    impressum: 'Impressum',
+    privacy: 'Datenschutz'
   }
 }

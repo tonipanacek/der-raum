@@ -7,7 +7,7 @@ const translatePage = {
     $ta (attrs, term) {
       // Short for 'translate attribute'. Used for any set of attributes (object) and a single term (string). Useful for, for example, lists of pages
       if (isEmpty(attrs)) { return '' }
-      const locale = this.$i18n.locale
+      const { locale } = this.$i18n
       return get(attrs, `${locale}_${term}`, get(attrs, term, ''))
     },
     $tp (term) {
