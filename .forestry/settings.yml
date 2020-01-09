@@ -33,10 +33,10 @@ sections:
   templates:
   - image-and-text
 upload_dir: derRaum
-public_path: https://res.cloudinary.com/tonipanoche/image/upload/derRaum
+public_path: https://res.cloudinary.com/tonipanoche/image/fetch
 front_matter_path: ''
 use_front_matter_path: false
-file_template: 'derRaum/:filename:'
+file_template: ":filename:"
 build:
   preview_output_directory: src/dist
   install_dependencies_command: yarn install
