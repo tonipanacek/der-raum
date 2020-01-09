@@ -1,54 +1,80 @@
 <template>
-  <Stack class="navbar">
-    <nuxt-link :to="localePath('index')" class="nav-item logo">
-      <img src="~/assets/images/logo.png" alt="Der Raum" />
-    </nuxt-link>
-    <nuxt-link :to="localePath('projects')" class="nav-item title link">
-      {{ $t("navbar.projects") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('services')" class="nav-item title">
-      {{ $t("navbar.services") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('about')" class="nav-item title">
-      {{ $t("navbar.about") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('contact')" class="nav-item title">
-      {{ $t("navbar.contact") }}
-    </nuxt-link>
+  <Stack class="navbar navbar-secondary">
+    <transition-group
+      name="insert"
+      tag="ul"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
+      <li
+        v-for="(page, index) in pages"
+        :key="page.attributes.title"
+        :data-index="index"
+      >
+        <nuxt-link
+          class="nav-item title link"
+          :to="path(page)"
+        >
+          {{ $ta(page.attributes, "title") }}
+        </nuxt-link>
+      </li>
+    </transition-group>
   </Stack>
 </template>
 
 <script>
+import { mapState } from "vuex"
+import { get } from "lodash"
 import Stack from "~/components/Stack"
 
 export default {
-  name: "Navbar",
+  name: "SecondaryNavbar",
   components: {
     Stack
+  },
+  computed: {
+    ...mapState(["pages", "pagesPrefix"])
+  },
+  methods: {
+    path(page) {
+      const slug = this.formatSlug(get(page, "attributes.title", ""))
+      return this.localePath({
+        name: `${this.pagesPrefix}-slug`,
+        params: {
+          slug
+        }
+      })
+    },
+    beforeEnter: function(el) {
+      el.style.opacity = 0
+      el.style.transform = "translateY(-50%)"
+      el.style.transition = "opacity 500ms ease, transform 500ms ease"
+    },
+    enter: function(el, done) {
+      setTimeout(() => {
+        const delay = parseInt(el.dataset.index) * 250
+        setTimeout(() => {
+          el.style.opacity = 1
+          el.style.transform = "translateY(0)"
+        }, delay)
+        done()
+      }, 1000)
+    },
+    leave: function(el, done) {
+      el.style.opacity = 0
+      el.style.transform = "translateY(50%)"
+      setTimeout(() => {
+        done()
+      }, 1000)
+    }
   }
 }
 </script>
 
 <style lang="scss">
-.navbar {
-  @include listStyleNone;
-  .logo {
-    margin-bottom: spacing(lg);
-  }
-
-  .nav-item {
-    transition: color 500ms ease, font-weight 500ms ease;
-    &:hover {
-      color: color(dark);
-    }
-  }
-
-  .nuxt-link-active {
-    color: color(black);
-    font-weight: 600;
-    &:hover {
-      color: color(dark);
-    }
-  }
+// Covered by Navbar component
+.navbar-secondary {
+  margin-top: spacing(lg);
 }
 </style>

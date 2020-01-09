@@ -24,6 +24,6 @@ export default {
 }
 
 .stack > * + * {
-  margin-top: var($stack-space);
+  margin-top: spacing(sm);
 }
 </style>

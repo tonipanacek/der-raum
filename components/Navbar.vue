@@ -1,23 +1,37 @@
 <template>
   <Stack class="navbar">
-    <nuxt-link :to="localePath('index')" class="nav-item logo">
-      <img src="~/assets/images/logo.png" alt="Der Raum" />
-    </nuxt-link>
-    <nuxt-link :to="localePath('projects')" class="nav-item title link">
-      {{ $t("navbar.projects") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('services')" class="nav-item title">
-      {{ $t("navbar.services") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('rooms')" class="nav-item title">
-      {{ $t("navbar.rooms") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('about')" class="nav-item title">
-      {{ $t("navbar.about") }}
-    </nuxt-link>
-    <nuxt-link :to="localePath('contact')" class="nav-item title">
-      {{ $t("navbar.contact") }}
-    </nuxt-link>
+    <ul>
+      <li>
+        <nuxt-link :to="localePath('index')" class="nav-item logo">
+          <img src="~/assets/images/logo.png" alt="Der Raum" />
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('projects')" class="nav-item title link">
+          {{ $t("navbar.projects") }}
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('services')" class="nav-item title">
+          {{ $t("navbar.services") }}
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('rooms')" class="nav-item title">
+          {{ $t("navbar.rooms") }}
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('about')" class="nav-item title">
+          {{ $t("navbar.about") }}
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('contact')" class="nav-item title">
+          {{ $t("navbar.contact") }}
+        </nuxt-link>
+      </li>
+    </ul>
   </Stack>
 </template>
 
@@ -33,8 +47,23 @@ export default {
 </script>
 
 <style lang="scss">
+.navbar ul {
+  list-style: none !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+  padding-block-start: 0 !important;
+  padding-block-end: 0 !important;
+
+  li {
+    display: block;
+  }
+}
+
 .navbar {
-  @include listStyleNone;
   .logo {
     margin-bottom: spacing(lg);
   }

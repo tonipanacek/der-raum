@@ -2,6 +2,7 @@
   <div class="layout flex">
     <Stack id="left-sidebar">
       <Navbar />
+      <SecondaryNavbar />
     </Stack>
     <main class="main">
       <nuxt />
@@ -12,12 +13,14 @@
 
 <script>
 import Navbar from "~/components/Navbar"
+import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
 import RightSidebar from "~/components/RightSidebar"
 
 export default {
   components: {
     Navbar,
+    SecondaryNavbar,
     Stack,
     RightSidebar
   }
