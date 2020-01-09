@@ -7,9 +7,13 @@
 </template>
 
 <script>
+import Frame from '~/components/Frame'
 import { mapActions } from "vuex"
 
 export default {
+  components: {
+    Frame
+  },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
     try {
