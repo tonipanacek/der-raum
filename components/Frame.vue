@@ -10,11 +10,11 @@ export default {
   props: {
     n: {
       type: Number,
-      default: 3
+      default: 9
     },
     d: {
       type: Number,
-      default: 4
+      default: 16
     }
   }
 }
