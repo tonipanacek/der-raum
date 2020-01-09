@@ -3,7 +3,8 @@ export default {
     projects: "Projects",
     services: "Services",
     about: "About",
-    contact: "Contact"
+    contact: "Contact",
+    rooms: "Rooms"
   },
   rightSidebar: {
     impressum: "Impressum",

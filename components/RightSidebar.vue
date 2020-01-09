@@ -1,5 +1,5 @@
 <template>
-  <Stack id="right-sidebar">
+  <Stack id="right-sidebar" class="right-sidebar">
     <div class="right-stack small-very">
       <p>
         <nuxt-link :to="switchLocalePath('de')">
@@ -34,23 +34,24 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-a,
-a:hover,
-a:focus,
-a:visited {
-  transition: color 500ms ease;
-  text-decoration: none;
-  color: color(light);
-  &:hover {
-    color: darken(color(light), 10%);
+<style lang="scss">
+.right-sidebar {
+  a,
+  a:hover,
+  a:focus,
+  a:visited {
+    transition: color 500ms ease, font-weight 500ms ease;
+    text-decoration: none;
+    color: color(light);
+    &:hover {
+      color: darken(color(light), 10%);
+    }
+    &.nuxt-link-exact-active {
+      color: color(dark);
+      font-weight: 700;
+    }
   }
-  &.nuxt-link-exact-active {
-    color: color(dark);
-  }
-}
 
-#right-sidebar {
   padding-right: 2rem;
   .right-stack {
     height: 90vh;

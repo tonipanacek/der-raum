@@ -1,8 +1,8 @@
 <template>
-  <article class="about">
+  <article class="room">
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="$tp('image')" alt="Image corresponding to about page" />
+    <img :src="$tp('image')" alt="Image of room" />
   </article>
 </template>
 
@@ -15,10 +15,10 @@ export default {
     try {
       const slug = params.slug
       // get current page data
-      const page = await import(`~/content/about/${slug}.md`)
+      const page = await import(`~/content/rooms/${slug}.md`)
 
       // create context via webpack to map over all pages
-      const allPages = await require.context("~/content/about/", true, /\.md$/)
+      const allPages = await require.context("~/content/rooms/", true, /\.md$/)
       const pages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
@@ -36,7 +36,7 @@ export default {
   },
   mounted() {
     this.setPages(this.$data.pages)
-    this.setPagesPrefix("about")
+    this.setPagesPrefix("rooms")
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-.about {
+.room {
   max-width: 110ch;
   img,
   p {
