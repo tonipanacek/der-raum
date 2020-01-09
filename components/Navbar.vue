@@ -48,15 +48,16 @@ export default {
 
 <style lang="scss">
 .navbar ul {
-  list-style: none !important;
-  margin-block-start: 0 !important;
-  margin-block-end: 0 !important;
-  margin-inline-start: 0 !important;
-  margin-inline-end: 0 !important;
-  padding-inline-start: 0 !important;
-  padding-inline-end: 0 !important;
-  padding-block-start: 0 !important;
-  padding-block-end: 0 !important;
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  -webkit-padding-start: 0;
 
   li {
     display: block;
