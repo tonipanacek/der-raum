@@ -6,35 +6,20 @@
     <main class="main">
       <nuxt />
     </main>
-    <Stack id="right-sidebar">
-      <div class="right-stack small-very">
-        <p>
-          <nuxt-link :to="switchLocalePath('de')">
-            De
-          </nuxt-link> / <nuxt-link :to="switchLocalePath('en')">
-            En
-          </nuxt-link>
-        </p>
-        <p>
-          <nuxt-link :to="localePath('legal')">
-            Legal
-          </nuxt-link> / <nuxt-link :to="localePath('privacy')">
-            Privacy
-          </nuxt-link>
-        </p>
-      </div>
-    </Stack>
+    <RightSidebar />
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/Navbar'
-import Stack from '~/components/Stack'
+import Navbar from "~/components/Navbar"
+import Stack from "~/components/Stack"
+import RightSidebar from "~/components/RightSidebar"
 
 export default {
   components: {
     Navbar,
-    Stack
+    Stack,
+    RightSidebar
   }
 }
 </script>
@@ -44,7 +29,10 @@ export default {
   margin-top: spacing(lg);
 }
 
-a, a:hover, a:focus, a:visited {
+a,
+a:hover,
+a:focus,
+a:visited {
   transition: color 500ms ease;
   text-decoration: none;
   color: color(light);
@@ -56,7 +44,7 @@ a, a:hover, a:focus, a:visited {
   }
 }
 
-.main{
+.main {
   flex-grow: 1;
   padding-bottom: $stack-space;
 }

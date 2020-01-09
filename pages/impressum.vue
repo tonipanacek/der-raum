@@ -1,6 +1,6 @@
 <template>
-  <div id="privacy">
-    <h1>Privacy</h1>
+  <div id="legal">
+    <h1>Legal</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque
       omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum

@@ -8,7 +8,7 @@
         :to="`/services/${formatSlug(service.attributes.title)}`"
         class="service-link"
       >
-        <img :src="service.attributes.image" :alt="service.attributes.title">
+        <img :src="service.attributes.image" :alt="service.attributes.title" />
         <h3 class="service-title">
           {{ service.attributes.title }}
         </h3>
@@ -31,7 +31,7 @@ export default {
     }
   },
   computed: {
-    sortedServices () {
+    sortedServices() {
       const sortedServices = this.services
       sortedServices.sort((a, b) => {
         if (a.attributes.position > b.attributes.position) {
@@ -46,9 +46,12 @@ export default {
     }
   },
   methods: {
-    formatSlug (title) {
+    formatSlug(title) {
       const regex = / /gi
-      return title.toLowerCase().trim().replace(regex, '-')
+      return title
+        .toLowerCase()
+        .trim()
+        .replace(regex, "-")
     }
   }
 }
