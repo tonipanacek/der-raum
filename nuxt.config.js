@@ -1,11 +1,18 @@
 const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/der-raum/'
+  }
+} : {}
+
 export default {
   mode: "universal",
   /*
    ** Headers of the page
    */
+  ...routerBase,
   head: {
     title: process.env.npm_package_name || "",
     meta: [
