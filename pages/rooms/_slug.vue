@@ -1,15 +1,21 @@
 <template>
   <article class="room">
+    <Frame>
+      <img :src="$tp('image')" alt="Image of room" />
+    </Frame>
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="$tp('image')" alt="Image of room" />
   </article>
 </template>
 
 <script>
+import Frame from '~/components/Frame'
 import { mapActions } from "vuex"
 
 export default {
+  components: {
+    Frame
+  },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
     try {
