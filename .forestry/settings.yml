@@ -33,7 +33,7 @@ sections:
   templates:
   - image-and-text
 upload_dir: ''
-public_path: https://res.cloudinary.com/tonipanoche/image/upload
+public_path: https://res.cloudinary.com/tonipanoche/image/upload/derRaum
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
