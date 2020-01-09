@@ -1,20 +1,14 @@
 <template>
   <article class="service">
-    <img :src="attrs.image" alt="Image of service">
-    <div class="service-text">
-      <h1>
-        {{ spacedTitle(t('title')) }}
-      </h1>
-      <p>
-        {{ t('description') }}
-      </p>
-    </div>
+    <h1>{{ $tp('title') }}</h1>
+    <p>{{ $tp('description') }}</p>
+    <img :src="$tp('image')" alt="Image of service">
   </article>
 </template>
 
 <script>
 export default {
-  async asyncData({ app, params }) {
+  async asyncData({ params }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug;
@@ -24,7 +18,7 @@ export default {
         page,
         slug
       }
-    } catch(err) {
+    } catch (err) {
       console.debug(err)
       return false
     }
@@ -44,14 +38,6 @@ export default {
         }
       });
       return results;
-    }
-  },
-  methods: {
-    t(attr) {
-      return this.attrs[this.$i18n.locale][attr];
-    },
-    spacedTitle(title) {
-      return title.split('').join(' ');
     }
   }
 }

@@ -16,13 +16,13 @@
       {{ $t('navbar.projects') }}
     </nuxt-link>
     <nuxt-link
-      :to="localePath('services-design')"
+      :to="localePath('services')"
       class="nav-item title"
     >
       {{ $t('navbar.services') }}
     </nuxt-link>
     <nuxt-link
-      :to="localePath('about-team')"
+      :to="localePath('about')"
       class="nav-item title"
     >
       {{ $t('navbar.about') }}
@@ -61,7 +61,7 @@ export default {
       }
     }
 
-    .nuxt-link-exact-active {
+    .nuxt-link-active {
       color: color(black);
       font-weight: 600;
       &:hover {
