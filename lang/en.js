@@ -1,12 +1,12 @@
 export default {
   navbar: {
-    projects: 'Projects',
-    services: 'Services',
-    about: 'About',
-    contact: 'Contact'
+    projects: "Projects",
+    services: "Services",
+    about: "About",
+    contact: "Contact"
   },
   rightSidebar: {
-    impressum: 'Impressum',
-    privacy: 'Privacy'
+    impressum: "Impressum",
+    privacy: "Privacy"
   }
 }

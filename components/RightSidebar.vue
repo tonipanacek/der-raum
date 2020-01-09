@@ -4,15 +4,19 @@
       <p>
         <nuxt-link :to="switchLocalePath('de')">
           De
-        </nuxt-link> / <nuxt-link :to="switchLocalePath('en')">
+        </nuxt-link>
+        /
+        <nuxt-link :to="switchLocalePath('en')">
           En
         </nuxt-link>
       </p>
       <p>
         <nuxt-link :to="localePath('impressum')">
-          {{ $t('rightSidebar.impressum') }}
-        </nuxt-link> / <nuxt-link :to="localePath('privacy')">
-          {{ $t('rightSidebar.privacy') }}
+          {{ $t("rightSidebar.impressum") }}
+        </nuxt-link>
+        /
+        <nuxt-link :to="localePath('privacy')">
+          {{ $t("rightSidebar.privacy") }}
         </nuxt-link>
       </p>
     </div>
@@ -20,10 +24,10 @@
 </template>
 
 <script>
-import Stack from '~/components/Stack'
+import Stack from "~/components/Stack"
 
 export default {
-  name: 'RightSidebar',
+  name: "RightSidebar",
   components: {
     Stack
   }
@@ -31,7 +35,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-a, a:hover, a:focus, a:visited {
+a,
+a:hover,
+a:focus,
+a:visited {
   transition: color 500ms ease;
   text-decoration: none;
   color: color(light);
@@ -45,7 +52,7 @@ a, a:hover, a:focus, a:visited {
 
 #right-sidebar {
   padding-right: 2rem;
-  .right-stack{
+  .right-stack {
     height: 90vh;
     display: flex;
     justify-content: space-between;

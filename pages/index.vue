@@ -5,18 +5,22 @@
 </template>
 
 <script>
-import Container from '~/components/Container'
-import ServiceList from '~/components/ServiceList.vue'
+import Container from "~/components/Container"
+import ServiceList from "~/components/ServiceList.vue"
 export default {
-  layout: 'layout',
+  layout: "layout",
   components: {
     Container,
     ServiceList
   },
-  async asyncData () {
+  async asyncData() {
     // create context via webpack to map over all blog posts
-    const allServices = await require.context('~/content/services/', true, /\.md$/)
-    const services = allServices.keys().map((key) => {
+    const allServices = await require.context(
+      "~/content/services/",
+      true,
+      /\.md$/
+    )
+    const services = allServices.keys().map(key => {
       // give back the value of each post context
       return allServices(key)
     })

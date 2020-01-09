@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: 'Container'
+  name: "Container"
 }
 </script>
 
 <style lang="scss">
-  .container{
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
+.container {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
 </style>
