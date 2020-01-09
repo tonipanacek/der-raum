@@ -9,9 +9,6 @@
     <nuxt-link :to="localePath('services')" class="nav-item title">
       {{ $t("navbar.services") }}
     </nuxt-link>
-    <nuxt-link :to="localePath('rooms')" class="nav-item title">
-      {{ $t("navbar.rooms") }}
-    </nuxt-link>
     <nuxt-link :to="localePath('about')" class="nav-item title">
       {{ $t("navbar.about") }}
     </nuxt-link>
