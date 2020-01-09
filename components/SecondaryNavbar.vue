@@ -8,7 +8,7 @@
       @leave="leave"
     >
       <li
-        v-for="(page, index) in pages"
+        v-for="(page, index) in sortedPages"
         :key="page.attributes.title"
         :data-index="index"
       >
@@ -25,7 +25,7 @@
 
 <script>
 import { mapState } from "vuex"
-import { get } from "lodash"
+import { get, sortBy } from "lodash"
 import Stack from "~/components/Stack"
 
 export default {
@@ -34,6 +34,9 @@ export default {
     Stack
   },
   computed: {
+    sortedPages() {
+      return sortBy(this.pages, (page) => { get(page, 'attributes.position') })
+    },
     ...mapState(["pages", "pagesPrefix"])
   },
   methods: {
