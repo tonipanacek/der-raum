@@ -1,8 +1,10 @@
 <template>
   <article class="room">
+    <Frame>
+      <img :src="$tp('image')" alt="Image of room" />
+    </Frame>
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="$tp('image')" alt="Image of room" />
   </article>
 </template>
 
