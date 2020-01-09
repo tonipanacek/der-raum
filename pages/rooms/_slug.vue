@@ -1,33 +1,24 @@
 <template>
-  <article class="service">
-    <Frame>
-      <img :src="$tp('image')" alt="Image of service" />
-    </Frame>
+  <article class="room">
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
+    <img :src="$tp('image')" alt="Image of room" />
   </article>
 </template>
 
 <script>
-import Frame from '~/components/Frame'
 import { mapActions } from "vuex"
+
 export default {
-  components: {
-    Frame
-  },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
       // get current page data
-      const page = await import(`~/content/services/${slug}.md`)
+      const page = await import(`~/content/rooms/${slug}.md`)
 
       // create context via webpack to map over all pages
-      const allPages = await require.context(
-        "~/content/services/",
-        true,
-        /\.md$/
-      )
+      const allPages = await require.context("~/content/rooms/", true, /\.md$/)
       const pages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
@@ -45,7 +36,7 @@ export default {
   },
   mounted() {
     this.setPages(this.$data.pages)
-    this.setPagesPrefix("services")
+    this.setPagesPrefix("rooms")
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
@@ -54,8 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-.service {
-  min-width: 60ch;
+.room {
   max-width: 110ch;
   img,
   p {
@@ -73,6 +63,9 @@ export default {
   h1 {
     @include smallCaps;
     color: color(dark);
+  }
+  &-text {
+    display: inline-block;
   }
 }
 </style>

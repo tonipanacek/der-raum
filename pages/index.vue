@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
 import Container from "~/components/Container"
 import ServiceList from "~/components/ServiceList.vue"
 export default {
@@ -27,7 +28,11 @@ export default {
     return {
       services
     }
-  }
+  },
+  mounted() {
+    this.unsetPages()
+  },
+  methods: mapActions(["unsetPages"])
 }
 </script>
 

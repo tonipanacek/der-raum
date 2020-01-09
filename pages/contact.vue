@@ -13,12 +13,13 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
+
 export default {
-  metaInfo() {
-    return {
-      title: "contact"
-    }
-  }
+  mounted() {
+    this.unsetPages()
+  },
+  methods: mapActions(["unsetPages"])
 }
 </script>
 
