@@ -10,7 +10,7 @@
       >
         <img :src="service.attributes.image" :alt="service.attributes.title" />
         <h3 class="service-title">
-          {{ service.attributes.title }}
+          {{ $ta(service.attributes, 'title') }}
         </h3>
       </NuxtLink>
     </div>
@@ -18,7 +18,8 @@
 </template>
 
 <script>
-import Cluster from "~/components/Cluster"
+import Cluster from '~/components/Cluster'
+// import Frame from '~/components/Frame'
 export default {
   components: {
     Cluster
@@ -57,13 +58,32 @@ export default {
 </script>
 
 <style lang="scss">
+.service-list {
+  display: flex;
+  flex-flow: row-wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: space-between;
+  // padding: 0 $sidebar-space $sidebar-space $sidebar-space;
+}
 .service-title {
   @include smallCaps;
   color: color(light);
   font-weight: 600;
 }
-
 .service-link {
   text-decoration: none;
+}
+#Design {
+  margin-left: spacing(lg);
+}
+#Planning {
+  // margin-right: $stack-space * 4;
+  img {
+    max-height: 60vh;
+  }
+}
+#Production {
+  margin-top: -$stack-space * 7;
 }
 </style>

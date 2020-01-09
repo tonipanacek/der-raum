@@ -1,15 +1,20 @@
 <template>
   <article class="service">
+    <Frame>
+      <img :src="$tp('image')" alt="Image of service" />
+    </Frame>
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="$tp('image')" alt="Image of service" />
   </article>
 </template>
 
 <script>
+import Frame from '~/components/Frame'
 import { mapActions } from "vuex"
-
 export default {
+  components: {
+    Frame
+  },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
     try {
@@ -50,6 +55,7 @@ export default {
 
 <style lang="scss">
 .service {
+  min-width: 60ch;
   max-width: 110ch;
   img,
   p {
@@ -67,9 +73,6 @@ export default {
   h1 {
     @include smallCaps;
     color: color(dark);
-  }
-  &-text {
-    display: inline-block;
   }
 }
 </style>

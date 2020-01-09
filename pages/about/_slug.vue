@@ -1,8 +1,8 @@
 <template>
   <article class="about">
+    <img :src="$tp('image')" alt="Image corresponding to about page" />
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="$tp('image')" alt="Image corresponding to about page" />
   </article>
 </template>
 

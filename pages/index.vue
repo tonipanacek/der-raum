@@ -36,11 +36,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#Planning {
-  img {
-    height: 60vh;
-  }
-  // align-self: flex-end;
-}
-</style>
