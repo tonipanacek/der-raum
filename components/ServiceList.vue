@@ -1,31 +1,41 @@
 <template>
-  <Cluster>
+<!--   <Cluster> -->
     <div class="service-list">
       <NuxtLink
         v-for="service in sortedServices"
         :id="service.attributes.title"
         :key="service.attributes.title"
         :to="`/services/${formatSlug(service.attributes.title)}`"
-        class="service-link"
+        :class="{ 'active': hover,  'service-link': true }"
       >
-        <Frame>
+        <Frame v-if="service.attributes.title">
           <img :src="service.attributes.image" :alt="service.attributes.title" />
         </Frame>
         <h3 class="service-title">
           {{ $ta(service.attributes, 'title') }}
         </h3>
       </NuxtLink>
-      <NuxtLink to="/projects" class="projects-link">
+      <NuxtLink
+        class="projects-link"
+        @mouseover.native="hover = true"
+        @mouseleave.native="hover = false"
+        to="/projects"
+      >
         Projekte
       </NuxtLink>
     </div>
-  </Cluster>
+<!--   </Cluster> -->
 </template>
 
 <script>
 import Frame from '~/components/Frame'
 import Cluster from '~/components/Cluster'
 export default {
+  data() {
+    return {
+      hover: false
+    }
+  },
   components: {
     Frame,
     Cluster
@@ -66,20 +76,18 @@ export default {
 <style lang="scss">
 .service-list {
   display: flex;
-  flex-flow: row-wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: space-between;
+  flex-flow: row wrap;
   padding: 0 $sidebar-space $sidebar-space $sidebar-space;
+  height: 90vh;
 }
 .service-title {
   @include smallCaps;
   color: color(light);
 }
 .service-link {
+  flex: 45%;
+  max-width: 45%;
   text-decoration: none;
-  width: 100%;
-  max-height: 100%;
   img {
     object-fit: fill;
     width: 100%;
@@ -95,9 +103,13 @@ export default {
   color: color(dark);
   border: 1px solid black;
   width: 100%;
-  max-height: 100%;
+  // max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.active {
+  opacity: .3;
+  transition: opacity 0.3s ease-in-out;
 }
 </style>
