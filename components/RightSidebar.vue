@@ -54,7 +54,7 @@ export default {
 
   padding-right: 2rem;
   .right-stack {
-    height: 90vh;
+    height: 85vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
