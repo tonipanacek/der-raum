@@ -1,0 +1,22 @@
+---
+label: Text and Multiple Images
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image
+  label: image
+- type: text
+  name: en_title
+  label: en_title
+- type: text
+  name: de_title
+  label: de_title
+- type: textarea
+  name: en_description
+  label: en_description
+- type: textarea
+  name: de_description
+  label: de_description
