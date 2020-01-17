@@ -1,9 +1,14 @@
 <template>
-  <div id="projects" />
+  <Container id="projects">
+    <ProjectsList :projects="projects" />
+  </Container>
 </template>
 
 <script>
+import { mapActions } from "vuex"
 import { get, min, sortBy } from "lodash"
+import Container from "~/components/Container"
+import ProjectsList from "~/components/ProjectsList"
 
 export default {
   async asyncData() {
@@ -21,6 +26,14 @@ export default {
     return {
       projects
     }
-  }
+  },
+  components: {
+    Container,
+    ProjectsList
+  },
+  mounted() {
+    this.unsetPages()
+  },
+  methods: mapActions(["unsetPages"])
 }
 </script>
