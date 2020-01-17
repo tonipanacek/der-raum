@@ -1,0 +1,26 @@
+---
+label: Text and Multiple Images
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+  description: Upload as many as you would like :)
+- type: text
+  name: en_title
+  label: en_title
+- type: text
+  name: de_title
+  label: de_title
+- type: textarea
+  name: en_description
+  label: en_description
+- type: textarea
+  name: de_description
+  label: de_description
+pages:
+- content/projects/marginal.md
