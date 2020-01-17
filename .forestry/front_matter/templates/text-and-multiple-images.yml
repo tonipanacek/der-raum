@@ -22,3 +22,5 @@ fields:
 - type: textarea
   name: de_description
   label: de_description
+pages:
+- content/projects/marginal.md
