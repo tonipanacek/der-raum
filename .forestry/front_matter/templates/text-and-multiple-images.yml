@@ -24,4 +24,5 @@ fields:
   label: de_description
 pages:
 - content/projects/marginal-1.md
+- content/projects/marginal-2.md
 - content/projects/marginal.md
