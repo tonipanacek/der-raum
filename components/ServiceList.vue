@@ -1,5 +1,5 @@
 <template>
-  <Cluster>
+  <!-- <Cluster> -->
     <div class="service-list">
       <NuxtLink
         v-for="service in sortedServices"
@@ -14,7 +14,7 @@
         </h3>
       </NuxtLink>
     </div>
-  </Cluster>
+  <!-- </Cluster> -->
 </template>
 
 <script>
@@ -59,12 +59,15 @@ export default {
 
 <style lang="scss">
 .service-list {
-  display: flex;
-  flex-flow: row-wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: space-between;
+  // display: flex;
+  // flex-flow: row-wrap;
+  // align-items: flex-start;
+  // justify-content: space-between;
+  // align-content: space-between;
   // padding: 0 $sidebar-space $sidebar-space $sidebar-space;
+  display: grid;
+  grid-template-columns: 8fr;
+  grid-template-rows: 4fr;
 }
 .service-title {
   @include smallCaps;
@@ -74,16 +77,20 @@ export default {
 .service-link {
   text-decoration: none;
 }
+// #Design {
+//   margin-left: spacing(lg);
+// }
+// #Planning {
+//   margin-right: $stack-space * 4;
+//   img {
+//     max-height: 60vh;
+//   }
+// }
+// #Production {
+//   margin-top: -$stack-space * 7;
+// }
 #Design {
-  margin-left: spacing(lg);
-}
-#Planning {
-  // margin-right: $stack-space * 4;
-  img {
-    max-height: 60vh;
-  }
-}
-#Production {
-  margin-top: -$stack-space * 7;
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 2;
 }
 </style>
