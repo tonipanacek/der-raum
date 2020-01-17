@@ -5,9 +5,11 @@ fields:
 - type: text
   name: title
   label: title
-- type: file
-  name: image
-  label: image
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+  description: Upload as many as you would like :)
 - type: text
   name: en_title
   label: en_title
