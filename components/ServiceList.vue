@@ -67,7 +67,7 @@ export default {
   // padding: 0 $sidebar-space $sidebar-space $sidebar-space;
   display: grid;
   grid-template-columns: 8fr;
-  grid-template-rows: 4fr;
+  grid-template-rows: 8fr;
 }
 .service-title {
   @include smallCaps;

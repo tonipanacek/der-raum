@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss">
 .container {
-  flex-basis: 100%
+  flex: 2 1 auto;
 }
 </style>
