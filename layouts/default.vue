@@ -4,7 +4,7 @@
       <Navbar />
       <SecondaryNavbar />
     </Stack>
-    <main class="main-container">
+    <main class="main-container" @scroll="handleScroll">
       <nuxt />
     </main>
     <RightSidebar />
@@ -23,6 +23,11 @@ export default {
     SecondaryNavbar,
     Stack,
     RightSidebar
+  },
+  methods: {
+    handleScroll(event) {
+      console.log(event)
+    }
   }
 }
 </script>

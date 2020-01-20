@@ -1,9 +1,9 @@
 <template>
   <Cluster>
-    <div class="project-list">
+    <transition-group tag="div">
       <NuxtLink
-        v-for="project in projects"
         :id="project.attributes.title"
+        v-for="project in projects"
         :key="project.attributes.title"
         :to="`/projects/${formatSlug(project.attributes.title)}`"
         class="project-link"
@@ -13,7 +13,7 @@
           {{ $ta(project.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    </div>
+    </transition-group>
   </Cluster>
 </template>
 
@@ -29,6 +29,30 @@ export default {
     projects: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    beforeEnter: function(el) {
+      el.style.opacity = 0
+      el.style.transform = "translateY(-50%)"
+      el.style.transition = "opacity 500ms ease, transform 500ms ease"
+    },
+    enter: function(el, done) {
+      setTimeout(() => {
+        const delay = parseInt(el.dataset.index) * 250
+        setTimeout(() => {
+          el.style.opacity = 1
+          el.style.transform = "translateY(0)"
+        }, delay)
+        done()
+      }, 1000)
+    },
+    leave: function(el, done) {
+      el.style.opacity = 0
+      el.style.transform = "translateY(50%)"
+      setTimeout(() => {
+        done()
+      }, 1000)
     }
   }
 }
