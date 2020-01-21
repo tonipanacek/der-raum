@@ -4,7 +4,7 @@
       <Navbar />
       <SecondaryNavbar />
     </Stack>
-    <main class="main-container" @scroll="handleScroll">
+    <main class="main-container" @mousewheel="handleScroll">
       <nuxt />
     </main>
     <RightSidebar />
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
@@ -25,9 +26,15 @@ export default {
     RightSidebar
   },
   methods: {
-    handleScroll(event) {
-      console.log(event)
-    }
+    async handleScroll(event) {
+      const element = event.target;
+      if (event.wheelDelta < 90) {
+        this.pageUp()
+      } else if (event.wheelDelta > 90) {
+        this.pageDown()
+      }
+    },
+    ...mapActions(['pageUp', 'pageDown'])
   }
 }
 </script>

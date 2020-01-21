@@ -38,8 +38,11 @@ export default {
       return false
     }
   },
+  computed: {
+    ...mapGetters(['paginatedPages'])
+  },
   mounted() {
-    this.setPages(this.$data.pages)
+    this.setPages(this.paginatedPages)
     this.setPagesPrefix("projects")
   },
   methods: {

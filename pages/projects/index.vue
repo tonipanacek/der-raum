@@ -1,32 +1,30 @@
 <template>
-  <Container id="projects" @scroll="handleScroll">
-    <ProjectsList :projects="paginated" />
+  <Container id="projects">
+    <ProjectsList :projects="paginatedPages" />
   </Container>
 </template>
 
 <script>
-import { mapActions } from "vuex"
+import { mapActions, mapGetters } from 'vuex'
 import { get, min, sortBy } from "lodash"
-import paginate from "~/plugins/paginate"
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
 export default {
-  mixins: paginate,
   async asyncData() {
-    // create context via webpack to map over all blog projects
-    const allProjects = await require.context(
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context(
       "~/content/projects/",
       true,
       /\.md$/
     )
-    let projects = allProjects.keys().map(key => {
-      // give back the value of each project context
-      return allProjects(key)
+    let pages = allPages.keys().map(key => {
+      // give back the value of each page context
+      return allPages(key)
     })
-    projects = sortBy(projects, project => project.position)
+    pages = sortBy(pages, page => page.position)
     return {
-      projects
+      pages
     }
   },
   components: {
@@ -34,7 +32,8 @@ export default {
     ProjectsList
   },
   mounted() {
-    this.unsetPages()
+    this.setPages(this.$data.pages)
+    this.setPagesPrefix("projects")
   },
   data() {
     return {
@@ -42,15 +41,10 @@ export default {
     }
   },
   computed: {
-    paginated() {
-      return this.$data.projects.slice(this.page, this.max)
-    }
+    ...mapGetters(['paginatedPages'])
   },
   methods: {
-    handleScroll(event) {
-      console.log(event);
-    },
-    ...mapActions(['unsetPages'])
+    ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
 </script>
