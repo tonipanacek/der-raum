@@ -44,7 +44,7 @@ export default {
     return {
       max: 4, // max number of items to display on a page
       options: {
-        licenseKey: process.env.FULL_PAGE_LICENSE_KEY,
+        licenseKey: "8E8983DA-2BD74A92-8EACC54D-C72F427E",
         controlArrows: true,
         scrollBar: true
       }
