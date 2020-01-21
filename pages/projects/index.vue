@@ -1,7 +1,7 @@
 <template>
   <Container id="projects">
   <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
-      <div class="section" v-for="pagesChunk in pagesChunks" :key="get(pagesChunk, '[0].attributes.title')">
+    <div :id="`section${index}` "class="section" v-for="(pagesChunk, index) in pagesChunks" :key="get(pagesChunk, '[0].attributes.title')">
         <ProjectsList :projects="pagesChunk" />
       </div>
     </full-page>
@@ -46,7 +46,8 @@ export default {
       options: {
         licenseKey: "8E8983DA-2BD74A92-8EACC54D-C72F427E",
         controlArrows: true,
-        scrollBar: true
+        scrollBar: true,
+        anchors: this.pagesChunks ? this.pagesChunks.map((page, index) => `section${index}`) : []
       }
     }
   },
