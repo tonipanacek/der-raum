@@ -4,7 +4,7 @@
       <Navbar />
       <SecondaryNavbar />
     </Stack>
-    <main class="main-container" @mousewheel="handleScroll">
+    <main class="main-container">
       <nuxt />
     </main>
     <RightSidebar />
@@ -27,28 +27,10 @@ export default {
     RightSidebar
   },
   methods: {
-    handleScroll(event) {
-      this.throttledHandlePageChange(event.wheelDelta)
-    },
-    handlePageChange(change) {
-      if (change < 60) {
-        this.pageUp()
-      }
-      if (change > 60) {
-        this.pageDown()
-      }
-      console.log(this.$store.state.pageNumber)
-    },
-    ...mapActions(['pageUp', 'pageDown', 'unsetPageNumber', 'unsetPages'])
-  },
-  computed: {
-    throttledHandlePageChange() {
-      return throttle(this.handlePageChange, 2000)
-    }
+    ...mapActions(['unsetPages'])
   },
   watch: {
     $route () {
-      this.unsetPageNumber()
       this.unsetPages()
     }
   }

@@ -62,14 +62,6 @@ export default {
 </script>
 
 <style lang="scss">
-.project-list {
-  display: flex;
-  flex-flow: row-wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: space-between;
-  // padding: 0 $sidebar-space $sidebar-space $sidebar-space;
-}
 .project-title {
   @include smallCaps;
   color: color(light);

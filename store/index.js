@@ -1,11 +1,9 @@
-import { get, isEmpty, sortBy } from 'lodash'
+import { sortBy, get } from 'lodash'
 
 export const state = () => {
   return {
     pages: [],
-    pagesPrefix: "",
-    pageNumber: 0,
-    pageMax: 4
+    pagesPrefix: ""
   }
 }
 export const mutations = {
@@ -17,19 +15,6 @@ export const mutations = {
   },
   SET_PAGES_PREFIX(state, prefix) {
     state.pagesPrefix = prefix
-  },
-  PAGE_UP(state) {
-    if (!isEmpty(state.pages.slice(state.pageNumber + 1, state.pageMax))) {
-      state.pageNumber += 1
-    }
-  },
-  PAGE_DOWN(state) {
-    if (state.pageNumber > 0) {
-      state.pageNumber -= 1
-    }
-  },
-  UNSET_PAGE_NUMBER(state) {
-    state.pageNumber = 0
   }
 }
 
@@ -43,24 +28,11 @@ export const actions = {
   setPagesPrefix({ commit }, prefix) {
     commit("SET_PAGES_PREFIX", prefix)
   },
-  pageUp({ commit }) {
-    commit("PAGE_UP")
-  },
-  pageDown({ commit }) {
-    commit("PAGE_DOWN")
-  },
-  unsetPageNumber({ commit }) {
-    commit("UNSET_PAGE_NUMBER")
-  }
 }
 
 export const getters = {
   sortedPages({ pages }) {
     if (!pages) { return [] }
     return sortBy(pages, page => get(page, 'attributes.position'))
-  },
-  paginatedPages({ pageNumber, pageMax }, { sortedPages: pages }) {
-    if (!pages) { return [] }
-    return pages.slice(pageNumber, pageMax)
   }
 }

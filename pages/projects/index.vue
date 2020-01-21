@@ -1,12 +1,16 @@
 <template>
   <Container id="projects">
-    <ProjectsList :projects="paginatedPages" />
+  <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
+      <div class="section" v-for="pagesChunk in pagesChunks" :key="get(pagesChunk, '[0].attributes.title')">
+        <ProjectsList :projects="pagesChunk" />
+      </div>
+    </full-page>
   </Container>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { get, min, sortBy } from "lodash"
+import { sortBy, chunk, get, isEmpty } from "lodash"
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
@@ -38,13 +42,25 @@ export default {
   },
   data() {
     return {
-      max: 4 // max number of items to display on a page
+      max: 4, // max number of items to display on a page
+      options: {
+        licenseKey: process.env.FULL_PAGE_LICENSE_KEY,
+        controlArrows: true,
+        scrollBar: true
+      }
     }
   },
   computed: {
-    ...mapGetters(['paginatedPages'])
+    pagesChunks() {
+      return chunk(this.sortedPages, this.max)
+    },
+    arePages() {
+      return !isEmpty(this.sortedPages)
+    },
+    ...mapGetters(['sortedPages'])
   },
   methods: {
+    get, // access in view
     ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
