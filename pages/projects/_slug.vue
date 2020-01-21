@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
@@ -14,14 +16,37 @@ export default {
       const slug = params.slug
       // get current page data
       const page = await import(`~/content/projects/${slug}.md`)
+
+      // create context via webpack to map over all pages
+      const allPages = await require.context(
+        "~/content/projects/",
+        true,
+        /\.md$/
+      )
+      const pages = allPages.keys().map(key => {
+        // give back the value of each page context
+        return allPages(key)
+      })
+
       return {
         page,
+        pages,
         slug
       }
     } catch (err) {
       console.debug(err)
       return false
     }
+  },
+  computed: {
+    ...mapGetters(['paginatedPages'])
+  },
+  mounted() {
+    this.setPages(this.paginatedPages)
+    this.setPagesPrefix("projects")
+  },
+  methods: {
+    ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
 </script>

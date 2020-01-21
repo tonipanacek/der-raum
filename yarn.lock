@@ -976,6 +976,14 @@
     consola "^2.11.3"
     defu "^0.0.4"
 
+"@nuxtjs/dotenv@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/dotenv/-/dotenv-1.4.1.tgz#dd5abb98e22cc7ae27139d3aa606151034293128"
+  integrity sha512-DpdObsvRwC8d89I9mzz6pBg6e/PEXHazDM57DOI1mmML2ZjHfQ/DvkjlSzUL7T+TnW3b/a4Ks5wQx08DqFBmeQ==
+  dependencies:
+    consola "^2.10.1"
+    dotenv "^8.1.0"
+
 "@nuxtjs/eslint-config@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-1.1.2.tgz#cde4c950014a781bcc34abbfef9c62546d8fc34c"
@@ -2973,6 +2981,11 @@ dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
+dotenv@^8.1.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -3853,6 +3866,11 @@ fstream@^1.0.0, fstream@^1.0.12:
     inherits "~2.0.0"
     mkdirp ">=0.5 0"
     rimraf "2"
+
+fullpage.js@^3.0.4, fullpage.js@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.0.8.tgz#4d89a87d36c30c0866c3dfec5e6cb363902f97b2"
+  integrity sha512-r4B/MNuxylgzSlY+w4klD0lYYlmzEy7doDvurupAuO1ObKBgu9EB5GPuoeJTP7t/njFlzAM/Wu/I+FL3WvudCw==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -5651,6 +5669,14 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+
+nuxt-fullpage.js@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/nuxt-fullpage.js/-/nuxt-fullpage.js-0.0.3.tgz#5566ec503d950a365f7cd130bf096ac81d64fe0e"
+  integrity sha512-xHLK4pCxvKPN/vRnVSulq+gg07pzUo3IWXO4wBNDGV593Xzw1UHsO3MgY//zsFW7rU3eRH1rq38e977HnFCTHA==
+  dependencies:
+    fullpage.js "^3.0.4"
+    vue-fullpage.js "^0.1.2"
 
 nuxt-i18n@^6.4.1:
   version "6.4.1"
@@ -8503,6 +8529,13 @@ vue-eslint-parser@^7.0.0:
     espree "^6.1.2"
     esquery "^1.0.1"
     lodash "^4.17.15"
+
+vue-fullpage.js@^0.1.2:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/vue-fullpage.js/-/vue-fullpage.js-0.1.5.tgz#967c1602556d3f2f0c27468e73198f63c07056e9"
+  integrity sha512-/8aFieeTxzwnq6Tb30fUwL5/TN1PBYK+qE4kb0mYi1JSDVWnYmnsMvCzGqLJv3SQCrt1GYccfs6dFA0rIVNejg==
+  dependencies:
+    fullpage.js "^3.0.8"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

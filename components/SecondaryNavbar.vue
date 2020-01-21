@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import { mapState } from "vuex"
-import { get, sortBy } from "lodash"
+import { mapState, mapGetters } from "vuex"
+import { get } from 'lodash'
 import Stack from "~/components/Stack"
 
 export default {
@@ -34,10 +34,8 @@ export default {
     Stack
   },
   computed: {
-    sortedPages() {
-      return sortBy(this.pages, (page) => { get(page, 'attributes.position') })
-    },
-    ...mapState(["pages", "pagesPrefix"])
+    ...mapState(["pagesPrefix"]),
+    ...mapGetters(["sortedPages"])
   },
   methods: {
     path(page) {
