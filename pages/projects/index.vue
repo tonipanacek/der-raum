@@ -11,6 +11,7 @@ import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
 export default {
+  name: 'projectsIndex',
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context(

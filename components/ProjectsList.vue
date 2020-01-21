@@ -1,6 +1,12 @@
 <template>
   <Cluster>
-    <transition-group tag="div">
+    <transition-group
+      name="insert"
+      tag="div"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
       <NuxtLink
         :id="project.attributes.title"
         v-for="project in projects"
@@ -39,11 +45,8 @@ export default {
     },
     enter: function(el, done) {
       setTimeout(() => {
-        const delay = parseInt(el.dataset.index) * 250
-        setTimeout(() => {
-          el.style.opacity = 1
-          el.style.transform = "translateY(0)"
-        }, delay)
+        el.style.opacity = 1
+        el.style.transform = "translateY(0)"
         done()
       }, 1000)
     },

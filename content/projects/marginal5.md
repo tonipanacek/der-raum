@@ -1,5 +1,5 @@
 ---
-title: Marginal2
+title: Marginal5
 image: https://res.cloudinary.com/tonipanoche/image/upload/derRaum/v1579253466/070-Bueroausbau-Schiebetueren-wandhoch_ulvvuj.jpg
 de_title: Marginal
 en_title: Marginal

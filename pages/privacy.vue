@@ -9,14 +9,3 @@
     </p>
   </div>
 </template>
-
-<script>
-import { mapActions } from "vuex"
-
-export default {
-  mounted() {
-    this.unsetPages()
-  },
-  methods: mapActions(["unsetPages"])
-}
-</script>

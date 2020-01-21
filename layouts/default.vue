@@ -13,6 +13,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import { throttle } from 'lodash'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
@@ -26,15 +27,30 @@ export default {
     RightSidebar
   },
   methods: {
-    async handleScroll(event) {
-      const element = event.target;
-      if (event.wheelDelta < 90) {
+    handleScroll(event) {
+      this.throttledHandlePageChange(event.wheelDelta)
+    },
+    handlePageChange(change) {
+      if (change < 60) {
         this.pageUp()
-      } else if (event.wheelDelta > 90) {
+      }
+      if (change > 60) {
         this.pageDown()
       }
+      console.log(this.$store.state.pageNumber)
     },
-    ...mapActions(['pageUp', 'pageDown'])
+    ...mapActions(['pageUp', 'pageDown', 'unsetPageNumber', 'unsetPages'])
+  },
+  computed: {
+    throttledHandlePageChange() {
+      return throttle(this.handlePageChange, 2000)
+    }
+  },
+  watch: {
+    $route () {
+      this.unsetPageNumber()
+      this.unsetPages()
+    }
   }
 }
 </script>
