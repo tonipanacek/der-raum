@@ -1,8 +1,6 @@
 const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
 
-require('dotenv').config()
-
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/der-raum/'
@@ -54,7 +52,6 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/dotenv",
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
     "nuxt-i18n",
