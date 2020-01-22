@@ -44,6 +44,7 @@ export default {
 <style scoped lang="scss">
 .layout {
   padding-top: spacing(lg);
+  padding-bottom: spacing(lg);
   position: relative;
   display: flex;
 }
