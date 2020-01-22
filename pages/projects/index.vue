@@ -11,6 +11,7 @@
       :projects="currentChunk"
       />
     </Container>
+    <ProgressBar :total="pagesChunks.length - 1" :page="page" />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import { mapActions, mapGetters } from 'vuex'
 import { get, sortBy, chunk, isEmpty, throttle } from "lodash"
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
+import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'projectsIndex',
@@ -40,7 +42,8 @@ export default {
   },
   components: {
     Container,
-    ProjectsList
+    ProjectsList,
+    ProgressBar
   },
   mounted() {
     this.setPages(this.$data.pages)
