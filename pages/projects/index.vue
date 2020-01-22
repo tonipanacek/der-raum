@@ -44,7 +44,7 @@ export default {
   },
   computed : {
     ...mapGetters({
-      pages: 'sortedPages'
+      // pages: 'sortedPages'
     })
   },
   components: {

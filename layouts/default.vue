@@ -1,14 +1,16 @@
 <template>
-  <div class="layout">
-    <Stack class="left-sidebar">
-      <Navbar />
-      <SecondaryNavbar />
-    </Stack>
-    <main class="main-container">
-      <nuxt />
-    </main>
-    <RightSidebar class="right-sidebar" />
-  </div>
+  <Cluster class="layout">
+    <div class="wrapper">
+      <Stack class="left-sidebar">
+        <Navbar />
+        <SecondaryNavbar />
+      </Stack>
+      <main class="main-container">
+        <nuxt />
+      </main>
+      <RightSidebar class="right-sidebar" />
+    </div>
+  </Cluster>
 </template>
 
 <script>
@@ -17,6 +19,7 @@ import { throttle } from 'lodash'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
+import Cluster from "~/components/Cluster"
 import RightSidebar from "~/components/RightSidebar"
 
 export default {
@@ -24,7 +27,8 @@ export default {
     Navbar,
     SecondaryNavbar,
     Stack,
-    RightSidebar
+    RightSidebar,
+    Cluster
   },
   methods: {
     ...mapActions(['unsetPages'])
@@ -42,13 +46,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.layout {
-  padding-top: spacing(lg);
-  padding-bottom: spacing(lg);
-  position: relative;
-  display: flex;
-}
-
 a,
 a:hover,
 a:focus,
@@ -65,7 +62,7 @@ a:visited {
 }
 
 .main-container {
-  flex: 2 1 auto;
+  flex: 2 1 50ch;
   // padding-bottom: $stack-space;
   position: sticky;
   min-height: 90vh;
@@ -74,16 +71,17 @@ a:visited {
 }
 .left-sidebar {
   padding: 0 $stack-space * 3;
-  width: 40ch;
+  flex: 0 1 30ch;
   position: sticky;
-  top: spacing(lg);
+  // top: spacing(lg);
   align-self: flex-start;
   height: auto;
 }
 .right-sidebar {
   padding: 0 2rem;
   position: sticky;
-  top: spacing(lg);
+  flex: 0 1 5ch;
+  // top: spacing(lg);
   align-self: flex-start;
   height: auto;
   .right-stack{

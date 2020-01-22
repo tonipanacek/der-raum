@@ -24,7 +24,7 @@ export default {
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
-    width: spacing(xs);
+    width: 0.2rem;
     height: 25vh;
     max-height: 50rem;
     border-radius: spacing(xs);

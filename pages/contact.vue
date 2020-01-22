@@ -1,45 +1,47 @@
 <template>
   <Container id="contact">
-    <div class="full-main">
+    <Frame>
       <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
+    </Frame>
+    <Cluster>
       <div class="about-text flex-sb">
         <div class="address">
-          <h2>Der Raum</h2>
+          <h2>{{ $t("contact.name") }}</h2>
+          <p>{{ $t("contact.streetNumber") }}</p>
+          <p>{{ $t("contact.cityZip") }}</p>
+          <p>{{ $t("contact.tel") }}</p>
+          <p>{{ $t("contact.email") }}</p>
         </div>
         <div class="hours">
-          <h3>Hours</h3>
+          <h3>{{ $t("contact.openingTitle") }}</h3>
+          <p>{{ $t("contact.weekdays") }}</p>
+          <p>{{ $t("contact.weekend") }}</p>
         </div>
       </div>
-    </div>
+    </Cluster>
   </Container>
 </template>
 
 <script>
 import Container from '~/components/Container'
+import Cluster from '~/components/Cluster'
+import Frame from '~/components/Frame'
 
 export default {
   components: {
-    Container
+    Container,
+    Cluster,
+    Frame
   }
 }
 </script>
 
 <style lang="scss">
-.full-main {
-  img,
-  .about-text {
-    max-width: 110ch;
-  }
-  img {
-    object-fit: cover;
-    max-height: 70vh;
-    width: 110ch;
-  }
-  h2,
-  h3 {
+#contact {
+  h2, h3 {
     @include smallCaps;
-    color: color(dark);
     font-weight: 600;
+    color: color(dark);
   }
 }
 </style>
