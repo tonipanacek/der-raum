@@ -1,19 +1,22 @@
 <template>
-  <Container id="projects">
-    <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
-      <ProjectsList 
-      :class="{ section: true, active: index === 0, 'fp-auto-height': true }"
-      v-for="(pagesChunk, index) in pagesChunks"
-      :key="getTitle(pagesChunk)"
-      :projects="pagesChunk"
+  <div
+  id="projects"
+  class="projects"
+  v-on:wheel.prevent="handleScroll"
+  >
+    <Container>
+      <ProjectsList
+      class="section"
+      v-if="isChunky"
+      :projects="currentChunk"
       />
-    </full-page>
-  </Container>
+    </Container>
+  </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { get, sortBy, chunk, isEmpty } from "lodash"
+import { get, sortBy, chunk, isEmpty, throttle } from "lodash"
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
@@ -42,16 +45,34 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("projects")
+    window.addEventListener("keyup", this.handleKeyUp)
+  },
+  destroyed() {
+    window.removeEventListener("keyup", this.handleKeyUp)
   },
   data() {
     return {
       max: 4, // max number of items to display on a page
+      page: 0,
+      refreshRate: 500,
+      changeThreshold: 10
     }
   },
   computed: {
     pagesChunks() {
       if (isEmpty(this.sortedPages)) { return [] }
-      return chunk(this.sortedPages, this.max)
+      const chunks = chunk(this.sortedPages, this.max - 1)
+      const chunksPlusNext = chunks.map((chunk, index) => {
+        const nextChunk = chunks[index + 1] || []
+        return [...chunk, nextChunk[0]].filter(c => c)
+      })
+      return chunksPlusNext
+    },
+    currentChunk() {
+      return this.pagesChunks[this.page]
+    },
+    isChunky() {
+      return !isEmpty(this.currentChunk)
     },
     anchors() {
       return this.pagesChunks.map((page, index) => `section${index}`)
@@ -59,15 +80,8 @@ export default {
     arePages() {
       return !isEmpty(this.sortedPages)
     },
-    options() {
-      return {
-        licenseKey: "8E8983DA-2BD74A92-8EACC54D-C72F427E",
-        controlArrows: true,
-        scrollBar: true,
-        anchors: this.anchors,
-        navigation: true,
-        dragAndMove: true
-      }
+    throttledHandlePageTransition() {
+      return throttle(this.handlePageTransition, this.refreshRate)
     },
     ...mapGetters(['sortedPages'])
   },
@@ -75,7 +89,48 @@ export default {
     getTitle(chunk) {
       return this.formatSlug(get(chunk, '[0].attributes.title', ''))
     },
+    incrementPage() {
+      if (this.page < this.pagesChunks.length - 1) {
+        this.page += 1
+      }
+    },
+    decrementPage() {
+      if (this.page > 0) {
+        this.page -= 1
+      }
+    },
+    handleScroll(event) {
+      this.throttledHandlePageTransition(event.wheelDelta)
+    },
+    handlePageTransition(change) {
+      if (change < -1 * this.changeThreshold) {
+        this.incrementPage()
+      } else if (change > this.changeThreshold) {
+        this.decrementPage()
+      }
+    },
+    handleKeyUp(event) {
+      event.preventDefault;
+      if (event.key.match(/down/i)) {
+        this.incrementPage()
+        return false;
+      } else if (event.key.match(/up/i)) {
+        this.decrementPage()
+        return false;
+      }
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.projects {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.section {
+  min-height: 100%;
+}
+</style>

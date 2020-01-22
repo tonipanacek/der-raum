@@ -1,13 +1,13 @@
 <template>
-  <div class="layout flex">
-    <Stack id="left-sidebar">
+  <div class="layout">
+    <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
     </Stack>
     <main class="main-container">
       <nuxt />
     </main>
-    <RightSidebar />
+    <RightSidebar class="right-sidebar" />
   </div>
 </template>
 
@@ -43,7 +43,9 @@ export default {
 
 <style scoped lang="scss">
 .layout {
-  margin-top: spacing(lg);
+  padding-top: spacing(lg);
+  position: relative;
+  display: flex;
 }
 
 a,
@@ -65,15 +67,24 @@ a:visited {
   flex: 2 1 auto;
   // padding-bottom: $stack-space;
   position: sticky;
-  height: 90vh;
-  overflow-y: scroll;
+  min-height: 90vh;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
-#left-sidebar {
+.left-sidebar {
   padding: 0 $stack-space * 3;
   width: 40ch;
+  position: sticky;
+  top: spacing(lg);
+  align-self: flex-start;
+  height: auto;
 }
-#right-sidebar {
+.right-sidebar {
   padding: 0 2rem;
+  position: sticky;
+  top: spacing(lg);
+  align-self: flex-start;
+  height: auto;
   .right-stack{
     height: 90vh;
     display: flex;
