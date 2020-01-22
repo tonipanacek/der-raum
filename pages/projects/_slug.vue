@@ -2,7 +2,7 @@
   <article class="project">
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="image" v-for="image in $tp('images')" :alt="$tp(title)" />
+    <img :src="image" v-for="image in $tp('images')" :alt="$tp('title')" />
   </article>
 </template>
 
@@ -39,7 +39,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.paginatedPages)
+    this.setPages(this.$data.pages)
     this.setPagesPrefix("projects")
   },
   methods: {
