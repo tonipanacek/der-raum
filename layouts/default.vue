@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+import { throttle } from 'lodash'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
@@ -23,6 +25,18 @@ export default {
     SecondaryNavbar,
     Stack,
     RightSidebar
+  },
+  methods: {
+    ...mapActions(['unsetPages'])
+  },
+  watch: {
+    $route (newRoute, oldRoute) {
+      const matcher = /(about|project|room|service)/
+      const isSubChange = newRoute.name.match(matcher) && oldRoute.name.match(matcher)
+      if (!isSubChange) {
+        this.unsetPages()
+      }
+    }
   }
 }
 </script>

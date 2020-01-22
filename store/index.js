@@ -1,3 +1,5 @@
+import { sortBy, get } from 'lodash'
+
 export const state = () => {
   return {
     pages: [],
@@ -25,5 +27,12 @@ export const actions = {
   },
   setPagesPrefix({ commit }, prefix) {
     commit("SET_PAGES_PREFIX", prefix)
+  },
+}
+
+export const getters = {
+  sortedPages({ pages }) {
+    if (!pages) { return [] }
+    return sortBy(pages, page => get(page, 'attributes.position'))
   }
 }

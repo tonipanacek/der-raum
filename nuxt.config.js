@@ -14,7 +14,7 @@ export default {
    */
   ...routerBase,
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Der Raum",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -24,7 +24,7 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   /*
    ** Customize the progress-bar color
@@ -37,7 +37,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/translate_page"],
+  plugins: [
+    "~/plugins/translate_page",
+    "~/plugins/markdown"
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,7 +55,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
-    "nuxt-i18n"
+    "nuxt-i18n",
+    "nuxt-fullpage.js"
   ],
   // SCSS resources
   styleResources: {

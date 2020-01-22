@@ -25,11 +25,7 @@ export default {
     return {
       services
     }
-  },
-  mounted() {
-    this.unsetPages()
-  },
-  methods: mapActions(["unsetPages"])
+  }
 }
 </script>
 

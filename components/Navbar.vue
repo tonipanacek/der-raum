@@ -3,7 +3,7 @@
     <ul>
       <li>
         <nuxt-link :to="localePath('index')" class="nav-item logo">
-          <img src="~/assets/images/logo.png" alt="Der Raum" />
+          <img src="~/assets/images/logo.svg" alt="Der Raum" />
         </nuxt-link>
       </li>
       <li>
@@ -67,6 +67,10 @@ export default {
 .navbar {
   .logo {
     margin-bottom: spacing(lg);
+    img {
+      height: auto;
+      width: 7rem;
+    }
   }
 
   .nav-item {

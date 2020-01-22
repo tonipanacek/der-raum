@@ -1,20 +1,24 @@
 <template>
-  <article class="room">
-    <Frame>
-      <img :src="$tp('image')" alt="Image of room" />
-    </Frame>
-    <h1>{{ $tp("title") }}</h1>
-    <p>{{ $tp("description") }}</p>
-  </article>
+  <Container id="room">
+    <article class="room">
+      <Frame>
+        <img :src="$tp('image')" alt="Image of room" />
+      </Frame>
+      <h1>{{ $tp("title") }}</h1>
+      <vue-markdown>{{ $tp("description") }}</vue-markdown>
+    </article>
+  </Container>
 </template>
 
 <script>
 import Frame from '~/components/Frame'
+import Container from '~/components/Container'
 import { mapActions } from "vuex"
 
 export default {
   components: {
-    Frame
+    Frame,
+    Container
   },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
