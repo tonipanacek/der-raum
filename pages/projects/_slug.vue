@@ -2,7 +2,7 @@
   <Container id="project">
     <article class="project">
       <h1>{{ $tp("title") }}</h1>
-      <p>{{ $tp("description") }}</p>
+      <vue-markdown>{{ $tp("description") }}</vue-markdown>
       <img :src="image" v-for="image in $tp('images')" :alt="$tp('title')" />
     </article>
   </Container>

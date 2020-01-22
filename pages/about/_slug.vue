@@ -4,7 +4,7 @@
       <img :src="$tp('image')" alt="Image corresponding to about page" />
     </Frame>
     <h1>{{ $tp("title") }}</h1>
-    <p>{{ $tp("description") }}</p>
+    <vue-markdown>{{ $tp("description") }}</vue-markdown>
   </article>
 </template>
 
