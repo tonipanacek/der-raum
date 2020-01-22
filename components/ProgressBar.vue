@@ -18,10 +18,10 @@ export default {
 
 <style lang="scss">
 .progress-bar {
-  position: absolute;
+  position: fixed;
   top: 50vh;
-  right: 0;
-  transform: translateY(-100%);
+  right: spacing(lg);
+  transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
     width: spacing(xs);
