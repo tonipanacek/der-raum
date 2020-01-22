@@ -1,26 +1,26 @@
 <template>
-  <Cluster>
-    <transition-group
+  <div class="projects-list">
+    <Cluster>
+      <transition-group
       name="insert"
+      mode="out-in"
       tag="div"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @leave="leave"
-    >
-      <NuxtLink
+      >
+        <NuxtLink
         :id="$ta(project.attributes, 'title')"
         v-for="project in projects"
         :key="getTitle(project.attributes)"
         :to="`/projects/${formatSlug(project.attributes.title)}`"
         class="project-link"
-      >
-        <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
-        <h3 class="project-title">
-          {{ $ta(project.attributes, 'title') }}
-        </h3>
-      </NuxtLink>
-    </transition-group>
-  </Cluster>
+        >
+          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+          <h3 class="project-title">
+            {{ $ta(project.attributes, 'title') }}
+          </h3>
+        </NuxtLink>
+      </transition-group>
+    </Cluster>
+  </div>
 </template>
 
 <script>
@@ -39,25 +39,6 @@ export default {
     }
   },
   methods: {
-    beforeEnter: function(el) {
-      el.style.opacity = 0
-      el.style.transform = "translateY(-50%)"
-      el.style.transition = "opacity 500ms ease, transform 500ms ease"
-    },
-    enter: function(el, done) {
-      setTimeout(() => {
-        el.style.opacity = 1
-        el.style.transform = "translateY(0)"
-        done()
-      }, 1000)
-    },
-    leave: function(el, done) {
-      el.style.opacity = 0
-      el.style.transform = "translateY(50%)"
-      setTimeout(() => {
-        done()
-      }, 1000)
-    },
     getTitle(attrs) {
       return get(attrs, 'title', '')
     }
@@ -65,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-title {
   @include smallCaps;
   color: color(light);
@@ -73,5 +54,28 @@ export default {
 }
 .project-link {
   text-decoration: none;
+  display: block;
+}
+img {
+  max-height: calc(40vh - 3rem);
+}
+// Transition
+.insert-enter {
+  opacity: 0;
+}
+.insert-leave-to {
+  opacity: 0;
+  transition: translateY(25%);
+}
+.insert-enter-active {
+  transition: opacity 750ms ease 500ms, transform 750ms ease 500ms;
+}
+.insert-leave-active {
+  position: absolute;
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.insert-move {
+  transition: transform 750ms ease;
+  z-index: 100;
 }
 </style>

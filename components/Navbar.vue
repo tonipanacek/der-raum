@@ -69,7 +69,7 @@ export default {
     margin-bottom: spacing(lg);
     img {
       height: auto;
-      width: 7rem;
+      width: 5rem;
     }
   }
 

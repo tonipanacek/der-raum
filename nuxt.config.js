@@ -55,8 +55,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
-    "nuxt-i18n",
-    "nuxt-fullpage.js"
+    "nuxt-i18n"
   ],
   // SCSS resources
   styleResources: {

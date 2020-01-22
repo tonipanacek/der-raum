@@ -1,25 +1,31 @@
 <template>
-  <Container id="projects">
-    <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
-      <ProjectsList 
-      :id="`section${index}`"
+  <div
+  id="projects"
+  class="projects"
+  v-on:wheel.prevent="handleScroll"
+  >
+    <Container>
+      <ProjectsList
       class="section"
-      v-for="(pagesChunk, index) in pagesChunks"
-      :key="getTitle(pagesChunk)"
-      :projects="pagesChunk"
+      v-if="isChunky"
+      :projects="currentChunk"
       />
-    </full-page>
-  </Container>
+    </Container>
+    <ProgressBar :total="pagesChunks.length - 1" :page="page" />
+  </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { get, sortBy, chunk, isEmpty } from "lodash"
+import { get, sortBy } from "lodash"
+import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
+import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'projectsIndex',
+  mixins: [paginate],
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context(
@@ -36,33 +42,19 @@ export default {
       pages
     }
   },
+  computed : {
+    ...mapGetters({
+      pages: 'sortedPages'
+    })
+  },
   components: {
     Container,
-    ProjectsList
+    ProjectsList,
+    ProgressBar
   },
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("projects")
-  },
-  data() {
-    return {
-      max: 4, // max number of items to display on a page
-      options: {
-        licenseKey: "8E8983DA-2BD74A92-8EACC54D-C72F427E",
-        controlArrows: true,
-        scrollBar: true,
-        anchors: this.pagesChunks ? this.pagesChunks.map((page, index) => `section${index}`) : []
-      }
-    }
-  },
-  computed: {
-    pagesChunks() {
-      return chunk(this.sortedPages, this.max)
-    },
-    arePages() {
-      return !isEmpty(this.sortedPages)
-    },
-    ...mapGetters(['sortedPages'])
   },
   methods: {
     getTitle(chunk) {
@@ -72,3 +64,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.projects {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.section {
+  min-height: 100%;
+}
+</style>
