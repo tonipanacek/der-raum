@@ -1,7 +1,7 @@
 <template>
   <Container id="projects">
   <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
-    <div :id="`section${index}` "class="section" v-for="(pagesChunk, index) in pagesChunks" :key="get(pagesChunk, '[0].attributes.title')">
+    <div :id="`section${index}` "class="section" v-for="(pagesChunk, index) in pagesChunks" :key="$ta(pagesChunk, '[0].attributes.title')">
         <ProjectsList :projects="pagesChunk" />
       </div>
     </full-page>
@@ -10,7 +10,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { sortBy, chunk, get, isEmpty } from "lodash"
+import { sortBy, chunk, isEmpty } from "lodash"
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
@@ -61,7 +61,6 @@ export default {
     ...mapGetters(['sortedPages'])
   },
   methods: {
-    get, // access in view
     ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
