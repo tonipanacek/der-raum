@@ -78,7 +78,7 @@ export default {
   display: flex;
   flex-flow: row wrap;
   padding: 0 $sidebar-space $sidebar-space $sidebar-space;
-  height: 90vh;
+  height: 85vh;
 }
 .service-title {
   @include smallCaps;
@@ -103,7 +103,7 @@ export default {
   color: color(dark);
   border: 1px solid black;
   width: 100%;
-  // max-height: 100%;
+  max-height: 10ch;
   display: flex;
   align-items: center;
   justify-content: space-around;
