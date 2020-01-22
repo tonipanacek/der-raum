@@ -14,7 +14,7 @@ export default {
    */
   ...routerBase,
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Der Raum",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -38,7 +38,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    "~/plugins/translate_page"
+    "~/plugins/translate_page",
+    "~/plugins/markdown"
   ],
   /*
    ** Nuxt.js dev-modules

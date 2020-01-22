@@ -1,16 +1,28 @@
 <template>
-  <div class="full-main">
-    <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
-    <div class="about-text flex-sb">
-      <div class="address">
-        <h2>Der Raum</h2>
-      </div>
-      <div class="hours">
-        <h3>Hours</h3>
+  <Container id="contact">
+    <div class="full-main">
+      <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
+      <div class="about-text flex-sb">
+        <div class="address">
+          <h2>Der Raum</h2>
+        </div>
+        <div class="hours">
+          <h3>Hours</h3>
+        </div>
       </div>
     </div>
-  </div>
+  </Container>
 </template>
+
+<script>
+import Container from '~/components/container'
+
+export default {
+  components: {
+    Container
+  }
+}
+</script>
 
 <style lang="scss">
 .full-main {
