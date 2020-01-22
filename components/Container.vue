@@ -12,7 +12,6 @@ export default {
 
 <style lang="scss">
 .container {
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 2 1 auto;
 }
 </style>

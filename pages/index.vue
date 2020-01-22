@@ -1,17 +1,14 @@
 <template>
-  <Container id="home">
-    <ServiceList :services="services" />
-  </Container>
+  <ServiceList :services="services" />
 </template>
 
 <script>
 import { mapActions } from "vuex"
-import Container from "~/components/Container"
+// import Container from "~/components/Container"
 import ServiceList from "~/components/ServiceList.vue"
 export default {
   layout: "layout",
   components: {
-    Container,
     ServiceList
   },
   async asyncData() {
