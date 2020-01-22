@@ -2,8 +2,7 @@
   <Container id="projects">
     <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
       <ProjectsList 
-      :id="`section${index}`"
-      class="section"
+      :class="{ section: true, active: index === 0, 'fp-auto-height': true }"
       v-for="(pagesChunk, index) in pagesChunks"
       :key="getTitle(pagesChunk)"
       :projects="pagesChunk"
@@ -47,20 +46,28 @@ export default {
   data() {
     return {
       max: 4, // max number of items to display on a page
-      options: {
-        licenseKey: "8E8983DA-2BD74A92-8EACC54D-C72F427E",
-        controlArrows: true,
-        scrollBar: true,
-        anchors: this.pagesChunks ? this.pagesChunks.map((page, index) => `section${index}`) : []
-      }
     }
   },
   computed: {
     pagesChunks() {
+      if (isEmpty(this.sortedPages)) { return [] }
       return chunk(this.sortedPages, this.max)
+    },
+    anchors() {
+      return this.pagesChunks.map((page, index) => `section${index}`)
     },
     arePages() {
       return !isEmpty(this.sortedPages)
+    },
+    options() {
+      return {
+        licenseKey: "8E8983DA-2BD74A92-8EACC54D-C72F427E",
+        controlArrows: true,
+        scrollBar: true,
+        anchors: this.anchors,
+        navigation: true,
+        dragAndMove: true
+      }
     },
     ...mapGetters(['sortedPages'])
   },

@@ -1,26 +1,28 @@
 <template>
-  <Cluster>
-    <transition-group
-      name="insert"
-      tag="div"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @leave="leave"
-    >
-      <NuxtLink
-        :id="$ta(project.attributes, 'title')"
-        v-for="project in projects"
-        :key="getTitle(project.attributes)"
-        :to="`/projects/${formatSlug(project.attributes.title)}`"
-        class="project-link"
+  <div class="projects-list">
+    <Cluster>
+      <transition-group
+        name="insert"
+        tag="div"
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
       >
-        <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
-        <h3 class="project-title">
-          {{ $ta(project.attributes, 'title') }}
-        </h3>
-      </NuxtLink>
-    </transition-group>
-  </Cluster>
+        <NuxtLink
+          :id="$ta(project.attributes, 'title')"
+          v-for="project in projects"
+          :key="getTitle(project.attributes)"
+          :to="`/projects/${formatSlug(project.attributes.title)}`"
+          class="project-link"
+        >
+          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+          <h3 class="project-title">
+            {{ $ta(project.attributes, 'title') }}
+          </h3>
+        </NuxtLink>
+      </transition-group>
+    </Cluster>
+  </div>
 </template>
 
 <script>
@@ -65,7 +67,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-title {
   @include smallCaps;
   color: color(light);
@@ -73,5 +75,9 @@ export default {
 }
 .project-link {
   text-decoration: none;
+  display: block;
+}
+img {
+  max-height: 20vh;
 }
 </style>
