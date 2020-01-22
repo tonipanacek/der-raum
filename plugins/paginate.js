@@ -1,4 +1,5 @@
-import { mapGetters } from 'vuex'
+// Mixin (must be imported into components) that provides a pagination effect
+// In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
 import { get, sortBy, chunk, isEmpty, throttle } from "lodash"
 
 export default {
@@ -12,8 +13,8 @@ export default {
   },
   computed: {
     pagesChunks() {
-      if (isEmpty(this.sortedPages)) { return [] }
-      const chunks = chunk(this.sortedPages, this.max - 1)
+      if (isEmpty(this.pages)) { return [] }
+      const chunks = chunk(this.pages, this.max - 1)
       const chunksPlusNext = chunks.map((chunk, index) => {
         const nextChunk = chunks[index + 1] || []
         return [...chunk, nextChunk[0]].filter(c => c)
@@ -27,12 +28,11 @@ export default {
       return !isEmpty(this.currentChunk)
     },
     arePages() {
-      return !isEmpty(this.sortedPages)
+      return !isEmpty(this.pages)
     },
     throttledHandlePageTransition() {
       return throttle(this.handlePageTransition, this.refreshRate)
     },
-    ...mapGetters(['sortedPages'])
   },
   mounted() {
     window.addEventListener("keyup", this.handleKeyUp)

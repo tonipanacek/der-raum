@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import { get, sortBy } from "lodash"
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
@@ -41,6 +41,11 @@ export default {
     return {
       pages
     }
+  },
+  computed : {
+    ...mapGetters({
+      pages: 'sortedPages'
+    })
   },
   components: {
     Container,
