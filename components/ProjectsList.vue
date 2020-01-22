@@ -10,7 +10,7 @@
       <NuxtLink
         :id="$ta(project.attributes, 'title')"
         v-for="project in projects"
-        :key="$ta(project.attributes, 'title')"
+        :key="getTitle(project.attributes)"
         :to="`/projects/${formatSlug(project.attributes.title)}`"
         class="project-link"
       >
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { get } from 'lodash';
 import Cluster from '~/components/Cluster'
 // import Frame from '~/components/Frame'
 export default {
@@ -57,6 +58,9 @@ export default {
         done()
       }, 1000)
     },
+    getTitle(attrs) {
+      return get(attrs, 'title', '')
+    }
   }
 }
 </script>

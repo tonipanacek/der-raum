@@ -1,16 +1,20 @@
 <template>
   <Container id="projects">
-  <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
-    <div :id="`section${index}` "class="section" v-for="(pagesChunk, index) in pagesChunks" :key="$ta(pagesChunk, '[0].attributes.title')">
-        <ProjectsList :projects="pagesChunk" />
-      </div>
+    <full-page ref="fullpage" id="fullpage" :options="options" v-if="arePages">
+      <ProjectsList 
+      :id="`section${index}`"
+      class="section"
+      v-for="(pagesChunk, index) in pagesChunks"
+      :key="getTitle(pagesChunk)"
+      :projects="pagesChunk"
+      />
     </full-page>
   </Container>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { sortBy, chunk, isEmpty } from "lodash"
+import { get, sortBy, chunk, isEmpty } from "lodash"
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
@@ -61,6 +65,9 @@ export default {
     ...mapGetters(['sortedPages'])
   },
   methods: {
+    getTitle(chunk) {
+      return this.formatSlug(get(chunk, '[0].attributes.title', ''))
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
