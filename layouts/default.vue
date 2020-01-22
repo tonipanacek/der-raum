@@ -30,8 +30,12 @@ export default {
     ...mapActions(['unsetPages'])
   },
   watch: {
-    $route () {
-      this.unsetPages()
+    $route (newRoute, oldRoute) {
+      const matcher = /(about|project|room|service)/
+      const isSubChange = newRoute.name.match(matcher) && oldRoute.name.match(matcher)
+      if (!isSubChange) {
+        this.unsetPages()
+      }
     }
   }
 }
