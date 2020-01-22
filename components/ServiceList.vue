@@ -1,27 +1,43 @@
 <template>
-  <Cluster>
+<!--   <Cluster> -->
     <div class="service-list">
       <NuxtLink
         v-for="service in sortedServices"
         :id="service.attributes.title"
         :key="service.attributes.title"
         :to="`/services/${formatSlug(service.attributes.title)}`"
-        class="service-link"
+        :class="{ 'active': hover,  'service-link': true }"
       >
-        <img :src="service.attributes.image" :alt="service.attributes.title" />
+        <Frame v-if="service.attributes.title">
+          <img :src="service.attributes.image" :alt="service.attributes.title" />
+        </Frame>
         <h3 class="service-title">
           {{ $ta(service.attributes, 'title') }}
         </h3>
       </NuxtLink>
+      <NuxtLink
+        class="projects-link"
+        @mouseover.native="hover = true"
+        @mouseleave.native="hover = false"
+        to="/projects"
+      >
+        Projekte
+      </NuxtLink>
     </div>
-  </Cluster>
+<!--   </Cluster> -->
 </template>
 
 <script>
+import Frame from '~/components/Frame'
 import Cluster from '~/components/Cluster'
-// import Frame from '~/components/Frame'
 export default {
+  data() {
+    return {
+      hover: false
+    }
+  },
   components: {
+    Frame,
     Cluster
   },
   props: {
@@ -60,30 +76,40 @@ export default {
 <style lang="scss">
 .service-list {
   display: flex;
-  flex-flow: row-wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  align-content: space-between;
-  // padding: 0 $sidebar-space $sidebar-space $sidebar-space;
+  flex-flow: row wrap;
+  padding: 0 $sidebar-space $sidebar-space $sidebar-space;
+  height: 85vh;
 }
 .service-title {
   @include smallCaps;
   color: color(light);
-  font-weight: 600;
 }
 .service-link {
+  flex: 45%;
+  max-width: 45%;
   text-decoration: none;
-}
-#Design {
-  margin-left: spacing(lg);
-}
-#Planning {
-  // margin-right: $stack-space * 4;
   img {
-    max-height: 60vh;
+    object-fit: fill;
+    width: 100%;
+    max-height: 100%;
+  }
+  h3 {
+    margin-top: 0.5em;
   }
 }
-#Production {
-  margin-top: -$stack-space * 7;
+.projects-link {
+  text-decoration: none;
+  @include smallCaps;
+  color: color(dark);
+  border: 1px solid black;
+  width: 100%;
+  max-height: 10ch;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.active {
+  opacity: .3;
+  transition: opacity 0.3s ease-in-out;
 }
 </style>

@@ -44,6 +44,7 @@ export default {
 <style scoped lang="scss">
 .layout {
   margin-top: spacing(lg);
+  margin-bottom: spacing(lg);
 }
 
 a,
@@ -64,9 +65,9 @@ a:visited {
 .main-container {
   flex: 2 1 auto;
   // padding-bottom: $stack-space;
-  position: sticky;
-  height: 90vh;
-  overflow-y: scroll;
+  // position: sticky;
+  // height: 90vh;
+  // overflow-y: scroll;
 }
 #left-sidebar {
   padding: 0 $stack-space * 3;
