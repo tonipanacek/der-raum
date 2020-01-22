@@ -23,14 +23,6 @@ fields:
   name: de_description
   label: de_description
 pages:
-- content/projects/marginal-1.md
-- content/projects/marginal-2.md
-- content/projects/marginal-3.md
-- content/projects/marginal-4.md
-- content/projects/marginal-5.md
-- content/projects/marginal-6.md
-- content/projects/marginal-7.md
-- content/projects/marginal.md
 - content/projects/marginal1.md
 - content/projects/marginal2.md
 - content/projects/marginal3.md
