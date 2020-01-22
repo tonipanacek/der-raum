@@ -1,13 +1,16 @@
 <template>
-  <article class="project">
-    <h1>{{ $tp("title") }}</h1>
-    <p>{{ $tp("description") }}</p>
-    <img :src="image" v-for="image in $tp('images')" :alt="$tp('title')" />
-  </article>
+  <Container id="project">
+    <article class="project">
+      <h1>{{ $tp("title") }}</h1>
+      <p>{{ $tp("description") }}</p>
+      <img :src="image" v-for="image in $tp('images')" :alt="$tp('title')" />
+    </article>
+  </Container>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+import Container from "~/components/Container"
 
 export default {
   async asyncData({ params }) {
@@ -44,6 +47,9 @@ export default {
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
+  },
+  components: {
+    Container
   }
 }
 </script>

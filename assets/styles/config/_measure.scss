@@ -1,22 +1,22 @@
-$measure: 55ch;
-
-* {
-  max-width: $measure;
-}
-
-html,
-body,
-div,
-header,
-nav,
-main,
-footer,
-nav,
-section,
-input,
-ul {
-  max-width: none; // exceptions
-}
+// $measure: 55ch;
+//
+// * {
+//   max-width: $measure;
+// }
+//
+// html,
+// body,
+// div,
+// header,
+// nav,
+// main,
+// footer,
+// nav,
+// section,
+// input,
+// ul {
+//   max-width: none; // exceptions
+// }
 
 body {
   margin-top: spacing(sm);

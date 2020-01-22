@@ -77,5 +77,6 @@ export default {
 // Covered by Navbar component
 .navbar-secondary {
   margin-top: spacing(lg);
+  max-width: 10ch;
 }
 </style>
