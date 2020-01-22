@@ -3,7 +3,7 @@
     <ul>
       <li>
         <nuxt-link :to="localePath('index')" class="nav-item logo">
-          <img src="~/assets/images/logo.png" alt="Der Raum" />
+          <img src="~/assets/images/logo.svg" alt="Der Raum" />
         </nuxt-link>
       </li>
       <li>
