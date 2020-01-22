@@ -2,7 +2,7 @@
   <article class="project">
     <h1>{{ $tp("title") }}</h1>
     <p>{{ $tp("description") }}</p>
-    <img :src="$tp('image')" alt="Image of project" />
+    <img :src="image" v-for="image in $tp('images')" :alt="$tp(title)" />
   </article>
 </template>
 
@@ -37,9 +37,6 @@ export default {
       console.debug(err)
       return false
     }
-  },
-  computed: {
-    ...mapGetters(['paginatedPages'])
   },
   mounted() {
     this.setPages(this.paginatedPages)

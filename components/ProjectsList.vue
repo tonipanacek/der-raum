@@ -8,13 +8,13 @@
       @leave="leave"
     >
       <NuxtLink
-        :id="project.attributes.title"
+        :id="$ta(project.attributes, 'title')"
         v-for="project in projects"
-        :key="project.attributes.title"
+        :key="$ta(project.attributes, 'title')"
         :to="`/projects/${formatSlug(project.attributes.title)}`"
         class="project-link"
       >
-        <img :src="project.attributes.images[0]" :alt="project.attributes.title" />
+        <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
         <h3 class="project-title">
           {{ $ta(project.attributes, 'title') }}
         </h3>
@@ -56,7 +56,7 @@ export default {
       setTimeout(() => {
         done()
       }, 1000)
-    }
+    },
   }
 }
 </script>
