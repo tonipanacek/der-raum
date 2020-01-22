@@ -1,4 +1,5 @@
 ---
+position: 2
 title: Philosophy
 image: https://res.cloudinary.com/tonipanoche/image/upload/v1575557286/derRaum/philosophie.jpg
 en_title: Philosophy
