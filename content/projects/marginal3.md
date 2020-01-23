@@ -18,6 +18,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779522/badezimmer-dusche-hochwertig_tltpkc.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/schlafzimmer-holz-einbauschrank-schiebetuer_ox659z.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/kueche-kochinsel-einbauschrank-holz_vugrkd.jpg
-position: 5
+position: '5'
+orientation: horizontal
 
 ---
