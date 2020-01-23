@@ -1,16 +1,14 @@
 <template>
-  <Cluster class="layout">
-    <div class="wrapper">
-      <Stack class="left-sidebar">
-        <Navbar />
-        <SecondaryNavbar />
-      </Stack>
-      <main class="main-container">
-        <nuxt />
-      </main>
-      <RightSidebar class="right-sidebar" />
-    </div>
-  </Cluster>
+  <div class="layout flex">
+    <Stack class="left-sidebar">
+      <Navbar />
+      <SecondaryNavbar />
+    </Stack>
+    <main class="main-container">
+      <nuxt />
+    </main>
+    <RightSidebar class="right-sidebar" />
+  </div>
 </template>
 
 <script>
