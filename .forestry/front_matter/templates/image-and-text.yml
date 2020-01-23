@@ -48,5 +48,6 @@ fields:
   label: English Description
 pages:
 - content/about/team.md
+- content/rooms/bathroom.md
 - content/rooms/kitchen.md
 - content/services/design.md
