@@ -30,6 +30,7 @@ fields:
   label: Deutsch Beschreibung
 pages:
 - content/projects/1-unze.md
+- content/projects/abbey-road.md
 - content/projects/marginal1.md
 - content/projects/marginal2.md
 - content/projects/marginal3.md
