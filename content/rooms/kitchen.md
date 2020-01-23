@@ -1,6 +1,6 @@
 ---
 title: Kitchen
-image: https://res.cloudinary.com/tonipanoche/image/upload/v1574779803/derRaum/002-siemens_kueche_Loft-schwarz.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Exklusive-hochwertige-Kueche-schwarz_bglfhp.jpg
 de_title: Kueche
 en_title: Kitchen
 de_description: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
