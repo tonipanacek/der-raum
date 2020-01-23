@@ -1,36 +1,38 @@
 <template>
   <Stack class="navbar">
-    <ul>
+    <ul class="list-wrapper">
       <li>
         <nuxt-link :to="localePath('index')" class="nav-item logo">
           <img src="~/assets/images/logo.svg" alt="Der Raum" />
         </nuxt-link>
       </li>
-      <li>
-        <nuxt-link :to="localePath('projects')" class="nav-item title link">
-          {{ $t("navbar.projects") }}
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link :to="localePath('services')" class="nav-item title">
-          {{ $t("navbar.services") }}
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link :to="localePath('rooms')" class="nav-item title">
-          {{ $t("navbar.rooms") }}
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link :to="localePath('about')" class="nav-item title">
-          {{ $t("navbar.about") }}
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link :to="localePath('contact')" class="nav-item title">
-          {{ $t("navbar.contact") }}
-        </nuxt-link>
-      </li>
+      <div class="nav-items">
+        <li>
+          <nuxt-link :to="localePath('projects')" class="nav-item title link">
+            {{ $t("navbar.projects") }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('services')" class="nav-item title">
+            {{ $t("navbar.services") }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('rooms')" class="nav-item title">
+            {{ $t("navbar.rooms") }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('about')" class="nav-item title">
+            {{ $t("navbar.about") }}
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="localePath('contact')" class="nav-item title">
+            {{ $t("navbar.contact") }}
+          </nuxt-link>
+        </li>
+      </div>
     </ul>
   </Stack>
 </template>
@@ -60,6 +62,17 @@ export default {
   -webkit-padding-start: 0;
 
   li {
+    display: block;
+  }
+}
+
+.list-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@include respond-to('large') {
+  .list-wrapper {
     display: block;
   }
 }
