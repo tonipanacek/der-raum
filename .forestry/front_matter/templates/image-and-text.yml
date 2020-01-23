@@ -49,6 +49,7 @@ fields:
 pages:
 - content/about/team.md
 - content/rooms/bathroom.md
+- content/rooms/bedroom.md
 - content/rooms/kitchen.md
 - content/rooms/office.md
 - content/rooms/reception.md
