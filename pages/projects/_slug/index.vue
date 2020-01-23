@@ -13,6 +13,7 @@
           :images="currentImages"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
+          :slug="slug"
           />
         </div>
       </article>

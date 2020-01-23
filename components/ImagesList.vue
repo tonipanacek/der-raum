@@ -10,7 +10,7 @@
         :id="title"
         v-for="image in images"
         :key="image.url"
-        :to="`/pages/${formatSlug(title)}/images/${image.index}`"
+        :to="`/projects/${slug}/images/${image.index}`"
         class="image-link"
         >
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
@@ -41,6 +41,10 @@ export default {
       type: String,
       required: true
     },
+    slug: {
+      type: String,
+      required: true
+    },
     totalCount: {
       type: Number
     }
@@ -57,11 +61,15 @@ export default {
 .image-title {
   @include smallCaps;
   color: color(light);
-  font-weight: 600;
+  font-weight: 500;
+  transition: 500ms color ease;
 }
 .image-link {
   text-decoration: none;
   display: block;
+  &:hover > .image-title {
+    color: color(dark);
+  }
 }
 img {
   max-height: calc(40vh - 3rem);

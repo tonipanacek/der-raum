@@ -50,11 +50,15 @@ export default {
 .project-title {
   @include smallCaps;
   color: color(light);
-  font-weight: 600;
+  font-weight: 500;
+  transition: color 500ms;
 }
 .project-link {
   text-decoration: none;
   display: block;
+  &:hover > .project-title {
+    color: color(dark);
+  }
 }
 img {
   max-height: calc(40vh - 3rem);
