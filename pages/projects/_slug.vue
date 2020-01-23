@@ -6,8 +6,8 @@
   >
     <Container>
       <article class="project">
-        <h1>{{ $tp("title") }}</h1>
-        <vue-markdown>{{ $tp("description") }}</vue-markdown>
+        <h1 class="accessible">{{ $tp("title") }}</h1>
+        <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
         <div v-if="isChunky" class="images section">
           <ImagesList
           :images="currentImages"
@@ -100,5 +100,9 @@ export default {
 }
 .section {
   min-height: 100%;
+}
+.accessible {
+  visibility: hidden;
+  position: absolute;
 }
 </style>

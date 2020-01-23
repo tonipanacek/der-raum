@@ -64,10 +64,10 @@ export default {
     },
     handleKeyUp(event) {
       event.preventDefault;
-      if (event.key.match(/down/i)) {
+      if (event.key.match(/(down|right)/i)) {
         this.incrementPage()
         return false;
-      } else if (event.key.match(/up/i)) {
+      } else if (event.key.match(/(up|left)/i)) {
         this.decrementPage()
         return false;
       }
