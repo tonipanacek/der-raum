@@ -9,7 +9,7 @@ sections:
 - type: directory
   path: content/rooms
   label: Räume
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - image-and-text
@@ -30,7 +30,7 @@ sections:
 - type: directory
   path: content/projects
   label: Projekte
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - text-and-multiple-images
