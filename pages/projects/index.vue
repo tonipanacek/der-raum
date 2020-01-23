@@ -48,7 +48,7 @@ export default {
     ProgressBar
   },
   mounted() {
-    this.setPages(this.$data.pages)
+    this.setPages(this.currentChunk)
     this.setPagesPrefix("projects")
   },
   methods: {
@@ -56,6 +56,11 @@ export default {
       return this.formatSlug(get(chunk, '[0].attributes.title', ''))
     },
     ...mapActions(["setPages", "setPagesPrefix"])
+  },
+  watch: {
+    currentChunk(chunk) {
+      this.setPages(chunk)
+    }
   }
 }
 </script>

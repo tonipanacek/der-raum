@@ -5,11 +5,23 @@
   >
     <Container>
       <article class="project">
-        <img :src="image" :alt="$tp('title')">
-        <aside class="caption">
-          <h1>{{ $tp('title') }} {{ id }} / {{ images.length }}</h1>
-          <p>{{ $tp('description') }}</p>
-        </aside>
+        <div class="image-container">
+          <img :src="image" :alt="$tp('title')">
+        </div>
+        <div class="image-footer">
+          <aside class="caption">
+            <h1>{{ $tp('title') }} {{ id }} / {{ images.length }}</h1>
+            <p>{{ $tp('description') }}</p>
+          </aside>
+          <nav class="image-nav">
+            <NuxtLink :to="nextImageLink" v-if="nextImageLink">
+            Next
+            </NuxtLink>
+            <NuxtLink :to="previousImageLink" v-if="previousImageLink">
+            Previous
+            </NuxtLink>
+          </nav>
+        </div>
       </article>
     </Container>
   </div>
@@ -27,7 +39,7 @@ export default {
     try {
       // get current page data
       const slug = params.slug
-      const id = params.id
+      const id = parseInt(params.id)
       const page = await import(`~/content/projects/${slug}.md`)
       const images = get(page, 'attributes.images', [])
       const image = images[id - 1]
@@ -43,6 +55,10 @@ export default {
         return pages(key)
       })
       pages = sortBy(pages, page => page.position)
+
+      if (!image) {
+        throw "No image found!"
+      }
 
       return {
         image,
@@ -64,6 +80,16 @@ export default {
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
   },
+  computed: {
+    nextImageLink() {
+      if (this.id >= this.$data.images.length) { return '' }
+      return `/projects/${this.$data.slug}/images/${this.$data.id + 1}`
+    },
+    previousImageLink() {
+      if (this.id <= 1) { return '' }
+      return `/projects/${this.$data.slug}/images/${this.$data.id - 1}`
+    }
+  },
   components: {
     Container
   }
@@ -78,7 +104,7 @@ export default {
 }
 img {
   max-width: 100%;
-  max-height: 90vh;
+  max-height: calc(100vh - 4 * #{spacing(lg)});
 }
 * {
   max-width: none;
@@ -91,5 +117,16 @@ p {
   @include smallCaps;
   color: color(light);
   font-size: 0.7em;
+}
+.image-footer {
+  display: flex;
+  .caption {
+    flex-grow: 2;
+  }
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

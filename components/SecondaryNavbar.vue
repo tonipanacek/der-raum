@@ -79,4 +79,11 @@ export default {
   margin-top: spacing(lg);
   max-width: 10ch;
 }
+.insert-move {
+  transition: transform 750ms ease;
+  z-index: 100;
+}
+.insert-leave-active {
+  position: absolute;
+}
 </style>
