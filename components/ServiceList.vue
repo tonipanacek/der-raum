@@ -21,7 +21,7 @@
         @mouseleave.native="hover = false"
         to="/projects"
       >
-        Projekte
+        {{ $t("projects.link") }}
       </NuxtLink>
     </div>
 <!--   </Cluster> -->

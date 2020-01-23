@@ -69,7 +69,7 @@ a:visited {
 
 .main-container {
   flex: 2 1 50ch;
-  // padding-bottom: $stack-space;
+  padding-bottom: $stack-space;
   position: sticky;
   min-height: 90vh;
   overflow-x: hidden;
@@ -78,7 +78,7 @@ a:visited {
 .left-sidebar {
   padding: 0 $stack-space * 3;
   width: 100%;
-  position: none;
+  position: sticky;
   top: spacing(lg);
   align-self: flex-start;
   height: auto;
@@ -93,7 +93,7 @@ a:visited {
   padding: 0 2rem;
   position: sticky;
   flex: 0 1 5ch;
-  // top: spacing(lg);
+  top: spacing(lg);
   align-self: flex-start;
   height: auto;
   .right-stack{

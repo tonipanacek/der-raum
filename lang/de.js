@@ -10,6 +10,10 @@ export default {
     impressum: "Impressum",
     privacy: "Datenschutz"
   },
+    projects: {
+    link: 'Projekte'
+  },
+
   legal: {
     title: "Impressum"
   },

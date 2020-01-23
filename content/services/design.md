@@ -12,6 +12,6 @@ de_description: bezeichnet einen Zusammenschluss von mehreren Menschen zur Lösu
 en_description: denotes a group of several people to solve a specific task. Our team
   from the Raum is particularly characterized by the different specialist skills.
   In the end, these are the result of good cooperation. Close cooperation with our
-  carpenters in the manufacture *** Holz & Raum *** Berlin is one of the keys to success.
+  carpenters in the manufacture ***Holz & Raum*** Berlin is one of the keys to success.
 
 ---
