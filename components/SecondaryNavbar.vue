@@ -83,4 +83,11 @@ export default {
       display: block;
   }
 }
+.insert-move {
+  transition: transform 750ms ease;
+  z-index: 100;
+}
+.insert-leave-active {
+  position: absolute;
+}
 </style>

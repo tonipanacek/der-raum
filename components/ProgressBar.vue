@@ -18,16 +18,17 @@ export default {
 
 <style lang="scss">
 .progress-bar {
+  --width: #{spacing(xs) / 2};
   position: fixed;
   top: 50vh;
   right: spacing(lg);
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
-    width: 0.2rem;
+    width: var(--width);
     height: 25vh;
     max-height: 50rem;
-    border-radius: spacing(xs);
+    border-radius: var(--width);
     position: relative;
     overflow: hidden;
     .completed {

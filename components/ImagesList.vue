@@ -1,5 +1,5 @@
 <template>
-  <div class="projects-list">
+  <div class="images-list">
     <Cluster>
       <transition-group
       name="insert"
@@ -7,15 +7,15 @@
       tag="div"
       >
         <NuxtLink
-        :id="$ta(project.attributes, 'title')"
-        v-for="project in projects"
-        :key="getTitle(project.attributes)"
-        :to="`/projects/${formatSlug(project.attributes.title)}`"
-        class="project-link"
+        :id="title"
+        v-for="image in images"
+        :key="image.url"
+        :to="`/projects/${slug}/images/${image.index}`"
+        class="image-link"
         >
-          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
-          <h3 class="project-title">
-            {{ $ta(project.attributes, 'title') }}
+          <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+          <h3 class="image-title">
+            {{ title }} {{ image.index }} / {{ totalCount }}
           </h3>
         </NuxtLink>
       </transition-group>
@@ -26,16 +26,27 @@
 <script>
 import { get } from 'lodash';
 import Cluster from '~/components/Cluster'
-// import Frame from '~/components/Frame'
+
 export default {
-  name: "ProjectsList",
+  name: "imagesList",
   components: {
     Cluster
   },
   props: {
-    projects: {
+    images: {
       type: Array,
       required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    slug: {
+      type: String,
+      required: true
+    },
+    totalCount: {
+      type: Number
     }
   },
   methods: {
@@ -47,16 +58,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project-title {
+.image-title {
   @include smallCaps;
   color: color(light);
   font-weight: 500;
-  transition: color 500ms;
+  transition: 500ms color ease;
 }
-.project-link {
+.image-link {
   text-decoration: none;
   display: block;
-  &:hover > .project-title {
+  &:hover > .image-title {
     color: color(dark);
   }
 }

@@ -74,7 +74,7 @@ a:visited {
   flex: 2 1 50ch;
   padding-bottom: $stack-space;
   position: sticky;
-  min-height: 90vh;
+  min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
   overflow-y: visible;
 }
