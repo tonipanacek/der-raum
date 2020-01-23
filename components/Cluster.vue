@@ -23,8 +23,8 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
-    margin: spacing(sm) / 2 * -1;
+    align-items: normal;
+    // margin: spacing(sm) / 2 * -1;
     & > * {
       margin: spacing(sm) / 2;
     }

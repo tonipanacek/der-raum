@@ -23,7 +23,7 @@ $fonts: (
 }
 
 @mixin smallCaps {
-  font-size: .8em;
+  font-size: .75em;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: color(light);
@@ -47,8 +47,4 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: font(header);
-}
-
-code, pre {
-  font-family: font(main);
 }

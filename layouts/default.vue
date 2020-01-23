@@ -3,6 +3,7 @@
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
+      <SocialIcons />
     </Stack>
     <main class="main-container">
       <nuxt />
@@ -17,14 +18,18 @@ import { throttle } from 'lodash'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
+import Cluster from "~/components/Cluster"
 import RightSidebar from "~/components/RightSidebar"
+import SocialIcons from "~/components/SocialIcons"
 
 export default {
   components: {
     Navbar,
     SecondaryNavbar,
     Stack,
-    RightSidebar
+    RightSidebar,
+    Cluster,
+    SocialIcons
   },
   methods: {
     ...mapActions(['unsetPages'])
@@ -43,16 +48,13 @@ export default {
 
 <style scoped lang="scss">
 .layout {
-  padding-top: spacing(lg);
-  padding-bottom: spacing(lg);
-  position: relative;
+  padding: spacing(lg) 0;
   display: flex;
   flex-direction: column;
    @include respond-to('large') {
     flex-direction: initial;
   }
 }
-
 a,
 a:hover,
 a:focus,
@@ -69,8 +71,8 @@ a:visited {
 }
 
 .main-container {
-  flex: 2 1 auto;
-  // padding-bottom: $stack-space;
+  flex: 2 1 50ch;
+  padding-bottom: $stack-space;
   position: sticky;
   min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
@@ -79,11 +81,12 @@ a:visited {
 .left-sidebar {
   padding: 0 $stack-space * 3;
   width: 100%;
-  position: none;
+  position: sticky;
   top: spacing(lg);
   align-self: flex-start;
   height: auto;
   text-align: right;
+  justify-content: space-between;
   @include respond-to('large') {
       width: 40ch;
       text-align: left;
@@ -93,6 +96,7 @@ a:visited {
 .right-sidebar {
   padding: 0 2rem;
   position: sticky;
+  flex: 0 1 5ch;
   top: spacing(lg);
   align-self: flex-start;
   height: auto;

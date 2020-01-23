@@ -1,4 +1,5 @@
 ---
+position: 2
 title: Philosophy
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776445/philosophie_mdd7na.jpg
 en_title: Philosophy

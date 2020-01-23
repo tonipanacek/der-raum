@@ -79,10 +79,10 @@ export default {
 
 .navbar {
   .logo {
-    margin-bottom: spacing(lg);
     img {
       height: auto;
       width: 5rem;
+      padding-bottom: spacing(lg);
     }
   }
 
