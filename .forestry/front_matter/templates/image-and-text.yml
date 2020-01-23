@@ -48,5 +48,10 @@ fields:
   label: English Description
 pages:
 - content/about/team.md
-- content/rooms/the-route.md
+- content/rooms/bathroom.md
+- content/rooms/bedroom.md
+- content/rooms/kitchen.md
+- content/rooms/office.md
+- content/rooms/reception.md
+- content/rooms/sliders.md
 - content/services/design.md
