@@ -47,6 +47,10 @@ export default {
   padding-bottom: spacing(lg);
   position: relative;
   display: flex;
+  flex-direction: column;
+   @include respond-to('large') {
+    flex-direction: initial;
+  }
 }
 
 a,
@@ -74,11 +78,17 @@ a:visited {
 }
 .left-sidebar {
   padding: 0 $stack-space * 3;
-  width: 40ch;
-  position: sticky;
+  width: 100%;
+  position: none;
   top: spacing(lg);
   align-self: flex-start;
   height: auto;
+  text-align: right;
+  @include respond-to('large') {
+      width: 40ch;
+      text-align: left;
+      position: sticky;
+  }
 }
 .right-sidebar {
   padding: 0 2rem;

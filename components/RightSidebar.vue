@@ -53,15 +53,28 @@ export default {
   }
 
   padding-right: 2rem;
+  width: 100%;
   .right-stack {
-    height: 85vh;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: initial;
     p {
       @include smallCaps;
-      writing-mode: vertical-lr;
+      font-size: 1.4em;
+      writing-mode: horizontal-tb;
     }
   }
 }
+ @include respond-to('large') {
+    .right-sidebar {
+      width: 100px;
+      .right-stack {
+        height: 85vh;
+        flex-direction: column;
+        p {
+          writing-mode: vertical-lr;
+        }
+      }
+    }
+  }
 </style>
