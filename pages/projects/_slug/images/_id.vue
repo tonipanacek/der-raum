@@ -5,6 +5,9 @@
   >
     <Container>
       <article class="project">
+        <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
+        Close
+        </NuxtLink>
         <div class="image-container">
           <img :src="image" :alt="$tp('title')">
         </div>
@@ -14,11 +17,11 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
-            <NuxtLink :to="nextImageLink" v-if="nextImageLink">
-            Next
-            </NuxtLink>
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
             Previous
+            </NuxtLink>
+            <NuxtLink :to="nextImageLink" v-if="nextImageLink">
+            Next
             </NuxtLink>
           </nav>
         </div>
@@ -88,6 +91,9 @@ export default {
     previousImageLink() {
       if (this.id <= 1) { return '' }
       return `/projects/${this.$data.slug}/images/${this.$data.id - 1}`
+    },
+    closeLink() {
+      return `/projects/${this.$data.slug}/`
     }
   },
   components: {
@@ -128,5 +134,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.close-link {
+  position: fixed;
+  left: spacing(lg) * 5;
 }
 </style>
