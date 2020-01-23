@@ -1,5 +1,5 @@
 <template>
-  <div class="layout flex">
+  <div class="layout">
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.layout {
+  padding: spacing(lg) 0;
+  display: flex;
+}
 a,
 a:hover,
 a:focus,
