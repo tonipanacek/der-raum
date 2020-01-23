@@ -36,10 +36,10 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("keyup", this.handleKeyUp)
+    window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
-    window.removeEventListener("keyup", this.handleKeyUp)
+    window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
     incrementPage() {
@@ -62,8 +62,8 @@ export default {
         this.decrementPage()
       }
     },
-    handleKeyUp(event) {
-      event.preventDefault;
+    handleKey(event) {
+      event.preventDefault();
       if (event.key.match(/(down|right)/i)) {
         this.incrementPage()
         return false;
