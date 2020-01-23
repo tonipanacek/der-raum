@@ -3,6 +3,7 @@
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
+      <SocialIcons />
     </Stack>
     <main class="main-container">
       <nuxt />
@@ -19,6 +20,7 @@ import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
 import Cluster from "~/components/Cluster"
 import RightSidebar from "~/components/RightSidebar"
+import SocialIcons from "~/components/SocialIcons"
 
 export default {
   components: {
@@ -26,7 +28,8 @@ export default {
     SecondaryNavbar,
     Stack,
     RightSidebar,
-    Cluster
+    Cluster,
+    SocialIcons
   },
   methods: {
     ...mapActions(['unsetPages'])
@@ -83,6 +86,7 @@ a:visited {
   align-self: flex-start;
   height: auto;
   text-align: right;
+  justify-content: space-between;
   @include respond-to('large') {
       width: 40ch;
       text-align: left;
