@@ -1,55 +1,104 @@
 <template>
-  <Container id="project">
-    <article class="project">
-      <h1>{{ $tp("title") }}</h1>
-      <vue-markdown>{{ $tp("description") }}</vue-markdown>
-      <img :src="image" v-for="image in $tp('images')" :alt="$tp('title')" />
-    </article>
-  </Container>
+  <div
+  id="projects"
+  class="projects"
+  v-on:wheel.prevent="handleScroll"
+  >
+    <Container>
+      <article class="project">
+        <h1>{{ $tp("title") }}</h1>
+        <vue-markdown>{{ $tp("description") }}</vue-markdown>
+        <div v-if="isChunky" class="images section">
+          <ImagesList
+          :images="currentImages"
+          :title="$tp('title')"
+          :totalCount="$tp('images').length"
+          />
+        </div>
+      </article>
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
+    </Container>
+  </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from 'vuex'
+import { get, sortBy, isEmpty } from 'lodash'
+import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
+import ProgressBar from "~/components/ProgressBar"
+import ImagesList from "~/components/ImagesList"
 
 export default {
-  async asyncData({ params }) {
+  name: 'projectsSlug',
+  mixins: [paginate],
+  async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file
     try {
-      const slug = params.slug
       // get current page data
+      const slug = params.slug
       const page = await import(`~/content/projects/${slug}.md`)
+      const images = get(page, 'attributes.images', [])
 
       // create context via webpack to map over all pages
-      const allPages = await require.context(
+      let allPages = await require.context(
         "~/content/projects/",
         true,
         /\.md$/
       )
-      const pages = allPages.keys().map(key => {
+      allPages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
       })
+      allPages = sortBy(allPages, page => page.position)
 
       return {
+        pages: images, // For paginate mixin, must be named as such :)
+        allPages,
         page,
-        pages,
         slug
       }
     } catch (err) {
-      console.debug(err)
-      return false
+      error({ statusCode: 404, message: "No project found" })
     }
   },
   mounted() {
-    this.setPages(this.$data.pages)
+    this.setPages(this.$data.allPages)
     this.setPagesPrefix("projects")
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
   },
+  computed: {
+    currentImages() {
+      if (isEmpty(this.currentChunk)) { return [] }
+      return this.currentChunk.map((url) => {
+        return {
+          index: this.images.indexOf(url) + 1,
+          url
+        }
+      })
+    },
+    images() {
+      if (isEmpty(this.$data.pages)) { return [] }
+      return this.$data.pages
+    }
+  },
   components: {
-    Container
+    Container,
+    ProgressBar,
+    ImagesList
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.project {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.section {
+  min-height: 100%;
+}
+</style>

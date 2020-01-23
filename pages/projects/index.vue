@@ -11,12 +11,12 @@
       :projects="currentChunk"
       />
     </Container>
-    <ProgressBar :total="pagesChunks.length - 1" :page="page" />
+    <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
@@ -41,11 +41,6 @@ export default {
     return {
       pages
     }
-  },
-  computed : {
-    ...mapGetters({
-      pages: 'sortedPages'
-    })
   },
   components: {
     Container,

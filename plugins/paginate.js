@@ -1,12 +1,12 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
-import { get, sortBy, chunk, isEmpty, throttle } from "lodash"
+import { chunk, isEmpty, throttle } from "lodash"
 
 export default {
   data() {
     return {
       max: 4, // max number of items to display on a page
-      page: 0,
+      pageNumber: 0,
       refreshRate: 500,
       changeThreshold: 10
     }
@@ -22,7 +22,8 @@ export default {
       return chunksPlusNext
     },
     currentChunk() {
-      return this.pagesChunks[this.page]
+      if (this.pageNumber === null || isEmpty(this.pagesChunks)) { return [] }
+      return this.pagesChunks[this.pageNumber]
     },
     isChunky() {
       return !isEmpty(this.currentChunk)
@@ -42,13 +43,13 @@ export default {
   },
   methods: {
     incrementPage() {
-      if (this.page < this.pagesChunks.length - 1) {
-        this.page += 1
+      if (this.pageNumber < this.pagesChunks.length - 1) {
+        this.pageNumber += 1
       }
     },
     decrementPage() {
-      if (this.page > 0) {
-        this.page -= 1
+      if (this.pageNumber > 0) {
+        this.pageNumber -= 1
       }
     },
     handleScroll(event) {
