@@ -4,7 +4,18 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+- name: position
+  type: number
+  label: Project Number
+  description: Where in the layout the project will display. All odd numbers will
+    be horizontal, and even numbers will be vertical.
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 - name: images
   type: image_gallery
   config: {}
@@ -12,16 +23,16 @@ fields:
   description: Upload as many as you would like :)
 - type: text
   name: en_title
-  label: en_title
+  label: English Title
 - type: text
   name: de_title
-  label: de_title
+  label: Deutsch Titel
 - type: textarea
   name: en_description
-  label: en_description
+  label: English Description
 - type: textarea
   name: de_description
-  label: de_description
+  label: Deutsch Beschreibung
 pages:
 - content/projects/marginal1.md
 - content/projects/marginal2.md
