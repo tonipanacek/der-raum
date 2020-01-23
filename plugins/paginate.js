@@ -7,8 +7,8 @@ export default {
     return {
       max: 4, // max number of items to display on a page
       pageNumber: 0,
-      refreshRate: 500,
-      changeThreshold: 10
+      refreshRate: 750,
+      changeThreshold: 15
     }
   },
   computed: {
