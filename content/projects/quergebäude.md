@@ -13,7 +13,9 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780008/Kamin-Einbauschrank-Wohnbereich-weiss-lackiert_cznmxc.gif
 en_title: Rear Wing
 de_title: Quergebäude
-en_description: ''
-de_description: ''
+en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
+  Michael Sass Fotografie
+de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
+  Michael Sass Fotografie
 
 ---
