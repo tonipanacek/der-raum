@@ -24,7 +24,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy, isEmpty } from 'lodash'
+import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import ProgressBar from "~/components/ProgressBar"
@@ -52,6 +52,17 @@ export default {
         return allPages(key)
       })
       allPages = sortBy(allPages, page => page.position)
+
+      let chunks = chunk(allPages, 4 - 1)
+      chunks = chunks.map((chunk, index) => {
+        const nextChunk = chunks[index + 1] || []
+        return [...chunk, nextChunk[0]].filter(c => c)
+      })
+      allPages = chunks.find(chunk =>
+        chunk.find(chunkyPage =>
+          isEqual(chunkyPage.attributes, page.attributes)
+        )
+      )
 
       return {
         pages: images, // For paginate mixin, must be named as such :)

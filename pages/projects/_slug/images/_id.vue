@@ -32,7 +32,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy, isEmpty } from 'lodash'
+import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import Container from "~/components/Container"
 
 export default {
@@ -59,6 +59,17 @@ export default {
       })
       pages = sortBy(pages, page => page.position)
 
+      let chunks = chunk(pages, 4 - 1)
+      chunks = chunks.map((chunk, index) => {
+        const nextChunk = chunks[index + 1] || []
+        return [...chunk, nextChunk[0]].filter(c => c)
+      })
+      pages = chunks.find(chunk =>
+        chunk.find(chunkyPage =>
+          isEqual(chunkyPage.attributes, page.attributes)
+        )
+      )
+
       if (!image) {
         throw "No image found!"
       }
@@ -69,6 +80,7 @@ export default {
         pages,
         page,
         slug,
+        chunks,
         id
       }
     } catch (err) {
