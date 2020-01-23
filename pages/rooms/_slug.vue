@@ -20,7 +20,7 @@ export default {
     Frame,
     Container
   },
-  async asyncData({ params }) {
+  async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
@@ -41,7 +41,7 @@ export default {
       }
     } catch (err) {
       console.debug(err)
-      return false
+      error({ statusCode: 404, message: "No room found" })
     }
   },
   mounted() {
