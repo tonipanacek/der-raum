@@ -47,6 +47,10 @@ export default {
 .layout {
   padding: spacing(lg) 0;
   display: flex;
+  flex-direction: column;
+   @include respond-to('large') {
+    flex-direction: initial;
+  }
 }
 a,
 a:hover,
@@ -73,11 +77,17 @@ a:visited {
 }
 .left-sidebar {
   padding: 0 $stack-space * 3;
-  flex: 0 1 30ch;
-  position: sticky;
-  // top: spacing(lg);
+  width: 100%;
+  position: none;
+  top: spacing(lg);
   align-self: flex-start;
   height: auto;
+  text-align: right;
+  @include respond-to('large') {
+      width: 40ch;
+      text-align: left;
+      position: sticky;
+  }
 }
 .right-sidebar {
   padding: 0 2rem;

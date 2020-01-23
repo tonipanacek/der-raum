@@ -78,5 +78,9 @@ export default {
 .navbar-secondary {
   margin-top: spacing(lg);
   max-width: 10ch;
+  display: none;
+  @include respond-to('large') {
+      display: block;
+  }
 }
 </style>

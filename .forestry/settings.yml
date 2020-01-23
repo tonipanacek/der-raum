@@ -4,10 +4,12 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Content
 - type: directory
   path: content/rooms
   label: Räume
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - image-and-text
@@ -28,10 +30,16 @@ sections:
 - type: directory
   path: content/projects
   label: Projekte
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - text-and-multiple-images
+- type: heading
+  label: Data
+- type: document
+  path: content/data/business_partners
+  label: Business Partners List
+  match: "**/*"
 upload_dir: ''
 public_path: https://res.cloudinary.com/dwvtvuml8/image/upload
 front_matter_path: ''
