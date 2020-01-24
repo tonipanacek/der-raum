@@ -5,12 +5,23 @@ fields:
 - type: text
   name: title
   label: Title
-- name: orientation
-  type: text
+- name: position
+  type: number
+  label: Layout Position
+  description: 'To work properly in the layout: Horizontal images need to be odd numbers.
+    Vertical images need to be even numbers.'
+  default: 0
+  required: true
   config:
-    required: false
-  label: Image Orientation
-  description: Choose either horizontal or vertical.
+    min: 
+    max: 
+    step: 
+- name: portrait
+  type: boolean
+  label: Portrait
+  description: Select this if the photo will be in portrait (vertical). Otherwise
+    the photo will be landscape (horizontal). Must be used in conjunction with the
+    layout position below.
 - name: images
   type: image_gallery
   config: {}
