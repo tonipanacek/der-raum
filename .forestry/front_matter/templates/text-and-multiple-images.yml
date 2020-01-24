@@ -11,6 +11,17 @@ fields:
     required: false
   label: Image Orientation
   description: Choose either horizontal or vertical.
+- name: position
+  type: number
+  label: Layout Position
+  description: 'To work properly in the layout: Horizontal images need to be odd numbers.
+    Vertical images need to be even numbers.'
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 - name: images
   type: image_gallery
   config: {}
