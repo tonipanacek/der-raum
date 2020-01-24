@@ -27,6 +27,7 @@ export default {
     padding: spacing(xs);
   }
   width: 100%;
+  margin-top: spacing(lg);
 }
 
 </style>

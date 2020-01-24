@@ -3,7 +3,6 @@
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
-      <SocialIcons />
     </Stack>
     <main class="main-container">
       <nuxt />
@@ -18,7 +17,6 @@ import { throttle } from 'lodash'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
-import Cluster from "~/components/Cluster"
 import RightSidebar from "~/components/RightSidebar"
 import SocialIcons from "~/components/SocialIcons"
 
@@ -28,7 +26,6 @@ export default {
     SecondaryNavbar,
     Stack,
     RightSidebar,
-    Cluster,
     SocialIcons
   },
   methods: {
@@ -109,6 +106,12 @@ a:visited {
       @include smallCaps;
       writing-mode: vertical-lr;
     }
+  }
+}
+
+#right-social {
+  @include respond-to("small") {
+    display: block;
   }
 }
 </style>

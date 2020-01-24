@@ -1,5 +1,6 @@
 <template>
   <Stack id="right-sidebar" class="right-sidebar">
+    <SocialIcons id="right-social"/>
     <div class="right-stack small-very">
       <p>
         <nuxt-link :to="switchLocalePath('de')">
@@ -25,11 +26,13 @@
 
 <script>
 import Stack from "~/components/Stack"
+import SocialIcons from "~/components/SocialIcons"
 
 export default {
   name: "RightSidebar",
   components: {
-    Stack
+    Stack,
+    SocialIcons
   }
 }
 </script>
@@ -60,7 +63,7 @@ export default {
     flex-direction: initial;
     p {
       @include smallCaps;
-      font-size: 1.4em;
+      font-size: 1em;
       writing-mode: horizontal-tb;
     }
   }
@@ -75,6 +78,9 @@ export default {
           writing-mode: vertical-lr;
         }
       }
+    }
+    #right-social {
+      display: none;
     }
   }
 </style>
