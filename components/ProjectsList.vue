@@ -63,8 +63,7 @@ export default {
 }
 .project-link {
   text-decoration: none;
-  display: block;
-  transition: margin 750ms ease;
+  transition: height 750ms ease;
   width: calc(50% - #{spacing(sm)});
   height: calc(50vh - 8 * #{spacing(lg)} / 4);
   box-sizing: content-box !important;
@@ -79,7 +78,7 @@ export default {
     transition: opacity 750ms ease;
   }
   &:nth-child(2), &:nth-child(4) {
-    height: calc(50vh - 8 * #{spacing(lg)} / 4);
+    height: calc(60vh - 8 * #{spacing(lg)} / 4);
   }
   &:nth-child(4) {
     pointer-events: none;
