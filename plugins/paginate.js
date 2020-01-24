@@ -17,7 +17,8 @@ export default {
       const chunks = chunk(this.pages, this.max - 1)
       const chunksPlusNext = chunks.map((chunk, index) => {
         const nextChunk = chunks[index + 1] || []
-        return [...chunk, nextChunk[0]].filter(c => c)
+        const result = [...chunk, nextChunk[0]]
+        return [result[1], result[0], result[2], result[3]].filter(c => c)
       })
       return chunksPlusNext
     },

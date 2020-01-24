@@ -5,6 +5,7 @@
       name="insert"
       mode="out-in"
       tag="div"
+      class="transition-container"
       >
         <NuxtLink
         :id="$ta(project.attributes, 'title')"
@@ -47,6 +48,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.projects-list {
+  max-height: calc(100vh - 4 * #{spacing(lg)});
+  .cluster, .transition-container {
+    max-height: calc(100vh - 2 * #{spacing(lg)});
+    overflow: visible;
+  }
+}
 .project-title {
   @include smallCaps;
   color: color(light);
@@ -56,12 +64,29 @@ export default {
 .project-link {
   text-decoration: none;
   display: block;
+  transition: margin 750ms ease;
+  width: calc(50% - #{spacing(sm)});
+  height: calc(50vh - 8 * #{spacing(lg)} / 4);
+  box-sizing: content-box !important;
   &:hover > .project-title {
     color: color(dark);
   }
-}
-img {
-  max-height: calc(40vh - 3rem);
+  img {
+    max-width: 100%;
+    max-height: calc(100% - #{spacing(sm) * 2});
+  }
+  h3 {
+    transition: opacity 750ms ease;
+  }
+  &:nth-child(2), &:nth-child(4) {
+    height: calc(50vh - 8 * #{spacing(lg)} / 4);
+  }
+  &:nth-child(4) {
+    pointer-events: none;
+    h3 {
+      opacity: 0;
+    }
+  }
 }
 // Transition
 .insert-enter {
@@ -79,7 +104,7 @@ img {
   transition: opacity 500ms ease, transform 500ms ease;
 }
 .insert-move {
-  transition: transform 750ms ease;
+  transition: transform 500ms ease;
   z-index: 100;
 }
 </style>
