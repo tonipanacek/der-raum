@@ -37,7 +37,7 @@ export default {
       // give back the value of each page context
       return allPages(key)
     })
-    pages = sortBy(pages, page => page.position)
+    pages = sortBy(pages, page => get(page, 'attributes.position'))
     return {
       pages
     }
@@ -65,13 +65,18 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .projects {
   display: flex;
   flex-direction: column;
-  height: 100%;
-}
-.section {
-  min-height: 100%;
+  &, & article, & .container, & .section {
+    display: block;
+    min-height: 100%;
+    height: 100%;
+    max-width: none;
+  }
+  .section {
+    min-height: 100%;
+  }
 }
 </style>
