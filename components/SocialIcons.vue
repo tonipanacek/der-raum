@@ -34,8 +34,5 @@ svg#pinterest {
 }
 .social-icons {
   margin-top: spacing(sm);
-  > * {
-    padding-right: spacing(sm);
-  }
 }
 </style>
