@@ -70,17 +70,15 @@ a:visited {
 
 .main-container {
   flex: 2 1 auto;
-  padding-bottom: $stack-space;
   position: sticky;
   min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
   overflow-y: visible;
   background: white;
   z-index: 2;
-  margin: 0 auto;
 }
 .left-sidebar {
-  padding: 0 $stack-space * 3;
+  padding: 0 2em;
   width: 100%;
   position: sticky;
   top: spacing(lg);
@@ -93,10 +91,11 @@ a:visited {
       text-align: left;
       position: sticky;
       height: 85vh;
+      padding: 0 $stack-space * 3;
   }
 }
 .right-sidebar {
-  padding: 0 2rem;
+  padding: 0 2em;
   position: sticky;
   flex: 0 1 5ch;
   top: spacing(lg);
