@@ -68,19 +68,25 @@ export default {
     }
   }
 }
- @include respond-to('large') {
-    .right-sidebar {
-      width: 100px;
-      .right-stack {
-        height: 85vh;
-        flex-direction: column;
-        p {
-          writing-mode: vertical-lr;
-        }
+@include respond-to('large') {
+  .right-sidebar {
+    width: 100px;
+    .right-stack {
+      height: 85vh;
+      flex-direction: column;
+      p {
+        writing-mode: vertical-lr;
       }
     }
-    #right-social {
-      display: none;
-    }
   }
+}
+#right-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: none;
+  @include respond-to('large') {
+    display: none;
+  }
+}
 </style>

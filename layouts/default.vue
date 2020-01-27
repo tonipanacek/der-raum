@@ -3,6 +3,7 @@
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
+      <SocialIcons id="left-social" />
     </Stack>
     <main class="main-container">
       <nuxt />
@@ -68,12 +69,15 @@ a:visited {
 }
 
 .main-container {
-  flex: 2 1 50ch;
+  flex: 2 1 auto;
   padding-bottom: $stack-space;
   position: sticky;
   min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
   overflow-y: visible;
+  background: white;
+  z-index: 2;
+  margin: 0 auto;
 }
 .left-sidebar {
   padding: 0 $stack-space * 3;
@@ -88,6 +92,7 @@ a:visited {
       width: 40ch;
       text-align: left;
       position: sticky;
+      height: 85vh;
   }
 }
 .right-sidebar {
@@ -109,9 +114,11 @@ a:visited {
   }
 }
 
-#right-social {
-  @include respond-to("small") {
+#left-social {
+  display: none;
+  @include respond-to('large') {
     display: block;
   }
 }
+
 </style>
