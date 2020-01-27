@@ -39,6 +39,10 @@ sections:
 - type: document
   path: content/data/business_partners
   label: Business Partners List
+- type: document
+  path: content/data/social_media
+  label: Social Media Links
+  match: "**/*"
 upload_dir: ''
 public_path: https://res.cloudinary.com/dwvtvuml8/image/upload
 front_matter_path: ''
