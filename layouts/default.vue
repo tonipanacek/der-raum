@@ -3,6 +3,7 @@
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
+      <SocialIcons id="left-social" />
     </Stack>
     <main class="main-container">
       <nuxt />
@@ -88,6 +89,7 @@ a:visited {
       width: 40ch;
       text-align: left;
       position: sticky;
+      height: 85vh;
   }
 }
 .right-sidebar {
@@ -109,9 +111,4 @@ a:visited {
   }
 }
 
-#right-social {
-  @include respond-to("small") {
-    display: block;
-  }
-}
 </style>

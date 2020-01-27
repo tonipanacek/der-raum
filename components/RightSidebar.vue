@@ -1,6 +1,6 @@
 <template>
   <Stack id="right-sidebar" class="right-sidebar">
-    <SocialIcons id="right-social"/>
+    <!-- <SocialIcons id="right-social"/> -->
     <div class="right-stack small-very">
       <p>
         <nuxt-link :to="switchLocalePath('de')">
