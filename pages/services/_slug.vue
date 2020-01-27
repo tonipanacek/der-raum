@@ -4,8 +4,10 @@
       <Frame>
         <img :src="$tp('image')" alt="Image of service" />
       </Frame>
-      <h1>{{ $tp("title") }}</h1>
-      <vue-markdown>{{ $tp("description") }}</vue-markdown>
+      <div class="text">
+        <h1>{{ $tp("title") }}</h1>
+        <vue-markdown>{{ $tp("description") }}</vue-markdown>
+      </div>
     </article>
   </Container>
 </template>
@@ -58,7 +60,6 @@ export default {
 
 <style lang="scss">
 .service {
-  min-width: 60ch;
   max-width: 110ch;
   img,
   p {
@@ -77,5 +78,8 @@ export default {
     @include smallCaps;
     color: color(dark);
   }
+}
+.text {
+  padding: spacing(md);
 }
 </style>

@@ -1,6 +1,6 @@
 ---
 title: Quergebäude
-position: '9'
+position: 9
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780002/Badezimmer-Waschtisch-Dachschraege-weiss-lackiert_axdagh.gif

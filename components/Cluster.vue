@@ -24,7 +24,7 @@ export default {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: normal;
-    // margin: spacing(sm) / 2 * -1;
+    margin: spacing(sm) / 2 * -1;
     & > * {
       margin: spacing(sm) / 2;
     }

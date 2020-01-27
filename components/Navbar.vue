@@ -82,17 +82,14 @@ export default {
     img {
       height: auto;
       width: 5rem;
-      padding-bottom: spacing(lg);
     }
   }
-
   .nav-item {
     transition: color 500ms ease, font-weight 500ms ease;
     &:hover {
       color: color(dark);
     }
   }
-
   .nuxt-link-active {
     color: color(black);
     font-weight: 600;
@@ -100,5 +97,17 @@ export default {
       color: color(dark);
     }
   }
+  .nav-items {
+    margin-top: 0;
+    @include respond-to('large') {
+      margin-top: spacing(lg);
+      li:first-child {
+        a {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
+
 </style>

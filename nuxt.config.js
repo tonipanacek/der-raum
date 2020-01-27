@@ -130,6 +130,12 @@ export default {
           mode: [Mode.VUE_COMPONENT, Mode.META]
         }
       })
+
+      // add svg loader
+      config.module.rules.push({
+        test: /\.vue$/,
+        loader: "vue-svg-inline-loader"
+      })
     }
   }
 }

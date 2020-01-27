@@ -3,7 +3,7 @@
     <Stack class="left-sidebar">
       <Navbar />
       <SecondaryNavbar />
-      <SocialIcons />
+      <SocialIcons id="left-social" />
     </Stack>
     <main class="main-container">
       <nuxt />
@@ -18,7 +18,6 @@ import { throttle } from 'lodash'
 import Navbar from "~/components/Navbar"
 import SecondaryNavbar from "~/components/SecondaryNavbar"
 import Stack from "~/components/Stack"
-import Cluster from "~/components/Cluster"
 import RightSidebar from "~/components/RightSidebar"
 import SocialIcons from "~/components/SocialIcons"
 
@@ -28,7 +27,6 @@ export default {
     SecondaryNavbar,
     Stack,
     RightSidebar,
-    Cluster,
     SocialIcons
   },
   methods: {
@@ -71,15 +69,16 @@ a:visited {
 }
 
 .main-container {
-  flex: 2 1 50ch;
-  padding-bottom: $stack-space;
+  flex: 2 1 auto;
   position: sticky;
   min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
   overflow-y: visible;
+  background: white;
+  z-index: 2;
 }
 .left-sidebar {
-  padding: 0 $stack-space * 3;
+  padding: 0 2em;
   width: 100%;
   position: sticky;
   top: spacing(lg);
@@ -91,10 +90,12 @@ a:visited {
       width: 40ch;
       text-align: left;
       position: sticky;
+      height: 85vh;
+      padding: 0 $stack-space * 3;
   }
 }
 .right-sidebar {
-  padding: 0 2rem;
+  padding: 0 2em;
   position: sticky;
   flex: 0 1 5ch;
   top: spacing(lg);
@@ -111,4 +112,12 @@ a:visited {
     }
   }
 }
+
+#left-social {
+  display: none;
+  @include respond-to('large') {
+    display: block;
+  }
+}
+
 </style>
