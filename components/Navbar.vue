@@ -82,17 +82,17 @@ export default {
     img {
       height: auto;
       width: 5rem;
-      padding-bottom: spacing(lg);
     }
   }
-
+  .nav-items {
+    margin-top: spacing(md);
+  }
   .nav-item {
     transition: color 500ms ease, font-weight 500ms ease;
     &:hover {
       color: color(dark);
     }
   }
-
   .nuxt-link-active {
     color: color(black);
     font-weight: 600;

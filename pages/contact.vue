@@ -1,25 +1,25 @@
 <template>
-  <Container id="contact">
+  <article class="contact">
     <Frame>
-      <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1578507796/derRaum/contact.png">
+      <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
     </Frame>
     <Cluster>
-      <div class="about-text flex-sb">
-        <div class="address">
+      <div class="contact-text">
+        <div class="info">
           <h2>{{ $t("contact.name") }}</h2>
           <p>{{ $t("contact.streetNumber") }}</p>
           <p>{{ $t("contact.cityZip") }}</p>
           <p>{{ $t("contact.tel") }}</p>
           <p>{{ $t("contact.email") }}</p>
         </div>
-        <div class="hours">
+        <div class="info">
           <h3>{{ $t("contact.openingTitle") }}</h3>
           <p>{{ $t("contact.weekdays") }}</p>
           <p>{{ $t("contact.weekend") }}</p>
         </div>
       </div>
     </Cluster>
-  </Container>
+  </article>
 </template>
 
 <script>
@@ -37,11 +37,29 @@ export default {
 </script>
 
 <style lang="scss">
-#contact {
-  h2, h3 {
+.contact {
+  max-width: 110ch;
+  img,
+  p {
+    max-width: 110ch;
+  }
+  h2,
+  h3 {
     @include smallCaps;
-    font-weight: 600;
     color: color(dark);
   }
+}
+.contact-text {
+  margin: spacing(sm) 0;
+  width: 100%;
+  align-items: flex-start;
+  .info {
+    width: 45%;
+  }
+}
+.info p {
+  color: color(light);
+  font-size: .75rem;
+  margin-top: .5rem;
 }
 </style>

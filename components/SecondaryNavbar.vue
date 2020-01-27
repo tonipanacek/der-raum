@@ -76,7 +76,7 @@ export default {
 <style lang="scss">
 // Covered by Navbar component
 .navbar-secondary {
-  margin-top: spacing(lg);
+  margin-top: spacing(sm);
   max-width: 10ch;
   display: none;
   @include respond-to('large') {

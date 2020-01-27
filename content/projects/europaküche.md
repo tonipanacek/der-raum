@@ -16,7 +16,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/006-kueche_Loft-schwarz-schublade_yb2xqu.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779229/007-kueche_Loft-schwarz-ecke-detail_mv9fk1.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/008-kueche_Loft-schwarz-messing-kupfer_vcycoc.jpg
-position: '1'
+position: 1
 orientation: horizontal
 
 ---
