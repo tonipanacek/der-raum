@@ -1,6 +1,6 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
-import { get, chunk, isEmpty, throttle } from "lodash"
+import { get, isEmpty, throttle } from "lodash"
 
 export default {
   data() {
@@ -14,16 +14,23 @@ export default {
   computed: {
     pagesChunks() {
       if (isEmpty(this.pages)) { return [] }
-      const chunks = chunk(this.pages, this.max - 1)
-      const chunksPlusNext = chunks.map((chunk, index) => {
-        const nextChunk = chunks[index + 1] || []
-        const result = [...chunk, nextChunk[0]].filter(c => c)
-        const portraits = result.filter(c => get(c, 'attributes.portrait'))
-        const landscapes = result.filter(c => !get(c, 'attributes.portrait'))
-        if (isEmpty(landscapes) || isEmpty(portraits)) { return result }
-        return [landscapes[0], portraits[0], landscapes[1], portraits[1]].filter(c => c)
-      })
-      return chunksPlusNext
+      const getChunks = (pages, chunks = [], i = 0) => {
+        if (isEmpty(pages)) { return chunks }
+        let chunk = pages.slice(0, this.max - 1)
+        const nextPages = pages.slice(this.max - 1)
+        const nextPage = nextPages.find(p => get(p, 'attributes.portrait')) || nextPages[1]
+        const prevPage = get(chunks.slice(-1), `[0][${this.max}]`)
+        const currentPortraits = chunk.filter(p => get(p, 'attributes.portrait', false))
+        chunk = [prevPage, ...chunk, nextPage].filter(c => c)
+        const isPagePortrait = get(chunk[0], 'attributes.portrait', get(this.page, 'attributes.portrait', false))
+        if (isPagePortrait && i % 2) {
+          chunk = [chunk[1], chunk[0], chunk[3], chunk[2]].filter(c => c)
+        } else {
+          chunk = [chunk[0], chunk[1], chunk[2], chunk[3]].filter(c => c)
+        }
+        return getChunks(nextPages, [...chunks, chunk], i += 1)
+      }
+      return getChunks(this.pages)
     },
     currentChunk() {
       if (this.pageNumber === null || isEmpty(this.pagesChunks)) { return [] }
