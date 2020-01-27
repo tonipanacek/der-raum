@@ -1,6 +1,6 @@
 <template>
 <!--   <Cluster> -->
-    <div class="service-list">
+    <div id="home" class="service-list">
       <NuxtLink
         v-for="service in sortedServices"
         :id="service.attributes.title"
@@ -15,14 +15,15 @@
           {{ $ta(service.attributes, 'title') }}
         </h3>
       </NuxtLink>
-      <NuxtLink
-        class="projects-link"
-        @mouseover.native="hover = true"
-        @mouseleave.native="hover = false"
-        to="/projects"
-      >
-        {{ $t("projects.link") }}
-      </NuxtLink>
+      <div class="projects-link-cont">
+        <NuxtLink class="projects-link"
+          @mouseover.native="hover = true"
+          @mouseleave.native="hover = false"
+          to="/projects"
+        >
+          {{ $t("projects.link") }}
+        </NuxtLink>
+      </div>
     </div>
 <!--   </Cluster> -->
 </template>
@@ -74,24 +75,20 @@ export default {
 </script>
 
 <style lang="scss">
-.service-list {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 0 $sidebar-space $sidebar-space $sidebar-space;
-  height: 85vh;
-}
+
 .service-title {
   @include smallCaps;
   color: color(light);
 }
 .service-link {
-  flex: 45%;
-  max-width: 45%;
+  // flex: 45%;
+  max-width: none;
   text-decoration: none;
   img {
     object-fit: fill;
     width: 100%;
     max-height: 100%;
+    max-width: none;
   }
   h3 {
     margin-top: 0.5em;
@@ -103,8 +100,10 @@ export default {
   color: color(dark);
   border: 1px solid black;
   width: 100%;
+  height: 100%;
   max-height: 10ch;
   display: flex;
+  margin-bottom: 10%;
   align-items: center;
   justify-content: space-around;
 }
@@ -112,4 +111,31 @@ export default {
   opacity: .3;
   transition: opacity 0.3s ease-in-out;
 }
+
+#home.service-list {
+  max-width: 120ch;
+  margin-left: auto;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
+  grid-template-rows: 2.5fr .4fr 1fr .4fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+#Design.service-link { grid-area: 1 / 2 / 2 / 4; }
+#Production.service-link { grid-area: 3 / 1 / 6 / 3; }
+#Planning.service-link {
+  grid-area: 1 / 5 / 4 / 6;
+  .frame { height: 100%; }
+}
+.projects-link-cont {
+  grid-area: 5 / 5 / 6 / 6;
+  display: flex;
+  align-items: flex-end;
+}
+
+
 </style>
