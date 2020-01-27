@@ -1,10 +1,10 @@
 <template>
-  <Container id="contact">
-    <Frame id="contact-picture">
-      <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776833/Nachhaltigkeit-Wald-Natur_vyrdtf.jpg">
+  <article class="contact">
+    <Frame>
+      <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
     </Frame>
     <Cluster>
-      <div class="about-text">
+      <div class="contact-text">
         <div class="info">
           <h2>{{ $t("contact.name") }}</h2>
           <p>{{ $t("contact.streetNumber") }}</p>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </Cluster>
-  </Container>
+  </article>
 </template>
 
 <script>
@@ -37,26 +37,29 @@ export default {
 </script>
 
 <style lang="scss">
-.about-text {
+.contact {
+  max-width: 110ch;
+  img,
+  p {
+    max-width: 110ch;
+  }
+  h2,
+  h3 {
+    @include smallCaps;
+    color: color(dark);
+  }
+}
+.contact-text {
+  margin: spacing(sm) 0;
   width: 100%;
   align-items: flex-start;
   .info {
     width: 45%;
   }
 }
-#contact {
-  h2, h3 {
-    @include smallCaps;
-    font-weight: 600;
-    color: color(dark);
-  }
-}
 .info p {
   color: color(light);
   font-size: .75rem;
   margin-top: .5rem;
-}
-#contact-picture {
-  max-width: 100ch;
 }
 </style>

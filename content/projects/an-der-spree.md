@@ -18,7 +18,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/060-Bueroausbau-Eingangsbereich-Treppe-Tische-Verkleidung_fkg0z7.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779092/070-Bueroausbau-Schiebetueren-wandhoch_lnjheb.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/080-Bueroausbau-Besprechungsraum-Tisch_bapynj.jpg
-position: '2'
+position: 2
 orientation: vertical
 portrait: true
 
