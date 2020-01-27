@@ -1,14 +1,16 @@
 <template>
   <div class="social-icons">
-    <a href="http://www.instagram.com/der.raum" target="_blank">
-      <font-awesome-icon :icon="['fab', 'instagram']"/>
-    </a>
-    <a href="https://www.pinterest.com/derraum" target="_blank">
-      <font-awesome-icon :icon="['fab', 'pinterest']"/>
-    </a>
-    <a href="https://www.facebook.com/derraumberlin" target="_blank">
-      <font-awesome-icon :icon="['fab', 'facebook']"/>
-    </a>
+    <div class="list-wrapper">
+      <a href="http://www.instagram.com/der.raum" target="_blank">
+        <font-awesome-icon :icon="['fab', 'instagram']"/>
+      </a>
+      <a href="https://www.pinterest.com/derraum" target="_blank">
+        <font-awesome-icon :icon="['fab', 'pinterest']"/>
+      </a>
+      <a href="https://www.facebook.com/derraumberlin" target="_blank">
+        <font-awesome-icon :icon="['fab', 'facebook']"/>
+      </a>
+    </div>
   </div>
 </template>
 
