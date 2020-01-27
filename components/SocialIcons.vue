@@ -17,7 +17,10 @@
 <script>
 import Cluster from '~/components/Cluster'
 export default {
-  name: "SocialIcons"
+  name: "SocialIcons",
+  components: {
+    Cluster
+  }
 }
 </script>
 
