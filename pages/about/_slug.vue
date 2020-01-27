@@ -3,8 +3,10 @@
     <Frame>
       <img :src="$tp('image')" alt="Image corresponding to about page" />
     </Frame>
-    <h1>{{ $tp("title") }}</h1>
-    <vue-markdown>{{ $tp("description") }}</vue-markdown>
+    <div class="text">
+      <h1>{{ $tp("title") }}</h1>
+      <vue-markdown>{{ $tp("description") }}</vue-markdown>
+    </div>
   </article>
 </template>
 
