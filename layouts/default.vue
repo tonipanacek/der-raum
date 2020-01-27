@@ -69,12 +69,14 @@ a:visited {
 }
 
 .main-container {
-  flex: 2 1 50ch;
+  flex: 2 1 auto;
   padding-bottom: $stack-space;
   position: sticky;
   min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
   overflow-y: visible;
+  background: white;
+  z-index: 2;
 }
 .left-sidebar {
   padding: 0 $stack-space * 3;
@@ -108,6 +110,13 @@ a:visited {
       @include smallCaps;
       writing-mode: vertical-lr;
     }
+  }
+}
+
+#left-social {
+  display: none;
+  @include respond-to('large') {
+    display: block;
   }
 }
 

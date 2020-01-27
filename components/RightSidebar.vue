@@ -1,6 +1,6 @@
 <template>
   <Stack id="right-sidebar" class="right-sidebar">
-    <!-- <SocialIcons id="right-social"/> -->
+    <SocialIcons id="right-social"/>
     <div class="right-stack small-very">
       <p>
         <nuxt-link :to="switchLocalePath('de')">
@@ -68,19 +68,24 @@ export default {
     }
   }
 }
- @include respond-to('large') {
-    .right-sidebar {
-      width: 100px;
-      .right-stack {
-        height: 85vh;
-        flex-direction: column;
-        p {
-          writing-mode: vertical-lr;
-        }
+@include respond-to('large') {
+  .right-sidebar {
+    width: 100px;
+    .right-stack {
+      height: 85vh;
+      flex-direction: column;
+      p {
+        writing-mode: vertical-lr;
       }
     }
-    #right-social {
-      display: none;
-    }
   }
+}
+#right-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include respond-to('large') {
+    display: none;
+  }
+}
 </style>

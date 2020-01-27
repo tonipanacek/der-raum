@@ -29,7 +29,10 @@ svg.social-item {
 svg#pinterest {
   height: .8em;
 }
-.social-icons > * {
-  padding-right: spacing(sm);
+.social-icons {
+  margin-top: spacing(sm);
+  > * {
+    padding-right: spacing(sm);
+  }
 }
 </style>
