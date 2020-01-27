@@ -85,7 +85,7 @@ export default {
     max-height: calc(100% - #{spacing(sm) * 2});
   }
   h3 {
-    transition: opacity 750ms ease;
+    transition: opacity 750ms ease, color 500ms ease;
   }
   &:nth-child(4) {
     pointer-events: none;

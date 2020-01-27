@@ -91,8 +91,22 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("projects")
+    window.addEventListener("keyup", this.handleKey)
+  },
+  destroyed() {
+    window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
+    handleKey(event) {
+      event.preventDefault();
+      if (event.key.match(/(down|right)/i) && this.nextImageLink) {
+        this.$router.push(this.nextImageLink)
+        return false;
+      } else if (event.key.match(/(up|left)/i) && this.previousImageLink) {
+        this.$router.push(this.previousImageLink)
+        return false;
+      }
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
   },
   computed: {

@@ -17,7 +17,10 @@
 <script>
 import Cluster from '~/components/Cluster'
 export default {
-  name: "SocialIcons"
+  name: "SocialIcons",
+  components: {
+    Cluster
+  }
 }
 </script>
 
@@ -31,8 +34,5 @@ svg#pinterest {
 }
 .social-icons {
   margin-top: spacing(sm);
-  > * {
-    padding-right: spacing(sm);
-  }
 }
 </style>
