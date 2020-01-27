@@ -100,7 +100,7 @@ export default {
   .nav-items {
     margin-top: 0;
     @include respond-to('large') {
-      margin-top: spacing(lg);
+      margin-top: spacing(md);
       li:first-child {
         a {
           margin-top: 0;
