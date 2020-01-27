@@ -76,9 +76,13 @@ a:visited {
   overflow-y: visible;
   background: white;
   z-index: 2;
-  @include respond-to('small') {
-    height: auto;
-  }
+  // @include respond-to('small') {
+  //   height: 100vh;
+  // }
+  // @include respond-to('x-small') {
+  //   min-height: 100vh;
+  //   max-height: 150vh;
+  // }
 }
 .left-sidebar {
   padding: 0 2em;

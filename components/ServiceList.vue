@@ -1,5 +1,5 @@
 <template>
-<!--   <Cluster> -->
+  <Container>
     <div id="home" class="service-list">
       <NuxtLink
         v-for="service in sortedServices"
@@ -15,7 +15,7 @@
           {{ $ta(service.attributes, 'title') }}
         </h3>
       </NuxtLink>
-      <div class="projects-link-cont">
+      <div class="projects-link-grid">
         <NuxtLink class="projects-link"
           @mouseover.native="hover = true"
           @mouseleave.native="hover = false"
@@ -25,12 +25,21 @@
         </NuxtLink>
       </div>
     </div>
-<!--   </Cluster> -->
+    <div class="projects-link-non-grid">
+      <NuxtLink class="projects-link"
+        @mouseover.native="hover = true"
+        @mouseleave.native="hover = false"
+        to="/projects"
+      >
+        {{ $t("projects.link") }}
+      </NuxtLink>
+    </div>
+  </Container>
 </template>
 
 <script>
 import Frame from '~/components/Frame'
-import Cluster from '~/components/Cluster'
+import Container from '~/components/Container'
 export default {
   data() {
     return {
@@ -39,7 +48,7 @@ export default {
   },
   components: {
     Frame,
-    Cluster
+    Container
   },
   props: {
     services: {
@@ -81,7 +90,6 @@ export default {
   color: color(light);
 }
 .service-link {
-  // flex: 45%;
   max-width: none;
   text-decoration: none;
   img {
@@ -101,13 +109,12 @@ export default {
   border: 1px solid black;
   width: 100%;
   height: 100%;
-  text-align: center;
   max-height: 10ch;
   display: block;
   margin-bottom: 10%;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  text-align: center;
   padding: 20px;
 }
 .active {
@@ -117,7 +124,6 @@ export default {
 
 #home.service-list {
   max-width: 120ch;
-
 }
 
 .service-list {
@@ -140,19 +146,10 @@ export default {
 }
 #Production.service-link { grid-area: 4 / 2 / 5 / 5; }
 
-.projects-link-cont {
-  position: absolute;
-  bottom: 0;
+.projects-link-grid {
+  display: none;
   width: 100%;
   justify-content: center;
-}
-.navbar .nav-items {
-  margin-top: 0;
-}
-.nav-items li:first-child {
-  a {
-    margin-top: 0;
-  }
 }
 
 @include respond-to('large') {
@@ -170,26 +167,21 @@ export default {
     grid-area: 1 / 5 / 4 / 6;
     .frame { height: 100%; }
   }
-  .projects-link-cont {
-    position: relative;
+  .projects-link-grid {
     grid-area: 5 / 5 / 6 / 6;
     display: flex;
     align-items: flex-end;
   }
-  .navbar .nav-items {
-    margin-top: 1.5rem;
-  }
-  .nav-items li:first-child {
-    a {
-      margin-top: 1rem;
-    }
-  }
-
   .projects-link {
     padding: 0;
     display: flex;
   }
-
+  .projects-link-grid {
+    display: block;
+  }
+  .projects-link-non-grid {
+    display: none;
+  }
 }
 
 

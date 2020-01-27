@@ -100,5 +100,13 @@ export default {
       color: color(dark);
     }
   }
+  .nav-items {
+    margin-top: 0;
+  }
+  .nav-items li:first-child {
+    a {
+      margin-top: 0;
+    }
+  }
 }
 </style>
