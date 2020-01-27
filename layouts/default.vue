@@ -77,6 +77,7 @@ a:visited {
   overflow-y: visible;
   background: white;
   z-index: 2;
+  margin: 0 auto;
 }
 .left-sidebar {
   padding: 0 $stack-space * 3;

@@ -84,6 +84,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  max-width: none;
   @include respond-to('large') {
     display: none;
   }
