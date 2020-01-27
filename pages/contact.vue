@@ -39,10 +39,6 @@ export default {
 <style lang="scss">
 .contact {
   max-width: 110ch;
-  img,
-  p {
-    max-width: 110ch;
-  }
   h2,
   h3 {
     @include smallCaps;
@@ -53,6 +49,7 @@ export default {
   margin: spacing(sm) 0;
   width: 100%;
   align-items: flex-start;
+  justify-content: space-between;
   .info {
     width: 45%;
   }

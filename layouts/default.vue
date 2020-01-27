@@ -81,7 +81,7 @@ a:visited {
   }
 }
 .left-sidebar {
-  padding: 0 $stack-space * 3;
+  padding: 0 2em;
   width: 100%;
   position: sticky;
   top: spacing(lg);
@@ -94,10 +94,11 @@ a:visited {
       text-align: left;
       position: sticky;
       height: 85vh;
+      padding: 0 $stack-space * 3;
   }
 }
 .right-sidebar {
-  padding: 0 2rem;
+  padding: 0 2em;
   position: sticky;
   flex: 0 1 5ch;
   top: spacing(lg);
