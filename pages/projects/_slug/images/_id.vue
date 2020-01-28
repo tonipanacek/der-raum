@@ -6,7 +6,7 @@
     <Container>
       <article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-        Close
+          <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="close-btn" />
         </NuxtLink>
         <div class="image-container">
           <img :src="image" :alt="$tp('title')">
@@ -18,10 +18,10 @@
           </aside>
           <nav class="image-nav">
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
-            Previous
+              <img svg-inline src="~/assets/images/arrow.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
-            Next
+              <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
           </nav>
         </div>
@@ -164,5 +164,20 @@ p {
 .close-link {
   position: fixed;
   left: spacing(lg) * 5;
+  .close-btn {
+    height: 1rem;
+  }
+}
+.image-nav {
+  .nav {
+    height: 1rem;
+  }
+  .previous-btn {
+    -webkit-transform:rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
 }
 </style>

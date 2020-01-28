@@ -1,6 +1,6 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
-import { get, isEmpty, throttle } from "lodash"
+import { get, isEmpty, throttle, has } from "lodash"
 
 export default {
   data() {
@@ -18,9 +18,10 @@ export default {
         if (isEmpty(pages)) { return chunks }
         let chunk = pages.slice(0, this.max - 1)
         const nextPages = pages.slice(this.max - 1)
-        const nextPage = nextPages.find(p => get(p, 'attributes.portrait')) || nextPages[1]
+        const nextPage = nextPages.find(p => has(p, 'attributes.portrait')) || nextPages[1]
         const prevPage = get(chunks.slice(-1), `[0][${this.max}]`)
-        const landscapes = chunk.filter(p => get(p, 'attributes.position'))
+        const landscapes = chunk.find(p => has(p, 'attributes.portrait'))
+        console.log(landscapes)
         const currentPortraits = chunk.filter(p => get(p, 'attributes.portrait', true))
         chunk = [prevPage, ...chunk, nextPage].filter(c => c)
         const isPagePortrait = get(chunk[0], 'attributes.portrait', get(this.page, 'attributes.portrait', false))
