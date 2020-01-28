@@ -16,6 +16,20 @@ fields:
     min: 
     max: 
     step: 
+- name: orientation
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Portrait
+    - Landscape
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Photo Orientation
 - name: portrait
   type: boolean
   label: Portrait
@@ -39,19 +53,6 @@ fields:
 - type: textarea
   name: de_description
   label: Deutsch Beschreibung
-- name: orientation
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - Portrait
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Photo Orientation
 pages:
 - content/projects/1-unze.md
 - content/projects/abbey-road.md
