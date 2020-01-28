@@ -16,7 +16,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-holz-Eiche-massiv-geoelt_njqjod.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Schublaeden-Eiche-massiv-geoelt_dclr9t.jpg
 position: 7
-orientation: Landscape
+orientation: landscape
 page: '2'
 page_position: second
 
