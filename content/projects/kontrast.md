@@ -20,5 +20,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779371/060-Kueche-rosa-lackiert-Griffe-Kupfer-Optik_bhvrxd.jpg
 position: 3
 orientation: Landscape
+page: '1'
+page_position: second
 
 ---
