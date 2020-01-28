@@ -8,7 +8,8 @@ export default {
       max: 4, // max number of items to display on a page
       pageNumber: 0,
       refreshRate: 750,
-      changeThreshold: 15
+      changeThreshold: 15,
+      goingUp: false
     }
   },
   computed: {
@@ -56,11 +57,13 @@ export default {
     incrementPage() {
       if (this.pageNumber < this.pagesChunks.length - 1) {
         this.pageNumber += 1
+        this.goingUp = true
       }
     },
     decrementPage() {
       if (this.pageNumber > 0) {
         this.pageNumber -= 1
+        this.goingUp = false
       }
     },
     handleScroll(event) {

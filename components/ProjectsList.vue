@@ -4,7 +4,7 @@
     name="insert"
     mode="out-in"
     tag="div"
-    class="projects-grid"
+    :class="{ 'projects-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
     >
       <NuxtLink
       :id="$ta(project.attributes, 'title')"
@@ -35,7 +35,8 @@ export default {
     projects: {
       type: Array,
       required: true
-    }
+    },
+    goingUp: Boolean
   },
   methods: {
     getTitle(attrs) {
@@ -98,16 +99,28 @@ export default {
 // Transition
 .insert-enter {
   opacity: 0;
+  .going-up & {
+    margin-top: 50%;
+  }
+  .going-down & {
+    margin-top: -50%;
+  }
 }
 .insert-leave-to {
   opacity: 0;
+  .going-up & {
+    margin-top: -50%;
+  }
+  .going-down & {
+    margin-top: 50%;
+  }
 }
 .insert-enter-active {
-  transition: opacity 750ms ease 500ms;
+  transition: opacity 750ms ease 500ms, margin 750ms ease 500ms;
 }
 .insert-leave-active {
   position: absolute;
-  transition: opacity 500ms ease;
+  transition: opacity 500ms ease, margin 500ms ease;
 }
 .insert-move {
   transition: transform 500ms ease;
