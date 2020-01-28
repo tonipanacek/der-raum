@@ -1,8 +1,10 @@
 <template>
-  <article class="contact">
-    <Frame>
-      <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
-    </Frame>
+  <Article class="contact">
+    <div class="image-container">
+      <Frame>
+        <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
+      </Frame>
+    </div>
     <Cluster>
       <div class="contact-text">
         <div class="info">
@@ -19,19 +21,21 @@
         </div>
       </div>
     </Cluster>
-  </article>
+  </Article>
 </template>
 
 <script>
 import Container from '~/components/Container'
 import Cluster from '~/components/Cluster'
 import Frame from '~/components/Frame'
+import Article from "~/components/Article"
 
 export default {
   components: {
     Container,
     Cluster,
-    Frame
+    Frame,
+    Article
   }
 }
 </script>

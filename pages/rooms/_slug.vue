@@ -1,15 +1,17 @@
 <template>
   <Container id="room">
-    <article class="room">
-      <Frame>
-        <PrevNextButtons :prev="prevLink" :next="nextLink" />
-        <img :src="$tp('image')" alt="Image of room" />
-      </Frame>
+    <Article>
+      <div class="image-container">
+        <Frame>
+          <PrevNextButtons :prev="prevLink" :next="nextLink" />
+          <img :src="$tp('image')" alt="Image of room" />
+        </Frame>
+      </div>
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
         <vue-markdown>{{ $tp("description") }}</vue-markdown>
       </div>
-    </article>
+    </Article>
   </Container>
 </template>
 
@@ -18,6 +20,7 @@ import { mapActions } from "vuex"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
+import Article from "~/components/Article"
 import prevNext from '~/plugins/prev_next'
 
 export default {
@@ -25,7 +28,8 @@ export default {
   components: {
     Frame,
     Container,
-    PrevNextButtons
+    PrevNextButtons,
+    Article
   },
   async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file
@@ -60,22 +64,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.room {
-  max-width: 110ch;
-  img,
-  p {
-    max-width: 110ch;
-  }
-  p {
-    line-height: 2rem;
-    color: color(light);
-  }
-  img {
-    object-fit: cover;
-    max-height: 70vh;
-    width: 110ch;
-  }
-}
-</style>

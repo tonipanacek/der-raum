@@ -13,5 +13,7 @@ export default {
 <style lang="scss">
 .container {
   flex: 2 1 auto;
+  min-height: 100%;
+  position: relative;
 }
 </style>
