@@ -11,8 +11,8 @@ fields:
   config:
     required: true
     options:
-    - Portrait
-    - Landscape
+    - landscape
+    - portrait
     source:
       type: simple
       section: 

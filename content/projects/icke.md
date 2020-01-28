@@ -19,7 +19,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz_uzef8m.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/kueche-Mittelblock-Einbauschraenke-weiss_aksfwz.jpg
 position: 4
-orientation: Portrait
+orientation: portrait
 portrait: true
 page: '2'
 
