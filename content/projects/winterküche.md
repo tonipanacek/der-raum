@@ -1,6 +1,6 @@
 ---
 title: Winterküche
-orientation: horizontal
+orientation: Landscape
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackier_jz875s.png
@@ -16,5 +16,8 @@ en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert 
 de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
   Michael Sass Fotografie
 position: 13
+portrait: false
+page: 3
+page_position: second
 
 ---

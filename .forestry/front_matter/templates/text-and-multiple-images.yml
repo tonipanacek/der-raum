@@ -5,23 +5,47 @@ fields:
 - type: text
   name: title
   label: Title
-- name: position
+- name: orientation
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - Portrait
+    - Landscape
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Photo Orientation
+- name: page
   type: number
-  label: Layout Position
-  description: 'To work properly in the layout: Horizontal images need to be odd numbers.
-    Vertical images need to be even numbers.'
   default: 0
   required: true
   config:
-    min: 
+    min: '1'
     max: 
-    step: 
-- name: portrait
-  type: boolean
-  label: Portrait
-  description: Select this if the photo will be in portrait (vertical). Otherwise
-    the photo will be landscape (horizontal). Must be used in conjunction with the
-    layout position below.
+    step: '1'
+    required: true
+  label: Page Number
+  description: Which page would you like the project to be displayed on?
+- name: page_position
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - first
+    - second
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Page position
+  description: Only applies to the 2 landscape projects. Options are first or second
+    position on page.
 - name: images
   type: image_gallery
   config: {}
@@ -42,10 +66,6 @@ fields:
 pages:
 - content/projects/1-unze.md
 - content/projects/abbey-road.md
-- content/projects/marginal1.md
-- content/projects/marginal2.md
-- content/projects/marginal3.md
-- content/projects/marginal4.md
 - content/projects/quergebäude.md
 - content/projects/w-1100.md
 - content/projects/winterküche.md
