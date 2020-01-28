@@ -83,6 +83,7 @@ export default {
   .logo {
     height: auto;
     width: 5rem;
+    margin-bottom: spacing(sm);
   }
   .nav-item {
     transition: color 500ms ease, font-weight 500ms ease;

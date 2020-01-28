@@ -1,15 +1,17 @@
 <template>
   <Container id="service">
-    <article class="service">
-      <Frame>
-        <PrevNextButtons :prev="prevLink" :next="nextLink" />
-        <img :src="$tp('image')" alt="Image of service" />
-      </Frame>
+    <Article>
+      <div class="image-container">
+        <Frame>
+          <PrevNextButtons :prev="prevLink" :next="nextLink" />
+          <img :src="$tp('image')" alt="Image of service" />
+        </Frame>
+      </div>
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
         <vue-markdown>{{ $tp("description") }}</vue-markdown>
       </div>
-    </article>
+    </Article>
   </Container>
 </template>
 
@@ -20,13 +22,15 @@ import Container from '~/components/Container'
 import Frame from '~/components/Frame'
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
+import Article from "~/components/Article"
 
 export default {
   mixins: [prevNext],
   components: {
     Frame,
     Container,
-    PrevNextButtons
+    PrevNextButtons,
+    Article
   },
   async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file
@@ -64,29 +68,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.service {
-  max-width: 110ch;
-  img,
-  p {
-    max-width: 110ch;
-  }
-  p {
-    line-height: 2rem;
-    color: color(light);
-  }
-  img {
-    object-fit: cover;
-    max-height: 70vh;
-    width: 110ch;
-  }
-  h1 {
-    @include smallCaps;
-    color: color(dark);
-  }
-}
-.text {
-  padding: spacing(md);
-}
-</style>

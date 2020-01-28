@@ -1,20 +1,23 @@
 <template>
   <Container id="about">
-    <article class="about">
-      <Frame>
-          <PrevNextButtons :prev="prevLink" :next="nextLink" />
-        <img :src="$tp('image')" alt="Image corresponding to about page" />
-      </Frame>
+    <Article>
+      <div class="image-container">
+        <Frame>
+            <PrevNextButtons :prev="prevLink" :next="nextLink" />
+          <img :src="$tp('image')" alt="Image corresponding to about page" />
+        </Frame>
+      </div>
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
         <vue-markdown>{{ $tp("description") }}</vue-markdown>
       </div>
-    </article>
+    </Article>
   </Container>
 </template>
 
 <script>
 import { mapActions } from "vuex"
+import Article from "~/components/Article"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -25,7 +28,8 @@ export default {
   components: {
     Frame,
     Container,
-    PrevNextButtons
+    PrevNextButtons,
+    Article
   },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
@@ -60,29 +64,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.about {
-  max-width: 110ch;
-  img,
-  p {
-    max-width: 110ch;
-  }
-  p {
-    line-height: 2rem;
-    color: color(light);
-  }
-  img {
-    object-fit: cover;
-    max-height: 70vh;
-    width: 110ch;
-  }
-  h1 {
-    @include smallCaps;
-    color: color(dark);
-  }
-  &-text {
-    display: inline-block;
-  }
-}
-</style>
