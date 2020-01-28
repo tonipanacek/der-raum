@@ -2,6 +2,7 @@
   <Container id="service">
     <article class="service">
       <Frame>
+        <PrevNextButtons :prev="prevLink" :next="nextLink" />
         <img :src="$tp('image')" alt="Image of service" />
       </Frame>
       <div class="text">
@@ -13,13 +14,19 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
+import { sortBy } from "lodash"
 import Container from '~/components/Container'
 import Frame from '~/components/Frame'
-import { mapActions } from "vuex"
+import PrevNextButtons from '~/components/PrevNextButtons'
+import prevNext from '~/plugins/prev_next'
+
 export default {
+  mixins: [prevNext],
   components: {
     Frame,
-    Container
+    Container,
+    PrevNextButtons
   },
   async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file

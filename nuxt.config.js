@@ -56,7 +56,8 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
     "nuxt-i18n",
-    "nuxt-fontawesome"
+    "nuxt-fontawesome",
+    "nuxt-svg-loader"
   ],
   // Font awesome icon libraries
   fontawesome: {

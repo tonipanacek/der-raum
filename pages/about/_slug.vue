@@ -1,22 +1,31 @@
 <template>
-  <article class="about">
-    <Frame>
-      <img :src="$tp('image')" alt="Image corresponding to about page" />
-    </Frame>
-    <div class="text">
-      <h1>{{ $tp("title") }}</h1>
-      <vue-markdown>{{ $tp("description") }}</vue-markdown>
-    </div>
-  </article>
+  <Container id="about">
+    <article class="about">
+      <Frame>
+          <PrevNextButtons :prev="prevLink" :next="nextLink" />
+        <img :src="$tp('image')" alt="Image corresponding to about page" />
+      </Frame>
+      <div class="text">
+        <h1>{{ $tp("title") }}</h1>
+        <vue-markdown>{{ $tp("description") }}</vue-markdown>
+      </div>
+    </article>
+  </Container>
 </template>
 
 <script>
-import Frame from '~/components/Frame'
 import { mapActions } from "vuex"
+import Frame from '~/components/Frame'
+import Container from '~/components/Container'
+import PrevNextButtons from '~/components/PrevNextButtons'
+import prevNext from '~/plugins/prev_next'
 
 export default {
+  mixins: [prevNext],
   components: {
-    Frame
+    Frame,
+    Container,
+    PrevNextButtons
   },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
