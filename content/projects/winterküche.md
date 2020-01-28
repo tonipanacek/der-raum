@@ -1,6 +1,6 @@
 ---
 title: Winterküche
-orientation: Landscape
+orientation: landscape
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackier_jz875s.png
