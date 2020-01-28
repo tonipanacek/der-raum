@@ -37,7 +37,7 @@ export default {
       // give back the value of each page context
       return allPages(key)
     })
-    pages = sortBy(pages, page => get(page, 'attributes.position'))
+    pages = sortBy(pages, page => get(page, 'attributes.page'))
     return {
       pages
     }

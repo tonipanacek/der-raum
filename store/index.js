@@ -33,6 +33,6 @@ export const actions = {
 export const getters = {
   sortedPages({ pages }) {
     if (!pages) { return [] }
-    return sortBy(pages, page => get(page, 'attributes.position'))
+    return sortBy(pages, page => get(page, 'attributes.page'))
   }
 }

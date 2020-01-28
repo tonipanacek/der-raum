@@ -26,11 +26,13 @@
 <script>
 import { get } from 'lodash';
 import Cluster from '~/components/Cluster'
+import Frame from '~/components/Frame'
 
 export default {
   name: "imagesList",
   components: {
-    Cluster
+    Cluster,
+    Frame
   },
   props: {
     images: {

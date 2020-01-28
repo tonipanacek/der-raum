@@ -1,6 +1,6 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
-import { get, isEmpty, throttle, has } from "lodash"
+import { get, isEmpty, throttle, chunk, sortBy } from "lodash"
 
 export default {
   data() {
@@ -14,23 +14,33 @@ export default {
   computed: {
     pagesChunks() {
       if (isEmpty(this.pages)) { return [] }
-      const getChunks = (pages, chunks = [], i = 0) => {
-        if (isEmpty(pages)) { return chunks }
-        let chunk = pages.slice(0, this.max - 1)
-        const nextPages = pages.slice(this.max - 1)
-        const nextPage = nextPages.find(p => has(p, 'attributes.portrait')) || nextPages[1]
-        const prevPage = get(chunks.slice(-1), `[0][${this.max}]`)
-        const landscapes = chunk.find(p => has(p, 'attributes.portrait'))
-        console.log(landscapes)
-        const currentPortraits = chunk.filter(p => get(p, 'attributes.portrait', true))
-        chunk = [prevPage, ...chunk, nextPage].filter(c => c)
-        const isPagePortrait = get(chunk[0], 'attributes.portrait', get(this.page, 'attributes.portrait', false))
-        if (isPagePortrait && (i === 0 || i % 2)) {
-          chunk = [chunk[1], chunk[0], chunk[2], chunk[3]].filter(c => c)
+      const getChunks = (pages) => {
+        if (isEmpty(pages)) { return [] }
+        const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+        let chunks = chunk(allPages, 3)
+        let chunkers
+        if (this.$route.path.match(/^\/projects$/)) {
+          chunkers = chunks.map((c, index) => {
+            const nextPortrait = get(chunks, `[${index + 1}][0]`)
+            if (c.length === this.max - 1) {
+              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+            } else {
+              return [c[1], c[0], nextPortrait].filter(c => c)
+            }
+          })
         } else {
-          chunk = [chunk[0], chunk[1], chunk[2], chunk[3]].filter(c => c)
+          chunkers = chunks.map((c, index) => {
+            const nextPortrait = get(chunks, `[${index + 1}][0]`)
+            if (this.page.attributes.orientation === 'landscape' && index === 0) {
+              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
+            } else if (c.length === this.max - 1) {
+              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+            } else {
+              return [c[1], c[0], nextPortrait].filter(c => c)
+            }
+          })
         }
-        return getChunks(nextPages, [...chunks, chunk], i += 1)
+        return chunkers
       }
       return getChunks(this.pages)
     },
