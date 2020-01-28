@@ -1,6 +1,5 @@
 ---
 title: Abbey Road
-orientation: portrait
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784088/Kuechenzeile-Sideboard-schwarz-Steinplatte_gpobz9.jpg
@@ -16,8 +15,7 @@ en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert 
   Michael Sass Fotografie
 de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
   Michael Sass Fotografie
-position: 6
-portrait: true
+orientation: portrait
 page: 3
 page_position: ''
 

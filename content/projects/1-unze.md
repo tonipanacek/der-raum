@@ -1,6 +1,5 @@
 ---
 title: 1 Unze
-orientation: landscape
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783931/Kueche-Kochinsel-Einbauschrank-Loft-schwarz_f0nzpy.jpg
@@ -18,7 +17,7 @@ en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert 
   Michael Sass Fotografie
 de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
   Michael Sass Fotografie
-position: 11
+orientation: landscape
 page: 4
 page_position: first
 

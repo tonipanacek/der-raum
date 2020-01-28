@@ -102,7 +102,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   padding: 0 2em;
   position: sticky;
   flex: 0 1 5ch;
-  top: spacing(lg);
   align-self: flex-start;
   height: auto;
   .right-stack{
@@ -124,5 +123,4 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     display: block;
   }
 }
-
 </style>

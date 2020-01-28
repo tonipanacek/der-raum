@@ -28,6 +28,7 @@ import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
+import Frame from "~/components/Frame"
 import ProgressBar from "~/components/ProgressBar"
 import ImagesList from "~/components/ImagesList"
 
@@ -52,7 +53,7 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
-      allPages = sortBy(allPages, page => page.position)
+      allPages = sortBy(allPages, page => page.page)
 
       let chunks = chunk(allPages, 4 - 1)
       chunks = chunks.map((chunk, index) => {
@@ -100,7 +101,8 @@ export default {
   components: {
     Container,
     ProgressBar,
-    ImagesList
+    ImagesList,
+    Frame
   }
 }
 </script>
