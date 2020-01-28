@@ -22,6 +22,6 @@ position: '2'
 orientation: Portrait
 portrait: true
 page: '1'
-page_position: first
+page_position: ''
 
 ---
