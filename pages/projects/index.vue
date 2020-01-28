@@ -9,6 +9,7 @@
       class="section"
       v-if="isChunky"
       :projects="currentChunk"
+      :goingUp="goingUp"
       />
     </Container>
     <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />

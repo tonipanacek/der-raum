@@ -9,6 +9,7 @@ export default {
       pageNumber: 0,
       refreshRate: 750, // amount of time between each scroll action
       changeThreshold: 10 // how many steps must be registered on the scroll wheel
+      goingUp: false
     }
   },
   computed: {
@@ -68,11 +69,13 @@ export default {
     incrementPage() {
       if (this.pageNumber < this.pagesChunks.length - 1) {
         this.pageNumber += 1
+        this.goingUp = true
       }
     },
     decrementPage() {
       if (this.pageNumber > 0) {
         this.pageNumber -= 1
+        this.goingUp = false
       }
     },
     handleScroll(event) {

@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
+$main-height: calc(100vh - 2 * #{spacing(lg)});
 .right-sidebar {
   a,
   a:hover,
@@ -70,9 +71,9 @@ export default {
 }
 @include respond-to('large') {
   .right-sidebar {
-    width: 100px;
+    width: 7rem;
     .right-stack {
-      height: 85vh;
+      min-height: $main-height;
       flex-direction: column;
       p {
         writing-mode: vertical-lr;

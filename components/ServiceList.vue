@@ -6,7 +6,9 @@
         :id="service.attributes.title"
         :key="service.attributes.title"
         :to="`/services/${formatSlug(service.attributes.title)}`"
-        :class="{ 'active': hover,  'service-link': true }"
+        :class="{ 'active': hover && hover === service.attributes.title, hover: hover, 'service-link': true }"
+        @mouseover.native="hover = service.attributes.title"
+        @mouseleave.native="hover = ''"
       >
         <Frame v-if="service.attributes.title">
           <img :src="service.attributes.image" :alt="service.attributes.title" />
@@ -16,9 +18,10 @@
         </h3>
       </NuxtLink>
       <div class="projects-link-grid">
-        <NuxtLink class="projects-link"
-          @mouseover.native="hover = true"
-          @mouseleave.native="hover = false"
+        <NuxtLink
+          :class="{ 'active': hover && hover === 'projects', hover: hover, 'projects-link': true }"
+          @mouseover.native="hover = 'projects'"
+          @mouseleave.native="hover = ''"
           to="/projects"
         >
           {{ $t("projects.link") }}
@@ -26,9 +29,10 @@
       </div>
     </div>
     <div class="projects-link-non-grid">
-      <NuxtLink class="projects-link"
-        @mouseover.native="hover = true"
-        @mouseleave.native="hover = false"
+      <NuxtLink
+        :class="{ 'active': hover && hover === 'projects', hover: hover, 'projects-link': true }"
+        @mouseover.native="hover = 'projects'"
+        @mouseleave.native="hover = ''"
         to="/projects"
       >
         {{ $t("projects.link") }}
@@ -43,7 +47,7 @@ import Container from '~/components/Container'
 export default {
   data() {
     return {
-      hover: false
+      hover: ''
     }
   },
   components: {
@@ -89,6 +93,9 @@ export default {
   @include smallCaps;
   color: color(light);
 }
+.service-link, .projects-link {
+  transition: opacity 0.3s ease-in-out;
+}
 .service-link {
   max-width: none;
   text-decoration: none;
@@ -106,7 +113,8 @@ export default {
   text-decoration: none;
   @include smallCaps;
   color: color(dark);
-  border: 1px solid black;
+  border: 1px solid color(dark);
+  font-size: 0.9em;
   width: 100%;
   height: 100%;
   max-height: 10ch;
@@ -117,13 +125,15 @@ export default {
   text-align: center;
   padding: 20px;
 }
-.active {
+.hover:not(.active) {
   opacity: .3;
-  transition: opacity 0.3s ease-in-out;
 }
 
-#home.service-list {
-  max-width: 120ch;
+$main-height: calc(100vh - 2 * #{spacing(lg)});
+@include respond-to(large) {
+  #home.service-list {
+    height: $main-height;
+  }
 }
 
 .service-list {

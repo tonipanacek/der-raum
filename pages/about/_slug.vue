@@ -1,22 +1,35 @@
 <template>
-  <article class="about">
-    <Frame>
-      <img :src="$tp('image')" alt="Image corresponding to about page" />
-    </Frame>
-    <div class="text">
-      <h1>{{ $tp("title") }}</h1>
-      <vue-markdown>{{ $tp("description") }}</vue-markdown>
-    </div>
-  </article>
+  <Container id="about">
+    <Article>
+      <div class="image-container">
+        <Frame>
+            <PrevNextButtons :prev="prevLink" :next="nextLink" />
+          <img :src="$tp('image')" alt="Image corresponding to about page" />
+        </Frame>
+      </div>
+      <div class="text">
+        <h1>{{ $tp("title") }}</h1>
+        <vue-markdown>{{ $tp("description") }}</vue-markdown>
+      </div>
+    </Article>
+  </Container>
 </template>
 
 <script>
-import Frame from '~/components/Frame'
 import { mapActions } from "vuex"
+import Article from "~/components/Article"
+import Frame from '~/components/Frame'
+import Container from '~/components/Container'
+import PrevNextButtons from '~/components/PrevNextButtons'
+import prevNext from '~/plugins/prev_next'
 
 export default {
+  mixins: [prevNext],
   components: {
-    Frame
+    Frame,
+    Container,
+    PrevNextButtons,
+    Article
   },
   async asyncData({ params }) {
     // get the slug as a param to import the correct md file
@@ -51,29 +64,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.about {
-  max-width: 110ch;
-  img,
-  p {
-    max-width: 110ch;
-  }
-  p {
-    line-height: 2rem;
-    color: color(light);
-  }
-  img {
-    object-fit: cover;
-    max-height: 70vh;
-    width: 110ch;
-  }
-  h1 {
-    @include smallCaps;
-    color: color(dark);
-  }
-  &-text {
-    display: inline-block;
-  }
-}
-</style>

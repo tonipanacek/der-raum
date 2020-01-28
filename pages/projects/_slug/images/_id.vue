@@ -4,7 +4,7 @@
   class="image"
   >
     <Container>
-      <article class="project">
+      <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="close-btn" />
         </NuxtLink>
@@ -25,7 +25,7 @@
             </NuxtLink>
           </nav>
         </div>
-      </article>
+      </Article>
     </Container>
   </div>
 </template>
@@ -34,6 +34,7 @@
 import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import Container from "~/components/Container"
+import Article from "~/components/Article"
 
 export default {
   name: 'projectsSlug',
@@ -123,7 +124,8 @@ export default {
     }
   },
   components: {
-    Container
+    Container,
+    Article
   }
 }
 </script>
@@ -152,14 +154,17 @@ p {
 }
 .image-footer {
   display: flex;
+  align-items: flex-start;
   .caption {
     flex-grow: 2;
+    padding: spacing(md);
+    @include respond-to(large) {
+      padding: 0;
+    }
+    h1 {
+      margin-top: 0;
+    }
   }
-}
-.image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .close-link {
   position: fixed;

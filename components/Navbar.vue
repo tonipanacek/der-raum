@@ -3,7 +3,7 @@
     <ul class="list-wrapper">
       <li>
         <nuxt-link :to="localePath('index')" class="nav-item logo">
-          <img src="~/assets/images/logo.svg" alt="Der Raum" />
+          <Logo class="logo" />
         </nuxt-link>
       </li>
       <div class="nav-items">
@@ -39,11 +39,13 @@
 
 <script>
 import Stack from "~/components/Stack"
+import Logo from "~/assets/images/logo.svg"
 
 export default {
   name: "Navbar",
   components: {
-    Stack
+    Stack,
+    Logo
   }
 }
 </script>
@@ -79,10 +81,9 @@ export default {
 
 .navbar {
   .logo {
-    img {
-      height: auto;
-      width: 5rem;
-    }
+    height: auto;
+    width: 5rem;
+    margin-bottom: spacing(sm);
   }
   .nav-item {
     transition: color 500ms ease, font-weight 500ms ease;

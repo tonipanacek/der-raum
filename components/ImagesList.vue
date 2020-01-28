@@ -5,6 +5,7 @@
       name="insert"
       mode="out-in"
       tag="div"
+      :class="{ 'going-up': goingUp, 'going-down': !goingUp }"
       >
         <NuxtLink
         :id="title"
@@ -49,7 +50,8 @@ export default {
     },
     totalCount: {
       type: Number
-    }
+    },
+    goingUp: Boolean
   },
   methods: {
     getTitle(attrs) {
@@ -79,17 +81,28 @@ img {
 // Transition
 .insert-enter {
   opacity: 0;
+  .going-up & {
+    margin-top: 50%;
+  }
+  .going-down & {
+    margin-top: -50%;
+  }
 }
 .insert-leave-to {
   opacity: 0;
-  transition: translateY(25%);
+  .going-up & {
+    margin-top: -50%;
+  }
+  .going-down & {
+    margin-top: 50%;
+  }
 }
 .insert-enter-active {
-  transition: opacity 750ms ease 500ms, transform 750ms ease 500ms;
+  transition: opacity 100ms ease 750ms, margin 100ms ease 750ms;
 }
 .insert-leave-active {
   position: absolute;
-  transition: opacity 500ms ease, transform 500ms ease;
+  transition: opacity 750ms ease, margin 750ms ease;
 }
 .insert-move {
   transition: transform 750ms ease;

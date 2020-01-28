@@ -68,14 +68,18 @@ a:visited {
   }
 }
 
+$main-height: calc(100vh - 2 * #{spacing(lg)});
 .main-container {
   flex: 2 1 auto;
   position: sticky;
-  min-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-x: hidden;
   overflow-y: visible;
   background: white;
   z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 110ch;
+  min-height: $main-height;
 }
 .left-sidebar {
   padding: 0 2em;
@@ -90,7 +94,7 @@ a:visited {
       width: 40ch;
       text-align: left;
       position: sticky;
-      height: 85vh;
+      min-height: $main-height;
       padding: 0 $stack-space * 3;
   }
 }
@@ -101,13 +105,14 @@ a:visited {
   align-self: flex-start;
   height: auto;
   .right-stack{
-    height: 90vh;
+    min-height: $main-height;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     p {
       @include smallCaps;
       writing-mode: vertical-lr;
+      transform: translateY(50%);
     }
   }
 }
