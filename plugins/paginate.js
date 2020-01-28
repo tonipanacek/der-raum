@@ -8,7 +8,7 @@ export default {
       max: 4, // max number of items to display on a page
       pageNumber: 0,
       refreshRate: 750, // amount of time between each scroll action
-      changeThreshold: 10 // how many steps must be registered on the scroll wheel
+      changeThreshold: 10, // how many steps must be registered on the scroll wheel
       goingUp: false
     }
   },
