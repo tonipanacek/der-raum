@@ -113,7 +113,8 @@ export default {
   text-decoration: none;
   @include smallCaps;
   color: color(dark);
-  border: 1px solid black;
+  border: 1px solid color(dark);
+  font-size: 0.9em;
   width: 100%;
   height: 100%;
   max-height: 10ch;

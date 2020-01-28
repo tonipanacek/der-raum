@@ -76,6 +76,9 @@ a:visited {
   overflow-y: visible;
   background: white;
   z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 110ch;
 }
 .left-sidebar {
   padding: 0 2em;
