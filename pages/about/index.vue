@@ -7,20 +7,24 @@ import { get, min } from "lodash"
 
 export default {
   async asyncData() {
-    // create context via webpack to map over all blog abouts
-    const allAbouts = await require.context("~/content/about/", true, /\.md$/)
-    const abouts = allAbouts.keys().map(key => {
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context("~/content/about/", true, /\.md$/)
+    const pages = allPages.keys().map(key => {
       // give back the value of each about context
-      return allAbouts(key)
+      return allPages(key)
     })
     return {
-      abouts
+      pages
     }
   },
   mounted() {
-    const abouts = this.$data.abouts || []
-    const about = abouts[0]
-    const slug = this.formatSlug(get(about, "attributes.title", ""))
+    const pages = this.$data.pages
+    const positions = pages.map(page => get(page, "attributes.position"))
+    const minPosition = min(positions)
+    const page = pages.find(
+      page => get(page, "attributes.position") === minPosition
+    )
+    const slug = this.formatSlug(get(page, "attributes.title", ""))
     const redirectPath = this.localePath({
       name: "about-slug",
       params: {

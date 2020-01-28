@@ -7,24 +7,24 @@ import { get, min } from "lodash"
 
 export default {
   async asyncData() {
-    // create context via webpack to map over all blog rooms
-    const allRooms = await require.context("~/content/rooms/", true, /\.md$/)
-    const rooms = allRooms.keys().map(key => {
-      // give back the value of each room context
-      return allRooms(key)
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context("~/content/rooms/", true, /\.md$/)
+    const pages = allPages.keys().map(key => {
+      // give back the value of each page context
+      return allPages(key)
     })
     return {
-      rooms
+      pages
     }
   },
   mounted() {
-    const rooms = this.$data.rooms
-    const positions = rooms.map(room => get(room, "attributes.position"))
+    const pages = this.$data.pages
+    const positions = pages.map(page => get(page, "attributes.position"))
     const minPosition = min(positions)
-    const room = rooms.find(
-      room => get(room, "attributes.position") === minPosition
+    const page = pages.find(
+      page => get(page, "attributes.position") === minPosition
     )
-    const slug = this.formatSlug(get(room, "attributes.title", ""))
+    const slug = this.formatSlug(get(page, "attributes.title", ""))
     const redirectPath = this.localePath({
       name: "rooms-slug",
       params: {

@@ -81,12 +81,24 @@ export default {
     max-height: 70vh;
     width: 110ch;
   }
-  h1 {
-    @include smallCaps;
-    color: color(dark);
-  }
 }
 .text {
   padding: spacing(md);
+  @include respond-to(large) {
+    padding: 0;
+  }
+  h1 {
+    @include smallCaps;
+    color: color(dark);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  strong {
+    color: color(dark);
+    font-weight: 300;
+  }
+  & > *, & > * > p:first-child {
+    display: inline;
+  }
 }
 </style>

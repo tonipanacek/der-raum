@@ -77,12 +77,5 @@ export default {
     max-height: 70vh;
     width: 110ch;
   }
-  h1 {
-    @include smallCaps;
-    color: color(dark);
-  }
-  &-text {
-    display: inline-block;
-  }
 }
 </style>
