@@ -9,7 +9,7 @@ fields:
   type: select
   default: []
   config:
-    required: false
+    required: true
     options:
     - Portrait
     - Landscape
@@ -24,9 +24,10 @@ fields:
   default: 0
   required: true
   config:
-    min: 
+    min: '1'
     max: 
-    step: 
+    step: '1'
+    required: true
   label: Page Number
   description: Which page would you like the project to be displayed on?
 - name: page_position
