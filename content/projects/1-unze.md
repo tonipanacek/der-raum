@@ -20,6 +20,6 @@ de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert 
   Michael Sass Fotografie
 position: 11
 page: 4
-page_position: ''
+page_position: first
 
 ---
