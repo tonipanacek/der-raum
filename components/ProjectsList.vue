@@ -116,14 +116,14 @@ export default {
   }
 }
 .insert-enter-active {
-  transition: opacity 750ms ease 500ms, margin 750ms ease 500ms;
+  transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
 }
 .insert-leave-active {
   position: absolute;
-  transition: opacity 500ms ease, margin 500ms ease;
+  transition: opacity 750ms ease, margin 750ms ease;
 }
 .insert-move {
-  transition: transform 500ms ease;
+  transition: transform 750ms ease;
   z-index: 100;
 }
 </style>
