@@ -157,6 +157,10 @@ p {
   align-items: flex-start;
   .caption {
     flex-grow: 2;
+    padding: spacing(md);
+    @include respond-to(large) {
+      padding: 0;
+    }
     h1 {
       margin-top: 0;
     }
