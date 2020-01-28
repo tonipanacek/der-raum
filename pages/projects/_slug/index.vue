@@ -14,6 +14,7 @@
           :title="$tp('title')"
           :totalCount="$tp('images').length"
           :slug="slug"
+          :going-up="goingUp"
           />
         </div>
       </article>
