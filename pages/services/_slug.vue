@@ -14,11 +14,13 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
+import { sortBy } from "lodash"
 import Container from '~/components/Container'
 import Frame from '~/components/Frame'
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
-import { mapActions } from "vuex"
+
 export default {
   mixins: [prevNext],
   components: {

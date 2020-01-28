@@ -18,12 +18,8 @@ export default {
     }
   },
   mounted() {
-    const abouts = this.$data.abouts
-    const positions = abouts.map(about => get(about, "attributes.position"))
-    const minPosition = min(positions)
-    const about = abouts.find(
-      about => get(about, "attributes.position") === minPosition
-    )
+    const abouts = this.$data.abouts || []
+    const about = abouts[0]
     const slug = this.formatSlug(get(about, "attributes.title", ""))
     const redirectPath = this.localePath({
       name: "about-slug",
