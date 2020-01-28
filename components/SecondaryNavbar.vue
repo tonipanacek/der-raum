@@ -76,7 +76,8 @@ export default {
 <style lang="scss">
 // Covered by Navbar component
 .navbar-secondary {
-  max-width: 10ch;
+  top: 0;
+  width: 10ch;
   display: none;
   flex-grow: 2;
   @include respond-to('large') {
