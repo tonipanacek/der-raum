@@ -129,8 +129,11 @@ export default {
   opacity: .3;
 }
 
-#home.service-list {
-  max-width: 120ch;
+$main-height: calc(100vh - 2 * #{spacing(lg)});
+@include respond-to(large) {
+  #home.service-list {
+    height: $main-height;
+  }
 }
 
 .service-list {
