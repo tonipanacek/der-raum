@@ -7,8 +7,8 @@ export default {
     return {
       max: 4, // max number of items to display on a page
       pageNumber: 0,
-      refreshRate: 750,
-      changeThreshold: 15
+      refreshRate: 750, // amount of time between each scroll action
+      changeThreshold: 15 // how many steps must be registered on the scroll wheel
     }
   },
   computed: {
@@ -20,11 +20,12 @@ export default {
         const nextPages = pages.slice(this.max - 1)
         const nextPage = nextPages.find(p => get(p, 'attributes.portrait')) || nextPages[1]
         const prevPage = get(chunks.slice(-1), `[0][${this.max}]`)
-        const currentPortraits = chunk.filter(p => get(p, 'attributes.portrait', false))
+        const landscapes = chunk.filter(p => get(p, 'attributes.position'))
+        const currentPortraits = chunk.filter(p => get(p, 'attributes.portrait', true))
         chunk = [prevPage, ...chunk, nextPage].filter(c => c)
         const isPagePortrait = get(chunk[0], 'attributes.portrait', get(this.page, 'attributes.portrait', false))
-        if (isPagePortrait && i % 2) {
-          chunk = [chunk[1], chunk[0], chunk[3], chunk[2]].filter(c => c)
+        if (isPagePortrait && (i === 0 || i % 2)) {
+          chunk = [chunk[1], chunk[0], chunk[2], chunk[3]].filter(c => c)
         } else {
           chunk = [chunk[0], chunk[1], chunk[2], chunk[3]].filter(c => c)
         }

@@ -98,7 +98,6 @@ a:visited {
   padding: 0 2em;
   position: sticky;
   flex: 0 1 5ch;
-  top: spacing(lg);
   align-self: flex-start;
   height: auto;
   .right-stack{
@@ -119,5 +118,4 @@ a:visited {
     display: block;
   }
 }
-
 </style>

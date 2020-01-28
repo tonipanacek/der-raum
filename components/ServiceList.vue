@@ -128,7 +128,6 @@ export default {
 
 .service-list {
   background-color: white;
-  padding: 20px 0;
   display: grid;
   grid-template-columns: repeat(2, 2fr) .3fr 2fr .5fr;
   grid-template-rows: 1.5fr 2fr .5fr 2fr;
