@@ -58,7 +58,6 @@ export default {
     justify-content: space-between;
   }
   .image-container {
-    height: 40vh;
     .frame {
       height: 100%;
       width: 100%;
