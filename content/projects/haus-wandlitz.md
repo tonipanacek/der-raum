@@ -13,8 +13,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/kueche-kochinsel-einbauschrank-holz_vugrkd.jpg
 de_title: Haus Wandlitz
 en_title: Haus Wandlitz
-de_description: 'Bonauer Bölling Architekten // Photos: Tiffany Taraska'
-en_description: 'Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
+de_description: 'Design: Bonauer Bölling Architekten // Photos: Tiffany Taraska'
+en_description: 'Design: Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
 orientation: landscape
 page: 2
 page_position: first
