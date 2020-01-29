@@ -16,7 +16,7 @@ en_title: At the Spree
 de_description: 'CBRE // Photos: Andrea Dingeldein'
 en_description: 'CBRE // Fotos: Andrea Dingeldein'
 orientation: portrait
-page: '3'
-page_position: second
+page: '1'
+page_position: first
 
 ---
