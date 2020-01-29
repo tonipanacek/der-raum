@@ -11,7 +11,9 @@
       v-for="project in projects"
       :key="getTitle(project.attributes)"
       :to="`/projects/${formatSlug(project.attributes.title)}`"
-      class="project-link"
+      :class="{ 'active': hover && hover === project.attributes.title, hover: hover, 'project-link': true }"
+        @mouseover.native="hover = project.attributes.title"
+        @mouseleave.native="hover = ''"
       >
         <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
           <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
@@ -34,6 +36,11 @@ export default {
   name: "ProjectsList",
   components: {
     Frame
+  },
+  data() {
+    return {
+      hover: ''
+    }
   },
   props: {
     projects: {
@@ -63,6 +70,9 @@ export default {
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: row dense;
+    justify-content: space-between;
+    max-width: 90ch;
+    margin: 0 auto;
     & > * {
       width: 100%;
       height: 100%;
@@ -83,7 +93,7 @@ export default {
 
 .project-link {
   text-decoration: none;
-  transition: transform 500ms ease;
+  transition: transform 500ms ease opacity 0.3s ease-in-out;
   &:hover > .project-title {
     color: color(dark);
   }
@@ -100,6 +110,19 @@ export default {
       opacity: 0;
     }
   }
+}
+// hovering effect
+.hover {
+  h3 {
+    color: color(dark);
+  }
+  .projects-link {
+    color: color(dark);
+    border: 1px solid color(dark);
+  }
+}
+.hover:not(.active) {
+  opacity: .3;
 }
 
 // Transition

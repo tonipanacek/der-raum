@@ -17,6 +17,6 @@ de_description: OuterRim Architecture
 en_description: OuterRim Architecture
 orientation: portrait
 page: 2
-page_position: first
+page_position: ''
 
 ---
