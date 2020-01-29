@@ -12,11 +12,9 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/schlafzimmer-holz-einbauschrank-schiebetuer_ox659z.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/kueche-kochinsel-einbauschrank-holz_vugrkd.jpg
 de_title: Haus Wandlitz
-en_title: Wandlitz House
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+en_title: Haus Wandlitz
+de_description: 'Bonauer Bölling Architekten // Photos: Tiffany Taraska'
+en_description: 'Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
 orientation: landscape
 page: 2
 page_position: first
