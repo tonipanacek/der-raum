@@ -84,7 +84,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   height: $main-height;
 }
 .left-sidebar {
-  padding: 0 0 0 2em;
+  padding: 0 2em;
   width: 100%;
   position: sticky;
   top: spacing(lg);

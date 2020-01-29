@@ -13,6 +13,9 @@
         <Frame v-if="service.attributes.title" :n="9" :d="16">
           <img :src="service.attributes.image" :alt="service.attributes.title" />
         </Frame>
+        <Frame v-else :n="16" :d="9">
+          <img :src="service.attributes.image" :alt="service.attributes.title" />
+        </Frame>
         <h3 class="service-title">
           {{ $ta(service.attributes, 'title') }}
         </h3>
@@ -109,22 +112,7 @@ export default {
     margin-top: 0.5em;
   }
 }
-.projects-link {
-  text-decoration: none;
-  @include smallCaps;
-  color: color(light);
-  border: 1px solid color(light);
-  font-size: 0.9em;
-  width: 100%;
-  height: 100%;
-  max-height: 10ch;
-  display: block;
-  margin-bottom: 10%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
+
 .hover:not(.active) {
   opacity: .3;
 }
@@ -146,7 +134,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     margin: 0 auto;
   }
 }
-// grid layout
+// grid layout for small screens
 .service-list {
   background-color: white;
   display: grid;
@@ -164,18 +152,41 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   grid-area: 2 / 1 / 3 / 3;
   .frame { height: 100%; }
 }
-#Production.service-link { grid-area: 4 / 2 / 5 / 5; }
+#Production.service-link {
+  grid-area: 4 / 2 / 5 / 5;
+  align-self: end;
+}
+.projects-link {
+  text-decoration: none;
+  @include smallCaps;
+  color: color(light);
+  border: 1px solid color(light);
+  font-size: 0.9em;
+  width: 100%;
+  height: 100%;
+  max-height: 10ch;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  justify-self: stretch;
+  margin: spacing(lg) 0;
+}
 
 .projects-link-grid {
   display: none;
   width: 100%;
-  justify-content: center;
+  // justify-content: center;
+  justify-self: end;
+  align-self: end;
 }
 
 .projects-link-non-grid {
   margin-top: spacing(md);
 }
 
+// grid layout for big screens
 @include respond-to('large') {
   .service-list {
     max-width: 90ch;
@@ -184,13 +195,36 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     grid-template-rows: 2fr .6fr 1fr .4fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    align-content: space-between;
+    .projects-link {
+      text-decoration: none;
+      @include smallCaps;
+      color: color(light);
+      border: 1px solid color(light);
+      font-size: 0.9em;
+      width: 100%;
+      height: 100%;
+      max-height: 10ch;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      justify-self: stretch;
+    }
   }
 
   #Design.service-link { grid-area: 1 / 2 / 2 / 4; }
   #Production.service-link { grid-area: 3 / 1 / 6 / 3; }
   #Planning.service-link {
     grid-area: 1 / 5 / 4 / 6;
-    .frame { height: 100%; }
+    .frame {
+      height: 100%;
+      img {
+        align-self: start;
+        justify-self: start;
+      }
+    }
   }
   .projects-link-grid {
     grid-area: 5 / 5 / 6 / 6;

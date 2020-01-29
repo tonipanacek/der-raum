@@ -99,14 +99,14 @@ export default {
     }
   }
   .nav-items {
+    li:first-child {
+      a {
+        margin-top: 0;
+      }
+    }
     margin-top: 0;
     @include respond-to('large') {
       margin-top: spacing(md);
-      li:first-child {
-        a {
-          margin-top: 0;
-        }
-      }
     }
   }
 }
