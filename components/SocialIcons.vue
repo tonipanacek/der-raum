@@ -1,14 +1,14 @@
 <template>
   <Cluster>
     <div class="social-icons">
-      <a href="http://www.instagram.com/der.raum" target="_blank">
-        <img svg-inline src="~/assets/images/linkedin.svg" alt="Linkedin Icon" class="social-item" />
+      <a href="https://www.instagram.com/der.raum" target="_blank">
+        <img svg-inline src="~/assets/images/instagram.svg" alt="Instagram Icon" class="social-item" />
       </a>
       <a href="https://www.pinterest.com/derraum" target="_blank" >
         <img svg-inline src="~/assets/images/pinterest.svg" alt="Pinterest Icon" id="pinterest" class="social-item" />
       </a>
       <a href="https://www.facebook.com/derraumberlin" target="_blank">
-        <img svg-inline src="~/assets/images/twitter.svg" alt="Twitter Icon" class="social-item" />
+        <img svg-inline src="~/assets/images/facebook.svg" alt="Facebook Icon" class="social-item" />
       </a>
     </div>
   </Cluster>
@@ -25,8 +25,13 @@ export default {
 </script>
 
 <style lang="scss">
+#left-social {
+  min-width: 5rem;
+  max-width: 7rem;
+}
 svg.social-item {
   width: .8rem;
+  height: auto;
   fill: color(light);
 }
 svg#pinterest {
@@ -34,5 +39,6 @@ svg#pinterest {
 }
 .social-icons {
   margin-top: spacing(sm);
+  justify-content: space-between;
 }
 </style>

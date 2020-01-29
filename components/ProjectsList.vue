@@ -13,7 +13,12 @@
       :to="`/projects/${formatSlug(project.attributes.title)}`"
       class="project-link"
       >
-        <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+        <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
+          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+        </Frame>
+        <Frame v-else>
+          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+        </Frame>
         <h3 class="project-title">
           {{ $ta(project.attributes, 'title') }}
         </h3>
@@ -24,12 +29,11 @@
 
 <script>
 import { get } from 'lodash';
-import Cluster from '~/components/Cluster'
-// import Frame from '~/components/Frame'
+import Frame from '~/components/Frame'
 export default {
   name: "ProjectsList",
   components: {
-    Cluster
+    Frame
   },
   props: {
     projects: {
@@ -57,6 +61,7 @@ export default {
     grid-gap: spacing(sm);
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row dense;
     & > * {
       width: 100%;
       height: 100%;

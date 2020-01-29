@@ -19,7 +19,7 @@ export default {
   align-items: space-between;
   .image-container {
     flex-grow: 2;
-    margin-bottom: spacing(lg);
+    margin-bottom: spacing(md);
   }
   img,
   & > * {

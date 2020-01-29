@@ -92,9 +92,11 @@ export default {
       event.preventDefault();
       if (event.key.match(/(down|right)/i)) {
         this.incrementPage()
+        event.stopImmediatePropagation()
         return false;
       } else if (event.key.match(/(up|left)/i)) {
         this.decrementPage()
+        event.stopImmediatePropagation()
         return false;
       }
     }

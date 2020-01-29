@@ -77,7 +77,7 @@ export default {
 // Covered by Navbar component
 .navbar-secondary {
   top: 0;
-  width: 10ch;
+  width: 30ch;
   display: none;
   flex-grow: 2;
   @include respond-to('large') {
