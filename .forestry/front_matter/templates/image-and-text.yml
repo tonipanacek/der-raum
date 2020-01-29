@@ -59,6 +59,7 @@ fields:
   description: Description for the page
   label: English Description
 pages:
+- content/about/business-partner.md
 - content/about/team.md
 - content/rooms/bathroom.md
 - content/rooms/bedroom.md
