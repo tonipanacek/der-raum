@@ -57,9 +57,13 @@ export default {
     align-items: flex-start;
     justify-content: space-between;
   }
-  // .image-container {
-  //   height: 50vh;
-  // }
+  .image-container {
+    height: 40vh;
+    .frame {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 .info {
   width: 45%;
