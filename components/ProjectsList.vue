@@ -61,6 +61,7 @@ export default {
     grid-gap: spacing(sm);
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row dense;
     & > * {
       width: 100%;
       height: 100%;

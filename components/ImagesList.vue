@@ -5,7 +5,7 @@
       name="insert"
       mode="out-in"
       tag="div"
-      :class="{ 'going-up': goingUp, 'going-down': !goingUp }"
+      :class="{ 'images-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
       >
         <NuxtLink
         :id="title"
@@ -62,6 +62,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.images-list, .images-list > *, .images-list > * > * {
+  height: 100%;
+}
+
+.images-grid {
+  @include respond-to(large) {
+    display: grid;
+    grid-gap: spacing(sm);
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row dense;
+    & > * {
+      width: 100%;
+      height: 100%;
+      justify-self: center;
+    }
+    & > :nth-child(4) {
+      transform: translateY(25%);
+    }
+  }
+}
+
 .image-title {
   @include smallCaps;
   color: color(light);
@@ -70,14 +92,25 @@ export default {
 }
 .image-link {
   text-decoration: none;
-  display: block;
+  transition: transform 500ms ease;
   &:hover > .image-title {
     color: color(dark);
   }
+  img {
+    max-width: 100%;
+    max-height: calc(100% - #{spacing(sm) * 2});
+  }
+  h3 {
+    transition: opacity 750ms ease, color 500ms ease;
+  }
+  &:nth-child(4) {
+    pointer-events: none;
+    h3 {
+      opacity: 0;
+    }
+  }
 }
-img {
-  max-height: calc(40vh - 3rem);
-}
+
 // Transition
 .insert-enter {
   opacity: 0;
@@ -98,7 +131,7 @@ img {
   }
 }
 .insert-enter-active {
-  transition: opacity 100ms ease 750ms, margin 100ms ease 750ms;
+  transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
 }
 .insert-leave-active {
   position: absolute;
