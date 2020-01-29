@@ -15,6 +15,6 @@ en_description: |-
   Exclusive, high-quality office furniture and interior fittings that meet your individual needs can help you to keep a cool head even in challenging moments. Wall and ceiling properties can play a major role in promoting certain cognitive moods, while optimally used light has been shown to promote concentration. An appropriately dimensioned memo board can become your source of inspiration, and an acoustic solution that is tailored to the interior becomes a boon to success. You will soon find everything you need on a functional, well-designed desk.
 
   Your needs depend on your field of activity and your individual preferences. Office furniture designs created especially for your premises increase the feel-good factor and contribute positively to a balanced work-life balance. Individual office furniture brings a personal touch to your workplace and is optimally tailored to your use.
-position: 1
+position: 3
 
 ---
