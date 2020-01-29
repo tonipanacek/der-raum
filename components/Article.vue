@@ -41,7 +41,10 @@ export default {
       font-size: 1rem;
       font-weight: 300;
     }
-    p {
+    ul {
+      list-style-type: square;
+    }
+    p, ul > li {
       line-height: 2rem;
       color: color(light);
     }

@@ -2,7 +2,7 @@
   <Container>
     <div id="home" class="service-list">
       <NuxtLink
-        v-for="service in sortedServices"
+        v-for="service, index in sortedServices"
         :id="service.attributes.title"
         :key="service.attributes.title"
         :to="`/services/${formatSlug(service.attributes.title)}`"
@@ -92,6 +92,7 @@ export default {
 .service-title {
   @include smallCaps;
   color: color(light);
+  font-weight: 400;
 }
 .service-link, .projects-link {
   transition: opacity 0.3s ease-in-out;
@@ -112,8 +113,8 @@ export default {
 .projects-link {
   text-decoration: none;
   @include smallCaps;
-  color: color(dark);
-  border: 1px solid color(dark);
+  color: color(light);
+  border: 1px solid color(light);
   font-size: 0.9em;
   width: 100%;
   height: 100%;
@@ -127,6 +128,15 @@ export default {
 }
 .hover:not(.active) {
   opacity: .3;
+}
+.hover {
+  h3 {
+    color: color(dark);
+  }
+  .projects-link {
+    color: color(dark);
+    border: 1px solid color(dark);
+  }
 }
 
 $main-height: calc(100vh - 2 * #{spacing(lg)});
@@ -161,6 +171,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   justify-content: center;
 }
 
+.projects-link-non-grid {
+  margin-top: spacing(md);
+}
+
 @include respond-to('large') {
   .service-list {
     display: grid;
@@ -192,7 +206,4 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     display: none;
   }
 }
-
-
-
 </style>

@@ -53,12 +53,13 @@ export default {
 <style lang="scss" scoped>
 .projects-list, .projects-list > *, .projects-list > * > * {
   height: 100%;
+  max-width: 80ch;
 }
 
 .projects-grid {
   @include respond-to(large) {
     display: grid;
-    grid-gap: spacing(sm);
+    grid-gap: spacing(md);
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: row dense;

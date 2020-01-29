@@ -55,13 +55,14 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
       font-weight: 700;
     }
   }
-
+  background: white;
   padding-right: 2rem;
   width: 100%;
   .right-stack {
     display: flex;
     justify-content: space-between;
     flex-direction: initial;
+    margin: 0;
     p {
       @include smallCaps;
       font-size: 1em;
