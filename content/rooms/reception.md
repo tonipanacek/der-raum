@@ -19,5 +19,6 @@ en_description: |-
   In addition, planning a seat with sufficient space proves its worth. This increases the comfort of your guests and makes it easier to take shoes off and on. Perhaps there is also the possibility of a key panel in the planning. It is also possible to have an electrical distributor cleverly concealed behind a decorative furniture front.
 
   We as planners and designers will support you with all your ideas and work with you to develop the optimal solution, even in the smallest space, an optimized result.
+position: 5
 
 ---
