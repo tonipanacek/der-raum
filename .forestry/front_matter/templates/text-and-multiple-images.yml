@@ -19,17 +19,6 @@ fields:
       file: 
       path: 
   label: Photo Orientation
-- name: page
-  type: number
-  default: 0
-  required: true
-  config:
-    min: '1'
-    max: 
-    step: '1'
-    required: true
-  label: Page Number
-  description: Which page would you like the project to be displayed on?
 - name: page_position
   type: select
   default: []
@@ -46,6 +35,20 @@ fields:
   label: Page position
   description: Only applies to the 2 landscape projects. Options are first or second
     position on page.
+  showOnly:
+    field: orientation
+    value: landscape
+- name: page
+  type: number
+  default: 0
+  required: true
+  config:
+    min: '1'
+    max: 
+    step: '1'
+    required: true
+  label: Page Number
+  description: Which page would you like the project to be displayed on?
 - name: images
   type: image_gallery
   config: {}
