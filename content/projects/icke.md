@@ -13,12 +13,10 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz_uzef8m.jpg
 de_title: Icke
 en_title: Icke
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+de_description: OuterRim Architecture
+en_description: OuterRim Architecture
 orientation: portrait
 page: 2
-page_position: ''
+page_position: first
 
 ---
