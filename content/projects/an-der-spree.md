@@ -13,12 +13,10 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/050-Bueroausbau-Telefonzelle-Studio_q0znqq.jpg
 de_title: An der Spree
 en_title: At the Spree
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+de_description: 'CBRE // Photos: Andrea Dingeldein'
+en_description: 'CBRE // Fotos: Andrea Dingeldein'
 orientation: portrait
-page: 1
-page_position: ''
+page: '3'
+page_position: second
 
 ---
