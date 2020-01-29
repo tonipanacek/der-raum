@@ -9,6 +9,18 @@ fields:
     required: true
   label: Page Name
   description: "Must be in English (for secret coding reasons \U0001F647‍♂️)"
+- name: position
+  type: number
+  label: Position
+  default: 0
+  required: true
+  config:
+    min: '1'
+    max: 
+    step: 
+    required: true
+  description: 'Which order you''d like the pages to be in. Keep in mind the first
+    item is a landscape picture, second is portrait, and so on. '
 - name: image
   type: file
   config:
