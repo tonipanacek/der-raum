@@ -4,6 +4,12 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: content/data
+  label: data files
+  create: all
+  match: "**/*"
+  new_doc_ext: ".json"
 - type: heading
   label: Content
 - type: directory
@@ -36,12 +42,6 @@ sections:
   - text-and-multiple-images
 - type: heading
   label: Data
-- type: document
-  path: content/data/business_partners
-  label: Business Partners List
-- type: document
-  path: content/data/social_media
-  label: Social Media Links
 upload_dir: ''
 public_path: https://res.cloudinary.com/dwvtvuml8/image/upload
 front_matter_path: ''
