@@ -47,6 +47,7 @@ export default {
     p, ul > li {
       line-height: 2rem;
       color: color(light);
+      font-size: .85em;
     }
     strong {
       color: color(dark);

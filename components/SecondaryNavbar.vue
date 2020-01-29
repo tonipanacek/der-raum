@@ -13,7 +13,7 @@
         :data-index="index"
       >
         <nuxt-link
-          class="nav-item title link"
+          class="nav-item title"
           :to="path(page)"
         >
           {{ $ta(page.attributes, "title") }}

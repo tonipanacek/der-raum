@@ -168,7 +168,7 @@ p {
 }
 .close-link {
   position: fixed;
-  left: spacing(lg) * 5;
+  left: 20rem;
   .close-btn {
     height: 1rem;
   }

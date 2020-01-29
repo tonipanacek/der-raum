@@ -87,6 +87,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   align-items: center;
   justify-content: space-around;
   max-width: none;
+  margin: spacing(sm) 0;
   @include respond-to('large') {
     display: none;
   }

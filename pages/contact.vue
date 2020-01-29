@@ -10,9 +10,13 @@
         <div class="text">
           <div class="info">
             <h1>{{ $t("contact.name") }}</h1>
-            <p>{{ $t("contact.streetNumber") }}</p>
-            <p>{{ $t("contact.cityZip") }}</p>
-            <p>{{ $t("contact.tel") }}</p>
+            <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=der%20raum">
+              <p>{{ $t("contact.streetNumber") }}</p>
+              <p>{{ $t("contact.cityZip") }}</p>
+            </a>
+            <a href="tel:03039375300">
+              <p>{{ $t("contact.tel") }}</p>
+            </a>
             <p>{{ $t("contact.email") }}</p>
           </div>
           <div class="info">
@@ -58,7 +62,6 @@ export default {
     justify-content: space-between;
   }
   .image-container {
-    height: 40vh;
     .frame {
       height: 100%;
       width: 100%;
@@ -66,7 +69,10 @@ export default {
   }
 }
 .info {
-  width: 45%;
+  width: 30ch;
+  a {
+    text-decoration: none;
+  }
   p {
     line-height: 1rem;
     margin: 0;

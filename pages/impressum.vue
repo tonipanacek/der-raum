@@ -1,6 +1,6 @@
 <template>
   <div id="legal">
-    <h1>{{ $t("legal.title") }}</h1>
+    <h1 class="title">{{ $t("legal.title") }}</h1>
     <p>
       holz & raum berlin gmbh
       Roelckestr. 152 -153

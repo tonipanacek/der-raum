@@ -1,0 +1,86 @@
+{
+  "de_contact": {
+    "title": "Kontakt",
+    "text": [
+      "holz & raum berlin gmbh",
+      "Roelckestr. 152 -153",
+      "13086 Berlin",
+      "Tel:  030 927943 - 0",
+      "Fax: 030 927943 - 233",
+      "E-Mail: kontakt@holz-raum.de"
+    ]
+  },
+  "de_tax": {
+    "title": "Steuer",
+    "text": [
+      "Geschäftsführung: Dieter Baumhoff",
+      "Registergericht: Amtsgericht Berlin Charlottenburg",
+      "Registernummer: hrb 64315",
+      "Umsatzsteuer-Identifikationsnummer: DE189141861",
+      "Freistellungsbescheinigung zum Steuerabzug bei Bauleistungen liegt vor."
+    ]
+  },
+  "en_tax": {
+    "title": "Tax Info",
+    "text": [
+      "Managing Director: Dieter Baumhoff",
+      "Registry court: Amtsgericht Berlin Charlottenburg",
+      "Registry number: hrb 64315",
+      "VAT-ID: DE189141861",
+      "Certificate of exemption for tax deduction for building services present."
+    ]
+  },
+  "de_links": {
+    "title": "Links",
+    "text": [
+      "Die Web-Seiten von www.holz-raum.de können Links zu den Web-Seiten anderer Anbieter enthalten, für deren Inhalte wir keine Haftung übernehmen."
+    ]
+  },
+  "en_links": {
+    "title": "Links",
+    "text": [
+      "The web pages of www.holz-raum.de may contain links to the web pages of other providers, the contents of which we assume no liability for."
+    ]
+  },
+  "de_disclaimer": {
+    "title": "Haftungsausschluss",
+    "text": [
+      "",
+      ""
+    ]
+  },
+  "en_disclaimer": {
+    "title": "Disclaimer",
+    "text": [
+      "The contents of this page were created with greatest care. However, we cannot guarantee the accuracy, completeness, and up-to-date status of the contents. <br>Due to the characteristics of the Internet medium and the connected possibility of interruption or failure of information transmission, any liability is excluded in the context of the use of information, links, or the confidence in the accuracy of these.",
+      "The contents of this website are protected by copyright."
+    ]
+  },
+  "de_photos": {
+    "title": "Fotonachweis",
+    "text": [
+      "© 2D+ Architekten (www.2dplus.com) – Team: Markus Bonauer, Michael Bölling, Tiffany Taraska – zu folgenden Fotos: <br>Fotos Haus Wandlitz: Homepage 'Sliderbild Innenausbau',  'Artikelbild' unter Produkte / Wohnungsausbau, Foto '020-Wohnbereich-Holzfassade-Aussenansicht.jpg' unter Produkte / Wohnungsausbau / Fotogalerie sowie alle Fotos unter Referenzprojekte / Haus in Wandlitz",
+      "Bei allen anderen Fotos unter www.der-raum.de liegt das Copyright bei holz & raum berlin GmbH."
+    ]
+  },
+  "en_photos": {
+    "title": "Photographs",
+    "text": [
+      "© 2D+ Architects (www.2dplus.com) – Team: Markus Bonauer, Michael Bölling, Tiffany Taraska – for the following photographs:",
+      "Photographs Haus Wandlitz: Homepage 'Sliderbild Innenausbau', 'Artikelbild' under Products / Apartment Extension, Photo '020-Wohnbereich-Holzfassade-Aussenansicht.jpg' under Products / Apartment Extension / Photo gallery and all photos under Reference Projects / House in Wandlitz",
+      "For all other photos at www.der-raum.de, holz & raum berlin GmbH holds the copyright."
+    ]
+  },
+  "de_website": {
+    "title": "Realisierung der Website",
+    "text": [
+      "Obst Digital"
+    ]
+  },
+  "en_website": {
+    "title": "Realization of the Website",
+    "text": [
+      "Obst Digital"
+    ]
+  }
+}
