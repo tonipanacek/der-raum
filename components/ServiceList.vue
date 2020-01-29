@@ -10,7 +10,7 @@
         @mouseover.native="hover = service.attributes.title"
         @mouseleave.native="hover = ''"
       >
-        <Frame v-if="service.attributes.title">
+        <Frame v-if="service.attributes.title" :n="9" :d="16">
           <img :src="service.attributes.image" :alt="service.attributes.title" />
         </Frame>
         <h3 class="service-title">
@@ -88,7 +88,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .service-title {
   @include smallCaps;
   color: color(light);
@@ -143,9 +142,11 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 @include respond-to(large) {
   #home.service-list {
     height: $main-height;
+    max-width: 100ch;
+    margin: 0 auto;
   }
 }
-
+// grid layout
 .service-list {
   background-color: white;
   display: grid;
@@ -177,9 +178,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 
 @include respond-to('large') {
   .service-list {
+    max-width: 90ch;
     display: grid;
     grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
-    grid-template-rows: 2.5fr .4fr 1fr .4fr 1fr;
+    grid-template-rows: 2fr .6fr 1fr .4fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }

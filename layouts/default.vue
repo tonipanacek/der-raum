@@ -81,10 +81,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   // margin-left: auto;
   // margin-right: auto;
   max-width: 110ch;
-  min-height: $main-height;
+  height: $main-height;
 }
 .left-sidebar {
-  padding: 0 2em;
+  padding: 0 0 0 2em;
   width: 100%;
   position: sticky;
   top: spacing(lg);

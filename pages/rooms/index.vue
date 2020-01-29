@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { get, min } from "lodash"
+import { get, min, sortBy } from "lodash"
 
 export default {
   async asyncData() {
@@ -35,3 +35,4 @@ export default {
   }
 }
 </script>
+
