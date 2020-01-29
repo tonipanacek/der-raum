@@ -8,14 +8,12 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kuechenzeile-hochwertig-exklusiv_cnttv4.png
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Kacheln-Arbeisplatte_jzck1w.png
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-hochwertig-exklusiv_uwpkr2.png
-en_title: Winter Kitchen
+en_title: Winterküche
 de_title: Winterküche
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
+de_description: 'Design: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
-page: 3
+page: 4
 page_position: second
 
 ---
