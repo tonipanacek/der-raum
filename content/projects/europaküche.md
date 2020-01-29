@@ -10,11 +10,9 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/004-Kochinsel-kueche_Loft-schwarz_nnylqk.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/005-kueche_Loft-schwarz-regal_pwijcm.jpg
 de_title: Europaküche
-en_title: European Kitchen
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+en_title: Europaküche
+de_description: 'Siemens // Freunde von Freunden // Fotos: Axel Kranz'
+en_description: 'Siemens // Freunde von Freunden // Fotos: Axel Kranz'
 orientation: landscape
 page: 1
 page_position: first
