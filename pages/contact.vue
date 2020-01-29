@@ -1,27 +1,29 @@
 <template>
-  <Article class="contact">
-    <div class="image-container">
-      <Frame>
-        <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
-      </Frame>
-    </div>
-    <Cluster>
-      <div class="contact-text">
-        <div class="info">
-          <h2>{{ $t("contact.name") }}</h2>
-          <p>{{ $t("contact.streetNumber") }}</p>
-          <p>{{ $t("contact.cityZip") }}</p>
-          <p>{{ $t("contact.tel") }}</p>
-          <p>{{ $t("contact.email") }}</p>
-        </div>
-        <div class="info">
-          <h3>{{ $t("contact.openingTitle") }}</h3>
-          <p>{{ $t("contact.weekdays") }}</p>
-          <p>{{ $t("contact.weekend") }}</p>
-        </div>
+  <Container id="contact">
+    <Article class="contact">
+      <div class="image-container">
+        <Frame>
+          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
+        </Frame>
       </div>
-    </Cluster>
-  </Article>
+      <Cluster>
+        <div class="text">
+          <div class="info">
+            <h1>{{ $t("contact.name") }}</h1>
+            <p>{{ $t("contact.streetNumber") }}</p>
+            <p>{{ $t("contact.cityZip") }}</p>
+            <p>{{ $t("contact.tel") }}</p>
+            <p>{{ $t("contact.email") }}</p>
+          </div>
+          <div class="info">
+            <h3>{{ $t("contact.openingTitle") }}</h3>
+            <p>{{ $t("contact.weekdays") }}</p>
+            <p>{{ $t("contact.weekend") }}</p>
+          </div>
+        </div>
+      </Cluster>
+    </Article>
+  </Container>
 </template>
 
 <script>
@@ -49,18 +51,34 @@ export default {
     color: color(dark);
   }
 }
-.contact-text {
-  margin: spacing(sm) 0;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
-  .info {
-    width: 45%;
+.contact {
+  .text {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  // .image-container {
+  //   height: 50vh;
+  // }
+}
+.info {
+  width: 45%;
+  p {
+    line-height: 1rem;
+    margin: 0;
+  }
+  h3 {
+    @include smallCaps;
+    color: color(dark);
+    font-size: 1rem;
+    font-weight: 300;
   }
 }
-.info p {
-  color: color(light);
-  font-size: .75rem;
-  margin-top: .5rem;
+
+$main-height: calc(100vh - 3 * #{spacing(lg)});
+@include respond-to(large) {
+  #contact {
+    height: $main-height;
+  }
 }
 </style>

@@ -62,6 +62,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     display: flex;
     justify-content: space-between;
     flex-direction: initial;
+    margin: 0;
     p {
       @include smallCaps;
       font-size: 1em;
