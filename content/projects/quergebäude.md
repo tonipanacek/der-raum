@@ -10,12 +10,10 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Kueche-Insel-weiss-lackiert_bakd5f.gif
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780008/Kamin-Einbauschrank-Wohnzimmer-weiss-lackiert_lr4ti6.gif
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780008/Kamin-Einbauschrank-Wohnbereich-weiss-lackiert_cznmxc.gif
-en_title: Rear Wing
+en_title: Quergebäude
 de_title: Quergebäude
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+en_description: 'Club Marginal Architekten // Photos: Roland Unterbusch'
+de_description: 'Club Marginal Architekten // Fotos: Roland Unterbusch'
 orientation: landscape
 page: 3
 page_position: first
