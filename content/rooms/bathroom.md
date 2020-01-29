@@ -19,5 +19,6 @@ en_description: |-
   We as planners, designers and experienced carpenters support you in realizing your vision of an individual master bathroom even in the smallest of spaces. From the perfectly fitting washbasin to the bathroom cabinet to the vanity unit. We manufacture bathroom furniture made of wood and other materials on request.
 
   In addition, we design guest bathrooms that should be retrofitted or converted so that even spontaneous guests can always find a sophisticated, functionally perfect bathroom.
+position: 2
 
 ---
