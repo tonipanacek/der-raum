@@ -37,7 +37,6 @@ svg#pinterest {
   height: .8em;
 }
 .social-icons {
-  margin-top: spacing(sm);
   justify-content: space-between;
 }
 </style>
