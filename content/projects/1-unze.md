@@ -11,14 +11,12 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783931/Kueche-Schubladen-Auszug-Eiche-Holz_mhr1ci.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-schwarz-Rueckwand-Einbauschrank_npxfwb.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-Kochinsel-Gold-Messing-Einbauschrank-Loft_iarblh.jpg
-en_title: 1 Ounce
-de_title: 1 Unze
-en_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
-de_description: Kalkatta Marmor & Esche in Ral1007 Offenporig & 3 Fach Lackiert /
-  Michael Sass Fotografie
+en_title: 1 UNZE
+de_title: 1 UNZE
+en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
+de_description: 'Design: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
-page: 4
-page_position: first
+page: 3
+page_position: second
 
 ---
