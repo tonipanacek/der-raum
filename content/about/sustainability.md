@@ -11,9 +11,7 @@ en_description: |-
 
   We return the majority of the wood residues to a cycle and heat our operations with our in-house combined heat and power plant. The specially generated solar power enables us to operate our machines in a climate-neutral manner, which corresponds to a CO2 saving of 25 tons of CO2 per year.
 
-  The purchase of the material that we process takes place as regionally as possible, the extensive absence of transports by intermediaries saves additional packaging and finite resources.
-
-  We also want to make our contribution to the preservation of resources globally and in the past have decided to promote the replanting of mangroves as part of the REFORESTATION with every product sold, because this is where the need is greatest.
+  The purchase of the material that we process takes place as regionally as possible, the extensive absence of transports by intermediaries saves additional packaging and finite resources. We also want to make our contribution to the preservation of resources globally and in the past have decided to promote the replanting of mangroves as part of the REFORESTATION with every product sold, because this is where the need is greatest.
 
   We make our first contribution to ecological balance and are continuously striving to be completely climate-neutral in the foreseeable future.
 de_description: |-
@@ -23,9 +21,7 @@ de_description: |-
 
   Den überwiegenden Teil der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen unsere Betriebsstäten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen, was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.
 
-  Der Bezug des Materials welches wir verarbeiten geschieht möglichst regional, der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen.
-
-  Wir möchten auch global unseren Beitrag zum Erhalt von Ressourcen leisten und haben uns in der Vergangenheit entschieden mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION voranzutreiben, da gerade hier der Bedarf am größten ist.
+  Der Bezug des Materials welches wir verarbeiten geschieht möglichst regional, der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Wir möchten auch global unseren Beitrag zum Erhalt von Ressourcen leisten und haben uns in der Vergangenheit entschieden mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION voranzutreiben, da gerade hier der Bedarf am größten ist.
 
   Wir leisten unseren ersten Beitrag am ökologischen Gleichgewicht und sind kontinuierlich bestrebt in absehbarer Zukunft gänzlich klimaneutral zu agieren.
 
