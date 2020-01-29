@@ -11,10 +11,10 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779373/040-Kueche-blau-lackiert-Schrank-Vitrine_ub8m0e.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779373/050-Kueche-blau-lackiert-Schrank-Vitrine_drflhn.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779371/060-Kueche-rosa-lackiert-Griffe-Kupfer-Optik_bhvrxd.jpg
-en_title: Contrast
+en_title: Kontrast
 de_title: Kontrast
-en_description: 'DER RAUM // Fotos: Michel Sass'
-de_description: 'DER RAUM // Photos: Michel Sass'
+en_description: 'Design: DER RAUM // Photos: Michel Sass'
+de_description: 'Design: DER RAUM // Fotos: Michel Sass'
 orientation: landscape
 page: 1
 page_position: second
