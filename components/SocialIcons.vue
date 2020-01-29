@@ -26,7 +26,8 @@ export default {
 
 <style lang="scss">
 #left-social {
-  width: 5rem;
+  min-width: 5rem;
+  max-width: 7rem;
 }
 svg.social-item {
   width: .8rem;
