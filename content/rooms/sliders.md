@@ -15,5 +15,6 @@ en_description: |-
   Do you have an idea and would you like to get expert advice before placing your order? We as interior designers and designers specialize in exclusive interior design. With simple sliding doors made of wood you are just as experienced as with elaborate design wall cladding, well thought-out wall panels and high-quality wall paneling.
 
   We work with you to develop various solutions that you can use flexibly and permanently in your property. Together with you, we develop more standards in your premises.
+position: 4
 
 ---
