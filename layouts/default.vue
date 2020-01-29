@@ -49,6 +49,8 @@ export default {
   padding: spacing(lg) 0;
   display: flex;
   flex-direction: column;
+  max-width: 200ch;
+  margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
   }
@@ -76,8 +78,8 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-y: visible;
   background: white;
   z-index: 2;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   max-width: 110ch;
   min-height: $main-height;
 }

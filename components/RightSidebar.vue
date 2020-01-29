@@ -55,7 +55,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
       font-weight: 700;
     }
   }
-
+  background: white;
   padding-right: 2rem;
   width: 100%;
   .right-stack {
