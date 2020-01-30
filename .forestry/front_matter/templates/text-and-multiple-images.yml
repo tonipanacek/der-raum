@@ -5,6 +5,12 @@ fields:
 - type: text
   name: title
   label: Title
+- name: main_image
+  type: file
+  config:
+    maxSize: 250
+  label: Main Image
+  description: Title image for overview page
 - name: orientation
   type: select
   default: []
