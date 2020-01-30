@@ -1,28 +1,28 @@
 <template>
-  <div class="projects-list">
+  <div class="rooms-list">
     <transition-group
     name="insert"
     mode="out-in"
     tag="div"
-    :class="{ 'projects-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
+    :class="{ 'rooms-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
     >
       <NuxtLink
-      :id="$ta(project.attributes, 'title')"
-      v-for="project in projects"
-      :key="getTitle(project.attributes)"
-      :to="`/projects/${formatSlug(project.attributes.title)}`"
-      :class="{ 'active': hover && hover === project.attributes.title, hover: hover, 'project-link': true }"
-      @mouseover.native="hover = project.attributes.title"
+      :id="$ta(room.attributes, 'title')"
+      v-for="room in rooms"
+      :key="getTitle(room.attributes)"
+      :to="`/rooms/${formatSlug(room.attributes.title)}`"
+      :class="{ 'active': hover && hover === room.attributes.title, hover: hover, 'room-link': true }"
+      @mouseover.native="hover = room.attributes.title"
       @mouseleave.native="hover = ''"
       >
-        <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
-          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+        <Frame v-if="room.attributes.orientation === 'portrait'" :n="4" :d="3">
+          <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
         </Frame>
         <Frame v-else>
-          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+          <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
         </Frame>
-        <h3 class="project-title">
-          {{ $ta(project.attributes, 'title') }}
+        <h3 class="room-title">
+          {{ $ta(room.attributes, 'title') }}
         </h3>
       </NuxtLink>
     </transition-group>
@@ -33,7 +33,7 @@
 import { get } from 'lodash';
 import Frame from '~/components/Frame'
 export default {
-  name: "ProjectsList",
+  name: "RoomsList",
   components: {
     Frame
   },
@@ -43,7 +43,7 @@ export default {
     }
   },
   props: {
-    projects: {
+    rooms: {
       type: Array,
       required: true
     },
@@ -58,12 +58,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projects-list, .projects-list > *, .projects-list > * > * {
+.rooms-list, .rooms-list > *, .rooms-list > * > * {
   height: 100%;
   max-width: 80ch;
 }
 
-.projects-grid {
+.rooms-grid {
   @include respond-to(large) {
     display: grid;
     grid-gap: spacing(md);
@@ -84,17 +84,17 @@ export default {
   }
 }
 
-.project-title {
+.room-title {
   @include smallCaps;
   color: color(light);
   font-weight: 500;
   transition: color 500ms;
 }
 
-.project-link {
+.room-link {
   text-decoration: none;
   transition: transform 500ms ease, opacity 0.3s ease-in-out;
-  &:hover > .project-title {
+  &:hover > .room-title {
     color: color(dark);
   }
   img {
@@ -116,7 +116,7 @@ export default {
   h3 {
     color: color(dark);
   }
-  .projects-link {
+  .rooms-link {
     color: color(dark);
     border: 1px solid color(dark);
   }

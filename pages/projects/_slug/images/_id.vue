@@ -138,7 +138,7 @@ export default {
 }
 .image-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
 }
 img {
