@@ -93,7 +93,7 @@ export default {
 
 .project-link {
   text-decoration: none;
-  transition: transform 500ms ease opacity 0.3s ease-in-out;
+  transition: transform 500ms ease, opacity 0.3s ease-in-out;
   &:hover > .project-title {
     color: color(dark);
   }
