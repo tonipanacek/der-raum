@@ -70,6 +70,7 @@ export default {
   @include respond-to(large) {
     display: grid;
     grid-gap: spacing(sm);
+    justify-content: space-between;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: row dense;
@@ -97,11 +98,12 @@ export default {
     color: color(dark);
   }
   img {
-    max-width: 100%;
+    width: auto;
     max-height: calc(100% - #{spacing(sm) * 2});
   }
   h3 {
     transition: opacity 750ms ease, color 500ms ease;
+    margin: .75em;
   }
   &:nth-child(4) {
     pointer-events: none;

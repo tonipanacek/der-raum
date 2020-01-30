@@ -136,8 +136,13 @@ export default {
   flex-direction: column;
   height: 100%;
 }
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 img {
-  max-width: 100%;
+  width: auto;
   max-height: calc(100vh - 4 * #{spacing(lg)});
 }
 * {

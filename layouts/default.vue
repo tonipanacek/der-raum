@@ -49,7 +49,7 @@ export default {
   padding: spacing(lg) 0;
   display: flex;
   flex-direction: column;
-  max-width: 200ch;
+  max-width: 180ch;
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
