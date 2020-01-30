@@ -6,11 +6,11 @@ en_title: Reception
 de_description: |-
   Wer einmal Gast bei Freunden oder Geschäftspartnern war und sich von der Türschwelle an rundherum wohl, ja fast wie Zuhause fühlte, hat erkannt: Der erste Eindruck gemeinsamer Zeit in guter Gesellschaft entsteht bereits im Empfangsbereich der Immobilie.
 
-  Neben einer herzlichen Begrüßung können Sie als Gastgeber insbesondere mit zusätzlichem Stauraum für die Jacken und Mäntel, Schirmständer, Ablage für Taschen und Schuhe die Sympathie ihrer Gäste gewinnen. Darüber hinaus wirkt Ihr Empfangsbereich dann einladend, wenn er hell, ästhetisch ansprechend und funktional gestaltet ist. Dazu empfiehlt sich, Ihre eigene Garderobe in optimal gestalteten passgenauen Einbauschränken zu verstauen. Den Blick Ihrer Gäste können Sie mit interessant gestalteten Sichtachsen gezielt auf frische Blumen oder Kunst lenken.
+  Neben einer herzlichen Begrüßung können Sie als Gastgeber zudem mit Stauraum für Jacken und Mäntel, Schirmständer, Ablage für Taschen und Schuhe die Sympathie ihrer Gäste gewinnen. Ihr Empfangsbereich wird durch eine klare, ästhetische und zugleich funktionale Gestaltung Raum für Begegnungen sein. Ihre Garderobe kann dabei in getrennten und passgenauen Einbauschränken Platz finden. Vorausschauend geplante Sichtachsen lenken den Blick ihrer Gäste auf Kunst oder frische Blumen.
 
-  Darüber hinaus bewährt sich, bei ausreichend vorhandener Fläche die Planung einer Sitzgelegenheit. Diese erhöht den Komfort Ihrer Gäste und erleichtert das Aus- und Anziehen von Schuhen. Vielleicht ergibt sich in der Planung auch die Möglichkeit für ein Schlüsseltableau. Auch einen Elektroverteiler geschickt kaschiert hinter einer dekorativen Möbelfront verschwinden zu lassen ist möglich.
+  Darüber hinaus bewährt sich, bei ausreichend vorhandener Fläche die Planung einer Sitzgelegenheit. Diese erhöht Ihren und den Komfort Ihrer Gäste und erleichtert das Aus- und Anziehen von Schuhen. Vielleicht ergibt sich in der Planung auch die Möglichkeit für ein Schlüsseltableau. Mit unseren passgenauen und individuell abgestimmten Einbauten lassen sich auch unansehnliche Elektroverteiler problemlos kaschieren.
 
-  Wir als Planer und Gestalter stehen Ihnen bei all Ihren Ideen unterstützend zur Seite und entwickeln gemeinsam mit Ihnen die optimale Lösung, selbst auf kleinstem Raum ein optimiertes Ergebnis.
+  Als Planer und Gestalter stehen wir Ihnen bei all Ihren Ideen und Wünschen unterstützend und beratend zur Seite. Gemeinsam mit Ihnen entwickeln wir, selbst auf kleinem Raum, die optimale Lösung.
 en_description: |-
   Anyone who has ever been a guest with friends or business partners and who felt comfortable, almost at home from the doorstep, has realized that the first impression of spending time together in good company is already in the reception area of ​​the property.
 

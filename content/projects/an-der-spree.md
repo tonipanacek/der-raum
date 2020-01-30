@@ -13,8 +13,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/050-Bueroausbau-Telefonzelle-Studio_q0znqq.jpg
 de_title: An der Spree
 en_title: At the Spree
-de_description: 'CBRE // Photos: Andrea Dingeldein'
-en_description: 'CBRE // Fotos: Andrea Dingeldein'
+de_description: 'CBRE // Fotos: Andrea Dingeldein'
+en_description: 'CBRE // Photos: Andrea Dingeldein'
 orientation: portrait
 page: '1'
 page_position: first

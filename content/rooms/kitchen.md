@@ -4,20 +4,16 @@ image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Exklusive-h
 de_title: Küche
 en_title: Kitchen
 de_description: |-
-  Eine hochwertige Küche ist die Grundlage für einen gesunden Lebensstil, Gastfreundschaft und familiäre Geselligkeit. Hier können Sie beim Kochen kreativ werden, all ihre Sinne aktivieren und kulinarisch genießen. Zu Tisch fällt es dann leicht, das Nützliche mit dem Schönen zu verbinden, gemeinsam zu essen, soziale Beziehungen zu pflegen und sich austauschen.
-
-  Ganz gleich welche Innenarchitektur zu Ihrem Alltag und ihrem Lebensrhythmus passt, Wir als Raumgestalter und Designer entwickeln mit Ihnen die für Sie passende Gestaltung, um diese im Anschluss mit unseren erfahrenen Tischlern nach den Regeln traditioneller Handwerkskunst nachhaltig in Berlin fertigen zu lassen.
+  Eine hochwertige Küche ist die Grundlage für einen gesunden Lebensstil, Gastfreundschaft und familiäre Geselligkeit. Hier können Sie beim Kochen kreativ werden, all ihre Sinne aktivieren und kulinarisch genießen. Zu Tisch fällt es dann leicht, das Nützliche mit dem Schönen zu verbinden, gemeinsam zu essen, soziale Beziehungen zu pflegen und sich auszutauschen. Ganz gleich welche Innenarchitektur zu Ihrem Alltag und ihrem Lebensrhythmus passt, wir als Raumgestalter und Designer entwickeln mit Ihnen die für Sie perfekte Gestaltung. Anschließend fertigen unsere erfahrenen Tischler jene Designs nach traditioneller und nachhaltiger Handwerkskunst direkt in Berlin.
 
   * Eine gemütliche Wohnküche lädt zum Sitzen, sich Austauschen und Verweilen ein, mit Familie, Freunden oder dem Lebenspartner.
   * Die funktionale Kochinsel überzeugt mit Struktur und klarem Fokus. Ein Muss für leidenschaftliche Köche.
   * Ästheten kommen an der Design Küche auf den Geschmack. Licht, Oberflächen und Raumgestaltung bringen geschmackvoll Flair in ihre Küche.
-  * Während die exklusive Luxus Küche besonders anspruchsvolle Gäste beherbergt.
+  * Während die exklusive Luxus Küche vor allem anspruchsvolle Gäste beherbergt.
 
-  Eines ist sicher: In Ihrer exklusiven, individuellen Einbauküche nach Maß sollte stets genug Raum für die Menschen und die perfekte Zubereitung der Speisen sein, die ein Gleichgewicht, Freude und Inspiration in Ihr Leben bringen.
+  Eines ist sicher: In Ihrer exklusiven, individuellen und hochwertigen Einbauküche nach Maß sollte stets genug Raum für die Menschen und die perfekte Zubereitung der Speisen sein, die Gleichgewicht, Freude und Inspiration in Ihr Leben bringen.
 en_description: |-
-  A high quality kitchen is the basis for a healthy lifestyle, hospitality and family conviviality. Here you can get creative while cooking, activate all your senses and enjoy culinary delights. At table it is easy to combine the useful with the beautiful, to eat together, to maintain social relationships and to exchange ideas.
-
-  No matter which interior design suits your everyday life and your rhythm of life, we as interior designers and designers will develop the right design for you, so that we can have it made in Berlin with our experienced carpenters according to the rules of traditional craftsmanship.
+  A high quality kitchen is the basis for a healthy lifestyle, hospitality and family conviviality. Here you can get creative while cooking, activate all your senses and enjoy culinary delights. At table it is easy to combine the useful with the beautiful, to eat together, to maintain social relationships and to exchange ideas. No matter which interior design suits your everyday life and your rhythm of life, we as interior designers and designers will develop the right design for you, so that we can have it made in Berlin with our experienced carpenters according to the rules of traditional craftsmanship.
 
   * A cozy kitchen-cum-living room invites you to sit, exchange ideas and linger, with family, friends or your life partner.
   * The functional cooking island impresses with its structure and clear focus. A must for passionate cooks.
