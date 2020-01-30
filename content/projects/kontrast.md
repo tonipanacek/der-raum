@@ -1,5 +1,6 @@
 ---
 title: Kontrast
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/010-Kueche-blau-lackiert-Schrank-Vitrine_kcyeed.jpg

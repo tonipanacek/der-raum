@@ -1,5 +1,6 @@
 ---
 title: Abbey Road
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784088/Kuechenzeile-Sideboard-schwarz-Steinplatte_gpobz9.jpg

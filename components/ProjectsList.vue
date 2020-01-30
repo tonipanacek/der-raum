@@ -16,10 +16,10 @@
       @mouseleave.native="hover = ''"
       >
         <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
-          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+          <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
         </Frame>
         <Frame v-else>
-          <img :src="$ta(project.attributes, 'images[0]')" :alt="$ta(project.attributes, 'title')" />
+          <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
         </Frame>
         <h3 class="project-title">
           {{ $ta(project.attributes, 'title') }}
@@ -125,6 +125,36 @@ export default {
   opacity: .3;
 }
 
+// Transition
+// .insert-enter {
+//   opacity: 0;
+//   .going-up & {
+//     margin-top: 50%;
+//   }
+//   .going-down & {
+//     margin-top: -50%;
+//   }
+// }
+// .insert-leave-to {
+//   opacity: 0;
+//   .going-up & {
+//     margin-top: -50%;
+//   }
+//   .going-down & {
+//     margin-top: 50%;
+//   }
+// }
+// .insert-enter-active {
+//   transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
+// }
+// .insert-leave-active {
+//   position: absolute;
+//   transition: opacity 750ms ease, margin 750ms ease;
+// }
+// .insert-move {
+//   transition: transform 750ms ease;
+//   z-index: 100;
+// }
 // Transition
 .insert-enter {
   opacity: 0;
