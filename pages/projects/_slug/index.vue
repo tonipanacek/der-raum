@@ -53,18 +53,7 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
-      allPages = sortBy(allPages, page => page.page)
-
-      let chunks = chunk(allPages, 4 - 1)
-      chunks = chunks.map((chunk, index) => {
-        const nextChunk = chunks[index + 1] || []
-        return [...chunk, nextChunk[0]].filter(c => c)
-      })
-      allPages = chunks.find(chunk =>
-        chunk.find(chunkyPage =>
-          isEqual(chunkyPage.attributes, page.attributes)
-        )
-      )
+      allPages = sortBy(allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
 
       return {
         pages: images, // For paginate mixin, must be named as such :)
@@ -77,7 +66,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.$data.allPages)
+    this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
   },
   methods: {
@@ -96,7 +85,29 @@ export default {
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
       return this.$data.pages
-    }
+    },
+    allPagesChunks() {
+      if (isEmpty(this.$data.allPages)) { return [] }
+      const getChunks = (pages) => {
+        if (isEmpty(pages)) { return [] }
+        const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+        let chunks = chunk(allPages, 3)
+        const chunkers = chunks.map((c, index) => {
+          const nextPortrait = get(chunks, `[${index + 1}][0]`)
+          if (c.length === this.max - 1) {
+            return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+          } else {
+            return [c[1], c[0], nextPortrait].filter(c => c)
+          }
+        })
+        return chunkers
+      }
+      return getChunks(this.$data.allPages)
+    },
+    allPagesCurrentChunk() {
+      if (isEmpty(this.allPagesChunks)) { return [] }
+      return this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+    },
   },
   components: {
     Container,
