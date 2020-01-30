@@ -1,5 +1,6 @@
 ---
 title: Fünfmeterholz
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz-schwarz_rr5yrt.jpg

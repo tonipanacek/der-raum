@@ -1,5 +1,6 @@
 ---
 title: Europaküche
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779229/001-kueche_Loft-schwarz-bar_y3ra7d.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779229/001-kueche_Loft-schwarz-bar_y3ra7d.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/006-kueche_Loft-schwarz-schublade_yb2xqu.jpg

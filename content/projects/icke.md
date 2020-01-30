@@ -1,5 +1,6 @@
 ---
 title: Icke
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbaukueche-Mittelblock-Einbauschraenke-raumhoch_cgszb2.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbaukueche-Mittelblock-Einbauschraenke-raumhoch_cgszb2.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbaukueche-Mittelblock-Einbauschraenke-weiss_lxk8fv.jpg
