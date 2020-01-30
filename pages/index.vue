@@ -4,7 +4,6 @@
 
 <script>
 import { mapActions } from "vuex"
-// import Container from "~/components/Container"
 import ServiceList from "~/components/ServiceList.vue"
 export default {
   layout: "layout",
