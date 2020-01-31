@@ -2,11 +2,12 @@
   <div
   id="projects"
   class="projects"
-  v-on:wheel.prevent="handleScroll"
   >
+  <!-- v-on:wheel.prevent="handleScroll" -->
     <Container>
       <ProjectsList
       class="section"
+      id="desktop-view"
       v-if="isChunky"
       :projects="currentChunk"
       :goingUp="goingUp"
@@ -90,9 +91,15 @@ export default {
 #mobile-view {
   display: block;
 }
+#desktop-view {
+  display: none;
+}
 @include respond-to('large') {
   #mobile-view {
     display: none;
+  }
+  #desktop-view {
+  display: block;
   }
 }
 </style>

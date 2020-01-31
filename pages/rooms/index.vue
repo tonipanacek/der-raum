@@ -53,7 +53,7 @@ export default {
       class="section"
       id="mobile-view"
       v-if="isChunky"
-      :rooms="currentChunk"
+      :rooms="allPagesView"
       :goingUp="goingUp"
       />
     </Container>

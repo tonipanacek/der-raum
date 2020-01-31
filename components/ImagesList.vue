@@ -1,12 +1,12 @@
 <template>
   <div class="images-list">
     <Cluster>
-      <transition-group
+      <!-- <transition-group
       name="insert"
       mode="out-in"
       tag="div"
       :class="{ 'images-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-      >
+      > -->
         <NuxtLink
         :id="title"
         v-for="image in images"
@@ -19,7 +19,7 @@
             {{ title }} {{ image.index }} / {{ totalCount }}
           </h3>
         </NuxtLink>
-      </transition-group>
+      <!-- </transition-group> -->
     </Cluster>
   </div>
 </template>
