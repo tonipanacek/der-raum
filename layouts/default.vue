@@ -102,10 +102,11 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 }
 .right-sidebar {
   padding: 0 2em;
-  position: sticky;
+  // position: sticky;
   flex: 0 1 5ch;
   align-self: flex-start;
   height: auto;
+  @include respond-to('large') { position: sticky; }
   .right-stack{
     min-height: $main-height;
     display: flex;

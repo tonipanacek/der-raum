@@ -1,6 +1,6 @@
 <template>
   <div class="images-list">
-    <Cluster>
+    <!-- <Cluster> -->
       <!-- <transition-group
       name="insert"
       mode="out-in"
@@ -14,13 +14,15 @@
         :to="`/projects/${slug}/images/${image.index}`"
         class="image-link"
         >
-          <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+          <Frame>
+            <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+          </Frame>
           <h3 class="image-title">
             {{ title }} {{ image.index }} / {{ totalCount }}
           </h3>
         </NuxtLink>
       <!-- </transition-group> -->
-    </Cluster>
+    <!-- </Cluster> -->
   </div>
 </template>
 
@@ -62,28 +64,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.images-list, .images-list > *, .images-list > * > * {
-  height: 100%;
-}
+// .images-list, .images-list > *, .images-list > * > * {
+//   height: 100%;
+// }
 
-.images-grid {
-  @include respond-to(large) {
-    display: grid;
-    grid-gap: spacing(sm);
-    justify-content: space-between;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-flow: row dense;
-    & > * {
-      width: 100%;
-      height: 100%;
-      justify-self: center;
-    }
-    & > :nth-child(4) {
-      transform: translateY(25%);
-    }
-  }
-}
+// .images-grid {
+//   @include respond-to(large) {
+//     display: grid;
+//     grid-gap: spacing(sm);
+//     justify-content: space-between;
+//     grid-template-columns: 3fr 2fr;
+//     grid-template-rows: 1fr 1fr;
+//     grid-auto-flow: row dense;
+//     & > * {
+//       width: 100%;
+//       height: 100%;
+//       justify-self: center;
+//     }
+//     & > :nth-child(4) {
+//       transform: translateY(25%);
+//     }
+//   }
+// }
 
 .image-title {
   @include smallCaps;
@@ -103,7 +105,7 @@ export default {
   }
   h3 {
     transition: opacity 750ms ease, color 500ms ease;
-    margin: .75em;
+    margin: 0 .75em .75em .75em;
   }
   &:nth-child(4) {
     pointer-events: none;

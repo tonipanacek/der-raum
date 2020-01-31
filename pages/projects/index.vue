@@ -3,7 +3,6 @@
   id="projects"
   class="projects"
   >
-  <!-- v-on:wheel.prevent="handleScroll" -->
     <Container>
       <ProjectsList
       class="section"
@@ -11,6 +10,7 @@
       v-if="isChunky"
       :projects="currentChunk"
       :goingUp="goingUp"
+      v-on:wheel.prevent="handleScroll"
       />
       <ProjectsList
       class="section"

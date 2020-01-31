@@ -14,6 +14,9 @@
               <p>{{ $t("contact.streetNumber") }}</p>
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
+          </div>
+          <div class="info">
+            <h3 id="hidden-title">{{ $t("contact.name") }}</h3>
             <a href="tel:03039375300">
               <p>{{ $t("contact.tel") }}</p>
             </a>
@@ -21,8 +24,8 @@
           </div>
           <div class="info">
             <h3>{{ $t("contact.openingTitle") }}</h3>
-            <p>{{ $t("contact.weekdays") }}</p>
-            <p>{{ $t("contact.weekend") }}</p>
+            <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
+            <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
         </div>
       </Cluster>
@@ -47,6 +50,9 @@ export default {
 </script>
 
 <style lang="scss">
+#contact {
+  // height: 85vh;
+}
 .contact {
   max-width: 110ch;
   h2,
@@ -69,7 +75,7 @@ export default {
   }
 }
 .info {
-  width: 30ch;
+  width: 25ch;
   a {
     text-decoration: none;
   }
@@ -82,6 +88,18 @@ export default {
     color: color(dark);
     font-size: 1rem;
     font-weight: 300;
+  }
+  #hidden-title {
+    display: none;
+    @include respond-to('large') {
+      display: block;
+      visibility: hidden;
+    }
+  }
+  .hours {
+    display: flex;
+    justify-content: space-between;
+    width: 25ch;
   }
 }
 
