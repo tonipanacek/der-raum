@@ -13,6 +13,10 @@ export default {
     }
   },
   computed: {
+    allPagesView() {
+      if (isEmpty(this.pages)) { return [] }
+      return this.pages
+    },
     pagesChunks() {
       if (isEmpty(this.pages)) { return [] }
       const getChunks = (pages) => {
@@ -80,6 +84,7 @@ export default {
     },
     handleScroll(event) {
       this.throttledHandlePageTransition(event.wheelDelta)
+      return event
     },
     handlePageTransition(change) {
       if (change < -1 * this.changeThreshold) {

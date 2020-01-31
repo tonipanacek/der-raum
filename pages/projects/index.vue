@@ -15,7 +15,7 @@
       class="section"
       id="mobile-view"
       v-if="isChunky"
-      :projects="currentChunk"
+      :projects="allPagesView"
       :goingUp="goingUp"
       />
     </Container>
@@ -88,7 +88,7 @@ export default {
   }
 }
 #mobile-view {
-  display: none;
+  display: block;
 }
 @include respond-to('large') {
   #mobile-view {

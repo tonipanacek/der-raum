@@ -18,6 +18,6 @@ de_description: 'CBRE // Fotos: Andrea Dingeldein'
 en_description: 'CBRE // Photos: Andrea Dingeldein'
 orientation: portrait
 page: '1'
-page_position: first
+page_position: 2
 
 ---
