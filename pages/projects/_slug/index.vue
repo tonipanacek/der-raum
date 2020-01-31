@@ -9,14 +9,14 @@
         <h1 class="accessible">{{ $tp("title") }}</h1>
         <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
         <div v-if="isChunky" class="images section">
-    <!--       <ImagesList
+          <ImagesList
           id="desktop-view"
           :images="currentImages"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
           :slug="slug"
           :going-up="goingUp"
-          /> -->
+          />
           <ImagesList
           id="mobile-view"
           :images="currentImages"

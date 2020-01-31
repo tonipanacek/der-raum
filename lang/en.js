@@ -23,7 +23,9 @@ export default {
     tel: "030 393753 00",
     email: "sayhello@derraum-de",
     openingTitle: "Opening Hours",
-    weekdays: "Mo-Fr: 10:00-18:00",
-    weekend: "Sa: 11:00-17:00"
+    weekdays: "Mo-Fr:",
+    weekdayHours: "10:00-18:00",
+    weekend: "Sa:",
+    weekendHours: "11:00-17:00"
   }
 }

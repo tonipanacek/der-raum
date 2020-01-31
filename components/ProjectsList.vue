@@ -1,6 +1,6 @@
 <template>
   <div class="projects-list">
-<!--     <transition-group
+    <!-- <transition-group
     name="insert"
     mode="out-in"
     tag="div"
@@ -27,7 +27,7 @@
         </h3>
       </NuxtLink>
     </div>
-<!--     </transition-group> -->
+    <!-- </transition-group> -->
   </div>
 </template>
 
@@ -67,6 +67,7 @@ export default {
 
 .projects-grid {
   @include respond-to(large) {
+    overflow: hidden;
     display: grid;
     grid-gap: spacing(md);
     grid-template-columns: 3fr 2fr;
