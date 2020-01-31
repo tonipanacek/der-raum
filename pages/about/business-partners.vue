@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import json from "~/content/data/business_partners.json"
 import Cluster from '~/components/Cluster'
 
@@ -18,6 +19,33 @@ export default {
   businessPartners: json["partners"],
   components: {
     Cluster
+  },
+  async asyncData() {
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context("~/content/about/", true, /\.md$/)
+    const pages = allPages.keys().map(key => {
+      // give back the value of each about context
+      return allPages(key)
+    })
+    return {
+      pages: [
+        ...pages,
+        {
+          attributes: {
+            title: 'Business Partners',
+            en_title: 'Business Partners',
+            de_title: 'Geschäftspartner'
+          }
+        }
+      ]
+    }
+  },
+  mounted() {
+    this.setPages(this.$data.pages)
+    this.setPagesPrefix("about")
+  },
+  methods: {
+    ...mapActions(['setPages', 'setPagesPrefix'])
   }
 }
 </script>
