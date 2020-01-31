@@ -19,6 +19,10 @@ export default {
 <style lang="scss">
 .progress-bar {
   --width: #{spacing(xs) / 2};
+  display: none;
+  @include respond-to(large) {
+    display: block;
+  }
   position: fixed;
   top: 50vh;
   right: spacing(lg);
