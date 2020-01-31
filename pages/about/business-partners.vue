@@ -18,6 +18,30 @@ export default {
   businessPartners: json["partners"],
   components: {
     Cluster
+  },
+  async asyncData() {
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context("~/content/about/", true, /\.md$/)
+    const pages = allPages.keys().map(key => {
+      // give back the value of each about context
+      return allPages(key)
+    })
+    return {
+      pages: [
+        ...pages,
+        {
+          attributes: {
+            title: 'Business Partners',
+            en_title: 'Business Partners',
+            de_title: 'Geschäfst'
+          }
+        }
+      ]
+    }
+  },
+  mounted() {
+    this.setPages(this.$data.pages)
+    this.setPagesPrefix("about")
   }
 }
 </script>
