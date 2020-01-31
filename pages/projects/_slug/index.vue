@@ -2,14 +2,23 @@
   <div
   id="projects"
   class="projects"
-  v-on:wheel.prevent="handleScroll"
   >
+  <!-- v-on:wheel.prevent="handleScroll" -->
     <Container>
       <article class="project">
         <h1 class="accessible">{{ $tp("title") }}</h1>
         <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
         <div v-if="isChunky" class="images section">
+    <!--       <ImagesList
+          id="desktop-view"
+          :images="currentImages"
+          :title="$tp('title')"
+          :totalCount="$tp('images').length"
+          :slug="slug"
+          :going-up="goingUp"
+          /> -->
           <ImagesList
+          id="mobile-view"
           :images="currentImages"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
@@ -17,6 +26,8 @@
           :going-up="goingUp"
           />
         </div>
+      <div v-else class="images section">
+      </div>
       </article>
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
     </Container>
@@ -82,6 +93,15 @@ export default {
         }
       })
     },
+    currentImages() {
+      if (isEmpty(this.currentChunk)) { return [] }
+      return this.images.map((url) => {
+        return {
+          index: this.images.indexOf(url) + 1,
+          url
+        }
+      })
+    },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
       return this.$data.pages
@@ -130,5 +150,19 @@ export default {
 .accessible {
   visibility: hidden;
   position: absolute;
+}
+#mobile-view {
+  display: block;
+}
+#desktop-view {
+  display: none;
+}
+@include respond-to('large') {
+  #mobile-view {
+    display: none;
+  }
+  #desktop-view {
+    display: block;
+  }
 }
 </style>
