@@ -14,7 +14,7 @@ export default {
    */
   ...routerBase,
   head: {
-    title: "Der Raum",
+    title: "DER RAUM",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
