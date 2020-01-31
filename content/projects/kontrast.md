@@ -17,7 +17,7 @@ de_title: Kontrast
 en_description: 'Design: DER RAUM // Photos: Michel Sass'
 de_description: 'Design: DER RAUM // Fotos: Michel Sass'
 orientation: landscape
-page: 1
+page: '4'
 page_position: second
 
 ---
