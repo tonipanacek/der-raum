@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import json from "~/content/data/business_partners.json"
 import Cluster from '~/components/Cluster'
 
@@ -33,7 +34,7 @@ export default {
           attributes: {
             title: 'Business Partners',
             en_title: 'Business Partners',
-            de_title: 'Geschäfst'
+            de_title: 'Geschäftspartner'
           }
         }
       ]
@@ -42,6 +43,9 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("about")
+  },
+  methods: {
+    ...mapActions(['setPages', 'setPagesPrefix'])
   }
 }
 </script>
