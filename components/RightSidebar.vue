@@ -62,7 +62,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     display: flex;
     justify-content: space-between;
     flex-direction: initial;
-    margin: 0;
+    margin: spacing(sm) 0;
     p {
       @include smallCaps;
       font-size: 1em;
@@ -87,7 +87,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   align-items: center;
   justify-content: space-around;
   max-width: none;
-  margin: spacing(sm) 0;
+  margin: spacing(md) 0;
   @include respond-to('large') {
     display: none;
   }
