@@ -14,7 +14,7 @@ export default {
       return allPages(key)
     })
     return {
-      pages
+      pages: [...pages, { attributes: { title: 'Business Partners', en_title: 'Business Partners', de_title: 'Partners' } }]
     }
   },
   mounted() {

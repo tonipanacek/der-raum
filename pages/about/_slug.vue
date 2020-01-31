@@ -46,9 +46,18 @@ export default {
       })
 
       return {
-        page,
+        pages: [
+          ...pages,
+          {
+            attributes: {
+              title: 'Business Partners',
+              en_title: 'Business Partners',
+              de_title: 'Geschäftspartner'
+            }
+          }
+        ],
         slug,
-        pages
+        page
       }
     } catch (err) {
       console.debug(err)
