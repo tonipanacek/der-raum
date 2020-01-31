@@ -177,9 +177,15 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 .projects-link-grid {
   display: none;
   width: 100%;
-  // justify-content: center;
+  justify-content: center;
   justify-self: end;
   align-self: end;
+  a {
+    &:hover {
+      color: black;
+      border: 1px solid black;
+    }
+  }
 }
 
 .projects-link-non-grid {
