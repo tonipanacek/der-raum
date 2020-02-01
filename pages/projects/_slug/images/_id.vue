@@ -184,12 +184,12 @@ p {
   }
 }
 .nav {
-  display: block;
+  // display: block;
   height: 1rem;
 }
-// .image-nav {
-//   margin-right: spacing(md);
-// }
+.image-nav {
+  margin-right: spacing(md);
+}
 .previous-btn {
   -webkit-transform:rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -202,8 +202,8 @@ p {
     display: block;
     left: 20rem;
   }
-  // .image-nav {
-  //   margin-right: 0;
-  // }
+  .image-nav {
+    margin-right: 0;
+  }
 }
 </style>
