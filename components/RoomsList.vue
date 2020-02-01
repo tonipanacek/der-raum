@@ -109,6 +109,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   font-weight: 500;
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
+  padding-left: 2em;
+  @include respond-to('large') {
+    padding: 0;
+  }
 }
 
 .room-link {
@@ -123,7 +127,9 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   &:nth-child(4) {
     pointer-events: none;
     h3 {
-      opacity: 0;
+      @include respond-to('large') {
+        opacity: 0;
+      }
     }
   }
 }
