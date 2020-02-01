@@ -1,16 +1,16 @@
 <template>
-  <div
-  id="projects"
-  class="projects"
-  >
-    <Container>
+  <Container>
+    <div
+    id="projects"
+    class="projects"
+    v-on:wheel.prevent="handleScroll"
+    >
       <ProjectsList
       class="section"
       id="desktop-view"
       v-if="isChunky"
       :projects="currentChunk"
       :goingUp="goingUp"
-      v-on:wheel.prevent="handleScroll"
       />
       <ProjectsList
       class="section"
@@ -19,9 +19,9 @@
       :projects="allPagesView"
       :goingUp="goingUp"
       />
-    </Container>
+    </div>
     <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
-  </div>
+  </Container>
 </template>
 
 <script>

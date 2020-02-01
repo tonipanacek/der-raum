@@ -1,11 +1,12 @@
 <template>
   <div class="rooms-list">
-    <transition-group
+    <!-- <transition-group
     name="insert"
     mode="out-in"
     tag="div"
     :class="{ 'rooms-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-    >
+    > -->
+    <div class="rooms-grid">
       <NuxtLink
       :id="$ta(room.attributes, 'title')"
       v-for="room in rooms"
@@ -25,7 +26,8 @@
           {{ $ta(room.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    </transition-group>
+    </div>
+    <!-- </transition-group> -->
   </div>
 </template>
 
@@ -58,28 +60,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$main-height: calc(100vh - 2 * #{spacing(lg)});
 .rooms-list, .rooms-list > *, .rooms-list > * > * {
-  height: 100%;
-  max-width: 80ch;
+  height: $main-height;
+  // max-width: 80ch;
 }
 
-.rooms-grid {
-  @include respond-to(large) {
+// grid layout for big screens
+@include respond-to('large') {
+  .rooms-grid {
+    position: sticky;
+    max-width: 110ch;
+    max-height: $main-height;
     display: grid;
-    grid-gap: spacing(md);
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-flow: row dense;
-    justify-content: space-between;
-    max-width: 90ch;
-    margin: 0 auto;
-    & > * {
-      width: 100%;
+    grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
+    grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .room-link:nth-child(1) { grid-area: 1 / 2 / 3 / 4; }
+  .room-link:nth-child(2) {
+    grid-area: 1 / 5 / 3 / 6;
+    .frame {
       height: 100%;
-      justify-self: center;
+      img {
+        align-self: start;
+        justify-self: start;
+      }
     }
-    & > :nth-child(4) {
-      transform: translateY(25%);
+  }
+  .room-link:nth-child(3) { grid-area: 4 / 1 / 7 / 3; }
+  .room-link:nth-child(4) {
+    grid-area: 5 / 5 / 7 / 6;
+    .frame {
+      height: 100%;
+      img {
+        align-self: start;
+        justify-self: start;
+      }
     }
   }
 }
@@ -88,7 +106,8 @@ export default {
   @include smallCaps;
   color: color(light);
   font-weight: 500;
-  transition: color 500ms;
+  transition: opacity 750ms ease, color 500ms ease;
+  margin-top: -25px;
 }
 
 .room-link {
@@ -101,13 +120,12 @@ export default {
     max-width: 100%;
     max-height: calc(100% - #{spacing(sm) * 2});
   }
-  h3 {
-    transition: opacity 750ms ease, color 500ms ease;
-  }
   &:nth-child(4) {
     pointer-events: none;
     h3 {
-      opacity: 0;
+      @include respond-to('large') {
+        opacity: 0;
+      }
     }
   }
 }

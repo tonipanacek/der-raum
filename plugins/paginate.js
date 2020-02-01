@@ -39,9 +39,9 @@ export default {
             if (get(this.page, 'attributes.orientation') === 'landscape' && index === 0) {
               return [c[0], c[1], c[2], nextPortrait].filter(c => c)
             } else if (c.length === this.max - 1) {
-              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
             } else {
-              return [c[1], c[0], nextPortrait].filter(c => c)
+              return [c[0], c[1], nextPortrait].filter(c => c)
             }
           })
         }

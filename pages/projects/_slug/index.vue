@@ -1,10 +1,10 @@
 <template>
-  <div
-  id="projects"
-  class="projects"
-  >
-  <!-- v-on:wheel.prevent="handleScroll" -->
-    <Container>
+  <Container>
+    <div
+    id="project-images"
+    class="project-images"
+    v-on:wheel.prevent="handleScroll"
+    >
       <article class="project">
         <h1 class="accessible">{{ $tp("title") }}</h1>
         <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
@@ -17,6 +17,20 @@
           :slug="slug"
           :going-up="goingUp"
           />
+        </div>
+      <div v-else class="images section">
+      </div>
+      </article>
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
+    </div>
+    <div
+    id="project-images"
+    class="project-images"
+    >
+      <article class="project">
+        <h1 class="accessible">{{ $tp("title") }}</h1>
+        <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
+        <div v-if="isChunky" class="images section">
           <ImagesList
           id="mobile-view"
           :images="currentImages"
@@ -29,9 +43,9 @@
       <div v-else class="images section">
       </div>
       </article>
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
-    </Container>
+      <!-- <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" /> -->
   </div>
+  </Container>
 </template>
 
 <script>
@@ -86,25 +100,27 @@ export default {
   computed: {
     currentImages() {
       if (isEmpty(this.currentChunk)) { return [] }
-      return this.currentChunk.map((url) => {
+      const mappedImages = this.images.map((url) => {
         return {
           index: this.images.indexOf(url) + 1,
           url
         }
       })
-    },
-    currentImages() {
-      if (isEmpty(this.currentChunk)) { return [] }
-      return this.images.map((url) => {
-        return {
-          index: this.images.indexOf(url) + 1,
-          url
-        }
-      })
+    return mappedImages.slice(0,4)
     },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
       return this.$data.pages
+    },
+    chunkedImages() {
+      if (isEmpty(this.$data.allPages)) { return [] }
+      const mappedImages = this.images.map((url) => {
+        return {
+          index: this.images.indexOf(url) + 1,
+          url
+        }
+      })
+      return mappedImages
     },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }
@@ -153,6 +169,7 @@ export default {
 }
 #mobile-view {
   display: block;
+  overflow: visible;
 }
 #desktop-view {
   display: none;

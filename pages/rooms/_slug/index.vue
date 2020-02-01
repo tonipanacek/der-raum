@@ -17,6 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
+import { get, sortBy } from "lodash"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -44,7 +45,7 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
-
+      pages = sortBy(pages, page => get(page, 'attributes.position'))
       return {
         page,
         slug,
