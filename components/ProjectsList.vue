@@ -122,9 +122,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   &:hover > .project-title {
     color: color(dark);
   }
-  img {
-    max-width: 100%;
-  }
   h3 {
     transition: opacity 750ms ease, color 500ms ease;
   }

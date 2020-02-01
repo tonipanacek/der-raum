@@ -14,6 +14,7 @@
           :images="currentImages"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
+          :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
           />
@@ -100,27 +101,17 @@ export default {
   computed: {
     currentImages() {
       if (isEmpty(this.currentChunk)) { return [] }
-      const mappedImages = this.images.map((url) => {
+      const mappedImages = this.currentChunk.map((url) => {
         return {
-          index: this.images.indexOf(url) + 1,
+          index: this.currentChunk.indexOf(url) + 1,
           url
         }
       })
-    return mappedImages.slice(0,4)
+    return mappedImages
     },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
       return this.$data.pages
-    },
-    chunkedImages() {
-      if (isEmpty(this.$data.allPages)) { return [] }
-      const mappedImages = this.images.map((url) => {
-        return {
-          index: this.images.indexOf(url) + 1,
-          url
-        }
-      })
-      return mappedImages
     },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }

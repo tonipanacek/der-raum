@@ -1,12 +1,12 @@
 <template>
   <div class="images-list">
-      <transition-group
+      <!-- <transition-group
       name="insert"
       mode="out-in"
       tag="div"
       :class="{ 'images-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-      >
-      <!-- <div class="images-grid"> -->
+      > -->
+      <div class="images-grid">
         <NuxtLink
         :id="title"
         v-for="image in images"
@@ -21,11 +21,11 @@
             <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           </Frame>
           <h3 class="image-title">
-            {{ title }} {{ image.index }} / {{ totalCount }}
+            {{ title }} {{ image.index + (page * 4) }} / {{ totalCount }}
           </h3>
         </NuxtLink>
-      <!-- </div> -->
-      </transition-group>
+      </div>
+      <!-- </transition-group> -->
   </div>
 </template>
 
@@ -54,6 +54,9 @@ export default {
       required: true
     },
     totalCount: {
+      type: Number
+    },
+    page: {
       type: Number
     },
     goingUp: Boolean
@@ -114,32 +117,12 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     }
   }
 }
-
-// .images-grid {
-//   @include respond-to(large) {
-//     display: grid;
-//     grid-gap: spacing(sm);
-//     justify-content: space-between;
-//     grid-template-columns: 3fr 2fr;
-//     grid-template-rows: 1fr 1fr;
-//     grid-auto-flow: row dense;
-//     & > * {
-//       width: 100%;
-//       height: 100%;
-//       justify-self: center;
-//     }
-//     & > :nth-child(4) {
-//       transform: translateY(25%);
-//     }
-//   }
-// }
-
 .image-title {
   @include smallCaps;
   color: color(light);
   font-weight: 500;
   transition: opacity 750ms ease, color 500ms ease;
-  margin-top: -25px;
+  margin-top: 0.5em;
 }
 
 .image-link {
@@ -148,12 +131,9 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   &:hover > .image-title {
     color: color(dark);
   }
-  img {
-    width: auto;
-    max-height: calc(100% - #{spacing(sm) * 2});
-  }
   &:nth-child(4) {
     pointer-events: none;
+
     h3 {
       @include respond-to('large') {
         opacity: 0;
