@@ -1,6 +1,6 @@
 <template>
   <div class="rooms-list">
-    <!-- <transition-group
+   <!--  <transition-group
     name="insert"
     mode="out-in"
     tag="div"
@@ -27,7 +27,7 @@
         </h3>
       </NuxtLink>
     </div>
-    <!-- </transition-group> -->
+    </transition-group>
   </div>
 </template>
 
@@ -121,9 +121,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   &:hover > .room-title {
     color: color(dark);
   }
-  img {
-    max-width: 100%;
-  }
   &:nth-child(4) {
     pointer-events: none;
     h3 {
@@ -151,7 +148,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 .insert-enter {
   opacity: 0;
   .going-up & {
-    margin-top: 50%;
+    margin-top: -50%;
   }
   .going-down & {
     margin-top: -50%;
@@ -163,7 +160,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     margin-top: -50%;
   }
   .going-down & {
-    margin-top: 50%;
+    margin-top: -50%;
   }
 }
 .insert-enter-active {

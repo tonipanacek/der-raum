@@ -14,6 +14,7 @@
           :images="currentImages"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
+          :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
           />
@@ -100,27 +101,17 @@ export default {
   computed: {
     currentImages() {
       if (isEmpty(this.currentChunk)) { return [] }
-      const mappedImages = this.images.map((url) => {
+      const mappedImages = this.currentChunk.map((url) => {
         return {
-          index: this.images.indexOf(url) + 1,
+          index: this.currentChunk.indexOf(url) + 1,
           url
         }
       })
-    return mappedImages.slice(0,4)
+    return mappedImages
     },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
       return this.$data.pages
-    },
-    chunkedImages() {
-      if (isEmpty(this.$data.allPages)) { return [] }
-      const mappedImages = this.images.map((url) => {
-        return {
-          index: this.images.indexOf(url) + 1,
-          url
-        }
-      })
-      return mappedImages
     },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }
@@ -131,9 +122,9 @@ export default {
         const chunkers = chunks.map((c, index) => {
           const nextPortrait = get(chunks, `[${index + 1}][0]`)
           if (c.length === this.max - 1) {
-            return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+            return [c[0], c[1], c[2], nextPortrait].filter(c => c)
           } else {
-            return [c[1], c[0], nextPortrait].filter(c => c)
+            return [c[0], c[1], nextPortrait].filter(c => c)
           }
         })
         return chunkers
