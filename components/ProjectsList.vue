@@ -72,8 +72,9 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   .projects-grid {
     position: sticky;
     max-width: 110ch;
-    max-height: $main-height;
+    height: $main-height;
     display: grid;
+    overflow: hidden;
     grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
     grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
     grid-column-gap: 0px;
@@ -108,7 +109,11 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   color: color(light);
   font-weight: 500;
   transition: color 500ms;
-  margin-top: -25px;
+  margin-top: 0.5em;
+  padding-left: 2em;
+  @include respond-to('large') {
+    padding: 0;
+  }
 }
 
 .project-link {
@@ -119,7 +124,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   }
   img {
     max-width: 100%;
-    max-height: calc(100% - #{spacing(sm) * 2});
   }
   h3 {
     transition: opacity 750ms ease, color 500ms ease;

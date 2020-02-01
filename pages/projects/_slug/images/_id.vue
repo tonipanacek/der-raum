@@ -9,6 +9,7 @@
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="close-btn" />
         </NuxtLink>
         <div class="image-container">
+          <PrevNextButtons :prev="prevLink" :next="nextLink" />
           <img :src="image" :alt="$tp('title')">
         </div>
         <div class="image-footer">
@@ -35,9 +36,12 @@ import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
+import PrevNextButtons from '~/components/PrevNextButtons'
+import prevNext from '~/plugins/prev_next'
 
 export default {
   name: 'projectsSlug',
+  mixins: [prevNext],
   async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file
     try {
@@ -125,7 +129,8 @@ export default {
   },
   components: {
     Container,
-    Article
+    Article,
+    PrevNextButtons
   }
 }
 </script>
@@ -172,14 +177,22 @@ p {
   }
 }
 .close-link {
-  position: fixed;
-  left: 20rem;
-  .close-btn {
-    height: 1rem;
-  }
+  display: none;
 }
-.image-nav {
+.nav {
+  display: none;
+}
+@include respond-to('large') {
+  .close-link {
+    display: block;
+    position: fixed;
+    left: 20rem;
+    .close-btn {
+      height: 1rem;
+    }
+  }
   .nav {
+    display: block;
     height: 1rem;
   }
   .previous-btn {
