@@ -74,18 +74,20 @@ a:visited {
 
 .main-container {
   flex: 2 1 auto;
-  position: sticky;
   overflow-x: hidden;
   overflow-y: visible;
   background: white;
   z-index: 2;
   max-width: 110ch;
   height: $main-height;
+  @include respond-to('large') {
+    position: sticky;
+    top: 0;
+  }
 }
 .left-sidebar {
   padding: 0 2em;
   width: 100%;
-  top: spacing(lg);
   align-self: flex-start;
   height: auto;
   text-align: right;
@@ -94,6 +96,7 @@ a:visited {
       width: 40ch;
       text-align: left;
       position: sticky;
+      top: 0;
       min-height: $main-height;
       padding: 0 $stack-space * 3;
   }

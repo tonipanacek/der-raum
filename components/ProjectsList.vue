@@ -1,12 +1,12 @@
 <template>
   <div class="projects-list">
-    <!-- <transition-group
+    <transition-group
     name="insert"
     mode="out-in"
     tag="div"
     :class="{ 'projects-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-    > -->
-    <div class="projects-grid">
+    >
+    <!-- <div class="projects-grid"> -->
       <NuxtLink
       :id="$ta(project.attributes, 'title')"
       v-for="project in projects"
@@ -26,8 +26,8 @@
           {{ $ta(project.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    </div>
-    <!-- </transition-group> -->
+    <!-- </div> -->
+    </transition-group>
   </div>
 </template>
 
@@ -176,6 +176,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 }
 .insert-move {
   transition: transform 750ms ease;
-  z-index: 100;
+  z-index: -100;
 }
 </style>
