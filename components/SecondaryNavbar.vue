@@ -25,7 +25,7 @@
 
 <script>
 import { mapState, mapGetters } from "vuex"
-import { get } from 'lodash'
+import { get, isEmpty } from 'lodash'
 import Stack from "~/components/Stack"
 
 export default {
@@ -38,6 +38,14 @@ export default {
     ...mapGetters(["sortedPages"])
   },
   methods: {
+    groupedPages() {
+      if (isEmpty(this.$data.pages)) { return [] }
+      if (sortedPages.length === 4) {
+        return sortedPages.slice(2)
+      } else {
+        return sortedPages
+      }
+    },
     path(page) {
       const slug = this.formatSlug(get(page, "attributes.title", ""))
       return this.localePath({

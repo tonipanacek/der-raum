@@ -85,7 +85,6 @@ a:visited {
 .left-sidebar {
   padding: 0 2em;
   width: 100%;
-  position: sticky;
   top: spacing(lg);
   align-self: flex-start;
   height: auto;

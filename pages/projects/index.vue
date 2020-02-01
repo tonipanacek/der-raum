@@ -1,7 +1,7 @@
 <template>
   <Container>
     <div
-    id="projects"
+    id="projects-desktop"
     class="projects"
     v-on:wheel.prevent="handleScroll"
     >
@@ -12,6 +12,12 @@
       :projects="currentChunk"
       :goingUp="goingUp"
       />
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
+    </div>
+    <div
+    id="projects-mobile"
+    class="projects"
+    >
       <ProjectsList
       class="section"
       id="mobile-view"
@@ -20,7 +26,6 @@
       :goingUp="goingUp"
       />
     </div>
-    <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
   </Container>
 </template>
 

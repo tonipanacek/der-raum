@@ -79,6 +79,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     max-width: 110ch;
     max-height: $main-height;
     display: grid;
+    overflow: hidden;
     grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
     grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
     grid-column-gap: 0px;

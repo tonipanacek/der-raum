@@ -45,11 +45,12 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
-      pages = sortBy(pages, page => get(page, 'attributes.position'))
+      const sortedPages = sortBy(pages, page => get(page, 'attributes.position'))
       return {
         page,
         slug,
-        pages
+        pages,
+        sortedPages
       }
     } catch (err) {
       console.debug(err)
@@ -57,7 +58,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.$data.pages)
+    this.setPages(this.$data.sortedPages)
     this.setPagesPrefix("rooms")
   },
   methods: {

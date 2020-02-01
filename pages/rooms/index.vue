@@ -40,7 +40,7 @@ export default {
   name: 'roomsIndex',
   mixins: [paginate],
   async asyncData() {
-    // create context via webpack to map over all blog pages
+    // create context via webpack to map over all room pages
     const allPages = await require.context(
       "~/content/rooms/",
       true,
