@@ -84,10 +84,8 @@ export default {
     },
     handleScroll(event) {
       if (event.wheelDelta) {
-        console.log(window.scrollY)
         this.throttledHandlePageTransition(event.wheelDelta)
       } else {
-        console.log(event.details)
         this.throttledHandlePageTransition(event.deltaY)
       }
       return event

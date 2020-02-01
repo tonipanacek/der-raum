@@ -12,6 +12,7 @@
           <ImagesList
           id="desktop-view"
           :images="currentImages"
+          :allImages="images"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
           :page="pageNumber"
@@ -19,8 +20,6 @@
           :going-up="goingUp"
           />
         </div>
-      <div v-else class="images section">
-      </div>
       </article>
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
     </div>
@@ -35,14 +34,14 @@
           <ImagesList
           id="mobile-view"
           :images="currentImages"
+          :allImages="images"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
+          :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
           />
         </div>
-      <div v-else class="images section">
-      </div>
       </article>
       <!-- <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" /> -->
   </div>
@@ -68,7 +67,6 @@ export default {
       const slug = params.slug
       const page = await import(`~/content/projects/${slug}.md`)
       const images = get(page, 'attributes.images', [])
-
       // create context via webpack to map over all pages
       let allPages = await require.context(
         "~/content/projects/",

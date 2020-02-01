@@ -11,7 +11,7 @@
         :id="title"
         v-for="image in images"
         :key="image.url"
-        :to="`/projects/${slug}/images/${image.index}`"
+        :to="`/projects/${slug}/images/${allImages.indexOf(image.url) + 1}`"
         class="image-link"
         >
           <Frame v-if="image.index % 2" :n="9" :d="16">
@@ -21,7 +21,7 @@
             <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           </Frame>
           <h3 class="image-title">
-            {{ title }} {{ image.index + (page * 4) }} / {{ totalCount }}
+            {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
           </h3>
         </NuxtLink>
       </div>
@@ -45,6 +45,10 @@ export default {
       type: Array,
       required: true
     },
+    allImages: {
+      type: Array,
+      required: true
+    },
     title: {
       type: String,
       required: true
@@ -64,6 +68,9 @@ export default {
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
+    },
+    getImageId(image) {
+      return this.$data.pages.indexOf(image) + 1
     }
   }
 }
