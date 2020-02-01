@@ -61,28 +61,44 @@ export default {
 
 <style lang="scss" scoped>
 .projects-list, .projects-list > *, .projects-list > * > * {
-  height: 100%;
-  max-width: 80ch;
+  // height: 100%;
+  // max-width: 80ch;
 }
 
-.projects-grid {
-  @include respond-to(large) {
-    overflow: hidden;
+
+$main-height: calc(100vh - 2 * #{spacing(lg)});
+// grid layout for big screens
+@include respond-to('large') {
+  .projects-grid {
+    position: sticky;
+    max-width: 110ch;
+    max-height: $main-height;
     display: grid;
-    grid-gap: spacing(md);
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-flow: row dense;
-    justify-content: space-between;
-    max-width: 90ch;
-    margin: 0 auto;
-    & > * {
-      width: 100%;
+    grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
+    grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .project-link:nth-child(1) { grid-area: 1 / 2 / 3 / 4; }
+  .project-link:nth-child(2) {
+    grid-area: 1 / 5 / 3 / 6;
+    .frame {
       height: 100%;
-      justify-self: center;
+      img {
+        align-self: start;
+        justify-self: start;
+      }
     }
-    & > :nth-child(4) {
-      transform: translateY(25%);
+  }
+  .project-link:nth-child(3) { grid-area: 4 / 1 / 7 / 3; }
+  .project-link:nth-child(4) {
+    grid-area: 5 / 5 / 7 / 6;
+    .frame {
+      height: 100%;
+      img {
+        align-self: start;
+        justify-self: start;
+      }
     }
   }
 }
@@ -92,6 +108,7 @@ export default {
   color: color(light);
   font-weight: 500;
   transition: color 500ms;
+  margin-top: -25px;
 }
 
 .project-link {
@@ -110,7 +127,9 @@ export default {
   &:nth-child(4) {
     pointer-events: none;
     h3 {
-      opacity: 0;
+      @include respond-to('large') {
+        opacity: 0;
+      }
     }
   }
 }
@@ -128,36 +147,6 @@ export default {
   opacity: .3;
 }
 
-// Transition
-// .insert-enter {
-//   opacity: 0;
-//   .going-up & {
-//     margin-top: 50%;
-//   }
-//   .going-down & {
-//     margin-top: -50%;
-//   }
-// }
-// .insert-leave-to {
-//   opacity: 0;
-//   .going-up & {
-//     margin-top: -50%;
-//   }
-//   .going-down & {
-//     margin-top: 50%;
-//   }
-// }
-// .insert-enter-active {
-//   transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
-// }
-// .insert-leave-active {
-//   position: absolute;
-//   transition: opacity 750ms ease, margin 750ms ease;
-// }
-// .insert-move {
-//   transition: transform 750ms ease;
-//   z-index: 100;
-// }
 // Transition
 .insert-enter {
   opacity: 0;

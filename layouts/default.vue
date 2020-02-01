@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$main-height: calc(100vh - 2 * #{spacing(lg)});
 .layout {
   padding: spacing(lg) 0;
   display: flex;
@@ -53,6 +54,7 @@ export default {
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
+    height: $main-height;
   }
 }
 a,
@@ -70,7 +72,6 @@ a:visited {
   }
 }
 
-$main-height: calc(100vh - 2 * #{spacing(lg)});
 .main-container {
   flex: 2 1 auto;
   position: sticky;
@@ -78,8 +79,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   overflow-y: visible;
   background: white;
   z-index: 2;
-  // margin-left: auto;
-  // margin-right: auto;
   max-width: 110ch;
   height: $main-height;
 }

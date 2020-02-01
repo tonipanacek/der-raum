@@ -1,24 +1,30 @@
 <template>
-  <div id="business-partners">
-    <Cluster class="md">
-      <div class="box-wrapper">
-        <ul>
-          <li v-for="data in $options.businessPartners">{{data}}</li>
-        </ul>
-      </div>
-    </Cluster>
-  </div>
+  <Container id="business-partners">
+    <Article>
+      <Cluster class="md">
+        <div class="box-wrapper">
+          <ul>
+            <li v-for="data in $options.businessPartners">{{data}}</li>
+          </ul>
+        </div>
+      </Cluster>
+    </Article>
+  </Container>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 import json from "~/content/data/business_partners.json"
 import Cluster from '~/components/Cluster'
+import Container from '~/components/Container'
+import Article from '~/components/Article'
 
 export default {
   businessPartners: json["partners"],
   components: {
-    Cluster
+    Cluster,
+    Container,
+    Article
   },
   async asyncData() {
     // create context via webpack to map over all blog pages

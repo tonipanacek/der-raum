@@ -2,8 +2,8 @@
 title: An der Spree
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/010-Bueroausbau-Kueche-Tische-Stuhle-schwarz-lackiert_upcpcz.jpg
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/010-Bueroausbau-Kueche-Tische-Stuhle-schwarz-lackiert_upcpcz.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/011-Bueroausbau-Sprecherbox-schwarz-lackiert_mcd1jb.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/010-Bueroausbau-Kueche-Tische-Stuhle-schwarz-lackiert_upcpcz.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779092/030-Bueroausbau-Sprecherbox-gelb-lackiert_vhiznw.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/020-Bueroausbau-Teekueche-Bar-schwarz-lackiert_vyz47m.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/050-Bueroausbau-Regale-Office_vus1lm.jpg
