@@ -25,9 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-#left-social {
-  width: 5rem;
-}
 svg.social-item {
   width: .8rem;
   height: auto;
