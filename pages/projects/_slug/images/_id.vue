@@ -9,7 +9,6 @@
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="close-btn" />
         </NuxtLink>
         <div class="image-container">
-          <PrevNextButtons :prev="prevLink" :next="nextLink" />
           <img :src="image" :alt="$tp('title')">
         </div>
         <div class="image-footer">
@@ -178,29 +177,33 @@ p {
 }
 .close-link {
   display: none;
+  position: fixed;
+  left: 1rem;
+  .close-btn {
+    height: 1rem;
+  }
 }
 .nav {
-  display: none;
+  display: block;
+  height: 1rem;
+}
+// .image-nav {
+//   margin-right: spacing(md);
+// }
+.previous-btn {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 @include respond-to('large') {
   .close-link {
     display: block;
-    position: fixed;
     left: 20rem;
-    .close-btn {
-      height: 1rem;
-    }
   }
-  .nav {
-    display: block;
-    height: 1rem;
-  }
-  .previous-btn {
-    -webkit-transform:rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
+  // .image-nav {
+  //   margin-right: 0;
+  // }
 }
 </style>

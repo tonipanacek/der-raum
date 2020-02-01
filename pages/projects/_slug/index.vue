@@ -122,9 +122,9 @@ export default {
         const chunkers = chunks.map((c, index) => {
           const nextPortrait = get(chunks, `[${index + 1}][0]`)
           if (c.length === this.max - 1) {
-            return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+            return [c[0], c[1], c[2], nextPortrait].filter(c => c)
           } else {
-            return [c[1], c[0], nextPortrait].filter(c => c)
+            return [c[0], c[1], nextPortrait].filter(c => c)
           }
         })
         return chunkers
