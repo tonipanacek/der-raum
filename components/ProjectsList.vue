@@ -151,21 +151,21 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 // Transition
 .insert-enter {
   opacity: 0;
-  .going-up & {
-    margin-top: 50%;
-  }
-  .going-down & {
-    margin-top: -50%;
-  }
+  // .going-up & {
+  //   margin-top: 50%;
+  // }
+  // .going-down & {
+  //   margin-top: -50%;
+  // }
 }
 .insert-leave-to {
   opacity: 0;
-  .going-up & {
-    margin-top: -50%;
-  }
-  .going-down & {
-    margin-top: 50%;
-  }
+  // .going-up & {
+  //   margin-top: -50%;
+  // }
+  // .going-down & {
+  //   margin-top: 50%;
+  // }
 }
 .insert-enter-active {
   transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
