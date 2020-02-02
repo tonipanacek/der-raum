@@ -54,7 +54,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
-    height: $main-height;
   }
 }
 a,
@@ -106,8 +105,10 @@ a:visited {
   // position: sticky;
   flex: 0 1 5ch;
   align-self: flex-start;
-  height: auto;
-  @include respond-to('large') { position: sticky; }
+  @include respond-to('large') {
+    position: sticky;
+    top: 0;
+  }
   .right-stack{
     min-height: $main-height;
     display: flex;

@@ -14,8 +14,8 @@ export default {
 .article {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 2 * #{spacing(lg)});
   max-width: 110ch;
+  min-height: calc(100vh - 2 * #{spacing(lg)});
   align-items: space-between;
   .image-container {
     flex-grow: 2;
@@ -38,7 +38,6 @@ export default {
     h1 {
       @include smallCaps;
       color: color(dark);
-      font-size: 1rem;
       font-weight: 300;
     }
     ul {
@@ -47,7 +46,7 @@ export default {
     p, ul > li {
       line-height: 2rem;
       color: color(light);
-      font-size: .85em;
+      font-size: .8em;
     }
     strong {
       color: color(dark);

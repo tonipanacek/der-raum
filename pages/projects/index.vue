@@ -85,12 +85,9 @@ export default {
   flex-direction: column;
   &, & article, & .container, & .section {
     display: block;
-    min-height: 100%;
-    height: 100%;
+    // min-height: 100%;
+    // height: 100%;
     max-width: none;
-  }
-  .section {
-    min-height: 100%;
   }
 }
 #mobile-view {

@@ -1,12 +1,6 @@
 <template>
   <div class="projects-list">
-    <transition-group
-    name="insert"
-    mode="out-in"
-    tag="div"
-    :class="{ 'projects-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-    >
-    <!-- <div class="projects-grid"> -->
+    <div id="projects-grid">
       <NuxtLink
       :id="$ta(project.attributes, 'title')"
       v-for="project in projects"
@@ -26,8 +20,7 @@
           {{ $ta(project.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    <!-- </div> -->
-    </transition-group>
+    </div>
   </div>
 </template>
 
@@ -66,10 +59,10 @@ export default {
 }
 
 
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - #{spacing(lg)});
 // grid layout for big screens
 @include respond-to('large') {
-  .projects-grid {
+  #projects-grid {
     position: sticky;
     max-width: 110ch;
     height: $main-height;
@@ -148,34 +141,4 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   opacity: .3;
 }
 
-// Transition
-.insert-enter {
-  opacity: 0;
-  // .going-up & {
-  //   margin-top: 50%;
-  // }
-  // .going-down & {
-  //   margin-top: -50%;
-  // }
-}
-.insert-leave-to {
-  opacity: 0;
-  // .going-up & {
-  //   margin-top: -50%;
-  // }
-  // .going-down & {
-  //   margin-top: 50%;
-  // }
-}
-.insert-enter-active {
-  transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
-}
-.insert-leave-active {
-  position: absolute;
-  transition: opacity 750ms ease, margin 750ms ease;
-}
-.insert-move {
-  transition: transform 750ms ease;
-  z-index: -100;
-}
 </style>

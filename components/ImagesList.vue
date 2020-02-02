@@ -81,7 +81,7 @@ export default {
 //   height: 100%;
 // }
 
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - #{spacing(lg)});
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {

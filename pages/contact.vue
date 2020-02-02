@@ -9,21 +9,23 @@
       <Cluster>
         <div class="text">
           <div class="info">
-            <h1>{{ $t("contact.name") }}</h1>
-            <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=der%20raum">
+            <h1>{{ $t("contact.firstTitle") }}</h1>
+            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-item">
               <p>{{ $t("contact.streetNumber") }}</p>
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
           </div>
           <div class="info">
-            <h3 id="hidden-title">{{ $t("contact.name") }}</h3>
-            <a href="tel:03039375300">
+            <h1 id="hidden-title">{{ $t("contact.firstTitle") }}</h1>
+            <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
             </a>
-            <p>{{ $t("contact.email") }}</p>
+            <a href="mailto:sayhello@derraum.de" class="contact-item">
+              <p>{{ $t("contact.email") }}</p>
+            </a>
           </div>
           <div class="info">
-            <h3>{{ $t("contact.openingTitle") }}</h3>
+            <h1>{{ $t("contact.secondTitle") }}</h1>
             <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
             <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
@@ -50,13 +52,9 @@ export default {
 </script>
 
 <style lang="scss">
-#contact {
-  // height: 85vh;
-}
 .contact {
   max-width: 110ch;
-  h2,
-  h3 {
+  h2{
     @include smallCaps;
     color: color(dark);
   }
@@ -76,18 +74,17 @@ export default {
 }
 .info {
   width: 25ch;
-  a {
+  .contact-item {
     text-decoration: none;
+    &:hover {
+      p{
+        color: color(dark);
+      }
+    }
   }
   p {
     line-height: 1rem;
     margin: 0;
-  }
-  h3 {
-    @include smallCaps;
-    color: color(dark);
-    font-size: 1rem;
-    font-weight: 300;
   }
   #hidden-title {
     display: none;
@@ -103,10 +100,10 @@ export default {
   }
 }
 
-$main-height: calc(100vh - 3 * #{spacing(lg)});
-@include respond-to(large) {
-  #contact {
-    height: $main-height;
-  }
-}
+// $main-height: calc(100vh - #{spacing(lg)});
+// @include respond-to(large) {
+//   #contact {
+//     height: $main-height;
+//   }
+// }
 </style>
