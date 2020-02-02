@@ -182,8 +182,8 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   align-self: end;
   a {
     &:hover {
-      color: black;
-      border: 1px solid black;
+      color: color(dark);
+      border: 1px solid color(dark);
     }
   }
 }
