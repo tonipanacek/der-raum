@@ -1,7 +1,7 @@
 export default {
   navbar: {
     projects: "Projekte",
-    services: "Leistung",
+    services: "Leistungen",
     about: "Über",
     contact: "Kontakt",
     rooms: "Räume"
