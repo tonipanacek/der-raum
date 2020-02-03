@@ -5,7 +5,7 @@
       :id="title"
       v-for="image in images"
       :key="image.url"
-      :to="`/projects/${slug}/images/${allImages.indexOf(image.url) + 1}`"
+      :to="path(image)"
       class="image-link"
       >
         <Frame v-if="image.index % 2" :n="9" :d="16">
@@ -62,6 +62,16 @@ export default {
     },
     getImageId(image) {
       return this.$data.pages.indexOf(image) + 1
+    },
+    path(image) {
+      if (!image.index) { return '' }
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        params: {
+          slug: this.slug,
+          id: image.index
+        }
+      })
     }
   }
 }

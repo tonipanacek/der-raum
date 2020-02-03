@@ -13,7 +13,7 @@
         </div>
         <div class="image-footer">
           <aside class="caption">
-            <h1>{{ $tp('title') }} {{ id }} / {{ images.length }}</h1>
+            <h1>{{ $tp('title') }} {{ id }} / {{ length }}</h1>
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
@@ -23,6 +23,7 @@
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
+            <div class="no-next" v-if="!nextImageLink"></div>
           </nav>
         </div>
       </Article>
@@ -52,27 +53,15 @@ export default {
       const image = images[id - 1]
 
       // create context via webpack to map over all pages
-      let pages = await require.context(
+      let allPages = await require.context(
         "~/content/projects/",
         true,
         /\.md$/
       )
-      pages = pages.keys().map(key => {
+      allPages = allPages.keys().map(key => {
         // give back the value of each page context
-        return pages(key)
+        return allPages(key)
       })
-      pages = sortBy(pages, page => page.position)
-
-      let chunks = chunk(pages, 4 - 1)
-      chunks = chunks.map((chunk, index) => {
-        const nextChunk = chunks[index + 1] || []
-        return [...chunk, nextChunk[0]].filter(c => c)
-      })
-      pages = chunks.find(chunk =>
-        chunk.find(chunkyPage =>
-          isEqual(chunkyPage.attributes, page.attributes)
-        )
-      )
 
       if (!image) {
         throw "No image found!"
@@ -81,10 +70,10 @@ export default {
       return {
         image,
         images,
-        pages,
+        pages: images,
+        allPages,
         page,
         slug,
-        chunks,
         id
       }
     } catch (err) {
@@ -93,7 +82,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.$data.pages)
+    this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
   },
@@ -115,15 +104,49 @@ export default {
   },
   computed: {
     nextImageLink() {
-      if (this.id >= this.$data.images.length) { return '' }
-      return `/projects/${this.$data.slug}/images/${this.$data.id + 1}`
+      if (!this.length) { return '' }
+      if (this.id >= this.length) { return '' }
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        params: {
+          slug: this.$data.slug,
+          id: this.$data.id + 1
+        }
+      })
     },
     previousImageLink() {
+      if (!this.length) { return '' }
       if (this.id <= 1) { return '' }
-      return `/projects/${this.$data.slug}/images/${this.$data.id - 1}`
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        params: {
+          slug: this.$data.slug,
+          id: this.$data.id - 1
+        }
+      })
     },
     closeLink() {
-      return `/projects/${this.$data.slug}/`
+      return this.localePath({
+        name: 'projects-slug',
+        params: {
+          slug: this.$data.slug
+        }
+      })
+    },
+    allPagesChunks() {
+      if (isEmpty(this.$data.allPages)) { return [] }
+      const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+      const chunks = chunk(allPages, 3)
+      return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
+    },
+    allPagesCurrentChunk() {
+      if (isEmpty(this.allPagesChunks)) { return [] }
+      const chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+      return chunk.slice(0, 3)
+    },
+    length() {
+      if (isEmpty(this.$data.pages)) { return 0 }
+      return this.$data.pages.length
     }
   },
   components: {
@@ -144,7 +167,8 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  max-height: calc(100vh - 2 * #{spacing(frame)});;
+  max-height: calc(100vh - 2 * #{spacing(frame)});
+  width: 100%;
 }
 img {
   height: 80vh;
@@ -162,6 +186,7 @@ p {
 .image-footer {
   display: flex;
   align-items: flex-start;
+  width: 100%;
   .caption {
     flex-grow: 2;
     padding: spacing(md);
@@ -175,8 +200,9 @@ p {
 }
 .close-link {
   display: none;
-  position: fixed;
-  left: 1rem;
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
   .close-btn {
     height: .8em;
   }
@@ -203,10 +229,13 @@ p {
 @include respond-to('large') {
   .close-link {
     display: block;
-    left: 18em;
   }
   .image-nav {
     margin-right: 0;
   }
+}
+.no-next {
+  height: 1rem;
+  width: 2.25rem;
 }
 </style>

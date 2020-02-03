@@ -5,7 +5,7 @@
       :id="$ta(project.attributes, 'title')"
       v-for="project in projects"
       :key="getTitle(project.attributes)"
-      :to="`/projects/${formatSlug(project.attributes.title)}`"
+      :to="path(project)"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true }"
       @mouseover.native="handleHover(project)"
       @mouseleave.native="handleBlur"
@@ -43,6 +43,15 @@ export default {
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
+    },
+    path(page) {
+      const slug = this.formatSlug(get(page, "attributes.title", ""))
+      return this.localePath({
+        name: "projects-slug",
+        params: {
+          slug
+        }
+      })
     },
     handleHover(project) {
       this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))

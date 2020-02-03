@@ -5,7 +5,7 @@
       :id="$ta(room.attributes, 'title')"
       v-for="room in rooms"
       :key="getTitle(room.attributes)"
-      :to="`/rooms/${formatSlug(room.attributes.title)}`"
+      :to="path(room)"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true }"
       @mouseover.native="handleHover(room)"
       @mouseleave.native="handleBlur"
@@ -41,6 +41,15 @@ export default {
     goingUp: Boolean
   },
   methods: {
+    path(page) {
+      const slug = this.formatSlug(get(page, "attributes.title", ""))
+      return this.localePath({
+        name: "rooms-slug",
+        params: {
+          slug
+        }
+      })
+    },
     getTitle(attrs) {
       return get(attrs, 'title', '')
     },

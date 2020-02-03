@@ -51,6 +51,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   flex-direction: column;
   max-width: 180ch;
+  width: 100vw;
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
@@ -73,9 +74,10 @@ a:visited {
 
 .main-container {
   flex: 2 1 auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   overflow-y: visible;
   background: white;
+  position: relative;
   // z-index: 2;
   // max-width: 110ch;
 }
