@@ -17,6 +17,18 @@ export default {
   max-width: 110ch;
   min-height: calc(100vh - 2 * #{spacing(frame)});
   align-items: space-between;
+  &.project {
+    .image-container {
+      img {
+        object-fit: contain;
+        @include respond-to("large") {
+        object-position: left top;
+        object-fit: cover;
+        height: 100%;
+        }
+      }
+    }
+  }
   .image-container {
     flex-grow: 2;
     margin-bottom: spacing(frame);

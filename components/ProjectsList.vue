@@ -105,12 +105,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projects-list, .projects-list > *, .projects-list > * > * {
-  // height: 100%;
-  // max-width: 80ch;
-}
-
-
 $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
@@ -126,7 +120,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .project-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;
-    align-self: stretch;
   }
   .project-link:nth-child(2) {
     grid-area: 1 / 5 / 4 / 6;
@@ -140,6 +133,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .project-link:nth-child(3) {
     grid-area: 4 / 1 / 7 / 3;
+    align-self: end;
   }
   .project-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;

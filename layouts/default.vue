@@ -98,14 +98,13 @@ a:visited {
   }
 }
 .right-sidebar {
-  height: auto;
   @include respond-to('large') {
     position: sticky;
     top: spacing(frame);
     flex: 0 1 5ch;
   }
   .right-stack{
-    min-height: $main-height;
+    height: $main-height;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
