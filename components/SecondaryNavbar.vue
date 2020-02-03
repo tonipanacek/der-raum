@@ -20,6 +20,8 @@
             'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
           }"
           :to="path(page)"
+          @mouseover.native="handleHover($ta(page.attributes, 'title'))"
+          @mouseleave.native="handleBlur"
         >
           {{ $ta(page.attributes, "title") }}
         </nuxt-link>
@@ -29,7 +31,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex"
+import { mapState, mapGetters, mapActions } from "vuex"
 import { get, isEmpty } from 'lodash'
 import Stack from "~/components/Stack"
 
@@ -81,7 +83,14 @@ export default {
       setTimeout(() => {
         done()
       }, 1000)
-    }
+    },
+    handleHover(title) {
+      this.setHoveredMenuItem(title)
+    },
+    handleBlur() {
+      this.unsetHoveredMenuItem()
+    },
+    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   }
 }
 </script>

@@ -6,7 +6,7 @@
       v-for="project in projects"
       :key="getTitle(project.attributes)"
       :to="`/projects/${formatSlug(project.attributes.title)}`"
-      :class="{ 'active': hover && hover === project.attributes.title, hover: hover, 'project-link': true }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true }"
       @mouseover.native="handleHover(project)"
       @mouseleave.native="handleBlur"
       >
@@ -25,18 +25,13 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash'
 import Frame from '~/components/Frame'
 export default {
   name: "ProjectsList",
   components: {
     Frame
-  },
-  data() {
-    return {
-      hover: ''
-    }
   },
   props: {
     projects: {
@@ -50,14 +45,18 @@ export default {
       return get(attrs, 'title', '')
     },
     handleHover(project) {
-      this.hover = project.attributes.title
       this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
     },
     handleBlur() {
-      this.hover = ''
       this.unsetHoveredMenuItem()
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
+  },
+  destroyed() {
+    this.unsetHoveredMenuItem()
+  },
+  computed: {
+    ...mapState(['hoveredMenuItem'])
   }
 }
 </script>

@@ -6,7 +6,7 @@
       v-for="room in rooms"
       :key="getTitle(room.attributes)"
       :to="`/rooms/${formatSlug(room.attributes.title)}`"
-      :class="{ 'active': hover && hover === room.attributes.title, hover: hover, 'room-link': true }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true }"
       @mouseover.native="handleHover(room)"
       @mouseleave.native="handleBlur"
       >
@@ -25,18 +25,13 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash';
 import Frame from '~/components/Frame'
 export default {
   name: "RoomsList",
   components: {
     Frame
-  },
-  data() {
-    return {
-      hover: ''
-    }
   },
   props: {
     rooms: {
@@ -58,6 +53,12 @@ export default {
       this.unsetHoveredMenuItem()
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
+  },
+  destroyed() {
+    this.unsetHoveredMenuItem()
+  },
+  computed: {
+    ...mapState(['hoveredMenuItem'])
   }
 }
 </script>
