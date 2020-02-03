@@ -1,12 +1,21 @@
 <template>
   <div class="images-list">
-    <div class="images-grid">
+    <transition-group
+      name="insert"
+      tag="div"
+      class="images-grid"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
       <NuxtLink
       :id="title"
-      v-for="image in images"
+      v-for="(image, index) in images"
       :key="image.url"
       :to="path(image)"
       class="image-link"
+      :data-index="index"
+      :data-total="images.length"
       >
         <Frame v-if="image.index % 2" :n="9" :d="16">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
@@ -18,7 +27,7 @@
           {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
         </h3>
       </NuxtLink>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -62,6 +71,31 @@ export default {
     },
     getImageId(image) {
       return this.$data.pages.indexOf(image) + 1
+    },
+    beforeEnter: function(el) {
+      el.style.opacity = 0
+      if (this.goingUp) {
+        el.style.transform = "translateY(25%)"
+      } else {
+        el.style.transform = "translateY(-25%)"
+      }
+      el.style.transition = "opacity 250ms ease, transform 250ms ease"
+    },
+    enter: function(el, done) {
+      setTimeout(() => {
+        let delay = parseInt(el.dataset.index) * 250
+        if (this.goingUp) {
+          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 250
+        }
+        setTimeout(() => {
+          el.style.opacity = 1
+          el.style.transform = "translateY(0)"
+        }, delay)
+        done()
+      }, 500)
+    },
+    leave: function(el, done) {
+      done()
     },
     path(image) {
       if (!image.index) { return '' }
