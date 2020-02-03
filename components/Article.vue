@@ -21,9 +21,12 @@ export default {
     flex-grow: 2;
     margin-bottom: spacing(frame);
     img {
-      object-fit: contain;
-      object-position: left top;
+      object-fit: cover;
       max-width: 100%;
+      @respond-to("large") {
+        object-position: left top;
+        object-fit: contain;
+      }
     }
   }
   img,
