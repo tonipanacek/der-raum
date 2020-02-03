@@ -106,6 +106,12 @@ export default {
     transition: opacity 0.3s ease-in-out;
   }
 }
+.service-link {
+  transition: opacity 0.3s ease-in-out;
+  h3 {
+    transition: color 0.3s ease-in-out;
+  }
+}
 .hover:not(.active) {
   opacity: .8;
   h3 {
