@@ -99,11 +99,4 @@ export default {
     width: 25ch;
   }
 }
-
-// $main-height: calc(100vh - #{spacing(lg)});
-// @include respond-to(large) {
-//   #contact {
-//     height: $main-height;
-//   }
-// }
 </style>

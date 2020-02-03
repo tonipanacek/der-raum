@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - 2 * #{spacing(frame)});
 .right-sidebar {
   a,
   a:hover,
@@ -73,9 +73,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   .right-sidebar {
     width: 7rem;
     position: relative;
+    height: $main-height;
     .right-stack {
       margin-top: 0;
-      min-height: $main-height;
+      height: $main-height;
       flex-direction: column;
       p {
         writing-mode: vertical-lr;
@@ -88,7 +89,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   align-items: center;
   justify-content: space-around;
   max-width: none;
-  margin: spacing(md) 0;
+  margin: spacing(frame) 0;
   @include respond-to('large') {
     display: none;
   }

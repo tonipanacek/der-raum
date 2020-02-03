@@ -59,11 +59,10 @@ export default {
 }
 
 
-$main-height: calc(100vh - #{spacing(lg)});
+$main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   #projects-grid {
-    position: sticky;
     max-width: 110ch;
     height: $main-height;
     display: grid;
@@ -73,9 +72,11 @@ $main-height: calc(100vh - #{spacing(lg)});
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
-  .project-link:nth-child(1) { grid-area: 1 / 2 / 3 / 4; }
+  .project-link:nth-child(1) {
+    grid-area: 1 / 2 / 3 / 4;
+  }
   .project-link:nth-child(2) {
-    grid-area: 1 / 5 / 3 / 6;
+    grid-area: 1 / 5 / 4 / 6;
     .frame {
       height: 100%;
       img {
@@ -84,7 +85,10 @@ $main-height: calc(100vh - #{spacing(lg)});
       }
     }
   }
-  .project-link:nth-child(3) { grid-area: 4 / 1 / 7 / 3; }
+  .project-link:nth-child(3) {
+    grid-area: 4 / 1 / 7 / 3;
+    align-self: end;
+  }
   .project-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
     .frame {

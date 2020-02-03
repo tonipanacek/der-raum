@@ -15,11 +15,11 @@ export default {
   display: flex;
   flex-direction: column;
   max-width: 110ch;
-  min-height: calc(100vh - 2 * #{spacing(lg)});
+  min-height: calc(100vh - 2 * #{spacing(frame)});
   align-items: space-between;
   .image-container {
     flex-grow: 2;
-    margin-bottom: spacing(md);
+    margin-bottom: spacing(frame);
   }
   img,
   & > * {
@@ -31,7 +31,7 @@ export default {
     width: 110ch;
   }
   .text {
-    padding: spacing(md);
+    padding: spacing(frame);
     @include respond-to(large) {
       padding: 0;
     }

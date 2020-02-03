@@ -1,43 +1,34 @@
 <template>
   <div class="images-list">
-      <!-- <transition-group
-      name="insert"
-      mode="out-in"
-      tag="div"
-      :class="{ 'images-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-      > -->
-      <div class="images-grid">
-        <NuxtLink
-        :id="title"
-        v-for="image in images"
-        :key="image.url"
-        :to="`/projects/${slug}/images/${allImages.indexOf(image.url) + 1}`"
-        class="image-link"
-        >
-          <Frame v-if="image.index % 2" :n="9" :d="16">
-            <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
-          </Frame>
-          <Frame v-else :n="4" :d="3">
-            <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
-          </Frame>
-          <h3 class="image-title">
-            {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
-          </h3>
-        </NuxtLink>
-      </div>
-      <!-- </transition-group> -->
+    <div class="images-grid">
+      <NuxtLink
+      :id="title"
+      v-for="image in images"
+      :key="image.url"
+      :to="`/projects/${slug}/images/${allImages.indexOf(image.url) + 1}`"
+      class="image-link"
+      >
+        <Frame v-if="image.index % 2" :n="9" :d="16">
+          <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+        </Frame>
+        <Frame v-else :n="4" :d="3">
+          <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+        </Frame>
+        <h3 class="image-title">
+          {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+        </h3>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
 <script>
 import { get } from 'lodash';
-import Cluster from '~/components/Cluster'
 import Frame from '~/components/Frame'
 
 export default {
   name: "imagesList",
   components: {
-    Cluster,
     Frame
   },
   props: {
@@ -81,7 +72,7 @@ export default {
 //   height: 100%;
 // }
 
-$main-height: calc(100vh - #{spacing(lg)});
+$main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
@@ -147,36 +138,5 @@ $main-height: calc(100vh - #{spacing(lg)});
       }
     }
   }
-}
-
-// Transition
-.insert-enter {
-  opacity: 0;
-  .going-up & {
-    margin-top: 50%;
-  }
-  .going-down & {
-    margin-top: -50%;
-  }
-}
-.insert-leave-to {
-  opacity: 0;
-  .going-up & {
-    margin-top: -50%;
-  }
-  .going-down & {
-    margin-top: 50%;
-  }
-}
-.insert-enter-active {
-  transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
-}
-.insert-leave-active {
-  position: absolute;
-  transition: opacity 750ms ease, margin 750ms ease;
-}
-.insert-move {
-  transition: transform 750ms ease;
-  z-index: 100;
 }
 </style>

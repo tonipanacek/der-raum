@@ -57,15 +57,15 @@ export default {
 </script>
 <style lang="scss">
 #business-partners {
-  height: calc(100vh - 2 * #{spacing(lg)});
+  height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
   .box-wrapper {
     height: 100%;
     width: 100%;
-    margin: spacing(sm);
+    margin: spacing(frame);
   }
   ul {
-    margin-left: spacing(md);
+    margin-left: spacing(frame);
     @include respond-to('large') {
       margin: none;
       columns: 20ch 2;
@@ -84,7 +84,7 @@ export default {
     li {
       font-size: .85em;
       display: block;
-      color: color(dark);
+      color: color(light);
       padding-bottom: spacing(xs);
     }
   }

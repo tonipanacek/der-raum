@@ -1,11 +1,5 @@
 <template>
   <div class="rooms-list">
-   <!--  <transition-group
-    name="insert"
-    mode="out-in"
-    tag="div"
-    :class="{ 'rooms-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-    > -->
     <div class="rooms-grid">
       <NuxtLink
       :id="$ta(room.attributes, 'title')"
@@ -27,7 +21,6 @@
         </h3>
       </NuxtLink>
     </div>
-    </transition-group>
   </div>
 </template>
 
@@ -60,12 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.rooms-list, .rooms-list > *, .rooms-list > * > * {
-  // height: 100%;
-  // max-width: 80ch;
-}
-
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .rooms-grid {
@@ -81,7 +69,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   }
   .room-link:nth-child(1) { grid-area: 1 / 2 / 3 / 4; }
   .room-link:nth-child(2) {
-    grid-area: 1 / 5 / 3 / 6;
+    grid-area: 1 / 5 / 4 / 6;
     .frame {
       height: 100%;
       img {
@@ -145,36 +133,5 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   h3 {
     color: color(light);
   }
-}
-
-// Transition
-.insert-enter {
-  opacity: 0;
-  .going-up & {
-    margin-top: -50%;
-  }
-  .going-down & {
-    margin-top: -50%;
-  }
-}
-.insert-leave-to {
-  opacity: 0;
-  .going-up & {
-    margin-top: -50%;
-  }
-  .going-down & {
-    margin-top: -50%;
-  }
-}
-.insert-enter-active {
-  transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
-}
-.insert-leave-active {
-  position: absolute;
-  transition: opacity 750ms ease, margin 750ms ease;
-}
-.insert-move {
-  transition: transform 750ms ease;
-  z-index: 100;
 }
 </style>

@@ -147,7 +147,7 @@ export default {
 }
 img {
   width: auto;
-  max-height: calc(100vh - 4 * #{spacing(lg)});
+  max-height: calc(100vh - 4 * #{spacing(frame)});
 }
 * {
   max-width: none;

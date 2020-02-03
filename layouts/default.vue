@@ -45,9 +45,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
-  padding-top: spacing(lg);
+  padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
   max-width: 180ch;
@@ -78,10 +78,6 @@ a:visited {
   background: white;
   z-index: 2;
   max-width: 110ch;
-  @include respond-to('large') {
-    position: sticky;
-    top: 0;
-  }
 }
 .left-sidebar {
   padding: 0 2em;
@@ -91,10 +87,10 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      width: 40ch;
+      width: 35ch;
       text-align: left;
       position: sticky;
-      top: spacing(lg);
+      top: spacing(frame);
       min-height: $main-height;
       padding: 0 2em;
   }
@@ -105,7 +101,7 @@ a:visited {
   align-self: flex-start;
   @include respond-to('large') {
     position: sticky;
-    top: spacing(lg);
+    top: spacing(frame);
   }
   .right-stack{
     min-height: $main-height;
