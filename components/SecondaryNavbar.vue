@@ -9,7 +9,7 @@
     >
       <li
         v-for="(page, index) in sortedPages"
-        :key="$ta(page.attributes, 'title')"
+        :key="$ta(page.attributes, 'title') + $i18n.locale"
         :data-index="index"
       >
         <nuxt-link
@@ -69,11 +69,8 @@ export default {
     },
     enter: function(el, done) {
       setTimeout(() => {
-        const delay = parseInt(el.dataset.index) * 250
-        setTimeout(() => {
-          el.style.opacity = 1
-          el.style.transform = "translateY(0)"
-        }, delay)
+        el.style.opacity = 1
+        el.style.transform = "translateY(0)"
         done()
       }, 500)
     },
@@ -114,8 +111,8 @@ export default {
   }
 }
 .insert-move {
-  transition: transform 250ms ease;
-  z-index: 100;
+  // transition: transform 250ms ease;
+  // z-index: 100;
 }
 .insert-leave-active {
   // position: absolute;
