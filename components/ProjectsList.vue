@@ -1,14 +1,23 @@
 <template>
   <div class="projects-list">
-    <div id="projects-grid">
+    <transition-group
+      name="insert"
+      tag="div"
+      id="projects-grid"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
       <NuxtLink
       :id="$ta(project.attributes, 'title')"
-      v-for="project in projects"
+      v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
       :to="path(project)"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true }"
       @mouseover.native="handleHover(project)"
       @mouseleave.native="handleBlur"
+      :data-index="index"
+      :data-total="projects.length"
       >
         <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
@@ -20,7 +29,7 @@
           {{ $ta(project.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -52,6 +61,31 @@ export default {
           slug
         }
       })
+    },
+    beforeEnter: function(el) {
+      el.style.opacity = 0
+      if (this.goingUp) {
+        el.style.transform = "translateY(25%)"
+      } else {
+        el.style.transform = "translateY(-25%)"
+      }
+      el.style.transition = "opacity 250ms ease, transform 250ms ease"
+    },
+    enter: function(el, done) {
+      setTimeout(() => {
+        let delay = parseInt(el.dataset.index) * 250
+        if (this.goingUp) {
+          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 250
+        }
+        setTimeout(() => {
+          el.style.opacity = 1
+          el.style.transform = "translateY(0)"
+        }, delay)
+        done()
+      }, 500)
+    },
+    leave: function(el, done) {
+      done()
     },
     handleHover(project) {
       this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
@@ -166,5 +200,4 @@ $main-height: calc(100vh - #{spacing(frame)});
     color: color(light);
   }
 }
-
 </style>

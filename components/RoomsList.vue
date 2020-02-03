@@ -1,14 +1,23 @@
 <template>
   <div class="rooms-list">
-    <div class="rooms-grid">
+    <transition-group
+      name="insert"
+      tag="div"
+      class="rooms-grid"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
       <NuxtLink
       :id="$ta(room.attributes, 'title')"
-      v-for="room in rooms"
+      v-for="(room, index) in rooms"
       :key="getTitle(room.attributes)"
       :to="path(room)"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true }"
       @mouseover.native="handleHover(room)"
       @mouseleave.native="handleBlur"
+      :data-index="index"
+      :data-total="rooms.length"
       >
         <Frame v-if="room.attributes.orientation === 'portrait'" :n="4" :d="3">
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
@@ -20,7 +29,7 @@
           {{ $ta(room.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -60,6 +69,31 @@ export default {
     handleBlur() {
       this.hover = ''
       this.unsetHoveredMenuItem()
+    },
+    beforeEnter: function(el) {
+      el.style.opacity = 0
+      if (this.goingUp) {
+        el.style.transform = "translateY(25%)"
+      } else {
+        el.style.transform = "translateY(-25%)"
+      }
+      el.style.transition = "opacity 250ms ease, transform 250ms ease"
+    },
+    enter: function(el, done) {
+      setTimeout(() => {
+        let delay = parseInt(el.dataset.index) * 250
+        if (this.goingUp) {
+          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 250
+        }
+        setTimeout(() => {
+          el.style.opacity = 1
+          el.style.transform = "translateY(0)"
+        }, delay)
+        done()
+      }, 500)
+    },
+    leave: function(el, done) {
+      done()
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   },
