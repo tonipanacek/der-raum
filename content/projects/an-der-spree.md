@@ -10,7 +10,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/050-Bueroausbau-Regale-Office_vus1lm.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/060-Bueroausbau-Eingangsbereich-Treppe-Tische-Verkleidung_fkg0z7.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/040-Bueroausbau-Besprechungsraum-blau-lackiert_iznr8l.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/080-Bueroausbau-Besprechungsraum-Tisch_bapynj.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1580721653/050-Bueroausbau-Sprecherbox-Wegweiser_wvxgar.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1580721677/110-Bueroausbau-Ruheraum-Couch-Stuehle-Regal_axxprh.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/050-Bueroausbau-Telefonzelle-Studio_q0znqq.jpg
 de_title: An der Spree
 en_title: An der Spree
