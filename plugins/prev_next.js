@@ -16,11 +16,21 @@ export default {
     },
     nextLink() {
       if (isEmpty(this.nextPage)) { return '' }
-      return `/${this.$store.state.pagesPrefix}/${this.formatSlug(get(this.nextPage, 'attributes.title', ''))}`
+      return this.localePath({
+        name: `${this.$store.state.pagesPrefix}-slug`,
+        params: {
+          slug: this.formatSlug(get(this.nextPage, 'attributes.title', ''))
+        }
+      })
     },
     prevLink() {
       if (isEmpty(this.prevPage)) { return '' }
-      return `/${this.$store.state.pagesPrefix}/${this.formatSlug(get(this.prevPage, 'attributes.title', ''))}`
+      return this.localePath({
+        name: `${this.$store.state.pagesPrefix}-slug`,
+        params: {
+          slug: this.formatSlug(get(this.prevPage, 'attributes.title', ''))
+        }
+      })
     }
   }
 }

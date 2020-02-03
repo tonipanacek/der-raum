@@ -23,7 +23,7 @@ export default {
     position: relative;
     height: 100%;
     justify-content: center;
-    & > * {
+    & > *:not(.frame) {
       position: absolute;
       overflow: hidden;
       top: 0;
