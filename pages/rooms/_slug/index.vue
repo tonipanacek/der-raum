@@ -17,7 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
-import { get, sortBy } from "lodash"
+import { get, sortBy, isEmpty, chunk } from "lodash"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -40,17 +40,20 @@ export default {
       const page = await import(`~/content/rooms/${slug}.md`)
 
       // create context via webpack to map over all pages
-      const allPages = await require.context("~/content/rooms/", true, /\.md$/)
-      const pages = allPages.keys().map(key => {
+      let allPages = await require.context(
+        "~/content/rooms/",
+        true,
+        /\.md$/
+      )
+      allPages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
       })
-      const sortedPages = sortBy(pages, page => get(page, 'attributes.position'))
+
       return {
         page,
         slug,
-        pages,
-        sortedPages
+        allPages
       }
     } catch (err) {
       console.debug(err)
@@ -58,8 +61,22 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.$data.sortedPages)
+    this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("rooms")
+  },
+  computed: {
+    allPagesChunks() {
+      if (isEmpty(this.$data.allPages)) { return [] }
+      const allPages = sortBy(this.$data.allPages, p => get(p, 'attributes.position'))
+      return chunk(allPages, 3)
+    },
+    allPagesCurrentChunk() {
+      if (isEmpty(this.allPagesChunks)) { return [] }
+      const position = parseInt(get(this.$data.page, 'attributes.position', 1))
+      const pageNumber = Math.floor((position - 1) / 3)
+      const chunk = this.allPagesChunks[pageNumber] || []
+      return chunk.slice(0, 3)
+    },
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])

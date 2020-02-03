@@ -13,7 +13,7 @@
         </div>
         <div class="image-footer">
           <aside class="caption">
-            <h1>{{ $tp('title') }} {{ id }} / {{ images.length }}</h1>
+            <h1>{{ $tp('title') }} {{ id }} / {{ length }}</h1>
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
@@ -52,27 +52,15 @@ export default {
       const image = images[id - 1]
 
       // create context via webpack to map over all pages
-      let pages = await require.context(
+      let allPages = await require.context(
         "~/content/projects/",
         true,
         /\.md$/
       )
-      pages = pages.keys().map(key => {
+      allPages = allPages.keys().map(key => {
         // give back the value of each page context
-        return pages(key)
+        return allPages(key)
       })
-      pages = sortBy(pages, page => page.position)
-
-      let chunks = chunk(pages, 4 - 1)
-      chunks = chunks.map((chunk, index) => {
-        const nextChunk = chunks[index + 1] || []
-        return [...chunk, nextChunk[0]].filter(c => c)
-      })
-      pages = chunks.find(chunk =>
-        chunk.find(chunkyPage =>
-          isEqual(chunkyPage.attributes, page.attributes)
-        )
-      )
 
       if (!image) {
         throw "No image found!"
@@ -81,10 +69,10 @@ export default {
       return {
         image,
         images,
-        pages,
+        pages: images,
+        allPages,
         page,
         slug,
-        chunks,
         id
       }
     } catch (err) {
@@ -93,7 +81,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.$data.pages)
+    this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
   },
@@ -115,15 +103,44 @@ export default {
   },
   computed: {
     nextImageLink() {
-      if (this.id >= this.$data.images.length) { return '' }
-      return `/projects/${this.$data.slug}/images/${this.$data.id + 1}`
+      if (!this.length) { return '' }
+      if (this.id >= this.length) { return '' }
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        slug: this.$data.slug,
+        id: this.$data.id + 1
+      })
     },
     previousImageLink() {
+      if (!this.length) { return '' }
       if (this.id <= 1) { return '' }
-      return `/projects/${this.$data.slug}/images/${this.$data.id - 1}`
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        slug: this.$data.slug,
+        id: this.$data.id - 1
+      })
     },
     closeLink() {
       return `/projects/${this.$data.slug}/`
+      return this.localePath({
+        name: 'projects-slug',
+        slug: this.$data.slug
+      })
+    },
+    allPagesChunks() {
+      if (isEmpty(this.$data.allPages)) { return [] }
+      const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+      const chunks = chunk(allPages, 3)
+      return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
+    },
+    allPagesCurrentChunk() {
+      if (isEmpty(this.allPagesChunks)) { return [] }
+      const chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+      return chunk.slice(0, 3)
+    },
+    length() {
+      if (isEmpty(this.$data.pages)) { return 0 }
+      return this.$data.pages.length
     }
   },
   components: {

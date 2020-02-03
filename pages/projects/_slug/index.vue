@@ -112,35 +112,9 @@ export default {
     },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }
-      const getChunks = (pages) => {
-        if (isEmpty(pages)) { return [] }
-        const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
-        let chunks = chunk(allPages, 3)
-        let chunkers
-        if (this.$route.path.match(/^\/projects$/)) {
-          chunkers = chunks.map((c, index) => {
-            const nextPortrait = get(chunks, `[${index + 1}][0]`)
-            if (c.length === this.max - 1) {
-              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
-            } else {
-              return [c[1], c[0], nextPortrait].filter(c => c)
-            }
-          })
-        } else {
-          chunkers = chunks.map((c, index) => {
-            const nextPortrait = get(chunks, `[${index + 1}][0]`)
-            if (get(this.page, 'attributes.orientation') === 'landscape' && index === 0) {
-              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
-            } else if (c.length === this.max - 1) {
-              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
-            } else {
-              return [c[0], c[1], nextPortrait].filter(c => c)
-            }
-          })
-        }
-        return chunkers
-      }
-      return getChunks(this.$data.allPages)
+      const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+      const chunks = chunk(allPages, 3)
+      return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
     },
     allPagesCurrentChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
