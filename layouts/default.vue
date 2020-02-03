@@ -98,7 +98,7 @@ a:visited {
   }
 }
 .right-sidebar {
-  flex: 0 1 12ch;
+  height: auto;
   @include respond-to('large') {
     position: sticky;
     top: spacing(frame);

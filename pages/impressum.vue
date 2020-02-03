@@ -36,6 +36,8 @@
 </script>
 <style lang="scss">
   #legal {
+    padding: 0 2em;
+    max-width: 110ch;
     h1 {
       margin-top: 0;
       font-size: 1rem;
@@ -43,7 +45,11 @@
     .legal-contact {
       display: flex;
       flex-wrap: column;
-      justify-content: space-between
+      justify-content: space-between;
+      width: 80ch;
+    }
+    @include respond-to('large') {
+      padding: 0;
     }
   }
 </style>

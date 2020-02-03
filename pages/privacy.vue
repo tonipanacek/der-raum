@@ -43,9 +43,14 @@
 </template>
 <style lang="scss">
   #privacy {
+    padding: 0 2em;
+    max-width: 110ch;
     h1 {
       margin-top: 0;
       font-size: 1rem;
+    }
+    @include respond-to('large') {
+      padding: 0;
     }
   }
 </style>
