@@ -110,6 +110,10 @@ export default {
   transition: opacity 0.3s ease-in-out;
   h3 {
     transition: color 0.3s ease-in-out;
+    padding-left: 0.5em;
+    @include respond-to('large') {
+      padding: 0;
+    }
   }
 }
 .hover:not(.active) {
