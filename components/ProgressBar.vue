@@ -24,8 +24,8 @@ export default {
     display: block;
   }
   position: fixed;
-  top: 50vh;
-  right: spacing(lg);
+  top: 60vh;
+  right: 2.15rem;
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);

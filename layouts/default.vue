@@ -47,7 +47,7 @@ export default {
 <style scoped lang="scss">
 $main-height: calc(100vh - 2 * #{spacing(lg)});
 .layout {
-  padding: spacing(lg) 0;
+  padding-top: spacing(lg);
   display: flex;
   flex-direction: column;
   max-width: 180ch;
@@ -97,7 +97,7 @@ a:visited {
       position: sticky;
       top: 0;
       min-height: $main-height;
-      padding: 0 $stack-space * 3;
+      padding: 0 2em;
   }
 }
 .right-sidebar {
@@ -124,11 +124,10 @@ a:visited {
 
 #left-social {
   display: none;
-  width: 5rem;
+  width: 5em;
   @include respond-to('large') {
-    padding-left: 2em;
     display: block;
-    width: 7rem;
+    width: 5em;
   }
 }
 </style>

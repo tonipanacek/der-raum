@@ -76,6 +76,7 @@ export default {
 @include respond-to('large') {
   .list-wrapper {
     display: block;
+    padding-left: 0;
   }
 }
 
