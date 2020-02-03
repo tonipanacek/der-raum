@@ -98,6 +98,9 @@ export default {
       } else if (event.key.match(/(up|left)/i) && this.previousImageLink) {
         this.$router.push(this.previousImageLink)
         return false;
+      } else if (event.key.match(/esc/i) && this.closeLink) {
+        this.$router.push(this.closeLink)
+        return false
       }
     },
     ...mapActions(["setPages", "setPagesPrefix"])
