@@ -6,9 +6,9 @@
       v-for="project in projects"
       :key="getTitle(project.attributes)"
       :to="`/projects/${formatSlug(project.attributes.title)}`"
-      :class="{ 'active': hover && hover === project.attributes.title, hover: hover, 'project-link': true }"
-      @mouseover.native="hover = project.attributes.title"
-      @mouseleave.native="hover = ''"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true }"
+      @mouseover.native="handleHover(project)"
+      @mouseleave.native="handleBlur"
       >
         <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
@@ -25,17 +25,13 @@
 </template>
 
 <script>
-import { get } from 'lodash';
+import { mapActions, mapState } from 'vuex'
+import { get } from 'lodash'
 import Frame from '~/components/Frame'
 export default {
   name: "ProjectsList",
   components: {
     Frame
-  },
-  data() {
-    return {
-      hover: ''
-    }
   },
   props: {
     projects: {
@@ -47,7 +43,20 @@ export default {
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
-    }
+    },
+    handleHover(project) {
+      this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
+    },
+    handleBlur() {
+      this.unsetHoveredMenuItem()
+    },
+    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
+  },
+  destroyed() {
+    this.unsetHoveredMenuItem()
+  },
+  computed: {
+    ...mapState(['hoveredMenuItem'])
   }
 }
 </script>

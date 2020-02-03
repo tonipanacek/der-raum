@@ -6,9 +6,9 @@
       v-for="room in rooms"
       :key="getTitle(room.attributes)"
       :to="`/rooms/${formatSlug(room.attributes.title)}`"
-      :class="{ 'active': hover && hover === room.attributes.title, hover: hover, 'room-link': true }"
-      @mouseover.native="hover = room.attributes.title"
-      @mouseleave.native="hover = ''"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true }"
+      @mouseover.native="handleHover(room)"
+      @mouseleave.native="handleBlur"
       >
         <Frame v-if="room.attributes.orientation === 'portrait'" :n="4" :d="3">
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
@@ -25,17 +25,13 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash';
 import Frame from '~/components/Frame'
 export default {
   name: "RoomsList",
   components: {
     Frame
-  },
-  data() {
-    return {
-      hover: ''
-    }
   },
   props: {
     rooms: {
@@ -47,7 +43,22 @@ export default {
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
-    }
+    },
+    handleHover(room) {
+      this.hover = room.attributes.title
+      this.setHoveredMenuItem(this.$ta(room.attributes, 'title'))
+    },
+    handleBlur() {
+      this.hover = ''
+      this.unsetHoveredMenuItem()
+    },
+    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
+  },
+  destroyed() {
+    this.unsetHoveredMenuItem()
+  },
+  computed: {
+    ...mapState(['hoveredMenuItem'])
   }
 }
 </script>

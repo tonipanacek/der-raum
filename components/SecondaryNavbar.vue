@@ -9,12 +9,19 @@
     >
       <li
         v-for="(page, index) in sortedPages"
-        :key="page.attributes.title"
+        :key="$ta(page.attributes, 'title')"
         :data-index="index"
       >
         <nuxt-link
-          class="nav-item title"
+          :class="{
+            'nav-item': true,
+            'title': true,
+            'hover': hoveredMenuItem,
+            'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
+          }"
           :to="path(page)"
+          @mouseover.native="handleHover($ta(page.attributes, 'title'))"
+          @mouseleave.native="handleBlur"
         >
           {{ $ta(page.attributes, "title") }}
         </nuxt-link>
@@ -24,7 +31,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex"
+import { mapState, mapGetters, mapActions } from "vuex"
 import { get, isEmpty } from 'lodash'
 import Stack from "~/components/Stack"
 
@@ -34,7 +41,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
@@ -76,7 +83,14 @@ export default {
       setTimeout(() => {
         done()
       }, 1000)
-    }
+    },
+    handleHover(title) {
+      this.setHoveredMenuItem(title)
+    },
+    handleBlur() {
+      this.unsetHoveredMenuItem()
+    },
+    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   }
 }
 </script>
@@ -93,6 +107,9 @@ export default {
   }
   @include respond-to('large') {
     display: block;
+  }
+  .hovered {
+    color: color(black);
   }
 }
 .insert-move {
