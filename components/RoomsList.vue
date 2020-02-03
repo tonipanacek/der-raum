@@ -137,7 +137,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .room-link:nth-child(3) {
     grid-area: 4 / 1 / 7 / 3;
-    align-self: end;
   }
   .room-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
@@ -157,7 +156,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   font-weight: 500;
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
-  padding-left: 2em;
+  padding-left: 0.5em;
   @include respond-to('large') {
     padding: 0;
   }

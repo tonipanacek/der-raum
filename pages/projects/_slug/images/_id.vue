@@ -187,7 +187,7 @@ h1 {
 p {
   @include smallCaps;
   color: color(light);
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 .image-footer {
   display: flex;

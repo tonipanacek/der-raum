@@ -140,7 +140,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .project-link:nth-child(3) {
     grid-area: 4 / 1 / 7 / 3;
-    align-self: end;
   }
   .project-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
@@ -160,7 +159,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   font-weight: 500;
   transition: color 500ms;
   margin-top: 0.5em;
-  padding-left: 2em;
+  padding-left: 0.5em;
   @include respond-to('large') {
     padding: 0;
   }

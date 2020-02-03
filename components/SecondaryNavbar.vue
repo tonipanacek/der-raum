@@ -72,14 +72,14 @@ export default {
         el.style.opacity = 1
         el.style.transform = "translateY(0)"
         done()
-      }, 500)
+      }, 450)
     },
     leave: function(el, done) {
       el.style.opacity = 0
       el.style.transform = "translateY(50%)"
       setTimeout(() => {
         done()
-      }, 500)
+      }, 450)
     },
     handleHover(title) {
       this.setHoveredMenuItem(title)
