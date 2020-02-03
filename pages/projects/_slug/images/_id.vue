@@ -23,6 +23,7 @@
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
+            <div class="no-next" v-if="!nextImageLink"></div>
           </nav>
         </div>
       </Article>
@@ -125,7 +126,6 @@ export default {
       })
     },
     closeLink() {
-      return `/projects/${this.$data.slug}/`
       return this.localePath({
         name: 'projects-slug',
         params: {
@@ -198,8 +198,9 @@ p {
 }
 .close-link {
   display: none;
-  position: fixed;
-  left: 1rem;
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
   .close-btn {
     height: .8em;
   }
@@ -226,10 +227,13 @@ p {
 @include respond-to('large') {
   .close-link {
     display: block;
-    left: 18em;
   }
   .image-nav {
     margin-right: 0;
   }
+}
+.no-next {
+  height: 1rem;
+  width: 2.25rem;
 }
 </style>

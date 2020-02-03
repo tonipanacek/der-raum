@@ -24,9 +24,9 @@ export default {
   @include respond-to(large) {
     display: block;
   }
-  position: fixed;
+  position: absolute;
   top: 60vh;
-  right: 2.15rem;
+  right: -3rem;
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
