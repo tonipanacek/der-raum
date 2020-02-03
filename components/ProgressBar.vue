@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss">
 .progress-bar {
+  z-index: 5;
   --width: #{spacing(xs) / 2};
   display: none;
   @include respond-to(large) {

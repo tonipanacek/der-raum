@@ -76,8 +76,8 @@ a:visited {
   overflow-x: hidden;
   overflow-y: visible;
   background: white;
-  z-index: 2;
-  max-width: 110ch;
+  // z-index: 2;
+  // max-width: 110ch;
 }
 .left-sidebar {
   padding: 0 2em;
@@ -97,11 +97,11 @@ a:visited {
 }
 .right-sidebar {
   padding: 0 2em;
-  flex: 0 1 5ch;
-  align-self: flex-start;
+  flex: 0 1 10ch;
   @include respond-to('large') {
     position: sticky;
     top: spacing(frame);
+    flex: 0 1 5ch;
   }
   .right-stack{
     min-height: $main-height;
