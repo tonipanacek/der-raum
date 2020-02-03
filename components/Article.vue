@@ -27,7 +27,8 @@ export default {
   }
   img {
     object-fit: cover;
-    width: 110ch;
+    max-height: 80vh;
+    max-width: 110ch;
   }
   .text {
     padding: spacing(frame);

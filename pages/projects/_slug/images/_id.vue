@@ -147,7 +147,6 @@ export default {
   max-height: calc(100vh - 2 * #{spacing(frame)});;
 }
 img {
-  width: auto;
   height: 80vh;
 }
 
