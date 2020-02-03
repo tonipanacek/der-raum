@@ -46,7 +46,7 @@ export default {
     h1 {
       @include smallCaps;
       color: color(dark);
-      font-weight: 300;
+      font-weight: 600;
     }
     ul {
       list-style-type: square;
