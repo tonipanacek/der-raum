@@ -161,7 +161,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   border: 1px solid color(light);
   text-decoration: none;
   width: 100%;
-  height: 12ch;
+  height: 15ch;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -170,8 +170,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 .projects-link-grid {
   display: none;
   width: 100%;
-  justify-self: end;
-  align-self: end;
   a {
     &:hover {
       color: color(dark);
@@ -181,6 +179,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 }
 
 .projects-link-non-grid {
+  padding: 0.5em;
   margin-top: spacing(md);
 }
 
@@ -191,34 +190,31 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     max-width: 110ch;
     display: grid;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: 2.1fr .4fr repeat(2, .8fr) 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
 
   #Design.service-link {
-    grid-area: 1 / 2 / 3 / 4;
+    grid-area:  1 / 2 / 3 / 4;
     align-self: stretch;
   }
   #Production.service-link {
-    grid-area: 4 / 1 / 7 / 3;
-    align-self: end;
+    grid-area:  4 / 1 / 6 / 3;
+    align-self: center;
     h3 {
       margin-bottom: 0;
     }
   }
   #Planning.service-link {
-    grid-area: 1 / 5 / 4 / 6;
+    grid-area:  1 / 5 / 4 / 6;
+    align-self: stretch;
     .frame {
       height: 100%;
-      img {
-        align-self: start;
-        justify-self: start;
-      }
     }
   }
   .projects-link-grid {
-    grid-area: 5 / 5 / 7 / 6;
+    grid-area:  5 / 5 / 6 / 6;
   }
   .projects-link {
     padding: 0;

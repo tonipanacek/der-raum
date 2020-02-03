@@ -112,10 +112,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .images-list, .images-list > *, .images-list > * > * {
-//   height: 100%;
-// }
-
 $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
@@ -145,10 +141,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .image-link:nth-child(3) {
     grid-area: 4 / 1 / 7 / 3;
-    .frame {
-      height: 100%;
-      width: 100%;
-    }
+    align-self: end;
    }
   .image-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
