@@ -77,7 +77,6 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
-      allPages = sortBy(allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
 
       return {
         pages: images, // For paginate mixin, must be named as such :)
@@ -115,23 +114,38 @@ export default {
       if (isEmpty(this.$data.allPages)) { return [] }
       const getChunks = (pages) => {
         if (isEmpty(pages)) { return [] }
-        const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+        const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
         let chunks = chunk(allPages, 3)
-        const chunkers = chunks.map((c, index) => {
-          const nextPortrait = get(chunks, `[${index + 1}][0]`)
-          if (c.length === this.max - 1) {
-            return [c[0], c[1], c[2], nextPortrait].filter(c => c)
-          } else {
-            return [c[0], c[1], nextPortrait].filter(c => c)
-          }
-        })
+        let chunkers
+        if (this.$route.path.match(/^\/projects$/)) {
+          chunkers = chunks.map((c, index) => {
+            const nextPortrait = get(chunks, `[${index + 1}][0]`)
+            if (c.length === this.max - 1) {
+              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+            } else {
+              return [c[1], c[0], nextPortrait].filter(c => c)
+            }
+          })
+        } else {
+          chunkers = chunks.map((c, index) => {
+            const nextPortrait = get(chunks, `[${index + 1}][0]`)
+            if (get(this.page, 'attributes.orientation') === 'landscape' && index === 0) {
+              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
+            } else if (c.length === this.max - 1) {
+              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
+            } else {
+              return [c[0], c[1], nextPortrait].filter(c => c)
+            }
+          })
+        }
         return chunkers
       }
       return getChunks(this.$data.allPages)
     },
     allPagesCurrentChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
-      return this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+      const chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+      return chunk.slice(0, 3)
     },
   },
   components: {

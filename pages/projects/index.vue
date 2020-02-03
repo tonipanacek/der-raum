@@ -62,7 +62,7 @@ export default {
     ProgressBar
   },
   mounted() {
-    this.setPages(this.currentChunk)
+    this.setPages(this.currentChunk.slice(0, this.max - 1))
     this.setPagesPrefix("projects")
   },
   methods: {
@@ -73,7 +73,7 @@ export default {
   },
   watch: {
     currentChunk(chunk) {
-      this.setPages(chunk)
+      this.setPages(this.currentChunk.slice(0, this.max - 1))
     }
   }
 }
