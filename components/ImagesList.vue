@@ -103,7 +103,14 @@ $main-height: calc(100vh - #{spacing(frame)});
       }
     }
   }
-  .image-link:nth-child(3) { grid-area: 4 / 1 / 7 / 3; }
+  .image-link:nth-child(3) {
+    grid-area: 4 / 1 / 7 / 3;
+    align-self: end;
+    .frame {
+      height: 100%;
+      width: 100%;
+    }
+   }
   .image-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
     .frame {
