@@ -148,7 +148,7 @@ export default {
 }
 img {
   width: auto;
-  height: auto;
+  height: 80vh;
 }
 
 h1 {

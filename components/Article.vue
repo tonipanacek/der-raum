@@ -27,7 +27,6 @@ export default {
   }
   img {
     object-fit: cover;
-    max-height: 70vh;
     width: 110ch;
   }
   .text {
