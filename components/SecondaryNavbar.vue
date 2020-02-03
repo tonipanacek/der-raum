@@ -65,7 +65,7 @@ export default {
     beforeEnter: function(el) {
       el.style.opacity = 0
       el.style.transform = "translateY(-50%)"
-      el.style.transition = "opacity 500ms ease, transform 500ms ease"
+      el.style.transition = "opacity 250ms ease, transform 250ms ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
@@ -75,14 +75,14 @@ export default {
           el.style.transform = "translateY(0)"
         }, delay)
         done()
-      }, 1000)
+      }, 500)
     },
     leave: function(el, done) {
       el.style.opacity = 0
       el.style.transform = "translateY(50%)"
       setTimeout(() => {
         done()
-      }, 1000)
+      }, 500)
     },
     handleHover(title) {
       this.setHoveredMenuItem(title)
@@ -114,7 +114,7 @@ export default {
   }
 }
 .insert-move {
-  transition: transform 500ms ease;
+  transition: transform 250ms ease;
   z-index: 100;
 }
 .insert-leave-active {
