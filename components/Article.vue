@@ -20,6 +20,8 @@ export default {
   .image-container {
     flex-grow: 2;
     margin-bottom: spacing(frame);
+    position: relative;
+    height: 100%;
     img {
       object-fit: cover;
       max-width: 100%;

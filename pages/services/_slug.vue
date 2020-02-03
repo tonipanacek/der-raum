@@ -30,7 +30,8 @@ export default {
     Frame,
     Container,
     PrevNextButtons,
-    Article
+    Article,
+    PrevNextButtons
   },
   async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file
