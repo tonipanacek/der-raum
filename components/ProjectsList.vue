@@ -1,12 +1,6 @@
 <template>
   <div class="projects-list">
-    <transition-group
-    name="insert"
-    mode="out-in"
-    tag="div"
-    :class="{ 'projects-grid': true, 'going-up': goingUp, 'going-down': !goingUp }"
-    >
-    <!-- <div class="projects-grid"> -->
+    <div id="projects-grid">
       <NuxtLink
       :id="$ta(project.attributes, 'title')"
       v-for="project in projects"
@@ -26,8 +20,7 @@
           {{ $ta(project.attributes, 'title') }}
         </h3>
       </NuxtLink>
-    <!-- </div> -->
-    </transition-group>
+    </div>
   </div>
 </template>
 
@@ -66,11 +59,10 @@ export default {
 }
 
 
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
-  .projects-grid {
-    position: sticky;
+  #projects-grid {
     max-width: 110ch;
     height: $main-height;
     display: grid;
@@ -80,9 +72,11 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
-  .project-link:nth-child(1) { grid-area: 1 / 2 / 3 / 4; }
+  .project-link:nth-child(1) {
+    grid-area: 1 / 2 / 3 / 4;
+  }
   .project-link:nth-child(2) {
-    grid-area: 1 / 5 / 3 / 6;
+    grid-area: 1 / 5 / 4 / 6;
     .frame {
       height: 100%;
       img {
@@ -91,7 +85,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
       }
     }
   }
-  .project-link:nth-child(3) { grid-area: 4 / 1 / 7 / 3; }
+  .project-link:nth-child(3) {
+    grid-area: 4 / 1 / 7 / 3;
+    align-self: end;
+  }
   .project-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
     .frame {
@@ -145,37 +142,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   }
 }
 .hover:not(.active) {
-  opacity: .3;
+  opacity: .8;
+  h3 {
+    color: color(light);
+  }
 }
 
-// Transition
-.insert-enter {
-  opacity: 0;
-  .going-up & {
-    margin-top: 50%;
-  }
-  .going-down & {
-    margin-top: -50%;
-  }
-}
-.insert-leave-to {
-  opacity: 0;
-  .going-up & {
-    margin-top: -50%;
-  }
-  .going-down & {
-    margin-top: 50%;
-  }
-}
-.insert-enter-active {
-  transition: opacity 1000ms ease 750ms, margin 1000ms ease 750ms;
-}
-.insert-leave-active {
-  position: absolute;
-  transition: opacity 750ms ease, margin 750ms ease;
-}
-.insert-move {
-  transition: transform 750ms ease;
-  z-index: -100;
-}
 </style>

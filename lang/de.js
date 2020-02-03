@@ -1,7 +1,7 @@
 export default {
   navbar: {
     projects: "Projekte",
-    services: "Leistung",
+    services: "Leistungen",
     about: "Über",
     contact: "Kontakt",
     rooms: "Räume"
@@ -18,15 +18,15 @@ export default {
     title: "Impressum"
   },
   contact: {
-    name: "Der Raum",
+    firstTitle: "Planungstudio",
     streetNumber: "Dunckerstr. 15",
     cityZip: "10437 Berlin-Prenzlauer Berg",
     tel: "030 393753 00",
-    email: "sayhello@derraum-de",
-    openingTitle: "Öffnungszeiten",
+    email: "sayhello@derraum.de",
+    secondTitle: "Öffnungszeiten",
     weekdays: "Mo-Fr:",
     weekdayHours: "10:00-18:00",
-    weekend: "Sa:",
+    weekend: "Samstag:",
     weekendHours: "11:00-17:00"
   }
 }

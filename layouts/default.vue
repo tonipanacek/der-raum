@@ -45,16 +45,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$main-height: calc(100vh - 2 * #{spacing(lg)});
+$main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
-  padding: spacing(lg) 0;
+  padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
   max-width: 180ch;
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
-    height: $main-height;
   }
 }
 a,
@@ -77,13 +76,8 @@ a:visited {
   overflow-x: hidden;
   overflow-y: visible;
   background: white;
-  z-index: 2;
-  max-width: 110ch;
-  height: $main-height;
-  @include respond-to('large') {
-    position: sticky;
-    top: 0;
-  }
+  // z-index: 2;
+  // max-width: 110ch;
 }
 .left-sidebar {
   padding: 0 2em;
@@ -93,21 +87,22 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      width: 40ch;
+      width: 35ch;
       text-align: left;
       position: sticky;
-      top: 0;
+      top: spacing(frame);
       min-height: $main-height;
-      padding: 0 $stack-space * 3;
+      padding: 0 2em;
   }
 }
 .right-sidebar {
   padding: 0 2em;
-  // position: sticky;
-  flex: 0 1 5ch;
-  align-self: flex-start;
-  height: auto;
-  @include respond-to('large') { position: sticky; }
+  flex: 0 1 10ch;
+  @include respond-to('large') {
+    position: sticky;
+    top: spacing(frame);
+    flex: 0 1 5ch;
+  }
   .right-stack{
     min-height: $main-height;
     display: flex;
@@ -123,11 +118,10 @@ a:visited {
 
 #left-social {
   display: none;
-  width: 5rem;
+  width: 5em;
   @include respond-to('large') {
-    padding-left: 2em;
     display: block;
-    width: 7rem;
+    width: 5em;
   }
 }
 </style>

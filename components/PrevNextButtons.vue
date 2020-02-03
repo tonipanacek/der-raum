@@ -46,7 +46,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: spacing(xs);
+  padding: spacing(sm);
   background-color: rgba(255, 255, 255, 0.3);
   max-width: 3rem;
   transition: background-color 500ms ease, box-shadow 500ms ease;

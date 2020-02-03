@@ -96,25 +96,21 @@ export default {
   color: color(light);
   font-weight: 400;
 }
-.service-link, .projects-link {
-  transition: opacity 0.3s ease-in-out;
-}
 .service-link {
   max-width: none;
   text-decoration: none;
-  img {
-    object-fit: fill;
-    width: 100%;
-    max-height: 100%;
-    max-width: none;
-  }
   h3 {
     margin-top: 0.5em;
   }
+  .projects-link {
+    transition: opacity 0.3s ease-in-out;
+  }
 }
-
 .hover:not(.active) {
-  opacity: .3;
+  opacity: .8;
+  h3 {
+    color: color(light);
+  }
 }
 .hover {
   h3 {
@@ -126,14 +122,8 @@ export default {
   }
 }
 
-$main-height: calc(100vh - 2 * #{spacing(lg)});
-@include respond-to(large) {
-  #home.service-list {
-    height: $main-height;
-    max-width: 100ch;
-    margin: 0 auto;
-  }
-}
+$main-height: calc(100vh - 2 * #{spacing(frame)});
+
 // grid layout for small screens
 .service-list {
   background-color: white;
@@ -157,33 +147,25 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   align-self: end;
 }
 .projects-link {
-  text-decoration: none;
   @include smallCaps;
-  color: color(light);
   border: 1px solid color(light);
-  font-size: 0.9em;
+  text-decoration: none;
   width: 100%;
-  height: 100%;
-  max-height: 10ch;
-  display: block;
+  height: 12ch;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  justify-self: stretch;
-  margin: spacing(lg) 0;
+  justify-content: space-around;
 }
 
 .projects-link-grid {
   display: none;
   width: 100%;
-  justify-content: center;
   justify-self: end;
   align-self: end;
   a {
     &:hover {
-      color: black;
-      border: 1px solid black;
+      color: color(dark);
+      border: 1px solid color(dark);
     }
   }
 }
@@ -195,35 +177,23 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 // grid layout for big screens
 @include respond-to('large') {
   .service-list {
-    max-width: 90ch;
+    height: $main-height;
+    max-width: 110ch;
     display: grid;
     grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
-    grid-template-rows: 2fr .6fr 1fr .4fr 1fr;
+    grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    align-content: space-between;
-    .projects-link {
-      text-decoration: none;
-      @include smallCaps;
-      color: color(light);
-      border: 1px solid color(light);
-      font-size: 0.9em;
-      width: 100%;
-      height: 100%;
-      max-height: 10ch;
-      display: block;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      justify-self: stretch;
-    }
   }
 
-  #Design.service-link { grid-area: 1 / 2 / 2 / 4; }
-  #Production.service-link { grid-area: 3 / 1 / 6 / 3; }
+  #Design.service-link {
+    grid-area: 1 / 2 / 3 / 4;
+  }
+  #Production.service-link {
+    grid-area: 4 / 1 / 7 / 3;
+  }
   #Planning.service-link {
-    grid-area: 1 / 5 / 4 / 6;
+    grid-area: 1 / 5 / 5 / 6;
     .frame {
       height: 100%;
       img {
@@ -233,9 +203,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     }
   }
   .projects-link-grid {
-    grid-area: 5 / 5 / 6 / 6;
-    display: flex;
-    align-items: flex-end;
+    grid-area: 5 / 5 / 7 / 6;
   }
   .projects-link {
     padding: 0;
@@ -248,4 +216,5 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     display: none;
   }
 }
+
 </style>

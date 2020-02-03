@@ -6,7 +6,7 @@
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-          <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="close-btn" />
+          <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container">
           <img :src="image" :alt="$tp('title')">
@@ -144,14 +144,12 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  max-height: calc(100vh - 2 * #{spacing(frame)});;
 }
 img {
-  width: auto;
-  max-height: calc(100vh - 4 * #{spacing(lg)});
+  height: 80vh;
 }
-* {
-  max-width: none;
-}
+
 h1 {
   @include smallCaps;
   color: color(dark);
@@ -180,12 +178,16 @@ p {
   position: fixed;
   left: 1rem;
   .close-btn {
-    height: 1rem;
+    height: .8em;
   }
 }
 .nav {
   // display: block;
   height: 1rem;
+  fill: color(light);
+  &:hover {
+    fill: color(dark);
+  }
 }
 .image-nav {
   margin-right: spacing(md);
@@ -196,11 +198,12 @@ p {
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+  margin-right: spacing(sm);
 }
 @include respond-to('large') {
   .close-link {
     display: block;
-    left: 20rem;
+    left: 18em;
   }
   .image-nav {
     margin-right: 0;

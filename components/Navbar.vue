@@ -71,6 +71,7 @@ export default {
 .list-wrapper {
   display: flex;
   justify-content: space-between;
+  padding-left: 0;
 }
 
 @include respond-to('large') {

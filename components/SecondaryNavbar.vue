@@ -88,8 +88,11 @@ export default {
   width: 30ch;
   display: none;
   flex-grow: 2;
+  ul {
+    padding-left: 0;
+  }
   @include respond-to('large') {
-      display: block;
+    display: block;
   }
 }
 .insert-move {

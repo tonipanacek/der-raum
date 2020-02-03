@@ -29,6 +29,9 @@ svg.social-item {
   width: .8rem;
   height: auto;
   fill: color(light);
+  &:hover {
+    fill: color(dark);
+  }
 }
 svg#pinterest {
   height: .8em;
