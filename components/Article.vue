@@ -52,9 +52,6 @@ export default {
       color: color(dark);
       font-weight: 300;
     }
-    // & > *, & > * > p:first-child {
-    //   display: inline;
-    // }
   }
 }
 </style>

@@ -91,13 +91,12 @@ a:visited {
       text-align: left;
       position: sticky;
       top: spacing(frame);
-      min-height: $main-height;
+      height: $main-height;
       padding: 0 2em;
   }
 }
 .right-sidebar {
-  padding: 0 2em;
-  flex: 0 1 10ch;
+  flex: 0 1 12ch;
   @include respond-to('large') {
     position: sticky;
     top: spacing(frame);

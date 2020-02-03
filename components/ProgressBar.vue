@@ -26,7 +26,7 @@ export default {
   }
   position: fixed;
   top: 60vh;
-  right: 2.15rem;
+  right: 2.5em;
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
