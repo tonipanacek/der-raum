@@ -9,11 +9,16 @@
     >
       <li
         v-for="(page, index) in sortedPages"
-        :key="page.attributes.title"
+        :key="$ta(page.attributes, 'title')"
         :data-index="index"
       >
         <nuxt-link
-          class="nav-item title"
+          :class="{
+            'nav-item': true,
+            'title': true,
+            'hover': hoveredMenuItem,
+            'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
+          }"
           :to="path(page)"
         >
           {{ $ta(page.attributes, "title") }}
@@ -34,7 +39,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
@@ -93,6 +98,9 @@ export default {
   }
   @include respond-to('large') {
     display: block;
+  }
+  .hovered {
+    color: color(black);
   }
 }
 .insert-move {
