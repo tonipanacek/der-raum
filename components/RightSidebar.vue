@@ -73,6 +73,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
 @include respond-to('large') {
   .right-sidebar {
     width: 7rem;
+    position: relative;
     .right-stack {
       min-height: $main-height;
       flex-direction: column;

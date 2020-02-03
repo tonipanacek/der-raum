@@ -83,6 +83,7 @@ export default {
 .projects {
   display: flex;
   flex-direction: column;
+  width: 100%;
   &, & article, & .container, & .section {
     display: block;
     // min-height: 100%;
@@ -95,6 +96,7 @@ export default {
 }
 #desktop-view {
   display: none;
+  position: relative;
 }
 @include respond-to('large') {
   #mobile-view {

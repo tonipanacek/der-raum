@@ -54,6 +54,9 @@ a {
     box-shadow: shadow(dark);
     background-color: rgba(255, 255, 255, 0.5);
   }
+  &:first-child {
+    padding-right: spacing(sm);
+  }
 }
 .prev {
   position: absolute;
