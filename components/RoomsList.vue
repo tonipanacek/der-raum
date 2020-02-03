@@ -141,7 +141,10 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
   }
 }
 .hover:not(.active) {
-  opacity: .3;
+  opacity: .8;
+  h3 {
+    color: color(light);
+  }
 }
 
 // Transition

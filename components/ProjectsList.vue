@@ -138,7 +138,10 @@ $main-height: calc(100vh - #{spacing(lg)});
   }
 }
 .hover:not(.active) {
-  opacity: .3;
+  opacity: .8;
+  h3 {
+    color: color(light);
+  }
 }
 
 </style>
