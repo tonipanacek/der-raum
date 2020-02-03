@@ -20,6 +20,11 @@ export default {
   .image-container {
     flex-grow: 2;
     margin-bottom: spacing(frame);
+    img {
+      object-fit: contain;
+      object-position: left top;
+      max-width: 100%;
+    }
   }
   img,
   & > * {

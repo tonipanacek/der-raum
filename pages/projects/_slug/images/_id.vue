@@ -167,7 +167,8 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  max-height: calc(100vh - 2 * #{spacing(frame)});;
+  max-height: calc(100vh - 2 * #{spacing(frame)});
+  width: 100%;
 }
 img {
   height: 80vh;
@@ -185,6 +186,7 @@ p {
 .image-footer {
   display: flex;
   align-items: flex-start;
+  width: 100%;
   .caption {
     flex-grow: 2;
     padding: spacing(md);
