@@ -22,7 +22,7 @@ export default {
     streetNumber: "Dunckerstr. 15",
     cityZip: "10437 Berlin-Prenzlauer Berg",
     tel: "030 393753 00",
-    email: "sayhello@derraum.de",
+    email: "derraum@holz-raum.de",
     secondTitle: "Öffnungszeiten",
     weekdays: "Mo-Fr:",
     weekdayHours: "10:00-18:00",

@@ -56,16 +56,19 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
   background: white;
-  padding-right: 2rem;
   width: 100%;
+  padding: 2em;
   .right-stack {
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
     flex-direction: initial;
+    align-items: flex-end;
     p {
       @include smallCaps;
       font-size: 1em;
       writing-mode: horizontal-tb;
+      margin: 0;
     }
   }
 }
@@ -74,6 +77,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     width: 7rem;
     position: relative;
     height: $main-height;
+    padding: 0 2em;
     .right-stack {
       margin-top: 0;
       height: $main-height;

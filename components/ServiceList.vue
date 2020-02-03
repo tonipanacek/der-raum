@@ -186,20 +186,25 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     height: $main-height;
     max-width: 110ch;
     display: grid;
-    grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
-    grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
+    grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
 
   #Design.service-link {
     grid-area: 1 / 2 / 3 / 4;
+    align-self: stretch;
   }
   #Production.service-link {
     grid-area: 4 / 1 / 7 / 3;
+    align-self: end;
+    h3 {
+      margin-bottom: 0;
+    }
   }
   #Planning.service-link {
-    grid-area: 1 / 5 / 5 / 6;
+    grid-area: 1 / 5 / 4 / 6;
     .frame {
       height: 100%;
       img {
