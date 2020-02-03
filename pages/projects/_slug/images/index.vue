@@ -5,7 +5,7 @@
 <script>
 export default {
   mounted() {
-    this.$router.push(this.$route.path + '1')
+    this.$router.push(this.$route.path + '/1')
   }
 }
 </script>
