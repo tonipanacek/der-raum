@@ -57,7 +57,7 @@ export default {
 </script>
 <style lang="scss">
 #business-partners {
-  height: calc(100vh - 2 * #{spacing(frame)});
+  min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
   .box-wrapper {
     height: 100%;

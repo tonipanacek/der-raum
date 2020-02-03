@@ -25,8 +25,8 @@ export default {
     display: block;
   }
   position: absolute;
-  top: 60vh;
-  right: -3rem;
+  top: 55vh;
+  right: -1.5rem;
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
