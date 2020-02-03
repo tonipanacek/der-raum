@@ -76,13 +76,14 @@ $main-height: calc(100vh - #{spacing(frame)});
     height: $main-height;
     display: grid;
     overflow: hidden;
-    grid-template-columns: .1fr 3fr .1fr .5fr 2fr;
+    grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
     grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
   .project-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;
+    align-self: stretch;
   }
   .project-link:nth-child(2) {
     grid-area: 1 / 5 / 4 / 6;

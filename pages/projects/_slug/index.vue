@@ -1,7 +1,7 @@
 <template>
   <Container>
     <div
-    id="project-images"
+    id="project-images-desktop"
     class="project-images"
     v-on:wheel.prevent="handleScroll"
     >
@@ -24,7 +24,7 @@
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
     </div>
     <div
-    id="project-images"
+    id="project-images-mobile"
     class="project-images"
     >
       <article class="project">
@@ -161,10 +161,6 @@ export default {
 .project {
   display: flex;
   flex-direction: column;
-  height: 100%;
-}
-.section {
-  min-height: 100%;
 }
 .accessible {
   visibility: hidden;
