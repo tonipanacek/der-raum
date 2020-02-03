@@ -78,7 +78,6 @@ a:visited {
   background: white;
   z-index: 2;
   max-width: 110ch;
-  height: $main-height;
   @include respond-to('large') {
     position: sticky;
     top: 0;
@@ -95,19 +94,18 @@ a:visited {
       width: 40ch;
       text-align: left;
       position: sticky;
-      top: 0;
+      top: spacing(lg);
       min-height: $main-height;
       padding: 0 2em;
   }
 }
 .right-sidebar {
   padding: 0 2em;
-  // position: sticky;
   flex: 0 1 5ch;
   align-self: flex-start;
   @include respond-to('large') {
     position: sticky;
-    top: 0;
+    top: spacing(lg);
   }
   .right-stack{
     min-height: $main-height;

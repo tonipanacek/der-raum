@@ -62,7 +62,6 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     display: flex;
     justify-content: space-between;
     flex-direction: initial;
-    margin: spacing(sm) 0;
     p {
       @include smallCaps;
       font-size: 1em;
@@ -75,6 +74,7 @@ $main-height: calc(100vh - 2 * #{spacing(lg)});
     width: 7rem;
     position: relative;
     .right-stack {
+      margin-top: 0;
       min-height: $main-height;
       flex-direction: column;
       p {
