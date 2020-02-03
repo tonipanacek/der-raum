@@ -87,7 +87,7 @@ export default {
     margin-bottom: spacing(sm);
   }
   .nav-item {
-    transition: color 500ms ease, font-weight 500ms ease;
+    transition: color 100ms ease, font-weight 100ms ease;
     &:hover {
       color: color(dark);
     }

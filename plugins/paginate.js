@@ -86,7 +86,7 @@ export default {
       if (event.wheelDelta) {
         this.throttledHandlePageTransition(event.wheelDelta)
       } else {
-        this.throttledHandlePageTransition(event.deltaY)
+        this.throttledHandlePageTransition(-event.deltaY)
       }
       return event
     },

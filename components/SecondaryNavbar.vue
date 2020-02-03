@@ -96,10 +96,11 @@ export default {
   }
 }
 .insert-move {
-  transition: transform 750ms ease;
+  transition: transform 500ms ease;
   z-index: 100;
 }
 .insert-leave-active {
-  position: absolute;
+  // position: absolute;
+  opacity: 0;
 }
 </style>
