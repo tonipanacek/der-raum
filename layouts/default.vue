@@ -73,9 +73,10 @@ a:visited {
 
 .main-container {
   flex: 2 1 auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   overflow-y: visible;
   background: white;
+  position: relative;
   // z-index: 2;
   // max-width: 110ch;
 }
