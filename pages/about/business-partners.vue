@@ -62,10 +62,11 @@ export default {
   .box-wrapper {
     height: 100%;
     width: 100%;
-    margin: spacing(frame);
+    margin: 0.5em;
   }
   ul {
     margin-left: spacing(frame);
+    padding-left: 0;
     @include respond-to('large') {
       margin: none;
       columns: 20ch 2;

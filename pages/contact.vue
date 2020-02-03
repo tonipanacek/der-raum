@@ -83,7 +83,6 @@ export default {
     }
   }
   p {
-    line-height: 1rem;
     margin: 0;
   }
   #hidden-title {
