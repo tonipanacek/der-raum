@@ -53,7 +53,8 @@ export default {
       return {
         page,
         slug,
-        allPages
+        allPages,
+        pages: allPages
       }
     } catch (err) {
       console.debug(err)
