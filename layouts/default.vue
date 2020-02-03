@@ -124,8 +124,11 @@ a:visited {
 
 #left-social {
   display: none;
+  width: 5rem;
   @include respond-to('large') {
+    padding-left: 2em;
     display: block;
+    width: 7rem;
   }
 }
 </style>
