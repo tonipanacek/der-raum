@@ -9,7 +9,10 @@
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container">
-          <img :src="image" :alt="$tp('title')">
+          <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
+          <div class="image">
+            <img :src="image" :alt="$tp('title')">
+          </div>
         </div>
         <div class="image-footer">
           <aside class="caption">
@@ -119,7 +122,7 @@ export default {
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      if (this.id <= 1) { return '' }
+      if (parseInt(this.id) <= 1) { return '' }
       return this.localePath({
         name: 'projects-slug-images-id',
         params: {
@@ -173,7 +176,7 @@ export default {
   max-height: calc(100vh - 2 * #{spacing(frame)});
   width: 100%;
 }
-img {
+.img {
   height: 80vh;
 }
 
@@ -220,6 +223,10 @@ p {
 }
 .image-nav {
   margin-right: spacing(md);
+  display: none;
+  @include respond-to('large') {
+    display: block;
+  }
 }
 .previous-btn {
   -webkit-transform:rotate(180deg);

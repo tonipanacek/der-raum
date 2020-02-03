@@ -20,22 +20,33 @@ export default {
   .image-container {
     flex-grow: 2;
     margin-bottom: spacing(frame);
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    & > *:not(.frame) {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     img {
       object-fit: cover;
-      max-width: 100%;
-      @respond-to("large") {
+      @include respond-to("large") {
         object-position: left top;
         object-fit: contain;
+        height: 100%;
       }
     }
   }
-  img,
   & > * {
     max-width: none;
   }
   img {
-    object-fit: cover;
-    max-height: 80vh;
     max-width: 110ch;
   }
   .text {
