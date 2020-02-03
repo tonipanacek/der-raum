@@ -107,8 +107,10 @@ export default {
       if (this.id >= this.length) { return '' }
       return this.localePath({
         name: 'projects-slug-images-id',
-        slug: this.$data.slug,
-        id: this.$data.id + 1
+        params: {
+          slug: this.$data.slug,
+          id: this.$data.id + 1
+        }
       })
     },
     previousImageLink() {
@@ -116,15 +118,19 @@ export default {
       if (this.id <= 1) { return '' }
       return this.localePath({
         name: 'projects-slug-images-id',
-        slug: this.$data.slug,
-        id: this.$data.id - 1
+        params: {
+          slug: this.$data.slug,
+          id: this.$data.id - 1
+        }
       })
     },
     closeLink() {
       return `/projects/${this.$data.slug}/`
       return this.localePath({
         name: 'projects-slug',
-        slug: this.$data.slug
+        params: {
+          slug: this.$data.slug
+        }
       })
     },
     allPagesChunks() {
