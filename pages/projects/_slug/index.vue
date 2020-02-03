@@ -33,7 +33,7 @@
         <div v-if="isChunky" class="images section">
           <ImagesList
           id="mobile-view"
-          :images="currentImages"
+          :images="allImages"
           :allImages="images"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
@@ -105,6 +105,15 @@ export default {
         }
       })
     return mappedImages
+    },
+    allImages() {
+      if (isEmpty(this.images)) { return [] }
+      return this.images.map((url) => {
+        return {
+          index: this.images.indexOf(url) + 1,
+          url
+        }
+      })
     },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
