@@ -106,6 +106,9 @@ export default {
         return false
       }
     },
+    makeMobileFullScreen() {
+      return "hello"
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
   },
   computed: {
@@ -164,6 +167,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#projects {
+  // position: fixed;
+  height: 100vh;
+  @include respond-to('large') {
+    max-height: calc(100vh - 2 * #{spacing(frame)});
+  }
+}
 .image {
   display: flex;
   flex-direction: column;

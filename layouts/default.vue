@@ -55,6 +55,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
+    padding: none;
   }
 }
 a,

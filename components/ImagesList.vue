@@ -24,7 +24,7 @@
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
         </Frame>
         <h3 class="image-title">
-          {{ title }} {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }} / {{ totalCount }}
+          {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
         </h3>
       </NuxtLink>
     </transition-group>
@@ -109,6 +109,7 @@ export default {
     }
   }
 }
+// {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }}
 </script>
 
 <style lang="scss" scoped>
@@ -153,6 +154,11 @@ $main-height: calc(100vh - #{spacing(frame)});
   font-weight: 500;
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  @include respond-to('large') {
+    padding: 0;
+  }
 }
 
 .image-link {
@@ -162,10 +168,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     color: color(dark);
   }
   &:nth-child(4) {
-    pointer-events: none;
-
-    h3 {
-      @include respond-to('large') {
+    @include respond-to('large') {
+      pointer-events: none;
+      h3 {
         opacity: 0;
       }
     }

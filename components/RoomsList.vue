@@ -156,6 +156,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
   padding-left: 0.5em;
+  padding-bottom: 0.5em;
   @include respond-to('large') {
     padding: 0;
   }
