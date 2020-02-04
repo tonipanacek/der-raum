@@ -103,7 +103,7 @@ export default {
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: image.index
+          id: this.allImages.indexOf(image.url) + 1
         }
       })
     }
