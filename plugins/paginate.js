@@ -86,6 +86,8 @@ export default {
       if (event.wheelDelta) {
         this.throttledHandlePageTransition(event.wheelDelta)
       } else {
+        const mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel"
+        console.log(mousewheelevt)
         this.throttledHandlePageTransition(-event.deltaY)
       }
       return event

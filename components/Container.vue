@@ -15,6 +15,6 @@ export default {
   // flex: 2 1 auto;
   // min-height: 100%;
   // position: relative;
-  // margin: 0 auto;
+  margin: 0 auto;
 }
 </style>

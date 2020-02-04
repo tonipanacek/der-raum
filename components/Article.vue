@@ -17,6 +17,7 @@ export default {
   max-width: 110ch;
   min-height: calc(100vh - 2 * #{spacing(frame)});
   align-items: space-between;
+  margin: 0 auto;
   .image-container {
     flex-grow: 2;
     margin-bottom: spacing(frame);
