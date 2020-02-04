@@ -52,7 +52,7 @@ export default {
             attributes: {
               title: 'Business Partners',
               en_title: 'Business Partners',
-              de_title: 'Geschäftspartner'
+              de_title: 'Business Partners'
             }
           }
         ],
