@@ -7,8 +7,9 @@ export default {
     return {
       max: 4, // max number of items to display on a page
       pageNumber: 0,
-      refreshRate: 750, // amount of time between each scroll action
-      changeThreshold: 10, // how many steps must be registered on the scroll wheel
+      refreshRate: 800, // amount of time between each scroll action
+      trackpadThreshold: 3.5, // how many steps must be registered on the scroll wheel
+      mouseThreshold: 0.5,
       goingUp: false
     }
   },
@@ -84,19 +85,25 @@ export default {
     },
     handleScroll(event) {
       if (event.wheelDelta) {
-        this.throttledHandlePageTransition(event.wheelDelta)
+        this.throttledHandlePageTransition(event.wheelDelta, event.deltaMode)
       } else {
-        const mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel"
-        console.log(mousewheelevt)
-        this.throttledHandlePageTransition(-event.deltaY)
+        this.throttledHandlePageTransition(-event.deltaY, event.deltaMode)
       }
       return event
     },
-    handlePageTransition(change) {
-      if (change < -1 * this.changeThreshold) {
-        this.incrementPage()
-      } else if (change > this.changeThreshold) {
-        this.decrementPage()
+    handlePageTransition(change, mode) {
+      if (mode) {
+        if (change < -1 * this.mouseThreshold) {
+          this.incrementPage()
+        } else if (change > this.mouseThreshold) {
+          this.decrementPage()
+        }
+      } else {
+        if (change < -1 * this.trackpadThreshold) {
+          this.incrementPage()
+        } else if (change > this.trackpadThreshold) {
+          this.decrementPage()
+        }
       }
     },
     handleKey(event) {
