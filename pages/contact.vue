@@ -73,7 +73,7 @@ export default {
   }
 }
 .info {
-  width: 25ch;
+  width: 33ch;
   .contact-item {
     text-decoration: none;
     &:hover {

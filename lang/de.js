@@ -18,7 +18,7 @@ export default {
     title: "Impressum"
   },
   contact: {
-    firstTitle: "Planungstudio",
+    firstTitle: "Showroom & Planungstudio",
     streetNumber: "Dunckerstr. 15",
     cityZip: "10437 Berlin-Prenzlauer Berg",
     tel: "030 393753 00",
