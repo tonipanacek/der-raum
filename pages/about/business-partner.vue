@@ -38,9 +38,9 @@ export default {
         ...pages,
         {
           attributes: {
-            title: 'Business Partners',
-            en_title: 'Business Partners',
-            de_title: 'Business Partners'
+            title: 'Business Partner',
+            en_title: 'Business Partner',
+            de_title: 'Business Partner'
           }
         }
       ]
