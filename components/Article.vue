@@ -54,7 +54,7 @@ export default {
     }
     strong {
       color: color(dark);
-      font-weight: 300;
+      font-weight: 600;
     }
   }
 }
