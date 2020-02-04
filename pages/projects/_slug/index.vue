@@ -12,7 +12,7 @@
           <ImagesList
           id="desktop-view"
           :images="currentImages"
-          :allImages="images"
+          :allImages="sortedImages"
           :title="$tp('title')"
           :totalCount="$tp('images').length"
           :page="pageNumber"
@@ -50,7 +50,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
+import { get, sortBy, isEmpty, chunk, isEqual, flatten, uniq } from 'lodash'
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import Frame from "~/components/Frame"
@@ -98,13 +98,25 @@ export default {
   computed: {
     currentImages() {
       if (isEmpty(this.currentChunk)) { return [] }
-      const mappedImages = this.currentChunk.map((url) => {
+      if (this.pageNumber === 0) {
+        const mappedImages = this.currentChunk.map((url) => {
         return {
           index: this.currentChunk.indexOf(url) + 1,
           url
-        }
-      })
-    return mappedImages
+          }
+        })
+        return mappedImages
+      } else {
+        let current = this.currentChunk
+        current = [current[1], current[0], current[2], current[3]].filter(i => i)
+        const switchedImages = current.map((url) => {
+          return {
+            index: current.indexOf(url) + 1,
+            url
+          }
+        })
+        return switchedImages
+      }
     },
     allImages() {
       if (isEmpty(this.images)) { return [] }
@@ -114,6 +126,9 @@ export default {
           url
         }
       })
+    },
+    sortedImages() {
+      return uniq(flatten(this.pagesChunks))
     },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }

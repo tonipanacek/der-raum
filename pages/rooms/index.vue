@@ -8,7 +8,7 @@
       <RoomsList
       class="section"
       v-if="isChunky"
-      :rooms="currentChunk"
+      :rooms="currentRooms"
       :goingUp="goingUp"
       />
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
@@ -30,7 +30,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy } from "lodash"
+import { get, sortBy, isEmpty } from "lodash"
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import RoomsList from "~/components/RoomsList"
@@ -63,6 +63,18 @@ export default {
   mounted() {
     this.setPages(this.currentChunk.slice(0, this.max - 1))
     this.setPagesPrefix("rooms")
+  },
+  computed: {
+    currentRooms() {
+      if (isEmpty(this.currentChunk)) { return [] }
+      if (this.pageNumber === 0) {
+        return this.currentChunk
+      } else {
+        let switched = this.currentChunk
+        switched = [switched[1], switched[0], switched[2], switched[3]].filter(i => i)
+        return switched
+      }
+    }
   },
   methods: {
     getTitle(chunk) {
