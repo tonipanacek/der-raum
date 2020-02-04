@@ -116,12 +116,13 @@ $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
-    max-width: 110ch;
+    // max-width: 110ch;
     max-height: $main-height;
     display: grid;
     overflow: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
-    grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
+    // grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
+    grid-template-rows: 2fr .2fr repeat(2, .8fr) 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
@@ -130,13 +131,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     align-self: stretch;
   }
   .image-link:nth-child(2) {
-    grid-area: 1 / 5 / 3 / 6;
+    grid-area: 1 / 5 / 4 / 6;
     .frame {
       height: 100%;
-      img {
-        align-self: start;
-        justify-self: start;
-      }
     }
   }
   .image-link:nth-child(3) {
@@ -147,10 +144,6 @@ $main-height: calc(100vh - #{spacing(frame)});
     grid-area: 5 / 5 / 7 / 6;
     .frame {
       height: 100%;
-      img {
-        align-self: start;
-        justify-self: start;
-      }
     }
   }
 }

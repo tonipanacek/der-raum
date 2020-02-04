@@ -132,7 +132,7 @@ export default {
   }
 }
 
-$main-height: calc(100vh - 2 * #{spacing(frame)});
+$main-height: calc(100vh - 3em);
 
 // grid layout for small screens
 .service-list {
@@ -187,7 +187,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 @include respond-to('large') {
   .service-list {
     height: $main-height;
-    max-width: 110ch;
     display: grid;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
     grid-template-rows: 2.1fr .4fr repeat(2, .8fr) 1.5fr;
@@ -197,20 +196,20 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
-    align-self: stretch;
-  }
-  #Production.service-link {
-    grid-area:  4 / 1 / 6 / 3;
-    align-self: center;
-    h3 {
-      margin-bottom: 0;
-    }
+    align-self: start;
   }
   #Planning.service-link {
     grid-area:  1 / 5 / 4 / 6;
     align-self: stretch;
     .frame {
       height: 100%;
+    }
+  }
+  #Production.service-link {
+    grid-area:  4 / 1 / 6 / 3;
+    align-self: end;
+    h3 {
+      margin-bottom: 0;
     }
   }
   .projects-link-grid {
