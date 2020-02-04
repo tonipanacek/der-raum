@@ -20,7 +20,7 @@
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
             </a>
-            <a href="mailto:sayhello@derraum.de" class="contact-item">
+            <a href="mailto:derraum@holz-raum.de" class="contact-item">
               <p>{{ $t("contact.email") }}</p>
             </a>
           </div>
@@ -73,7 +73,7 @@ export default {
   }
 }
 .info {
-  width: 25ch;
+  width: 33ch;
   .contact-item {
     text-decoration: none;
     &:hover {

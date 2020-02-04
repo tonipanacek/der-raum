@@ -29,6 +29,7 @@ svg.social-item {
   width: .8rem;
   height: auto;
   fill: color(light);
+  overflow: visible;
   &:hover {
     fill: color(dark);
   }

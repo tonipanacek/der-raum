@@ -17,7 +17,7 @@ export default {
     title: "Legal Notice"
   },
   contact: {
-    firstTitle: "Showroom",
+    firstTitle: "Showroom & Design Studio",
     streetNumber: "Dunckerstr. 15",
     cityZip: "10437 Berlin-Prenzlauer Berg",
     tel: "030 393753 00",
