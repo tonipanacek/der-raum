@@ -24,7 +24,7 @@
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
         </Frame>
         <h3 class="image-title">
-          {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+          {{ title }} {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }} / {{ totalCount }}
         </h3>
       </NuxtLink>
     </transition-group>
