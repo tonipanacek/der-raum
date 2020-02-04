@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss">
 .contact {
-  max-width: 110ch;
+  max-width: 150ch;
   h2{
     @include smallCaps;
     color: color(dark);

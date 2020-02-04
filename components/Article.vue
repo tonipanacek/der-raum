@@ -14,7 +14,7 @@ export default {
 .article {
   display: flex;
   flex-direction: column;
-  max-width: 110ch;
+  max-width: 150ch;
   min-height: calc(100vh - 2 * #{spacing(frame)});
   align-items: space-between;
   .image-container {
@@ -32,7 +32,7 @@ export default {
   img {
     object-fit: cover;
     max-height: 80vh;
-    max-width: 110ch;
+    max-width: 150ch;
   }
   .text {
     padding: spacing(frame);
