@@ -1,13 +1,14 @@
 <template>
   <Container id="business-partners">
     <Article>
-      <Cluster class="md">
-        <div class="box-wrapper">
-          <ul>
-            <li v-for="data in $options.businessPartners">{{data}}</li>
-          </ul>
-        </div>
-      </Cluster>
+      <div class="text">
+        <h1>Business Partner</h1>
+      </div>
+      <div class="box-wrapper">
+        <ul>
+          <li v-for="data in $options.businessPartners">{{data}}</li>
+        </ul>
+      </div>
     </Article>
   </Container>
 </template>
@@ -59,16 +60,25 @@ export default {
 #business-partners {
   min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
+    .text {
+      display: block;
+      @include respond-to('large') {
+        display: none;
+      }
+    }
   .box-wrapper {
     height: 100%;
     width: 100%;
-    margin: 0.5em;
+    margin: 0.25em;
+    @include respond-to('large') {
+      width: 50%;
+    }
   }
   ul {
     margin-left: spacing(frame);
     padding-left: 0;
     @include respond-to('large') {
-      margin: none;
+      margin: 0;
       columns: 20ch 2;
       display: block;
     }
@@ -83,6 +93,7 @@ export default {
     padding-block-end: 0;
     -webkit-padding-start: 0;
     li {
+      margin-left: 0;
       font-size: .85em;
       display: block;
       color: color(light);

@@ -15,7 +15,12 @@
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
           </div>
-          <div class="info" id="second">
+          <div class="info">
+            <h1>{{ $t("contact.secondTitle") }}</h1>
+            <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
+            <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
+          </div>
+          <div class="info">
             <h1>{{ $t("contact.mainTitle") }}</h1>
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
@@ -23,11 +28,6 @@
             <a href="mailto:derraum@holz-raum.de" class="contact-item">
               <p>{{ $t("contact.email") }}</p>
             </a>
-          </div>
-          <div class="info" id="third">
-            <h1>{{ $t("contact.secondTitle") }}</h1>
-            <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
-            <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
         </div>
       </Cluster>
@@ -71,18 +71,6 @@ export default {
       width: 100%;
     }
   }
-}
-@include respond-to('large') {
-  #second {
-    order: 2;
-  }
-  #third {
-    order: 3;
-  }
-}
-
-#second {
-  order: 3;
 }
 .info {
   width: 33ch;

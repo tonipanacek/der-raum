@@ -20,7 +20,7 @@ export default {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .image-container {
-    flex: 2;
+    // flex: 2;
     margin-bottom: spacing(frame);
     img {
       object-fit: cover;
