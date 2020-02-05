@@ -125,10 +125,6 @@ $main-height: calc(100vh - #{spacing(frame)});
     grid-area: 1 / 5 / 4 / 6;
     .frame {
       height: 100%;
-      img {
-        align-self: start;
-        justify-self: start;
-      }
     }
   }
   .project-link:nth-child(3) {
@@ -139,10 +135,6 @@ $main-height: calc(100vh - #{spacing(frame)});
     grid-area: 5 / 5 / 7 / 6;
     .frame {
       height: 100%;
-      img {
-        align-self: start;
-        justify-self: start;
-      }
     }
   }
 }
@@ -154,6 +146,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   transition: color 500ms;
   margin-top: 0.5em;
   padding-left: 0.5em;
+  padding-bottom: 0.5em;
   @include respond-to('large') {
     padding: 0;
   }
@@ -169,9 +162,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     transition: opacity 750ms ease, color 500ms ease;
   }
   &:nth-child(4) {
-    pointer-events: none;
-    h3 {
-      @include respond-to('large') {
+    @include respond-to('large') {
+      pointer-events: none;
+      h3 {
         opacity: 0;
       }
     }

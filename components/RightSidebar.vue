@@ -56,7 +56,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
   background: white;
-  width: 100%;
   padding: 2em;
   .right-stack {
     margin-top: 0;

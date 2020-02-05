@@ -10,6 +10,9 @@
         </NuxtLink>
         <div class="image-container">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
+          <!-- <Frame v-if="id === 2 || 4 || 7|| 10" :n="4" :d="3">
+            <img :src="image" :alt="$tp('title')">
+          </Frame> -->
           <div class="image">
             <img :src="image" :alt="$tp('title')">
           </div>
@@ -39,6 +42,7 @@ import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
+import Frame from "~/components/Frame"
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
@@ -87,9 +91,11 @@ export default {
   mounted() {
     this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
+    window.addEventListener('load', this.makeMobileFullScreen)
     window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
+    window.removeEventListener('load', this.makeMobileFullScreen)
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
@@ -105,6 +111,18 @@ export default {
         this.$router.push(this.closeLink)
         return false
       }
+    },
+    makeMobileFullScreen(event) {
+      console.log("hi")
+      // if (window.width <= 767) {
+      //   const navbar = document.querySelector('.left-sidebar')
+      //   const footer = document.querySelector('.right-sidebar')
+      //   navbar.style.display = "none"
+      //   footer.style.display = "none"
+      // } else {
+      //   console.log("desktop screen")
+      //   return true
+      // }
     },
     ...mapActions(["setPages", "setPagesPrefix"])
   },
@@ -158,25 +176,23 @@ export default {
   components: {
     Container,
     Article,
-    PrevNextButtons
+    PrevNextButtons,
+    Frame
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.image {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 .image-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  max-height: calc(100vh - 2 * #{spacing(frame)});
-  width: 100%;
+  @include respond-to('large') {
+    max-height: calc(100vh - 2 * #{spacing(frame)});
+  }
+  .image {
+    display: flex;
+    justify-content: space-around;
+  }
 }
-.img {
+img {
   height: 80vh;
 }
 
@@ -208,13 +224,12 @@ p {
   display: none;
   position: absolute;
   left: -2.5rem;
-  top: 0;
+  top: -0.3em;
   .close-btn {
     height: .8em;
   }
 }
 .nav {
-  // display: block;
   height: 1rem;
   fill: color(light);
   &:hover {

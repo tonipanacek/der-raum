@@ -15,10 +15,12 @@ export default {
   display: flex;
   flex-direction: column;
   max-width: 110ch;
-  min-height: calc(100vh - 2 * #{spacing(frame)});
   align-items: space-between;
+  @include respond-to('large') {
+    min-height: calc(100vh - 2 * #{spacing(frame)});
+  }
   .image-container {
-    flex-grow: 2;
+    flex: 2;
     margin-bottom: spacing(frame);
     img {
       object-fit: cover;
@@ -32,17 +34,18 @@ export default {
   img {
     object-fit: cover;
     max-height: 80vh;
-    max-width: 110ch;
+
   }
   .text {
     padding: spacing(frame);
     @include respond-to(large) {
       padding: 0;
+      padding-bottom: 1em;
     }
     h1 {
       @include smallCaps;
       color: color(dark);
-      font-weight: 300;
+      font-weight: 600;
     }
     ul {
       list-style-type: square;

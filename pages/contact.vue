@@ -3,7 +3,7 @@
     <Article class="contact">
       <div class="image-container">
         <Frame>
-          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
+          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/kontakt3_h6xnua.jpg">
         </Frame>
       </div>
       <Cluster>
@@ -15,8 +15,8 @@
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
           </div>
-          <div class="info">
-            <h1 id="hidden-title">{{ $t("contact.firstTitle") }}</h1>
+          <div class="info" id="second">
+            <h1>{{ $t("contact.mainTitle") }}</h1>
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
             </a>
@@ -24,7 +24,7 @@
               <p>{{ $t("contact.email") }}</p>
             </a>
           </div>
-          <div class="info">
+          <div class="info" id="third">
             <h1>{{ $t("contact.secondTitle") }}</h1>
             <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
             <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss">
 .contact {
-  max-width: 110ch;
+  max-width: 150ch;
   h2{
     @include smallCaps;
     color: color(dark);
@@ -71,6 +71,18 @@ export default {
       width: 100%;
     }
   }
+}
+@include respond-to('large') {
+  #second {
+    order: 2;
+  }
+  #third {
+    order: 3;
+  }
+}
+
+#second {
+  order: 3;
 }
 .info {
   width: 33ch;
