@@ -17,6 +17,7 @@ export default {
     title: "Legal Notice"
   },
   contact: {
+    mainTitle: "Contact",
     firstTitle: "Showroom & Design Studio",
     streetNumber: "Dunckerstr. 15",
     cityZip: "10437 Berlin-Prenzlauer Berg",

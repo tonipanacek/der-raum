@@ -40,6 +40,7 @@ export default {
     padding: spacing(frame);
     @include respond-to(large) {
       padding: 0;
+      padding-bottom: 1em;
     }
     h1 {
       @include smallCaps;

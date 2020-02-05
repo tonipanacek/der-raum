@@ -50,7 +50,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
-  max-width: 180ch;
+  max-width: 160ch;
   width: 100vw;
   margin: 0 auto;
    @include respond-to('large') {
@@ -90,7 +90,7 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      width: 35ch;
+      flex: 0 1 22vw;
       text-align: left;
       position: sticky;
       top: spacing(frame);

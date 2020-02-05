@@ -96,7 +96,6 @@ export default {
 // Covered by Navbar component
 .navbar-secondary {
   top: 0;
-  width: 35ch;
   display: none;
   flex-grow: 2;
   margin-top: spacing(lg);

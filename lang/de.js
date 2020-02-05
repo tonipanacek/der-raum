@@ -18,6 +18,7 @@ export default {
     title: "Impressum"
   },
   contact: {
+    mainTitle: "Kontakt",
     firstTitle: "Showroom & Planungstudio",
     streetNumber: "Dunckerstr. 15",
     cityZip: "10437 Berlin-Prenzlauer Berg",

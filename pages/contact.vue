@@ -3,7 +3,7 @@
     <Article class="contact">
       <div class="image-container">
         <Frame>
-          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Screen_Shot_2020-01-08_at_7.21.05_PM_xkdla2.png">
+          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/kontakt3_h6xnua.jpg">
         </Frame>
       </div>
       <Cluster>
@@ -16,7 +16,7 @@
             </a>
           </div>
           <div class="info" id="second">
-            <h1 id="hidden-title">{{ $t("contact.firstTitle") }}</h1>
+            <h1>{{ $t("contact.mainTitle") }}</h1>
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
             </a>
