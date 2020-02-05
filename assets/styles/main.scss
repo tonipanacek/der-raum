@@ -25,3 +25,9 @@ body {
 .page-enter, .page-leave-to {
   opacity: 0;
 }
+
+a {
+  &:focus {
+    outline: 0;
+  }
+}
