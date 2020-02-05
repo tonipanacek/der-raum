@@ -22,9 +22,18 @@ export default {
   .image-container {
     // flex: 2;
     margin-bottom: spacing(frame);
+    @include respond-to('large') {
+      overflow: hidden;
+    }
     img {
       object-fit: cover;
-      max-width: 100%;
+      width: 100%;
+    }
+    @include respond-to('large') {
+      img {
+        width: auto;
+        object-fit: cover;
+      }
     }
   }
   img,
