@@ -4,11 +4,11 @@ image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Exklusive-h
 de_title: Küche
 en_title: Kitchen
 de_description: |-
-  Eine hochwertige Küche ist die Grundlage für einen gesunden Lebensstil, Gastfreundschaft und familiäre Geselligkeit. Hier können Sie beim Kochen kreativ werden, all ihre Sinne aktivieren und kulinarisch genießen. Zu Tisch fällt es dann leicht, das Nützliche mit dem Schönen zu verbinden, gemeinsam zu essen, soziale Beziehungen zu pflegen und sich auszutauschen. Ganz gleich welche Innenarchitektur zu Ihrem Alltag und ihrem Lebensrhythmus passt, wir als Raumgestalter und Designer entwickeln mit Ihnen die für Sie perfekte Gestaltung. Anschließend fertigen unsere erfahrenen Tischler jene Designs nach traditioneller und nachhaltiger Handwerkskunst direkt in Berlin.
+  Eine hochwertige Küche ist die Grundlage für einen gesunden Lebensstil, Gastfreundschaft und familiäre Geselligkeit. Hier können Sie beim Kochen kreativ werden, all ihre Sinne aktivieren und kulinarisch genießen. Zu Tisch fällt es dann leicht, das Nützliche mit dem Schönen zu verbinden, gemeinsam zu essen, soziale Beziehungen zu pflegen und sich auszutauschen. Ganz gleich welche Innenarchitektur zu Ihrem Alltag und ihrem Lebensrhythmus passt, wir als Raumgestalter und Designer entwickeln mit Ihnen die für Sie perfekte Gestaltung. Anschließend fertigen unsere erfahrenen Tischler / Schreiner jene Designs nach traditioneller und nachhaltiger Handwerkskunst direkt in Berlin.
 
-  * Eine gemütliche Wohnküche lädt zum Sitzen, sich Austauschen und Verweilen ein, mit Familie, Freunden oder dem Lebenspartner.
-  * Die funktionale Kochinsel überzeugt mit Struktur und klarem Fokus. Ein Muss für leidenschaftliche Köche.
-  * Ästheten kommen an der Design Küche auf den Geschmack. Licht, Oberflächen und Raumgestaltung bringen geschmackvoll Flair in ihre Küche.
+  * Eine gemütliche Wohnküche lädt zum Sitzen, sich Austauschen und Verweilen ein, mit Familie, Freunden oder dem Lebenspartner*in.
+  * Die funktionale Kochinsel überzeugt mit Struktur und klarem Fokus. Ein Muss für leidenschaftliche Köch*innen.
+  * Ästhet*innen kommen an der Design Küche auf den Geschmack. Licht, Oberflächen und Raumgestaltung bringen geschmackvoll Flair in ihre Küche.
   * Während die exklusive Luxus Küche vor allem anspruchsvolle Gäste beherbergt.
 
   Eines ist sicher: In Ihrer exklusiven, individuellen und hochwertigen Einbauküche nach Maß sollte stets genug Raum für die Menschen und die perfekte Zubereitung der Speisen sein, die Gleichgewicht, Freude und Inspiration in Ihr Leben bringen.
