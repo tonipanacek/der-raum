@@ -23,7 +23,7 @@ export default {
 <style scoped lang="scss">
 nav {
   z-index: z(sidebar);
-  position: relative;
+  // position: relative;
   height: 100%;
   width: 100%;
   @include respond-to(large) {

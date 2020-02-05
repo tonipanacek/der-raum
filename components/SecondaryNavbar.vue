@@ -95,6 +95,7 @@ export default {
 <style lang="scss">
 // Covered by Navbar component
 .navbar-secondary {
+  width: 100%;
   top: 0;
   display: none;
   flex-grow: 2;

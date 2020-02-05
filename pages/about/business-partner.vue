@@ -19,13 +19,15 @@ import json from "~/content/data/business_partners.json"
 import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
 import Article from '~/components/Article'
+import PrevNextButtons from '~/components/PrevNextButtons'
 
 export default {
   businessPartners: json["partners"],
   components: {
     Cluster,
     Container,
-    Article
+    Article,
+    PrevNextButtons
   },
   async asyncData() {
     // create context via webpack to map over all blog pages
