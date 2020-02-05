@@ -8,10 +8,10 @@ de_description: "Der individuellen Gestaltung schließt sich die Umsetzung im In
   nahtlos an. Mit einem hochmotivierten, eingespielten Team aus Designern, unserer
   eigenen Tischlermanufaktur und in Zusammenarbeit mit Architekten setzten wir die
   gemeinsame Vision Ihrer Wohnraumplanung in die Realität um. In der Planungsphase
-  bereiten wir die termingerechte, passgenaue Fertigung Ihres maßgeschneiderten Entwurfs
-  aus einer Hand vor, immer mit einem festen Ansprechpartner.  \nUnser Anspruch: ästhetisch,
-  technisch und funktional die Gestaltung einer finalen Probe zu unterziehen damit
-  Sie das Ergebnis rundum begeistert."
+  bereiten wir mit Ihrem festen Ansprechpartner die termingerechte und passgenaue
+  Fertigung Ihres maßgeschneiderten Entwurfs aus einer Hand vor.  \nUnser Anspruch:
+  ästhetisch, technisch und funktional die Gestaltung einer finalen Kontrolle zu unterziehen
+  und somit für ein rundum begeisterndes Ergebnis zu sorgen."
 en_description: "The implementation of the interior design is seamlessly followed
   by the individual design. With a highly motivated, well-coordinated team of designers,
   our own carpentry manufacturer and in cooperation with architects, we put your shared
