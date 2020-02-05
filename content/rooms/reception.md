@@ -4,9 +4,9 @@ image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Empfangsber
 de_title: Empfangsbereich
 en_title: Reception
 de_description: |-
-  Wer einmal Gast bei Freunden oder Geschäftspartnern war und sich von der Türschwelle an rundherum wohl, ja fast wie Zuhause fühlte, hat erkannt: Der erste Eindruck gemeinsamer Zeit in guter Gesellschaft entsteht bereits im Empfangsbereich der Immobilie.
+  Wer einmal Gast bei Freunden oder Business Partnern war und sich von der Türschwelle an rundherum wohl, ja fast wie Zuhause fühlte, hat erkannt: Der erste Eindruck gemeinsamer Zeit in guter Gesellschaft entsteht bereits im Empfangsbereich der Immobilie.
 
-  Neben einer herzlichen Begrüßung können Sie als Gastgeber zudem mit Stauraum für Jacken und Mäntel, Schirmständer, Ablage für Taschen und Schuhe die Sympathie ihrer Gäste gewinnen. Ihr Empfangsbereich wird durch eine klare, ästhetische und zugleich funktionale Gestaltung Raum für Begegnungen sein. Ihre Garderobe kann dabei in getrennten und passgenauen Einbauschränken Platz finden. Vorausschauend geplante Sichtachsen lenken den Blick ihrer Gäste auf Kunst oder frische Blumen.
+  Neben einer herzlichen Begrüßung können Sie als Gastgeber*in zudem mit Stauraum für Jacken und Mäntel, Schirmständer, Ablage für Taschen und Schuhe die Sympathie ihrer Gäste gewinnen. Ihr Empfangsbereich wird durch eine klare, ästhetische und zugleich funktionale Gestaltung Raum für Begegnungen sein. Ihre Garderobe kann dabei in getrennten und passgenauen Einbauschränken Platz finden. Vorausschauend geplante Sichtachsen lenken den Blick ihrer Gäste auf Kunst oder frische Blumen.
 
   Darüber hinaus bewährt sich, bei ausreichend vorhandener Fläche die Planung einer Sitzgelegenheit. Diese erhöht Ihren und den Komfort Ihrer Gäste und erleichtert das Aus- und Anziehen von Schuhen. Vielleicht ergibt sich in der Planung auch die Möglichkeit für ein Schlüsseltableau. Mit unseren passgenauen und individuell abgestimmten Einbauten lassen sich auch unansehnliche Elektroverteiler problemlos kaschieren.
 
