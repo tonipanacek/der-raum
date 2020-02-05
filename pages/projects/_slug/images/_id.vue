@@ -8,12 +8,15 @@
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container">
+        <!-- <div class="image-container"> -->
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
-          <div class="image">
+          <Frame v-if="id === 2 || 4 || 7|| 10" :n="4" :d="3">
             <img :src="image" :alt="$tp('title')">
-          </div>
-        </div>
+          </Frame>
+          <Frame v-else>
+            <img :src="image" :alt="$tp('title')">
+          </Frame>
+        <!-- </div> -->
         <div class="image-footer">
           <aside class="caption">
             <h1>{{ $tp('title') }} {{ id }} / {{ length }}</h1>
@@ -39,6 +42,7 @@ import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
+import Frame from "~/components/Frame"
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
@@ -87,9 +91,11 @@ export default {
   mounted() {
     this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
+    window.addEventListener('load', this.makeMobileFullScreen)
     window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
+    window.removeEventListener('load', this.makeMobileFullScreen)
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
@@ -106,8 +112,17 @@ export default {
         return false
       }
     },
-    makeMobileFullScreen() {
-      return "hello"
+    makeMobileFullScreen(event) {
+      console.log("hi")
+      // if (window.width <= 767) {
+      //   const navbar = document.querySelector('.left-sidebar')
+      //   const footer = document.querySelector('.right-sidebar')
+      //   navbar.style.display = "none"
+      //   footer.style.display = "none"
+      // } else {
+      //   console.log("desktop screen")
+      //   return true
+      // }
     },
     ...mapActions(["setPages", "setPagesPrefix"])
   },
@@ -161,34 +176,21 @@ export default {
   components: {
     Container,
     Article,
-    PrevNextButtons
+    PrevNextButtons,
+    Frame
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#projects {
-  // position: fixed;
-  height: 100vh;
-  @include respond-to('large') {
-    max-height: calc(100vh - 2 * #{spacing(frame)});
-  }
-}
-.image {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.image-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  max-height: calc(100vh - 2 * #{spacing(frame)});
-  width: 100%;
-}
-.img {
-  height: 80vh;
-}
+// .image-container {
+//   @include respond-to('large') {
+//     max-height: calc(100vh - 2 * #{spacing(frame)});
+//   }
+// }
+// .img {
+//   max-height: 80vh;
+// }
 
 h1 {
   @include smallCaps;
@@ -224,7 +226,6 @@ p {
   }
 }
 .nav {
-  // display: block;
   height: 1rem;
   fill: color(light);
   &:hover {

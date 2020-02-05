@@ -23,7 +23,7 @@ export default {
     tel: "030 393753 00",
     email: "derraum@holz-raum.de",
     secondTitle: "Opening Hours",
-    weekdays: "Mo-Fr:",
+    weekdays: "Monday-Friday:",
     weekdayHours: "10:00-18:00",
     weekend: "Saturday:",
     weekendHours: "11:00-17:00"

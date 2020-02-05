@@ -15,8 +15,10 @@ export default {
   display: flex;
   flex-direction: column;
   max-width: 150ch;
-  min-height: calc(100vh - 2 * #{spacing(frame)});
   align-items: space-between;
+  @include respond-to('large') {
+    min-height: calc(100vh - 2 * #{spacing(frame)});
+  }
   .image-container {
     flex-grow: 2;
     margin-bottom: spacing(frame);
@@ -32,7 +34,7 @@ export default {
   img {
     object-fit: cover;
     max-height: 80vh;
-    max-width: 150ch;
+
   }
   .text {
     padding: spacing(frame);
@@ -42,7 +44,7 @@ export default {
     h1 {
       @include smallCaps;
       color: color(dark);
-      font-weight: 300;
+      font-weight: 600;
     }
     ul {
       list-style-type: square;

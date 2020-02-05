@@ -10,10 +10,7 @@
         @mouseover.native="hover = service.attributes.title"
         @mouseleave.native="hover = ''"
       >
-        <Frame v-if="service.attributes.title" :n="9" :d="16">
-          <img :src="service.attributes.image" :alt="service.attributes.title" />
-        </Frame>
-        <Frame v-else :n="16" :d="9">
+        <Frame>
           <img :src="service.attributes.image" :alt="service.attributes.title" />
         </Frame>
         <h3 class="service-title">

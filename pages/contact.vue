@@ -15,7 +15,7 @@
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
           </div>
-          <div class="info">
+          <div class="info" id="second">
             <h1 id="hidden-title">{{ $t("contact.firstTitle") }}</h1>
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
@@ -24,7 +24,7 @@
               <p>{{ $t("contact.email") }}</p>
             </a>
           </div>
-          <div class="info">
+          <div class="info" id="third">
             <h1>{{ $t("contact.secondTitle") }}</h1>
             <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
             <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
@@ -71,6 +71,18 @@ export default {
       width: 100%;
     }
   }
+}
+@include respond-to('large') {
+  #second {
+    order: 2;
+  }
+  #third {
+    order: 3;
+  }
+}
+
+#second {
+  order: 3;
 }
 .info {
   width: 33ch;
