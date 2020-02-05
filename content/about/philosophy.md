@@ -1,5 +1,5 @@
 ---
-position: '1'
+position: 1
 title: Philosophy
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776445/philosophie_mdd7na.jpg
 en_title: Philosophy
@@ -16,7 +16,7 @@ en_description: If we need a philosophy? We say yes. Our conscious, attentive an
   service for you.
 de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste, achtsame
   und konstruktive Haltung, unsere Neugier für Ihre Idee und die Motivation, Neugierde
-  und Leidenschaft mit der Wir Sie begleiten sind der Rückenwind und der rote Faden
+  und Leidenschaft mit der wir Sie begleiten, sind der Rückenwind und der rote Faden
   unseres gelebten ganzheitlichen Ansatzes aus Gestaltung, Planung und Fertigung.
   Wir sind ein familiengeführtes Unternehmen welches sich dem Design und solidem Handwerk
   verschrieben hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert
