@@ -20,20 +20,10 @@ export default {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .image-container {
-    // flex: 2;
     margin-bottom: spacing(frame);
-    @include respond-to('large') {
-      overflow: hidden;
-    }
     img {
       object-fit: cover;
-      width: 100%;
-    }
-    @include respond-to('large') {
-      img {
-        width: auto;
-        object-fit: cover;
-      }
+      max-width: 100%;
     }
   }
   img,
