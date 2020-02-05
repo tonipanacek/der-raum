@@ -19,10 +19,7 @@
       :data-index="index"
       :data-total="projects.length"
       >
-        <Frame v-if="project.attributes.orientation === 'portrait'" :n="4" :d="3">
-          <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-        </Frame>
-        <Frame v-else>
+        <Frame>
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
         </Frame>
         <h3 class="project-title">
@@ -114,7 +111,7 @@ $main-height: calc(100vh - #{spacing(frame)});
     overflow: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
     // grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
-    grid-template-rows: 2fr .2fr repeat(2, .8fr) 1.5fr;
+    grid-template-rows: 2fr .2fr 1.2fr .6fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
