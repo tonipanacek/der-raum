@@ -3,20 +3,12 @@ title: Sliders
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Schiebetuer-nach-Ma%C3%9F-Uebergroe%C3%9Fe_u69dez.jpg
 de_title: Raumteiler & Schiebetür
 en_title: Sliders
-de_description: "Flexibilität im Arbeiten, dynamische Veränderung – Flexibilität im
-  Arbeiten, dynamische Veränderungen im Alltag – Agilität zieht sich zunehmend durch
-  unser Leben. Daraus resultieren sich stetig verändernde Anforderungen an einzelne
-  Räume. Raumlösungen können sich diesem steten Wandel anpassen, Wände müssen deshalb
-  nicht eingerissen werden. Als interessante Alternative bieten wir Schiebetüren und
-  Raumteiler nach Maß, maximale Flexibilität und einen hohen ästhetischen Mehrwert
-  in Ihren Räumen. Ganz nach persönlichem Geschmack und Bedürfnissen können Sie Bereiche
-  Ihres Innenausbaus neu definieren und Räume unabhängig zonieren.\n\nSie haben eine
-  Idee und möchten sich vor der Beauftragung einen Expertenrat einholen? Wir als Raumgestalter
-  und Designer sind spezialisiert auf den exklusiven Innenausbau. Mit simplen Schiebetüren
-  aus Holz nach Maß sind sie ebenso erfahren wie mit aufwändigen Design Wandverkleidungen,
-  durchdachten Wandpaneelen und hochwertigen Wandvertäfelungen.\n\nWir entwickeln
-  mit Ihnen gemeinsam verschiedene Lösungen, die Sie flexibel und dauerhaft in Ihrer
-  Immobilie zum Einsatz bringen können. "
+de_description: |-
+  Flexibilität im Arbeiten, dynamische Veränderung – Veränderungen im Alltag – Agilität zieht sich zunehmend durch unser Leben. Daraus resultieren sich stetig verändernde Anforderungen an einzelne Räume. Raumlösungen können sich diesem steten Wandel anpassen, Wände müssen deshalb nicht eingerissen werden. Als interessante Alternative bieten wir Schiebetüren und Raumteiler nach Maß, maximale Flexibilität und einen hohen ästhetischen Mehrwert in Ihren Räumen. Ganz nach persönlichem Geschmack und Bedürfnissen können Sie Bereiche Ihres Innenausbaus neu definieren und Räume unabhängig zonieren.
+
+  Sie haben eine Idee und möchten sich vor der Beauftragung einen Expertenrat einholen? Wir als Raumgestalter und Designer sind spezialisiert auf den exklusiven Innenausbau. Mit simplen Schiebetüren aus Holz nach Maß sind wir ebenso erfahren wie mit aufwändigen Design Wandverkleidungen, durchdachten Wandpaneelen und hochwertigen Wandvertäfelungen.
+
+  Wir entwickeln mit Ihnen gemeinsam verschiedene Lösungen, die Sie flexibel und dauerhaft in Ihrer Immobilie zum Einsatz bringen können.
 en_description: |-
   Flexibility in work, dynamic change - that means being agile, that means more and more demands on individual rooms and structures in our daily life. Room solutions can adapt to this constant change, so you don't have to tear down walls. As an interesting alternative, we offer custom-made sliding doors and room dividers, maximum flexibility and a high aesthetic added value in your rooms. You can redefine areas of your interior design according to your personal taste and zone rooms independently.
 
