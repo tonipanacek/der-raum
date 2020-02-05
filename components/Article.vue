@@ -14,13 +14,13 @@ export default {
 .article {
   display: flex;
   flex-direction: column;
-  max-width: 150ch;
+  max-width: 110ch;
   align-items: space-between;
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .image-container {
-    flex-grow: 2;
+    flex: 2;
     margin-bottom: spacing(frame);
     img {
       object-fit: cover;

@@ -8,15 +8,15 @@
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <!-- <div class="image-container"> -->
+        <div class="image-container">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
-          <Frame v-if="id === 2 || 4 || 7|| 10" :n="4" :d="3">
+          <!-- <Frame v-if="id === 2 || 4 || 7|| 10" :n="4" :d="3">
             <img :src="image" :alt="$tp('title')">
-          </Frame>
-          <Frame v-else>
+          </Frame> -->
+          <div class="image">
             <img :src="image" :alt="$tp('title')">
-          </Frame>
-        <!-- </div> -->
+          </div>
+        </div>
         <div class="image-footer">
           <aside class="caption">
             <h1>{{ $tp('title') }} {{ id }} / {{ length }}</h1>
@@ -183,14 +183,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .image-container {
-//   @include respond-to('large') {
-//     max-height: calc(100vh - 2 * #{spacing(frame)});
-//   }
-// }
-// .img {
-//   max-height: 80vh;
-// }
+.image-container {
+  @include respond-to('large') {
+    max-height: calc(100vh - 2 * #{spacing(frame)});
+  }
+  .image {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+img {
+  height: 80vh;
+}
 
 h1 {
   @include smallCaps;
@@ -220,7 +224,7 @@ p {
   display: none;
   position: absolute;
   left: -2.5rem;
-  top: 0;
+  top: -0.3em;
   .close-btn {
     height: .8em;
   }
