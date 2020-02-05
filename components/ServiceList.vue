@@ -186,7 +186,7 @@ $main-height: calc(100vh - 3em);
     height: $main-height;
     display: grid;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
-    grid-template-rows: 2.1fr .4fr repeat(2, .8fr) 1.5fr;
+    grid-template-rows: 2.1fr .4fr 1.2fr .6fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }

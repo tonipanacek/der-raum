@@ -123,7 +123,7 @@ $main-height: calc(100vh - #{spacing(frame)});
     overflow: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
     // grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
-    grid-template-rows: 2fr .2fr repeat(2, .8fr) 1.5fr;
+    grid-template-rows: 2fr .2fr 1.2fr .6fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }

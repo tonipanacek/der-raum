@@ -120,6 +120,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .project-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;
+    align-self: stretch;
   }
   .project-link:nth-child(2) {
     grid-area: 1 / 5 / 4 / 6;
