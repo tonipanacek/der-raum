@@ -21,9 +21,9 @@ de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste,
   Wir sind ein familiengeführtes Unternehmen welches sich dem Design und solidem Handwerk
   verschrieben hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert
   einen hohen kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien
-  ermöglichen uns kurze und effiziente Entscheidungswege um Ihr Projekt aus einer
-  Hand Wirklichkeit werden zu lassen. Wir haben den Anspruch Sie optimal ab dem ersten
-  Beratungsgespräch bis zum kompletten Einbau zu begleiten, wir setzten für Sie eine
-  termingerechte, serviceorientierte und einwandfreie Leistung um.
+  ermöglichen uns kurze und effiziente Arbeits- und Entscheidungswege um Ihr Projekt
+  aus einer Hand Wirklichkeit werden zu lassen. Wir haben den Anspruch Sie optimal
+  ab dem ersten Beratungsgespräch bis zum kompletten Einbau zu begleiten und setzten
+  für Sie eine termingerechte, serviceorientierte und einwandfreie Leistung um.
 
 ---
