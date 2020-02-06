@@ -51,7 +51,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   flex-direction: column;
   max-width: 160ch;
-  width: 100vw;
+  // width: 100vw;
   margin: 0 auto;
    @include respond-to('large') {
     flex-direction: initial;
@@ -90,7 +90,8 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      flex: 0 1 22vw;
+      // flex: 0 1 25ch;
+      width: 25ch;
       text-align: left;
       position: sticky;
       top: spacing(frame);

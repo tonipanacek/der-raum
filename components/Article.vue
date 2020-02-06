@@ -16,6 +16,7 @@ export default {
   flex-direction: column;
   max-width: 110ch;
   align-items: space-between;
+  margin: 0 auto;
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
