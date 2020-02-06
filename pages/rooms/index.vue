@@ -10,6 +10,7 @@
       v-if="isChunky"
       :rooms="currentRooms"
       :goingUp="goingUp"
+      @increment="incrementPage"
       />
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
     </div>

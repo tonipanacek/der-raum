@@ -16,6 +16,8 @@
       :class="{'image-link': true, 'extraSpace': image.index < 0}"
       :data-index="index"
       :data-total="images.length"
+      event=""
+      @click.native.prevent="handleClick(image, index)"
       >
         <Frame v-if="image.index % 2" :n="9" :d="16">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
@@ -71,6 +73,14 @@ export default {
     },
     getImageId(image) {
       return this.$data.pages.indexOf(image) + 1
+    },
+    handleClick(image, index) {
+      if (index > 2) {
+        this.$emit('increment')
+      } else {
+        const path = this.path(image)
+        this.$router.push(path)
+      }
     },
     beforeEnter: function(el) {
       el.style.opacity = 0
@@ -174,7 +184,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   &:nth-child(4) {
     @include respond-to('large') {
-      pointer-events: none;
       h3 {
         opacity: 0;
       }

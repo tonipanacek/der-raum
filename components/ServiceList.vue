@@ -22,7 +22,7 @@
           :class="{ 'active': hover && hover === 'projects', hover: hover, 'projects-link': true }"
           @mouseover.native="hover = 'projects'"
           @mouseleave.native="hover = ''"
-          to="/projects"
+          :to="localePath({ name: 'projects' })"
         >
           {{ $t("projects.link") }}
         </NuxtLink>

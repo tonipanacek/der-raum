@@ -18,6 +18,7 @@
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
+          @increment="incrementPage"
           />
         </div>
       </article>
