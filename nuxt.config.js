@@ -27,22 +27,38 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   generate: {
-    routes: {
-      async asyncData() {
-        // create context via webpack to map over all blog pages
-        const allPages = await require.context(
+    routes:
+    // {
+    //   async asyncData() {
+    //     // create context via webpack to map over all blog pages
+    //     const allPages = await require.context(
+    //       "~/content/services/",
+    //       true,
+    //       /\.md$/
+    //     )
+    //     return allPages.keys().map(key => {
+    //       // give back the value of each page context
+    //       return {
+    //         route: '/services/' + key.title,
+    //         payload: key
+    //       }
+    //     })
+    //   }
+    // }
+    function () {
+     return require.context(
           "~/content/services/",
           true,
           /\.md$/
-        )
-        return allPages.keys().map(key => {
-          // give back the value of each page context
-          return {
-            route: '/services/' + key.title,
-            payload: key
-          }
+      )
+     .then((res) => {
+        return res.data.map((service) => {
+            return {
+               route: '/services/' + service.title,
+               payload: service
+            }
         })
-      }
+     })
     }
   },
   /*
