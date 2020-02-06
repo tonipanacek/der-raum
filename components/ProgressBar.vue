@@ -1,7 +1,9 @@
 <template>
   <div class="progress-bar" :style="{ '--total': total + 1, '--page': page + 1 }">
     <div class="bar">
+      <div class="up" @click="$emit('decrement')"></div>
       <div class="completed"></div>
+      <div class="down" @click="$emit('increment')"></div>
     </div>
   </div>
 </template>
@@ -36,6 +38,14 @@ export default {
     border-radius: var(--width);
     position: relative;
     overflow: hidden;
+    .up {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: calc((var(--page) - 1) / var(--total) * 100%);
+      width: 100%;
+      cursor: pointer;
+    }
     .completed {
       transition: top 750ms ease, height 750ms ease;
       position: absolute;
@@ -45,6 +55,14 @@ export default {
       height: calc(1 / var(--total) * 100%);
       width: 100%;
       border-radius: inherit;
+    }
+    .down {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: calc((var(--total) - var(--page)) / var(--total) * 100%);
+      width: 100%;
+      cursor: pointer;
     }
   }
 }
