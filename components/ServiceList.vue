@@ -175,6 +175,8 @@ $main-height: calc(100vh - 3em);
 @include respond-to('large') {
   .service-list {
     height: $main-height;
+    max-width: 110ch;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
     grid-template-rows: 2.1fr .4fr 1.2fr .6fr 1.5fr;

@@ -23,7 +23,9 @@
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
         </Frame>
         <Frame v-else>
+        <!-- <div class="image"> -->
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
+        <!-- </div> -->
         </Frame>
         <h3 class="room-title">
           {{ $ta(room.attributes, 'title') }}
@@ -113,19 +115,31 @@ $main-height: calc(100vh - #{spacing(frame)});
   .rooms-grid {
     position: sticky;
     height: $main-height;
+    max-width: 110ch;
+    margin: 0 auto;
     display: grid;
     overflow: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
-    grid-template-rows: 2fr .2fr 1.2fr .6fr 1.5fr;
+    grid-template-rows: 2fr .2fr repeat(2, .8fr) 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
+  // .room-link .image {
+  //   width: 100%;
+  //   height: 100%;
+  //   img {
+  //     max-height: 100%;
+  //     width: 100%;
+  //     object-fit: cover;
+
+  //   }
+  // }
   .room-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;
     align-self: stretch;
   }
   .room-link:nth-child(2) {
-    grid-area: 1 / 5 / 4 / 6;
+    grid-area: 1 / 5 / 4 / 5;
     .frame {
       height: 100%;
     }

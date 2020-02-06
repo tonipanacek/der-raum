@@ -107,6 +107,8 @@ $main-height: calc(100vh - #{spacing(frame)});
 @include respond-to('large') {
   #projects-grid {
     height: $main-height;
+    max-width: 110ch;
+    margin: 0 auto;
     display: grid;
     overflow: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;

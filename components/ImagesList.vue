@@ -117,10 +117,11 @@ $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
-    // max-width: 110ch;
-    height: $main-height;
+    max-height: $main-height;
+    max-width: 110ch;
+    margin: 0 auto;
     display: grid;
-    overflow: hidden;
+    overflow-y: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
     // grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
     grid-template-rows: 2fr .2fr 1.2fr .6fr 1.5fr;
