@@ -1,12 +1,28 @@
 const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
-import loadPages from "./load_pages"
+const parser = require('md-yaml-json').default;
+const { get, kebabCase, flatten } = require('lodash')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/der-raum/'
   }
 } : {}
+
+function loadPages (enPrefix, dePrefix) {
+  // create context via webpack to map over all markdown pages
+  let pages = parser(`./content/${enPrefix}`)
+
+  pages = pages.map(service => {
+    // give back the pages urls as strings in both languages
+    return [
+      `/${dePrefix}/${kebabCase(get(service, 'meta.de_title', ''))}`,
+      `en/${enPrefix}/${kebabCase(get(service, 'meta.en_title', ''))}`
+    ]
+  })
+
+  return flatten(pages)
+}
 
 export default {
   mode: "universal",
@@ -33,7 +49,8 @@ export default {
       return [
         ...loadPages('projects', 'projekte'),
         ...loadPages('services', 'leistungen'),
-        ...loadPages('about', '&uuml;ber')
+        ...loadPages('rooms', 'raume'),
+        ...loadPages('about', 'uber')
       ]
     }
   },
@@ -88,12 +105,12 @@ export default {
     locales: [
       {
         code: "en",
-        file: "en.js",
+        file: "en.json",
         iso: "en-US"
       },
       {
         code: "de",
-        file: "de.js",
+        file: "de.json",
         iso: "de-DE"
       }
     ],
