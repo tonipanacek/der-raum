@@ -51,7 +51,7 @@ export default {
     }
     p, ul > li {
       line-height: 2rem;
-      color: color(light);
+      color: color(dark);
       font-size: .8em;
     }
     strong {

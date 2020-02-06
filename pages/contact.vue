@@ -6,7 +6,7 @@
           <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/kontakt3_h6xnua.jpg">
         </Frame>
       </div>
-      <Cluster>
+      <!-- <Cluster> -->
         <div class="text">
           <div class="info">
             <h1>{{ $t("contact.firstTitle") }}</h1>
@@ -30,7 +30,7 @@
             </a>
           </div>
         </div>
-      </Cluster>
+      <!-- </Cluster> -->
     </Article>
   </Container>
 </template>
@@ -61,9 +61,14 @@ export default {
 }
 .contact {
   .text {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: flex-start;
     justify-content: space-between;
+    p {
+      color: color(light);
+    }
   }
   .image-container {
     .frame {
@@ -73,7 +78,7 @@ export default {
   }
 }
 .info {
-  width: 33ch;
+  flex: 0 1 31ch;
   .contact-item {
     text-decoration: none;
     &:hover {
