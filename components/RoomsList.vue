@@ -18,6 +18,8 @@
       @mouseleave.native="handleBlur"
       :data-index="index"
       :data-total="rooms.length"
+      event=""
+      @click.native.prevent="handleClick(room, index)"
       >
         <Frame v-if="room.attributes.orientation === 'portrait'" :n="4" :d="3">
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
@@ -71,6 +73,15 @@ export default {
     handleBlur() {
       this.hover = ''
       this.unsetHoveredMenuItem()
+    },
+    handleClick(room, index) {
+      console.log(index)
+      if (index > 2) {
+        this.$emit('increment')
+      } else {
+        const path = this.path(room)
+        this.$router.push(path)
+      }
     },
     beforeEnter: function(el) {
       el.style.opacity = 0
@@ -176,7 +187,6 @@ $main-height: calc(100vh - #{spacing(frame)});
     color: color(dark);
   }
   &:nth-child(4) {
-    pointer-events: none;
     h3 {
       @include respond-to('large') {
         opacity: 0;

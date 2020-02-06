@@ -14,6 +14,8 @@
       :key="getTitle(project.attributes)"
       :to="path(project)"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true }"
+      event=""
+      @click.native.prevent="handleClick(project, index)"
       @mouseover.native="handleHover(project)"
       @mouseleave.native="handleBlur"
       :data-index="index"
@@ -90,6 +92,14 @@ export default {
     handleBlur() {
       this.unsetHoveredMenuItem()
     },
+    handleClick(project, index) {
+      if (index > 2) {
+        this.$emit('increment')
+      } else {
+        const path = this.path(project)
+        this.$router.push(path)
+      }
+    },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   },
   destroyed() {
@@ -163,7 +173,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   &:nth-child(4) {
     @include respond-to('large') {
-      pointer-events: none;
       h3 {
         opacity: 0;
       }

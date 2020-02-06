@@ -11,6 +11,7 @@
       v-if="isChunky"
       :projects="currentChunk"
       :goingUp="goingUp"
+      @increment="incrementPage"
       />
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
     </div>
