@@ -62,17 +62,17 @@ export default {
     beforeEnter: function(el) {
       el.style.opacity = 0
       if (this.goingUp) {
-        el.style.transform = "translateY(25%)"
+        el.style.transform = "translateY(10%)"
       } else {
-        el.style.transform = "translateY(-25%)"
+        el.style.transform = "translateY(-10%)"
       }
-      el.style.transition = "opacity 250ms ease, transform 250ms ease"
+      el.style.transition = "opacity 400 ease, transform 400 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = parseInt(el.dataset.index) * 250
+        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
         if (this.goingUp) {
-          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 250
+          delay = parseInt(el.dataset.index) * 200
         }
         setTimeout(() => {
           el.style.opacity = 1

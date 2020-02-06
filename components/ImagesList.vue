@@ -13,7 +13,7 @@
       v-for="(image, index) in images"
       :key="image.url"
       :to="path(image)"
-      class="image-link"
+      :class="{'image-link': true, 'extraSpace': image.index < 0}"
       :data-index="index"
       :data-total="images.length"
       >
@@ -75,17 +75,17 @@ export default {
     beforeEnter: function(el) {
       el.style.opacity = 0
       if (this.goingUp) {
-        el.style.transform = "translateY(25%)"
+        el.style.transform = "translateY(10%)"
       } else {
-        el.style.transform = "translateY(-25%)"
+        el.style.transform = "translateY(-10%)"
       }
-      el.style.transition = "opacity 250ms ease, transform 250ms ease"
+      el.style.transition = "opacity 400 ease, transform 400 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = parseInt(el.dataset.index) * 250
+        let delay = parseInt(el.dataset.index) * 200
         if (this.goingUp) {
-          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 250
+          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
         }
         setTimeout(() => {
           el.style.opacity = 1
@@ -118,7 +118,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 @include respond-to('large') {
   .images-grid {
     // max-width: 110ch;
-    max-height: $main-height;
+    height: $main-height;
     display: grid;
     overflow: hidden;
     grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
@@ -130,6 +130,11 @@ $main-height: calc(100vh - #{spacing(frame)});
   .image-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;
     align-self: stretch;
+    &.extraSpace {
+      @include respond-to('large') {
+        display: none;
+      }
+    }
   }
   .image-link:nth-child(2) {
     grid-area: 1 / 5 / 4 / 6;

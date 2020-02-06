@@ -98,7 +98,7 @@ export default {
       margin-left: 0;
       font-size: .85em;
       display: block;
-      color: color(light);
+      color: color(dark);
       padding-bottom: spacing(xs);
     }
   }

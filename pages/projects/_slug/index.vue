@@ -109,13 +109,24 @@ export default {
       } else {
         let current = this.currentChunk
         current = [current[1], current[0], current[2], current[3]].filter(i => i)
-        const switchedImages = current.map((url) => {
-          return {
-            index: current.indexOf(url) + 1,
-            url
-          }
-        })
-        return switchedImages
+        if (current.length === 1) {
+          current.splice(0, 0, '')
+          const switchedImages = current.map((url) => {
+            return {
+              index: this.currentChunk.indexOf(url) + 1 || -1,
+              url
+            }
+          })
+          return switchedImages
+        } else {
+          const switchedImages = current.map((url) => {
+            return {
+              index: current.indexOf(url) + 1,
+              url
+            }
+          })
+          return switchedImages
+        }
       }
     },
     allImages() {

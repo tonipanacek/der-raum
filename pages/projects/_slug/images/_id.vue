@@ -183,84 +183,88 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.image-container {
-  @include respond-to('large') {
-    max-height: calc(100vh - 2 * #{spacing(frame)});
+.project {
+  .image-container {
+    position: relative;
+    @include respond-to('large') {
+      max-height: calc(100vh - 2 * #{spacing(frame)});
+      position: static;
+    }
+    .image {
+      display: flex;
+      justify-content: space-around;
+    }
   }
-  .image {
-    display: flex;
-    justify-content: space-around;
+  img {
+    height: 80vh;
   }
-}
-img {
-  height: 80vh;
-}
 
-h1 {
-  @include smallCaps;
-  color: color(dark);
-}
-p {
-  @include smallCaps;
-  color: color(light);
-  font-size: 0.8em;
-}
-.image-footer {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  .caption {
-    flex-grow: 2;
-    padding: spacing(md);
-    @include respond-to(large) {
-      padding: 0;
+  h1 {
+    @include smallCaps;
+    color: color(dark);
+  }
+  p {
+    @include smallCaps;
+    color: color(light);
+    font-size: 0.8em;
+  }
+  .image-footer {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    .caption {
+      flex-grow: 2;
+      padding: spacing(md);
+      @include respond-to(large) {
+        padding: 0;
+      }
+      h1 {
+        margin-top: 0;
+      }
     }
-    h1 {
-      margin-top: 0;
-    }
   }
-}
-.close-link {
-  display: none;
-  position: absolute;
-  left: -2.5rem;
-  top: -0.3em;
-  .close-btn {
-    height: .8em;
-  }
-}
-.nav {
-  height: 1rem;
-  fill: color(light);
-  &:hover {
-    fill: color(dark);
-  }
-}
-.image-nav {
-  margin-right: spacing(md);
-  display: none;
-  @include respond-to('large') {
-    display: block;
-  }
-}
-.previous-btn {
-  -webkit-transform:rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-right: spacing(sm);
-}
-@include respond-to('large') {
   .close-link {
-    display: block;
+    display: none;
+    position: absolute;
+    left: -2.5rem;
+    top: -0.3em;
+    .close-btn {
+      height: .8em;
+    }
+  }
+  .nav {
+    height: 1rem;
+    fill: color(light);
+    &:hover {
+      fill: color(dark);
+    }
   }
   .image-nav {
-    margin-right: 0;
+    margin-right: spacing(md);
+    display: none;
+    @include respond-to('large') {
+      display: block;
+    }
   }
-}
-.no-next {
-  height: 1rem;
-  width: 2.25rem;
+  .previous-btn {
+    -webkit-transform:rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-right: spacing(sm);
+  }
+  @include respond-to('large') {
+    .close-link {
+      display: block;
+    }
+    .image-nav {
+      margin-right: 0;
+    }
+  }
+  .no-next {
+    height: 1rem;
+    width: 2.25rem;
+  }
 }
 </style>
