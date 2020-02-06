@@ -28,37 +28,23 @@ export default {
   },
   generate: {
     routes:
-    // {
-    //   async asyncData() {
-    //     // create context via webpack to map over all blog pages
-    //     const allPages = await require.context(
-    //       "~/content/services/",
-    //       true,
-    //       /\.md$/
-    //     )
-    //     return allPages.keys().map(key => {
-    //       // give back the value of each page context
-    //       return {
-    //         route: '/services/' + key.title,
-    //         payload: key
-    //       }
-    //     })
-    //   }
-    // }
-    function () {
-     return require.context(
+    {
+      async function() {
+        // create context via webpack to map over all blog pages
+        const allPages = await require.context(
           "~/content/services/",
           true,
           /\.md$/
-      )
-     .then((res) => {
-        return res.data.map((service) => {
-            return {
-               route: '/services/' + service.title,
-               payload: service
-            }
+        )
+        const pages = allPages.keys().map(key => {
+          // give back the value of each page context
+          return {
+            route: '/services/' + key.replace(/.\/|.md/),
+            payload: key
+          }
         })
-     })
+        return pages
+      }
     }
   },
   /*
