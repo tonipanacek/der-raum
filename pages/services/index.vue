@@ -13,7 +13,6 @@ export default {
       true,
       /\.md$/
     )
-    console.log(allPages.keys())
     const pages = allPages.keys().map(key => {
       // give back the value of each page context
       return allPages(key)

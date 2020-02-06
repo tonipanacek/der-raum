@@ -39,7 +39,7 @@ export default {
         const pages = allPages.keys().map(key => {
           // give back the value of each page context
           return {
-            route: '/services/' + key.replace(/.\/|.md/),
+            route: '/services/' + key.replace(/.\/|.md/gi, ''),
             payload: key
           }
         })
