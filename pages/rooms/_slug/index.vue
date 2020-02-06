@@ -17,7 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
-import { get, sortBy, isEmpty, chunk } from "lodash"
+import { get, sortBy, isEmpty, chunk, kebabCase } from "lodash"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -38,12 +38,10 @@ export default {
     PrevNextButtons,
     Article
   },
-  async asyncData({ params, error }) {
+  async asyncData({ app, params, error }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      // get current page data
-      const page = await import(`~/content/rooms/${slug}.md`)
 
       // create context via webpack to map over all pages
       let allPages = await require.context(
@@ -55,6 +53,9 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
+
+      const locale = app.i18n.locale
+      const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
       return {
         page,

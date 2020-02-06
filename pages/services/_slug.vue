@@ -17,7 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
-import { sortBy } from "lodash"
+import { get, sortBy, kebabCase } from "lodash"
 import Container from '~/components/Container'
 import Frame from '~/components/Frame'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -39,7 +39,7 @@ export default {
     Article,
     PrevNextButtons
   },
-  async asyncData({ params, error }) {
+  async asyncData({ app, params, error }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
@@ -55,9 +55,8 @@ export default {
         return allPages(key)
       })
 
-      const page = pages.find(p => {
-        formatSlug(this.$ta(p.attributes, 'title')) === slug
-      })
+      const locale = app.i18n.locale
+      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
       return {
         page,
@@ -74,6 +73,11 @@ export default {
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
-  }
+  },
+  // computed: {
+  //   page() {
+  //     return this.$data.pages.find(p => this.formatSlug(this.$ta(p.attributes, 'title')) === this.$data.slug)
+  //   }
+  // }
 }
 </script>

@@ -17,6 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
+import { get, kebabCase } from 'lodash'
 import Article from "~/components/Article"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
@@ -37,7 +38,7 @@ export default {
     PrevNextButtons,
     Article
   },
-  async asyncData({ params }) {
+  async asyncData({ app, params }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
@@ -49,9 +50,8 @@ export default {
         return allPages(key)
       })
 
-      const page = allPages.find(page => {
-        formatSlug(this.$ta(page.attributes, 'title')) === slug
-      })
+      const locale = app.i18n.locale
+      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
       return {
         pages: [

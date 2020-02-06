@@ -39,7 +39,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy, isEmpty, chunk, isEqual } from 'lodash'
+import { get, sortBy, isEmpty, chunk, isEqual, kebabCase } from 'lodash'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
 import Frame from "~/components/Frame"
@@ -55,15 +55,12 @@ export default {
   },
   name: 'projectsSlug',
   mixins: [prevNext],
-  async asyncData({ params, error }) {
+  async asyncData({ app, params, error }) {
     // get the slug as a param to import the correct md file
     try {
       // get current page data
       const slug = params.slug
       const id = parseInt(params.id)
-      const page = await import(`~/content/projects/${slug}.md`)
-      const images = get(page, 'attributes.images', [])
-      const image = images[id - 1]
 
       // create context via webpack to map over all pages
       let allPages = await require.context(
@@ -75,6 +72,12 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
+
+      const locale = app.i18n.locale
+      const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
+
+      const images = get(page, 'attributes.images', [])
+      const image = images[id - 1]
 
       if (!image) {
         throw "No image found!"
