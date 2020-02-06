@@ -191,6 +191,9 @@ export default {
 .accessible {
   visibility: hidden;
   position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 #mobile-view {
   display: block;
