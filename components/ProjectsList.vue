@@ -51,7 +51,7 @@ export default {
       return get(attrs, 'title', '')
     },
     path(page) {
-      const slug = this.formatSlug(get(page, "attributes.title", ""))
+      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
         name: "projects-slug",
         params: {

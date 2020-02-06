@@ -2378,6 +2378,11 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
+commander@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-1.0.0.tgz#5e6a88e7070ff5908836ead19169548c30f90bcd"
+  integrity sha1-XmqI5wcP9ZCINurRkWlUjDD5C80=
+
 commander@2.17.x:
   version "2.17.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
@@ -4894,7 +4899,7 @@ js-levenshtein@^1.1.3:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.12.0, js-yaml@^3.13.1:
+js-yaml@^3.12.0, js-yaml@^3.13.1, js-yaml@^3.5.2:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
@@ -5323,12 +5328,17 @@ markdown-it-abbr@^1.0.3:
   resolved "https://registry.yarnpkg.com/markdown-it-abbr/-/markdown-it-abbr-1.0.4.tgz#d66b5364521cbb3dd8aa59dadfba2fb6865c8fd8"
   integrity sha1-1mtTZFIcuz3Yqlna37ovtoZcj9g=
 
+markdown-it-attrs@^0.7.1:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/markdown-it-attrs/-/markdown-it-attrs-0.7.4.tgz#2e5785af1d311dae50c3dafff354890dbe1eeae5"
+  integrity sha1-LleFrx0xHa5Qw9r/81SJDb4e6uU=
+
 markdown-it-deflist@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/markdown-it-deflist/-/markdown-it-deflist-2.0.3.tgz#5727db04184d3cb2bc6ee4a9641e3a1091d5fd6f"
   integrity sha512-/BNZ8ksW42bflm1qQLnRI09oqU2847Z7MVavrR0MORyKLtiUYOMpwtlAfMSZAQU9UCvaUZMpgVAqoS3vpToJxw==
 
-markdown-it-emoji@^1.1.1:
+markdown-it-emoji@^1.1.1, markdown-it-emoji@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
@@ -5337,6 +5347,11 @@ markdown-it-footnote@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-footnote/-/markdown-it-footnote-2.0.0.tgz#14e9c4f68ff12cf354fa365ae378276e8104ca94"
   integrity sha1-FOnE9o/xLPNU+jZa43gnboEEypQ=
+
+markdown-it-implicit-figures@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/markdown-it-implicit-figures/-/markdown-it-implicit-figures-0.3.2.tgz#2b84732c6425b9233e648d44e7dd8a9d455647c8"
+  integrity sha1-K4RzLGQluSM+ZI1E592KnUVWR8g=
 
 markdown-it-ins@^2.0.0:
   version "2.0.0"
@@ -5400,10 +5415,32 @@ markdown-it@^6.0.1:
     mdurl "~1.0.1"
     uc.micro "^1.0.1"
 
+markdown-it@^8.0.0:
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
+  integrity sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
+
 match-at@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/match-at/-/match-at-0.1.1.tgz#25d040d291777704d5e6556bbb79230ec2de0540"
   integrity sha512-h4Yd392z9mST+dzc+yjuybOGFNOZjmXIPKWjxBd1Bb23r4SmDOsk2NYCU2BMUBGbSpZqwVsZYNq26QS3xfaT3Q==
+
+md-yaml-json@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/md-yaml-json/-/md-yaml-json-1.1.1.tgz#703141abcdc9ce0146a618011364bc1661809d4d"
+  integrity sha1-cDFBq83JzgFGphgBE2S8FmGAnU0=
+  dependencies:
+    markdown-it "^8.0.0"
+    markdown-it-attrs "^0.7.1"
+    markdown-it-emoji "^1.2.0"
+    markdown-it-implicit-figures "^0.3.2"
+    yaml-front-matter "^3.4.0"
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -9259,6 +9296,14 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yaml-front-matter@^3.4.0:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/yaml-front-matter/-/yaml-front-matter-3.4.1.tgz#e52e84fea6983b93755e9b1564dba989b006b5a5"
+  integrity sha1-5S6E/qaYO5N1XpsVZNupibAGtaU=
+  dependencies:
+    commander "1.0.0"
+    js-yaml "^3.5.2"
 
 yargs-parser@^5.0.0:
   version "5.0.0"

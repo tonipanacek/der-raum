@@ -30,6 +30,12 @@
   import json from "~/content/data/legal"
   import Cluster from "~/components/Cluster"
   export default {
+  nuxtI18n: {
+    paths: {
+      en: '/impressum',
+      de: '/impressum'
+    }
+  },
     name: "Legal",
     json: json
   }

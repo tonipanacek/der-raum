@@ -5,7 +5,7 @@
         v-for="service, index in sortedServices"
         :id="service.attributes.title"
         :key="service.attributes.title"
-        :to="`/services/${formatSlug(service.attributes.title)}`"
+        :to="localePath({ name: 'services-slug', params: { slug: formatSlug($ta(service.attributes, 'title')) } })"
         :class="{ 'active': hover && hover === service.attributes.title, hover: hover, 'service-link': true }"
         @mouseover.native="hover = service.attributes.title"
         @mouseleave.native="hover = ''"
@@ -73,15 +73,6 @@ export default {
         return 0
       })
       return sortedServices
-    }
-  },
-  methods: {
-    formatSlug(title) {
-      const regex = / /gi
-      return title
-        .toLowerCase()
-        .trim()
-        .replace(regex, "-")
     }
   }
 }

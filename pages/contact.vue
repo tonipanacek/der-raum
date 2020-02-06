@@ -42,6 +42,12 @@ import Frame from '~/components/Frame'
 import Article from "~/components/Article"
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/contact',
+      de: '/kontakt'
+    }
+  },
   components: {
     Container,
     Cluster,

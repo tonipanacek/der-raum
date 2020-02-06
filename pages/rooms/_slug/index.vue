@@ -17,7 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
-import { get, sortBy, isEmpty, chunk } from "lodash"
+import { get, sortBy, isEmpty, chunk, kebabCase } from "lodash"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -25,6 +25,12 @@ import Article from "~/components/Article"
 import prevNext from '~/plugins/prev_next'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: `/rooms/:slug`,
+      de: '/raume/:slug'
+    }
+  },
   mixins: [prevNext],
   components: {
     Frame,
@@ -32,12 +38,10 @@ export default {
     PrevNextButtons,
     Article
   },
-  async asyncData({ params, error }) {
+  async asyncData({ app, params, error, store }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      // get current page data
-      const page = await import(`~/content/rooms/${slug}.md`)
 
       // create context via webpack to map over all pages
       let allPages = await require.context(
@@ -48,6 +52,14 @@ export default {
       allPages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
+      })
+
+      const locale = app.i18n.locale
+      const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
+
+      await store.dispatch('i18n/setRouteParams', {
+        en: { slug: kebabCase(get(page, `attributes.en_title`)) },
+        de: { slug: kebabCase(get(page, `attributes.de_title`)) }
       })
 
       return {

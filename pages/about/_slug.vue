@@ -17,6 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
+import { get, kebabCase } from 'lodash'
 import Article from "~/components/Article"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
@@ -24,6 +25,12 @@ import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/about/:slug',
+      de: '/uber/:slug'
+    }
+  },
   mixins: [prevNext],
   components: {
     Frame,
@@ -31,12 +38,10 @@ export default {
     PrevNextButtons,
     Article
   },
-  async asyncData({ params }) {
+  async asyncData({ app, params }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      // get current page data
-      const page = await import(`~/content/about/${slug}.md`)
 
       // create context via webpack to map over all pages
       const allPages = await require.context("~/content/about/", true, /\.md$/)
@@ -44,6 +49,9 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
+
+      const locale = app.i18n.locale
+      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
       return {
         pages: [

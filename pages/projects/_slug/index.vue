@@ -50,7 +50,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy, isEmpty, chunk, isEqual, flatten, uniq } from 'lodash'
+import { get, sortBy, isEmpty, chunk, isEqual, flatten, uniq, kebabCase } from 'lodash'
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import Frame from "~/components/Frame"
@@ -59,14 +59,19 @@ import ImagesList from "~/components/ImagesList"
 
 export default {
   name: 'projectsSlug',
+  nuxtI18n: {
+    paths: {
+      de: '/projekte/:slug',
+      en: '/projects/:slug'
+    }
+  },
   mixins: [paginate],
-  async asyncData({ params, error }) {
+  async asyncData({ app, params, error, store }) {
     // get the slug as a param to import the correct md file
     try {
       // get current page data
       const slug = params.slug
-      const page = await import(`~/content/projects/${slug}.md`)
-      const images = get(page, 'attributes.images', [])
+
       // create context via webpack to map over all pages
       let allPages = await require.context(
         "~/content/projects/",
@@ -77,6 +82,16 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
+
+      const locale = app.i18n.locale
+      const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
+
+      await store.dispatch('i18n/setRouteParams', {
+        en: { slug: kebabCase(get(page, `attributes.en_title`)) },
+        de: { slug: kebabCase(get(page, `attributes.de_title`)) }
+      })
+
+      const images = get(page, 'attributes.images', [])
 
       return {
         pages: images, // For paginate mixin, must be named as such :)

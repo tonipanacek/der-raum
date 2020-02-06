@@ -17,7 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
-import { sortBy } from "lodash"
+import { get, sortBy, kebabCase } from "lodash"
 import Container from '~/components/Container'
 import Frame from '~/components/Frame'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -25,6 +25,12 @@ import prevNext from '~/plugins/prev_next'
 import Article from "~/components/Article"
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/services/:slug',
+      de: '/leistungen/:slug'
+    }
+  },
   mixins: [prevNext],
   components: {
     Frame,
@@ -33,12 +39,10 @@ export default {
     Article,
     PrevNextButtons
   },
-  async asyncData({ params, error }) {
+  async asyncData({ app, params, error, store }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      // get current page data
-      const page = await import(`~/content/services/${slug}.md`)
 
       // create context via webpack to map over all pages
       const allPages = await require.context(
@@ -49,6 +53,14 @@ export default {
       const pages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
+      })
+
+      const locale = app.i18n.locale
+      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
+
+      await store.dispatch('i18n/setRouteParams', {
+        en: { slug: kebabCase(get(page, `attributes.en_title`)) },
+        de: { slug: kebabCase(get(page, `attributes.de_title`)) }
       })
 
       return {
@@ -66,6 +78,11 @@ export default {
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
-  }
+  },
+  // computed: {
+  //   page() {
+  //     return this.$data.pages.find(p => this.formatSlug(this.$ta(p.attributes, 'title')) === this.$data.slug)
+  //   }
+  // }
 }
 </script>

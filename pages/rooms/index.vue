@@ -38,6 +38,12 @@ import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'roomsIndex',
+  nuxtI18n: {
+    paths: {
+      en: '/rooms',
+      de: '/raume'
+    }
+  },
   mixins: [paginate],
   async asyncData() {
     // create context via webpack to map over all room pages
