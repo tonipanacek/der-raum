@@ -9,7 +9,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: '/about',
-      de: '/ueber'
+      de: '/uber'
     }
   },
   async asyncData() {

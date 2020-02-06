@@ -28,7 +28,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: '/about/:slug',
-      de: '/ueber/:slug'
+      de: '/uber/:slug'
     }
   },
   mixins: [prevNext],

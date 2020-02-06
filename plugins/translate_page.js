@@ -1,5 +1,5 @@
 import Vue from "vue"
-import { get, isEmpty } from "lodash"
+import { get, isEmpty, kebabCase, deburr } from "lodash"
 
 const translatePage = {
   // Pages like `services` pages load markdown content from Forestry CMS. This mixin allows for translation of Markdown attributes from that file, like (for example) en_description. If an attribute that does not have a locale prefix (en_ or de_) is requested, then the attribute is returned with no translation (image or title).
@@ -20,11 +20,7 @@ const translatePage = {
       if (!title) {
         return ""
       }
-      const regex = / /gi
-      return title
-        .toLowerCase()
-        .trim()
-        .replace(regex, "-")
+      return kebabCase(deburr(title))
     }
   }
 }

@@ -74,15 +74,6 @@ export default {
       })
       return sortedServices
     }
-  },
-  methods: {
-    formatSlug(title) {
-      const regex = / /gi
-      return title
-        .toLowerCase()
-        .trim()
-        .replace(regex, "-")
-    }
   }
 }
 </script>

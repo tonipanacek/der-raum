@@ -41,7 +41,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: '/rooms',
-      de: '/raeume'
+      de: '/raume'
     }
   },
   mixins: [paginate],
