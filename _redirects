@@ -33,4 +33,3 @@
 /kundenfeedback /
 
 # to account for SPA dynamically generated routes
-/*    /index.html   200
