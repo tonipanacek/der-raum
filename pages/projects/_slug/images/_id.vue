@@ -179,8 +179,9 @@ export default {
     },
     allPagesCurrentChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
-      const chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
-      return chunk.slice(0, 3)
+      let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+      chunk = chunk.slice(0, 3)
+      return [chunk[1], chunk[0], chunk[2]].filter(p => p)
     },
     length() {
       if (isEmpty(this.$data.pages)) { return 0 }
