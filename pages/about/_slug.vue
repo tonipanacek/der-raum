@@ -38,7 +38,7 @@ export default {
     PrevNextButtons,
     Article
   },
-  async asyncData({ app, params }) {
+  async asyncData({ app, params, store }) {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
@@ -52,6 +52,11 @@ export default {
 
       const locale = app.i18n.locale
       const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
+
+      await store.dispatch('i18n/setRouteParams', {
+        en: { slug: kebabCase(get(page, `attributes.en_title`)) },
+        de: { slug: kebabCase(get(page, `attributes.de_title`)) }
+      })
 
       return {
         pages: [
