@@ -12,7 +12,7 @@
       :goingUp="goingUp"
       @increment="incrementPage"
       />
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" />
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement=decrementPage />
     </div>
     <div
     id="rooms-mobile"

@@ -22,7 +22,7 @@
           />
         </div>
       </article>
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" />
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" @increment="incrementPage" @decrement="decrementPage" />
     </div>
     <div
     id="project-images-mobile"
