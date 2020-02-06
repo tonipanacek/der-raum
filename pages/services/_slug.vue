@@ -25,6 +25,12 @@ import prevNext from '~/plugins/prev_next'
 import Article from "~/components/Article"
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/services/:slug',
+      de: '/leistungen/:slug'
+    }
+  },
   mixins: [prevNext],
   components: {
     Frame,
@@ -37,8 +43,6 @@ export default {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      // get current page data
-      const page = await import(`~/content/services/${slug}.md`)
 
       // create context via webpack to map over all pages
       const allPages = await require.context(
@@ -49,6 +53,10 @@ export default {
       const pages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
+      })
+
+      const page = pages.find(p => {
+        formatSlug(this.$ta(p.attributes, 'title')) === slug
       })
 
       return {

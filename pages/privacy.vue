@@ -41,6 +41,18 @@
     Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
   </div>
 </template>
+
+<script>
+export default {
+  nuxtI18n: {
+    paths: {
+      en: '/privacy',
+      de: '/datenschutz'
+    }
+  }
+}
+</script>
+
 <style lang="scss">
   #privacy {
     padding: 0 2em;

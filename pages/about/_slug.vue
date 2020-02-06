@@ -24,6 +24,12 @@ import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/about/:slug',
+      de: '/ueber/:slug'
+    }
+  },
   mixins: [prevNext],
   components: {
     Frame,
@@ -35,14 +41,16 @@ export default {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      // get current page data
-      const page = await import(`~/content/about/${slug}.md`)
 
       // create context via webpack to map over all pages
       const allPages = await require.context("~/content/about/", true, /\.md$/)
       const pages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
+      })
+
+      const page = allPages.find(page => {
+        formatSlug(this.$ta(page.attributes, 'title')) === slug
       })
 
       return {

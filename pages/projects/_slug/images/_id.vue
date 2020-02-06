@@ -47,6 +47,12 @@ import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      de: '/projekte/:slug/bilder/:id',
+      en: '/projects/:slug/images/:id'
+    }
+  },
   name: 'projectsSlug',
   mixins: [prevNext],
   async asyncData({ params, error }) {

@@ -22,6 +22,12 @@ import Article from '~/components/Article'
 import PrevNextButtons from '~/components/PrevNextButtons'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/about/business-partner',
+      de: '/ueber/business-partner'
+    }
+  },
   businessPartners: json["partners"],
   components: {
     Cluster,

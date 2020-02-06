@@ -6,6 +6,12 @@
 import { get, min } from "lodash"
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/services',
+      de: '/leistungen'
+    }
+  },
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context(
@@ -30,7 +36,7 @@ export default {
     const page = pages.find(
       page => get(page, "attributes.position") === minPosition
     )
-    const slug = this.formatSlug(get(page, "attributes.title", ""))
+    const slug = this.formatSlug(this.$ta(page.attributes, "title"))
     const redirectPath = this.localePath({
       name: "services-slug",
       params: {

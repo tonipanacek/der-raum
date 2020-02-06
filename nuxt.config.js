@@ -1,5 +1,6 @@
 const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
+import loadPages from "./load_pages"
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -27,24 +28,13 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   generate: {
-    routes:
-    {
-      async function() {
-        // create context via webpack to map over all blog pages
-        const allPages = await require.context(
-          "~/content/services/",
-          true,
-          /\.md$/
-        )
-        const pages = allPages.keys().map(key => {
-          // give back the value of each page context
-          return {
-            route: '/services/' + key.replace(/.\/|.md/gi, ''),
-            payload: key
-          }
-        })
-        return pages
-      }
+    async routes() {
+
+      return [
+        ...loadPages('projects', 'projekte'),
+        ...loadPages('services', 'leistungen'),
+        ...loadPages('about', '&uuml;ber')
+      ]
     }
   },
   /*

@@ -59,6 +59,12 @@ import ImagesList from "~/components/ImagesList"
 
 export default {
   name: 'projectsSlug',
+  nuxtI18n: {
+    paths: {
+      de: '/projekte/:slug',
+      en: '/projects/:slug'
+    }
+  },
   mixins: [paginate],
   async asyncData({ params, error }) {
     // get the slug as a param to import the correct md file

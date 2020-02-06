@@ -39,6 +39,12 @@ import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'projectsIndex',
+  nuxtI18n: {
+    paths: {
+      de: '/projekte',
+      en: '/projects'
+    }
+  },
   mixins: [paginate],
   async asyncData() {
     // create context via webpack to map over all blog pages

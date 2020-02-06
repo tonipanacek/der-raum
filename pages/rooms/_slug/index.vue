@@ -25,6 +25,12 @@ import Article from "~/components/Article"
 import prevNext from '~/plugins/prev_next'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/rooms/:slug',
+      de: '/raeume/:slug'
+    }
+  },
   mixins: [prevNext],
   components: {
     Frame,
