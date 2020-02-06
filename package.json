@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "develop": "nuxt",
-    "build": "nuxt build && cp netlify_redirects.txt dist/_redirects ",
+    "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && cp _redirects dist",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
