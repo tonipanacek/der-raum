@@ -1,6 +1,6 @@
 <template>
   <Stack class="navbar">
-    <ul class="list-wrapper">
+    <ul class="navbar-list-wrapper">
       <li>
         <nuxt-link :to="localePath({ name: 'index' })" class="nav-item logo">
           <Logo class="logo" />
@@ -68,14 +68,14 @@ export default {
   }
 }
 
-.list-wrapper {
+.navbar-list-wrapper {
   display: flex;
   justify-content: space-between;
   padding-left: 0;
 }
 
 @include respond-to('large') {
-  .list-wrapper {
+  .navbar-list-wrapper {
     display: block;
   }
 }
