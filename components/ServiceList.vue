@@ -175,11 +175,11 @@ $main-height: calc(100vh - 3em);
 @include respond-to('large') {
   .service-list {
     height: $main-height;
-    max-width: 110ch;
+    max-width: 100ch;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
-    grid-template-rows: 2.1fr .4fr 1.2fr .6fr 1.5fr;
+    grid-template-columns: minmax(0, .3fr) minmax(0, 3fr) minmax(0, .3fr) minmax(0, .5fr) minmax(0, 2fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, 1.2fr) minmax(0, .6fr) minmax(0, 1.5fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
@@ -187,10 +187,12 @@ $main-height: calc(100vh - 3em);
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
     align-self: start;
+    min-height: 100%;
   }
   #Planning.service-link {
     grid-area:  1 / 5 / 4 / 6;
     align-self: stretch;
+    min-height: 100%;
     .frame {
       height: 100%;
     }
@@ -198,6 +200,7 @@ $main-height: calc(100vh - 3em);
   #Production.service-link {
     grid-area:  4 / 1 / 6 / 3;
     align-self: end;
+    min-height: 100%;
     h3 {
       margin-bottom: 0;
     }
