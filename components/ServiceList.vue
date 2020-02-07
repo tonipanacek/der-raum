@@ -114,7 +114,7 @@ export default {
 .hover {
   h3 {
     color: color(black);
-    font-weight: 600;
+    font-weight: 700;
   }
   .projects-link {
     color: color(black);
@@ -164,7 +164,7 @@ $main-height: calc(100vh - 3em);
   a {
     &:hover {
       color: color(black);
-      font-weight: 600;
+      font-weight: 700;
       border: 1.1px solid color(black);
     }
   }
