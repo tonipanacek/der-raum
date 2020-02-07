@@ -157,7 +157,9 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   .room-link:nth-child(3) {
     grid-area: 4 / 1 / 7 / 3;
-    align-self: end;
+    @include respond-to-vertical(vertical) {
+      align-self: end;
+    }
   }
   .room-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;

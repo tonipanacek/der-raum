@@ -184,23 +184,32 @@ $main-height: calc(100vh - 3em);
     grid-row-gap: 0px;
   }
 
+  .service-link {
+    max-height: 15rem;
+    @include respond-to-vertical(vertical) {
+      min-height: 100%;
+      max-height: none;
+    }
+  }
+
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
     align-self: start;
-    min-height: 100%;
   }
   #Planning.service-link {
     grid-area:  1 / 5 / 4 / 6;
-    align-self: stretch;
-    min-height: 100%;
+    @include respond-to-vertical(vertical) {
+      align-self: stretch;
+    }
     .frame {
       height: 100%;
     }
   }
   #Production.service-link {
     grid-area:  4 / 1 / 6 / 3;
-    align-self: end;
-    min-height: 100%;
+    @include respond-to-vertical(vertical) {
+      align-self: end;
+    }
     h3 {
       margin-bottom: 0;
     }

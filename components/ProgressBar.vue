@@ -24,7 +24,10 @@ export default {
   --width: #{spacing(xs) / 2};
   display: none;
   @include respond-to(large) {
-    display: block;
+    display: none;
+    @include respond-to-vertical(vertical) {
+      display: block;
+    }
   }
   position: absolute;
   top: 55vh;
