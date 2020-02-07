@@ -126,7 +126,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   .rooms-grid {
     position: sticky;
     height: $main-height;
-    max-width: 110ch;
+    max-width: 100ch;
     margin: 0 auto;
     display: grid;
     overflow: hidden;

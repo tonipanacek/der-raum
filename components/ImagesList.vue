@@ -128,7 +128,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 @include respond-to('large') {
   .images-grid {
     max-height: $main-height;
-    max-width: 110ch;
+    max-width: 100ch;
     margin: 0 auto;
     display: grid;
     overflow-y: hidden;
