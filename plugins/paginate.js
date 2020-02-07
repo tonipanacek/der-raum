@@ -25,7 +25,7 @@ export default {
         const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
         let chunks = chunk(allPages, 3)
         let chunkers
-        if (this.$route.path.match(/^(\/projekte|\/en\/projekte)$/)) {
+        if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
           chunkers = chunks.map((c, index) => {
             const nextPortrait = get(chunks, `[${index + 1}][0]`)
             if (c.length === this.max - 1) {

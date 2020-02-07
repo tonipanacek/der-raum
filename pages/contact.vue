@@ -21,7 +21,7 @@
             <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
           <div class="info">
-            <h1>{{ $t("contact.mainTitle") }}</h1>
+            <h1>{{ $t("contact.thirdTitle") }}</h1>
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
             </a>
@@ -72,6 +72,7 @@ export default {
     width: 100%;
     align-items: flex-start;
     justify-content: space-between;
+    padding-bottom: 1em;
     p {
       color: color(light);
     }
@@ -85,6 +86,7 @@ export default {
 }
 .info {
   flex: 0 1 31ch;
+  padding-bottom: 1em;
   .contact-item {
     text-decoration: none;
     &:hover {
