@@ -169,8 +169,8 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 .room-title {
   @include smallCaps;
-  color: color(light);
-  font-weight: 500;
+  color: color(dark);
+  font-weight: 400;
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
   padding-left: 0.5em;
@@ -184,7 +184,8 @@ $main-height: calc(100vh - #{spacing(frame)});
   text-decoration: none;
   transition: transform 500ms ease, opacity 0.3s ease-in-out;
   &:hover > .room-title {
-    color: color(dark);
+    color: color(black);
+    font-weight: 600;
   }
   &:nth-child(4) {
     h3 {
@@ -197,17 +198,19 @@ $main-height: calc(100vh - #{spacing(frame)});
 // hovering effect
 .hover {
   h3 {
-    color: color(dark);
+    color: color(black);
+    font-weight: 600;
   }
   .rooms-link {
-    color: color(dark);
-    border: 1px solid color(dark);
+    color: color(black);
+    border: 1px solid color(black);
   }
 }
 .hover:not(.active) {
   opacity: .8;
   h3 {
-    color: color(light);
+    color: color(dark);
+    font-weight: 400;
   }
 }
 </style>

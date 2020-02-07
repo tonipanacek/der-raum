@@ -89,14 +89,16 @@ export default {
   .nav-item {
     transition: color 100ms ease, font-weight 100ms ease;
     &:hover {
-      color: color(dark);
+      color: color(black);
+      font-weight: 600;
     }
   }
   .nuxt-link-active {
     color: color(black);
     font-weight: 600;
     &:hover {
-      color: color(dark);
+      color: color(black);
+      font-weight: 600;
     }
   }
   .nav-items {

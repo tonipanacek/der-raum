@@ -3,7 +3,7 @@
     <Article class="contact">
       <div class="image-container">
         <Frame>
-          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/kontakt3_h6xnua.jpg">
+          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg">
         </Frame>
       </div>
       <!-- <Cluster> -->
@@ -59,11 +59,7 @@ export default {
 
 <style lang="scss">
 .contact {
-  max-width: 150ch;
-  h2{
-    @include smallCaps;
-    color: color(dark);
-  }
+  max-width: 110ch;
 }
 .contact {
   .text {
@@ -74,7 +70,7 @@ export default {
     justify-content: space-between;
     padding-bottom: 1em;
     p {
-      color: color(light);
+      color: color(dark);
     }
   }
   .image-container {
@@ -91,7 +87,7 @@ export default {
     text-decoration: none;
     &:hover {
       p{
-        color: color(dark);
+        color: color(black);
       }
     }
   }

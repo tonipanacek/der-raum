@@ -44,7 +44,7 @@ export default {
     }
     h1 {
       @include smallCaps;
-      color: color(dark);
+      color: color(black);
       font-weight: 600;
     }
     ul {
