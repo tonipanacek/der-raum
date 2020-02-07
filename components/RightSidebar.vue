@@ -48,7 +48,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     text-decoration: none;
     color: color(light);
     &:hover {
-      color: darken(color(light), 10%);
+      color: color(dark);
     }
     &.nuxt-link-exact-active {
       color: color(dark);
@@ -65,6 +65,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     align-items: flex-end;
     p {
       @include smallCaps;
+      color: color(light);
       font-size: 1em;
       writing-mode: horizontal-tb;
       margin: 0;

@@ -108,6 +108,11 @@ export default {
   }
   .hovered {
     color: color(black);
+    font-weight: 700;
+  }
+  .hover:hover {
+    color: color(black);
+    font-weight: 700;
   }
 }
 .insert-move {

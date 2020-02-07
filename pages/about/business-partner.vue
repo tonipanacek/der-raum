@@ -79,7 +79,7 @@ export default {
     width: 100%;
     margin: 0.25em;
     @include respond-to('large') {
-      width: 50%;
+      width: 60%;
     }
   }
   ul {

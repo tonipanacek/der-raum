@@ -25,6 +25,7 @@ export default {
     img {
       object-fit: cover;
       max-width: 100%;
+      max-height: 100%;
     }
   }
   img,
@@ -44,7 +45,7 @@ export default {
     }
     h1 {
       @include smallCaps;
-      color: color(dark);
+      color: color(black);
       font-weight: 600;
     }
     ul {

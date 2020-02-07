@@ -81,7 +81,7 @@ export default {
 <style lang="scss">
 .service-title {
   @include smallCaps;
-  color: color(light);
+  color: color(dark);
   font-weight: 400;
 }
 .service-link {
@@ -107,16 +107,18 @@ export default {
 .hover:not(.active) {
   opacity: .8;
   h3 {
-    color: color(light);
+    color: color(dark);
+    font-weight: 400;
   }
 }
 .hover {
   h3 {
-    color: color(dark);
+    color: color(black);
+    font-weight: 700;
   }
   .projects-link {
-    color: color(dark);
-    border: 1px solid color(dark);
+    color: color(black);
+    border: 1px solid color(black);
   }
 }
 
@@ -146,7 +148,8 @@ $main-height: calc(100vh - 3em);
 }
 .projects-link {
   @include smallCaps;
-  border: 1px solid color(light);
+  color: color(dark);
+  border: 1px solid color(dark);
   text-decoration: none;
   width: 100%;
   height: 15ch;
@@ -160,8 +163,9 @@ $main-height: calc(100vh - 3em);
   width: 100%;
   a {
     &:hover {
-      color: color(dark);
-      border: 1px solid color(dark);
+      color: color(black);
+      font-weight: 700;
+      border: 1.1px solid color(black);
     }
   }
 }

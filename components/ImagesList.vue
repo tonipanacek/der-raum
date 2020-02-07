@@ -93,9 +93,10 @@ export default {
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = parseInt(el.dataset.index) * 200
+        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
+
         if (this.goingUp) {
-          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
+          delay = parseInt(el.dataset.index) * 200
         }
         setTimeout(() => {
           el.style.opacity = 1
@@ -166,7 +167,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 }
 .image-title {
   @include smallCaps;
-  color: color(light);
+  color: color(dark);
   font-weight: 500;
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
@@ -181,7 +182,8 @@ $main-height: calc(100vh - #{spacing(frame)});
   text-decoration: none;
   transition: transform 500ms ease;
   &:hover > .image-title {
-    color: color(dark);
+    color: color(black);
+    font-weight: 600;
   }
   &:nth-child(4) {
     @include respond-to('large') {
