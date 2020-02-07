@@ -93,9 +93,10 @@ export default {
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = parseInt(el.dataset.index) * 200
+        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
+
         if (this.goingUp) {
-          delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
+          delay = parseInt(el.dataset.index) * 200
         }
         setTimeout(() => {
           el.style.opacity = 1
