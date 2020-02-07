@@ -7,7 +7,7 @@ export default {
     return {
       max: 4, // max number of items to display on a page
       pageNumber: 0,
-      refreshRate: 800, // amount of time between each scroll action
+      refreshRate: 200, // amount of time between each scroll action
       trackpadThreshold: 3, // how many steps must be registered on the scroll wheel
       mouseThreshold: 0.5,
       goingUp: false
