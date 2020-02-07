@@ -19,7 +19,7 @@ export default {
       return this.localePath({
         name: `${this.$store.state.pagesPrefix}-slug`,
         params: {
-          slug: this.formatSlug(get(this.nextPage, 'attributes.title', ''))
+          slug: this.formatSlug(this.$ta(this.nextPage.attributes, 'title'))
         }
       })
     },
@@ -28,7 +28,7 @@ export default {
       return this.localePath({
         name: `${this.$store.state.pagesPrefix}-slug`,
         params: {
-          slug: this.formatSlug(get(this.prevPage, 'attributes.title', ''))
+          slug: this.formatSlug(this.$ta(this.prevPage.attributes, 'title'))
         }
       })
     }
