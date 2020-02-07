@@ -1,7 +1,7 @@
 ---
 position: 2
 title: Team
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776445/team_vspyn5.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068496/Team-DER-RAUM-Beratung-Kontakt-Experten_grotnu.jpg
 en_title: Team
 de_title: Team
 en_description: Our team brings along different professional backgrounds and experiences.
