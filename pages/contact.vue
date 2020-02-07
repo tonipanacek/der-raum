@@ -72,6 +72,7 @@ export default {
     width: 100%;
     align-items: flex-start;
     justify-content: space-between;
+    padding-bottom: 1em;
     p {
       color: color(light);
     }
