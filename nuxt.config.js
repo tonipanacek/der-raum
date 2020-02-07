@@ -138,17 +138,21 @@ export default {
   sitemap: {
     hostname: 'https://www.der-raum.de',
     gzip: true,
-    routes: {
-      async routes() {
+    // routes: {
+      // async routes() {
 
-        return [
-          ...loadPages('projects', 'projekte'),
-          ...loadPages('services', 'leistungen'),
-          ...loadPages('rooms', 'raume'),
-          ...loadPages('about', 'uber')
-        ]
-      }
-    }
+      //   return [
+      //     ...loadPages('projects', 'projekte'),
+      //     ...loadPages('services', 'leistungen'),
+      //     ...loadPages('rooms', 'raume'),
+      //     ...loadPages('about', 'uber')
+      //   ]
+      // }
+    // }
+  },
+  // robots.txt config
+  robots: {
+    Sitemap: 'https://www.der-raum.de/sitemap.xml'
   },
   /*
    ** Axios module configuration
