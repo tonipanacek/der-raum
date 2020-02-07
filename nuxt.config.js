@@ -74,7 +74,8 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module"
+    "@nuxtjs/eslint-module",
+    "@nuxtjs/google-analytics"
   ],
   /*
    ** Nuxt.js modules
@@ -85,7 +86,9 @@ export default {
     "@nuxtjs/style-resources",
     "nuxt-i18n",
     "nuxt-fontawesome",
-    "nuxt-svg-loader"
+    "nuxt-svg-loader",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap"
   ],
   // Font awesome icon libraries
   fontawesome: {
@@ -126,6 +129,26 @@ export default {
     seo: true,
     lazy: true,
     langDir: "lang/"
+  },
+  // Google Analytics Config
+  googleAnalytics: {
+    id: 'UA-1433242-13'
+  },
+  // Sitemap config
+  sitemap: {
+    hostname: 'https://www.der-raum.de',
+    gzip: true,
+    routes: {
+      async routes() {
+
+        return [
+          ...loadPages('projects', 'projekte'),
+          ...loadPages('services', 'leistungen'),
+          ...loadPages('rooms', 'raume'),
+          ...loadPages('about', 'uber')
+        ]
+      }
+    }
   },
   /*
    ** Axios module configuration
