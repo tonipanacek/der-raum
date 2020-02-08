@@ -10,6 +10,7 @@
       v-if="isChunky"
       :rooms="currentRooms"
       :goingUp="goingUp"
+      :mobile="false"
       @increment="incrementPage"
       />
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement=decrementPage />
@@ -24,6 +25,7 @@
       v-if="isChunky"
       :rooms="allPagesView"
       :goingUp="goingUp"
+      :mobile="true"
       />
     </div>
   </Container>

@@ -65,7 +65,8 @@ export default {
     page: {
       type: Number
     },
-    goingUp: Boolean
+    goingUp: Boolean,
+    mobile: Boolean
   },
   methods: {
     getTitle(attrs) {
@@ -75,7 +76,7 @@ export default {
       return this.$data.pages.indexOf(image) + 1
     },
     handleClick(image, index) {
-      if (index > 2) {
+      if (index > 2 && !this.mobile) {
         this.$emit('increment')
       } else {
         const path = this.path(image)

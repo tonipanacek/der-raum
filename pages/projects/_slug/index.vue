@@ -18,6 +18,7 @@
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
+          :mobile="false"
           @increment="incrementPage"
           />
         </div>
@@ -41,6 +42,7 @@
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
+          :mobile="true"
           />
         </div>
       </article>
