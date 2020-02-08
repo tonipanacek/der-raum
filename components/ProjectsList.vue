@@ -46,7 +46,8 @@ export default {
       type: Array,
       required: true
     },
-    goingUp: Boolean
+    goingUp: Boolean,
+    mobile: Boolean
   },
   methods: {
     getTitle(attrs) {
@@ -93,7 +94,7 @@ export default {
       this.unsetHoveredMenuItem()
     },
     handleClick(project, index) {
-      if (index > 2) {
+      if (index > 2 && !this.mobile) {
         this.$emit('increment')
       } else {
         const path = this.path(project)
