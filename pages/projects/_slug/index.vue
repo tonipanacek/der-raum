@@ -157,6 +157,8 @@ export default {
       })
     },
     sortedImages() {
+      console.log(this.pagesChunks)
+      console.log(uniq(flatten(this.pagesChunks)))
       return uniq(flatten(this.pagesChunks))
     },
     images() {

@@ -86,25 +86,25 @@ export default {
     beforeEnter: function(el) {
       el.style.opacity = 0
       if (this.goingUp) {
-        el.style.transform = "translateY(10%)"
+        el.style.transform = "translateY(50%)"
       } else {
-        el.style.transform = "translateY(-10%)"
+        el.style.transform = "translateY(-50%)"
       }
-      el.style.transition = "opacity 400 ease, transform 400 ease"
+      el.style.transition = "opacity 350 ease, transform 350 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
+        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
 
         if (this.goingUp) {
-          delay = parseInt(el.dataset.index) * 200
+          delay = parseInt(el.dataset.index) * 150
         }
         setTimeout(() => {
           el.style.opacity = 1
           el.style.transform = "translateY(0)"
         }, delay)
         done()
-      }, 500)
+      }, 300)
     },
     leave: function(el, done) {
       done()
@@ -129,7 +129,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
-    max-height: $main-height;
+    height: $main-height;
     max-width: 100ch;
     margin: 0 auto;
     display: grid;
