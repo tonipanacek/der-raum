@@ -53,6 +53,7 @@ export default {
         // give back the value of each page context
         return allPages(key)
       })
+      allPages = sortBy(allPages, page => get(page, 'attributes.position'))
 
       const locale = app.i18n.locale
       const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
