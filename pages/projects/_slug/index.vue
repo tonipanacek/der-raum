@@ -157,7 +157,8 @@ export default {
       })
     },
     sortedImages() {
-      return uniq(flatten(this.pagesChunks))
+      const flattenedImages = uniq(flatten(this.pagesChunks))
+      return flattenedImages
     },
     images() {
       if (isEmpty(this.$data.pages)) { return [] }
