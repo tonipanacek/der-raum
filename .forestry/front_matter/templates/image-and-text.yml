@@ -58,6 +58,42 @@ fields:
       format: markdown
   description: Description for the page
   label: English Description
+- name: meta_tags
+  type: field_group
+  config: {}
+  fields:
+  - name: de_title
+    type: text
+    config:
+      required: false
+    label: German Title
+    description: Shows on tab name (German)
+  - name: en_title
+    type: text
+    config:
+      required: false
+    label: English Title
+    description: Shows on tab name (English)
+  - name: de_description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: German Description
+  - name: en_description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: English Description
+  label: Meta Tags
+  description: Meta tags for SEO purposes
 pages:
 - content/about/team.md
 - content/rooms/bathroom.md
