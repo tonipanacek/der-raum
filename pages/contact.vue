@@ -3,25 +3,24 @@
     <Article class="contact">
       <div class="image-container">
         <Frame>
-          <img src="https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg">
+          <img :src="$t('contact.cloudinaryImageUrl')">
         </Frame>
       </div>
-      <!-- <Cluster> -->
         <div class="text">
           <div class="info">
-            <h1>{{ $t("contact.firstTitle") }}</h1>
+            <h1>{{ $t("contact.firstColumn") }}</h1>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-item">
               <p>{{ $t("contact.streetNumber") }}</p>
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
           </div>
           <div class="info">
-            <h1>{{ $t("contact.secondTitle") }}</h1>
+            <h1>{{ $t("contact.secondColumn") }}</h1>
             <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
             <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
           <div class="info">
-            <h1>{{ $t("contact.thirdTitle") }}</h1>
+            <h1>{{ $t("contact.thirdColumn") }}</h1>
             <a href="tel:03039375300" class="contact-item">
               <p>{{ $t("contact.tel") }}</p>
             </a>
@@ -30,14 +29,12 @@
             </a>
           </div>
         </div>
-      <!-- </Cluster> -->
     </Article>
   </Container>
 </template>
 
 <script>
 import Container from '~/components/Container'
-import Cluster from '~/components/Cluster'
 import Frame from '~/components/Frame'
 import Article from "~/components/Article"
 import seo from "~/content/data/seo.json"
