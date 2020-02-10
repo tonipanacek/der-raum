@@ -4,7 +4,7 @@
       <div class="image-container">
         <Frame>
           <PrevNextButtons :prev="prevLink" :next="nextLink" />
-          <img :src="$tp('image')" alt="Image of service" />
+          <img :src="$tp('image')" :title="$tp('title')" :alt="$tp('description')" />
         </Frame>
       </div>
       <div class="text">
@@ -18,6 +18,7 @@
 <script>
 import { mapActions } from "vuex"
 import { get, sortBy, kebabCase } from "lodash"
+import dynamicSEO from "~/plugins/dynamic_seo"
 import Container from '~/components/Container'
 import Frame from '~/components/Frame'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -31,7 +32,7 @@ export default {
       de: '/leistungen/:slug'
     }
   },
-  mixins: [prevNext],
+  mixins: [prevNext, dynamicSEO],
   components: {
     Frame,
     Container,

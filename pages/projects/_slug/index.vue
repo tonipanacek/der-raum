@@ -55,6 +55,7 @@
 import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual, flatten, uniq, kebabCase } from 'lodash'
 import paginate from '~/plugins/paginate'
+import dynamicSEO from '~/plugins/dynamic_seo'
 import Container from "~/components/Container"
 import Frame from "~/components/Frame"
 import ProgressBar from "~/components/ProgressBar"
@@ -68,7 +69,7 @@ export default {
       en: '/projects/:slug'
     }
   },
-  mixins: [paginate],
+  mixins: [paginate, dynamicSEO],
   async asyncData({ app, params, error, store }) {
     // get the slug as a param to import the correct md file
     try {

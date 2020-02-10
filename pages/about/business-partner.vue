@@ -15,6 +15,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import seo from "~/content/data/seo.json"
 import json from "~/content/data/business_partners.json"
 import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
@@ -22,6 +23,11 @@ import Article from '~/components/Article'
 import PrevNextButtons from '~/components/PrevNextButtons'
 
 export default {
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('secondaryNavbar.businessPartner')}`
+    }
+  },
   nuxtI18n: {
     paths: {
       en: '/about/business-partner',

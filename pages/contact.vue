@@ -40,8 +40,14 @@ import Container from '~/components/Container'
 import Cluster from '~/components/Cluster'
 import Frame from '~/components/Frame'
 import Article from "~/components/Article"
+import seo from "~/content/data/seo.json"
 
 export default {
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('navbar.contact')}`
+    }
+  },
   nuxtI18n: {
     paths: {
       en: '/contact',

@@ -6,6 +6,9 @@
     "contact": "Kontakt",
     "rooms": "Räume"
   },
+  "secondaryNavbar": {
+    "businessPartner": "Business Partner"
+  },
   "rightSidebar": {
     "impressum": "Impressum",
     "privacy": "Datenschutz"
