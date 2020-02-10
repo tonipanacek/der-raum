@@ -19,6 +19,6 @@ page: 1
 page_position: first
 meta_tags:
   de_title: Kueche Regal schwarz lackiert im Loft
-  en_title: Kitchen shelf painted black in the loft
+  en_title: Kitchen shelf painted black in loft
 
 ---
