@@ -17,5 +17,11 @@ de_description: 'Design: Club Marginal Architekten // Fotos: Roland Unterbusch'
 orientation: landscape
 page: 3
 page_position: first
+meta_tags:
+  de_title: Hochwertig Einbaukueche Einbauschrank Massivholz weiss lackiert
+  en_title: High quality built-in solid wood lacquered white
+  de_description: Hochwertige Einbaukueche aus Massivholz mit weiss lackierten Fronten
+  en_description: High quality built-in kitchen made of solid wood with white lacquered
+    fronts
 
 ---
