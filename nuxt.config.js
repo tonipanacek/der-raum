@@ -2,6 +2,7 @@ const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
 const parser = require('md-yaml-json').default;
 const { get, kebabCase, flatten } = require('lodash')
+const seo = require('./content/data/seo.json')
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -31,14 +32,14 @@ export default {
    */
   ...routerBase,
   head: {
-    title: "DER RAUM",
+    title: seo.title,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
+        content: seo.description
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
