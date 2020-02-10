@@ -11,7 +11,7 @@ en_description: |-
 
   We return the majority of the wood residues to a cycle and heat our operations with our in-house combined heat and power plant. The specially generated solar power enables us to operate our machines in a climate-neutral manner, which corresponds to a CO2 saving of 25 tons of CO2 per year.
 
-  The purchase of the material that we process takes place as regionally as possible, the extensive absence of transports by intermediaries saves additional packaging and finite resources. We also want to make our contribution to the preservation of resources globally and in the past have decided to promote the replanting of mangroves as part of the REFORESTATION ([edenprojects.org](www.edenprojects.org "edenprojects.org")) with every product sold, because this is where the need is greatest.
+  The purchase of the material that we process takes place as regionally as possible, the extensive absence of transports by intermediaries saves additional packaging and finite resources. We also want to make our contribution to the preservation of resources globally and in the past have decided to promote the replanting of mangroves as part of the REFORESTATION ([edenprojects.org](https://edenprojects.org/ "edenprojects.org")) with every product sold, because this is where the need is greatest.
 
   We make our first contribution to ecological balance and are continuously striving to be completely climate-neutral in the foreseeable future.
 de_description: |-
