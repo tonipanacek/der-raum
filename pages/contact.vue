@@ -45,7 +45,7 @@ import seo from "~/content/data/seo.json"
 export default {
   head() {
     return {
-      title: `${seo.title} | ${this.$t('navbar.contact')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar.contact')}`
     }
   },
   nuxtI18n: {

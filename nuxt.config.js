@@ -32,7 +32,7 @@ export default {
    */
   ...routerBase,
   head: {
-    title: seo.title,
+    title: seo.longTitle,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },

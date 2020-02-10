@@ -15,7 +15,7 @@ export default {
   },
   head() {
     return {
-      title: `${seo.title} | ${this.$t('navbar.rooms')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar.rooms')}`
     }
   },
   async asyncData() {

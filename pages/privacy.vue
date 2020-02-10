@@ -47,7 +47,7 @@ import seo from "~/content/data/seo.json"
 export default {
   head() {
     return {
-      title: `${seo.title} | ${this.$t('rightSidebar.privacy')}`
+      title: `${seo.shortTitle} | ${this.$t('rightSidebar.privacy')}`
     }
   },
   nuxtI18n: {
