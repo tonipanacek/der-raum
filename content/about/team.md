@@ -23,5 +23,12 @@ de_description: Unser Team bringt bewusst unterschiedliche berufliche Hintergrü
   welche sowohl in Funktion und Langlebigkeit technisch und konstruktiv einwandfrei
   funktionieren und dabei in Design und Formsprache gemeinsame Visionen Wirklichkeit
   werden lassen.
+meta_tags:
+  de_title: 'Team '
+  en_title: Team
+  de_description: Unser Team aus Design Handwerk bringt unterschiedliche berufliche
+    Hintergründe und Erfahrung mit
+  en_description: Our team from Design Handwerk brings different professional backgrounds
+    and experience
 
 ---
