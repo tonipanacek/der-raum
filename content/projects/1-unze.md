@@ -15,5 +15,10 @@ de_description: 'Design: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
 page: 3
 page_position: second
+meta_tags:
+  de_title: Hochwertige Enbaukueche Kochinsel gold luxus kueche
+  en_title: High quality built-in kitchen Gold island luxury kitchen
+  de_description: Luxus Kueche mit goldener Kochinsel aus Messing
+  en_description: Luxury kitchen with golden brass island
 
 ---
