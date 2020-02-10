@@ -20,5 +20,11 @@ en_description: 'CBRE // Photos: Andrea Dingeldein'
 orientation: portrait
 page: 1
 page_position: 2
+meta_tags:
+  de_title: Bueroausbau Kueche Bar Besprechungsraum
+  en_title: Office extension kitchen bar meeting room
+  de_description: Kompletter Bueroausbau mit Besprechungstischen, Teekueche und Arbeitsplaetzen
+  en_description: Complete office expansion with conference tables, tea kitchen and
+    workplaces
 
 ---
