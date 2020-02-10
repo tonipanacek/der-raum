@@ -25,5 +25,10 @@ de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste,
   aus einer Hand Wirklichkeit werden zu lassen. Wir haben den Anspruch Sie optimal
   ab dem ersten Beratungsgespräch bis zum kompletten Einbau zu begleiten und setzten
   für Sie eine termingerechte, serviceorientierte und einwandfreie Leistung um.
+meta_tags:
+  de_title: Philosophie
+  en_title: Philosophy
+  de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
+  en_description: We maintain a conscious, mindful and constructive attitude
 
 ---
