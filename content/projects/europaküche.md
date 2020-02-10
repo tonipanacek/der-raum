@@ -17,5 +17,8 @@ en_description: 'Siemens // Freunde von Freunden // Fotos: Axel Kranz'
 orientation: landscape
 page: 1
 page_position: first
+meta_tags:
+  de_title: Kueche Regal schwarz lackiert im Loft
+  en_title: Kitchen shelf painted black in the loft
 
 ---
