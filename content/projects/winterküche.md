@@ -15,5 +15,10 @@ de_description: 'Design: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
 page: 4
 page_position: second
+meta_tags:
+  de_title: Kueche Dachgeschoss Spitzschutz dunkel edel Design
+  en_title: Kitchen attic pointed protection dark noble design
+  de_description: Hochwertige Kueche im Dachgeschoss mit Kachel Spritzschutz
+  en_description: High quality kitchen in the attic with a splash guard
 
 ---
