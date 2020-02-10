@@ -1,7 +1,7 @@
 <template>
   <Cluster>
     <div class="social-icons">
-      <a href="https://www.instagram.com/der.raum" target="_blank" id="instagram-link"
+      <a :href="$t('socialMedia.instagram')" target="_blank" id="instagram-link"
       rel="noreferrer noopener">
         <img svg-inline src="~/assets/images/instagram.svg" alt="Instagram Icon" class="social-item" />
       </a>
