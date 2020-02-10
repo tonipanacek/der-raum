@@ -15,7 +15,13 @@ de_title: Kontrast
 en_description: 'Design: DER RAUM // Photos: Michel Sass'
 de_description: 'Design: DER RAUM // Fotos: Michel Sass'
 orientation: landscape
-page: '4'
+page: 4
 page_position: second
+meta_tags:
+  de_title: Exklusive Kueche blau rosa lackiert Marmor Arbeitsplatte Kupfer Griffe
+  en_title: Englisch  Exclusive kitchen painted blue pink marble countertop copper
+    handles
+  de_description: Exklusive Einbaukueche mit Marmor Kupfer Design
+  en_description: Exclusive built-in kitchen with marble copper design
 
 ---
