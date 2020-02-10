@@ -40,6 +40,11 @@ export default {
         hid: "description",
         name: "description",
         content: seo.description
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: seo.description
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]

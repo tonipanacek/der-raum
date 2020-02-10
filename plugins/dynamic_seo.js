@@ -18,13 +18,18 @@ export default {
           content: description || seo.description
         },
         {
-          hid: "description",
-          name: "description",
+          hid: "og:description",
+          name: "og:description",
           content: description || seo.description
         },
         {
           hid: "image",
           name: "image",
+          content: image
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
           content: image
         }
       ]
