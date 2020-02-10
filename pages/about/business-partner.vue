@@ -25,7 +25,7 @@ import PrevNextButtons from '~/components/PrevNextButtons'
 export default {
   head() {
     return {
-      title: `${seo.title} | ${this.$t('secondaryNavbar.businessPartner')}`
+      title: `${seo.shortTitle} | ${this.$t('secondaryNavbar.businessPartner')}`
     }
   },
   nuxtI18n: {

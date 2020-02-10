@@ -10,7 +10,7 @@ export default {
     const image = this.image || this.$ta(attributes, 'image') || this.$ta(attributes, 'images[0]') || ''
 
     return {
-      title: `${seo.title} | ${title}`,
+      title: `${seo.shortTitle} | ${title}`,
       meta: [
         {
           hid: "description",

@@ -33,7 +33,7 @@ import seo from "~/content/data/seo.json"
 export default {
   head() {
     return {
-      title: `${seo.title} | ${this.$t('rightSidebar.impressum')}`
+      title: `${seo.shortTitle} | ${this.$t('rightSidebar.impressum')}`
     }
   },
   nuxtI18n: {
