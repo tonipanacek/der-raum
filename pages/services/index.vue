@@ -4,12 +4,18 @@
 
 <script>
 import { get, min } from "lodash"
+import seo from "~/content/data/seo"
 
 export default {
   nuxtI18n: {
     paths: {
       en: '/services',
       de: '/leistungen'
+    }
+  },
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('navbar.rooms')}`
     }
   },
   async asyncData() {

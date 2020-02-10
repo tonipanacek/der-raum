@@ -14,7 +14,7 @@
             <img :src="image" :alt="$tp('title')">
           </Frame> -->
           <div class="image">
-            <img :src="image" :alt="$tp('title')">
+            <img :src="image" :title="$tp('title')" :alt="$tp('description')">
           </div>
         </div>
         <div class="image-footer">
@@ -40,6 +40,7 @@
 <script>
 import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty, chunk, isEqual, kebabCase } from 'lodash'
+import dynamicSEO from '~/plugins/dynamic_seo'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
 import Frame from "~/components/Frame"
@@ -54,7 +55,7 @@ export default {
     }
   },
   name: 'projectsSlug',
-  mixins: [prevNext],
+  mixins: [prevNext, dynamicSEO],
   async asyncData({ app, params, error, store }) {
     // get the slug as a param to import the correct md file
     try {

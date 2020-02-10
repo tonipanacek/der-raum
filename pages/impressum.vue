@@ -27,18 +27,24 @@
   </div>
 </template>
 <script>
-  import json from "~/content/data/legal"
-  import Cluster from "~/components/Cluster"
-  export default {
+import json from "~/content/data/legal"
+import Cluster from "~/components/Cluster"
+import seo from "~/content/data/seo.json"
+export default {
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('rightSidebar.impressum')}`
+    }
+  },
   nuxtI18n: {
     paths: {
       en: '/impressum',
       de: '/impressum'
     }
   },
-    name: "Legal",
-    json: json
-  }
+  name: "Legal",
+  json: json
+}
 </script>
 <style lang="scss">
   #legal {
@@ -49,10 +55,12 @@
       font-size: 1rem;
     }
     .legal-contact {
-      display: flex;
-      flex-wrap: column;
-      justify-content: space-between;
-      width: 80ch;
+      @include respond-to('large') {
+        display: flex;
+        flex-wrap: column;
+        justify-content: space-between;
+        width: 80ch;
+      }
     }
     @include respond-to('large') {
       padding: 0;

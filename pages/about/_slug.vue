@@ -18,6 +18,7 @@
 <script>
 import { mapActions } from "vuex"
 import { get, kebabCase } from 'lodash'
+import dynamicSEO from '~/plugins/dynamic_seo'
 import Article from "~/components/Article"
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
@@ -31,7 +32,7 @@ export default {
       de: '/uber/:slug'
     }
   },
-  mixins: [prevNext],
+  mixins: [prevNext, dynamicSEO],
   components: {
     Frame,
     Container,

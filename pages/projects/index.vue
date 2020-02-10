@@ -35,6 +35,7 @@
 <script>
 import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
+import seo from '~/content/data/seo'
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
@@ -42,6 +43,11 @@ import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'projectsIndex',
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('navbar.projects')}`
+    }
+  },
   nuxtI18n: {
     paths: {
       de: '/projekte',

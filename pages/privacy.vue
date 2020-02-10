@@ -43,7 +43,13 @@
 </template>
 
 <script>
+import seo from "~/content/data/seo.json"
 export default {
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('rightSidebar.privacy')}`
+    }
+  },
   nuxtI18n: {
     paths: {
       en: '/privacy',

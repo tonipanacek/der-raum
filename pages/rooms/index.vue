@@ -34,6 +34,7 @@
 <script>
 import { mapActions } from 'vuex'
 import { get, sortBy, isEmpty } from "lodash"
+import seo from "~/content/data/seo"
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import RoomsList from "~/components/RoomsList"
@@ -41,6 +42,11 @@ import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'roomsIndex',
+  head() {
+    return {
+      title: `${seo.title} | ${this.$t('navbar.rooms')}`
+    }
+  },
   nuxtI18n: {
     paths: {
       en: '/rooms',
