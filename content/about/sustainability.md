@@ -21,7 +21,7 @@ de_description: |-
 
   Den überwiegenden Teil der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen, was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.
 
-  Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION ([edenprojects.org](www.edenprojects.org "edenprojects.org")) voranzutreiben, da gerade hier der Bedarf am größten ist.
+  Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION ([edenprojects.org](https://edenprojects.org/ "edenprojects.org")) voranzutreiben, da gerade hier der Bedarf am größten ist.
 
   Wir leisten unseren ersten Beitrag am ökologischen Gleichgewicht und sind kontinuierlich bestrebt in absehbarer Zukunft gänzlich klimaneutral zu agieren.
 meta_tags:
