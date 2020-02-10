@@ -72,6 +72,32 @@ fields:
 - type: textarea
   name: de_description
   label: Deutsch Beschreibung
+- name: meta_tags
+  type: field_group
+  config: {}
+  fields:
+  - name: de_title
+    type: text
+    config:
+      required: false
+    label: German Title
+  - name: en_title
+    type: text
+    config:
+      required: false
+    label: English Title
+  - name: de_description
+    type: text
+    config:
+      required: false
+    label: German Description
+  - name: en_description
+    type: text
+    config:
+      required: false
+    label: English Description
+  label: Meta Tags
+  description: For SEO
 pages:
 - content/projects/1-unze.md
 - content/projects/abbey-road.md
