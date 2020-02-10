@@ -134,7 +134,7 @@ export default {
     },
     seo: true,
     lazy: true,
-    langDir: "lang/"
+    langDir: "content/data/lang/"
   },
   // Google Analytics Config
   googleAnalytics: {
