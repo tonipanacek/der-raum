@@ -16,5 +16,10 @@ en_description: OuterRim Architecture
 orientation: portrait
 page: 2
 page_position: ''
+meta_tags:
+  de_title: Einbaukueche weiss Kochinsel Mittelblock schwarz hochwertig
+  en_title: Built-in kitchen white island central block black high quality
+  de_description: Design Einbaukueche mit schwrazem Kuechenblock
+  en_description: Design built-in kitchen with black kitchen block
 
 ---
