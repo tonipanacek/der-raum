@@ -24,5 +24,11 @@ de_description: |-
   Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION ([edenprojects.org](www.edenprojects.org "edenprojects.org")) voranzutreiben, da gerade hier der Bedarf am größten ist.
 
   Wir leisten unseren ersten Beitrag am ökologischen Gleichgewicht und sind kontinuierlich bestrebt in absehbarer Zukunft gänzlich klimaneutral zu agieren.
+meta_tags:
+  de_title: Nachhaltigkeit | Regionale Produktion, Solarkraft, Ressourcensparend
+  en_title: Sustainability | Regional production, solar power, resource saving
+  de_description: Wir stehen für einen verantwortungsvollen Umgang mit natürlichen
+    Ressourcen
+  en_description: We stand for responsible use of natural resources
 
 ---
