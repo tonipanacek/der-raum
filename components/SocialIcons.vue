@@ -1,14 +1,14 @@
 <template>
   <Cluster>
     <div class="social-icons">
-      <a href="https://www.instagram.com/der.raum" target="_blank" id="instagram-link"
+      <a :href="$ta(attributes, 'instagram')" target="_blank" id="instagram-link"
       rel="noreferrer noopener">
         <img svg-inline src="~/assets/images/instagram.svg" alt="Instagram Icon" class="social-item" />
       </a>
-      <a href="https://www.pinterest.com/derraum" target="_blank" id="pinterest-link" rel="noreferrer noopener">
+      <a :href="$ta(attributes, 'pinterest')" target="_blank" id="pinterest-link" rel="noreferrer noopener">
         <img svg-inline src="~/assets/images/pinterest.svg" alt="Pinterest Icon" id="pinterest" class="social-item" />
       </a>
-      <a href="https://www.facebook.com/derraumberlin" target="_blank" id="facebook-link" rel="noreferrer noopener">
+      <a :href="$ta(attributes, 'facebook')" target="_blank" id="facebook-link" rel="noreferrer noopener">
         <img svg-inline src="~/assets/images/facebook.svg" alt="Facebook Icon" class="social-item" />
       </a>
     </div>
@@ -17,10 +17,16 @@
 
 <script>
 import Cluster from '~/components/Cluster'
+import json from '~/content/data/social_media.json'
 export default {
   name: "SocialIcons",
   components: {
     Cluster
+  },
+  data: () => {
+    return {
+      attributes: json["socialMedia"]
+    }
   }
 }
 </script>
