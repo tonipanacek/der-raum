@@ -9,7 +9,7 @@ de_description: Ihre Idee ist unser kreatives Sprungbrett zur Umsetzung für unk
   Raumgestaltung, Einrichtung und Möbelplanung bilden das Fundament der von uns gelebten,
   ganzheitlichen Fertigung. Als designorientiertes Team mit unterschiedlichen Schwerpunkten
   sind wir mit „wachem Auge“ am Markt, stark orientiert an aktuellen Strömungen rund
-  um Material, Design und Gestaltung und beziehen kontinuierlich neue Material- und
+  um Material, Design und Gestaltung. Wir beziehen kontinuierlich neue Material- und
   Formansätze in den Gestaltungsprozess mit ein. Anhand einer ersten Skizze wählen
   wir mit Ihnen in inspirativer Co-Creation Materialkombinationen aus, die wir zunächst
   im Entwurf, dann als detailgetreue Visualisierung präzisieren. Wir entwickeln gemeinsam
@@ -23,5 +23,10 @@ en_description: Your idea is our creative springboard for implementation for unc
   the design process. On the basis of an initial sketch, we select inspiring co-creation
   material combinations that we first specify in the design, then as a detailed visualization.
   We develop the creative process together with you before planning.
+meta_tags:
+  de_title: ''
+  en_title: ''
+  de_description: ''
+  en_description: ''
 
 ---
