@@ -8,11 +8,11 @@ de_description: "In der Fertigung ist Ihr Projekt zu jeder Zeit in professionell
   Händen: maximale Aufmerksamkeit für jedes Produkt, einzelne Möbel, komplette, raumbildenden
   Ausbauten oder komplexe Großprojekte, - wir sind Ihr kompetenter Partner in der
   Umsetzung der Planung. Ein wohlüberlegter Handgriff, ein geschultes Auge und der
-  Einsatz zeitgemäßer Produktionstechnik wie CNC-Fräsen und Pressmaschinen sind die
-  Leistung eines hochqualifizierten Teams aus Tischlern und Fachgewerken - die gesamte
-  Fertigung findet in unserer eigenen Manufaktur in Berlin statt.  \nUnser Schaffenscredo:
-  exzellente Material- und Verarbeitungsqualität. Ihr Produkt: langlebige Qualitätsmöbel,
-  die begeistern."
+  Einsatz zeitgemäßer Produktionstechnik wie CNC-Fräsen, Furnier- und Pressmaschinen
+  sind die Leistung eines hochqualifizierten Teams aus Tischlern und Fachgewerken
+  - die gesamte Fertigung findet in unserer eigenen Manufaktur in Berlin statt.  \nUnser
+  Schaffenscredo: exzellente Material- und Verarbeitungsqualität. Ihr Produkt: langlebige
+  Qualitätsmöbel, die begeistern."
 en_description: 'In production, your project is in professional hands at all times,
   maximum attention to each product, individual furniture, complete space-building
   extensions or complex large-scale projects - we are your competent partner in the
