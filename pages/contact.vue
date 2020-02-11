@@ -53,7 +53,6 @@ export default {
   },
   components: {
     Container,
-    Cluster,
     Frame,
     Article
   }
