@@ -21,9 +21,9 @@ orientation: portrait
 page: 1
 page_position: 2
 meta_tags:
-  de_title: Bueroausbau Kueche Bar Besprechungsraum
-  en_title: Office extension kitchen bar meeting room
-  de_description: Kompletter Bueroausbau mit Besprechungstischen, Teekueche und Arbeitsplaetzen
+  de_title: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen
+  en_title: Complete office expansion with conference tables, tea kitchen and workplaces
+  de_description: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen
   en_description: Complete office expansion with conference tables, tea kitchen and
     workplaces
 
