@@ -16,5 +16,10 @@ en_description: |-
 
   Your needs depend on your field of activity and your individual preferences. Office furniture designs created especially for your premises increase the feel-good factor and contribute positively to a balanced work-life balance. Individual office furniture brings a personal touch to your workplace and is optimally tailored to your use.
 position: 3
+meta_tags:
+  de_title: Büro, Arbeitszimmer, Büromöbel
+  en_title: ''
+  de_description: Office, Office Furniture, Workroom, Study
+  en_description: ''
 
 ---
