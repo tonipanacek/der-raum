@@ -20,5 +20,14 @@ en_description: |-
 
   We as planners and designers will support you with all your ideas and work with you to develop the optimal solution, even in the smallest space, an optimized result.
 position: 6
+meta_tags:
+  de_title: Empfangsbereich, Eingangsbereich, Foyer
+  en_title: Reception area, entrance area, foyer
+  de_description: |-
+    Als Gastgeber*in können Sie Stauraum für Jacken und Mäntel, Schirmständer, Ablage für Taschen und Schuhe die Sympathie ihrer Gäste gewinnen. Ihr Empfangsbereich wird durch eine klare, ästhetische und zugleich funktionale Gestaltung Raum für Begegnungen sein. Ihre Garderobe kann dabei in getrennten und passgenauen Einbauschränken Platz finden. Vorausschauend geplante Sichtachsen lenken den Blick ihrer Gäste auf Kunst oder frische Blumen.
+    Darüber hinaus bewährt sich, bei ausreichend vorhandener Fläche die Planung einer Sitzgelegenheit. Diese erhöht Ihren und den Komfort Ihrer Gäste und erleichtert das Aus- und Anziehen von Schuhen. Vielleicht ergibt sich in der Planung auch die Möglichkeit für ein Schlüsseltableau. Mit unseren passgenauen und individuell abgestimmten Einbauten lassen sich auch unansehnliche Elektroverteiler problemlos kaschieren.
+  en_description: |-
+    As a host, you can win the sympathy of your guests with storage space for jackets and coats, umbrella stands, storage for bags and shoes. Your reception area will be a space for encounters thanks to a clear, aesthetic and at the same time functional design. Your wardrobe can be stored in separate and custom-fit wardrobes. Forward-looking visual axes direct your guests' eyes to art or fresh flowers.
+    In addition, planning a seat with sufficient space proves its worth. This increases your and your guests' comfort and makes it easier to take shoes off and on. Perhaps there is also the possibility of a key panel in the planning. With our tailor-made and individually tailored fittings, even unsightly electrical distributors can be easily concealed.
 
 ---
