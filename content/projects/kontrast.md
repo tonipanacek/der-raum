@@ -18,10 +18,10 @@ orientation: landscape
 page: 4
 page_position: second
 meta_tags:
-  de_title: Exklusive Kueche blau rosa lackiert Marmor Arbeitsplatte Kupfer Griffe
-  en_title: Englisch  Exclusive kitchen painted blue pink marble countertop copper
-    handles
-  de_description: Exklusive Einbaukueche mit Marmor Kupfer Design
-  en_description: Exclusive built-in kitchen with marble copper design
+  de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design
+  en_title: Exclusive built-in kitchen with marble copper design
+  de_description: Exklusive Kueche blau rosa lackiert Marmor Arbeitsplatte Kupfer
+    Griffe
+  en_description: Exclusive kitchen painted blue pink marble countertop copper handles
 
 ---
