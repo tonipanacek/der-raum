@@ -18,9 +18,9 @@ orientation: landscape
 page: 2
 page_position: first
 meta_tags:
-  de_title: Wohnbereich Kueche Schlafzimmer Hochwertig Exklusiv Holz
-  en_title: Living area kitchen bedroom high quality exclusive wood
-  de_description: Hochwertiger Innenausbau eines kompletten Einfamilienhauses
-  en_description: High quality interior design of a complete single family house
+  de_title: Hochwertiger Innenausbau eines kompletten Einfamilienhauses
+  en_title: High quality interior design of a complete single family house
+  de_description: Wohnbereich Kueche Schlafzimmer Hochwertig Exklusiv Holz
+  en_description: Living area kitchen bedroom high quality exclusive wood
 
 ---
