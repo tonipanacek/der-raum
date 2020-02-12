@@ -16,10 +16,10 @@ orientation: portrait
 page: 3
 page_position: ''
 meta_tags:
-  de_title: Hochwertig Kuechenzeile Einbauschrank raumhoch Wohnbereich Sideoboard
-  en_title: High quality kitchen unit built-in closet floor to ceiling living area
-    sideboard
-  de_description: Hochwertige Kuechenzeile als Sideboard im Wohnbereich
-  en_description: High quality kitchenette as a sideboard in the living area
+  de_title: Hochwertige Kuechenzeile als Sideboard im Wohnbereich
+  en_title: High quality kitchenette as a sideboard in the living area
+  de_description: Hochwertig Kuechenzeile Einbauschrank raumhoch Wohnbereich Sideoboard
+  en_description: High quality kitchen unit built-in closet floor to ceiling living
+    area sideboard
 
 ---
