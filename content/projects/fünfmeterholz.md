@@ -17,9 +17,9 @@ orientation: landscape
 page: 2
 page_position: second
 meta_tags:
-  de_title: Kuche Mittelblock Massivholz schwarz Dachgeschoss
-  en_title: Kitchen middle block solid wood black attic
-  de_description: Hochwertige Einbaukueche schwarz in Dachgeschoss
-  en_description: High quality built-in kitchen black in the attic
+  de_title: Hochwertige Einbauküche schwarz in Dachgeschoss
+  en_title: High quality built-in kitchen black in the attic
+  de_description: Küche Mittelblock Massivholz schwarz Dachgeschoss
+  en_description: Kitchen middle block solid wood black attic
 
 ---
