@@ -18,5 +18,22 @@ en_description: |-
 
   In addition, we design guest bathrooms that should be retrofitted or converted so that even spontaneous guests can always find a sophisticated, functionally perfect bathroom.
 position: 2
+meta_tags:
+  de_title: Badezimmer, Masterbad, Luxus Badezimmer
+  en_title: Bathroom, master bath, luxury bathroom
+  de_description: Wir als Planer, Designer und erfahrene Tischler / Schreiner unterstützen
+    Sie darin, Ihre Vision vom individuellen Masterbad selbst auf kleinstem Raum zu
+    realisieren. Vom passgenauen Waschtisch über den Badezimmerschrank bis hin zum
+    Waschtischunterschrank. Badezimmermöbel aus Holz und anderen Werkstoffen fertigen
+    wir auf Wunsch nach Maß. Zusätzlich konzipieren wir Gästebäder, die nachträglich
+    ein- oder umgebaut werden sollen, damit auch ihr Besuch stets ein anspruchsvoll
+    entwickeltes und funktional einwandfreies Bad vorfindet.
+  en_description: We as planners, designers and experienced carpenters / joiners support
+    you in realizing your vision of an individual master bathroom even in the smallest
+    of spaces. From the perfectly fitting washbasin to the bathroom cabinet to the
+    vanity unit. We manufacture bathroom furniture made of wood and other materials
+    on request. In addition, we design guest bathrooms that should be retrofitted
+    or converted so that your visit always finds a sophisticated, functionally perfect
+    bathroom.
 
 ---
