@@ -13,7 +13,7 @@ images:
 de_title: Europaküche
 en_title: Europaküche
 de_description: 'Siemens // Freunde von Freunden // Fotos: Axel Kranz'
-en_description: 'Siemens // Freunde von Freunden // Fotos: Axel Kranz'
+en_description: 'Siemens // Freunde von Freunden // Photos: Axel Kranz'
 orientation: landscape
 page: 1
 page_position: first
