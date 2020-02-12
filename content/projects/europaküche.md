@@ -18,9 +18,9 @@ orientation: landscape
 page: 1
 page_position: first
 meta_tags:
-  de_title: Kueche Regal schwarz lackiert Loft Industrie
-  en_title: Kitchen shelf painted black in loft industrial
-  de_description: Schwarzer Kuechenblock in Loftstyle Design
-  en_description: Black kitchen block in loft style design
+  de_title: Schwarzer Küchenblock in Loftstyle Design
+  en_title: Black kitchen block in loft style design
+  de_description: Schwarzer Küchenblock in Loftstyle Design
+  en_description: Schwarzer Küchenblock in Loftstyle Design
 
 ---
