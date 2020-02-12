@@ -181,8 +181,7 @@ export default {
     allPagesCurrentChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
       let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
-      chunk = chunk.slice(0, 3)
-      return [chunk[1], chunk[0], chunk[2]].filter(p => p)
+      return chunk.slice(0, 3)
     },
     length() {
       if (isEmpty(this.$data.pages)) { return 0 }
