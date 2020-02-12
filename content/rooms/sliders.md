@@ -16,5 +16,16 @@ en_description: |-
 
   We work with you to develop various solutions that you can use flexibly and permanently in your property.
 position: 5
+meta_tags:
+  de_title: Raumteiler, Schiebetür nach Maß, Wandverkleidungen
+  en_title: Room divider, custom-made sliding door, wall cladding
+  de_description: Wir als Raumgestalter und Designer sind spezialisiert auf den exklusiven
+    Innenausbau. Mit simplen Schiebetüren aus Holz nach Maß sind wir ebenso erfahren
+    wie mit aufwändigen Design Wandverkleidungen, durchdachten Wandpaneelen und hochwertigen
+    Wandvertäfelungen.
+  en_description: We as interior designers and designers specialize in exclusive interior
+    design. We are just as experienced with simple, custom-made wooden sliding doors
+    as with elaborate design wall cladding, well-thought-out wall panels and high-quality
+    wall paneling.
 
 ---
