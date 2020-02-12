@@ -1,7 +1,7 @@
 ---
 title: Office
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Buero-Bueromoebel-Schreibtisch-Office_z6wmlz.jpg
-de_title: Büro
+de_title: Arbeitsbereich
 en_title: Office
 de_description: |-
   Unsere Arbeitswelt verändert sich, die Grenzen zwischen Beruf und Freizeit lösen sich zunehmend auf. Das Büro ist der Raum, in dem Sie stets den Fokus finden sollten, ganz gleich ob in den eigenen vier Wänden oder einem Bürogebäude.
@@ -17,7 +17,7 @@ en_description: |-
   Your needs depend on your field of activity and your individual preferences. Office furniture designs created especially for your premises increase the feel-good factor and contribute positively to a balanced work-life balance. Individual office furniture brings a personal touch to your workplace and is optimally tailored to your use.
 position: 3
 meta_tags:
-  de_title: Büro, Arbeitszimmer, Büromöbel
+  de_title: Arbeitsbereich, Büro, Arbeitszimmer, Büromöbel
   en_title: ''
   de_description: Office, Office Furniture, Workroom, Study
   en_description: ''
