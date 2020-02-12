@@ -1,5 +1,5 @@
 <template>
-  <Cluster>
+  <!-- <Cluster> -->
     <div class="social-icons">
       <a :href="$ta(attributes, 'instagram')" target="_blank" id="instagram-link"
       rel="noreferrer noopener">
@@ -12,7 +12,7 @@
         <img svg-inline src="~/assets/images/facebook.svg" alt="Facebook Icon" class="social-item" />
       </a>
     </div>
-  </Cluster>
+  <!-- </Cluster> -->
 </template>
 
 <script>
@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss">
 svg.social-item {
-  width: .8rem;
+  width: .7rem;
   height: auto;
   fill: color(light);
   overflow: visible;
@@ -42,9 +42,11 @@ svg.social-item {
   }
 }
 svg#pinterest {
-  height: .8em;
+  height: .7rem;
 }
 .social-icons {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <Stack id="right-sidebar" class="right-sidebar">
-    <SocialIcons id="right-social"/>
+    <div class="social-wrapper">
+      <SocialIcons id="right-social"/>
+    </div>
     <div class="right-stack small-very">
       <p>
         <nuxt-link :to="switchLocalePath('de')">
@@ -88,8 +90,15 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
 }
+.social-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #right-social {
   display: flex;
+  width: 6rem;
   align-items: center;
   justify-content: space-around;
   max-width: none;

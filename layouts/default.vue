@@ -120,10 +120,10 @@ a:visited {
 
 #left-social {
   display: none;
-  width: 5em;
   @include respond-to('large') {
-    display: block;
-    width: 5em;
+    display: flex;
+    align-items: center;
+    width: 4.5rem;
   }
 }
 </style>
