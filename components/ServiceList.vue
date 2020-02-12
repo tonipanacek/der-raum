@@ -10,6 +10,9 @@
         @mouseover.native="hover = service.attributes.title"
         @mouseleave.native="hover = ''"
       >
+        <!-- <div class="test">
+          <img :src="service.attributes.image" :alt="service.attributes.title" />
+        </div> -->
         <Frame>
           <img :src="service.attributes.image" :alt="service.attributes.title" />
         </Frame>
@@ -87,6 +90,10 @@ export default {
 .service-link {
   max-width: none;
   text-decoration: none;
+  .test {
+    height: 100%;
+    width: 100%;
+  }
   h3 {
     margin-top: 0.5em;
   }
@@ -129,7 +136,7 @@ $main-height: calc(100vh - 3em);
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 2fr) .3fr 2fr .5fr;
-  grid-template-rows: 1.5fr 2fr .5fr 2fr;
+  grid-template-rows: minmax(10px, 1.5fr) minmax(10px, 2fr) minmax(10px, .5fr) minmax(10px, 2fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -137,14 +144,17 @@ $main-height: calc(100vh - 3em);
 #Planning.service-link  {
   grid-area: 1 / 4 / 3 / 6;
   .frame { height: 100%; }
+  .test { background: blue; }
 }
 #Design.service-link {
   grid-area: 2 / 1 / 3 / 3;
   .frame { height: 100%; }
+  .test { background: red; }
 }
 #Production.service-link {
   grid-area: 4 / 2 / 5 / 5;
-  align-self: end;
+  .test { background: yellow; }
+  // align-self: end;
 }
 .projects-link {
   @include smallCaps;
@@ -179,9 +189,10 @@ $main-height: calc(100vh - 3em);
 @include respond-to('large') {
   .service-list {
     height: $main-height;
-    max-width: 100ch;
+    max-width: 160ch;
     margin: 0 auto;
     display: grid;
+    // align-items: center;
     grid-template-columns: minmax(0, .3fr) minmax(0, 3fr) minmax(0, .3fr) minmax(0, .5fr) minmax(0, 2fr);
     grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, 1.2fr) minmax(0, .6fr) minmax(0, 1.5fr);
     grid-column-gap: 0px;
@@ -198,25 +209,36 @@ $main-height: calc(100vh - 3em);
 
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
-    align-self: start;
+    // align-self: start;
+    display: flex;
+    flex-direction: column;
+    .test {
+      background: red;
+    }
   }
   #Planning.service-link {
     grid-area:  1 / 5 / 4 / 6;
-    @include respond-to-vertical(vertical) {
-      align-self: stretch;
-    }
-    .frame {
-      height: 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    .test { background: blue; }
+    // @include respond-to-vertical(vertical) {
+    //   align-self: stretch;
+    // }
+    // .frame {
+    //   height: 100%;
+    // }
   }
   #Production.service-link {
     grid-area:  4 / 1 / 6 / 3;
-    @include respond-to-vertical(vertical) {
-      align-self: end;
-    }
-    h3 {
-      margin-bottom: 0;
-    }
+    display: flex;
+    flex-direction: column;
+    .test { background: yellow; }
+    // @include respond-to-vertical(vertical) {
+    //   align-self: end;
+    // }
+    // h3 {
+    //   margin-bottom: 0;
+    // }
   }
   .projects-link-grid {
     grid-area:  5 / 5 / 6 / 6;
