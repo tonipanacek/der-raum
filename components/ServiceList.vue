@@ -164,6 +164,9 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @include respond-to-vertical('vertical') {
+    height: 10ch;
+  }
 }
 
 .projects-link-grid {
@@ -188,15 +191,16 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   .service-list {
     min-height: 550px;
     height: $main-height;
-    max-width: 120ch;
+    max-width: 110ch;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 1.6fr) minmax(0, .3fr);
     grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .5fr) minmax(0, .4fr) minmax(0, 2.1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     @include respond-to('xl') {
-      max-width: 140ch;
+      max-width: 120ch;
+      grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 2fr) minmax(0, .3fr);
     }
   }
 
@@ -214,7 +218,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
         max-width: 100%;
         max-height: 100%;
         @include respond-to('xl') {
-          height: 38vh;
+          height: 35vh;
         }
       }
     }
@@ -256,6 +260,9 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   .projects-link-grid {
     grid-area:  5 / 5 / 6 / 6;
     align-self: center;
+    // @include respond-to-vertical('vertical') {
+    //   align-self: end;
+    // }
   }
   .projects-link {
     padding: 0;
