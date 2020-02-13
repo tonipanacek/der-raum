@@ -186,23 +186,19 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .service-list {
+    min-height: 550px;
     height: $main-height;
     max-width: 120ch;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 2fr);
     grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .5fr) minmax(0, .4fr) minmax(0, 2.1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    @include respond-to('xl') {
+      max-width: 140ch;
+    }
   }
-
-  // .service-link {
-  //   max-height: 15rem;
-  //   @include respond-to-vertical(vertical) {
-  //     min-height: 100%;
-  //     max-height: none;
-  //   }
-  // }
 
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
@@ -210,13 +206,16 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: column;
     height: 100%;
     width: 100%;
+    // justify-content: flex-start;
     .image-container {
       width: 100%;
       height: 100%;
-      margin: 0;
       img {
         max-width: 100%;
         max-height: 100%;
+        @include respond-to('xl') {
+          height: 38vh;
+        }
       }
     }
   }
@@ -229,7 +228,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     .image-container {
       width: 100%;
       height: 100%;
-      margin: 0;
       img {
         width: 100%;
         height: 100%;
@@ -242,13 +240,16 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: column;
     height: 100%;
     width: 100%;
+    justify-content: flex-end;
     .image-container {
       width: 100%;
       height: 100%;
-      margin: 0;
       img {
         max-width: 100%;
         max-height: 100%;
+        @include respond-to('xl') {
+          height: 35vh;
+        }
       }
     }
   }
