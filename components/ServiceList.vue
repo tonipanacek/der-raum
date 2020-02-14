@@ -218,20 +218,17 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .service-list {
-    min-height: 550px;
+    min-height: 500px;
     height: $main-height;
     max-width: 110ch;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 1.6fr) minmax(0, .3fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .5fr) minmax(0, .4fr) minmax(0, 2.1fr);
+    overflow: hidden;
+    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin-bottom: 0px;
-    @include respond-to('xl') {
-      max-width: 120ch;
-      grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 2fr) minmax(0, .3fr);
-    }
   }
 
   #Design.service-link {
@@ -240,17 +237,24 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: column;
     height: 100%;
     width: 100%;
-    .image-container {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-        @include respond-to('xl') {
-          height: 35vh;
-        }
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -260,7 +264,19 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: column;
     height: 100%;
     width: 100%;
-    .image-container {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       img {
@@ -275,18 +291,24 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: column;
     height: 100%;
     width: 100%;
-    justify-content: flex-end;
-    .image-container {
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-        @include respond-to('xl') {
-          height: 35vh;
-        }
+        width: 100%;
+        height: 100%;
       }
     }
   }

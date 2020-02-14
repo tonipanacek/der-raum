@@ -10,9 +10,6 @@
         </NuxtLink>
         <div class="image-container">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
-          <!-- <Frame v-if="id === 2 || 4 || 7|| 10" :n="4" :d="3">
-            <img :src="image" :alt="$tp('title')">
-          </Frame> -->
           <div class="image">
             <img :src="image" :title="$tp('title')" :alt="$tp('description')">
           </div>
@@ -242,8 +239,8 @@ export default {
   .close-link {
     display: none;
     position: absolute;
-    left: -2.5rem;
-    top: -0.3em;
+    left: 17rem;
+    top: 1.8rem;
     .close-btn {
       height: .8em;
     }
