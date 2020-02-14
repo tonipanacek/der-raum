@@ -314,7 +314,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .projects-link-grid {
     grid-area:  5 / 5 / 6 / 6;
-    align-self: center;
+    align-self: end;
   }
   .projects-link {
     padding: 0;

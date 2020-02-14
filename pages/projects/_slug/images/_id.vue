@@ -197,6 +197,7 @@ export default {
 
 <style lang="scss" scoped>
 .project {
+  position: relative;
   .image-container {
     position: relative;
     @include respond-to('large') {
@@ -239,8 +240,8 @@ export default {
   .close-link {
     display: none;
     position: absolute;
-    left: 17rem;
-    top: 1.8rem;
+    left: -20px;
+    top: -3px;
     .close-btn {
       height: .8em;
     }
