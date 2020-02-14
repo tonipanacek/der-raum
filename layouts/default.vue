@@ -54,6 +54,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   // width: 100vw;
   margin: 0 auto;
    @include respond-to('large') {
+    position: relative;
     flex-direction: initial;
     padding: none;
   }
@@ -78,7 +79,7 @@ a:visited {
   // overflow-x: hidden;
   overflow-y: visible;
   background: white;
-  position: relative;
+  // position: relative;
   // z-index: 2;
   // max-width: 110ch;
 }

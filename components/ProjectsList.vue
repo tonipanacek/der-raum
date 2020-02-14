@@ -118,7 +118,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 @include respond-to('large') {
   #projects-grid {
     height: $main-height;
-    max-width: 100ch;
+    max-width: 110ch;
     margin: 0 auto;
     display: grid;
     overflow: hidden;
@@ -127,6 +127,10 @@ $main-height: calc(100vh - #{spacing(frame)});
     grid-template-rows: 2fr .2fr 1.2fr .6fr 1.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    // @include respond-to('xl') {
+    //   max-width: 120ch;
+    //   grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 2fr) minmax(0, .3fr);
+    // }
   }
   .project-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;

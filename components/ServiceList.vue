@@ -141,18 +141,50 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   grid-template-rows: minmax(10px, 1.5fr) minmax(10px, 2fr) minmax(10px, .5fr) minmax(10px, 2fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin-bottom: 100px;
 }
 
 #Planning.service-link  {
   grid-area: 1 / 4 / 3 / 6;
-  .frame { height: 100%; }
+  align-self: stretch;
+  .image-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 #Design.service-link {
   grid-area: 2 / 1 / 3 / 3;
-  .frame { height: 100%; }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .image-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 #Production.service-link {
   grid-area: 4 / 2 / 5 / 5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .image-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 .projects-link {
   @include smallCaps;
@@ -164,9 +196,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @include respond-to-vertical('vertical') {
-    height: 10ch;
-  }
 }
 
 .projects-link-grid {
@@ -198,6 +227,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .5fr) minmax(0, .4fr) minmax(0, 2.1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin-bottom: 0px;
     @include respond-to('xl') {
       max-width: 120ch;
       grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .6fr) minmax(0, 2fr) minmax(0, .3fr);
@@ -210,11 +240,12 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: column;
     height: 100%;
     width: 100%;
-    // justify-content: flex-start;
     .image-container {
       width: 100%;
       height: 100%;
       img {
+        width: auto;
+        height: auto;
         max-width: 100%;
         max-height: 100%;
         @include respond-to('xl') {
@@ -249,6 +280,8 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
       width: 100%;
       height: 100%;
       img {
+        width: auto;
+        height: auto;
         max-width: 100%;
         max-height: 100%;
         @include respond-to('xl') {
@@ -260,9 +293,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   .projects-link-grid {
     grid-area:  5 / 5 / 6 / 6;
     align-self: center;
-    // @include respond-to-vertical('vertical') {
-    //   align-self: end;
-    // }
   }
   .projects-link {
     padding: 0;
