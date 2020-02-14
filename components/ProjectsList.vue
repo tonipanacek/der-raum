@@ -21,12 +21,12 @@
       :data-index="index"
       :data-total="projects.length"
       >
-        <Frame>
+        <div class="image-container">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-        </Frame>
-        <h3 class="project-title">
-          {{ $ta(project.attributes, 'title') }}
-        </h3>
+          <h3 class="project-title">
+            {{ $ta(project.attributes, 'title') }}
+          </h3>
+        </div>
       </NuxtLink>
     </transition-group>
   </div>
@@ -117,37 +117,125 @@ $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   #projects-grid {
+    min-height: 500px;
     height: $main-height;
-    max-width: 100ch;
+    max-width: 110ch;
     margin: 0 auto;
     display: grid;
     overflow: hidden;
-    grid-template-columns: .3fr 3fr .3fr .5fr 2fr;
-    // grid-template-rows: 2fr repeat(2, .4fr) 1fr 1.5fr;
-    grid-template-rows: 2fr .2fr 1.2fr .6fr 1.5fr;
+    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
   .project-link:nth-child(1) {
     grid-area: 1 / 2 / 3 / 4;
-    align-self: stretch;
-  }
-  .project-link:nth-child(2) {
-    grid-area: 1 / 5 / 4 / 6;
-    .frame {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
+  .project-link:nth-child(2) {
+    grid-area: 1 / 5 / 5 / 6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    align-self: end;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (9 / 16) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   .project-link:nth-child(3) {
-    grid-area: 4 / 1 / 7 / 3;
-    @include respond-to-vertical(vertical) {
-      align-self: end;
+    grid-area: 4 / 1 / 6 / 3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   .project-link:nth-child(4) {
     grid-area: 5 / 5 / 7 / 6;
-    .frame {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 75px;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (9 / 16) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
+      img {
+        width: 100%;
+      }
     }
   }
 }

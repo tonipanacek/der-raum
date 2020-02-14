@@ -10,9 +10,6 @@
         </NuxtLink>
         <div class="image-container">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
-          <!-- <Frame v-if="id === 2 || 4 || 7|| 10" :n="4" :d="3">
-            <img :src="image" :alt="$tp('title')">
-          </Frame> -->
           <div class="image">
             <img :src="image" :title="$tp('title')" :alt="$tp('description')">
           </div>
@@ -199,6 +196,7 @@ export default {
 
 <style lang="scss" scoped>
 .project {
+  position: relative;
   .image-container {
     position: relative;
     @include respond-to('large') {
@@ -241,8 +239,8 @@ export default {
   .close-link {
     display: none;
     position: absolute;
-    left: -2.5rem;
-    top: -0.3em;
+    left: -20px;
+    top: -3px;
     .close-btn {
       height: .8em;
     }

@@ -10,12 +10,17 @@
         @mouseover.native="hover = service.attributes.title"
         @mouseleave.native="hover = ''"
       >
-        <Frame>
+        <!-- <div class="test">
           <img :src="service.attributes.image" :alt="service.attributes.title" />
-        </Frame>
-        <h3 class="service-title">
-          {{ $ta(service.attributes, 'title') }}
-        </h3>
+        </div> -->
+        <!-- <Frame>
+        </Frame> -->
+        <div class="image-container">
+          <img :src="service.attributes.image" :alt="service.attributes.title" />
+          <h3 class="service-title">
+            {{ $ta(service.attributes, 'title') }}
+          </h3>
+        </div>
       </NuxtLink>
       <div class="projects-link-grid">
         <NuxtLink
@@ -87,6 +92,10 @@ export default {
 .service-link {
   max-width: none;
   text-decoration: none;
+  .test {
+    height: 100%;
+    width: 100%;
+  }
   h3 {
     margin-top: 0.5em;
   }
@@ -122,29 +131,60 @@ export default {
   }
 }
 
-$main-height: calc(100vh - 3em);
+$main-height: calc(100vh - 2 * #{spacing(frame)});
 
 // grid layout for small screens
 .service-list {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 2fr) .3fr 2fr .5fr;
-  grid-template-rows: 1.5fr 2fr .5fr 2fr;
+  grid-template-rows: minmax(10px, 1.5fr) minmax(10px, 2fr) minmax(10px, .5fr) minmax(10px, 2fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin-bottom: 100px;
 }
 
 #Planning.service-link  {
   grid-area: 1 / 4 / 3 / 6;
-  .frame { height: 100%; }
+  align-self: stretch;
+  .image-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 #Design.service-link {
   grid-area: 2 / 1 / 3 / 3;
-  .frame { height: 100%; }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .image-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 #Production.service-link {
   grid-area: 4 / 2 / 5 / 5;
-  align-self: end;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .image-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 .projects-link {
   @include smallCaps;
@@ -178,48 +218,103 @@ $main-height: calc(100vh - 3em);
 // grid layout for big screens
 @include respond-to('large') {
   .service-list {
+    min-height: 500px;
     height: $main-height;
-    max-width: 100ch;
+    max-width: 110ch;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 3fr) minmax(0, .3fr) minmax(0, .5fr) minmax(0, 2fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, 1.2fr) minmax(0, .6fr) minmax(0, 1.5fr);
+    overflow: hidden;
+    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-  }
-
-  .service-link {
-    max-height: 15rem;
-    @include respond-to-vertical(vertical) {
-      min-height: 100%;
-      max-height: none;
-    }
+    margin-bottom: 0px;
   }
 
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
-    align-self: start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
+    }
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   #Planning.service-link {
-    grid-area:  1 / 5 / 4 / 6;
-    @include respond-to-vertical(vertical) {
-      align-self: stretch;
+    grid-area:  1 / 5 / 5 / 6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
     }
-    .frame {
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   #Production.service-link {
     grid-area:  4 / 1 / 6 / 3;
-    @include respond-to-vertical(vertical) {
-      align-self: end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: (16 / 9) * 100%;
     }
-    h3 {
-      margin-bottom: 0;
+    > .image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   .projects-link-grid {
     grid-area:  5 / 5 / 6 / 6;
+    align-self: end;
   }
   .projects-link {
     padding: 0;

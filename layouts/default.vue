@@ -50,10 +50,10 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
-  max-width: 160ch;
-  // width: 100vw;
+  max-width: 180ch;
   margin: 0 auto;
    @include respond-to('large') {
+    position: relative;
     flex-direction: initial;
     padding: none;
   }
@@ -75,12 +75,8 @@ a:visited {
 
 .main-container {
   flex: 2 1 auto;
-  // overflow-x: hidden;
   overflow-y: visible;
   background: white;
-  position: relative;
-  // z-index: 2;
-  // max-width: 110ch;
 }
 .left-sidebar {
   padding: 0 2em;
@@ -95,7 +91,7 @@ a:visited {
       text-align: left;
       position: sticky;
       top: spacing(frame);
-      height: $main-height;
+      min-height: $main-height;
       padding: 0 2em;
   }
 }

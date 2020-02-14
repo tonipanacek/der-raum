@@ -40,7 +40,7 @@ a {
       box-shadow: shadow(light);
       transition: box-shadow 500ms ease;
     }
-    fill: color(white);
+    fill: color(dark);
   }
   height: 100%;
   display: flex;
