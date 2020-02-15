@@ -21,7 +21,15 @@
       :data-index="index"
       :data-total="projects.length"
       >
-        <div class="image-container">
+        <div v-if="mobile" class="frame-wrapper">
+          <Frame>
+            <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
+          </Frame>
+          <h3 class="project-title">
+            {{ $ta(project.attributes, 'title') }}
+          </h3>
+        </div>
+        <div v-else class="image-container">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
           <h3 class="project-title">
             {{ $ta(project.attributes, 'title') }}
