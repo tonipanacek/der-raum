@@ -21,7 +21,15 @@
       event=""
       @click.native.prevent="handleClick(room, index)"
       >
-        <div class="image-container">
+        <div v-if="mobile" class="frame-wrapper">
+          <Frame>
+            <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
+          </Frame>
+          <h3 class="room-title">
+            {{ $ta(room.attributes, 'title') }}
+          </h3>
+        </div>
+        <div v-else class="image-container">
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
           <h3 class="room-title">
             {{ $ta(room.attributes, 'title') }}

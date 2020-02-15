@@ -19,7 +19,15 @@
       event=""
       @click.native.prevent="handleClick(image, index)"
       >
-        <div class="image-container">
+        <div v-if="mobile" class="frame-wrapper">
+          <Frame>
+            <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+          </Frame>
+          <h3 class="image-title">
+            {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+          </h3>
+        </div>
+        <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           <h3 class="image-title">
             {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
@@ -111,7 +119,7 @@ export default {
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: this.allImages.indexOf(image.url) + 1
+          id: this.page === 0 ? image.index : image.index + (this.page * 4) - (this.page * 1)
         }
       })
     }
