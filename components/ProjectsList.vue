@@ -160,6 +160,7 @@ $main-height: calc(100vh - #{spacing(frame)});
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -188,6 +189,7 @@ $main-height: calc(100vh - #{spacing(frame)});
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -216,6 +218,7 @@ $main-height: calc(100vh - #{spacing(frame)});
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -243,6 +246,7 @@ $main-height: calc(100vh - #{spacing(frame)});
       height: 100%;
       img {
         width: 100%;
+        object-fit: cover;
       }
     }
   }

@@ -65,21 +65,21 @@ export default {
     beforeEnter: function(el) {
       el.style.opacity = 0
       el.style.transform = "translateY(-50%)"
-      el.style.transition = "opacity 250ms ease, transform 250ms ease"
+      el.style.transition = "opacity 200ms ease, transform 200ms ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
         el.style.opacity = 1
         el.style.transform = "translateY(0)"
         done()
-      }, 450)
+      }, 50)
     },
     leave: function(el, done) {
       el.style.opacity = 0
       el.style.transform = "translateY(50%)"
       setTimeout(() => {
         done()
-      }, 450)
+      }, 50)
     },
     handleHover(title) {
       this.setHoveredMenuItem(title)
