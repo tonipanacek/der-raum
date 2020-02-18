@@ -103,11 +103,9 @@ export default {
   mounted() {
     this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
-    window.addEventListener('load', this.makeMobileFullScreen)
     window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
-    window.removeEventListener('load', this.makeMobileFullScreen)
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
@@ -123,18 +121,6 @@ export default {
         this.$router.push(this.closeLink)
         return false
       }
-    },
-    makeMobileFullScreen(event) {
-      console.log("hi")
-      // if (window.width <= 767) {
-      //   const navbar = document.querySelector('.left-sidebar')
-      //   const footer = document.querySelector('.right-sidebar')
-      //   navbar.style.display = "none"
-      //   footer.style.display = "none"
-      // } else {
-      //   console.log("desktop screen")
-      //   return true
-      // }
     },
     ...mapActions(["setPages", "setPagesPrefix"])
   },
