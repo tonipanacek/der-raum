@@ -95,24 +95,24 @@ a:visited {
       padding: 0 2em;
   }
 }
-.right-sidebar {
-  @include respond-to('large') {
-    position: sticky;
-    top: spacing(frame);
-    flex: 0 1 5ch;
-  }
-  .right-stack{
-    height: $main-height;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    p {
-      @include smallCaps;
-      writing-mode: vertical-lr;
-      transform: translateY(50%);
-    }
-  }
-}
+// .right-sidebar {
+//   @include respond-to('large') {
+//     position: sticky;
+//     top: spacing(frame);
+//     flex: 0 1 5ch;
+//   }
+//   .right-stack{
+//     height: $main-height;
+//     display: flex;
+//     justify-content: space-between;
+//     flex-direction: column;
+//     p {
+//       @include smallCaps;
+//       writing-mode: vertical-lr;
+//       transform: translateY(50%);
+//     }
+//   }
+// }
 
 #left-social {
   display: none;
