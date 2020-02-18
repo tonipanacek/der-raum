@@ -16,6 +16,7 @@
       :class="{'image-link': true, 'extraSpace': image.index < 0}"
       :data-index="index"
       :data-total="images.length"
+      :mobile="mobile"
       event=""
       @click.native.prevent="handleClick(image, index)"
       >

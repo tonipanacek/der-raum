@@ -10,6 +10,9 @@ export default {
       en: '/projects/:slug/images/'
     }
   },
+  props: {
+    mobile: Boolean
+  },
   mounted() {
     this.$router.push(this.$route.path + '/1')
   }
