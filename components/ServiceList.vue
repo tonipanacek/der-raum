@@ -10,11 +10,6 @@
         @mouseover.native="hover = service.attributes.title"
         @mouseleave.native="hover = ''"
       >
-        <!-- <div class="test">
-          <img :src="service.attributes.image" :alt="service.attributes.title" />
-        </div> -->
-        <!-- <Frame>
-        </Frame> -->
         <div class="image-container">
           <img :src="service.attributes.image" :alt="service.attributes.title" />
           <h3 class="service-title">
@@ -153,6 +148,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -168,6 +164,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -183,6 +180,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
