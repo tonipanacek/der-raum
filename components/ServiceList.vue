@@ -127,21 +127,27 @@ export default {
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
-
+$more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
 .service-list {
   background-color: white;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 2fr) .3fr 2fr .5fr;
-  grid-template-rows: minmax(10px, 1.5fr) minmax(10px, 2fr) minmax(10px, .5fr) minmax(10px, 2fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  -ms-grid-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
+  grid-template-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
+  -ms-grid-rows: minmax(5px, 1.5fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
+  grid-template-rows: minmax(5px, 1.5fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
   margin-bottom: 100px;
 }
 
 #Planning.service-link  {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   grid-area: 1 / 4 / 3 / 6;
   align-self: stretch;
+  display: block;
   .image-container {
     width: 100%;
     height: 100%;
@@ -153,9 +159,12 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
 }
 #Design.service-link {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   grid-area: 2 / 1 / 3 / 3;
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
   width: 100%;
   .image-container {
@@ -169,9 +178,12 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
 }
 #Production.service-link {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 5;
   grid-area: 4 / 2 / 5 / 5;
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
   width: 100%;
   .image-container {
@@ -220,28 +232,26 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     height: $main-height;
     max-width: 110ch;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
     overflow: hidden;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    -ms-grid-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
+    grid-template-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
+    -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
     margin-bottom: 0px;
   }
 
   #Design.service-link {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
     grid-area:  1 / 2 / 3 / 4;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 100%;
     width: 100%;
     position: relative;
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (16 / 9) * 100%;
-    }
     > .image-container {
       position: absolute;
       top: 0;
@@ -258,18 +268,15 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
   #Planning.service-link {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 6;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
     grid-area:  1 / 5 / 5 / 6;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 100%;
     width: 100%;
     position: relative;
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (16 / 9) * 100%;
-    }
     > .image-container {
       position: absolute;
       top: 0;
@@ -286,18 +293,15 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
   #Production.service-link {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 6;
     grid-area:  4 / 1 / 6 / 3;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 100%;
     width: 100%;
     position: relative;
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (16 / 9) * 100%;
-    }
     > .image-container {
       position: absolute;
       top: 0;
@@ -314,6 +318,10 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
   .projects-link-grid {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 6;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 6;
     grid-area:  5 / 5 / 6 / 6;
     align-self: end;
   }

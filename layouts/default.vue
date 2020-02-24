@@ -5,9 +5,9 @@
       <SecondaryNavbar />
       <SocialIcons id="left-social" />
     </Stack>
-    <main class="main-container">
+    <section role="main" class="main-container">
       <nuxt />
-    </main>
+    </section>
     <RightSidebar class="right-sidebar" />
   </div>
 </template>
