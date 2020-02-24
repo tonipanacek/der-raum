@@ -123,130 +123,116 @@ export default {
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
-@include respond-to('large') {
-  #projects-grid {
-    min-height: 500px;
-    height: $main-height;
-    max-width: 110ch;
-    margin: 0 auto;
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
-  .project-link:nth-child(1) {
-    grid-area: 1 / 2 / 3 / 4;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (16 / 9) * 100%;
+@supports (display: grid) {
+  @include respond-to('large') {
+    #projects-grid {
+      min-height: 500px;
+      height: $main-height;
+      max-width: 110ch;
+      margin: 0 auto;
+      display: -ms-grid;
+      display: grid;
+      overflow: hidden;
+      -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+      grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+      -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
+      grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
     }
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    .project-link:nth-child(1) {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 4;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 3;
+      grid-area: 1 / 2 / 3 / 4;
       height: 100%;
-      img {
+      width: 100%;
+      position: relative;
+      > .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
-  }
-  .project-link:nth-child(2) {
-    grid-area: 1 / 5 / 5 / 6;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    align-self: end;
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (9 / 16) * 100%;
-    }
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    .project-link:nth-child(2) {
+      -ms-grid-column: 5;
+      -ms-grid-column-span: 6;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 5;
+      grid-area: 1 / 5 / 5 / 6;
       height: 100%;
-      img {
+      width: 100%;
+      position: relative;
+      > .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
-  }
 
-  .project-link:nth-child(3) {
-    grid-area: 4 / 1 / 6 / 3;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: (16 / 9) * 100%;
-    }
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    .project-link:nth-child(3) {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+      -ms-grid-row: 4;
+      -ms-grid-row-span: 6;
+      grid-area: 4 / 1 / 6 / 3;
       height: 100%;
-      img {
+      width: 100%;
+      position: relative;
+      > .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
-  }
-  .project-link:nth-child(4) {
-    grid-area: 5 / 5 / 7 / 6;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-top: 75px;
-    &:before {
-      display: block;
-      content: "";
+    .project-link:nth-child(4) {
+      -ms-grid-column: 5;
+      -ms-grid-column-span: 6;
+      -ms-grid-row: 5;
+      -ms-grid-row-span: 7;
+      grid-area: 5 / 5 / 7 / 6;
       width: 100%;
-      padding-top: (9 / 16) * 100%;
-    }
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
+      position: relative;
+      overflow: hidden;
+      margin-top: 75px;
+      > .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        object-fit: cover;
+        height: 100%;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -274,13 +260,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
   h3 {
     transition: opacity 750ms ease, color 500ms ease;
-  }
-  &:nth-child(4) {
-    @include respond-to('large') {
-      h3 {
-        opacity: 0;
-      }
-    }
   }
 }
 // hovering effect
