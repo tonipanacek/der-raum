@@ -127,21 +127,22 @@ export default {
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
-
+$more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
 .service-list {
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(2, 2fr) .3fr 2fr .5fr;
-  grid-template-rows: minmax(10px, 1.5fr) minmax(10px, 2fr) minmax(10px, .5fr) minmax(10px, 2fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
+  -ms-grid-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
+  grid-template-rows: minmax(5px, 1.5fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
+  -ms-grid-rows: minmax(5px, 1.5fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
   margin-bottom: 100px;
 }
 
 #Planning.service-link  {
   grid-area: 1 / 4 / 3 / 6;
   align-self: stretch;
+  display: block;
   .image-container {
     width: 100%;
     height: 100%;
@@ -154,8 +155,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 }
 #Design.service-link {
   grid-area: 2 / 1 / 3 / 3;
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
   width: 100%;
   .image-container {
@@ -170,8 +170,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 }
 #Production.service-link {
   grid-area: 4 / 2 / 5 / 5;
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
   width: 100%;
   .image-container {
@@ -222,8 +221,8 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     margin: 0 auto;
     display: grid;
     overflow: hidden;
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
+    grid-template-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin-bottom: 0px;
@@ -231,8 +230,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 
   #Design.service-link {
     grid-area:  1 / 2 / 3 / 4;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 100%;
     width: 100%;
     position: relative;
@@ -259,8 +257,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
   #Planning.service-link {
     grid-area:  1 / 5 / 5 / 6;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 100%;
     width: 100%;
     position: relative;
@@ -287,8 +284,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
   #Production.service-link {
     grid-area:  4 / 1 / 6 / 3;
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: 100%;
     width: 100%;
     position: relative;
