@@ -11,7 +11,7 @@ images:
 en_title: Abbey Road
 de_title: Abbey Road
 en_description: 'Design: Bundschuh Architekten'
-de_description: 'Design: Bundschuh Architekten'
+de_description: 'Gestaltung: Bundschuh Architekten'
 orientation: portrait
 page: 3
 page_position: ''
