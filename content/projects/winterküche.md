@@ -11,7 +11,7 @@ images:
 en_title: Winterküche
 de_title: Winterküche
 en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
-de_description: 'Design: DER RAUM // Fotos: Alexander Schlösser'
+de_description: 'Gestaltung: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
 page: 4
 page_position: second
