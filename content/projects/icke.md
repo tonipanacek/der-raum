@@ -11,8 +11,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Einbaukueche-Mittelblock-Einbauschraenke_klz9cq.jpg
 de_title: Icke
 en_title: Icke
-de_description: OuterRim Architecture
-en_description: OuterRim Architecture
+de_description: 'Gestaltung: OuterRim Architecture'
+en_description: 'Design: OuterRim Architecture'
 orientation: portrait
 page: 2
 page_position: ''
