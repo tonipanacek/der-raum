@@ -11,8 +11,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz-schwarz_rr5yrt.jpg
 de_title: Fünfmeterholz
 en_title: Fünfmeterholz
-de_description: 'Reinhard Architekten // Fotos: Phil Dera'
-en_description: 'Reinhard Architekten // Photos: Phil Dera'
+de_description: 'Gestaltung: Reinhard Architekten // Fotos: Phil Dera'
+en_description: 'Design: Reinhard Architekten // Photos: Phil Dera'
 orientation: landscape
 page: 2
 page_position: second
