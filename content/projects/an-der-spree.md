@@ -15,8 +15,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580721677/110-Bueroausbau-Ruheraum-Couch-Stuehle-Regal_axxprh.jpg
 de_title: An der Spree
 en_title: An der Spree
-de_description: 'CBRE // Fotos: Andrea Dingeldein'
-en_description: 'CBRE // Photos: Andrea Dingeldein'
+de_description: 'Gestaltung: CBRE // Fotos: Andrea Dingeldein'
+en_description: 'Design: CBRE // Photos: Andrea Dingeldein'
 orientation: portrait
 page: 1
 page_position: 2
