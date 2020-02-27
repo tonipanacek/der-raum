@@ -12,7 +12,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580474923/Wohnzimmer-Wandpaneele-Holzverkleidung-Wohnbereich_iiffjd.jpg
 de_title: Haus Wandlitz
 en_title: Haus Wandlitz
-de_description: 'Design: Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
+de_description: 'Gestaltung: Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
 en_description: 'Design: Bonauer Bölling Architekten // Photos: Tiffany Taraska'
 orientation: landscape
 page: 2
