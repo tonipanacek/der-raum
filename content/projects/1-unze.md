@@ -11,7 +11,7 @@ images:
 en_title: 1 UNZE
 de_title: 1 UNZE
 en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
-de_description: 'Design: DER RAUM // Fotos: Alexander Schlösser'
+de_description: 'Gestaltung: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
 page: 3
 page_position: second
