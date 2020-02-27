@@ -1,5 +1,5 @@
 ---
-position: 2
+position: 1
 title: Team
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068496/Team-DER-RAUM-Beratung-Kontakt-Experten_grotnu.jpg
 en_title: Team
