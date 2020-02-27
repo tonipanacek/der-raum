@@ -13,7 +13,7 @@ images:
 en_title: Quergebäude
 de_title: Quergebäude
 en_description: 'Design: Club Marginal Architekten // Photos: Roland Unterbusch'
-de_description: 'Design: Club Marginal Architekten // Fotos: Roland Unterbusch'
+de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Roland Unterbusch'
 orientation: landscape
 page: 3
 page_position: first
