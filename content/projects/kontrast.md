@@ -13,7 +13,7 @@ images:
 en_title: Kontrast
 de_title: Kontrast
 en_description: 'Design: DER RAUM // Photos: Michel Sass'
-de_description: 'Design: DER RAUM // Fotos: Michel Sass'
+de_description: 'Gestaltung: DER RAUM // Fotos: Michel Sass'
 orientation: landscape
 page: 4
 page_position: second
