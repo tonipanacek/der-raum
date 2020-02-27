@@ -1,5 +1,5 @@
 ---
-position: 1
+position: 2
 title: Philosophy
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068331/Philosophie-Manufaktur-Tischler-Schreiner_zs856h.jpg
 en_title: Philosophy
