@@ -79,44 +79,30 @@ export default {
 </script>
 
 <style lang="scss">
-.service-title {
-  @include smallCaps;
-  color: color(dark);
-  font-weight: 400;
-}
 .service-link {
   max-width: none;
   text-decoration: none;
-  .test {
-    height: 100%;
-    width: 100%;
-  }
-  h3 {
+  transition: opacity 0.3s ease-in-out;
+  .service-title {
+    @include smallCaps;
+    color: color(dark);
+    font-weight: 400;
     margin-top: 0.5em;
+    transition: color 0.3s ease-in-out;
   }
   .projects-link {
     transition: opacity 0.3s ease-in-out;
   }
 }
-.service-link {
-  transition: opacity 0.3s ease-in-out;
-  h3 {
-    transition: color 0.3s ease-in-out;
-    padding-left: 0.5em;
-    @include respond-to('large') {
-      padding: 0;
-    }
-  }
-}
 .hover:not(.active) {
   opacity: .8;
-  h3 {
+  .service-title {
     color: color(dark);
     font-weight: 400;
   }
 }
 .hover {
-  h3 {
+  .service-title {
     color: color(black);
     font-weight: 700;
   }
@@ -130,14 +116,15 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 $more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
 .service-list {
+  margin-top: spacing(lg);
   background-color: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
-  grid-template-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
-  -ms-grid-rows: minmax(5px, 1.5fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
-  grid-template-rows: minmax(5px, 1.5fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
-  margin-bottom: 100px;
+  grid-template-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .3fr);
+  -ms-grid-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
+  grid-template-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
+  margin-bottom: 80px;
 }
 
 #Planning.service-link  {
@@ -175,6 +162,9 @@ $more-height: calc(100vh - #{spacing(frame)});
       height: 100%;
       object-fit: cover;
     }
+  }
+  h3 {
+    padding-left: 0.5em;
   }
 }
 #Production.service-link {
@@ -222,12 +212,13 @@ $more-height: calc(100vh - #{spacing(frame)});
 
 .projects-link-non-grid {
   padding: 0.5em;
-  margin-top: spacing(md);
+  margin-top: spacing(sm);
 }
 
 // grid layout for big screens
 @include respond-to('large') {
   .service-list {
+    margin-top: 0;
     min-height: 500px;
     height: $main-height;
     max-width: 110ch;
@@ -265,6 +256,9 @@ $more-height: calc(100vh - #{spacing(frame)});
         height: 100%;
         object-fit: cover;
       }
+    }
+    h3 {
+      padding: 0;
     }
   }
   #Planning.service-link {

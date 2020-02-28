@@ -105,6 +105,7 @@ export default {
     li:first-child {
       a {
         margin-top: 0;
+        line-height: .7rem;
       }
     }
     margin-top: 0;
