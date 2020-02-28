@@ -12,8 +12,8 @@ en_title: Winterküche
 de_title: Winterküche
 en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
 de_description: 'Gestaltung: DER RAUM // Fotos: Alexander Schlösser'
-orientation: landscape
-page: 4
+orientation: portrait
+page: 5
 page_position: first
 meta_tags:
   de_title: Hochwertige Küche im Dachgeschoss mit Kachel Spritzschutz Design
