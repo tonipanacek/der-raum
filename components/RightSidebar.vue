@@ -58,7 +58,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
   background: white;
-  padding: 2em;
+  padding: 1em 2em 2em 2em;
   .right-stack {
     margin-top: 0;
     display: flex;
