@@ -19,8 +19,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894911/Badezimmer-exklusiv-Masterbad-Marmor-Stein_yi68d9.jpg
 en_title: Le Commandant
 de_title: Le Commandant
-en_description: ''
-de_description: ''
+en_description: 'Design: Club Marginal Architekten // Photos: Max Gödecke'
+de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Max Gödecke'
 meta_tags:
   de_title: Le Commandant
   en_title: Le Commandant
