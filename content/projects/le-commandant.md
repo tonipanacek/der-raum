@@ -22,9 +22,11 @@ de_title: Commandant
 en_description: 'Design: Club Marginal Architekten // Photos: Max Gödecke'
 de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Max Gödecke'
 meta_tags:
-  de_title: Le Commandant
-  en_title: Le Commandant
-  de_description: ''
-  en_description: ''
+  de_title: Treppeneinbau mit Hochschränken, Schiebetür, Küche und Lamellenwand
+  en_title: Stair installation with tall cupboards, sliding door, kitchen and slat
+    wall
+  de_description: Treppeneinbau mit Hochschränken, Schiebetür, Küche und Lamellenwand
+  en_description: Stair installation with tall cupboards, sliding door, kitchen and
+    slat wall
 
 ---
