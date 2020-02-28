@@ -13,8 +13,8 @@ de_title: 1 UNZE
 en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
 de_description: 'Gestaltung: DER RAUM // Fotos: Alexander Schlösser'
 orientation: landscape
-page: 3
-page_position: second
+page: 4
+page_position: first
 meta_tags:
   de_title: Luxus Küche mit goldener Kochinsel aus Messing
   en_title: Luxury kitchen with golden brass cooking unit
