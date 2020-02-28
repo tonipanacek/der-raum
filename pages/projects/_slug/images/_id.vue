@@ -195,7 +195,7 @@ export default {
     }
   }
   img {
-    height: 80vh;
+    max-height: 80vh;
   }
 
   h1 {

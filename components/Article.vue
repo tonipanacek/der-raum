@@ -14,16 +14,19 @@ export default {
 .article {
   display: flex;
   flex-direction: column;
-  max-width: 110ch;
+  max-width: 120ch;
   align-items: space-between;
   margin: 0 auto;
+  &.project {
+    justify-content: space-between;
+  }
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .image-container {
     margin-bottom: spacing(frame);
     img {
-      object-fit: cover;
+      // object-fit: cover;
       max-width: 100%;
       max-height: 100%;
     }
