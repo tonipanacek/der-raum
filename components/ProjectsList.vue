@@ -13,7 +13,7 @@
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
       :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true, 'extraSpace': project.index < 0 }"
       event=""
       @click.native.prevent="handleClick(project, index)"
       @mouseover.native="handleHover(project)"
@@ -159,6 +159,11 @@ $main-height: calc(100vh - #{spacing(frame)});
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+      &.extraSpace {
+        @include respond-to('large') {
+          display: none;
         }
       }
     }
