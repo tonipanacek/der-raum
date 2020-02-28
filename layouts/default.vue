@@ -87,7 +87,7 @@ a:visited {
   justify-content: space-between;
   @include respond-to('large') {
       // flex: 0 1 25ch;
-      width: 25ch;
+      width: 30ch;
       text-align: left;
       position: sticky;
       top: spacing(frame);

@@ -221,7 +221,7 @@ $more-height: calc(100vh - #{spacing(frame)});
     margin-top: 0;
     min-height: 500px;
     height: $main-height;
-    max-width: 110ch;
+    max-width: 120ch;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;

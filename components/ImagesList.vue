@@ -31,7 +31,7 @@
         <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           <h3 class="image-title">
-            {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+            {{ title }} {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }} / {{ totalCount }}
           </h3>
         </div>
       </NuxtLink>
@@ -116,11 +116,13 @@ export default {
     },
     path(image) {
       if (!image.index) { return '' }
+      const slicedImages = this.images.slice(0,3)
+      console.log(slicedImages)
       return this.localePath({
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: this.page === 0 ? image.index : image.index + (this.page * 4) - (this.page * 1)
+          id: this.page === 0 ? slicedImages.indexOf(image) + 1 : slicedImages.indexOf(image) + (this.page * 4)
         }
       })
     }
@@ -136,7 +138,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   .images-grid {
     min-height: 500px;
     height: $main-height;
-    max-width: 110ch;
+    max-width: 120ch;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
