@@ -1,7 +1,7 @@
 ---
 orientation: landscape
 page_position: second
-title: Le Commandant
+title: Commandant
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894612/Einbauschrank-Lamellen-Schiebetuer-Exklusiv-Holz_xbnwtn.jpg
 page: 3
 images:
@@ -17,8 +17,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894885/Treppe-Einbauschrank-wandhoch-Beleuchtung-LED_rbgrle.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894898/Treppe-Einbauschrank-raumhoch-LED-beleuchtet_vqagpt.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894911/Badezimmer-exklusiv-Masterbad-Marmor-Stein_yi68d9.jpg
-en_title: Le Commandant
-de_title: Le Commandant
+en_title: Commandant
+de_title: Commandant
 en_description: 'Design: Club Marginal Architekten // Photos: Max Gödecke'
 de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Max Gödecke'
 meta_tags:
