@@ -117,12 +117,17 @@ export default {
     path(image) {
       if (!image.index) { return '' }
       const slicedImages = this.images.slice(0,3)
-      console.log(slicedImages)
+      let id = null
+      if (this.mobile) {
+        id = image.index
+      } else {
+        id = this.page === 0 ? slicedImages.indexOf(image) + 1 : slicedImages.indexOf(image) + (this.page * 4) - (this.page - 1)
+      }
       return this.localePath({
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: this.page === 0 ? slicedImages.indexOf(image) + 1 : slicedImages.indexOf(image) + (this.page * 4)
+          id: id
         }
       })
     }
