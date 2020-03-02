@@ -16,7 +16,7 @@ en_description: 'Design: DER RAUM // Photos: Michel Sass'
 de_description: 'Gestaltung: DER RAUM // Fotos: Michel Sass'
 orientation: landscape
 page: 4
-page_position: second
+page_position: 2
 meta_tags:
   de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design
   en_title: Exclusive built-in kitchen with marble copper design

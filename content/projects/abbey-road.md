@@ -14,7 +14,7 @@ en_description: 'Design: Bundschuh Architekten'
 de_description: 'Gestaltung: Bundschuh Architekten'
 orientation: portrait
 page: 3
-page_position: ''
+page_position: 0
 meta_tags:
   de_title: Hochwertige Kuechenzeile als Sideboard im Wohnbereich
   en_title: High quality kitchenette as a sideboard in the living area
