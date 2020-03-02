@@ -16,7 +16,7 @@ en_description: 'Design: Club Marginal Architekten // Photos: Roland Unterbusch'
 de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Roland Unterbusch'
 orientation: landscape
 page: 3
-page_position: first
+page_position: 1
 meta_tags:
   de_title: Hochwertige Einbauküche aus Massivholz weiss lackiert
   en_title: High quality built-in solid wood lacquered white
