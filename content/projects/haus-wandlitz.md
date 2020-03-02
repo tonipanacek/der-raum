@@ -16,7 +16,7 @@ de_description: 'Gestaltung: Bonauer Bölling Architekten // Fotos: Tiffany Tara
 en_description: 'Design: Bonauer Bölling Architekten // Photos: Tiffany Taraska'
 orientation: landscape
 page: 2
-page_position: first
+page_position: 1
 meta_tags:
   de_title: Hochwertiger Innenausbau eines kompletten Einfamilienhauses
   en_title: High quality interior design of a complete single family house
