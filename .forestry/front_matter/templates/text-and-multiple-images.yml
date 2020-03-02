@@ -26,24 +26,15 @@ fields:
       path: 
   label: Photo Orientation
 - name: page_position
-  type: select
-  default: []
+  type: number
+  label: Page Position
+  default: 0
+  required: true
   config:
-    required: false
-    options:
-    - first
-    - second
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Page position
-  description: Only applies to the 2 landscape projects. Options are first or second
-    position on page.
-  showOnly:
-    field: orientation
-    value: landscape
+    min: 
+    max: 
+    step: 
+  description: First (1) or second (2) position on the page for the landscape images.
 - name: page
   type: number
   default: 0
