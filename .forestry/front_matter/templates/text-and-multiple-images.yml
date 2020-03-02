@@ -35,6 +35,7 @@ fields:
     max: '2'
     step: '1'
   description: First (1) or second (2) position on the page for the landscape images.
+    Leave blank if it's a portrait.
 - name: page
   type: number
   default: 0
