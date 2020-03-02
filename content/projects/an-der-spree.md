@@ -19,7 +19,7 @@ de_description: 'Gestaltung: CBRE // Fotos: Andrea Dingeldein'
 en_description: 'Design: CBRE // Photos: Andrea Dingeldein'
 orientation: portrait
 page: 1
-page_position: 2
+page_position: ''
 meta_tags:
   de_title: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen
   en_title: Complete office expansion with conference tables, tea kitchen and workplaces
