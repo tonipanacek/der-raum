@@ -16,7 +16,7 @@ de_description: 'Gestaltung: Siemens & Freunde von Freunden // Fotos: Axel Kranz
 en_description: 'Design: Siemens & Freunde von Freunden // Photos: Axel Kranz'
 orientation: landscape
 page: 1
-page_position: first
+page_position: 1
 meta_tags:
   de_title: Schwarzer Küchenblock in Loftstyle Design
   en_title: Black kitchen block in loft style design
