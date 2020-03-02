@@ -31,9 +31,9 @@ fields:
   default: 0
   required: true
   config:
-    min: 
-    max: 
-    step: 
+    min: '1'
+    max: '2'
+    step: '1'
   description: First (1) or second (2) position on the page for the landscape images.
 - name: page
   type: number
