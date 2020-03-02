@@ -1,6 +1,6 @@
 ---
 orientation: landscape
-page_position: second
+page_position: 2
 title: Commandant
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894612/Einbauschrank-Lamellen-Schiebetuer-Exklusiv-Holz_xbnwtn.jpg
 page: 3
