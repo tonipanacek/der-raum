@@ -19,8 +19,10 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894911/Badezimmer-exklusiv-Masterbad-Marmor-Stein_yi68d9.jpg
 en_title: Commandant
 de_title: Commandant
-en_description: 'Design: Club Marginal Architekten // Photos: Max Gödecke'
-de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Max Gödecke'
+en_description: 'Design: Sebastian Schwade & Club Marginal Architekten // Photos:
+  Maximilian Gödecke'
+de_description: 'Gestaltung: Sebastian Schwade & Club Marginal Architekten // Fotos:
+  Maximilian Gödecke'
 meta_tags:
   de_title: Treppeneinbau mit Hochschränken, Schiebetür, Küche und Lamellenwand
   en_title: Stair installation with tall cupboards, sliding door, kitchen and slat
