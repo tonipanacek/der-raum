@@ -181,10 +181,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#projects.image {
+max-width: 120ch;
+}
 .project {
   position: relative;
+  width: 100%;
   .image-container {
     position: relative;
+    width: 100%;
     @include respond-to('large') {
       max-height: calc(100vh - 2 * #{spacing(frame)});
       position: static;
@@ -232,10 +237,10 @@ export default {
     }
   }
   .nav {
-    height: 1rem;
-    fill: color(light);
+    height: 1.5rem;
+    fill: color(dark);
     &:hover {
-      fill: color(dark);
+      fill: color(black);
     }
   }
   .image-nav {
@@ -262,7 +267,7 @@ export default {
     }
   }
   .no-next {
-    height: 1rem;
+    height: 1.5rem;
     width: 2.25rem;
   }
 }

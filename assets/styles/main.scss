@@ -3,15 +3,24 @@
 
 
 // Global styles
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-// .page-enter-active, .page-leave-active {
-//   transition: opacity .4s;
-// }
-// .page-enter, .page-leave-to {
-//   opacity: 0;
-// }
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  margin: 0;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .25s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}

@@ -36,8 +36,8 @@ export default {
     max-width: none;
   }
   img {
-    object-fit: cover;
-    max-height: 80vh;
+    // object-fit: cover;
+    // max-height: 50vh;
 
   }
   .text {
