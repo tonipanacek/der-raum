@@ -49,7 +49,7 @@ export default {
 <style lang="scss">
   #legal {
     padding: 0 2em;
-    max-width: 110ch;
+    max-width: 120ch;
     margin: 0 auto;
     h1 {
       margin-top: 0;

@@ -1,5 +1,4 @@
 @import 'config/index';
-@import 'helpers/index';
 @import 'helpers/breakpoints';
 
 
@@ -20,14 +19,8 @@ body {
 }
 
 .page-enter-active, .page-leave-active {
-  transition: opacity .4s;
+  transition: opacity .25s;
 }
 .page-enter, .page-leave-to {
   opacity: 0;
-}
-
-a {
-  &:focus {
-    outline: 0;
-  }
 }

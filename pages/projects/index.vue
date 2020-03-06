@@ -100,10 +100,8 @@ export default {
   flex-direction: column;
   width: 100%;
   &, & article, & .container, & .section {
-    display: block;
-    // min-height: 100%;
-    // height: 100%;
-    max-width: none;
+    // display: block;
+    // max-width: none;
   }
 }
 #mobile-view {

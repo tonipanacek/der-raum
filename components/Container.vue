@@ -11,11 +11,4 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  // flex: 2 1 auto;
-  // min-height: 100%;
-  // position: relative;
-  // max-width: 110ch;
-  // margin: 0 auto;
-}
 </style>
