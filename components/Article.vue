@@ -64,5 +64,19 @@ export default {
       font-weight: 600;
     }
   }
+  a,
+  a:focus,
+  a:visited {
+    transition: color 500ms ease, font-weight 500ms ease;
+    text-decoration: none;
+    color: color(dark);
+    &:hover {
+      color: color(black);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+
 }
 </style>

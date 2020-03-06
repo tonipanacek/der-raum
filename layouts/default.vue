@@ -45,6 +45,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
   padding-top: spacing(frame);
@@ -102,6 +108,13 @@ a:visited {
     display: flex;
     align-items: center;
     width: 4.5rem;
+  }
+}
+
+.right-sidebar {
+  @include respond-to('large') {
+    position: sticky;
+    top: spacing(frame);
   }
 }
 </style>

@@ -1,23 +1,13 @@
 @import 'config/index';
-@import 'helpers/index';
 @import 'helpers/breakpoints';
 
 
 // Global styles
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-
-}
-
-body {
-  margin: 0;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
 
 // .page-enter-active, .page-leave-active {
 //   transition: opacity .4s;
@@ -25,17 +15,3 @@ body {
 // .page-enter, .page-leave-to {
 //   opacity: 0;
 // }
-
-a,
-a:focus,
-a:visited {
-  transition: color 500ms ease, font-weight 500ms ease;
-  text-decoration: none;
-  color: color(dark);
-  &:hover {
-    color: color(black);
-  }
-  &:focus {
-    outline: 0;
-  }
-}
