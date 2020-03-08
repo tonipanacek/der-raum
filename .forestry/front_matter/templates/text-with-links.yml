@@ -1,4 +1,23 @@
 ---
 label: Text with Links
 hide_body: true
-fields: []
+fields:
+- name: text_and_link_group
+  type: field_group_list
+  fields:
+  - name: main_text
+    type: text
+    config:
+      required: false
+    label: Main Text
+  - name: text_url
+    type: text
+    config:
+      required: false
+    label: Text Url
+    description: Full url where you'd like the text to link to
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Text and Link Group
