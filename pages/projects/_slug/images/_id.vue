@@ -122,8 +122,8 @@ export default {
         closeLink.style.top = '-25px';
       }
       const showSidebars = () => {
-        navbar.style.display = 'block';
-        footer.style.display = 'block';
+        navbar.style.display = 'flex';
+        footer.style.display = 'flex';
         closeLink.style.left = '-20px';
         closeLink.style.top = '-3px';
       }
