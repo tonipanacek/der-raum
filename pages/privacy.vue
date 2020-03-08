@@ -1,8 +1,7 @@
 <template>
   <div id="privacy">
-    <h1 class="title color:dark">DATENSCHUTZ</h1>
-    <p>Wir freuen uns über Ihren Besuch auf unserer Website und Ihr Interesse an unseren Dienstleistungen. Der Schutz Ihrer personenbezogenen Daten ist für uns ein wichtiges Anliegen. Wir behandeln Ihre Daten vertraulich und entsprechend der gesetzlichen Vorschriften sowie dieser Datenschutzerklärung.</p>
-    <p>Wir möchten, dass Sie sich beim Besuch unserer Internetseiten sicher fühlen. Im Folgenden erläutern wir, welche Informationen wir während Ihres Besuches auf unserer Website erfassen und wie diese genutzt werden.</p>
+    <h1 class="title color:dark">{{ $ta(privacyJson, 'intro.title') }}</h1>
+    <p v-for="text in $ta(privacyJson, 'intro.text')">{{ text }}</p>
     <h2 class="title">Datenschutzbeauftragte</h2>
     <p>Für Auskünfte, Wünsche oder Anregungen zum Thema Datenschutz stehen wir Ihnen gerne zur Verfügung. Sie erreichen unseren betrieblichen Datenschutzbeauftragten unter der E-Mail: datenschutz(at)holz-raum.de
     <br>Die für Datenschutz und Datensicherheit zuständige Aufsichtsbehörde erreichen Sie unter:
@@ -18,8 +17,8 @@
     <p class="title">Facebook-Plugins (Like-Button)</p>
     <p>Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, Anbieter Facebook Inc., 1 Hacker Way, Menlo Park, California 94025, USA, integriert. Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem „Like-Button“ („Gefällt mir“) auf unserer Seite. Eine Übersicht über die Facebook-Plugins finden Sie hier: https://developers.facebook.com/docs/plugins/.</p>
     <p>Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit Ihrer IPAdresse unsere Seite besucht haben. Wenn Sie den Facebook „Like-Button“ anklicken während Sie in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Facebook unter https://de-de.facebook.com/policy.php.</p>
-    <p>Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus.</p>
-    <p class="title">Server-Log-Files</p>
+    <p>Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem sacebook-Benutzerkonto aus.</p>
+    <h2 class="title">{{ $ta(privacyJson, 'serverlogs.title') }}</h2>
     <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:
     <br>Browsertyp/ Browserversion
     <br>verwendetes Betriebssystem
@@ -27,22 +26,22 @@
     <br>Hostname des zugreifenden Rechners
     <br>Uhrzeit der Serveranfrage
     <br>Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.
-    <p class="title">Cookies</p>
-    <p>Die Internetseiten verwenden Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Sie dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.</p>
-    <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
-    <p class="title">Kontaktformular</p>
-    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-    <br>Auskunftsrecht
-    <br>Als Nutzende unseres Internetangebotes haben Sie das Recht, von uns Auskunft über die zu Ihrer Person oder zu Ihrem Pseudonym gespeicherten Daten zu verlangen. Alle Angaben zur Datenverarbeitung sind in unserem Verfahrensverzeichnis ersichtlich, das Sie bei uns anfordern können. Auf Ihr Verlangen hin kann die Auskunft auch elektronisch erteilt werden.
-    <p class="title">Sicherheit</p>
-    <p>Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre durch uns verwalteten personenbezogenen Daten gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder gegen den Zugriff unberechtigter Personen zu schützen. Wir verbessern unsere Sicherheitsmaßnahmen entsprechend der technologischen Entwicklung fortlaufend.
-    <p class="title">SSL-Verschlüsselung</p>
-    <p>Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel der Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „//“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
-    Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+    <!-- <p v-for="text in $ta(privacyJson, 'serverlogs.text')">{{ text }}</p> -->
+    <h2 class="title">{{ $ta(privacyJson, 'cookies.title') }}</h2>
+    <p v-for="text in $ta(privacyJson, 'cookies.text')">{{ text }}</p>
+    <h2 class="title">{{ $ta(privacyJson, 'contactform.title') }}</h2>
+    <p v-for="text in $ta(privacyJson, 'contactform.text')">{{ text }}</p>
+    <h2 class="title">{{ $ta(privacyJson, 'provideinfo.title') }}</h2>
+    <p v-for="text in $ta(privacyJson, 'provideinfo.text')">{{ text }}</p>
+    <h2 class="title">{{ $ta(privacyJson, 'security.title') }}</h2>
+    <p v-for="text in $ta(privacyJson, 'security.text')">{{ text }}</p>
+    <h2 class="title">{{ $ta(privacyJson, 'ssl.title') }}</h2>
+    <p v-for="text in $ta(privacyJson, 'ssl.text')">{{ text }}</p>
   </div>
 </template>
 
 <script>
+import json from "~/content/data/privacy"
 import seo from "~/content/data/seo.json"
 export default {
   head() {
@@ -54,6 +53,11 @@ export default {
     paths: {
       en: '/privacy',
       de: '/datenschutz'
+    }
+  },
+  data() {
+    return {
+      privacyJson: json
     }
   }
 }

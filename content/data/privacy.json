@@ -1,0 +1,128 @@
+{
+  "de_intro": {
+    "title": "Datenschutz",
+    "text": [
+      "Wir freuen uns über Ihren Besuch auf unserer Website und Ihr Interesse an unseren Dienstleistungen. Der Schutz Ihrer personenbezogenen Daten ist für uns ein wichtiges Anliegen. Wir behandeln Ihre Daten vertraulich und entsprechend der gesetzlichen Vorschriften sowie dieser Datenschutzerklärung.",
+      "Wir möchten, dass Sie sich beim Besuch unserer Internetseiten sicher fühlen. Im Folgenden erläutern wir, welche Informationen wir während Ihres Besuches auf unserer Website erfassen und wie diese genutzt werden."
+    ]
+  },
+  "en_intro": {
+    "title": "Data Protection",
+    "text": [
+      "Thank you for visiting our website and your interest in our services. The protection of your personal data is important to us. We treat your data confidentially and in accordance with the statutory provisions and this data protection declaration.",
+      "We want you to feel safe when visiting our website. In the following we explain which information we collect during your visit to our website and how it is used."
+    ]
+  },
+  "de_official": {
+    "title": "Datenschutzbeauftragte",
+    "text": [
+      "Für Auskünfte, Wünsche oder Anregungen zum Thema Datenschutz stehen wir Ihnen gerne zur Verfügung. Sie erreichen unseren betrieblichen Datenschutzbeauftragten unter der E-Mail: datenschutz(at)holz-raum.de",
+      "Die für Datenschutz und Datensicherheit zuständige Aufsichtsbehörde erreichen Sie unter:"
+    ],
+    "list": [
+      "Berliner Beauftragte für Datenschutz und Informationsfreiheit",
+      "An der Urania 4-10",
+      "10787 Berlin"
+    ]
+  },
+  "en_offical": {
+    "title": "Offical Data Protection",
+    "text": [
+      "We will be happy to provide you with information, requests or suggestions on the subject of data protection. You can reach our company data protection officer by email: datenschutz (at) holz-raum.de",
+      "You can reach the supervisory authority responsible for data protection and data security at:"
+    ],
+    "list": [
+      "Berlin representative for data protection and freedom of information",
+      "An der Urania 4-10",
+      "10787 Berlin"
+    ]
+  },
+  "de_serverlogs": {
+    "title": "Server-Log Files",
+    "text": [
+      "Für Auskünfte, Wünsche oder Anregungen zum Thema Datenschutz stehen wir Ihnen gerne zur Verfügung. Sie erreichen unseren betrieblichen Datenschutzbeauftragten unter der E-Mail: datenschutz(at)holz-raum.de",
+      "Die für Datenschutz und Datensicherheit zuständige Aufsichtsbehörde erreichen Sie unter:"
+    ],
+    "list": [
+      "Berliner Beauftragte für Datenschutz und Informationsfreiheit",
+      "An der Urania 4-10",
+      "10787 Berlin"
+    ]
+  },
+  "en_serverlogs": {
+    "title": "Server-Log Files",
+    "text": [
+      "We will be happy to provide you with information, requests or suggestions on the subject of data protection. You can reach our company data protection officer by email: datenschutz (at) holz-raum.de",
+      "You can reach the supervisory authority responsible for data protection and data security at:"
+    ],
+    "list": [
+      "Berlin representative for data protection and freedom of information",
+      "An der Urania 4-10",
+      "10787 Berlin"
+    ]
+  },
+  "de_cookies": {
+    "title": "Cookies",
+    "text": [
+      "Die Internetseiten verwenden Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Sie dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.",
+      "Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein."
+    ]
+  },
+  "en_cookies": {
+    "title": "Cookies",
+    "text": [
+      "The website uses cookies. Cookies do no damage to your computer and contain no viruses. They serve to make our offer more user-friendly, more effective and safer. Most of the cookies we use are so-called 'session cookies'. They are automatically deleted after your visit. Other cookies remain on your device until you delete them. These cookies enable us to recognize your browser the next time you visit.",
+      "You can set your browser so that you are informed about the setting of cookies and only allow cookies in individual cases, exclude the acceptance of cookies for certain cases or in general, and activate the automatic deletion of cookies when the browser is closed. If cookies are deactivated, the functionality of this website may be restricted."
+    ]
+  },
+  "de_contactform": {
+    "title": "Kontaktformular",
+    "text": [
+      "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+    ]
+  },
+  "en_contactform": {
+    "title": "Contact Form",
+    "text": [
+      "If you send us inquiries using the contact form, your details will be stored by us for the purpose of processing the inquiry and in the event of follow-up questions. We will not pass on this data without your consent."
+    ]
+  },
+  "de_provideinfo": {
+    "title": "Auskunftsrecht",
+    "text": [
+      "Als Nutzende unseres Internetangebotes haben Sie das Recht, von uns Auskunft über die zu Ihrer Person oder zu Ihrem Pseudonym gespeicherten Daten zu verlangen. Alle Angaben zur Datenverarbeitung sind in unserem Verfahrensverzeichnis ersichtlich, das Sie bei uns anfordern können. Auf Ihr Verlangen hin kann die Auskunft auch elektronisch erteilt werden."
+    ]
+  },
+  "en_provideinfo": {
+    "title": "Contact Form",
+    "text": [
+      "As a user of our website, you have the right to request information from us about the data stored about you or your pseudonym. All information on data processing can be found in our process directory, which you can request from us. The information can also be provided electronically at your request."
+    ]
+  },
+  "de_security": {
+    "title": "Sicherheit",
+    "text": [
+      "Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre durch uns verwalteten personenbezogenen Daten gegen zufällige oder vorsätzliche Manipulationen, Verlust, Zerstörung oder gegen den Zugriff unberechtigter Personen zu schützen. Wir verbessern unsere Sicherheitsmaßnahmen entsprechend der technologischen Entwicklung fortlaufend."
+    ]
+  },
+  "en_security": {
+    "title": "Security",
+    "text": [
+      "We use technical and organizational security measures to protect your personal data managed by us against accidental or intentional manipulation, loss, destruction or against access by unauthorized persons. We continuously improve our security measures in line with technological developments."
+    ]
+  },
+  "de_ssl": {
+    "title": "SSL-Verschlüsselung",
+    "text": [
+      "Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel der Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „//“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.",
+      "Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden."
+    ]
+  },
+  "en_ssl": {
+    "title": "SSL Encryption",
+    "text": [
+      "This site uses SSL encryption for security reasons and to protect the transmission of confidential content, such as the requests you send to us as the site operator. You can recognize an encrypted connection by the fact that the address line of the browser changes from '//'' to 'https://'' and by the lock symbol in your browser line.",
+      "If SSL encryption is activated, the data that you transmit to us cannot be read by third parties."
+    ]
+  }
+}
