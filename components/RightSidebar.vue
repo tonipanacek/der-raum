@@ -1,5 +1,5 @@
 <template>
-  <Stack id="right-sidebar" class="right-sidebar">
+  <Stack id="right-sidebar">
     <div class="social-wrapper">
       <SocialIcons id="right-social"/>
     </div>

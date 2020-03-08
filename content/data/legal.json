@@ -10,6 +10,17 @@
       "E-Mail: kontakt@holz-raum.de"
     ]
   },
+  "en_contact": {
+    "title": "Kontakt",
+    "text": [
+      "holz & raum berlin gmbh",
+      "Roelckestr. 152 -153",
+      "13086 Berlin",
+      "Tel:  030 927943 - 0",
+      "Fax: 030 927943 - 233",
+      "E-Mail: kontakt@holz-raum.de"
+    ]
+  },
   "de_tax": {
     "title": "Steuer",
     "text": [
@@ -45,14 +56,14 @@
   "de_disclaimer": {
     "title": "Haftungsausschluss",
     "text": [
-      "",
-      ""
+      "Die Inhalte unserer Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Wegen der Eigenheiten des Mediums Internet und der damit verbundenen Möglichkeit einer Unterbrechung oder eines Abbruchs der Informationsübertragung ist jegliche Haftung im Zusammenhang mit der Nutzung der Informationen, der Links oder dem Vertrauen auf die Richtigkeit dieser ausgeschlossen.",
+      "Der Inhalt dieser Webseite ist urheberrechtlich geschützt."
     ]
   },
   "en_disclaimer": {
     "title": "Disclaimer",
     "text": [
-      "The contents of this page were created with greatest care. However, we cannot guarantee the accuracy, completeness, and up-to-date status of the contents. <br>Due to the characteristics of the Internet medium and the connected possibility of interruption or failure of information transmission, any liability is excluded in the context of the use of information, links, or the confidence in the accuracy of these.",
+      "The contents of this page were created with greatest care. However, we cannot guarantee the accuracy, completeness, and up-to-date status of the contents. Due to the characteristics of the Internet medium and the connected possibility of interruption or failure of information transmission, any liability is excluded in the context of the use of information, links, or the confidence in the accuracy of these.",
       "The contents of this website are protected by copyright."
     ]
   },
@@ -73,14 +84,12 @@
   },
   "de_website": {
     "title": "Realisierung der Website",
-    "text": [
-      "Obst Digital"
-    ]
+    "text": "Obst Digital",
+    "link": "https://www.obst.digital"
   },
   "en_website": {
     "title": "Realization of the Website",
-    "text": [
-      "Obst Digital"
-    ]
+    "text": "Obst Digital",
+    "link": "https://www.obst.digital"
   }
 }

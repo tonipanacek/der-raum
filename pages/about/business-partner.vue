@@ -6,7 +6,14 @@
       </div>
       <div class="box-wrapper">
         <ul>
-          <li v-for="data in $options.businessPartners">{{data}}</li>
+          <li v-for="data in json.partners">
+            <template v-if="data.length === 2">
+              <a :href="data[1]" target="_blank">{{ data[0] }}</a>
+            </template>
+            <template v-else>
+              {{ data[0] }}
+            </template>
+          </li>
         </ul>
       </div>
     </Article>
@@ -58,7 +65,8 @@ export default {
             de_title: 'Business Partner'
           }
         }
-      ]
+      ],
+      json: json
     }
   },
   mounted() {
@@ -97,15 +105,7 @@ export default {
       display: block;
     }
     list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-    padding-block-start: 0;
-    padding-block-end: 0;
-    -webkit-padding-start: 0;
+    padding-left: 0px;
     li {
       margin-left: 0;
       font-size: .85em;

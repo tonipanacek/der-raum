@@ -93,20 +93,20 @@ export default {
       } else {
         el.style.transform = "translateY(-10%)"
       }
-      el.style.transition = "opacity 400 ease, transform 400 ease"
+      el.style.transition = "opacity 300 ease, transform 300 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 200
+        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
         if (this.goingUp) {
-          delay = parseInt(el.dataset.index) * 200
+          delay = parseInt(el.dataset.index) * 150
         }
         setTimeout(() => {
           el.style.opacity = 1
           el.style.transform = "translateY(0)"
         }, delay)
         done()
-      }, 500)
+      }, 350)
     },
     leave: function(el, done) {
       done()

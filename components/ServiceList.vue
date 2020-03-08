@@ -189,7 +189,7 @@ $more-height: calc(100vh - #{spacing(frame)});
 .projects-link {
   @include smallCaps;
   color: color(dark);
-  border: 1px solid color(dark);
+  border: 1.5px solid color(light);
   text-decoration: none;
   width: 100%;
   height: 15ch;
@@ -205,7 +205,7 @@ $more-height: calc(100vh - #{spacing(frame)});
     &:hover {
       color: color(black);
       font-weight: 700;
-      border: 1.1px solid color(black);
+      border: 1.5px solid color(black);
     }
   }
 }
@@ -213,6 +213,13 @@ $more-height: calc(100vh - #{spacing(frame)});
 .projects-link-non-grid {
   padding: 0.5em;
   margin-top: spacing(sm);
+  a {
+    &:hover {
+      color: color(black);
+      font-weight: 700;
+      border: 1.5px solid color(black);
+    }
+  }
 }
 
 // grid layout for big screens
@@ -220,17 +227,20 @@ $more-height: calc(100vh - #{spacing(frame)});
   .service-list {
     margin-top: 0;
     min-height: 500px;
-    height: $main-height;
+    height: $more-height;
     max-width: 120ch;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
     overflow: hidden;
-    -ms-grid-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
-    grid-template-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
-    -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
-    margin-bottom: 0px;
+    // -ms-grid-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
+    // grid-template-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
+    // -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
+    // grid-template-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
+    -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+    -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
+    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
   }
 
   #Design.service-link {
@@ -317,7 +327,8 @@ $more-height: calc(100vh - #{spacing(frame)});
     -ms-grid-row: 5;
     -ms-grid-row-span: 6;
     grid-area:  5 / 5 / 6 / 6;
-    align-self: end;
+    align-self: center;
+    margin-top: 75px;
   }
   .projects-link {
     padding: 0;
