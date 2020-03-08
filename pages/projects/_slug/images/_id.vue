@@ -9,6 +9,7 @@
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container">
+
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
           <div class="image">
             <img :src="image" :title="$tp('title')" :alt="$tp('description')">
@@ -104,11 +105,40 @@ export default {
     this.setPages(this.allPagesCurrentChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
+    this.enterMobileFullScreen()
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
+    enterMobileFullScreen() {
+      const navbar = document.querySelector('.left-sidebar');
+      const footer = document.querySelector('#right-sidebar');
+      const closeLink = document.querySelector('.close-link');
+      const hideSidebars = () => {
+        navbar.style.display = 'none';
+        footer.style.display = 'none';
+        closeLink.style.left = '20px';
+        closeLink.style.top = '-25px';
+      }
+      const showSidebars = () => {
+        navbar.style.display = 'block';
+        footer.style.display = 'block';
+        closeLink.style.left = '-20px';
+        closeLink.style.top = '-3px';
+      }
+      const widthChange = (mq) => {
+        if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
+          hideSidebars();
+          closeLink.addEventListener('click', showSidebars);
+        } else {
+          showSidebars();
+        }
+      }
+      const mq = window.matchMedia( "(max-width: 767px)" );
+      mq.addListener(widthChange);
+      widthChange(mq);
+    },
     handleKey(event) {
       event.preventDefault();
       if (event.key.match(/(down|right)/i) && this.nextImageLink) {
@@ -228,7 +258,6 @@ max-width: 120ch;
     }
   }
   .close-link {
-    display: none;
     position: absolute;
     left: -20px;
     top: -3px;
