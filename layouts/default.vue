@@ -80,7 +80,7 @@ a:visited {
   background: white;
   margin-top: spacing(lg);
   @include respond-to('large') {
-    margin-top: none;
+    margin-top: 0;
   }
 }
 .left-sidebar {
