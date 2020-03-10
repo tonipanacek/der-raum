@@ -47,6 +47,7 @@ export default {
 <style scoped lang="scss">
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
+
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
@@ -77,6 +78,10 @@ a:visited {
   flex: 2 1 auto;
   overflow-y: visible;
   background: white;
+  margin-top: spacing(lg);
+  @include respond-to('large') {
+    margin-top: none;
+  }
 }
 .left-sidebar {
   padding: 0 2em;

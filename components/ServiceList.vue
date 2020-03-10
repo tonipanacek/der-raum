@@ -117,7 +117,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 $more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
 .service-list {
-  margin-top: spacing(lg);
   background-color: white;
   display: -ms-grid;
   display: grid;

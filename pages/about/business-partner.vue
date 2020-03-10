@@ -84,6 +84,7 @@ export default {
   margin: 0 auto;
     .text {
       display: block;
+      padding: 0 2em;
       @include respond-to('large') {
         display: none;
       }
