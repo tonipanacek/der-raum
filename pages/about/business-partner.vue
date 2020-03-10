@@ -93,7 +93,7 @@ export default {
     width: 100%;
     margin: 0.25em;
     @include respond-to('large') {
-      width: 60%;
+      width: 70%;
     }
   }
   ul {
@@ -101,7 +101,7 @@ export default {
     padding-left: 0;
     @include respond-to('large') {
       margin: 0;
-      columns: 20ch 2;
+      columns: 22ch 2;
       display: block;
     }
     list-style: none;
@@ -110,8 +110,16 @@ export default {
       margin-left: 0;
       font-size: .85em;
       display: block;
-      color: color(dark);
+      color: color(light);
       padding-bottom: spacing(xs);
+      a {
+        color: color(dark);
+        transition: font-weight 100ms ease;
+        &:hover {
+          color: color(black);
+          font-weight: 600;
+        }
+      }
     }
   }
 }

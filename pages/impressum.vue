@@ -66,6 +66,17 @@ export default {
         width: 80ch;
       }
     }
+    a,
+    a:focus,
+    a:visited {
+      transition: color 500ms ease;
+      text-decoration: none;
+      color: color(light);
+      font-size: .85em;
+      &:hover {
+        color: color(dark);
+      }
+    }
     @include respond-to('large') {
       padding: 0;
     }

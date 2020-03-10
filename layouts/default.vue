@@ -59,14 +59,14 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
 }
 a,
-a:hover,
 a:focus,
 a:visited {
   transition: color 500ms ease;
   text-decoration: none;
   color: color(light);
   &:hover {
-    color: darken(color(light), 10%);
+    color: color(black);
+    font-weight: bold
   }
   &.nuxt-link-exact-active {
     color: color(dark);
@@ -102,6 +102,7 @@ a:visited {
     display: flex;
     align-items: center;
     width: 4.5rem;
+    margin-bottom: -4px;
   }
 }
 

@@ -9,7 +9,6 @@
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container">
-
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
           <div class="image">
             <img :src="image" :title="$tp('title')" :alt="$tp('description')">
