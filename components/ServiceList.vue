@@ -23,6 +23,7 @@
           @mouseover.native="hover = 'projects'"
           @mouseleave.native="hover = ''"
           :to="localePath({ name: 'projects' })"
+
         >
           {{ $t("projects.link") }}
         </NuxtLink>
@@ -116,7 +117,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 $more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
 .service-list {
-  margin-top: spacing(lg);
   background-color: white;
   display: -ms-grid;
   display: grid;
@@ -201,10 +201,11 @@ $more-height: calc(100vh - #{spacing(frame)});
 .projects-link-grid {
   display: none;
   width: 100%;
+  text-align: center;
   a {
     &:hover {
       color: color(black);
-      font-weight: 700;
+      font-weight: 600;
       border: 1.5px solid color(black);
     }
   }

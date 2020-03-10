@@ -1,7 +1,7 @@
 <template>
   <nav id="prev-next-buttons">
-    <NuxtLink v-if="next" :to="next" class="next"><Arrow class="arrow" /></NuxtLink>
     <NuxtLink v-if="prev" :to="prev" class="prev"><Arrow class="arrow" /></NuxtLink>
+    <NuxtLink v-if="next" :to="next" class="next"><Arrow class="arrow" /></NuxtLink>
   </nav>
 </template>
 
@@ -20,50 +20,47 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-nav {
+<style lang="scss">
+#prev-next-buttons {
   z-index: z(sidebar);
   // position: relative;
   height: 100%;
   width: 100%;
   @include respond-to(large) {
-    display: none !important;
+    display: none;
   }
-}
-a {
-  .arrow {
-    z-index: z(sidebar);
-    height: 2rem;
-    width: 2rem;
-    filter: brightness(100%);
-    g {
-      box-shadow: shadow(light);
-      transition: box-shadow 500ms ease;
+  a {
+    .arrow {
+      z-index: z(sidebar);
+      height: 2rem;
+      width: 2rem;
+      filter: brightness(100%);
+      fill: color(dark);
     }
-    fill: color(dark);
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: spacing(sm);
+    width: 40vw;
+    // background-color: rgba(255, 255, 255, 0.3);
+    // max-width: 3rem;
+    // transition: background-color 500ms ease, box-shadow 500ms ease;
+    // &:hover {
+    //   box-shadow: shadow(dark);
+    //   background-color: rgba(255, 255, 255, 0.5);
+    // }
   }
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: spacing(sm);
-  background-color: rgba(255, 255, 255, 0.3);
-  max-width: 3rem;
-  transition: background-color 500ms ease, box-shadow 500ms ease;
-  &:hover {
-    box-shadow: shadow(dark);
-    background-color: rgba(255, 255, 255, 0.5);
+  .prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(-1)
   }
-}
-.prev {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(-1)
-}
-.next {
-  position: absolute;
-  top: 0;
-  right: 0;
+  .next {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 </style>
