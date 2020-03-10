@@ -7,11 +7,11 @@
       <div class="box-wrapper">
         <ul>
           <li v-for="data in json.partners">
-            <template v-if="data.length === 2">
-              <a :href="data[1]" target="_blank">{{ data[0] }}</a>
+            <template v-if="data.url">
+              <a :href="data.url" target="_blank">{{ data.text }}</a>
             </template>
             <template v-else>
-              {{ data[0] }}
+              {{ data.text }}
             </template>
           </li>
         </ul>
