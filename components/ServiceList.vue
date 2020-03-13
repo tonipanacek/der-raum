@@ -146,25 +146,35 @@ export default {
   @include respond-to('large') {
     .service-list {
       display: flex;
-      justify-content: space-between;
       flex-flow: row wrap;
+      justify-content: space-between;
     }
 
     #Design.service-link {
       width: 51%;
       height: 40%;
       margin-left: 5.5%;
+      > .image-container img {
+        height: 100%;
+      }
     }
 
     #Planning.service-link {
       width: 29%;
       height: 58.5%;
+      margin-left: 0px;
+      > .image-container img {
+        height: 100%;
+      }
     }
 
     #Production.service-link {
       width: 51%;
       height: 40%;
       margin-top: -104px;
+      > .image-container img {
+        height: 100%;
+      }
     }
     .projects-link-grid {
       width: 29%;
