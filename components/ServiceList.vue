@@ -80,6 +80,8 @@ export default {
 </script>
 
 <style lang="scss">
+$main-height: calc(100vh - 2 * #{spacing(frame)});
+$more-height: calc(100vh - #{spacing(frame)});
 .service-link {
   max-width: none;
   text-decoration: none;
@@ -93,168 +95,6 @@ export default {
   }
   .projects-link {
     transition: opacity 0.3s ease-in-out;
-  }
-}
-.hover:not(.active) {
-  opacity: .8;
-  .service-title {
-    color: color(dark);
-    font-weight: 400;
-  }
-}
-.hover {
-  .service-title {
-    color: color(black);
-    font-weight: 700;
-  }
-  .projects-link {
-    color: color(black);
-    border: 1px solid color(black);
-  }
-}
-
-@supports (not (display: grid)) {
-  .service-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-  }
-  #Design.service-link {
-      width: 60%;
-      align-self: flex-end;
-      > .image-container img {
-        height: 41vh;
-      }
-    }
-
-    #Planning.service-link {
-      width: 35%;
-      margin-left: 5%;
-      > .image-container img {
-        height: 62.5vh;
-      }
-    }
-
-    #Production.service-link {
-      width: 65%;
-      margin-top: 50px;
-      > .image-container img {
-        height: 41vh;
-      }
-    }
-
-  @include respond-to('large') {
-    .service-list {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-    }
-
-    #Design.service-link {
-      width: 51%;
-      height: 40%;
-      margin-left: 5.5%;
-      > .image-container img {
-        height: 100%;
-      }
-    }
-
-    #Planning.service-link {
-      width: 29%;
-      height: 58.5%;
-      margin-left: 0px;
-      > .image-container img {
-        height: 100%;
-      }
-    }
-
-    #Production.service-link {
-      width: 51%;
-      height: 40%;
-      margin-top: -104px;
-      > .image-container img {
-        height: 100%;
-      }
-    }
-    .projects-link-grid {
-      width: 29%;
-      margin-top: 50px;
-      align-self: auto;
-    }
-  }
-}
-
-$main-height: calc(100vh - 2 * #{spacing(frame)});
-$more-height: calc(100vh - #{spacing(frame)});
-// grid layout for small screens
-.service-list {
-  background-color: white;
-  // display: -ms-grid;
-  display: grid;
-  // -ms-grid-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
-  grid-template-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .3fr);
-  // -ms-grid-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
-  grid-template-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
-  margin-bottom: 80px;
-}
-
-#Planning.service-link  {
-  // -ms-grid-column: 4;
-  // -ms-grid-column-span: 6;
-  // -ms-grid-row: 1;
-  // -ms-grid-row-span: 3;
-  grid-area: 1 / 4 / 3 / 6;
-  align-self: stretch;
-  display: block;
-  .image-container {
-    width: 100%;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-#Design.service-link {
-  // -ms-grid-column: 1;
-  // -ms-grid-column-span: 3;
-  // -ms-grid-row: 2;
-  // -ms-grid-row-span: 3;
-  grid-area: 2 / 1 / 3 / 3;
-  display: block;
-  height: 100%;
-  width: 100%;
-  .image-container {
-    width: 100%;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  h3 {
-    padding-left: 0.5em;
-  }
-}
-#Production.service-link {
-  // -ms-grid-column: 2;
-  // -ms-grid-column-span: 5;
-  // -ms-grid-row: 4;
-  // -ms-grid-row-span: 5;
-  grid-area: 4 / 2 / 5 / 5;
-  display: block;
-  height: 100%;
-  width: 100%;
-  .image-container {
-    width: 100%;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 }
 .projects-link {
@@ -293,42 +133,111 @@ $more-height: calc(100vh - #{spacing(frame)});
     }
   }
 }
+.hover:not(.active) {
+  opacity: .8;
+  .service-title {
+    color: color(dark);
+    font-weight: 400;
+  }
+}
+.hover {
+  .service-title {
+    color: color(black);
+    font-weight: 700;
+  }
+  .projects-link {
+    color: color(black);
+    border: 1px solid color(black);
+  }
+}
 
-// grid layout for big screens
+// small screens
+.service-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  background-color: white;
+  margin-bottom: 35px;
+}
+  #Design.service-link {
+    width: 60%;
+    align-self: flex-end;
+    display: block;
+    height: 100%;
+    .image-container {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+      }
+    }
+    h3 {
+      padding-left: 0.5em;
+    }
+  }
+
+  #Planning.service-link {
+    width: 35%;
+    margin-left: 5%;
+    display: block;
+    .image-container {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 74.5vh;
+        object-fit: cover;
+      }
+    }
+  }
+
+  #Production.service-link {
+    width: 65%;
+    margin-top: 50px;
+    display: block;
+    height: 100%;
+    margin-right: 5%;
+    .image-container {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+      }
+    }
+  }
+// large screens
 @include respond-to('large') {
   .service-list {
-    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     min-height: 500px;
     height: $more-height;
     max-width: 120ch;
     margin: 0 auto;
-    // display: -ms-grid;
-    display: grid;
     overflow: hidden;
-    // -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    // -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
+    margin-bottom: 0px;
   }
 
   #Design.service-link {
-    // -ms-grid-column: 2;
-    // -ms-grid-column-span: 4;
-    // -ms-grid-row: 1;
-    // -ms-grid-row-span: 3;
-    grid-area:  1 / 2 / 3 / 4;
+    width: 51%;
+    height: 40%;
+    margin-left: 5.5%;
     display: block;
-    height: 100%;
-    width: 100%;
     position: relative;
+    align-self: auto;
     > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
       img {
         width: 100%;
         height: 100%;
@@ -339,15 +248,12 @@ $more-height: calc(100vh - #{spacing(frame)});
       padding: 0;
     }
   }
+
   #Planning.service-link {
-    // -ms-grid-column: 5;
-    // -ms-grid-column-span: 6;
-    // -ms-grid-row: 1;
-    // -ms-grid-row-span: 5;
-    grid-area:  1 / 5 / 5 / 6;
+    width: 29%;
+    height: 58.5%;
+    margin-left: 0px;
     display: block;
-    height: 100%;
-    width: 100%;
     position: relative;
     > .image-container {
       position: absolute;
@@ -364,15 +270,12 @@ $more-height: calc(100vh - #{spacing(frame)});
       }
     }
   }
+
   #Production.service-link {
-    // -ms-grid-column: 1;
-    // -ms-grid-column-span: 3;
-    // -ms-grid-row: 4;
-    // -ms-grid-row-span: 6;
-    grid-area:  4 / 1 / 6 / 3;
+    width: 51%;
+    height: 40%;
+    margin-top: -104px;
     display: block;
-    height: 100%;
-    width: 100%;
     position: relative;
     > .image-container {
       position: absolute;
@@ -390,23 +293,18 @@ $more-height: calc(100vh - #{spacing(frame)});
     }
   }
   .projects-link-grid {
-    // -ms-grid-column: 5;
-    // -ms-grid-column-span: 6;
-    // -ms-grid-row: 5;
-    // -ms-grid-row-span: 6;
-    grid-area:  5 / 5 / 6 / 6;
-    align-self: center;
-    margin-top: 75px;
+    display: block;
+    width: 29%;
+    margin-top: 50px;
+    align-self: auto;
   }
   .projects-link {
     padding: 0;
     display: flex;
   }
-  .projects-link-grid {
-    display: block;
-  }
   .projects-link-non-grid {
     display: none;
   }
 }
+
 </style>
