@@ -189,20 +189,20 @@ $more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
 .service-list {
   background-color: white;
-  display: -ms-grid;
+  // display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
+  // -ms-grid-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .5fr);
   grid-template-columns: minmax(5px, 2fr) minmax(5px, 2fr) minmax(5px, .3fr) minmax(5px, 2fr) minmax(5px, .3fr);
-  -ms-grid-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
+  // -ms-grid-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
   grid-template-rows: minmax(5px, 1fr) minmax(5px, 2fr) minmax(5px, .5fr) minmax(5px, 2fr);
   margin-bottom: 80px;
 }
 
 #Planning.service-link  {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 6;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
+  // -ms-grid-column: 4;
+  // -ms-grid-column-span: 6;
+  // -ms-grid-row: 1;
+  // -ms-grid-row-span: 3;
   grid-area: 1 / 4 / 3 / 6;
   align-self: stretch;
   display: block;
@@ -217,10 +217,10 @@ $more-height: calc(100vh - #{spacing(frame)});
   }
 }
 #Design.service-link {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
+  // -ms-grid-column: 1;
+  // -ms-grid-column-span: 3;
+  // -ms-grid-row: 2;
+  // -ms-grid-row-span: 3;
   grid-area: 2 / 1 / 3 / 3;
   display: block;
   height: 100%;
@@ -239,10 +239,10 @@ $more-height: calc(100vh - #{spacing(frame)});
   }
 }
 #Production.service-link {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 5;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 5;
+  // -ms-grid-column: 2;
+  // -ms-grid-column-span: 5;
+  // -ms-grid-row: 4;
+  // -ms-grid-row-span: 5;
   grid-area: 4 / 2 / 5 / 5;
   display: block;
   height: 100%;
@@ -302,20 +302,20 @@ $more-height: calc(100vh - #{spacing(frame)});
     height: $more-height;
     max-width: 120ch;
     margin: 0 auto;
-    display: -ms-grid;
+    // display: -ms-grid;
     display: grid;
     overflow: hidden;
-    -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
+    // -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
     grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
+    // -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
     grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
   }
 
   #Design.service-link {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
+    // -ms-grid-column: 2;
+    // -ms-grid-column-span: 4;
+    // -ms-grid-row: 1;
+    // -ms-grid-row-span: 3;
     grid-area:  1 / 2 / 3 / 4;
     display: block;
     height: 100%;
@@ -340,10 +340,10 @@ $more-height: calc(100vh - #{spacing(frame)});
     }
   }
   #Planning.service-link {
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 6;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 5;
+    // -ms-grid-column: 5;
+    // -ms-grid-column-span: 6;
+    // -ms-grid-row: 1;
+    // -ms-grid-row-span: 5;
     grid-area:  1 / 5 / 5 / 6;
     display: block;
     height: 100%;
@@ -365,10 +365,10 @@ $more-height: calc(100vh - #{spacing(frame)});
     }
   }
   #Production.service-link {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 6;
+    // -ms-grid-column: 1;
+    // -ms-grid-column-span: 3;
+    // -ms-grid-row: 4;
+    // -ms-grid-row-span: 6;
     grid-area:  4 / 1 / 6 / 3;
     display: block;
     height: 100%;
@@ -390,10 +390,10 @@ $more-height: calc(100vh - #{spacing(frame)});
     }
   }
   .projects-link-grid {
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 6;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 6;
+    // -ms-grid-column: 5;
+    // -ms-grid-column-span: 6;
+    // -ms-grid-row: 5;
+    // -ms-grid-row-span: 6;
     grid-area:  5 / 5 / 6 / 6;
     align-self: center;
     margin-top: 75px;
