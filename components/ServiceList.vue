@@ -113,6 +113,67 @@ export default {
   }
 }
 
+@supports (not (display: grid)) {
+  .service-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  #Design.service-link {
+      width: 60%;
+      align-self: flex-end;
+      > .image-container img {
+        height: 41vh;
+      }
+    }
+
+    #Planning.service-link {
+      width: 35%;
+      margin-left: 5%;
+      > .image-container img {
+        height: 62.5vh;
+      }
+    }
+
+    #Production.service-link {
+      width: 65%;
+      margin-top: 50px;
+      > .image-container img {
+        height: 41vh;
+      }
+    }
+
+  @include respond-to('large') {
+    .service-list {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+    }
+
+    #Design.service-link {
+      width: 51%;
+      height: 40%;
+      margin-left: 5.5%;
+    }
+
+    #Planning.service-link {
+      width: 29%;
+      height: 58.5%;
+    }
+
+    #Production.service-link {
+      width: 51%;
+      height: 40%;
+      margin-top: -104px;
+    }
+    .projects-link-grid {
+      width: 29%;
+      margin-top: 50px;
+      align-self: auto;
+    }
+  }
+}
+
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 $more-height: calc(100vh - #{spacing(frame)});
 // grid layout for small screens
@@ -234,10 +295,6 @@ $more-height: calc(100vh - #{spacing(frame)});
     display: -ms-grid;
     display: grid;
     overflow: hidden;
-    // -ms-grid-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
-    // grid-template-columns: minmax(10px, .3fr) minmax(10px, 2.5fr) minmax(10px, .3fr) minmax(10px, .8fr) minmax(10px, 1.8fr);
-    // -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
-    // grid-template-rows: minmax(0, 2.1fr) minmax(0, .8fr) minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.1fr) minmax(0, 0.4fr);
     -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
     grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
     -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
@@ -342,5 +399,4 @@ $more-height: calc(100vh - #{spacing(frame)});
     display: none;
   }
 }
-
 </style>
