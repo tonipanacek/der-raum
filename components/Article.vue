@@ -14,31 +14,22 @@ export default {
 .article {
   display: flex;
   flex-direction: column;
-  max-width: 120ch;
+  max-width: 1250px;
   align-items: space-between;
   margin: 0 auto;
   &.project {
-    justify-content: space-between;
+    // justify-content: space-between;
   }
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
+    width: 100%;
   }
   .image-container {
     margin-bottom: spacing(frame);
     img {
-      // object-fit: cover;
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
     }
-  }
-  img,
-  & > * {
-    max-width: none;
-  }
-  img {
-    // object-fit: cover;
-    // max-height: 50vh;
-
   }
   .text {
     padding: spacing(frame);

@@ -56,6 +56,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     position: relative;
     flex-direction: initial;
     padding: none;
+    height: 100%;
   }
 }
 a,
@@ -76,10 +77,12 @@ a:visited {
 .main-container {
   flex: 2 1 auto;
   overflow-y: visible;
+  width: 100%;
   background: white;
   margin-top: spacing(lg);
   @include respond-to('large') {
     margin-top: 0;
+    width: 500px;
   }
 }
 .left-sidebar {
@@ -90,7 +93,7 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      width: 240px;
+      width: 300px;
       text-align: left;
       position: sticky;
       top: spacing(frame);

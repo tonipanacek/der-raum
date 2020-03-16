@@ -83,7 +83,8 @@ export default {
   }
 }
 .info {
-  flex: 0 1 31ch;
+  flex: 2 1 0%;
+  width: 30px;
   padding-bottom: 1em;
   .contact-item {
     text-decoration: none;

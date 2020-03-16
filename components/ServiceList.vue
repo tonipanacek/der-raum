@@ -299,7 +299,7 @@ $more-height: calc(100vh - #{spacing(frame)});
     align-self: auto;
   }
   .projects-link {
-    padding: 0;
+    padding: 10px;
     display: flex;
   }
   .projects-link-non-grid {
