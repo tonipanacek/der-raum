@@ -144,7 +144,7 @@ $main-height: calc(100vh - #{spacing(frame)});
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    min-height: 500px;
+    min-height: 570px;
     height: $main-height;
     max-width: 1250px;
     margin: 0 auto;

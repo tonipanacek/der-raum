@@ -96,6 +96,7 @@ a:visited {
       top: spacing(frame);
       min-height: $main-height;
       padding: 0 2em;
+      margin-bottom: 2em;
   }
 }
 
