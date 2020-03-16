@@ -13,7 +13,7 @@
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
       :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true, 'extraSpace': projects[0] === '' }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
       event=""
       @click.native.prevent="handleClick(project, index)"
       @mouseover.native="handleHover(project)"
@@ -156,7 +156,7 @@ $main-height: calc(100vh - #{spacing(frame)});
         object-fit: cover;
       }
     }
-    &.extraSpace {
+    &.extra-space {
       @include respond-to('large') {
         visibility: hidden;
       }
@@ -190,6 +190,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     margin-top: -48px;
     display: block;
     position: relative;
+    &.extra-margin {
+      margin-top: -104px;
+    }
     > .image-container {
       position: absolute;
       top: 0;

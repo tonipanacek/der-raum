@@ -13,7 +13,7 @@
       v-for="(image, index) in images"
       :key="image.url"
       :to="path(image)"
-      :class="{'image-link': true, 'extraSpace': image.index < 0}"
+      :class="{'image-link': true, 'extraSpace': image.index < 0, 'extra-margin': images.length === 3 && index === images.length - 1}"
       :data-index="index"
       :data-total="images.length"
       :mobile="mobile"
@@ -205,6 +205,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     margin-top: -48px;
     display: block;
     position: relative;
+    &.extra-margin {
+      margin-top: -104px;
+    }
     > .image-container {
       position: absolute;
       top: 0;

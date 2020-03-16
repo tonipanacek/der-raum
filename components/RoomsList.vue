@@ -13,7 +13,7 @@
       v-for="(room, index) in rooms"
       :key="getTitle(room.attributes)"
       :to="path(room)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true, 'extra-margin': rooms.length === 3 && index === rooms.length - 1 }"
       @mouseover.native="handleHover(room)"
       @mouseleave.native="handleBlur"
       :data-index="index"
@@ -130,7 +130,7 @@ $main-height: calc(100vh - #{spacing(frame)});
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    min-height: 500px;
+    min-height: 550px;
     height: $main-height;
     max-width: 1250px;
     margin: 0 auto;
@@ -186,6 +186,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     margin-top: -48px;
     display: block;
     position: relative;
+    &.extra-margin {
+      margin-top: -104px;
+    }
     > .image-container {
       position: absolute;
       top: 0;
