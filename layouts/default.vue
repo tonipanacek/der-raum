@@ -47,7 +47,6 @@ export default {
 <style scoped lang="scss">
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
-
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;

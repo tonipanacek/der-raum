@@ -217,7 +217,7 @@ $more-height: calc(100vh - #{spacing(frame)});
     justify-content: space-between;
     min-height: 500px;
     height: $more-height;
-    max-width: 120ch;
+    max-width: 1250px;
     margin: 0 auto;
     overflow: hidden;
     margin-bottom: 0px;
