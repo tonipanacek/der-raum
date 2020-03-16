@@ -47,7 +47,6 @@ export default {
 <style scoped lang="scss">
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
-
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
@@ -91,13 +90,13 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      // flex: 0 1 25ch;
-      width: 33ch;
+      width: 240px;
       text-align: left;
       position: sticky;
       top: spacing(frame);
       min-height: $main-height;
       padding: 0 2em;
+      margin-bottom: 2em;
   }
 }
 

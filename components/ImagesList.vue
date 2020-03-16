@@ -13,7 +13,7 @@
       v-for="(image, index) in images"
       :key="image.url"
       :to="path(image)"
-      :class="{'image-link': true, 'extraSpace': image.index < 0}"
+      :class="{'image-link': true, 'extraSpace': image.index < 0, 'extra-margin': images.length === 3 && index === images.length - 1}"
       :data-index="index"
       :data-total="images.length"
       :mobile="mobile"
@@ -141,27 +141,23 @@ $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
-    min-height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    min-height: 570px;
     height: $main-height;
-    max-width: 120ch;
+    max-width: 1250px;
     margin: 0 auto;
-    display: -ms-grid;
-    display: grid;
     overflow: hidden;
-    -ms-grid-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    grid-template-columns: minmax(0, .3fr) minmax(0, 2.5fr) minmax(0, .3fr) minmax(0, .8fr) minmax(0, 1.6fr);
-    -ms-grid-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
-    grid-template-rows: minmax(0, 2.1fr) minmax(0, .4fr) minmax(0, .8fr) minmax(0, .4fr) minmax(0, 2.1fr) minmax(0, 0.5fr);
+    margin-bottom: 0px;
   }
   .image-link:nth-child(1) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    grid-area: 1 / 2 / 3 / 4;
-    height: 100%;
-    width: 100%;
+    width: 51%;
+    height: 40%;
+    margin-left: 5.5%;
+    display: block;
     position: relative;
+    align-self: auto;
     > .image-container {
       position: absolute;
       top: 0;
@@ -178,18 +174,15 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
     &.extraSpace {
       @include respond-to('large') {
-        display: none;
+        visibility: hidden;
       }
     }
   }
   .image-link:nth-child(2) {
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 6;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 5;
-    grid-area: 1 / 5 / 5 / 6;
-    height: 100%;
-    width: 100%;
+    width: 29%;
+    height: 58.5%;
+    margin-left: 0px;
+    display: block;
     position: relative;
     > .image-container {
       position: absolute;
@@ -207,14 +200,14 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
   .image-link:nth-child(3) {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 6;
-    grid-area: 4 / 1 / 6 / 3;
-    height: 100%;
-    width: 100%;
+    width: 51%;
+    height: 40%;
+    margin-top: -48px;
+    display: block;
     position: relative;
+    &.extra-margin {
+      margin-top: -104px;
+    }
     > .image-container {
       position: absolute;
       top: 0;
@@ -231,15 +224,12 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
   .image-link:nth-child(4) {
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 6;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 7;
-    grid-area: 5 / 5 / 7 / 6;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+    width: 29%;
+    height: 58.5%;
+    margin-left: 0px;
     margin-top: 75px;
+    display: block;
+    position: relative;
     > .image-container {
       position: absolute;
       top: 0;
