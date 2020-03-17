@@ -1,14 +1,18 @@
 <template>
   <div class="layout">
-    <Stack class="left-sidebar">
-      <Navbar />
-      <SecondaryNavbar />
-      <SocialIcons id="left-social" />
-    </Stack>
+    <div class="sidebar-wrapper">
+      <Stack class="left-sidebar">
+        <Navbar />
+        <SecondaryNavbar />
+        <SocialIcons id="left-social" />
+      </Stack>
+    </div>
     <section role="main" class="main-container">
       <nuxt />
     </section>
-    <RightSidebar class="right-sidebar" />
+    <div class="sidebar-wrapper">
+      <RightSidebar class="right-sidebar" />
+    </div>
   </div>
 </template>
 
@@ -86,6 +90,11 @@ a:visited {
     width: 500px;
     max-width: 1250px;
   }
+}
+
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .left-sidebar {
   padding: 0 2em;
