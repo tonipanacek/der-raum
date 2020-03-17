@@ -5,22 +5,14 @@
     </div>
     <div class="right-stack small-very">
       <p>
-        <nuxt-link :to="switchLocalePath('de')">
-          De
-        </nuxt-link>
+        <nuxt-link :to="switchLocalePath('de')">De</nuxt-link>
         /
-        <nuxt-link :to="switchLocalePath('en')">
-          En
-        </nuxt-link>
+        <nuxt-link :to="switchLocalePath('en')">En</nuxt-link>
       </p>
       <p>
-        <nuxt-link :to="localePath('impressum')">
-          {{ $t("rightSidebar.impressum") }}
-        </nuxt-link>
+        <nuxt-link :to="localePath('impressum')">{{ $t("rightSidebar.impressum") }}</nuxt-link>
         /
-        <nuxt-link :to="localePath('privacy')">
-          {{ $t("rightSidebar.privacy") }}
-        </nuxt-link>
+        <nuxt-link :to="localePath('privacy')">{{ $t("rightSidebar.privacy") }}</nuxt-link>
       </p>
     </div>
   </Stack>
@@ -42,6 +34,8 @@ export default {
 <style lang="scss">
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .right-sidebar {
+  background: white;
+  padding: 1em 2em 2em 2em;
   a,
   a:hover,
   a:focus,
@@ -57,8 +51,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
       font-weight: 700;
     }
   }
-  background: white;
-  padding: 1em 2em 2em 2em;
   .right-stack {
     margin-top: 0;
     display: flex;
@@ -76,10 +68,11 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 }
 @include respond-to('large') {
   .right-sidebar {
-    width: 6rem;
+    width: 50px;
     position: relative;
     height: $main-height;
-    padding: 0 2em;
+    margin: 0 2em;
+    padding: 0;
     .right-stack {
       margin-top: 0;
       height: $main-height;
@@ -95,16 +88,16 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#right-social {
-  display: flex;
-  width: 6rem;
-  align-items: center;
-  justify-content: space-around;
-  max-width: none;
-  margin: spacing(frame) 0;
-  @include respond-to('large') {
-    display: none;
+  #right-social {
+    display: flex;
+    width: 6rem;
+    align-items: center;
+    justify-content: space-around;
+    max-width: none;
+    margin: spacing(frame) 0;
+    @include respond-to('large') {
+      display: none;
+    }
   }
 }
 </style>

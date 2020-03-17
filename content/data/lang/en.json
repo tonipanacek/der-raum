@@ -20,17 +20,17 @@
     "title": "Legal Notice"
   },
   "contact": {
-    "firstTitle": "Showroom & Design Studio",
+    "firstColumn": "Showroom & Design Studio",
     "streetNumber": "Dunckerstraße 15",
     "cityZip": "10437 Berlin",
     "tel": "030 393753 00",
     "email": "derraum@holz-raum.de",
-    "secondTitle": "Opening Hours",
+    "secondColumn": "Opening Hours",
     "weekdays": "Monday-Friday:",
     "weekdayHours": "10:00-18:00",
     "weekend": "Saturday:",
     "weekendHours": "11:00-17:00",
-    "thirdTitle": "Online-Öffnungszeiten (wegen Corona)",
-    "mainTitle": "Contact"
+    "thirdColumn": "Online-Öffnungszeiten (wegen Corona)",
+    "title": "Contact"
   }
 }

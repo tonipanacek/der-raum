@@ -66,8 +66,9 @@ export default {
 <style lang="scss">
   #privacy {
     padding: 0 2em;
-    max-width: 120ch;
+    max-width: 1250px;
     margin: 0 auto;
+    margin-bottom: 2em;
     h1 {
       margin-top: 0;
       font-size: 1rem;

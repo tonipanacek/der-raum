@@ -80,9 +80,11 @@ a:visited {
   width: 100%;
   background: white;
   margin-top: spacing(lg);
+  margin: 0 auto;
   @include respond-to('large') {
     margin-top: 0;
     width: 500px;
+    max-width: 1250px;
   }
 }
 .left-sidebar {

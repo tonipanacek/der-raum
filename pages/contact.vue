@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss">
 .contact {
-  max-width: 120ch;
+  max-width: 1250px;
 }
 .contact {
   .text {

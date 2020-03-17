@@ -212,7 +212,8 @@ export default {
 
 <style lang="scss" scoped>
 #projects.image {
-max-width: 120ch;
+max-width: 1250px;
+margin: 0 auto;
 }
 .project {
   position: relative;

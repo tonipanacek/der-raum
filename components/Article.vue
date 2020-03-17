@@ -18,7 +18,7 @@ export default {
   align-items: space-between;
   margin: 0 auto;
   &.project {
-    // justify-content: space-between;
+    justify-content: space-between;
   }
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
@@ -27,8 +27,8 @@ export default {
   .image-container {
     margin-bottom: spacing(frame);
     img {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   .text {
