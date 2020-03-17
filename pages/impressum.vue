@@ -45,9 +45,10 @@ export default {
 </script>
 <style lang="scss">
   #legal {
-    padding: 0 2em;
-    max-width: 120ch;
+    // padding: 0 2em;
+    max-width: 1250px;
     margin: 0 auto;
+    margin-bottom: 2em;
     h1 {
       margin-top: 0;
       font-size: 1rem;
