@@ -1,12 +1,12 @@
 <template>
-  <Container id="business-partners">
+  <Container id="press">
     <Article>
       <div class="text">
-        <h1>Business Partner</h1>
+        <h1>Press</h1>
       </div>
       <div class="box-wrapper">
         <ul>
-          <li v-for="data in json.partners">
+          <li v-for="data in json.press">
             <template v-if="data.url">
               <a :href="data.url" target="_blank">{{ data.text }}</a>
             </template>
@@ -23,7 +23,7 @@
 <script>
 import { mapActions } from 'vuex'
 import seo from "~/content/data/seo.json"
-import json from "~/content/data/business_partners.json"
+import json from "~/content/data/press.json"
 import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
 import Article from '~/components/Article'
@@ -32,13 +32,13 @@ import PrevNextButtons from '~/components/PrevNextButtons'
 export default {
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('secondaryNavbar.businessPartner')}`
+      title: `${seo.shortTitle} | ${this.$t('secondaryNavbar.press')}`
     }
   },
   nuxtI18n: {
     paths: {
-      en: '/about/business-partner',
-      de: '/uber/business-partner'
+      en: '/about/press',
+      de: '/uber/press'
     }
   },
   components: {
@@ -69,7 +69,7 @@ export default {
           //   en_title: 'Press',
           //   de_title: 'Press',
           //   position: 5
-          // }
+          // },
         }
       ],
       json: json
@@ -85,7 +85,7 @@ export default {
 }
 </script>
 <style lang="scss">
-#business-partners {
+#press {
   min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
     .text {

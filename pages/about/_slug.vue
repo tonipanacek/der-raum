@@ -17,7 +17,7 @@
 
 <script>
 import { mapActions } from "vuex"
-import { get, kebabCase } from 'lodash'
+import { get, kebabCase, sortBy } from 'lodash'
 import dynamicSEO from '~/plugins/dynamic_seo'
 import Article from "~/components/Article"
 import Frame from '~/components/Frame'
@@ -46,11 +46,11 @@ export default {
 
       // create context via webpack to map over all pages
       const allPages = await require.context("~/content/about/", true, /\.md$/)
-      const pages = allPages.keys().map(key => {
+      let pages = allPages.keys().map(key => {
         // give back the value of each page context
         return allPages(key)
       })
-
+      pages = sortBy(pages, page => get(page, 'attributes.position'))
       const locale = app.i18n.locale
       const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
@@ -66,8 +66,15 @@ export default {
             attributes: {
               title: 'Business Partner',
               en_title: 'Business Partner',
-              de_title: 'Business Partner'
-            }
+              de_title: 'Business Partner',
+              position: 4
+            },
+            // attributes: {
+            //   title: 'Press',
+            //   en_title: 'Press',
+            //   de_title: 'Press',
+            //   position: 5
+            // }
           }
         ],
         slug,

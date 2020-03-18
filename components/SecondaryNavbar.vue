@@ -45,14 +45,14 @@ export default {
     ...mapGetters(["sortedPages"])
   },
   methods: {
-    groupedPages() {
-      if (isEmpty(this.$data.pages)) { return [] }
-      if (sortedPages.length === 4) {
-        return sortedPages.slice(2)
-      } else {
-        return sortedPages
-      }
-    },
+    // groupedPages() {
+      // if (isEmpty(this.$data.pages)) { return [] }
+      // if (sortedPages.length === 4) {
+      //   return sortedPages.slice(2)
+      // } // else {
+      //   return sortedPages
+      // }
+    // },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
