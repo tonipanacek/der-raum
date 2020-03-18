@@ -1,10 +1,6 @@
 {
   "press": [
     {
-      "text": "The Wallstreet Journal // 2014",
-      "url": "www.wsj.com/articles/a-communist-era-home-is-overthrown-1418229684"
-    },
-    {
       "text": "Architektur Berlin | Building Berlin // 2020",
       "url": "https://www.ak-berlin.de/baukultur/publikationen/jahrbuecher/jahrbuch-detailseite/architektur-berlin-building-berlin-9.html"
     },
@@ -31,6 +27,10 @@
     {
       "text": "Häuser – Das Magazin // 2015",
       "url": "https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten"
+    },
+    {
+      "text": "The Wallstreet Journal // 2014",
+      "url": "www.wsj.com/articles/a-communist-era-home-is-overthrown-1418229684"
     }
   ],
   "en_title": "Press",
