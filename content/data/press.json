@@ -1,8 +1,8 @@
 {
   "press": [
     {
-      "text": "Berliner Morgenpost // 2015",
-      "url": "https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitz.html"
+      "text": "Frankfurter Allgemeine Sonntagszeitung // 2015",
+      "url": "https://www.faz.net/aktuell/wirtschaft/wohnen/bauen/neue-haeuser/neue-haeuser-das-wohnmoebel-von-wandlitz-13862346.html"
     },
     {
       "text": "Architektur Berlin | Building Berlin // 2020",
@@ -19,6 +19,10 @@
     {
       "text": "The New York Times Magazine // 2015",
       "url": "https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/?src=xps"
+    },
+    {
+      "text": "Berliner Morgenpost // 2015",
+      "url": "https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitz.html"
     }
   ],
   "en_title": "Press",
