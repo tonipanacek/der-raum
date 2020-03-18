@@ -1,8 +1,8 @@
 {
   "press": [
     {
-      "text": "The New York Times Magazine // 2015",
-      "url": "https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/?src=xps"
+      "text": "Berliner Morgenpost // 2015",
+      "url": "https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitz.html"
     },
     {
       "text": "Architektur Berlin | Building Berlin // 2020",
@@ -15,6 +15,10 @@
     {
       "text": "DDS // 2016",
       "url": "https://www.dds-online.de/allgemein/ueber-das-rendering-auf-die-cnc/#slider-intro-8"
+    },
+    {
+      "text": "The New York Times Magazine // 2015",
+      "url": "https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/?src=xps"
     }
   ],
   "en_title": "Press",
