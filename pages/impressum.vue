@@ -45,7 +45,7 @@ export default {
 </script>
 <style lang="scss">
   #legal {
-    // padding: 0 2em;
+    padding: 0 2em;
     max-width: 1250px;
     margin: 0 auto;
     margin-bottom: 2em;

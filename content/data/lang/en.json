@@ -7,7 +7,8 @@
     "rooms": "Rooms"
   },
   "secondaryNavbar": {
-    "businessPartner": "Business Partner"
+    "businessPartner": "Business Partner",
+    "press": "Press"
   },
   "rightSidebar": {
     "impressum": "Legal",

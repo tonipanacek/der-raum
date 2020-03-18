@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { get, sortBy } from "lodash"
 import { mapActions } from "vuex"
 import ServiceList from "~/components/ServiceList.vue"
 export default {
@@ -17,10 +18,11 @@ export default {
       true,
       /\.md$/
     )
-    const services = allServices.keys().map(key => {
+    let services = allServices.keys().map(key => {
       // give back the value of each post context
       return allServices(key)
     })
+    services = sortBy(services, service => get(service, 'attributes.position'))
     return {
       services
     }

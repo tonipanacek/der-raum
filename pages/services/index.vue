@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { get, min } from "lodash"
+import { get, min, sortBy } from "lodash"
 import seo from "~/content/data/seo"
 
 export default {
@@ -25,10 +25,12 @@ export default {
       true,
       /\.md$/
     )
-    const pages = allPages.keys().map(key => {
+    let pages = allPages.keys().map(key => {
       // give back the value of each page context
       return allPages(key)
     })
+    pages = sortBy(pages, page => get(page, 'attributes.position'))
+    console.log(pages)
     return {
       pages
     }

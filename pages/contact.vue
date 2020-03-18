@@ -71,6 +71,9 @@ export default {
     align-items: flex-start;
     justify-content: space-between;
     padding-bottom: 1em;
+    h1 {
+      height: 30px;
+    }
     p {
       color: color(dark);
     }
@@ -83,9 +86,9 @@ export default {
   }
 }
 .info {
-  flex: 2 1 0%;
-  width: 30px;
-  padding-bottom: 1em;
+  flex: 1 0 auto;
+  width: 30ch;
+  padding: 1em;
   .contact-item {
     text-decoration: none;
     &:hover {
