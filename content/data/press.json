@@ -1,6 +1,10 @@
 {
   "press": [
     {
+      "text": "The New York Times | Magazine // 2015",
+      "url": "https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/?src=xps"
+    },
+    {
       "text": "Architektur Berlin | Building Berlin // 2020",
       "url": "https://www.ak-berlin.de/baukultur/publikationen/jahrbuecher/jahrbuch-detailseite/architektur-berlin-building-berlin-9.html"
     },
@@ -14,5 +18,5 @@
     }
   ],
   "en_title": "Press",
-  "de_title": "Press"
+  "de_title": "Presse"
 }
