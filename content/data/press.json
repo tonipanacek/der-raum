@@ -1,8 +1,8 @@
 {
   "press": [
     {
-      "text": "Häuser – Das Magazin // 2015",
-      "url": "https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten"
+      "text": "The Wallstreet Journal // 2014",
+      "url": "www.wsj.com/articles/a-communist-era-home-is-overthrown-1418229684"
     },
     {
       "text": "Architektur Berlin | Building Berlin // 2020",
@@ -27,6 +27,10 @@
     {
       "text": "Frankfurter Allgemeine Sonntagszeitung // 2015",
       "url": "https://www.faz.net/aktuell/wirtschaft/wohnen/bauen/neue-haeuser/neue-haeuser-das-wohnmoebel-von-wandlitz-13862346.html"
+    },
+    {
+      "text": "Häuser – Das Magazin // 2015",
+      "url": "https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten"
     }
   ],
   "en_title": "Press",
