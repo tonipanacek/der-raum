@@ -21,5 +21,3 @@ fields:
     max: 
     labelField: 
   label: Text and Link Group
-pages:
-- content/data/biz_partner.json
