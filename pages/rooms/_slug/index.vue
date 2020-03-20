@@ -76,7 +76,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.allPagesCurrentChunk)
+    this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("rooms")
   },
   computed: {
@@ -85,7 +85,7 @@ export default {
       const allPages = sortBy(this.$data.allPages, p => get(p, 'attributes.position'))
       return chunk(allPages, 3)
     },
-    allPagesCurrentChunk() {
+    currentPagesChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
       const position = parseInt(get(this.$data.page, 'attributes.position', 1))
       const pageNumber = Math.floor((position - 1) / 3)

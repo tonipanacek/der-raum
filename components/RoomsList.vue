@@ -87,7 +87,7 @@ export default {
       }
     },
     beforeEnter: function(el) {
-      el.style.opacity = 0
+      el.classList.add('transition-hide')
       if (this.goingUp) {
         el.style.transform = "translateY(10%)"
       } else {
@@ -102,11 +102,13 @@ export default {
           delay = parseInt(el.dataset.index) * 150
         }
         setTimeout(() => {
-          el.style.opacity = 1
+          el.classList.remove('transition-hide')
+          el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
         }, delay)
         done()
       }, 350)
+      el.classList.remove('transition-show')
     },
     leave: function(el, done) {
       done()
@@ -124,6 +126,12 @@ export default {
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
+.transition-hide {
+  opacity: 0;
+}
+.transition-show {
+  opacity: 1;
+}
 // grid layout for big screens
 @include respond-to('large') {
   .rooms-grid {
