@@ -2,7 +2,7 @@
 position: 5
 title: Press
 en_title: Press
-de_title: Press
+de_title: Presse
 meta_tags:
   de_title: Press
   en_title: Press
