@@ -73,25 +73,25 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(-15%)"
+        el.style.transform = "translateY(100%)"
       } else {
-        el.style.transform = "translateY(-15%)"
+        el.style.transform = "translateY(-100%)"
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
-        if (this.goingUp) {
-          delay = parseInt(el.dataset.index) * 150
-        }
+        // let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
+        // if (this.goingUp) {
+        //   delay = parseInt(el.dataset.index) * 150
+        // }
         setTimeout(() => {
           el.classList.remove('transition-hide')
           el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
-        }, delay)
+        }, 0)
         done()
-      }, 350)
+      }, 0)
       el.classList.remove('transition-show')
     },
     leave: function(el, done) {
