@@ -148,7 +148,7 @@ export default {
       }
     },
     sortedWithUrls() {
-      if (isEmpty(this.images)) { return [] }
+      if (isEmpty(this.sortedImages)) { return [] }
       return this.sortedImages.map((url) => {
         return {
           index: this.sortedImages.indexOf(url) + 1,
