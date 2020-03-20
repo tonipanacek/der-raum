@@ -39,7 +39,7 @@ export default {
   nuxtI18n: {
     paths: {
       en: '/about/press',
-      de: '/uber/press'
+      de: '/uber/presse'
     }
   },
   components: {
