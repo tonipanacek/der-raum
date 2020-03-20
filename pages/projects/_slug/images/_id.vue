@@ -37,7 +37,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy, isEmpty, chunk, isEqual, kebabCase } from 'lodash'
+import { get, sortBy, isEmpty, chunk, isEqual, kebabCase, flatten } from 'lodash'
 import dynamicSEO from '~/plugins/dynamic_seo'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
@@ -80,7 +80,20 @@ export default {
         de: { slug: kebabCase(get(page, `attributes.de_title`)) }
       })
 
-      const images = get(page, 'attributes.images', [])
+      let images = get(page, 'attributes.images', [])
+      images = chunk(images, 3)
+      images = images.map(chunk => {
+        if (images.indexOf(chunk) === 0) {
+          const firstThree = chunk.slice(0,3)
+          return firstThree
+        } else {
+          let portrait = chunk.slice(0,1)
+          let rest = chunk.slice(1)
+          rest.splice(1, 0, portrait.join(''))
+          return rest
+        }
+      })
+      images = flatten(images)
       const image = images[id - 1]
 
       if (!image) {
@@ -90,7 +103,7 @@ export default {
       return {
         image,
         images,
-        pages: images,
+        // pages: images,
         allPages,
         page,
         slug,
@@ -186,6 +199,7 @@ export default {
       })
     },
     allPagesChunks() {
+      console.log(this.$data)
       if (isEmpty(this.$data.allPages)) { return [] }
       const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
       const chunks = chunk(allPages, 3)
@@ -197,8 +211,8 @@ export default {
       return chunk.slice(0, 3)
     },
     length() {
-      if (isEmpty(this.$data.pages)) { return 0 }
-      return this.$data.pages.length
+      if (isEmpty(this.$data.images)) { return 0 }
+      return this.$data.images.length
     }
   },
   components: {

@@ -42,7 +42,6 @@ export default {
   },
   mounted() {
     const pages = this.$data.pages
-    console.log(pages)
     const positions = pages.map(page => get(page, "attributes.position"))
     const minPosition = min(positions)
     const page = pages.find(

@@ -25,13 +25,13 @@
             <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           </Frame>
           <h3 class="image-title">
-            {{ title }} {{ allImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+            {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
           </h3>
         </div>
         <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           <h3 class="image-title">
-            {{ title }} {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }} / {{ totalCount }}
+            {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
           </h3>
         </div>
       </NuxtLink>
@@ -54,6 +54,10 @@ export default {
       required: true
     },
     allImages: {
+      type: Array,
+      required: true
+    },
+    sortedImages: {
       type: Array,
       required: true
     },
@@ -127,13 +131,12 @@ export default {
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: id
+          id: this.sortedImages.indexOf(image.url) + 1
         }
       })
     }
   }
 }
-// {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }}
 </script>
 
 <style lang="scss" scoped>
