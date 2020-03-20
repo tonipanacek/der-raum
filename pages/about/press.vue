@@ -22,6 +22,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+import { get, sortBy } from "lodash"
 import seo from "~/content/data/seo.json"
 import json from "~/content/data/press.json"
 import Cluster from '~/components/Cluster'
@@ -50,28 +51,13 @@ export default {
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context("~/content/about/", true, /\.md$/)
-    const pages = allPages.keys().map(key => {
+    let pages = allPages.keys().map(key => {
       // give back the value of each about context
       return allPages(key)
     })
+    pages = sortBy(pages, page => get(page, 'attributes.position'))
     return {
-      pages: [
-        ...pages,
-        {
-          attributes: {
-            title: 'Business Partner',
-            en_title: 'Business Partner',
-            de_title: 'Business Partner',
-            position: 4
-          },
-          // attributes: {
-          //   title: 'Press',
-          //   en_title: 'Press',
-          //   de_title: 'Press',
-          //   position: 5
-          // },
-        }
-      ],
+      pages,
       json: json
     }
   },
@@ -86,33 +72,35 @@ export default {
 </script>
 <style lang="scss">
 #press {
-  min-height: calc(100vh - 2 * #{spacing(frame)});
+  height: auto;
   margin: 0 auto;
-    .text {
-      display: block;
-      padding: 0 2em;
-      @include respond-to('large') {
-        display: none;
-      }
+  @include respond-to('large') {
+    min-height: calc(100vh - 2 * #{spacing(frame)});
+  }
+  .text {
+    display: block;
+    padding: 0 2em;
+    @include respond-to('large') {
+      display: none;
     }
+  }
   .box-wrapper {
     height: 100%;
     width: 100%;
-    margin: 0.25em;
-    @include respond-to('large') {
-      width: 70%;
-    }
+    // @include respond-to('large') {
+    //   width: 1000%;
+    // }
   }
   ul {
-    margin-left: spacing(frame);
-    padding-left: 0;
+    padding: 2em;
+    list-style: none;
+    margin: 0;
     @include respond-to('large') {
       margin: 0;
-      columns: 22ch 2;
       display: block;
+      padding: 0 2em 0 0;
+      // columns: 22ch 2;
     }
-    list-style: none;
-    padding-left: 0px;
     li {
       margin-left: 0;
       font-size: .85em;

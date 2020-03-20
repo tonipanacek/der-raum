@@ -60,23 +60,7 @@ export default {
       })
 
       return {
-        pages: [
-          ...pages,
-          {
-            attributes: {
-              title: 'Business Partner',
-              en_title: 'Business Partner',
-              de_title: 'Business Partner',
-              position: 4
-            },
-            // attributes: {
-            //   title: 'Press',
-            //   en_title: 'Press',
-            //   de_title: 'Press',
-            //   position: 5
-            // }
-          }
-        ],
+        pages,
         slug,
         page
       }
