@@ -12,9 +12,10 @@
           <ImagesList
           id="desktop-view"
           :images="currentImages"
-          :allImages="sortedImages"
+          :allImages="otherImages"
+          :sortedImages="sortedImages"
           :title="$tp('title')"
-          :totalCount="$tp('images').length"
+          :totalCount="images.length"
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
@@ -35,10 +36,11 @@
         <div v-if="isChunky" class="images section">
           <ImagesList
           id="mobile-view"
-          :images="allImages"
-          :allImages="images"
+          :images="sortedWithUrls"
+          :allImages="otherImages"
+          :sortedImages="sortedImages"
           :title="$tp('title')"
-          :totalCount="$tp('images').length"
+          :totalCount="images.length"
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
@@ -46,7 +48,6 @@
           />
         </div>
       </article>
-      <!-- <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" /> -->
   </div>
   </Container>
 </template>
@@ -148,16 +149,31 @@ export default {
         }
       }
     },
-    allImages() {
+    sortedWithUrls() {
       if (isEmpty(this.images)) { return [] }
-      return this.images.map((url) => {
+      return this.sortedImages.map((url) => {
         return {
-          index: this.images.indexOf(url) + 1,
+          index: this.sortedImages.indexOf(url) + 1,
           url
         }
       })
     },
     sortedImages() {
+      let chunkers = chunk(this.$data.pages, 3)
+      chunkers = chunkers.map(chunk => {
+        if (chunkers.indexOf(chunk) === 0) {
+          const firstThree = chunk.slice(0,3)
+          return firstThree
+        } else {
+          let portrait = chunk.slice(0,1)
+          let rest = chunk.slice(1)
+          rest.splice(1, 0, portrait.join(''))
+          return rest
+        }
+      })
+      return uniq(flatten(chunkers))
+    },
+    otherImages() {
       const flattenedImages = uniq(flatten(this.pagesChunks))
       return flattenedImages
     },

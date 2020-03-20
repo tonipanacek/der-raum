@@ -30,7 +30,6 @@ export default {
       return allPages(key)
     })
     pages = sortBy(pages, page => get(page, 'attributes.position'))
-    console.log(pages)
     return {
       pages
     }
