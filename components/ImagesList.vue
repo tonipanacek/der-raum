@@ -131,13 +131,12 @@ export default {
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: id
+          id: this.sortedImages.indexOf(image.url) + 1
         }
       })
     }
   }
 }
-// {{ page === 0 ? image.index : image.index + (page * 4) - (page * 1) }}
 </script>
 
 <style lang="scss" scoped>
