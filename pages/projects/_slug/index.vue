@@ -12,10 +12,9 @@
           <ImagesList
           id="desktop-view"
           :images="currentImages"
-          :allImages="otherImages"
           :sortedImages="sortedImages"
           :title="$tp('title')"
-          :totalCount="images.length"
+          :totalCount="sortedImages.length"
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
@@ -37,10 +36,9 @@
           <ImagesList
           id="mobile-view"
           :images="sortedWithUrls"
-          :allImages="otherImages"
           :sortedImages="sortedImages"
           :title="$tp('title')"
-          :totalCount="images.length"
+          :totalCount="sortedImages.length"
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
@@ -109,7 +107,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.allPagesCurrentChunk)
+    this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
   },
   methods: {
@@ -173,21 +171,13 @@ export default {
       })
       return uniq(flatten(chunkers))
     },
-    otherImages() {
-      const flattenedImages = uniq(flatten(this.pagesChunks))
-      return flattenedImages
-    },
-    images() {
-      if (isEmpty(this.$data.pages)) { return [] }
-      return this.$data.pages
-    },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }
       const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
       const chunks = chunk(allPages, 3)
       return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
     },
-    allPagesCurrentChunk() {
+    currentPagesChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
       let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
       return chunk.slice(0, 3)

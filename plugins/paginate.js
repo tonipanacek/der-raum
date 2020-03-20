@@ -60,9 +60,6 @@ export default {
     isChunky() {
       return !isEmpty(this.currentChunk)
     },
-    arePages() {
-      return !isEmpty(this.pages)
-    },
     throttledHandlePageTransition() {
       return throttle(this.handlePageTransition, this.refreshRate)
     },

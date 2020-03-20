@@ -103,7 +103,6 @@ export default {
       return {
         image,
         images,
-        // pages: images,
         allPages,
         page,
         slug,
@@ -115,7 +114,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.allPagesCurrentChunk)
+    this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
     this.enterMobileFullScreen()
@@ -205,7 +204,7 @@ export default {
       const chunks = chunk(allPages, 3)
       return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
     },
-    allPagesCurrentChunk() {
+    currentPagesChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
       let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
       return chunk.slice(0, 3)

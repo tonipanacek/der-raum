@@ -71,7 +71,7 @@ export default {
       })
     },
     beforeEnter: function(el) {
-      el.style.opacity = 0
+      el.classList.add('transition-hide')
       if (this.goingUp) {
         el.style.transform = "translateY(-15%)"
       } else {
@@ -86,11 +86,13 @@ export default {
           delay = parseInt(el.dataset.index) * 150
         }
         setTimeout(() => {
-          el.style.opacity = 1
+          el.classList.remove('transition-hide')
+          el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
         }, delay)
         done()
       }, 350)
+      el.classList.remove('transition-show')
     },
     leave: function(el, done) {
       done()
@@ -122,6 +124,12 @@ export default {
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
+.transition-hide {
+  opacity: 0;
+}
+.transition-show {
+  opacity: 1;
+}
 // grid layout for big screens
 @include respond-to('large') {
   #projects-grid {
@@ -248,7 +256,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 .project-link {
   text-decoration: none;
   transition: transform 500ms ease, opacity 0.3s ease-in-out;
-  &:hover > .project-title {
+  &:hover .project-title {
     color: color(black);
     font-weight: 600;
   }
@@ -261,11 +269,6 @@ $main-height: calc(100vh - #{spacing(frame)});
   h3 {
     color: color(black);
     font-weight: 600;
-  }
-  .projects-link {
-    color: color(black);
-    font-weight: 600;
-    border: 1px solid color(black);
   }
 }
 .hover:not(.active) {

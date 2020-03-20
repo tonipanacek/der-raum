@@ -13,11 +13,13 @@
       v-for="(image, index) in images"
       :key="image.url"
       :to="path(image)"
-      :class="{'image-link': true, 'extraSpace': image.index < 0, 'extra-margin': images.length === 3 && index === images.length - 1}"
+      :class="{'image-link': true, 'extraSpace': image.index < 0, 'extra-margin': images.length === 3 && index === images.length - 1, 'active': hover && hover === image.url, hover: hover }"
       :data-index="index"
       :data-total="images.length"
       :mobile="mobile"
       event=""
+      @mouseover.native="handleHover(image)"
+      @mouseleave.native="handleBlur"
       @click.native.prevent="handleClick(image, index)"
       >
         <div v-if="mobile" class="frame-wrapper">
@@ -53,10 +55,6 @@ export default {
       type: Array,
       required: true
     },
-    allImages: {
-      type: Array,
-      required: true
-    },
     sortedImages: {
       type: Array,
       required: true
@@ -78,12 +76,23 @@ export default {
     goingUp: Boolean,
     mobile: Boolean
   },
+  data() {
+    return {
+      hover: ''
+    }
+  },
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
     },
     getImageId(image) {
       return this.$data.pages.indexOf(image) + 1
+    },
+    handleHover(image) {
+      this.hover = image.url
+    },
+    handleBlur() {
+      this.hover = ''
     },
     handleClick(image, index) {
       if (index > 2 && !this.mobile) {
@@ -94,7 +103,7 @@ export default {
       }
     },
     beforeEnter: function(el) {
-      el.style.opacity = 0
+      el.classList.add('transition-hide')
       if (this.goingUp) {
         el.style.transform = "translateY(10%)"
       } else {
@@ -109,24 +118,19 @@ export default {
           delay = parseInt(el.dataset.index) * 150
         }
         setTimeout(() => {
-          el.style.opacity = 1
+          el.classList.remove('transition-hide')
+          el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
         }, delay)
         done()
       }, 350)
+      el.classList.remove('transition-show')
     },
     leave: function(el, done) {
       done()
     },
     path(image) {
       if (!image.index) { return '' }
-      const slicedImages = this.images.slice(0,3)
-      let id = null
-      if (this.mobile) {
-        id = image.index
-      } else {
-        id = this.page === 0 ? slicedImages.indexOf(image) + 1 : slicedImages.indexOf(image) + (this.page * 4) - (this.page - 1)
-      }
       return this.localePath({
         name: 'projects-slug-images-id',
         params: {
@@ -141,6 +145,12 @@ export default {
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
+.transition-hide {
+  opacity: 0;
+}
+.transition-show {
+  opacity: 1;
+}
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
@@ -265,12 +275,27 @@ $main-height: calc(100vh - #{spacing(frame)});
 .image-link {
   text-decoration: none;
   transition: transform 500ms ease, opacity 0.3s ease-in-out;
-  &:hover > .image-title {
+  &:hover .image-title {
     color: color(black);
     font-weight: 600;
   }
   h3 {
     transition: opacity 750ms ease, color 500ms ease;
+  }
+}
+
+// hovering effect
+.hover {
+  h3 {
+    color: color(black);
+    font-weight: 600;
+  }
+}
+.hover:not(.active) {
+  opacity: .8;
+  h3 {
+    color: color(dark);
+    font-weight: 400;
   }
 }
 </style>
