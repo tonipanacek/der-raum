@@ -32,9 +32,11 @@
         </div>
         <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
-          <h3 class="image-title">
-            {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
-          </h3>
+          <transition name="no-fade">
+            <h3 class="image-title">
+              {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+            </h3>
+          </transition>
         </div>
       </NuxtLink>
     </transition-group>
@@ -121,7 +123,7 @@ export default {
           el.classList.remove('transition-hide')
           el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
-        }, 0)
+        }, 30)
         done()
       }, 0)
       el.classList.remove('transition-show')
@@ -149,6 +151,14 @@ $main-height: calc(100vh - #{spacing(frame)});
   opacity: 0;
 }
 .transition-show {
+  opacity: 1;
+}
+
+.no-fade-enter-active, .no-fade-leave-active {
+  // transition: opacity .5s;
+  opacity: 1;
+}
+.no-fade-enter, .no-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 1;
 }
 // grid layout for big screens

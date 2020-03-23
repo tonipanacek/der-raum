@@ -97,15 +97,15 @@ export default {
     },
     enter: function(el, done) {
       setTimeout(() => {
-        // let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
-        // if (this.goingUp) {
-        //   delay = parseInt(el.dataset.index) * 150
-        // }
+       let delay = 30
+        if (this.goingUp) {
+          delay = 15
+        }
         setTimeout(() => {
           el.classList.remove('transition-hide')
           el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
-        }, 0)
+        }, delay)
         done()
       }, 0)
       el.classList.remove('transition-show')

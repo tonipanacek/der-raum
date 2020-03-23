@@ -1,19 +1,19 @@
 <template>
   <div
   id="projects"
-  class="image"
-  >
+  class="image">
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container">
-
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
-          <div class="image">
-            <img :src="image" :title="$tp('title')" :alt="$tp('description')">
-          </div>
+          <transition name="page">
+            <div class="image">
+              <img :src="image" :title="$tp('title')" :alt="$tp('description')">
+            </div>
+          </transition>
         </div>
         <div class="image-footer">
           <aside class="caption">
@@ -46,6 +46,7 @@ import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
 export default {
+  transition: 'something',
   nuxtI18n: {
     paths: {
       de: '/projekte/:slug/bilder/:id',
@@ -224,6 +225,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.intro-enter-active, .intro-leave-active {
+  transition: opacity 0s;
+}
+.intro-enter, .intro-leave-to {
+  opacity: 1;
+}
+
 #projects.image {
 max-width: 1250px;
 margin: 0 auto;
@@ -244,7 +264,7 @@ margin: 0 auto;
     }
   }
   img {
-    max-height: 80vh;
+    max-height: 75vh;
   }
 
   h1 {
@@ -255,6 +275,7 @@ margin: 0 auto;
     @include smallCaps;
     color: color(light);
     font-size: 0.8em;
+    margin-bottom: 0;
   }
   .image-footer {
     display: flex;
