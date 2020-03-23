@@ -57,6 +57,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     justify-content: space-between;
     flex-direction: initial;
     align-items: flex-end;
+    height: 2em;
     p {
       @include smallCaps;
       color: color(light);
