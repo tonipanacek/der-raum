@@ -17,8 +17,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/perfekter-Einbauschrank-nach-mass-schwarz-hochwertig_sypj1m.jpg
 en_title: Apartment42
 de_title: Apartment42
-en_description: Apartment with black kitchen and built-in cabinet
-de_description: Apartment mit Kochinsel, Einbauschränken und Badzimmer
+en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
+de_description: 'Gestaltung: DER RAUM // Fotos: Maximilian Gödecke'
 meta_tags:
   de_title: Apartment mit Kochinsel, Einbauschränken und Badzimmereinrichtung
   en_title: " Apartment with kitchen island, fitted wardrobes and bathroom furnishings"
