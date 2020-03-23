@@ -83,8 +83,8 @@ a:visited {
   overflow-y: visible;
   width: 100%;
   background: white;
-  margin-top: spacing(lg);
   margin: 0 auto;
+  margin-top: spacing(lg);
   @include respond-to('large') {
     margin-top: 0;
     width: 500px;
