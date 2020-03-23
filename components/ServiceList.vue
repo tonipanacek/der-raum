@@ -168,8 +168,8 @@ $more-height: calc(100vh - #{spacing(frame)});
       width: 100%;
       height: 100%;
       img {
-        width: 100%;
-        height: 50vh;
+        max-width: 100%;
+        max-height: 50vh;
         object-fit: cover;
       }
     }
@@ -186,16 +186,16 @@ $more-height: calc(100vh - #{spacing(frame)});
       width: 100%;
       height: 100%;
       img {
-        width: 100%;
-        height: 74.5vh;
+        max-width: 100%;
+        max-height: 74.5vh;
         object-fit: cover;
       }
     }
   }
 
   #Production.service-link {
-    width: 65%;
-    margin-top: 50px;
+    width: 60%;
+    margin-top: 20px;
     display: block;
     height: 100%;
     margin-right: 5%;
@@ -204,7 +204,7 @@ $more-height: calc(100vh - #{spacing(frame)});
       height: 100%;
       img {
         width: 100%;
-        height: 50vh;
+        max-height: 50vh;
         object-fit: cover;
       }
     }
