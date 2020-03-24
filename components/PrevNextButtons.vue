@@ -42,7 +42,7 @@ export default {
     justify-content: flex-end;
     align-items: center;
     padding: spacing(sm);
-    width: 40vw;
+    width: 50vw;
     // background-color: rgba(255, 255, 255, 0.3);
     // max-width: 3rem;
     // transition: background-color 500ms ease, box-shadow 500ms ease;

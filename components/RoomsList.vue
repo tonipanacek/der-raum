@@ -89,17 +89,17 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(10%)"
+        el.style.transform = "translateY(100%)"
       } else {
-        el.style.transform = "translateY(-10%)"
+        el.style.transform = "translateY(-100%)"
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
+       let delay = 30
         if (this.goingUp) {
-          delay = parseInt(el.dataset.index) * 150
+          delay = 15
         }
         setTimeout(() => {
           el.classList.remove('transition-hide')
@@ -107,7 +107,7 @@ export default {
           el.style.transform = "translateY(0)"
         }, delay)
         done()
-      }, 350)
+      }, 0)
       el.classList.remove('transition-show')
     },
     leave: function(el, done) {

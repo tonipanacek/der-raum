@@ -32,9 +32,11 @@
         </div>
         <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
-          <h3 class="image-title">
-            {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
-          </h3>
+          <transition name="no-fade">
+            <h3 class="image-title">
+              {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+            </h3>
+          </transition>
         </div>
       </NuxtLink>
     </transition-group>
@@ -105,25 +107,25 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(10%)"
+        el.style.transform = "translateY(100%)"
       } else {
-        el.style.transform = "translateY(-10%)"
+        el.style.transform = "translateY(-100%)"
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
-        let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
-        if (this.goingUp) {
-          delay = parseInt(el.dataset.index) * 150
-        }
+        // let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
+        // if (this.goingUp) {
+        //   delay = parseInt(el.dataset.index) * 150
+        // }
         setTimeout(() => {
           el.classList.remove('transition-hide')
           el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
-        }, delay)
+        }, 30)
         done()
-      }, 350)
+      }, 0)
       el.classList.remove('transition-show')
     },
     leave: function(el, done) {
@@ -149,6 +151,14 @@ $main-height: calc(100vh - #{spacing(frame)});
   opacity: 0;
 }
 .transition-show {
+  opacity: 1;
+}
+
+.no-fade-enter-active, .no-fade-leave-active {
+  // transition: opacity .5s;
+  opacity: 1;
+}
+.no-fade-enter, .no-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 1;
 }
 // grid layout for big screens

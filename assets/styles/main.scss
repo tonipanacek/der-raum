@@ -16,10 +16,3 @@ html {
 body {
   margin: 0;
 }
-
-.page-enter-active, .page-leave-active {
-  transition: opacity .25s;
-}
-.page-enter, .page-leave-to {
-  opacity: 0;
-}
