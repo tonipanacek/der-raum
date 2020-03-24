@@ -50,12 +50,12 @@ export default {
 
 <style scoped lang="scss">
 
-.page-enter-active, .page-leave-active {
-  transition: opacity .25s;
-}
-.page-enter, .page-leave-to {
-  opacity: 0;
-}
+// .page-enter-active, .page-leave-active {
+//   transition: opacity .5s ease;
+// }
+// .page-enter, .page-leave-to {
+//   opacity: 0;
+// }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
