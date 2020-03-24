@@ -15,6 +15,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/Hochwertiger-Einbauschrank-nach-mass_waitib.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973019/hochwertige-kueche-Kochinsel-Mittelblock-schwarz_ceycus.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/perfekter-Einbauschrank-nach-mass-schwarz-hochwertig_sypj1m.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1585052744/Kueche-Griff-Front-Detail-Handwerk-Buster-Punch_l7lpqu.jpg
 en_title: Apartment42
 de_title: Apartment42
 en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
