@@ -125,7 +125,7 @@ export default {
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
 .transition-hide {
-  opacity: .5;
+  // opacity: .5;
 }
 .transition-show {
   opacity: 1;
