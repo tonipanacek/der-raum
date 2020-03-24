@@ -283,6 +283,7 @@ margin: 0 auto;
     width: 100%;
     .caption {
       flex-grow: 2;
+      width: 80%;
       padding: spacing(md);
       @include respond-to(large) {
         padding: 0;
