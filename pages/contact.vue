@@ -9,7 +9,7 @@
         <div class="text">
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
-            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-item">
+            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link">
               <p>{{ $t("contact.streetNumber") }}</p>
               <p>{{ $t("contact.cityZip") }}</p>
             </a>
@@ -21,10 +21,10 @@
           </div>
           <div class="info">
             <h1>{{ $t("contact.thirdColumn") }}</h1>
-            <a href="tel:03039375300" class="contact-item">
+            <a href="tel:03039375300" class="contact-link">
               <p>{{ $t("contact.tel") }}</p>
             </a>
-            <a href="mailto:derraum@holz-raum.de" class="contact-item">
+            <a href="mailto:derraum@holz-raum.de" class="contact-link">
               <p>{{ $t("contact.email") }}</p>
             </a>
           </div>
@@ -89,15 +89,17 @@ export default {
   flex: 1 0 auto;
   width: 30ch;
   padding: 1em;
-  .contact-item {
+  .contact-link {
     text-decoration: none;
     &:hover {
       p{
-        color: color(black);
+        color: color(dark);
+        font-weight: 400;
       }
     }
   }
   p {
+    font-weight: 300;
     margin: 0;
   }
   #hidden-title {
