@@ -54,7 +54,7 @@ export default {
   transition: opacity .3s ease-in-out;
 }
 .page-enter, .page-leave-to {
-  opacity: .3;
+  opacity: 0;
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});

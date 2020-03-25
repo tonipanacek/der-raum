@@ -10,8 +10,8 @@
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link">
-              <p>{{ $t("contact.streetNumber") }}</p>
-              <p>{{ $t("contact.cityZip") }}</p>
+              <p>{{ $t("contact.streetNumber") }}<br>
+              {{ $t("contact.cityZip") }}</p>
             </a>
           </div>
           <div class="info">
@@ -24,6 +24,11 @@
             <a href="tel:03039375300" class="contact-link">
               <p>{{ $t("contact.tel") }}</p>
             </a>
+            <template v-if="$t('contact.tel2')">
+              <a href="tel:017673564742" class="contact-link">
+                <p>{{ $t("contact.tel2") }}</p>
+              </a>
+            </template>
             <a href="mailto:derraum@holz-raum.de" class="contact-link">
               <p>{{ $t("contact.email") }}</p>
             </a>
@@ -62,8 +67,6 @@ export default {
 <style lang="scss">
 .contact {
   max-width: 1250px;
-}
-.contact {
   .text {
     display: flex;
     flex-wrap: wrap;
@@ -71,11 +74,30 @@ export default {
     align-items: flex-start;
     justify-content: space-between;
     padding-bottom: 1em;
-    h1 {
-      height: 30px;
-    }
-    p {
-      color: color(dark);
+    .info {
+      flex: 1 0 auto;
+      width: 30ch;
+      padding: 1em;
+      h1 {
+        height: 30px;
+      }
+      p {
+        color: color(dark);
+        font-weight: 300;
+        margin: 0;
+      }
+      .contact-link {
+        text-decoration: none;
+        p:hover {
+          color: color(dark);
+          font-weight: 400;
+        }
+      }
+      .hours {
+        display: flex;
+        justify-content: space-between;
+        width: 25ch;
+      }
     }
   }
   .image-container {
@@ -83,36 +105,6 @@ export default {
       height: 100%;
       width: 100%;
     }
-  }
-}
-.info {
-  flex: 1 0 auto;
-  width: 30ch;
-  padding: 1em;
-  .contact-link {
-    text-decoration: none;
-    &:hover {
-      p{
-        color: color(dark);
-        font-weight: 400;
-      }
-    }
-  }
-  p {
-    font-weight: 300;
-    margin: 0;
-  }
-  #hidden-title {
-    display: none;
-    @include respond-to('large') {
-      display: block;
-      visibility: hidden;
-    }
-  }
-  .hours {
-    display: flex;
-    justify-content: space-between;
-    width: 25ch;
   }
 }
 </style>
