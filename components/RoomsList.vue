@@ -89,9 +89,9 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(100%)"
+        el.style.transform = "translateY(70vh)"
       } else {
-        el.style.transform = "translateY(-100%)"
+        el.style.transform = "translateY(-70vh)"
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
@@ -105,7 +105,7 @@ export default {
           el.classList.remove('transition-hide')
           el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
-        }, delay)
+        }, 0)
         done()
       }, 0)
       el.classList.remove('transition-show')
@@ -127,7 +127,7 @@ export default {
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
 .transition-hide {
-  opacity: 0;
+  // opacity: 0;
 }
 .transition-show {
   opacity: 1;

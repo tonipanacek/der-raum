@@ -51,10 +51,10 @@ export default {
 <style scoped lang="scss">
 
 .page-enter-active, .page-leave-active {
-  transition: opacity .25s;
+  transition: opacity .3s ease-in-out;
 }
 .page-enter, .page-leave-to {
-  opacity: 0;
+  opacity: .3;
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
@@ -77,9 +77,10 @@ a:visited {
   transition: color 500ms ease;
   text-decoration: none;
   color: color(light);
+  font-weight: 300;
   &:hover {
     color: color(black);
-    font-weight: bold
+    font-weight: 400;
   }
   &.nuxt-link-exact-active {
     color: color(dark);

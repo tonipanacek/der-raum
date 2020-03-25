@@ -29,20 +29,23 @@ export default {
   @include respond-to(large) {
     display: none;
   }
-  a {
+  a,
+  a:visited,
+  a:focus {
     .arrow {
       z-index: z(sidebar);
       height: 2rem;
       width: 2rem;
-      filter: brightness(100%);
       fill: color(dark);
     }
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     height: 100%;
+    opacity: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: spacing(sm);
     width: 50vw;
+    // padding: spacing(sm);
     // background-color: rgba(255, 255, 255, 0.3);
     // max-width: 3rem;
     // transition: background-color 500ms ease, box-shadow 500ms ease;

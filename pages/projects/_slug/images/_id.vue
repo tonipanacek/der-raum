@@ -17,7 +17,7 @@
         </div>
         <div class="image-footer">
           <aside class="caption">
-            <h1>{{ $tp('title') }} {{ id }} / {{ length }}</h1>
+            <h1>{{ $tp('title') }} <span id="image-count">{{ id }} / {{ length }}</span></h1>
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
@@ -244,6 +244,10 @@ export default {
   opacity: 1;
 }
 
+.main-container {
+  margin-top: 0;
+}
+
 #projects.image {
 max-width: 1250px;
 margin: 0 auto;
@@ -291,6 +295,9 @@ margin: 0 auto;
       h1 {
         margin-top: 0;
       }
+      #image-count {
+        padding-left: spacing(sm);
+      }
     }
   }
   .close-link {
@@ -298,7 +305,11 @@ margin: 0 auto;
     left: -20px;
     top: -3px;
     .close-btn {
-      height: .8em;
+      height: 1.2rem;
+      fill: color(dark);
+      &:hover {
+        fill: color(black);
+      }
     }
   }
   .nav {
