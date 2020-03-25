@@ -24,7 +24,7 @@ export default {
 #prev-next-buttons {
   z-index: z(sidebar);
   // position: relative;
-  height: 100%;
+  height: 90%;
   width: 100%;
   @include respond-to(large) {
     display: none;
@@ -37,6 +37,9 @@ export default {
       height: 2rem;
       width: 2rem;
       fill: color(dark);
+      @include respond-to(large) {
+        opacity: 0;
+      }
     }
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     height: 100%;
@@ -45,14 +48,6 @@ export default {
     justify-content: flex-end;
     align-items: center;
     width: 50vw;
-    // padding: spacing(sm);
-    // background-color: rgba(255, 255, 255, 0.3);
-    // max-width: 3rem;
-    // transition: background-color 500ms ease, box-shadow 500ms ease;
-    // &:hover {
-    //   box-shadow: shadow(dark);
-    //   background-color: rgba(255, 255, 255, 0.5);
-    // }
   }
   .prev {
     position: absolute;

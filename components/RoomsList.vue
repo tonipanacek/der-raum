@@ -13,7 +13,7 @@
       v-for="(room, index) in rooms"
       :key="getTitle(room.attributes)"
       :to="path(room)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true, 'extra-margin': rooms.length === 3 && index === rooms.length - 1 }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true, 'extra-margin': rooms.length === 3 && index === rooms.length - 1, 'extra-space': room.attributes === ''}"
       @mouseover.native="handleHover(room)"
       @mouseleave.native="handleBlur"
       :data-index="index"
@@ -164,6 +164,11 @@ $main-height: calc(100vh - #{spacing(frame)});
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+    &.extra-space {
+      @include respond-to('large') {
+        visibility: hidden;
       }
     }
   }

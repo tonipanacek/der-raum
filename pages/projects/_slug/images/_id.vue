@@ -128,17 +128,21 @@ export default {
       const navbar = document.querySelector('.left-sidebar');
       const footer = document.querySelector('#right-sidebar');
       const closeLink = document.querySelector('.close-link');
+      const mainContainer = document.querySelector('.main-container');
       const hideSidebars = () => {
         navbar.style.display = 'none';
         footer.style.display = 'none';
-        closeLink.style.left = '20px';
+        mainContainer.style.marginTop = '0';
+        closeLink.style.left = '10px';
         closeLink.style.top = '-25px';
       }
       const showSidebars = () => {
+        console.log(this.$route.path)
         navbar.style.display = 'flex';
         footer.style.display = 'flex';
-        closeLink.style.left = '-20px';
-        closeLink.style.top = '-3px';
+        // mainContainer.style.marginTop = '3rem';
+        closeLink.style.left = '-30px';
+        closeLink.style.top = '1px';
       }
       const widthChange = (mq) => {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
@@ -199,7 +203,6 @@ export default {
       })
     },
     allPagesChunks() {
-      console.log(this.$data)
       if (isEmpty(this.$data.allPages)) { return [] }
       const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
       const chunks = chunk(allPages, 3)
@@ -296,23 +299,29 @@ margin: 0 auto;
         margin-top: 0;
       }
       #image-count {
-        padding-left: spacing(sm);
+        padding-left: .75em;
       }
     }
   }
   .close-link {
     position: absolute;
-    left: -20px;
-    top: -3px;
+    left: -30px;
+    top: 0px;
     .close-btn {
       height: 1.2rem;
       fill: color(dark);
       &:hover {
         fill: color(black);
       }
+      &:focus {
+        outline: none;
+      }
     }
   }
   .nav {
+    &:focus {
+        outline: none;
+      }
     height: 1.5rem;
     fill: color(dark);
     &:hover {

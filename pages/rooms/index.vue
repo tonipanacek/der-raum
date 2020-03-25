@@ -86,9 +86,14 @@ export default {
       if (this.pageNumber === 0) {
         return this.currentChunk
       } else {
-        let switched = this.currentChunk
-        switched = [switched[1], switched[0], switched[2], switched[3]].filter(i => i)
-        return switched
+        let current = this.currentChunk
+        current = [current[1], current[0], current[2], current[3]].filter(i => i)
+        if (current.length === 1) {
+          current.splice(0, 0, { attributes : '' })
+          return current
+        } else {
+          return current
+        }
       }
     }
   },
