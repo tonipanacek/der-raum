@@ -27,14 +27,14 @@
             <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           </Frame>
           <h3 class="image-title">
-            {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+            {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
           </h3>
         </div>
         <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           <transition name="no-fade">
             <h3 class="image-title">
-              {{ title }} {{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}
+              {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
             </h3>
           </transition>
         </div>
@@ -293,7 +293,9 @@ $main-height: calc(100vh - #{spacing(frame)});
     transition: opacity 750ms ease, color 500ms ease;
   }
 }
-
+#image-count {
+  padding-left: .75em;
+}
 // hovering effect
 .hover {
   h3 {
