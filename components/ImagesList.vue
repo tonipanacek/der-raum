@@ -17,6 +17,7 @@
       :data-index="index"
       :data-total="images.length"
       :mobile="mobile"
+      :orientation="image.orientation"
       event=""
       @mouseover.native="handleHover(image)"
       @mouseleave.native="handleBlur"
