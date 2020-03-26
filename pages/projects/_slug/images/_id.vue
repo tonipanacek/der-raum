@@ -7,13 +7,11 @@
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container">
+        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
-          <transition name="page">
-            <div class="image">
-              <img :src="image" :title="$tp('title')" :alt="$tp('description')">
-            </div>
-          </transition>
+          <!-- <div class="image">
+            <img :src="image" :title="$tp('title')" :alt="$tp('description')">
+          </div> -->
         </div>
         <div class="image-footer">
           <aside class="caption">
@@ -129,23 +127,26 @@ export default {
   },
   methods: {
     enterMobileFullScreen() {
-      const navbar = document.querySelector('.left-sidebar');
-      const footer = document.querySelector('#right-sidebar');
-      const closeLink = document.querySelector('.close-link');
-      const mainContainer = document.querySelector('.main-container');
+      const navbar = document.querySelector('.left-sidebar')
+      const footer = document.querySelector('#right-sidebar')
+      const closeLink = document.querySelector('.close-link')
+      const mainContainer = document.querySelector('.main-container')
+      const layout = document.querySelector('.layout')
       const hideSidebars = () => {
-        navbar.style.display = 'none';
-        footer.style.display = 'none';
-        mainContainer.style.marginTop = '0';
-        closeLink.style.left = '10px';
-        closeLink.style.top = '-25px';
+        navbar.style.display = 'none'
+        footer.style.display = 'none'
+        layout.style.paddingTop = '0'
+        mainContainer.style.marginTop = '0'
+        closeLink.style.left = '15px'
+        closeLink.style.top = '15px'
       }
       const showSidebars = () => {
-        navbar.style.display = 'flex';
-        footer.style.display = 'flex';
+        navbar.style.display = 'flex'
+        footer.style.display = 'flex'
         // mainContainer.style.marginTop = '3rem';
-        closeLink.style.left = '-30px';
-        closeLink.style.top = '1px';
+        closeLink.style.left = '-30px'
+        closeLink.style.top = '1px'
+        layout.style.paddingTop = '2em'
       }
       const widthChange = (mq) => {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
@@ -155,7 +156,7 @@ export default {
           showSidebars();
         }
       }
-      const mq = window.matchMedia( "(max-width: 767px)" );
+      const mq = window.matchMedia( "(max-width: 870px)" );
       mq.addListener(widthChange);
       widthChange(mq);
     },
@@ -219,6 +220,12 @@ export default {
     length() {
       if (isEmpty(this.$data.images)) { return 0 }
       return this.$data.images.length
+    },
+    imageOrientation() {
+      if (!this.$data.image) { return '' }
+      let emptyImage = new Image()
+      emptyImage.src = this.$data.image
+      return emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
     }
   },
   components: {
@@ -261,18 +268,31 @@ margin: 0 auto;
 .project {
   position: relative;
   width: 100%;
-  height: calc(100vh - 2 * #{spacing(frame)});
   margin: auto 0;
-  // overflow: hidden;
+  @include respond-to('large') {
+    max-height: calc(100vh - 2 * #{spacing(frame)});
+  }
   .image-container {
     position: relative;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.landscape {
+      background-size: contain;
+    }
+    &.portrait {
+      background-size: cover;
+    }
     @include respond-to('large') {
-      max-height: calc(100vh - 2 * #{spacing(frame)});
+      &.landscape {
+      background-size: contain;
+      }
+      &.portrait {
+        background-size: contain;
+      }
+      height: 85vh;
+      background-position: top;
       position: static;
     }
     .image {
@@ -298,6 +318,12 @@ margin: 0 auto;
     display: flex;
     align-items: flex-start;
     width: 100%;
+    position: absolute;
+    bottom: 0px;
+    @include respond-to('large') {
+      position: inherit;
+      margin-top: spacing(frame);
+    }
     .caption {
       flex-grow: 2;
       width: 80%;
@@ -317,6 +343,7 @@ margin: 0 auto;
     position: absolute;
     left: -30px;
     top: 0px;
+    z-index: 2;
     .close-btn {
       height: 1.2rem;
       fill: color(dark);
@@ -340,7 +367,7 @@ margin: 0 auto;
   }
   .image-nav {
     margin-right: spacing(md);
-    display: none;
+    display: block;
     @include respond-to('large') {
       display: block;
     }
