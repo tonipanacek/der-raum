@@ -124,7 +124,7 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
-    window.addEventListener("resize", this.resetHeight);
+    // window.addEventListener("resize", this.resetHeight);
     this.enterMobileFullScreen()
   },
   destroyed() {
@@ -161,6 +161,7 @@ export default {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
+          window.scrollTo(0,1);
         } else {
           showSidebars();
         }
