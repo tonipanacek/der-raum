@@ -25,7 +25,11 @@
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
-            <div class="no-next" v-if="!nextImageLink"></div>
+            <!-- <NuxtLink v-if="!nextImageLink" class="no-next">
+              <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
+            </NuxtLink> -->
+            <div class="no-next" v-if="!nextImageLink">
+            </div>
           </nav>
         </div>
       </Article>
@@ -284,6 +288,14 @@ margin: 0 auto;
     &.portrait {
       background-size: cover;
     }
+    @media (orientation: landscape) {
+      &.landscape {
+        background-size: cover;
+      }
+      &.portrait {
+        background-size: contain;
+      }
+    }
     @include respond-to('large') {
       &.landscape {
       background-size: contain;
@@ -365,6 +377,9 @@ margin: 0 auto;
       fill: color(black);
     }
   }
+  .hidden-nav {
+    visibility: hidden;
+  }
   .image-nav {
     margin-right: spacing(md);
     display: block;
@@ -389,8 +404,9 @@ margin: 0 auto;
     }
   }
   .no-next {
-    height: 1.5rem;
-    width: 2.25rem;
+    visibility: hidden;
+    display: inline-block;
+    width: .8em;
   }
 }
 </style>
