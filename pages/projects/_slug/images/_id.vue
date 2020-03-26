@@ -8,7 +8,7 @@
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container">
-          <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
+          <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
           <transition name="page">
             <div class="image">
               <img :src="image" :title="$tp('title')" :alt="$tp('description')">
@@ -52,6 +52,10 @@ export default {
       de: '/projekte/:slug/bilder/:id',
       en: '/projects/:slug/images/:id'
     }
+  },
+  props: {
+    mobile: Boolean,
+    orientation: String
   },
   name: 'projectsSlug',
   mixins: [prevNext, dynamicSEO],
@@ -137,7 +141,6 @@ export default {
         closeLink.style.top = '-25px';
       }
       const showSidebars = () => {
-        console.log(this.$route.path)
         navbar.style.display = 'flex';
         footer.style.display = 'flex';
         // mainContainer.style.marginTop = '3rem';
@@ -258,9 +261,16 @@ margin: 0 auto;
 .project {
   position: relative;
   width: 100%;
+  height: calc(100vh - 2 * #{spacing(frame)});
+  margin: auto 0;
+  // overflow: hidden;
   .image-container {
     position: relative;
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     @include respond-to('large') {
       max-height: calc(100vh - 2 * #{spacing(frame)});
       position: static;

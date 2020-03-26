@@ -17,7 +17,6 @@
       :data-index="index"
       :data-total="images.length"
       :mobile="mobile"
-      :orientation="image.orientation"
       event=""
       @mouseover.native="handleHover(image)"
       @mouseleave.native="handleBlur"
@@ -141,6 +140,11 @@ export default {
           id: this.sortedImages.indexOf(image.url) + 1
         }
       })
+    },
+    orientation(image) {
+      if(!image) { return '' }
+      console.log(image.orientation)
+      return image.orientation
     }
   }
 }
