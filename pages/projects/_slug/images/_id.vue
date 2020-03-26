@@ -124,12 +124,17 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
+    window.addEventListener("resize", this.resetHeight);
     this.enterMobileFullScreen()
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
+    resetHeight(){
+      // reset the body height to that of the inner browser
+      document.body.style.height = window.innerHeight + "px";
+    },
     enterMobileFullScreen() {
       const navbar = document.querySelector('.left-sidebar')
       const footer = document.querySelector('#right-sidebar')
@@ -332,17 +337,15 @@ margin: 0 auto;
     width: 100%;
     position: absolute;
     bottom: 0px;
+    padding: spacing(md);
     @include respond-to('large') {
       position: inherit;
       margin-top: spacing(frame);
+      padding: 0;
     }
     .caption {
-      flex-grow: 2;
-      width: 80%;
-      padding: spacing(md);
-      @include respond-to(large) {
-        padding: 0;
-      }
+      flex-grow: 1;
+      width: 83%;
       h1 {
         margin-top: 0;
       }
@@ -381,9 +384,10 @@ margin: 0 auto;
     visibility: hidden;
   }
   .image-nav {
-    margin-right: spacing(md);
     display: block;
+    // width: 18%;
     @include respond-to('large') {
+      margin-right: spacing(md);
       display: block;
     }
   }
