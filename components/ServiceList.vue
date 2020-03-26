@@ -89,7 +89,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   .service-title {
     @include smallCaps;
     color: color(dark);
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 0.5em;
     transition: color 0.3s ease-in-out;
   }
@@ -100,7 +100,7 @@ $more-height: calc(100vh - #{spacing(frame)});
 .projects-link {
   @include smallCaps;
   color: color(dark);
-  border: 1.5px solid color(light);
+  border: 1px solid color(light);
   text-decoration: none;
   width: 100%;
   height: 15ch;
@@ -116,7 +116,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   a {
     &:hover {
       color: color(black);
-      font-weight: 600;
+      font-weight: bold;
       border: 1.5px solid color(black);
     }
   }
@@ -128,7 +128,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   a {
     &:hover {
       color: color(black);
-      font-weight: 700;
+      font-weight: bold;
       border: 1.5px solid color(black);
     }
   }
@@ -137,7 +137,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   opacity: .8;
   .service-title {
     color: color(dark);
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 .hover {
@@ -147,7 +147,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   }
   .projects-link {
     color: color(black);
-    border: 1px solid color(black);
+    // border: 1px solid color(black);
   }
 }
 

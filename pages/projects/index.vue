@@ -43,7 +43,6 @@ import ProgressBar from "~/components/ProgressBar"
 
 export default {
   name: 'projectsIndex',
-  scrollToTop: false,
   head() {
     return {
       title: `${seo.shortTitle} | ${this.$t('navbar.projects')}`
