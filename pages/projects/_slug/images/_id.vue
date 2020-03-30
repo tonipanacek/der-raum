@@ -5,7 +5,7 @@
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-          <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
+          <img src="~/assets/images/cross-out.png" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
@@ -19,15 +19,15 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
+            <div class="no-next" v-if="!previousImageLink">
+            </div>
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
+              <!-- <img src="~/assets/images/right-arrow.png" alt="Next Button" class="nav next-btn" /> -->
             </NuxtLink>
-            <!-- <NuxtLink v-if="!nextImageLink" class="no-next">
-              <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
-            </NuxtLink> -->
             <div class="no-next" v-if="!nextImageLink">
             </div>
           </nav>
@@ -145,17 +145,17 @@ export default {
         navbar.style.display = 'none'
         footer.style.display = 'none'
         layout.style.paddingTop = '0'
-        mainContainer.style.marginTop = '0'
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
+        mainContainer.classList.remove('mt-lg')
       }
       const showSidebars = () => {
         navbar.style.display = 'flex'
         footer.style.display = 'flex'
-        // mainContainer.style.marginTop = '3rem';
-        closeLink.style.left = '-30px'
-        closeLink.style.top = '1px'
+        closeLink.style.left = '-35px'
+        closeLink.style.top = '0px'
         layout.style.paddingTop = '2em'
+        mainContainer.classList.add('mt-lg')
       }
       const widthChange = (mq) => {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
@@ -324,7 +324,7 @@ margin: 0 auto;
 
   h1 {
     @include smallCaps;
-    color: color(dark);
+    color: color(black);
   }
   p {
     @include smallCaps;
@@ -357,7 +357,7 @@ margin: 0 auto;
   }
   .close-link {
     position: absolute;
-    left: -30px;
+    left: -35px;
     top: 0px;
     z-index: 2;
     .close-btn {

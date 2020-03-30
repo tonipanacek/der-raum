@@ -111,7 +111,7 @@ export default {
         color: color(dark);
         transition: font-weight 100ms ease;
         &:hover {
-          color: color(black);
+          color: color(dark);
           font-weight: 600;
         }
       }

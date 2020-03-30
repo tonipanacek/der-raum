@@ -87,9 +87,6 @@ export default {
   .box-wrapper {
     height: 100%;
     width: 100%;
-    // @include respond-to('large') {
-    //   width: 1000%;
-    // }
   }
   ul {
     padding: 2em;
@@ -99,36 +96,20 @@ export default {
       margin: 0;
       display: block;
       padding: 0 2em 0 0;
-      // columns: 22ch 2;
     }
     li {
       margin-left: 0;
       font-size: .85em;
       display: block;
-      color: color(light);
       padding-bottom: spacing(xs);
       a {
         color: color(dark);
         transition: font-weight 100ms ease;
         &:hover {
-          color: color(black);
+          color: color(dark);
           font-weight: 600;
         }
       }
-    }
-  }
-  a,
-  a:focus,
-  a:visited {
-    transition: color 500ms ease, font-weight 100ms ease-in-out;
-    text-decoration: none;
-    color: color(dark);
-    &:hover {
-      color: color(black);
-      font-weight: 400;
-    }
-    &:focus {
-      outline: 0;
     }
   }
 }

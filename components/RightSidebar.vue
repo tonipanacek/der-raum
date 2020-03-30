@@ -48,7 +48,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
     &.nuxt-link-exact-active {
       color: color(dark);
-      font-weight: 700;
+      font-weight: 600;
     }
   }
   .right-stack {

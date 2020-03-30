@@ -24,7 +24,7 @@ export default {
 #prev-next-buttons {
   z-index: z(sidebar);
   // position: relative;
-  height: 90%;
+  height: 100%;
   width: 100%;
   @include respond-to(large) {
     display: none;
@@ -48,6 +48,7 @@ export default {
     justify-content: flex-end;
     align-items: center;
     width: 50vw;
+    padding: .5rem;
   }
   .prev {
     position: absolute;
