@@ -19,6 +19,8 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
+            <div class="no-next" v-if="!previousImageLink">
+            </div>
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>

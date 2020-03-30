@@ -9,9 +9,9 @@
         <div class="text">
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
-            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link">
-              <p>{{ $t("contact.streetNumber") }}<br>
-              {{ $t("contact.cityZip") }}</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
+              {{ $t("contact.streetNumber") }}<br>
+              <span>{{ $t("contact.cityZip") }}</span>
             </a>
           </div>
           <div class="info">
@@ -79,15 +79,19 @@ export default {
       width: 30ch;
       padding: 1em;
       h1 {
-        height: 30px;
+        // height: 30px;
         &.smaller-width {
           width: 32ch;
+          // height: 35px;
         }
       }
       p {
         color: color(dark);
         font-weight: 300;
         margin: 0;
+      }
+      .address {
+        line-height: 2em
       }
       .contact-link {
         text-decoration: none;
@@ -103,6 +107,14 @@ export default {
       }
     }
   }
+  a {
+        color: color(dark);
+        transition: font-weight 100ms ease;
+        &:hover {
+          color: color(black);
+          font-weight: 600;
+        }
+      }
   .image-container {
     .frame {
       height: 100%;

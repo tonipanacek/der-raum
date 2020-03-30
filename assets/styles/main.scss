@@ -15,4 +15,8 @@ html {
 
 body {
   margin: 0;
+  -webkit-text-size-adjust: none;
+  @include respond-to('large') {
+    -webkit-text-size-adjust: inherit;
+  }
 }
