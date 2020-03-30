@@ -37,7 +37,6 @@ export default {
       height: 2rem;
       width: 2rem;
       fill: color(dark);
-      // padding: .5rem;
       @include respond-to(large) {
         opacity: 0;
       }

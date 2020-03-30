@@ -27,9 +27,6 @@
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
-            <!-- <NuxtLink v-if="!nextImageLink" class="no-next">
-              <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
-            </NuxtLink> -->
             <div class="no-next" v-if="!nextImageLink">
             </div>
           </nav>
@@ -154,7 +151,7 @@ export default {
       const showSidebars = () => {
         navbar.style.display = 'flex'
         footer.style.display = 'flex'
-        // mainContainer.style.marginTop = '3rem';
+        mainContainer.style.marginTop = '3rem';
         closeLink.style.left = '-30px'
         closeLink.style.top = '1px'
         layout.style.paddingTop = '2em'
