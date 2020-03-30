@@ -89,7 +89,7 @@ export default {
   .nav-item {
     transition: color 100ms ease, font-weight 100ms ease;
     &:hover {
-      color: color(black);
+      color: color(dark);
       font-weight: 600;
     }
   }

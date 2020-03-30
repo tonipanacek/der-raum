@@ -291,7 +291,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   text-decoration: none;
   transition: transform 500ms ease, opacity 0.3s ease-in-out;
   &:hover .image-title {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
   }
   h3 {
@@ -304,7 +304,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 // hovering effect
 .hover {
   h3 {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
   }
 }

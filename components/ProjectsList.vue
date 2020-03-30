@@ -77,7 +77,7 @@ export default {
       } else {
         el.style.transform = "translateY(-70vh)"
       }
-      el.style.transition = "opacity 300 ease, transform 300 ease"
+      // el.style.transition = "opacity 300 ease, transform 300 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
@@ -251,9 +251,9 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 .project-link {
   text-decoration: none;
-  transition: transform 500ms ease, opacity 0.3s ease-in-out;
+  transition: transform 1000ms ease, opacity 0.3s ease-in-out;
   &:hover .project-title {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
   }
   h3 {

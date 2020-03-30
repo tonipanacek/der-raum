@@ -10,8 +10,8 @@
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
-              {{ $t("contact.streetNumber") }}<br>
-              <span>{{ $t("contact.cityZip") }}</span>
+              <p>{{ $t("contact.streetNumber") }}</p>
+              <p>{{ $t("contact.cityZip") }}</p>
             </a>
           </div>
           <div class="info">
@@ -21,15 +21,15 @@
           </div>
           <div class="info">
             <h1>{{ $t("contact.thirdColumn") }}</h1>
-            <a href="tel:03039375300" class="contact-link">
+            <a href="tel:03039375300" class="contact-link tel">
               <p>{{ $t("contact.tel") }}</p>
             </a>
             <template v-if="$t('contact.tel2')">
-              <a href="tel:017673564742" class="contact-link">
+              <a href="tel:017673564742" class="contact-link tel">
                 <p>{{ $t("contact.tel2") }}</p>
               </a>
             </template>
-            <a href="mailto:derraum@holz-raum.de" class="contact-link">
+            <a href="mailto:derraum@holz-raum.de" class="contact-link tel">
               <p>{{ $t("contact.email") }}</p>
             </a>
           </div>
@@ -76,28 +76,28 @@ export default {
     padding-bottom: 1em;
     .info {
       flex: 1 0 auto;
-      width: 30ch;
-      padding: 1em;
+      min-width: 33%;
+      width: 32ch;
       h1 {
-        // height: 30px;
-        &.smaller-width {
-          width: 32ch;
-          // height: 35px;
-        }
+        width: 32ch;
       }
       p {
         color: color(dark);
         font-weight: 300;
         margin: 0;
       }
-      .address {
-        line-height: 2em
-      }
+
       .contact-link {
         text-decoration: none;
-        p:hover {
-          color: color(dark);
-          font-weight: 400;
+        color: color(dark);
+        transition: font-weight 100ms ease;
+        line-height: 2em;
+        margin-bottom: .5em;
+        &:hover {
+          p{
+            color: color(dark);
+            font-weight: 600;
+          }
         }
       }
       .hours {
@@ -107,14 +107,6 @@ export default {
       }
     }
   }
-  a {
-        color: color(dark);
-        transition: font-weight 100ms ease;
-        &:hover {
-          color: color(black);
-          font-weight: 600;
-        }
-      }
   .image-container {
     .frame {
       height: 100%;

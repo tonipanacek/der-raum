@@ -143,7 +143,7 @@ $more-height: calc(100vh - #{spacing(frame)});
 .hover {
   .service-title {
     color: color(black);
-    font-weight: 700;
+    font-weight: 600;
   }
   .projects-link {
     color: color(black);

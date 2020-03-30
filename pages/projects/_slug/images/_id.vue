@@ -5,8 +5,7 @@
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-          <!-- <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" /> -->
-          <img src="~/assets/images/x.png" alt="Close Button" class="nav close-btn" />
+          <img src="~/assets/images/cross-out.png" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
@@ -27,6 +26,7 @@
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
+              <!-- <img src="~/assets/images/right-arrow.png" alt="Next Button" class="nav next-btn" /> -->
             </NuxtLink>
             <div class="no-next" v-if="!nextImageLink">
             </div>
@@ -152,8 +152,8 @@ export default {
       const showSidebars = () => {
         navbar.style.display = 'flex'
         footer.style.display = 'flex'
-        closeLink.style.left = '-30px'
-        closeLink.style.top = '1px'
+        closeLink.style.left = '-35px'
+        closeLink.style.top = '0px'
         layout.style.paddingTop = '2em'
         mainContainer.classList.add('mt-lg')
       }
@@ -357,7 +357,7 @@ margin: 0 auto;
   }
   .close-link {
     position: absolute;
-    left: -30px;
+    left: -35px;
     top: 0px;
     z-index: 2;
     .close-btn {

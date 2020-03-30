@@ -257,26 +257,22 @@ $main-height: calc(100vh - #{spacing(frame)});
   text-decoration: none;
   transition: transform 500ms ease, opacity 0.3s ease-in-out;
   &:hover > .room-title {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
   }
 }
 // hovering effect
 .hover {
   h3 {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
-  }
-  .rooms-link {
-    color: color(black);
-    border: 1px solid color(black);
   }
 }
 .hover:not(.active) {
   opacity: .8;
   h3 {
     color: color(dark);
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 </style>

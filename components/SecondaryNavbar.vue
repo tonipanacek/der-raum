@@ -16,7 +16,7 @@
           :class="{
             'nav-item': true,
             'title': true,
-            'hover': hoveredMenuItem,
+            // 'hover': hoveredMenuItem,
             'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
           }"
           :to="path(page)"
@@ -45,14 +45,6 @@ export default {
     ...mapGetters(["sortedPages"])
   },
   methods: {
-    // groupedPages() {
-    //   if (isEmpty(this.$data.pages)) { return [] }
-    //   if (sortedPages.length === 4) {
-    //     return sortedPages.slice(2)
-    //   } else {
-    //     return sortedPages
-    //   }
-    // },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
@@ -107,13 +99,16 @@ export default {
     display: block;
   }
   .hovered {
-    color: color(black);
-    font-weight: 700;
+    color: color(dark);
+    font-weight: 600;
   }
-  .hover:hover {
-    color: color(black);
-    font-weight: 700;
-  }
+  // .hover {
+  //   color: color(dark);
+  //   &:hover {
+  //     color: color(dark);
+  //     font-weight: 600;
+  //   }
+  // }
 }
 .insert-move {
   // transition: transform 250ms ease;
