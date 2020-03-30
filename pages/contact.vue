@@ -15,7 +15,7 @@
             </a>
           </div>
           <div class="info">
-            <h1>{{ $t("contact.secondColumn") }}</h1>
+            <h1 class="smaller-width">{{ $t("contact.secondColumn") }}</h1>
             <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
             <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
@@ -80,6 +80,9 @@ export default {
       padding: 1em;
       h1 {
         height: 30px;
+        &.smaller-width {
+          width: 32ch;
+        }
       }
       p {
         color: color(dark);
