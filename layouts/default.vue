@@ -7,7 +7,7 @@
         <SocialIcons id="left-social" />
       </Stack>
     </div>
-    <section role="main" class="main-container">
+    <section role="main" class="main-container mt-lg">
       <nuxt />
     </section>
     <div class="sidebar-wrapper">
@@ -93,11 +93,16 @@ a:visited {
   width: 100%;
   background: white;
   margin: 0 auto;
+  @include respond-to('large') {
+    width: 500px;
+    max-width: 1250px;
+  }
+}
+
+.mt-lg {
   margin-top: spacing(lg);
   @include respond-to('large') {
     margin-top: 0;
-    width: 500px;
-    max-width: 1250px;
   }
 }
 

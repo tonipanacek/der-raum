@@ -5,7 +5,8 @@
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-          <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
+          <!-- <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" /> -->
+          <img src="~/assets/images/x.png" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
@@ -144,17 +145,17 @@ export default {
         navbar.style.display = 'none'
         footer.style.display = 'none'
         layout.style.paddingTop = '0'
-        mainContainer.style.marginTop = '0'
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
+        mainContainer.classList.remove('mt-lg')
       }
       const showSidebars = () => {
         navbar.style.display = 'flex'
         footer.style.display = 'flex'
-        mainContainer.style.marginTop = '3rem';
         closeLink.style.left = '-30px'
         closeLink.style.top = '1px'
         layout.style.paddingTop = '2em'
+        mainContainer.classList.add('mt-lg')
       }
       const widthChange = (mq) => {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
@@ -323,7 +324,7 @@ margin: 0 auto;
 
   h1 {
     @include smallCaps;
-    color: color(dark);
+    color: color(black);
   }
   p {
     @include smallCaps;

@@ -171,6 +171,9 @@ $more-height: calc(100vh - #{spacing(frame)});
         max-width: 100%;
         max-height: 50vh;
         object-fit: cover;
+        @media (orientation: landscape) {
+          max-height: 65vh;
+        }
       }
     }
     h3 {
@@ -189,6 +192,9 @@ $more-height: calc(100vh - #{spacing(frame)});
         max-width: 100%;
         max-height: 74.5vh;
         object-fit: cover;
+        @media (orientation: landscape) {
+          max-height: 100vh;
+        }
       }
     }
   }
@@ -206,6 +212,9 @@ $more-height: calc(100vh - #{spacing(frame)});
         width: 100%;
         max-height: 50vh;
         object-fit: cover;
+        @media (orientation: landscape) {
+          max-height: 65vh;
+        }
       }
     }
   }
