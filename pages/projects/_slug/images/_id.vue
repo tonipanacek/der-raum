@@ -7,13 +7,11 @@
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/close.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container">
-          <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
-          <transition name="page">
-            <div class="image">
-              <img :src="image" :title="$tp('title')" :alt="$tp('description')">
-            </div>
-          </transition>
+        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
+          <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
+          <!-- <div class="image">
+            <img :src="image" :title="$tp('title')" :alt="$tp('description')">
+          </div> -->
         </div>
         <div class="image-footer">
           <aside class="caption">
@@ -27,7 +25,11 @@
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
-            <div class="no-next" v-if="!nextImageLink"></div>
+            <!-- <NuxtLink v-if="!nextImageLink" class="no-next">
+              <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
+            </NuxtLink> -->
+            <div class="no-next" v-if="!nextImageLink">
+            </div>
           </nav>
         </div>
       </Article>
@@ -52,6 +54,10 @@ export default {
       de: '/projekte/:slug/bilder/:id',
       en: '/projects/:slug/images/:id'
     }
+  },
+  props: {
+    mobile: Boolean,
+    orientation: String
   },
   name: 'projectsSlug',
   mixins: [prevNext, dynamicSEO],
@@ -118,41 +124,49 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
+    // window.addEventListener("resize", this.resetHeight);
     this.enterMobileFullScreen()
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
+    resetHeight(){
+      // reset the body height to that of the inner browser
+      document.body.style.height = window.innerHeight + "px";
+    },
     enterMobileFullScreen() {
-      const navbar = document.querySelector('.left-sidebar');
-      const footer = document.querySelector('#right-sidebar');
-      const closeLink = document.querySelector('.close-link');
-      const mainContainer = document.querySelector('.main-container');
+      const navbar = document.querySelector('.left-sidebar')
+      const footer = document.querySelector('#right-sidebar')
+      const closeLink = document.querySelector('.close-link')
+      const mainContainer = document.querySelector('.main-container')
+      const layout = document.querySelector('.layout')
       const hideSidebars = () => {
-        navbar.style.display = 'none';
-        footer.style.display = 'none';
-        mainContainer.style.marginTop = '0';
-        closeLink.style.left = '10px';
-        closeLink.style.top = '-25px';
+        navbar.style.display = 'none'
+        footer.style.display = 'none'
+        layout.style.paddingTop = '0'
+        mainContainer.style.marginTop = '0'
+        closeLink.style.left = '15px'
+        closeLink.style.top = '15px'
       }
       const showSidebars = () => {
-        console.log(this.$route.path)
-        navbar.style.display = 'flex';
-        footer.style.display = 'flex';
+        navbar.style.display = 'flex'
+        footer.style.display = 'flex'
         // mainContainer.style.marginTop = '3rem';
-        closeLink.style.left = '-30px';
-        closeLink.style.top = '1px';
+        closeLink.style.left = '-30px'
+        closeLink.style.top = '1px'
+        layout.style.paddingTop = '2em'
       }
       const widthChange = (mq) => {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
+          window.scrollTo(0,1);
         } else {
           showSidebars();
         }
       }
-      const mq = window.matchMedia( "(max-width: 767px)" );
+      const mq = window.matchMedia( "(max-width: 870px)" );
       mq.addListener(widthChange);
       widthChange(mq);
     },
@@ -216,6 +230,12 @@ export default {
     length() {
       if (isEmpty(this.$data.images)) { return 0 }
       return this.$data.images.length
+    },
+    imageOrientation() {
+      if (!this.$data.image) { return '' }
+      let emptyImage = new Image()
+      emptyImage.src = this.$data.image
+      return emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
     }
   },
   components: {
@@ -258,11 +278,39 @@ margin: 0 auto;
 .project {
   position: relative;
   width: 100%;
+  margin: auto 0;
+  @include respond-to('large') {
+    max-height: calc(100vh - 2 * #{spacing(frame)});
+  }
   .image-container {
     position: relative;
     width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.landscape {
+      background-size: contain;
+    }
+    &.portrait {
+      background-size: cover;
+    }
+    @media (orientation: landscape) {
+      &.landscape {
+        background-size: cover;
+      }
+      &.portrait {
+        background-size: contain;
+      }
+    }
     @include respond-to('large') {
-      max-height: calc(100vh - 2 * #{spacing(frame)});
+      &.landscape {
+      background-size: contain;
+      }
+      &.portrait {
+        background-size: contain;
+      }
+      height: 85vh;
+      background-position: top;
       position: static;
     }
     .image {
@@ -288,13 +336,17 @@ margin: 0 auto;
     display: flex;
     align-items: flex-start;
     width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: spacing(md);
+    @include respond-to('large') {
+      position: inherit;
+      margin-top: spacing(frame);
+      padding: 0;
+    }
     .caption {
-      flex-grow: 2;
-      width: 80%;
-      padding: spacing(md);
-      @include respond-to(large) {
-        padding: 0;
-      }
+      flex-grow: 1;
+      width: 83%;
       h1 {
         margin-top: 0;
       }
@@ -307,6 +359,7 @@ margin: 0 auto;
     position: absolute;
     left: -30px;
     top: 0px;
+    z-index: 2;
     .close-btn {
       height: 1.2rem;
       fill: color(dark);
@@ -328,10 +381,14 @@ margin: 0 auto;
       fill: color(black);
     }
   }
+  .hidden-nav {
+    visibility: hidden;
+  }
   .image-nav {
-    margin-right: spacing(md);
-    display: none;
+    display: block;
+    // width: 18%;
     @include respond-to('large') {
+      margin-right: spacing(md);
       display: block;
     }
   }
@@ -352,8 +409,9 @@ margin: 0 auto;
     }
   }
   .no-next {
-    height: 1.5rem;
-    width: 2.25rem;
+    visibility: hidden;
+    display: inline-block;
+    width: .8em;
   }
 }
 </style>

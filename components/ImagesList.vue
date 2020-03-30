@@ -140,6 +140,11 @@ export default {
           id: this.sortedImages.indexOf(image.url) + 1
         }
       })
+    },
+    orientation(image) {
+      if(!image) { return '' }
+      console.log(image.orientation)
+      return image.orientation
     }
   }
 }

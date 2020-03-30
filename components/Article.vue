@@ -25,13 +25,14 @@ export default {
     width: 100%;
   }
   .image-container {
-    margin-bottom: spacing(frame);
+    // margin-bottom: spacing(frame);
     img {
       max-width: 100%;
       max-height: 100%;
     }
   }
   .text {
+    margin-top: spacing(frame);
     padding: spacing(frame);
     @include respond-to(large) {
       padding: 0;
