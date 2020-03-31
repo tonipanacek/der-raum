@@ -22,9 +22,7 @@
           :class="{ 'active': hover && hover === 'projects', hover: hover, 'projects-link': true }"
           @mouseover.native="hover = 'projects'"
           @mouseleave.native="hover = ''"
-          :to="localePath({ name: 'projects' })"
-
-        >
+          :to="localePath({ name: 'projects' })">
           {{ $t("projects.link") }}
         </NuxtLink>
       </div>
@@ -104,6 +102,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   text-decoration: none;
   width: 100%;
   height: 15ch;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -115,9 +114,9 @@ $more-height: calc(100vh - #{spacing(frame)});
   text-align: center;
   a {
     &:hover {
-      color: color(black);
-      font-weight: bold;
-      border: 1.5px solid color(black);
+      color: color(dark);
+      font-weight: 600;
+      border: 1.2px solid color(dark);
     }
   }
 }
@@ -129,7 +128,7 @@ $more-height: calc(100vh - #{spacing(frame)});
     &:hover {
       color: color(black);
       font-weight: bold;
-      border: 1.5px solid color(black);
+      border: 1px solid color(black);
     }
   }
 }
@@ -142,12 +141,11 @@ $more-height: calc(100vh - #{spacing(frame)});
 }
 .hover {
   .service-title {
-    color: color(black);
+    color: color(dark);
     font-weight: 600;
   }
   .projects-link {
-    color: color(black);
-    // border: 1px solid color(black);
+    color: color(dark);
   }
 }
 
@@ -306,10 +304,6 @@ $more-height: calc(100vh - #{spacing(frame)});
     width: 29%;
     margin-top: 50px;
     align-self: auto;
-  }
-  .projects-link {
-    padding: 10px;
-    display: flex;
   }
   .projects-link-non-grid {
     display: none;

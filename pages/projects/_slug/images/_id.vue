@@ -124,8 +124,8 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
-    // window.addEventListener("resize", this.resetHeight);
     this.enterMobileFullScreen()
+    window.addEventListener("resize", this.resetHeight);
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
