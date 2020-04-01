@@ -256,16 +256,20 @@ $main-height: calc(100vh - #{spacing(frame)});
 .room-link {
   text-decoration: none;
   transition: transform 650ms ease, opacity 0.3s ease-in-out;
-  &:hover > .room-title {
-    color: color(dark);
-    font-weight: 600;
+  @media(hover: hover) and (pointer: fine) {
+    &:hover > .room-title {
+      color: color(dark);
+      font-weight: 600;
+    }
   }
 }
 // hovering effect
 .hover {
-  h3 {
-    color: color(dark);
-    font-weight: 600;
+  @media(hover: hover) and (pointer: fine) {
+    h3 {
+      color: color(dark);
+      font-weight: 600;
+    }
   }
 }
 .hover:not(.active) {
