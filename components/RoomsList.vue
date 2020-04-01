@@ -243,7 +243,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 .room-title {
   @include smallCaps;
   color: color(dark);
-  font-weight: 400;
+  font-weight: 300;
   transition: opacity 750ms ease, color 500ms ease;
   margin-top: 0.5em;
   padding-left: 0.5em;
@@ -255,7 +255,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 .room-link {
   text-decoration: none;
-  transition: transform 750ms ease, opacity 0.3s ease-in-out;
+  transition: transform 650ms ease, opacity 0.3s ease-in-out;
   &:hover > .room-title {
     color: color(dark);
     font-weight: 600;

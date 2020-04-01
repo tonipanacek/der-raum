@@ -239,7 +239,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 .project-title {
   @include smallCaps;
   color: color(dark);
-  font-weight: 500;
+  font-weight: 300;
   transition: color 500ms;
   margin-top: 0.5em;
   padding-left: 0.5em;
@@ -251,7 +251,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 .project-link {
   text-decoration: none;
-  transition: transform 750ms ease, opacity 0.3s ease-in-out;
+  transition: transform 650ms ease, opacity 0.3s ease-in-out;
   &:hover .project-title {
     color: color(dark);
     font-weight: 600;
@@ -261,17 +261,11 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
 }
 // hovering effect
-.hover {
-  h3 {
-    color: color(black);
-    font-weight: 600;
-  }
-}
 .hover:not(.active) {
   opacity: .8;
   h3 {
     color: color(dark);
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 </style>
