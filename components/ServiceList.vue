@@ -91,9 +91,6 @@ $more-height: calc(100vh - #{spacing(frame)});
     margin-top: 0.5em;
     transition: color 0.3s ease-in-out;
   }
-  .projects-link {
-    transition: opacity 0.3s ease-in-out;
-  }
 }
 .projects-link {
   @include smallCaps;
@@ -106,14 +103,15 @@ $more-height: calc(100vh - #{spacing(frame)});
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .projects-link-grid {
   display: none;
   width: 100%;
   text-align: center;
-  a {
-    &:hover {
+  @media(hover: hover) and (pointer: fine) {
+    a:hover {
       color: color(dark);
       font-weight: 600;
       border: 1.2px solid color(dark);
@@ -124,11 +122,11 @@ $more-height: calc(100vh - #{spacing(frame)});
 .projects-link-non-grid {
   padding: 0.5em;
   margin-top: spacing(sm);
-  a {
-    &:hover {
-      color: color(black);
-      font-weight: bold;
-      border: 1px solid color(black);
+  @media(hover: hover) and (pointer: fine) {
+    a:hover {
+      color: color(dark);
+      font-weight: 600;
+      border: 1.2px solid color(dark);
     }
   }
 }
@@ -140,12 +138,14 @@ $more-height: calc(100vh - #{spacing(frame)});
   }
 }
 .hover {
-  .service-title {
-    color: color(dark);
-    font-weight: 600;
-  }
-  .projects-link {
-    color: color(dark);
+  @media(hover: hover) and (pointer: fine) {
+    .service-title {
+      color: color(dark);
+      font-weight: 600;
+    }
+    .projects-link {
+      color: color(dark);
+    }
   }
 }
 

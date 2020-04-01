@@ -282,6 +282,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   margin-top: 0.5em;
   padding-left: 0.5em;
   padding-bottom: 0.5em;
+  transition: opacity 750ms ease, color 500ms ease;
   @include respond-to('large') {
     padding: 0;
   }
@@ -290,22 +291,24 @@ $main-height: calc(100vh - #{spacing(frame)});
 .image-link {
   text-decoration: none;
   transition: transform 650ms ease, opacity 0.3s ease-in-out;
-  &:hover .image-title {
-    color: color(dark);
-    font-weight: 600;
-  }
-  h3 {
-    transition: opacity 750ms ease, color 500ms ease;
+  @media(hover: hover) and (pointer: fine) {
+    &:hover .image-title {
+      color: color(dark);
+      font-weight: 600;
+    }
   }
 }
 #image-count {
   padding-left: .75em;
 }
+
 // hovering effect
 .hover {
-  h3 {
-    color: color(dark);
-    font-weight: 600;
+  @media(hover: hover) and (pointer: fine) {
+    h3 {
+      color: color(dark);
+      font-weight: 600;
+    }
   }
 }
 .hover:not(.active) {
