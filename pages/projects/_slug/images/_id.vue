@@ -8,10 +8,7 @@
           <img src="~/assets/images/cross-out.png" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
-          <!-- <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" /> -->
-          <!-- <div class="image">
-            <img :src="image" :title="$tp('title')" :alt="$tp('description')">
-          </div> -->
+          <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
         </div>
         <div class="image-footer">
           <aside class="caption">
@@ -26,7 +23,6 @@
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
-              <!-- <img src="~/assets/images/right-arrow.png" alt="Next Button" class="nav next-btn" /> -->
             </NuxtLink>
             <div class="no-next" v-if="!nextImageLink">
             </div>
@@ -248,29 +244,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
-}
-
-.intro-enter-active, .intro-leave-active {
-  transition: opacity 0s;
-}
-.intro-enter, .intro-leave-to {
-  opacity: 1;
-}
-
-.main-container {
-  margin-top: 0;
-}
-
 #projects.image {
 max-width: 1250px;
 margin: 0 auto;
@@ -318,20 +291,6 @@ margin: 0 auto;
       justify-content: space-around;
     }
   }
-  img {
-    max-height: 75vh;
-  }
-
-  h1 {
-    @include smallCaps;
-    color: color(black);
-  }
-  p {
-    @include smallCaps;
-    color: color(light);
-    font-size: 0.8em;
-    margin-bottom: 0;
-  }
   .image-footer {
     display: flex;
     align-items: flex-start;
@@ -348,7 +307,15 @@ margin: 0 auto;
       flex-grow: 1;
       width: 83%;
       h1 {
+        @include smallCaps;
+        color: color(black);
         margin-top: 0;
+      }
+      p {
+        @include smallCaps;
+        color: color(light);
+        font-size: 0.8em;
+        margin-bottom: 0;
       }
       #image-count {
         padding-left: .75em;
@@ -359,12 +326,14 @@ margin: 0 auto;
     position: absolute;
     left: -35px;
     top: 0px;
-    z-index: 2;
+    z-index: 10;
     .close-btn {
       height: 1.2rem;
       fill: color(dark);
-      &:hover {
-        fill: color(black);
+      @media(hover: hover) and (pointer: fine) {
+        &:hover {
+          fill: color(black);
+        }
       }
       &:focus {
         outline: none;
@@ -372,24 +341,21 @@ margin: 0 auto;
     }
   }
   .nav {
-    &:focus {
-        outline: none;
-      }
     height: 1.5rem;
     fill: color(dark);
-    &:hover {
-      fill: color(black);
+    &:focus {
+      outline: none;
     }
-  }
-  .hidden-nav {
-    visibility: hidden;
-  }
-  .image-nav {
-    display: block;
-    // width: 18%;
-    @include respond-to('large') {
-      margin-right: spacing(md);
-      display: block;
+    @media(hover: hover) and (pointer: fine) {
+      &:hover {
+        fill: color(black);
+      }
+    }
+    .image-nav {
+      display: none;
+      @include respond-to('large') {
+        display: block;
+      }
     }
   }
   .previous-btn {
@@ -399,14 +365,6 @@ margin: 0 auto;
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
     margin-right: spacing(sm);
-  }
-  @include respond-to('large') {
-    .close-link {
-      display: block;
-    }
-    .image-nav {
-      margin-right: 0;
-    }
   }
   .no-next {
     visibility: hidden;
