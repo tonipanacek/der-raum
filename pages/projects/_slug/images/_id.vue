@@ -153,11 +153,15 @@ export default {
         layout.style.paddingTop = '2em'
         mainContainer.classList.add('mt-lg')
       }
+      const setDocHeight = () => {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+      }
       const widthChange = (mq) => {
         if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
-          window.scrollTo(0,1);
+          window.addEventListener('resize', setDocHeight)
+          window.addEventListener('orientationchange', setDocHeight)
         } else {
           showSidebars();
         }
@@ -258,7 +262,8 @@ margin: 0 auto;
   .image-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    // height: 90vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-position: center;
     background-repeat: no-repeat;
     &.landscape {
@@ -351,11 +356,11 @@ margin: 0 auto;
         fill: color(black);
       }
     }
-    .image-nav {
-      display: none;
-      @include respond-to('large') {
-        display: block;
-      }
+  }
+  .image-nav {
+    display: none;
+    @include respond-to('large') {
+      display: block;
     }
   }
   .previous-btn {
