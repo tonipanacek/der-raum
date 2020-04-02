@@ -1,6 +1,6 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
-import { get, isEmpty, throttle, chunk, sortBy } from "lodash"
+import { get, isEmpty, throttle, chunk, sortBy, flatten, uniq } from "lodash"
 
 export default {
   data() {
@@ -16,7 +16,20 @@ export default {
   computed: {
     allPagesView() {
       if (isEmpty(this.pages)) { return [] }
-      return this.pages
+      const allPages = sortBy(this.pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+      let chunks = chunk(allPages, 3)
+      if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
+        chunks = chunks.map((c) => {
+          if (c.length === this.max - 1) {
+            return [c[1], c[0], c[2]].filter(c => c)
+          } else {
+            return [c[1], c[0]].filter(c => c)
+          }
+        })
+        return uniq(flatten(chunks))
+      } else {
+        return this.pages
+      }
     },
     pagesChunks() {
       if (isEmpty(this.pages)) { return [] }
