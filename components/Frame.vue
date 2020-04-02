@@ -22,8 +22,8 @@ export default {
 
 <style lang="scss" scoped>
 .frame {
+  // padding-bottom: calc(var(--n) / var(--d) * 100%);
   padding-bottom: calc(9 / 16 * 100%);
-  padding-bottom: calc(var(--n) / var(--d) * 100%);
   position: relative;
 
   & /deep/ > * {

@@ -62,7 +62,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
-  max-width: 200ch;
+  max-width: 1660px;
   margin: 0 auto;
    @include respond-to('large') {
     position: relative;
@@ -123,7 +123,7 @@ a:visited {
       position: sticky;
       top: spacing(frame);
       height: $main-height;
-      min-height: $main-height;
+      // min-height: $main-height;
       padding: 0 2em;
       margin-bottom: 2em;
   }
