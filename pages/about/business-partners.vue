@@ -3,7 +3,7 @@
     <PrevNextButtons :prev="prevLink" :next="nextLink" />
     <Article>
       <div class="text">
-        <h1>Business Partner</h1>
+        <h1>{{ $tp("title") }}</h1>
       </div>
       <div class="box-wrapper">
         <ul>
