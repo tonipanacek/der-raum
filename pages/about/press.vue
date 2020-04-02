@@ -1,8 +1,9 @@
 <template>
   <Container id="press">
+    <PrevNextButtons :prev="prevLink" :next="nextLink" />
     <Article>
       <div class="text">
-        <h1>Press</h1>
+        <h1>{{ $tp("title") }}</h1>
       </div>
       <div class="box-wrapper">
         <ul>
@@ -29,6 +30,7 @@ import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
 import Article from '~/components/Article'
 import PrevNextButtons from '~/components/PrevNextButtons'
+import prevNext from '~/plugins/prev_next'
 
 export default {
   head() {
@@ -48,6 +50,7 @@ export default {
     Article,
     PrevNextButtons
   },
+  mixins: [prevNext],
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context("~/content/about/", true, /\.md$/)
@@ -56,8 +59,10 @@ export default {
       return allPages(key)
     })
     pages = sortBy(pages, page => get(page, 'attributes.position'))
+    const page = pages[4]
     return {
       pages,
+      page,
       json: json
     }
   },
@@ -74,12 +79,21 @@ export default {
 #press {
   height: auto;
   margin: 0 auto;
+  position: relative;
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
+  }
+  #prev-next-buttons a {
+    height: auto;
+    padding: .25rem .5rem;
+  }
+  .article {
+    padding: 0 2em;
   }
   .text {
     display: block;
     padding: 0 2em;
+    margin-top: 0;
     @include respond-to('large') {
       display: none;
     }

@@ -1,8 +1,9 @@
 <template>
   <Container id="business-partners">
+    <PrevNextButtons :prev="prevLink" :next="nextLink" />
     <Article>
       <div class="text">
-        <h1>Business Partner</h1>
+        <h1>{{ $tp("title") }}</h1>
       </div>
       <div class="box-wrapper">
         <ul>
@@ -22,13 +23,14 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy } from "lodash"
+import { get, sortBy, kebabCase } from "lodash"
 import seo from "~/content/data/seo.json"
 import json from "~/content/data/business_partners.json"
 import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
 import Article from '~/components/Article'
 import PrevNextButtons from '~/components/PrevNextButtons'
+import prevNext from '~/plugins/prev_next'
 
 export default {
   head() {
@@ -38,17 +40,18 @@ export default {
   },
   nuxtI18n: {
     paths: {
-      en: '/about/business-partner',
+      en: '/about/business-partners',
       de: '/uber/business-partner'
     }
   },
+  mixins: [prevNext],
   components: {
     Cluster,
     Container,
     Article,
     PrevNextButtons
   },
-  async asyncData() {
+  async asyncData({ app }) {
     // create context via webpack to map over all blog pages
     const allPages = await require.context("~/content/about/", true, /\.md$/)
     let pages = allPages.keys().map(key => {
@@ -56,8 +59,12 @@ export default {
       return allPages(key)
     })
     pages = sortBy(pages, page => get(page, 'attributes.position'))
+    const locale = app.i18n.locale
+    // const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === 'Business Partner')
+    const page = pages[3]
     return {
       pages,
+      page,
       json: json
     }
   },
@@ -74,9 +81,18 @@ export default {
 #business-partners {
   min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
+  position: relative;
+  #prev-next-buttons a {
+    height: auto;
+    padding: .25rem .5rem;
+  }
+  .article {
+    padding: 0 2em;
+  }
     .text {
       display: block;
       padding: 0 2em;
+      margin-top: 0;
       @include respond-to('large') {
         display: none;
       }
