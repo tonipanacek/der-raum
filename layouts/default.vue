@@ -1,18 +1,14 @@
 <template>
   <div class="layout">
-    <div class="sidebar-wrapper">
-      <Stack class="left-sidebar">
-        <Navbar />
-        <SecondaryNavbar />
-        <SocialIcons id="left-social" />
-      </Stack>
-    </div>
+    <Stack class="left-sidebar">
+      <Navbar />
+      <SecondaryNavbar />
+      <SocialIcons id="left-social" />
+    </Stack>
     <section role="main" class="main-container mt-lg">
       <nuxt />
     </section>
-    <div class="sidebar-wrapper">
-      <RightSidebar class="right-sidebar" />
-    </div>
+    <RightSidebar class="right-sidebar" />
   </div>
 </template>
 
