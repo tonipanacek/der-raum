@@ -122,6 +122,7 @@ a:visited {
       text-align: left;
       position: sticky;
       top: spacing(frame);
+      height: $main-height;
       min-height: $main-height;
       padding: 0 2em;
       margin-bottom: 2em;
