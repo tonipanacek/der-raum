@@ -5,7 +5,7 @@
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-          <img src="~/assets/images/cross-out.png" alt="Close Button" class="nav close-btn" />
+          <img svg-inline src="~/assets/images/X_thick.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
@@ -19,10 +19,10 @@
             <div class="no-next" v-if="!previousImageLink">
             </div>
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
-              <img svg-inline src="~/assets/images/arrow.svg" alt="Previous Button" class="nav previous-btn" />
+              <img svg-inline src="~/assets/images/rightarrow_thick.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
-              <img svg-inline src="~/assets/images/arrow.svg" alt="Next Button" class="nav next-btn" />
+              <img svg-inline src="~/assets/images/rightarrow_thick.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
             <div class="no-next" v-if="!nextImageLink">
             </div>

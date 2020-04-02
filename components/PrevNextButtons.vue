@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Arrow from '~/assets/images/arrow.svg'
+import Arrow from '~/assets/images/rightarrow_thin.svg'
 
 export default {
   name: 'PrevNextButtons',
