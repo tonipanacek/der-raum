@@ -1,18 +1,14 @@
 <template>
   <div class="layout">
-    <div class="sidebar-wrapper">
-      <Stack class="left-sidebar">
-        <Navbar />
-        <SecondaryNavbar />
-        <SocialIcons id="left-social" />
-      </Stack>
-    </div>
+    <Stack class="left-sidebar">
+      <Navbar />
+      <SecondaryNavbar />
+      <SocialIcons id="left-social" />
+    </Stack>
     <section role="main" class="main-container mt-lg">
       <nuxt />
     </section>
-    <div class="sidebar-wrapper">
-      <RightSidebar class="right-sidebar" />
-    </div>
+    <RightSidebar class="right-sidebar" />
   </div>
 </template>
 
@@ -62,7 +58,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
-  max-width: 200ch;
+  max-width: 1660px;
   margin: 0 auto;
    @include respond-to('large') {
     position: relative;
@@ -122,7 +118,8 @@ a:visited {
       text-align: left;
       position: sticky;
       top: spacing(frame);
-      min-height: $main-height;
+      height: $main-height;
+      // min-height: $main-height;
       padding: 0 2em;
       margin-bottom: 2em;
   }
