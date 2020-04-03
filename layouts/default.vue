@@ -114,14 +114,15 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-      width: 300px;
-      text-align: left;
+    width: 300px;
+    text-align: left;
+    height: $main-height;
+    padding: 0 2em;
+    margin-bottom: 2em;
+    @supports (position: sticky) {
       position: sticky;
       top: spacing(frame);
-      height: $main-height;
-      // min-height: $main-height;
-      padding: 0 2em;
-      margin-bottom: 2em;
+    }
   }
 }
 
@@ -137,8 +138,10 @@ a:visited {
 
 .right-sidebar {
   @include respond-to('large') {
-    position: sticky;
-    top: spacing(frame);
+    @supports (position: sticky) {
+      position: sticky;
+      top: spacing(frame);
+    }
   }
 }
 </style>

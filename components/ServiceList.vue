@@ -302,8 +302,8 @@ $more-height: calc(100vh - #{spacing(frame)});
   .projects-link-grid {
     display: block;
     width: 29%;
-    margin-top: 50px;
-    align-self: auto;
+    margin-bottom: 50px;
+    align-self: center;
   }
   .projects-link-non-grid {
     display: none;
