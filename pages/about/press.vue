@@ -26,7 +26,6 @@ import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
 import seo from "~/content/data/seo.json"
 import json from "~/content/data/press.json"
-import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
 import Article from '~/components/Article'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -45,7 +44,6 @@ export default {
     }
   },
   components: {
-    Cluster,
     Container,
     Article,
     PrevNextButtons

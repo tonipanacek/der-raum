@@ -21,7 +21,6 @@
 </template>
 <script>
 import json from "~/content/data/legal"
-import Cluster from "~/components/Cluster"
 import seo from "~/content/data/seo.json"
 export default {
   head() {

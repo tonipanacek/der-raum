@@ -26,7 +26,6 @@ import { mapActions } from 'vuex'
 import { get, sortBy, kebabCase } from "lodash"
 import seo from "~/content/data/seo.json"
 import json from "~/content/data/business_partners.json"
-import Cluster from '~/components/Cluster'
 import Container from '~/components/Container'
 import Article from '~/components/Article'
 import PrevNextButtons from '~/components/PrevNextButtons'
@@ -46,7 +45,6 @@ export default {
   },
   mixins: [prevNext],
   components: {
-    Cluster,
     Container,
     Article,
     PrevNextButtons
