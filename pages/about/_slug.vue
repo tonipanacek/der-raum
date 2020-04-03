@@ -43,7 +43,6 @@ export default {
     // get the slug as a param to import the correct md file
     try {
       const slug = params.slug
-      console.log(slug)
       // create context via webpack to map over all pages
       const allPages = await require.context("~/content/about/", true, /\.md$/)
       let pages = allPages.keys().map(key => {
