@@ -86,13 +86,14 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 }
 .social-wrapper {
   width: 100%;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   #right-social {
     display: flex;
     width: 6rem;
-    height: 2em;
+    height: 2rem;
     align-items: center;
     justify-content: space-around;
     margin: spacing(frame) 0;

@@ -82,7 +82,7 @@ export default {
 
 .navbar {
   .logo {
-    height: auto;
+    height: 7.5rem;
     width: 5rem;
     margin-bottom: spacing(sm);
   }

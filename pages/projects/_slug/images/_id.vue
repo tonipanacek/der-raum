@@ -310,7 +310,6 @@ margin: 0 auto;
     }
     .caption {
       flex-grow: 1;
-      width: 83%;
       h1 {
         @include smallCaps;
         color: color(black);
@@ -348,6 +347,7 @@ margin: 0 auto;
   .nav {
     height: 1.5rem;
     fill: color(dark);
+    width: 1rem;
     &:focus {
       outline: none;
     }

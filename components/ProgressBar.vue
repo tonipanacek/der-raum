@@ -15,13 +15,29 @@ export default {
     total: Number,
     page: Number
   }
+  // methods: {
+  //   setCssVariables() {
+  //     document.querySelector('.up').style.height = `calc(${this.page} - 1) / ${this.total} * 100%)`
+  //     document.querySelector('.down').style.height = `calc(${this.total} - ${this.page}) / ${this.total} * 100%)`
+  //     document.querySelector('.completed').style.height = `calc(1 / ${this.total} * 100%)`
+  //     document.querySelector('.completed').style.top = `calc(${this.page} - 1) / ${this.total} * 100%)`
+  //   }
+  // },
+  // mounted() {
+  //   // this.setCssVariables()
+  // },
+  // watch: {
+  //   page() {
+  //     this.setCssVariables()
+  //   }
+  // }
 }
 </script>
 
 <style lang="scss">
 .progress-bar {
   z-index: 5;
-  --width: #{spacing(xs) / 2};
+  --width: .25rem;
   display: none;
   @include respond-to(large) {
     display: none;
@@ -38,7 +54,7 @@ export default {
     width: var(--width);
     height: 25vh;
     max-height: 50rem;
-    border-radius: var(--width);
+    border-radius: .25rem;
     position: relative;
     overflow: hidden;
     .up {
