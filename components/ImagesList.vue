@@ -143,7 +143,6 @@ export default {
     },
     orientation(image) {
       if(!image) { return '' }
-      console.log(image.orientation)
       return image.orientation
     }
   }
