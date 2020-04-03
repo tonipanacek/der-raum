@@ -77,7 +77,7 @@ export default {
       } else {
         el.style.transform = "translateY(-70vh)"
       }
-      // el.style.transition = "opacity 300 ease, transform 300 ease"
+      el.style.transition = "opacity 300 ease, transform 300 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {

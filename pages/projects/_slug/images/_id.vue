@@ -6,6 +6,7 @@
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick.svg" alt="Close Button" class="nav close-btn" />
+          <!-- <p>schließen</p> -->
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />

@@ -110,7 +110,7 @@ $more-height: calc(100vh - #{spacing(frame)});
 
 .projects-link-grid {
   display: none;
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
   @media(hover: hover) and (pointer: fine) {
     a:hover {

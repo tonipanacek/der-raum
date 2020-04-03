@@ -132,6 +132,7 @@ a:visited {
     display: flex;
     align-items: center;
     width: 4.5rem;
+    height: 1rem;
     margin-bottom: -4px;
   }
 }

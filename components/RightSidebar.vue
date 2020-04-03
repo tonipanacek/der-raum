@@ -90,6 +90,9 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   justify-content: center;
   align-items: center;
+  @include respond-to('large') {
+    height: 0;
+  }
   #right-social {
     display: flex;
     width: 6rem;
