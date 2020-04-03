@@ -82,7 +82,7 @@ export default {
         margin-top: 0;
       }
       a {
-        font-size: .85rem;
+        font-size: .8em;
       }
       .email, .address {
         display: block;
@@ -90,7 +90,7 @@ export default {
       .justified {
         display: flex;
         justify-content: space-between;
-        max-width: 300px;
+        width: 300px;
       }
       .contact-link {
         text-decoration: none;
