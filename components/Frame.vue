@@ -1,5 +1,5 @@
 <template>
-  <div class="frame" :style="{'--n': n, '--d': d}">
+  <div class="frame" :style="{'--n': n, '--d': d, 'background-image': 'url(' + image + ')'}">
     <slot />
   </div>
 </template>
@@ -15,6 +15,10 @@ export default {
     d: {
       type: Number,
       default: 16
+    },
+    image: {
+      type: String,
+      required: true
     }
   }
 }
@@ -25,7 +29,10 @@ export default {
   // padding-bottom: calc(var(--n) / var(--d) * 100%);
   padding-bottom: calc(9 / 16 * 100%);
   position: relative;
-
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-position: center;
   & /deep/ > * {
     overflow: hidden;
     position: absolute;
