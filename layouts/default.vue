@@ -113,6 +113,7 @@ a:visited {
   height: auto;
   text-align: right;
   justify-content: space-between;
+  overflow: hidden;
   @include respond-to('large') {
     width: 300px;
     text-align: left;
@@ -132,6 +133,7 @@ a:visited {
     display: flex;
     align-items: center;
     width: 4.5rem;
+    height: 1rem;
     margin-bottom: -4px;
   }
 }

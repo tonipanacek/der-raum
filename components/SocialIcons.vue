@@ -38,6 +38,9 @@ svg.social-item {
 svg#pinterest {
   height: .7rem;
 }
+#pinterest-link {
+  height: 22px;
+}
 .social-icons {
   display: flex;
   align-items: center;
