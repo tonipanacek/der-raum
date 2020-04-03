@@ -2,36 +2,29 @@
   <Container id="contact">
     <Article class="contact">
       <div class="image-container">
-        <Frame>
-          <img :src="$t('contact.cloudinaryImageUrl')">
+        <Frame :image="$t('contact.cloudinaryImageUrl')">
+          <!-- <img :src="$t('contact.cloudinaryImageUrl')"> -->
         </Frame>
       </div>
         <div class="text">
           <div class="info">
-            <h1>{{ $t("contact.firstColumn") }}</h1>
-            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
-              <p>{{ $t("contact.streetNumber") }}</p>
-              <p>{{ $t("contact.cityZip") }}</p>
-            </a>
-          </div>
-          <div class="info">
-            <h1 class="smaller-width">{{ $t("contact.secondColumn") }}</h1>
-            <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span></p>
-            <p class="hours">{{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
-          </div>
-          <div class="info">
             <h1>{{ $t("contact.thirdColumn") }}</h1>
-            <a href="tel:03039375300" class="contact-link tel">
-              <p>{{ $t("contact.tel") }}</p>
-            </a>
-            <template v-if="$t('contact.tel2')">
-              <a href="tel:017673564742" class="contact-link tel">
-                <p>{{ $t("contact.tel2") }}</p>
-              </a>
-            </template>
-            <a href="mailto:derraum@holz-raum.de" class="contact-link tel">
+            <a href="mailto:derraum@holz-raum.de" class="contact-link">
               <p>{{ $t("contact.email") }}</p>
             </a>
+            <a href="tel:017673564742" class="contact-link tel">
+              {{ $t("contact.tel2") }}
+            </a>
+            <a href="tel:03039375300" class="contact-link tel">
+              {{ $t("contact.tel") }}
+            </a>
+          </div>
+          <div class="info">
+            <h1>{{ $t("contact.firstColumn") }}</h1>
+            <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
+              <p>{{ $t("contact.streetNumber") }} {{ $t("contact.cityZip") }}</p>
+            </a>
+            <p class="hours">{{ $t("contact.weekdays") }}<span>{{ $t("contact.weekdayHours") }}</span> {{ $t("contact.weekend") }}<span>{{ $t("contact.weekendHours") }}</span></p>
           </div>
         </div>
     </Article>
@@ -78,9 +71,6 @@ export default {
       flex: 1 0 auto;
       min-width: 33%;
       width: 32ch;
-      h1 {
-        width: 32ch;
-      }
       p {
         color: color(dark);
         font-weight: 300;
@@ -104,6 +94,9 @@ export default {
         display: flex;
         justify-content: space-between;
         width: 25ch;
+      }
+      .tel {
+        font-size: .85em;
       }
     }
   }

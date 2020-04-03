@@ -333,7 +333,8 @@ margin: 0 auto;
     top: 0px;
     z-index: 10;
     .close-btn {
-      height: 1.2rem;
+      height: 1rem;
+      width: 1.1rem;
       fill: color(dark);
       @media(hover: hover) and (pointer: fine) {
         &:hover {
