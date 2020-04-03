@@ -88,8 +88,9 @@ $more-height: calc(100vh - #{spacing(frame)});
     @include smallCaps;
     color: color(dark);
     font-weight: 300;
-    margin-top: 0.5em;
-    transition: color 0.3s ease-in-out;
+    margin-top: 0;
+    padding-top: 0.5em;
+    transition: color 0.1s ease-in-out font-weight 0.1s ease-in-out;
   }
 }
 .projects-link {
@@ -98,17 +99,18 @@ $more-height: calc(100vh - #{spacing(frame)});
   border: 1px solid color(light);
   text-decoration: none;
   width: 100%;
-  height: 15ch;
+  height: 100px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transition: opacity 0.3s ease-in-out;
+  padding: 10px;
+  transition: font-weight 0.1s ease-in-out color 0.1s ease-in-out;
 }
 
 .projects-link-grid {
   display: none;
-  width: 100%;
+  max-width: 300px;
   text-align: center;
   @media(hover: hover) and (pointer: fine) {
     a:hover {
@@ -252,7 +254,7 @@ $more-height: calc(100vh - #{spacing(frame)});
       }
     }
     h3 {
-      padding: 0;
+      padding-left: 0;
     }
   }
 
@@ -302,7 +304,7 @@ $more-height: calc(100vh - #{spacing(frame)});
   .projects-link-grid {
     display: block;
     width: 29%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     align-self: center;
   }
   .projects-link-non-grid {
