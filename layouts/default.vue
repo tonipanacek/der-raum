@@ -113,11 +113,11 @@ a:visited {
   height: auto;
   text-align: right;
   justify-content: space-between;
-  overflow: hidden;
   @include respond-to('large') {
     width: 300px;
     text-align: left;
     height: $main-height;
+    min-height: $main-height;
     padding: 0 2em;
     margin-bottom: 2em;
     @supports (position: sticky) {
@@ -134,7 +134,6 @@ a:visited {
     align-items: center;
     width: 4.5rem;
     height: 1rem;
-    margin-bottom: -4px;
   }
 }
 
