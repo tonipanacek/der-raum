@@ -39,7 +39,7 @@ svg#pinterest {
   height: .7rem;
 }
 #pinterest-link {
-  height: 22px;
+  height: 18px;
 }
 .social-icons {
   display: flex;
