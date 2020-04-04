@@ -78,9 +78,18 @@ export default {
   min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
   position: relative;
-  #prev-next-buttons a {
-    height: auto;
-    padding: .25rem .5rem;
+  #prev-next-buttons {
+    position: sticky;
+    top: 0;
+    a {
+      width: 10vw;
+      height: calc(100vh - 2 * #{spacing(frame)});
+      padding: .25rem .5rem;
+      svg {
+        position: absolute;
+        top: 21vh;
+      }
+    }
   }
   .article {
     padding: 0 2em;
