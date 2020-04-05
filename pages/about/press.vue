@@ -90,7 +90,7 @@ export default {
       padding: .25rem .5rem;
       svg {
         position: absolute;
-        top: 21vh;
+        top: 15vh;
       }
     }
   }
