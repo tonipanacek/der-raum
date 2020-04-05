@@ -67,12 +67,14 @@ export default {
   max-width: 1250px;
   .text {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     width: 100%;
     align-items: flex-start;
-    padding-bottom: 1em;
+    // padding: 0 1em;
+    @include respond-to('large') {
+      padding: 0 0 1em 0;
+    }
     .info {
-      // flex: 1 0 auto;
       margin-right: 10%;
       margin-bottom: 10%;
       @include respond-to('large') {
