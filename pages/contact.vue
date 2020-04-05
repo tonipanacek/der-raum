@@ -71,9 +71,6 @@ export default {
     width: 100%;
     align-items: flex-start;
     // padding: 0 1em;
-    @include respond-to('large') {
-      padding: 0 0 1em 0;
-    }
     .info {
       margin-right: 10%;
       margin-bottom: 10%;
