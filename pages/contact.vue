@@ -91,7 +91,10 @@ export default {
         width: 300px;
       }
       .white-space {
-        padding-right: 20px;
+        padding-right: 15px;
+        @include respond-to('large') {
+          padding-right: 20px;
+        }
       }
       .contact-link {
         text-decoration: none;
