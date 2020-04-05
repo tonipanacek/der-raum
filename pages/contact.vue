@@ -15,7 +15,7 @@
             <div class="justified">
               <a href="tel:017673564742" class="contact-link tel">
                 {{ $t("contact.tel2") }}
-              </a>
+              </a><span class="white-space"></span>
               <a href="tel:03039375300" class="contact-link tel">
                 {{ $t("contact.tel") }}
               </a>
@@ -24,10 +24,10 @@
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
-              {{ $t("contact.streetNumber") }} {{ $t("contact.cityZip") }}
+              {{ $t("contact.streetNumber") }}<span class="white-space"></span>{{ $t("contact.cityZip") }}
             </a>
             <div class="justified">
-              <p class=" contact-link">{{ $t("contact.weekdays") }} {{ $t("contact.weekdayHours") }}</p>
+              <p class=" contact-link">{{ $t("contact.weekdays") }} {{ $t("contact.weekdayHours") }}</p><span class="white-space"></span>
               <p class=" contact-link">{{ $t("contact.weekend") }} {{ $t("contact.weekendHours") }}</p>
             </div>
           </div>
@@ -89,8 +89,10 @@ export default {
       }
       .justified {
         display: flex;
-        justify-content: space-between;
         width: 300px;
+      }
+      .white-space {
+        padding-right: 20px;
       }
       .contact-link {
         text-decoration: none;
