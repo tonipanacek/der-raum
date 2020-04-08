@@ -90,7 +90,7 @@ export default {
         width: 250px;
         flex-wrap: wrap;
         @include respond-to('large') {
-          width: 300px;
+          width: 310px;
         }
         #tel1 {
           width: 175px;
@@ -100,14 +100,14 @@ export default {
         padding-right: 15px;
       }
       .mobile1 {
-        padding-right: 23px;
+        padding-right: 22.5px;
       }
       .mobile2 {
-        padding-right: 59px;
+        padding-right: 58.5px;
       }
       @include respond-to('large') {
         .white-space {
-          padding-right: 20px;
+          padding-right: 27.5px;
         }
         .mobile1, .mobile2 {
           padding-right: 0px;
