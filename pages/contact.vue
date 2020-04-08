@@ -13,7 +13,7 @@
               {{ $t("contact.email") }}
             </a>
             <div class="justified">
-              <a href="tel:017673564742" class="contact-link tel">
+              <a href="tel:017673564742" class="contact-link tel" id="tel1">
                 {{ $t("contact.tel2") }}
               </a><span class="white-space"></span>
               <a href="tel:03039375300" class="contact-link tel">
@@ -26,9 +26,9 @@
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
               {{ $t("contact.streetNumber") }}<span class="white-space"></span>{{ $t("contact.cityZip") }}
             </a>
-            <div class="justified">
-              <p class=" contact-link">{{ $t("contact.weekdays") }} {{ $t("contact.weekdayHours") }}</p><span class="white-space"></span>
-              <p class=" contact-link">{{ $t("contact.weekend") }} {{ $t("contact.weekendHours") }}</p>
+            <div class="justified hours">
+              <p class=" contact-link">{{ $t("contact.weekdays") }}<span class="mobile1"></span> {{ $t("contact.weekdayHours") }}</p><span class="white-space"></span>
+              <p class=" contact-link">{{ $t("contact.weekend") }}<span class="mobile2"></span> {{ $t("contact.weekendHours") }}</p>
             </div>
           </div>
         </div>
@@ -70,9 +70,8 @@ export default {
     flex-flow: row wrap;
     width: 100%;
     align-items: flex-start;
-    // padding: 0 1em;
     .info {
-      margin-right: 10%;
+      margin-right: 7%;
       margin-bottom: 10%;
       @include respond-to('large') {
         margin-bottom: 3%;
@@ -88,12 +87,30 @@ export default {
       }
       .justified {
         display: flex;
-        width: 300px;
+        width: 250px;
+        flex-wrap: wrap;
+        @include respond-to('large') {
+          width: 300px;
+        }
+        #tel1 {
+          width: 175px;
+        }
       }
       .white-space {
         padding-right: 15px;
-        @include respond-to('large') {
+      }
+      .mobile1 {
+        padding-right: 23px;
+      }
+      .mobile2 {
+        padding-right: 59px;
+      }
+      @include respond-to('large') {
+        .white-space {
           padding-right: 20px;
+        }
+        .mobile1, .mobile2 {
+          padding-right: 0px;
         }
       }
       .contact-link {
