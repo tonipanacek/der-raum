@@ -6,7 +6,7 @@ export const state = () => {
     pagesPrefix: "",
     hoveredMenuItem: "",
     pageNumber: 0,
-    lastPage: null
+    lastPage: 0
   }
 }
 
@@ -34,6 +34,12 @@ export const mutations = {
   },
   RESET_PAGE_NUMBER(state) {
     state.pageNumber = 0
+  },
+  SET_LAST_PAGE(state, number) {
+    state.lastPage = number
+  },
+  RESET_LAST_PAGE(state) {
+    state.lastPage = 0
   }
 }
 
@@ -61,6 +67,12 @@ export const actions = {
   },
   decrementPageNumber({ commit }) {
     commit('DECREMENT_PAGE_NUMBER')
+  },
+  setLastPage({ commit }, number) {
+    commit('SET_LAST_PAGE', number)
+  },
+  resetLastPage({ commit }) {
+    commit('RESET_LAST_PAGE')
   }
 }
 

@@ -109,9 +109,10 @@ export default {
   mounted() {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
+    this.resetLastPage()
   },
   methods: {
-    ...mapActions(["setPages", "setPagesPrefix"])
+    ...mapActions(["setPages", "setPagesPrefix", "resetLastPage"])
   },
   computed: {
     currentImages() {

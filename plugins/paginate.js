@@ -63,6 +63,7 @@ export default {
             }
           })
         }
+        this.setLastPage(chunkers.length - 1)
         return chunkers
       }
       return getChunks(this.pages)
@@ -140,7 +141,11 @@ export default {
         return false;
       }
     },
-    ...mapActions(['incrementPageNumber', 'decrementPageNumber', 'resetPageNumber'])
-
+    ...mapActions([
+      'incrementPageNumber',
+      'decrementPageNumber',
+      'resetPageNumber',
+      'setLastPage'
+    ])
   }
 }

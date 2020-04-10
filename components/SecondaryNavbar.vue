@@ -20,8 +20,9 @@
         </nuxt-link>
       </li>
       <li
-        v-if="this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
+        v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
         :class="{ 'nav-item': true,'title': true, 'more': true }"
+        key="more"
         @click="handleClick"
       >
         {{ $t("more-button")}}
@@ -41,7 +42,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
