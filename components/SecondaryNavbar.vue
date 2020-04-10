@@ -1,12 +1,5 @@
 <template>
   <Stack class="navbar navbar-secondary">
-<!--     <transition-group
-      name="insert"
-      tag="ul"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @leave="leave"
-    > -->
     <ul>
       <li
         v-for="(page, index) in sortedPages"
@@ -26,11 +19,14 @@
           {{ $ta(page.attributes, "title") }}
         </nuxt-link>
       </li>
-      <li :class="{ 'nav-item': true,'title': true }" @click="handleClick">
-        Mehr
+      <li
+        v-if="this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
+        :class="{ 'nav-item': true,'title': true, 'more': true }"
+        @click="handleClick"
+      >
+        {{ $t("more-button")}}
       </li>
     </ul>
-    <!-- </transition-group> -->
   </Stack>
 </template>
 
@@ -110,20 +106,8 @@ export default {
     color: color(dark);
     font-weight: 600;
   }
-  // .hover {
-  //   color: color(dark);
-  //   &:hover {
-  //     color: color(dark);
-  //     font-weight: 600;
-  //   }
-  // }
-}
-.insert-move {
-  // transition: transform 250ms ease;
-  // z-index: 100;
-}
-.insert-leave-active {
-  // position: absolute;
-  opacity: 0;
+  .more {
+    cursor: pointer;
+  }
 }
 </style>

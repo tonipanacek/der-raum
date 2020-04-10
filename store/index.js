@@ -5,9 +5,8 @@ export const state = () => {
     pages: [],
     pagesPrefix: "",
     hoveredMenuItem: "",
-    pageNumber: 0
-    // need to set pageNumber in state
-    // but need to make sure it resets to 0 after page reloads / component unmounts
+    pageNumber: 0,
+    lastPage: null
   }
 }
 
@@ -35,9 +34,6 @@ export const mutations = {
   },
   RESET_PAGE_NUMBER(state) {
     state.pageNumber = 0
-  },
-  SET_PAGE_NUMBER(state, number) {
-    state.pageNumber = number
   }
 }
 
@@ -65,9 +61,6 @@ export const actions = {
   },
   decrementPageNumber({ commit }) {
     commit('DECREMENT_PAGE_NUMBER')
-  },
-  setPageNumber({ commit }, number) {
-    commit("SET_PAGE_NUMBER", number)
   }
 }
 
@@ -75,8 +68,5 @@ export const getters = {
   sortedPages({ pages }) {
     if (!pages) { return [] }
     return sortBy(pages, page => get(page, 'attributes.page'))
-  },
-  pageNumber({ pageNumber }) {
-    return pageNumber
   }
 }
