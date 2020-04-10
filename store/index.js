@@ -35,6 +35,9 @@ export const mutations = {
   },
   RESET_PAGE_NUMBER(state) {
     state.pageNumber = 0
+  },
+  SET_PAGE_NUMBER(state, number) {
+    state.pageNumber = number
   }
 }
 
@@ -62,6 +65,9 @@ export const actions = {
   },
   decrementPageNumber({ commit }) {
     commit('DECREMENT_PAGE_NUMBER')
+  },
+  setPageNumber({ commit }, number) {
+    commit("SET_PAGE_NUMBER", number)
   }
 }
 
@@ -70,7 +76,6 @@ export const getters = {
     if (!pages) { return [] }
     return sortBy(pages, page => get(page, 'attributes.page'))
   },
-  // do I need a pageNumber here?
   pageNumber({ pageNumber }) {
     return pageNumber
   }

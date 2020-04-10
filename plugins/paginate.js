@@ -7,11 +7,11 @@ export default {
   data() {
     return {
       max: 4, // max number of items to display on a page
-      // pageNumber: 0, // this comes from state instead now
+      // pageNumber: 0, // this now comes from state instead
       refreshRate: 500, // amount of time between each scroll action
       trackpadThreshold: 7, // how many steps must be registered on the scroll wheel
       mouseThreshold: 0.5,
-      goingUp: false
+      goingUp: true
     }
   },
   computed: {
@@ -69,9 +69,6 @@ export default {
     },
     currentChunk() {
       if (this.pageNumber === null || isEmpty(this.pagesChunks)) { return [] }
-      // console.log(this.pagesChunks)
-      // console.log(this.pageNumber)
-      // return []
       return this.pagesChunks[this.pageNumber]
     },
     isChunky() {
@@ -86,26 +83,25 @@ export default {
         this.pagesChunks[3].addEventListener('click', this.handlePageTransition)
       }
     },
-    ...mapGetters(['pageNumber']),
-    ...mapActions(['incrementPageNumber', 'decrementPageNumber', 'resetPageNumber'])
+    ...mapState(['pageNumber'])
   },
   mounted() {
     window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
-    this.resetPageNumber
+    this.resetPageNumber()
   },
   methods: {
     incrementPage() {
       if (this.pageNumber < this.pagesChunks.length - 1) {
-        this.incrementPageNumber
+        this.incrementPageNumber()
         this.goingUp = true
       }
     },
     decrementPage() {
       if (this.pageNumber > 0) {
-        this.decrementPageNumber
+        this.decrementPageNumber()
         this.goingUp = false
       }
     },
@@ -143,6 +139,8 @@ export default {
         event.stopImmediatePropagation()
         return false;
       }
-    }
+    },
+    ...mapActions(['incrementPageNumber', 'decrementPageNumber', 'resetPageNumber'])
+
   }
 }

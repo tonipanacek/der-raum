@@ -49,9 +49,6 @@ export default {
     ...mapGetters(["sortedPages"])
   },
   methods: {
-    handleClick() {
-      console.log(this.pageNumber)
-    },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
@@ -87,7 +84,10 @@ export default {
     handleBlur() {
       this.unsetHoveredMenuItem()
     },
-    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
+    handleClick() {
+      this.incrementPageNumber()
+    },
+    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem', 'incrementPageNumber'])
   }
 }
 </script>
