@@ -1,12 +1,13 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
 import { get, isEmpty, throttle, chunk, sortBy, flatten, uniq } from "lodash"
+import { mapState, mapGetters, mapActions } from "vuex"
 
 export default {
   data() {
     return {
       max: 4, // max number of items to display on a page
-      pageNumber: 0,
+      // pageNumber: 0, // this needs to come from state instead, or can set from state?
       refreshRate: 500, // amount of time between each scroll action
       trackpadThreshold: 7, // how many steps must be registered on the scroll wheel
       mouseThreshold: 0.5,
@@ -81,7 +82,9 @@ export default {
       if (this.pagesChunks.length === 4) {
         this.pagesChunks[3].addEventListener('click', this.handlePageTransition)
       }
-    }
+    },
+    // mapGetters / mapState for pageNumber?
+    ...mapState(['pageNumber'])
   },
   mounted() {
     window.addEventListener("keyup", this.handleKey)

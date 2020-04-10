@@ -16,7 +16,6 @@
           :class="{
             'nav-item': true,
             'title': true,
-            // 'hover': hoveredMenuItem,
             'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
           }"
           :to="path(page)"
@@ -41,7 +40,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
@@ -55,6 +54,7 @@ export default {
       })
     },
     beforeEnter: function(el) {
+      console.log(this.pageNumber)
       el.style.opacity = 0
       el.style.transform = "translateY(-50%)"
       el.style.transition = "opacity 200ms ease, transform 200ms ease"
