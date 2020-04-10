@@ -17,8 +17,7 @@ export default {
       default: 16
     },
     image: {
-      type: String,
-      required: true
+      type: String
     }
   }
 }

@@ -1,12 +1,13 @@
 <template>
   <Stack class="navbar navbar-secondary">
-    <transition-group
+<!--     <transition-group
       name="insert"
       tag="ul"
       @before-enter="beforeEnter"
       @enter="enter"
       @leave="leave"
-    >
+    > -->
+    <ul>
       <li
         v-for="(page, index) in sortedPages"
         :key="$ta(page.attributes, 'title') + $i18n.locale"
@@ -25,7 +26,11 @@
           {{ $ta(page.attributes, "title") }}
         </nuxt-link>
       </li>
-    </transition-group>
+      <li :class="{ 'nav-item': true,'title': true }" @click="handleClick">
+        Mehr
+      </li>
+    </ul>
+    <!-- </transition-group> -->
   </Stack>
 </template>
 
@@ -44,6 +49,9 @@ export default {
     ...mapGetters(["sortedPages"])
   },
   methods: {
+    handleClick() {
+      console.log(this.pageNumber)
+    },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({

@@ -1,13 +1,13 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
 import { get, isEmpty, throttle, chunk, sortBy, flatten, uniq } from "lodash"
-import { mapState, mapGetters, mapActions } from "vuex"
+import { mapState, mapActions, mapGetters } from "vuex"
 
 export default {
   data() {
     return {
       max: 4, // max number of items to display on a page
-      // pageNumber: 0, // this needs to come from state instead, or can set from state?
+      // pageNumber: 0, // this comes from state instead now
       refreshRate: 500, // amount of time between each scroll action
       trackpadThreshold: 7, // how many steps must be registered on the scroll wheel
       mouseThreshold: 0.5,
@@ -69,6 +69,9 @@ export default {
     },
     currentChunk() {
       if (this.pageNumber === null || isEmpty(this.pagesChunks)) { return [] }
+      // console.log(this.pagesChunks)
+      // console.log(this.pageNumber)
+      // return []
       return this.pagesChunks[this.pageNumber]
     },
     isChunky() {
@@ -83,25 +86,26 @@ export default {
         this.pagesChunks[3].addEventListener('click', this.handlePageTransition)
       }
     },
-    // mapGetters / mapState for pageNumber?
-    ...mapState(['pageNumber'])
+    ...mapGetters(['pageNumber']),
+    ...mapActions(['incrementPageNumber', 'decrementPageNumber', 'resetPageNumber'])
   },
   mounted() {
     window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
+    this.resetPageNumber
   },
   methods: {
     incrementPage() {
       if (this.pageNumber < this.pagesChunks.length - 1) {
-        this.pageNumber += 1
+        this.incrementPageNumber
         this.goingUp = true
       }
     },
     decrementPage() {
       if (this.pageNumber > 0) {
-        this.pageNumber -= 1
+        this.decrementPageNumber
         this.goingUp = false
       }
     },
