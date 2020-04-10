@@ -1,16 +1,17 @@
 // Mixin (must be imported into components) that provides a pagination effect
 // In the component, define a computed/data property calls `this.pages`. Then this mixin will do the rest for you :)
 import { get, isEmpty, throttle, chunk, sortBy, flatten, uniq } from "lodash"
+import { mapState, mapActions, mapGetters } from "vuex"
 
 export default {
   data() {
     return {
       max: 4, // max number of items to display on a page
-      pageNumber: 0,
+      // pageNumber: 0, // this now comes from state instead
       refreshRate: 500, // amount of time between each scroll action
       trackpadThreshold: 7, // how many steps must be registered on the scroll wheel
       mouseThreshold: 0.5,
-      goingUp: false
+      goingUp: true
     }
   },
   computed: {
@@ -62,6 +63,7 @@ export default {
             }
           })
         }
+        this.setLastPage(chunkers.length - 1)
         return chunkers
       }
       return getChunks(this.pages)
@@ -81,24 +83,26 @@ export default {
       if (this.pagesChunks.length === 4) {
         this.pagesChunks[3].addEventListener('click', this.handlePageTransition)
       }
-    }
+    },
+    ...mapState(['pageNumber'])
   },
   mounted() {
     window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
+    this.resetPageNumber()
   },
   methods: {
     incrementPage() {
       if (this.pageNumber < this.pagesChunks.length - 1) {
-        this.pageNumber += 1
+        this.incrementPageNumber()
         this.goingUp = true
       }
     },
     decrementPage() {
       if (this.pageNumber > 0) {
-        this.pageNumber -= 1
+        this.decrementPageNumber()
         this.goingUp = false
       }
     },
@@ -136,6 +140,12 @@ export default {
         event.stopImmediatePropagation()
         return false;
       }
-    }
+    },
+    ...mapActions([
+      'incrementPageNumber',
+      'decrementPageNumber',
+      'resetPageNumber',
+      'setLastPage'
+    ])
   }
 }

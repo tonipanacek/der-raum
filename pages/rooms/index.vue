@@ -79,6 +79,9 @@ export default {
     this.setPages(this.currentChunk.slice(0, this.max - 1))
     this.setPagesPrefix("rooms")
   },
+  destroyed() {
+    this.resetLastPage()
+  },
   computed: {
     currentRooms() {
       if (isEmpty(this.currentChunk)) { return [] }
@@ -100,7 +103,7 @@ export default {
     getTitle(chunk) {
       return this.formatSlug(get(chunk, '[0].attributes.title', ''))
     },
-    ...mapActions(["setPages", "setPagesPrefix"])
+    ...mapActions(["setPages", "setPagesPrefix", "resetLastPage"])
   },
   watch: {
     currentChunk(chunk) {

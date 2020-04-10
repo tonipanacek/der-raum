@@ -1,12 +1,6 @@
 <template>
   <Stack class="navbar navbar-secondary">
-    <transition-group
-      name="insert"
-      tag="ul"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @leave="leave"
-    >
+    <ul>
       <li
         v-for="(page, index) in sortedPages"
         :key="$ta(page.attributes, 'title') + $i18n.locale"
@@ -16,7 +10,6 @@
           :class="{
             'nav-item': true,
             'title': true,
-            // 'hover': hoveredMenuItem,
             'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
           }"
           :to="path(page)"
@@ -26,7 +19,15 @@
           {{ $ta(page.attributes, "title") }}
         </nuxt-link>
       </li>
-    </transition-group>
+      <li
+        v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
+        :class="{ 'nav-item': true,'title': true, 'more': true }"
+        key="more"
+        @click="handleClick"
+      >
+        {{ $t("more-button")}}
+      </li>
+    </ul>
   </Stack>
 </template>
 
@@ -41,7 +42,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
@@ -55,6 +56,7 @@ export default {
       })
     },
     beforeEnter: function(el) {
+      console.log(this.pageNumber)
       el.style.opacity = 0
       el.style.transform = "translateY(-50%)"
       el.style.transition = "opacity 200ms ease, transform 200ms ease"
@@ -79,7 +81,10 @@ export default {
     handleBlur() {
       this.unsetHoveredMenuItem()
     },
-    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
+    handleClick() {
+      this.incrementPageNumber()
+    },
+    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem', 'incrementPageNumber'])
   }
 }
 </script>
@@ -102,20 +107,8 @@ export default {
     color: color(dark);
     font-weight: 600;
   }
-  // .hover {
-  //   color: color(dark);
-  //   &:hover {
-  //     color: color(dark);
-  //     font-weight: 600;
-  //   }
-  // }
-}
-.insert-move {
-  // transition: transform 250ms ease;
-  // z-index: 100;
-}
-.insert-leave-active {
-  // position: absolute;
-  opacity: 0;
+  .more {
+    cursor: pointer;
+  }
 }
 </style>
