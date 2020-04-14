@@ -25,7 +25,7 @@
         key="more"
         @click="handleClick"
       >
-        {{ $t("more-button")}}
+        {{ $t("more-button")}}+
       </li>
     </ul>
   </Stack>
