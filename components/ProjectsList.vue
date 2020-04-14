@@ -73,9 +73,9 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(70vh)"
+        el.style.transform = "translateY(200%)"
       } else {
-        el.style.transform = "translateY(-70vh)"
+        el.style.transform = "translateY(-200%)"
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
