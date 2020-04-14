@@ -58,7 +58,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
-  max-width: 2000px;
+  max-width: 1650px;
   margin: 0 auto;
    @include respond-to('large') {
     position: relative;
