@@ -112,25 +112,35 @@ $more-height: calc(100vh - #{spacing(frame)});
   display: none;
   max-width: 400px;
   text-align: center;
+  a:hover {
+    color: color(dark);
+    font-weight: 900;
+    border: 1.2px solid color(dark);
+  }
+  @media(hover: hover) and (pointer: fine) {
     a:hover {
       color: color(dark);
       font-weight: 900;
       border: 1.2px solid color(dark);
     }
-  // @media(hover: hover) and (pointer: fine) {
-  // }
+  }
 }
 
 .projects-link-non-grid {
   padding: 0.5em;
   margin-top: spacing(sm);
+  a:hover {
+    color: color(dark);
+    font-weight: 900;
+    border: 1.2px solid color(dark);
+  }
+  @media(hover: hover) and (pointer: fine) {
     a:hover {
       color: color(dark);
       font-weight: 900;
       border: 1.2px solid color(dark);
     }
-  // @media(hover: hover) and (pointer: fine) {
-  // }
+  }
 }
 .hover:not(.active) {
   opacity: .8;
@@ -140,6 +150,14 @@ $more-height: calc(100vh - #{spacing(frame)});
   }
 }
 .hover {
+  .service-title {
+    color: color(dark);
+    font-weight: 900;
+  }
+  .projects-link {
+    color: color(dark);
+  }
+  @media(hover: hover) and (pointer: fine) {
     .service-title {
       color: color(dark);
       font-weight: 900;
@@ -147,8 +165,7 @@ $more-height: calc(100vh - #{spacing(frame)});
     .projects-link {
       color: color(dark);
     }
-  // @media(hover: hover) and (pointer: fine) {
-  // }
+  }
 }
 
 // small screens

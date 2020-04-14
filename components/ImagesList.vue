@@ -290,6 +290,10 @@ $main-height: calc(100vh - #{spacing(frame)});
 .image-link {
   text-decoration: none;
   transition: transform 650ms ease, opacity 0.3s ease-in-out;
+  &:hover .image-title {
+    color: color(dark);
+    font-weight: 900;
+  }
   @media(hover: hover) and (pointer: fine) {
     &:hover .image-title {
       color: color(dark);
@@ -303,10 +307,14 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 // hovering effect
 .hover {
+  h3 {
+    color: color(dark);
+    font-weight: 900;
+  }
   @media(hover: hover) and (pointer: fine) {
     h3 {
       color: color(dark);
-      font-weight: 600;
+      font-weight: 900;
     }
   }
 }
