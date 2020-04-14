@@ -253,6 +253,10 @@ $main-height: calc(100vh - #{spacing(frame)});
 .project-link {
   text-decoration: none;
   transition: transform 650ms ease, opacity 0.3s ease-in-out;
+  &:hover .project-title {
+    color: color(dark);
+    font-weight: 900;
+  }
   @media(hover: hover) and (pointer: fine) {
     &:hover .project-title {
       color: color(dark);
