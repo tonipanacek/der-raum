@@ -90,15 +90,15 @@ export default {
     transition: color 100ms ease, font-weight 100ms ease;
     &:hover {
       color: color(dark);
-      font-weight: 600;
+      font-weight: 900;
     }
   }
   .nuxt-link-active {
     color: color(black);
-    font-weight: 600;
+    font-weight: 900;
     &:hover {
       color: color(black);
-      font-weight: 600;
+      font-weight: 900;
     }
   }
   .nav-items {

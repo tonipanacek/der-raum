@@ -105,7 +105,7 @@ export default {
   }
   .hovered {
     color: color(dark);
-    font-weight: 600;
+    font-weight: 900;
   }
   .more {
     cursor: pointer;
