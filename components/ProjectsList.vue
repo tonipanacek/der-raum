@@ -256,7 +256,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   @media(hover: hover) and (pointer: fine) {
     &:hover .project-title {
       color: color(dark);
-      font-weight: 600;
+      font-weight: 900;
     }
   }
 }
