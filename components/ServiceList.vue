@@ -11,7 +11,7 @@
         @mouseleave.native="hover = ''"
       >
         <div class="image-container">
-          <img :src="service.attributes.image" :alt="service.attributes.title" />
+          <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" />
           <h3 class="service-title">
             {{ $ta(service.attributes, 'title') }}
           </h3>
@@ -175,70 +175,8 @@ and (max-device-width : 1024px)
 and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 1)  {
   .service-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  background-color: white;
-  margin-bottom: 35px;
-}
-  #Design.service-link {
-    width: 60%;
-    align-self: flex-end;
-    display: block;
-    height: 100%;
-    .image-container {
-      width: 100%;
-      height: 100%;
-      img {
-        max-width: 100%;
-        max-height: 50vh;
-        object-fit: cover;
-        @media (orientation: landscape) {
-          max-height: 65vh;
-        }
-      }
-    }
-    h3 {
-      padding-left: 0.5em;
-    }
-  }
-
-  #Planning.service-link {
-    width: 35%;
-    margin-left: 5%;
-    display: block;
-    .image-container {
-      width: 100%;
-      height: 100%;
-      img {
-        max-width: 100%;
-        max-height: 74.5vh;
-        object-fit: cover;
-        @media (orientation: landscape) {
-          max-height: 100vh;
-        }
-      }
-    }
-  }
-
-  #Production.service-link {
-    width: 60%;
-    margin-top: 20px;
-    display: block;
-    height: 100%;
-    margin-right: 5%;
-    .image-container {
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        max-height: 50vh;
-        object-fit: cover;
-        @media (orientation: landscape) {
-          max-height: 65vh;
-        }
-      }
-    }
+    background-color: pink;
+    display: none;
   }
 }
 .service-list {

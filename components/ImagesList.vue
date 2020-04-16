@@ -26,16 +26,16 @@
           <Frame>
             <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           </Frame>
-          <h3 class="image-title">
+          <p class="image-title">
             {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
-          </h3>
+          </p>
         </div>
         <div v-else class="image-container">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           <transition name="no-fade">
-            <h3 class="image-title">
+            <p class="image-title">
               {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
-            </h3>
+            </p>
           </transition>
         </div>
       </NuxtLink>

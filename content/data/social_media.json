@@ -1,7 +1,16 @@
 {
-  "socialMedia": {
-    "instagram": "http://www.instagram.com/der.raum",
-    "pinterest": "https://www.pinterest.com/derraum",
-    "facebook": "https://www.facebook.com/derraumberlin"
-  }
+  "socialMedia": [
+    {
+      "title": "instagram",
+      "link": "https://www.instagram.com/der.raum"
+    },
+    {
+      "title": "pinterest",
+      "link": "https://www.pinterest.com/derraum"
+    },
+    {
+      "title": "facebook",
+      "link": "https://www.facebook.com/derraumberlin"
+    }
+  ]
 }
