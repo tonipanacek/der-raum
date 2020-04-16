@@ -13,10 +13,10 @@
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
       :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
       event=""
       @click.native.prevent="handleClick(project, index)"
-      @mouseover.native="handleHover(project)"
+      @mouseover.native="handleHover(project, index)"
       @mouseleave.native="handleBlur"
       :data-index="index"
       :data-total="projects.length"
@@ -93,8 +93,12 @@ export default {
     leave: function(el, done) {
       done()
     },
-    handleHover(project) {
-      this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
+    handleHover(project, index) {
+      if (index === 3) {
+        this.setHoveredMenuItem('more')
+      } else {
+        this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
+      }
     },
     handleBlur() {
       this.unsetHoveredMenuItem()

@@ -21,9 +21,16 @@
       </li>
       <li
         v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
-        :class="{ 'nav-item': true,'title': true, 'more': true }"
+        :class="{
+          'nav-item': true,
+          'title': true,
+          'more': true,
+          'hovered': hoveredMenuItem === 'more'
+        }"
         key="more"
         @click="handleClick"
+        @mouseover="handleHover('more')"
+        @mouseleave="handleBlur"
       >
         {{ $t("more-button")}}+
       </li>
