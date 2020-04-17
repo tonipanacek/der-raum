@@ -335,7 +335,7 @@ margin: 0 auto;
     .close-btn {
       height: 1rem;
       width: 1.1rem;
-      fill: color(dark);
+      fill: color(black);
       @media(hover: hover) and (pointer: fine) {
         &:hover {
           fill: color(black);
