@@ -9,6 +9,7 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1587126643/_MG_2304_zy2vge.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1587126652/050-Einbauschrank-Arbeitsflaeche-Kuechenzeile_riqalf.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1587126618/010-Einbauschrank-Arbeitsflaeche-Kueche_a3dkdc.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1587127169/040-Einbauschrank-Arbeitsflaeche-Kuechenzeile_ubi5rd.jpg
 en_title: Zur See
 de_title: Zur See
 en_description: Design DER RAUM
