@@ -1,8 +1,8 @@
 ---
 title: Kitchen
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Exklusive-hochwertige-Kueche-schwarz_bglfhp.jpg
-de_title: Küche
-en_title: Kitchen
+de_title: Küche | Wohnküche, Einbauküche, Kochinsel
+en_title: Kitchen | Eat-in kitchen, fitted kitchen, island
 de_description: |-
   Eine hochwertige Küche ist die Grundlage für einen gesunden Lebensstil, Gastfreundschaft und familiäre Geselligkeit. Hier können Sie beim Kochen kreativ werden, all ihre Sinne aktivieren und kulinarisch genießen. Zu Tisch fällt es dann leicht, das Nützliche mit dem Schönen zu verbinden, gemeinsam zu essen, soziale Beziehungen zu pflegen und sich auszutauschen. Ganz gleich welche Innenarchitektur zu Ihrem Alltag und ihrem Lebensrhythmus passt, wir als Raumgestalter und Designer entwickeln mit Ihnen die für Sie perfekte Gestaltung. Anschließend fertigen unsere erfahrenen Tischler / Schreiner jene Designs nach traditioneller und nachhaltiger Handwerkskunst direkt in Berlin.
 
