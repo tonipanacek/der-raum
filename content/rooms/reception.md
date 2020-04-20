@@ -1,8 +1,8 @@
 ---
 title: Reception
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Empfangsbereich-modern-innen-Empfang_duiire.jpg
-de_title: Empfangsbereich | Garderobe, Einbauschrank
-en_title: Reception | Cloakroom, built-in closet
+de_title: Empfangsbereich
+en_title: Reception
 de_description: |-
   Wer einmal Gast bei Freunden oder Business Partnern war und sich von der Türschwelle an rundherum wohl, ja fast wie Zuhause fühlte, hat erkannt: Der erste Eindruck gemeinsamer Zeit in guter Gesellschaft entsteht bereits im Empfangsbereich der Immobilie.
 
