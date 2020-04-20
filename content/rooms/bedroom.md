@@ -1,8 +1,8 @@
 ---
 title: Bedroom
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776656/Schlafzimmer-Bett-Ankleide-Schrank_gvuthe.jpg
-de_title: Schlafzimmer
-en_title: Bedroom
+de_title: Schlafzimmer | Einbauschrank, Ankleide, Bett nach Maß
+en_title: Bedroom | Fitted wardrobe, dressing room, bed made to measure
 de_description: |-
   Haben Sie sich jemals bewusst gemacht, dass Sie knapp ein Drittel Ihres Lebens im Schlafzimmer verbringen? Schlaf ist essentiell für unsere Gesundheit. Für viele Menschen ist Schlaf ein wertvoller Luxus geworden. Qualität und Dauer Ihres Schlafens hängen von zahlreichen und sensiblen Faktoren ab, die Sie mit bewusstem Verhalten und einem individuellen Interior Design positiv beeinflussen können.
 
