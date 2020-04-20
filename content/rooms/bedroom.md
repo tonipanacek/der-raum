@@ -13,8 +13,8 @@ en_description: |-
   Treat yourself to a design bedroom where you will find the peace you deserve after an eventful day. A bed made to measure with sufficient legroom, a walk-in closet separate from the sleeping area or a decentralized built-in closet in which the entertainment electronics disappear from your field of vision. We realize complex, high-quality bedrooms with high requirements and integrated bathrooms, or manufacture exclusive beds specially designed for you.
 position: 4
 meta_tags:
-  de_title: Schlafzimmer
-  en_title: Schlafzimmer
+  de_title: Schlafzimmer, Einbauschrank, Ankleide, Bett nach Maß
+  en_title: Schlafzimmer, Cabinet, Walk-in Closet
   de_description: |-
     Haben Sie sich jemals bewusst gemacht, dass Sie knapp ein Drittel Ihres Lebens im Schlafzimmer verbringen? Schlaf ist essentiell für unsere Gesundheit. Für viele Menschen ist Schlaf ein wertvoller Luxus geworden. Qualität und Dauer Ihres Schlafens hängen von zahlreichen und sensiblen Faktoren ab, die Sie mit bewusstem Verhalten und einem individuellen Interior Design positiv beeinflussen können.
 
