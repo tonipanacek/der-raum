@@ -28,14 +28,14 @@ export default {
 
 <style lang="scss">
 :root {
-  --total: 0;
-  --page: 0;
+  --total: 1;
+  --page: 1;
   --width: .25rem;
 }
 
 .progress-bar {
   z-index: 5;
-  --width: .25rem;
+  width: var(--width);
   display: none;
   @include respond-to(large) {
     display: none;
