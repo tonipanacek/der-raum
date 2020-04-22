@@ -17,15 +17,15 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
-            <div class="no-next" v-if="!previousImageLink">
-            </div>
+            <!-- <div class="no-next" v-if="!previousImageLink">
+            </div> -->
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
-            <div class="no-next" v-if="!nextImageLink">
+            <div class="no-next right" v-if="!nextImageLink">
             </div>
           </nav>
         </div>
@@ -350,6 +350,7 @@ margin: 0 auto;
     height: 1.5rem;
     fill: color(dark);
     width: 1rem;
+    // this width needs to be the same in the no-next class
     &:focus {
       outline: none;
     }
@@ -361,6 +362,8 @@ margin: 0 auto;
   }
   .image-nav {
     display: none;
+    width: 20%;
+    text-align: right;
     @include respond-to('large') {
       display: block;
     }
@@ -376,7 +379,7 @@ margin: 0 auto;
   .no-next {
     visibility: hidden;
     display: inline-block;
-    width: .8em;
+    width: 1rem;
   }
 }
 </style>
