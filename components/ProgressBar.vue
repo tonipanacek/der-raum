@@ -27,15 +27,15 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  --total: 1;
-  --page: 1;
-  --width: .25rem;
-}
+// :root {
+//   --total: 1;
+//   --page: 1;
+//   --width: .25rem;
+// }
 
 .progress-bar {
   z-index: 5;
-  width: var(--width);
+  width: .25rem;
   display: none;
   @include respond-to(large) {
     display: none;
@@ -49,7 +49,7 @@ export default {
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
-    width: var(--width);
+    width: .25rem;
     height: 25vh;
     max-height: 50rem;
     border-radius: .25rem;
