@@ -77,10 +77,10 @@ export default {
 #business-partners {
   min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
-  position: relative;
+  // position: relative;
   #prev-next-buttons {
     position: sticky;
-    top: 0;
+    top: 30%;
     a {
       width: 10vw;
       height: calc(100vh - 2 * #{spacing(frame)});
