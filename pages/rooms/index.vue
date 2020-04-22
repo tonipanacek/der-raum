@@ -121,7 +121,7 @@ export default {
     display: block;
     min-height: 100%;
     height: 100%;
-    max-width: none;
+    max-width: 1250px;
   }
   .section {
     min-height: 100%;
