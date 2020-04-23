@@ -158,7 +158,7 @@ export default {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
       }
       const widthChange = (mq) => {
-        if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
+        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches || landscape.matches ) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', setDocHeight)
@@ -168,8 +168,9 @@ export default {
         }
       }
       const mq = window.matchMedia( "(max-width: 870px)" );
+      const landscape = window.matchMedia ( "(orientation: landscape)" );
       mq.addListener(widthChange);
-      widthChange(mq);
+      widthChange(mq, landscape);
     },
     handleKey(event) {
       event.preventDefault();
