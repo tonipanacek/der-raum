@@ -1,5 +1,5 @@
 <template>
-  <div class="progress-bar" :style="cssVars">
+  <div class="progress-bar">
     <div class="bar">
       <div class="up" @click="$emit('decrement')"></div>
       <div class="completed"></div>
@@ -15,23 +15,29 @@ export default {
     total: Number,
     page: Number
   },
-  computed: {
-    cssVars() {
-      return {
-        '--total': this.total + 1,
-        '--page': this.page + 1
-      }
+  mounted() {
+    this.setCssVars();
+  },
+  methods: {
+    setCssVars() {
+      let root = document.documentElement
+      root.style.setProperty('--total', this.total + 1)
+      root.style.setProperty('--page', this.page + 1)
+    }
+  },
+  watch: {
+    page() {
+      this.setCssVars();
     }
   }
 }
 </script>
 
 <style lang="scss">
-// :root {
-//   --total: 1;
-//   --page: 1;
-//   --width: .25rem;
-// }
+:root {
+  --total: 1;
+  --page: 1;
+}
 
 .progress-bar {
   z-index: 5;
