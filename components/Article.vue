@@ -14,7 +14,6 @@ export default {
 .article {
   display: flex;
   flex-direction: column;
-  max-width: 1250px;
   align-items: space-between;
   margin: 0 auto;
   &.project {
@@ -25,7 +24,6 @@ export default {
     width: 100%;
   }
   .image-container {
-    // margin-bottom: spacing(frame);
     img {
       max-width: 100%;
       max-height: 100%;
