@@ -20,6 +20,7 @@
       @mouseleave.native="handleBlur"
       :data-index="index"
       :data-total="projects.length"
+      :data-orientation="findOrientation(index)"
       >
         <div v-if="mobile" class="frame-wrapper">
           <Frame>
@@ -73,9 +74,17 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(120%)"
+        } else {
+          el.style.transform = "translateY(200%)"
+        }
       } else {
-        el.style.transform = "translateY(-200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(-120%)"
+        } else {
+          el.style.transform = "translateY(-200%)"
+        }
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
@@ -110,6 +119,9 @@ export default {
         const path = this.path(project)
         this.$router.push(path)
       }
+    },
+    findOrientation(index) {
+      return index === 1 || index === 3 ? "portrait" : "landscape"
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   },
