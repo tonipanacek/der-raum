@@ -59,6 +59,8 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   flex-direction: column;
   max-width: 1650px;
+  max-height: 100%;
+  overflow: hidden;
   @supports (display: grid) {
     max-width: 3000px;
   }
