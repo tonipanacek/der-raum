@@ -77,12 +77,12 @@ export default {
 #press {
   height: auto;
   margin: 0 auto;
-  // position: relative;
+  position: relative;
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   #prev-next-buttons {
-    position: sticky;
+    // position: sticky;
     top: 30%;
     a {
       width: 10vw;
