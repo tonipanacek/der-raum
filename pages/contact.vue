@@ -93,7 +93,7 @@ export default {
           width: 310px;
         }
         #tel1 {
-          width: 175px;
+          width: 180px;
         }
       }
       .white-space {
