@@ -158,7 +158,8 @@ export default {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
       }
       const widthChange = (mq) => {
-        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches || landscape.matches ) {
+        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
+          console.log(landscape.matches)
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', setDocHeight)
