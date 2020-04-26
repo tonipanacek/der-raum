@@ -1,6 +1,7 @@
 <template>
   <div class="rooms-list">
-    <h1 class="accessible">Our spaces</h1>
+    <h1 class="accessible">{{ seo.roomsOverviewH1 }}</h1>
+    <p class="accessible">{{ seo.roomsOverviewText }}</p>
     <transition-group
       name="insert"
       tag="div"
@@ -27,15 +28,15 @@
           <Frame>
             <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
           </Frame>
-          <h3 class="room-title">
+          <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
         <div v-else class="image-container">
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
-          <h3 class="room-title">
+          <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
       </NuxtLink>
     </transition-group>
@@ -46,10 +47,16 @@
 import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash';
 import Frame from '~/components/Frame'
+import seo from '../content/data/seo.json'
 export default {
   name: "RoomsList",
   components: {
     Frame
+  },
+  data() {
+    return {
+      seo
+    }
   },
   props: {
     rooms: {
@@ -282,12 +289,12 @@ $main-height: calc(100vh - #{spacing(frame)});
 }
 // hovering effect
 .hover {
-  h3 {
+  p {
     color: color(dark);
     font-weight: 900;
   }
   @media(hover: hover) and (pointer: fine) {
-    h3 {
+    p {
       color: color(dark);
       font-weight: 900;
     }
@@ -295,7 +302,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 }
 .hover:not(.active) {
   opacity: .8;
-  h3 {
+  p {
     color: color(dark);
     font-weight: 300;
   }

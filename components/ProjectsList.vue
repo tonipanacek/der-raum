@@ -26,15 +26,15 @@
           <Frame>
             <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
           </Frame>
-          <h3 class="project-title">
+          <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
         <div v-else class="image-container">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-          <h3 class="project-title">
+          <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
       </NuxtLink>
     </transition-group>
@@ -45,11 +45,13 @@
 import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash'
 import Frame from '~/components/Frame'
+import dynamicSEO from '~/plugins/dynamic_seo'
 export default {
   name: "ProjectsList",
   components: {
     Frame
   },
+  mixins: [dynamicSEO],
   props: {
     projects: {
       type: Array,
@@ -278,11 +280,11 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
 }
 // hovering effect
-.hover:not(.active) {
-  opacity: .8;
-  h3 {
-    color: color(dark);
-    font-weight: 300;
-  }
-}
+// .hover:not(.active) {
+//   opacity: .8;
+//   p {
+//     color: color(dark);
+//     font-weight: 300;
+//   }
+// }
 </style>

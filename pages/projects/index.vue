@@ -1,6 +1,7 @@
 <template>
   <Container>
-    <h1 class="accessible">Our projects</h1>
+    <h1 class="accessible">{{ seo.projectsOverviewH1 }}</h1>
+    <p class="accessible">{{ seo.projectsOverviewText }}</p>
     <div
     id="projects-desktop"
     class="projects"
@@ -69,7 +70,8 @@ export default {
     })
     pages = sortBy(pages, page => get(page, 'attributes.page'))
     return {
-      pages
+      pages,
+      seo
     }
   },
   components: {

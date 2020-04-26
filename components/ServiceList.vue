@@ -1,7 +1,8 @@
 <template>
   <Container>
     <div id="home" class="service-list">
-      <h1 class="accessible">Our services</h1>
+      <h1 class="accessible">{{ seo.servicesOverviewH1 }}</h1>
+      <p class="accessible">{{ seo.servicesOverviewText }}</p>
       <NuxtLink
         v-for="service, index in sortedServices"
         :id="service.attributes.title"
@@ -13,9 +14,9 @@
       >
         <div class="image-container">
           <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" />
-          <h3 class="service-title">
+          <p class="service-title">
             {{ $ta(service.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
       </NuxtLink>
       <div class="projects-link-grid">
@@ -44,10 +45,12 @@
 <script>
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
+import seo from '../content/data/seo.json'
 export default {
   data() {
     return {
-      hover: ''
+      hover: '',
+      seo
     }
   },
   components: {
@@ -214,7 +217,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         }
       }
     }
-    h3 {
+    p {
       padding-left: 0.5em;
     }
   }
@@ -291,7 +294,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         object-fit: cover;
       }
     }
-    h3 {
+    p {
       padding-left: 0;
     }
   }

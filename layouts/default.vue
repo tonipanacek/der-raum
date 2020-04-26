@@ -22,6 +22,16 @@ import RightSidebar from "~/components/RightSidebar"
 import SocialIcons from "~/components/SocialIcons"
 
 export default {
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://www.der-raum.de' + this.$route.path
+        }
+      ]
+    }
+  },
   components: {
     Navbar,
     SecondaryNavbar,
