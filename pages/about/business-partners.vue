@@ -79,8 +79,8 @@ export default {
   margin: 0 auto;
   position: relative;
   #prev-next-buttons {
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    top: 30%;
     a {
       width: 10vw;
       height: calc(100vh - 2 * #{spacing(frame)});

@@ -16,6 +16,7 @@
       :class="{'image-link': true, 'extraSpace': image.index < 0, 'extra-margin': images.length === 3 && index === images.length - 1, 'active': hover && hover === image.url, hover: hover }"
       :data-index="index"
       :data-total="images.length"
+      :data-orientation="findOrientation(index)"
       :mobile="mobile"
       event=""
       @mouseover.native="handleHover(image)"
@@ -104,12 +105,23 @@ export default {
         this.$router.push(path)
       }
     },
+    findOrientation(index) {
+      return index === 1 || index === 3 ? "portrait" : "landscape"
+    },
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(120%)"
+        } else {
+          el.style.transform = "translateY(200%)"
+        }
       } else {
-        el.style.transform = "translateY(-200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(-120%)"
+        } else {
+          el.style.transform = "translateY(-200%)"
+        }
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },

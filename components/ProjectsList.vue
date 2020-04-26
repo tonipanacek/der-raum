@@ -13,13 +13,14 @@
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
       :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title'), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
+      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
       event=""
       @click.native.prevent="handleClick(project, index)"
-      @mouseover.native="handleHover(project)"
+      @mouseover.native="handleHover(project, index)"
       @mouseleave.native="handleBlur"
       :data-index="index"
       :data-total="projects.length"
+      :data-orientation="findOrientation(index)"
       >
         <div v-if="mobile" class="frame-wrapper">
           <Frame>
@@ -73,9 +74,17 @@ export default {
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(120%)"
+        } else {
+          el.style.transform = "translateY(200%)"
+        }
       } else {
-        el.style.transform = "translateY(-200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(-120%)"
+        } else {
+          el.style.transform = "translateY(-200%)"
+        }
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },
@@ -93,8 +102,12 @@ export default {
     leave: function(el, done) {
       done()
     },
-    handleHover(project) {
-      this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
+    handleHover(project, index) {
+      if (index === 3) {
+        this.setHoveredMenuItem('more')
+      } else {
+        this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
+      }
     },
     handleBlur() {
       this.unsetHoveredMenuItem()
@@ -106,6 +119,9 @@ export default {
         const path = this.path(project)
         this.$router.push(path)
       }
+    },
+    findOrientation(index) {
+      return index === 1 || index === 3 ? "portrait" : "landscape"
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   },
@@ -120,9 +136,6 @@ export default {
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
-.transition-hide {
-  // opacity: .5;
-}
 .transition-show {
   opacity: 1;
 }

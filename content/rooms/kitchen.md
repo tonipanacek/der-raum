@@ -23,7 +23,8 @@ en_description: |-
   One thing is certain: in your exclusive, individual, fitted kitchen, there should always be enough space for people and the perfect preparation of the dishes that bring a balance, joy and inspiration to your life.
 position: 1
 meta_tags:
-  de_title: Exklusive Küche, Küchenzeile, Kochinsel, Luxus Küche
+  de_title: Exklusive Küche, Küchenzeile, Kochinsel, Luxus Küche,  Wohnküche, Einbauküche,
+    Kochinsel
   en_title: Exclusive kitchen, kitchenette, island, luxury kitchen
   de_description: Eine hochwertige Küche ist die Grundlage für einen gesunden Lebensstil,
     Gastfreundschaft und familiäre Geselligkeit. Hier können Sie beim Kochen kreativ

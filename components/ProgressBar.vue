@@ -1,5 +1,5 @@
 <template>
-  <div class="progress-bar" :style="{ '--total': total + 1, '--page': page + 1 }">
+  <div class="progress-bar">
     <div class="bar">
       <div class="up" @click="$emit('decrement')"></div>
       <div class="completed"></div>
@@ -14,30 +14,34 @@ export default {
   props: {
     total: Number,
     page: Number
+  },
+  mounted() {
+    this.setCssVars();
+  },
+  methods: {
+    setCssVars() {
+      let root = document.documentElement
+      root.style.setProperty('--total', this.total + 1)
+      root.style.setProperty('--page', this.page + 1)
+    }
+  },
+  watch: {
+    page() {
+      this.setCssVars();
+    }
   }
-  // methods: {
-  //   setCssVariables() {
-  //     document.querySelector('.up').style.height = `calc(${this.page} - 1) / ${this.total} * 100%)`
-  //     document.querySelector('.down').style.height = `calc(${this.total} - ${this.page}) / ${this.total} * 100%)`
-  //     document.querySelector('.completed').style.height = `calc(1 / ${this.total} * 100%)`
-  //     document.querySelector('.completed').style.top = `calc(${this.page} - 1) / ${this.total} * 100%)`
-  //   }
-  // },
-  // mounted() {
-  //   // this.setCssVariables()
-  // },
-  // watch: {
-  //   page() {
-  //     this.setCssVariables()
-  //   }
-  // }
 }
 </script>
 
 <style lang="scss">
+:root {
+  --total: 1;
+  --page: 1;
+}
+
 .progress-bar {
   z-index: 5;
-  --width: .25rem;
+  width: .25rem;
   display: none;
   @include respond-to(large) {
     display: none;
@@ -51,7 +55,7 @@ export default {
   transform: translateY(-100%) translateX(50%);
   .bar {
     background-color: color(light);
-    width: var(--width);
+    width: .25rem;
     height: 25vh;
     max-height: 50rem;
     border-radius: .25rem;

@@ -87,14 +87,8 @@ export default {
       }
       .justified {
         display: flex;
-        width: 250px;
+        width: 100%;
         flex-wrap: wrap;
-        @include respond-to('large') {
-          width: 310px;
-        }
-        #tel1 {
-          width: 175px;
-        }
       }
       .white-space {
         padding-right: 15px;

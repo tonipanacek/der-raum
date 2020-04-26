@@ -82,11 +82,11 @@ export default {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   #prev-next-buttons {
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    top: 30%;
     a {
       width: 10vw;
-      height: calc(100vh - 2 * #{spacing(frame)});
+      height: 50vh;
       padding: .25rem .5rem;
       svg {
         position: absolute;

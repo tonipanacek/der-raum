@@ -36,19 +36,6 @@
 }
 
 // Title
-
-/* the mixin (simplified version) */
-@mixin pseudo($type) {
-
-    content: "";
-    position: absolute;
-    display: block;
-    // width: 100%;
-    @if($type == width) {
-        width: 60%;
-    }
-}
-
 .title{
   @include smallCaps;
   text-transform: uppercase;

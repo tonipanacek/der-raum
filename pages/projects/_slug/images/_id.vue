@@ -5,7 +5,7 @@
     <Container>
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
-          <img svg-inline src="~/assets/images/X_thick.svg" alt="Close Button" class="nav close-btn" />
+          <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
           <!-- <p>schließen</p> -->
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
@@ -17,15 +17,15 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
-            <div class="no-next" v-if="!previousImageLink">
-            </div>
+            <!-- <div class="no-next" v-if="!previousImageLink">
+            </div> -->
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
-              <img svg-inline src="~/assets/images/rightarrow_thin.svg" alt="Previous Button" class="nav previous-btn" />
+              <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
             <NuxtLink :to="nextImageLink" v-if="nextImageLink">
-              <img svg-inline src="~/assets/images/rightarrow_thin.svg" alt="Next Button" class="nav next-btn" />
+              <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
-            <div class="no-next" v-if="!nextImageLink">
+            <div class="no-next right" v-if="!nextImageLink">
             </div>
           </nav>
         </div>
@@ -158,7 +158,8 @@ export default {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
       }
       const widthChange = (mq) => {
-        if (mq.matches && (this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
+        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
+          console.log(landscape.matches)
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', setDocHeight)
@@ -168,8 +169,9 @@ export default {
         }
       }
       const mq = window.matchMedia( "(max-width: 870px)" );
+      const landscape = window.matchMedia ( "(orientation: landscape)" );
       mq.addListener(widthChange);
-      widthChange(mq);
+      widthChange(mq, landscape);
     },
     handleKey(event) {
       event.preventDefault();
@@ -335,7 +337,7 @@ margin: 0 auto;
     .close-btn {
       height: 1rem;
       width: 1.1rem;
-      fill: color(dark);
+      fill: color(black);
       @media(hover: hover) and (pointer: fine) {
         &:hover {
           fill: color(black);
@@ -350,6 +352,7 @@ margin: 0 auto;
     height: 1.5rem;
     fill: color(dark);
     width: 1rem;
+    // this width needs to be the same in the no-next class
     &:focus {
       outline: none;
     }
@@ -361,6 +364,8 @@ margin: 0 auto;
   }
   .image-nav {
     display: none;
+    width: 20%;
+    text-align: right;
     @include respond-to('large') {
       display: block;
     }
@@ -376,7 +381,7 @@ margin: 0 auto;
   .no-next {
     visibility: hidden;
     display: inline-block;
-    width: .8em;
+    width: 1rem;
   }
 }
 </style>

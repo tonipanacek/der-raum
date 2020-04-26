@@ -18,6 +18,7 @@
       @mouseleave.native="handleBlur"
       :data-index="index"
       :data-total="rooms.length"
+      :data-orientation="findOrientation(index)"
       event=""
       @click.native.prevent="handleClick(room, index)"
       >
@@ -86,12 +87,23 @@ export default {
         this.$router.push(path)
       }
     },
+    findOrientation(index) {
+      return index === 1 || index === 3 ? "portrait" : "landscape"
+    },
     beforeEnter: function(el) {
       el.classList.add('transition-hide')
       if (this.goingUp) {
-        el.style.transform = "translateY(200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(120%)"
+        } else {
+          el.style.transform = "translateY(200%)"
+        }
       } else {
-        el.style.transform = "translateY(-200%)"
+        if (el.dataset.orientation === "portrait") {
+          el.style.transform = "translateY(-120%)"
+        } else {
+          el.style.transform = "translateY(-200%)"
+        }
       }
       el.style.transition = "opacity 300 ease, transform 300 ease"
     },

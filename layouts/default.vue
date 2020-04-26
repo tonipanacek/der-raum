@@ -59,12 +59,16 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   display: flex;
   flex-direction: column;
   max-width: 1650px;
+  min-height: 100vh;
   margin: 0 auto;
+  @supports (display: grid) {
+    max-width: 2000px;
+  }
    @include respond-to('large') {
     position: relative;
     flex-direction: initial;
     padding: none;
-    height: 100%;
+    height: inherit;
   }
 }
 a,

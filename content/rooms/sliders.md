@@ -2,7 +2,7 @@
 title: Sliders
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Schiebetuer-nach-Ma%C3%9F-Uebergroe%C3%9Fe_u69dez.jpg
 de_title: Raumteiler & Schiebetür
-en_title: Sliders
+en_title: Room divider & Slider
 de_description: |-
   Flexibilität im Arbeiten, dynamische Veränderung – Veränderungen im Alltag – Agilität zieht sich zunehmend durch unser Leben. Daraus resultieren sich stetig verändernde Anforderungen an einzelne Räume. Raumlösungen können sich diesem steten Wandel anpassen, Wände müssen deshalb nicht eingerissen werden. Als interessante Alternative bieten wir Schiebetüren und Raumteiler nach Maß, maximale Flexibilität und einen hohen ästhetischen Mehrwert in Ihren Räumen. Ganz nach persönlichem Geschmack und Bedürfnissen können Sie Bereiche Ihres Innenausbaus neu definieren und Räume unabhängig zonieren.
 
@@ -17,7 +17,7 @@ en_description: |-
   We work with you to develop various solutions that you can use flexibly and permanently in your property.
 position: 5
 meta_tags:
-  de_title: Raumteiler, Schiebetür nach Maß, Wandverkleidungen
+  de_title: Raumteiler, Schiebetür nach Maß, Wandpaneele, Wandverkleidungen
   en_title: Room divider, custom-made sliding door, wall cladding
   de_description: Wir als Raumgestalter und Designer sind spezialisiert auf den exklusiven
     Innenausbau. Mit simplen Schiebetüren aus Holz nach Maß sind wir ebenso erfahren
