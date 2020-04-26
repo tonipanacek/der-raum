@@ -27,15 +27,15 @@
           <Frame>
             <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
           </Frame>
-          <h3 class="room-title">
+          <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
         <div v-else class="image-container">
           <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
-          <h3 class="room-title">
+          <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
       </NuxtLink>
     </transition-group>

@@ -26,15 +26,15 @@
           <Frame>
             <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
           </Frame>
-          <h3 class="project-title">
+          <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
         <div v-else class="image-container">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-          <h3 class="project-title">
+          <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
       </NuxtLink>
     </transition-group>
