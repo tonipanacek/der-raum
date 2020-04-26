@@ -5,9 +5,9 @@
     </div>
     <div class="right-stack small-very">
       <p>
-        <nuxt-link :to="switchLocalePath('de')">De</nuxt-link>
+        <nuxt-link :to="switchLocalePath('de')" hreflang="de" rel="alternate">De</nuxt-link>
         /
-        <nuxt-link :to="switchLocalePath('en')">En</nuxt-link>
+        <nuxt-link :to="switchLocalePath('en')" hreflang="en" rel="alternate">En</nuxt-link>
       </p>
       <p>
         <nuxt-link :to="localePath('impressum')">{{ $t("rightSidebar.impressum") }}</nuxt-link>
