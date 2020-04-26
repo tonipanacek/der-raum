@@ -25,6 +25,21 @@ function loadPages (enPrefix, dePrefix) {
   return flatten(pages)
 }
 
+// function loadImagePages (enPrefix, dePrefix) {
+//   // create context via webpack to map over all markdown pages
+//   let pages = parser(`./content/${enPrefix}`)
+
+//   pages = pages.map(service => {
+//     // give back the pages urls as strings in both languages
+//     return [
+//       `/${dePrefix}/${kebabCase(get(service, 'meta.de_title', ''))}`,
+//       `en/${enPrefix}/${kebabCase(get(service, 'meta.en_title', ''))}`
+//     ]
+//   })
+
+//   return flatten(pages)
+// }
+
 export default {
   mode: "universal",
   /*
@@ -50,6 +65,7 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   generate: {
+    fallback: true,
     async routes() {
 
       return [

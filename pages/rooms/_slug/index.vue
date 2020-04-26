@@ -4,7 +4,6 @@
       <div class="image-container">
         <Frame :image="$tp('image')" :title="$tp('title')" :alt="$tp('description')">
           <PrevNextButtons :prev="prevLink" :next="nextLink" />
-          <!-- <img :src="$tp('image')" :title="$tp('title')" :alt="$tp('description')" /> -->
         </Frame>
       </div>
       <div class="text">

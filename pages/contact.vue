@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="info">
-            <h1>{{ $t("contact.firstColumn") }}</h1>
+            <h2>{{ $t("contact.firstColumn") }}</h2>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
               {{ $t("contact.streetNumber") }}<span class="white-space"></span>{{ $t("contact.cityZip") }}
             </a>

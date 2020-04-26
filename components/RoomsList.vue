@@ -1,5 +1,6 @@
 <template>
   <div class="rooms-list">
+    <h1 class="accessible">Our spaces</h1>
     <transition-group
       name="insert"
       tag="div"
