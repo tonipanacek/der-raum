@@ -1,13 +1,13 @@
 <template>
   <Container>
+    <h1 class="accessible">{{ $tp("title") }}</h1>
+    <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
     <div
     id="project-images-desktop"
     class="project-images"
     v-on:wheel.prevent="handleScroll"
     >
       <article class="project">
-        <h1 class="accessible">{{ $tp("title") }}</h1>
-        <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
         <div v-if="isChunky" class="images section">
           <ImagesList
           id="desktop-view"
@@ -30,8 +30,6 @@
     class="project-images"
     >
       <article class="project">
-        <h1 class="accessible">{{ $tp("title") }}</h1>
-        <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
         <div v-if="isChunky" class="images section">
           <ImagesList
           id="mobile-view"
@@ -209,13 +207,6 @@ export default {
 .project {
   display: flex;
   flex-direction: column;
-}
-.accessible {
-  visibility: hidden;
-  position: absolute;
-  height: 0;
-  width: 0;
-  overflow: hidden;
 }
 #mobile-view {
   display: block;

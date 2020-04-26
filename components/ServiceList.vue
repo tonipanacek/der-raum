@@ -1,6 +1,7 @@
 <template>
   <Container>
     <div id="home" class="service-list">
+      <h1 class="accessible">Our services</h1>
       <NuxtLink
         v-for="service, index in sortedServices"
         :id="service.attributes.title"
@@ -11,7 +12,7 @@
         @mouseleave.native="hover = ''"
       >
         <div class="image-container">
-          <img :src="service.attributes.image" :alt="service.attributes.title" />
+          <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" />
           <h3 class="service-title">
             {{ $ta(service.attributes, 'title') }}
           </h3>
@@ -179,6 +180,16 @@ and (-webkit-min-device-pixel-ratio: 1)  {
 }
 
 // small screens
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+  .service-list {
+    background-color: pink;
+    display: none;
+  }
+}
 .service-list {
   display: flex;
   flex-flow: row wrap;

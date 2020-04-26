@@ -18,11 +18,19 @@ export default {
   mounted() {
     this.setCssVars();
   },
+  destroyed() {
+    this.unsetCssVars();
+  },
   methods: {
     setCssVars() {
       let root = document.documentElement
       root.style.setProperty('--total', this.total + 1)
       root.style.setProperty('--page', this.page + 1)
+    },
+    unsetCssVars() {
+      let root = document.documentElement
+      root.style.removeProperty('--total')
+      root.style.removeProperty('--page')
     }
   },
   watch: {

@@ -1,14 +1,13 @@
 <template>
   <div class="social-icons">
-    <a :href="$ta(attributes, 'instagram')" target="_blank" id="instagram-link"
-    rel="noreferrer noopener">
-      <img svg-inline src="~/assets/images/instagram.svg" alt="Instagram Icon" class="social-item" />
+    <a :href="socials[0].link" target="_blank" id="instagram-link" rel="noreferrer noopener">
+      <img svg-inline src="~/assets/images/instagram.svg" alt="Instagram Icon" class="social-item" /><span class="hidden-text">Instagram</span>
     </a>
-    <a :href="$ta(attributes, 'pinterest')" target="_blank" id="pinterest-link" rel="noreferrer noopener">
-      <img svg-inline src="~/assets/images/pinterest.svg" alt="Pinterest Icon" id="pinterest" class="social-item" />
+    <a :href="socials[1].link" target="_blank" id="pinterest-link" rel="noreferrer noopener">
+      <img svg-inline src="~/assets/images/pinterest.svg" alt="Pinterest Icon" id="pinterest" class="social-item" /><span class="hidden-text">Pinterest</span>
     </a>
-    <a :href="$ta(attributes, 'facebook')" target="_blank" id="facebook-link" rel="noreferrer noopener">
-      <img svg-inline src="~/assets/images/facebook.svg" alt="Facebook Icon" class="social-item" />
+    <a :href="socials[2].link" target="_blank" id="facebook-link" rel="noreferrer noopener">
+      <img svg-inline src="~/assets/images/facebook.svg" alt="Facebook Icon" class="social-item" /><span class="hidden-text">Facebook</span>
     </a>
   </div>
 </template>
@@ -19,7 +18,7 @@ export default {
   name: "SocialIcons",
   data: () => {
     return {
-      attributes: json["socialMedia"]
+      socials: json["socialMedia"]
     }
   }
 }
@@ -45,5 +44,8 @@ svg#pinterest {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.hidden-text {
+  display: none;
 }
 </style>

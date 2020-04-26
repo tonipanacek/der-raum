@@ -1,5 +1,6 @@
 <template>
   <Container>
+    <h1 class="accessible">Our projects</h1>
     <div
     id="projects-desktop"
     class="projects"
