@@ -45,11 +45,13 @@
 import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash'
 import Frame from '~/components/Frame'
+import dynamicSEO from '~/plugins/dynamic_seo'
 export default {
   name: "ProjectsList",
   components: {
     Frame
   },
+  mixins: [dynamicSEO],
   props: {
     projects: {
       type: Array,

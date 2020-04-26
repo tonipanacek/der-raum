@@ -1,6 +1,7 @@
 <template>
   <div class="rooms-list">
-    <h1 class="accessible">Our spaces</h1>
+    <h1 class="accessible">{{ seo.roomsOverviewH1 }}</h1>
+    <p class="accessible">{{ seo.roomsOverviewText }}</p>
     <transition-group
       name="insert"
       tag="div"
@@ -46,10 +47,16 @@
 import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash';
 import Frame from '~/components/Frame'
+import seo from '../content/data/seo.json'
 export default {
   name: "RoomsList",
   components: {
     Frame
+  },
+  data() {
+    return {
+      seo
+    }
   },
   props: {
     rooms: {

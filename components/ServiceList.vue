@@ -1,7 +1,8 @@
 <template>
   <Container>
     <div id="home" class="service-list">
-      <h1 class="accessible">Our services</h1>
+      <h1 class="accessible">{{ seo.servicesOverviewH1 }}</h1>
+      <p class="accessible">{{ seo.servicesOverviewText }}</p>
       <NuxtLink
         v-for="service, index in sortedServices"
         :id="service.attributes.title"
@@ -44,10 +45,12 @@
 <script>
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
+import seo from '../content/data/seo.json'
 export default {
   data() {
     return {
-      hover: ''
+      hover: '',
+      seo
     }
   },
   components: {
