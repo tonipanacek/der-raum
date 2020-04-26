@@ -13,9 +13,9 @@
       >
         <div class="image-container">
           <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" />
-          <h3 class="service-title">
+          <p class="service-title">
             {{ $ta(service.attributes, 'title') }}
-          </h3>
+          </p>
         </div>
       </NuxtLink>
       <div class="projects-link-grid">
@@ -214,7 +214,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         }
       }
     }
-    h3 {
+    p {
       padding-left: 0.5em;
     }
   }
@@ -291,7 +291,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
         object-fit: cover;
       }
     }
-    h3 {
+    p {
       padding-left: 0;
     }
   }

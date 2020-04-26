@@ -282,12 +282,12 @@ $main-height: calc(100vh - #{spacing(frame)});
 }
 // hovering effect
 .hover {
-  h3 {
+  p {
     color: color(dark);
     font-weight: 900;
   }
   @media(hover: hover) and (pointer: fine) {
-    h3 {
+    p {
       color: color(dark);
       font-weight: 900;
     }
@@ -295,7 +295,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 }
 .hover:not(.active) {
   opacity: .8;
-  h3 {
+  p {
     color: color(dark);
     font-weight: 300;
   }
