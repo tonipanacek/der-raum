@@ -29,7 +29,6 @@
     "md-yaml-json": "^1.1.1",
     "node-sass": "^4.13.0",
     "nuxt": "^2.0.0",
-    "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.4.1",
     "nuxt-svg-loader": "^1.2.0",
     "sass-loader": "^8.0.0",

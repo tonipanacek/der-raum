@@ -107,20 +107,10 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/style-resources",
     "nuxt-i18n",
-    "nuxt-fontawesome",
     "nuxt-svg-loader",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap"
   ],
-  // Font awesome icon libraries
-  fontawesome: {
-    imports: [
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
-      }
-    ]
-  },
   // SCSS resources
   styleResources: {
     scss: ["assets/styles/main.scss"]

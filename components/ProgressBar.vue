@@ -22,9 +22,6 @@ export default {
       'page': this.page + 1
     })
   },
-  // destroyed() {
-  //   this.unsetCssVars();
-  // },
   methods: {
     updateCssVars(newVarObj = {}) {
       cssVars({
