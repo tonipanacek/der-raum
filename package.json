@@ -16,15 +16,13 @@
     "deploy:gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.12.0",
-    "@fortawesome/free-solid-svg-icons": "^5.12.0",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.0.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "babel-runtime": "^6.26.0",
+    "css-vars-ponyfill": "^2.3.0",
     "frontmatter-markdown-loader": "^3.1.0",
     "ie11-custom-properties": "^3.1.0",
     "lodash": "^4.17.15",

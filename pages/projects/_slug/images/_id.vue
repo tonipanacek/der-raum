@@ -6,7 +6,6 @@
       <Article class="project">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
-          <!-- <p>schließen</p> -->
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
@@ -17,8 +16,6 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
-            <!-- <div class="no-next" v-if="!previousImageLink">
-            </div> -->
             <NuxtLink :to="previousImageLink" v-if="previousImageLink">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
