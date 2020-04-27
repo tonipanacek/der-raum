@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import cssVars from 'css-vars-ponyfill'
 export default {
   name: 'ProgressBar',
   props: {
@@ -16,36 +17,36 @@ export default {
     page: Number
   },
   mounted() {
-    this.setCssVars();
-  },
-  destroyed() {
-    this.unsetCssVars();
+    this.updateCssVars({
+      'total': this.total + 1,
+      'page': this.page + 1
+    })
   },
   methods: {
-    setCssVars() {
-      let root = document.documentElement
-      root.style.setProperty('--total', this.total + 1)
-      root.style.setProperty('--page', this.page + 1)
-    },
-    unsetCssVars() {
-      let root = document.documentElement
-      root.style.removeProperty('--total')
-      root.style.removeProperty('--page')
+    updateCssVars(newVarObj = {}) {
+      cssVars({
+        variables: newVarObj,
+        watch: true,
+        onlyLegacy: false
+      })
     }
   },
   watch: {
     page() {
-      this.setCssVars();
+      console.log(this.page)
+      this.updateCssVars({
+        'page': this.page + 1
+      });
     }
   }
 }
 </script>
 
 <style lang="scss">
-:root {
-  --total: 1;
-  --page: 1;
-}
+// :root {
+//   --total: 1;
+//   --page: 1;
+// }
 
 .progress-bar {
   z-index: 5;
