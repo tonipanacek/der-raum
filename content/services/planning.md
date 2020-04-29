@@ -17,7 +17,7 @@ en_description: "The implementation of the interior design is seamlessly followe
   our own carpentry manufacturer and in cooperation with architects, we put your shared
   living space vision into reality. In the planning phase, we prepare the on-time,
   tailor-made production of your tailor-made design from a single source, always with
-  a permanent contact person.  \nOur claim: aesthetically, technically and functionally
+  a permanent contact person.  \n Our claim: aesthetically, technically and functionally
   to subject the design to a final sample so that you are thrilled with the result."
 
 ---
