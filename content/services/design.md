@@ -18,7 +18,7 @@ en_description: Your idea is our creative springboard for implementation for unc
   and demanding projects in interior and interior design. The solid interior design,
   furnishings and furniture planning form the foundation of the holistic production
   that we practice. As a design-oriented team with different focuses, we are on the
-  market with a "keen eye", strongly oriented towards current trends in material,
+  market with a “keen eye”, strongly oriented towards current trends in material,
   design and design and continuously include new material and shape approaches in
   the design process. On the basis of an initial sketch, we select inspiring co-creation
   material combinations that we first specify in the design, then as a detailed visualization.
