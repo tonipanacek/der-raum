@@ -33,8 +33,9 @@ export default {
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .right-sidebar {
   background: white;
-  padding: 1em 2em 2em 2em;
-  height: 15vh;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  height: 12vh;
   overflow: hidden;
   a,
   a:hover,

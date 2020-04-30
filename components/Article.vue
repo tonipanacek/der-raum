@@ -57,7 +57,7 @@ export default {
   a,
   a:focus,
   a:visited {
-    transition: color 500ms ease, font-weight 100ms ease-in-out;
+    transition: color 100ms ease, font-weight 100ms ease-in-out;
     text-decoration: none;
     color: color(dark);
     &:hover {

@@ -4,8 +4,6 @@
     <Article>
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
-      </div>
-      <div class="box-wrapper">
         <ul>
           <li v-for="data in json.press">
             <template v-if="data.url">
@@ -94,38 +92,33 @@ export default {
       }
     }
   }
-  .article {
-    padding: 0 2em;
-  }
   .text {
     display: block;
-    padding: 0 2em;
+    padding: 0 4em;
     margin-top: 0;
     @include respond-to('large') {
-      display: none;
+      padding: 0;
+      h1 {
+        display: none;
+      }
     }
   }
-  .box-wrapper {
-    height: 100%;
-    width: 100%;
-  }
   ul {
-    padding: 2em;
+    padding: 2em 0em;
     list-style: none;
     margin: 0;
     @include respond-to('large') {
       margin: 0;
       display: block;
-      padding: 0 2em 0 0;
+      padding: 0;
     }
     li {
       margin-left: 0;
       font-size: .85em;
       display: block;
-      padding-bottom: spacing(xs);
+      line-height: 1.5rem;
       a {
         color: color(dark);
-        transition: font-weight 100ms ease;
         &:hover {
           color: color(dark);
           font-weight: 600;
