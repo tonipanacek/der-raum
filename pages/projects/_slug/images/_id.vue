@@ -156,7 +156,6 @@ export default {
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
-          console.log(landscape.matches)
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', setDocHeight)
@@ -165,10 +164,9 @@ export default {
           showSidebars();
         }
       }
-      const mq = window.matchMedia( "(max-width: 870px)" );
-      const landscape = window.matchMedia ( "(orientation: landscape)" );
+      const mq = window.matchMedia( "(max-width: 1024px)" );
       mq.addListener(widthChange);
-      widthChange(mq, landscape);
+      widthChange(mq);
     },
     handleKey(event) {
       event.preventDefault();
