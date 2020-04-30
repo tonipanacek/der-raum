@@ -36,6 +36,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 .right-sidebar {
   background: white;
   padding: 1em 2em 2em 2em;
+  height: 20vh;
   a,
   a:hover,
   a:focus,
