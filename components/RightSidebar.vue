@@ -34,7 +34,8 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 .right-sidebar {
   background: white;
   padding: 1em 2em 2em 2em;
-  height: 20vh;
+  height: 15vh;
+  overflow: hidden;
   a,
   a:hover,
   a:focus,
@@ -83,14 +84,13 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
 }
-  #right-social {
-    display: flex;
-    width: 80px;
-    margin: 0 auto;
-    height: 3rem;
-    @include respond-to('large') {
-      display: none;
-    }
+#right-social {
+  display: flex;
+  width: 80px;
+  margin: 0 auto;
+  height: 3rem;
+  @include respond-to('large') {
+    display: none;
   }
-// }
+}
 </style>
