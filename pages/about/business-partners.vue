@@ -1,11 +1,11 @@
 <template>
   <Container id="business-partners">
-    <PrevNextButtons :prev="prevLink" :next="nextLink" />
     <Article>
+    <PrevNextButtons :prev="prevLink" :next="nextLink" />
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
-      </div>
-      <div class="box-wrapper">
+      <!-- </div> -->
+      <!-- <div class="box-wrapper"> -->
         <ul>
           <li v-for="data in json.partners">
             <template v-if="data.url">
@@ -77,8 +77,8 @@ export default {
 #business-partners {
   margin: 0 auto;
   position: relative;
-  width: 100vw;
   height: auto;
+  width: 100vw;
   @include respond-to('large') {
     width: auto;
   }
@@ -93,43 +93,34 @@ export default {
       }
     }
   }
-    .text {
-      display: block;
-      padding: 0 4em;
-      margin-top: 0;
-      @include respond-to('large') {
+  .text {
+    display: block;
+    padding: 0 4em;
+    margin-top: 0;
+    @include respond-to('large') {
+      padding: 0;
+      h1 {
         display: none;
       }
     }
-  .box-wrapper {
-    height: 100%;
-    width: 100%;
-    @include respond-to('large') {
-      width: 80%;
-    }
-    @include respond-to('xl') {
-      width: 60%;
-    }
   }
   ul {
-    padding: 2em 4em;
+    padding: 2em 0em;
     list-style: none;
     margin: 0;
     @include respond-to('large') {
       margin: 0;
       display: block;
-      padding: 0 2em 0 0;
+      padding: 0;
       columns: 22ch 2;
     }
     li {
       margin-left: 0;
       font-size: .85em;
       display: block;
-      color: color(light);
-      padding-bottom: spacing(xs);
+      line-height: 1.5rem;
       a {
         color: color(dark);
-        transition: font-weight 100ms ease;
         &:hover {
           color: color(dark);
           font-weight: 600;

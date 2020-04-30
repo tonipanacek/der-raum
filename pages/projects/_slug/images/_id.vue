@@ -119,16 +119,11 @@ export default {
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
     this.enterMobileFullScreen()
-    window.addEventListener("resize", this.resetHeight);
   },
   destroyed() {
     window.removeEventListener("keyup", this.handleKey)
   },
   methods: {
-    resetHeight(){
-      // reset the body height to that of the inner browser
-      document.body.style.height = window.innerHeight + "px";
-    },
     enterMobileFullScreen() {
       const navbar = document.querySelector('.left-sidebar')
       const footer = document.querySelector('#right-sidebar')
