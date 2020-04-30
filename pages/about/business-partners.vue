@@ -1,6 +1,6 @@
 <template>
   <Container id="business-partners">
-    <PrevNextButtons :prev="prevLink" :next="nextLink" />
+    <!-- <PrevNextButtons :prev="prevLink" :next="nextLink" /> -->
     <Article>
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
@@ -78,6 +78,7 @@ export default {
   margin: 0 auto;
   position: relative;
   width: 100%;
+  height: 100%;
   #prev-next-buttons {
     position: absolute;
     a {
@@ -90,9 +91,9 @@ export default {
       }
     }
   }
-  .article {
-    padding: 0 2em;
-  }
+  // .article {
+  //   padding: 0 2em;
+  // }
     .text {
       display: block;
       padding: 0 2em;
