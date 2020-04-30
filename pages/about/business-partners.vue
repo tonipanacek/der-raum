@@ -4,8 +4,6 @@
     <PrevNextButtons :prev="prevLink" :next="nextLink" />
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
-      <!-- </div> -->
-      <!-- <div class="box-wrapper"> -->
         <ul>
           <li v-for="data in json.partners">
             <template v-if="data.url">
@@ -83,6 +81,8 @@ export default {
     width: auto;
   }
   #prev-next-buttons {
+    // width: auto;
+    // height: auto;
     a {
       width: 10vw;
       height: 100%;
@@ -94,6 +94,7 @@ export default {
     }
   }
   .text {
+    z-index: 0;
     display: block;
     padding: 0 4em;
     margin-top: 0;
