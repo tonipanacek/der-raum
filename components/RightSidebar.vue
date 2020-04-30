@@ -1,8 +1,6 @@
 <template>
   <Stack id="right-sidebar">
-    <div class="social-wrapper">
-      <SocialIcons id="right-social"/>
-    </div>
+    <SocialIcons id="right-social"/>
     <div class="right-stack small-very">
       <p>
         <nuxt-link :to="switchLocalePath('de')" hreflang="de" rel="alternate">De</nuxt-link>
@@ -85,25 +83,14 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
 }
-.social-wrapper {
-  width: 100%;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include respond-to('large') {
-    height: 0;
-  }
   #right-social {
     display: flex;
-    width: 6rem;
-    height: 2rem;
-    align-items: center;
-    justify-content: space-around;
-    margin: spacing(frame) 0;
+    width: 80px;
+    margin: 0 auto;
+    height: 3rem;
     @include respond-to('large') {
       display: none;
     }
   }
-}
+// }
 </style>

@@ -75,15 +75,14 @@ export default {
 </script>
 <style lang="scss">
 #press {
-  height: 100%;
   margin: 0 auto;
   position: relative;
+  height: auto;
   width: 100vw;
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
   }
   #prev-next-buttons {
-    position: absolute;
     a {
       width: 10vw;
       height: 100%;
