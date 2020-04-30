@@ -81,6 +81,7 @@ export default {
   width: 100vw;
   @include respond-to('large') {
     min-height: calc(100vh - 2 * #{spacing(frame)});
+    width: auto;
   }
   #prev-next-buttons {
     a {

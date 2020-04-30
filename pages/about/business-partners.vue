@@ -79,6 +79,9 @@ export default {
   position: relative;
   width: 100vw;
   height: auto;
+  @include respond-to('large') {
+    width: auto;
+  }
   #prev-next-buttons {
     a {
       width: 10vw;
