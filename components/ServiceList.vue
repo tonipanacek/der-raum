@@ -132,7 +132,7 @@ $more-height: calc(100vh - #{spacing(frame)});
 
 .projects-link-non-grid {
   padding: 0.5em;
-  margin-top: spacing(sm);
+  margin-top: 4rem;
   a:hover {
     color: color(dark);
     font-weight: 900;
@@ -172,33 +172,12 @@ $more-height: calc(100vh - #{spacing(frame)});
   }
 }
 
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 1)  {
-  .service-list {
-    display: none;
-  }
-}
-
-// small screens
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 1)  {
-  .service-list {
-    background-color: pink;
-    display: none;
-  }
-}
 .service-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   background-color: white;
-  margin-bottom: 35px;
+  margin-bottom: 3rem;
 }
   #Design.service-link {
     width: 60%;
