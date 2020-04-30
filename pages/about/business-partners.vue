@@ -75,15 +75,14 @@ export default {
 </script>
 <style lang="scss">
 #business-partners {
-  min-height: calc(100vh - 2 * #{spacing(frame)});
   margin: 0 auto;
   position: relative;
+  width: 100%;
   #prev-next-buttons {
-    // position: sticky;
-    top: 30%;
+    position: absolute;
     a {
       width: 10vw;
-      height: calc(100vh - 2 * #{spacing(frame)});
+      height: 100%;
       padding: .25rem .5rem;
       svg {
         position: absolute;
