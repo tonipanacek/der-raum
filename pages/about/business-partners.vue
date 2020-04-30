@@ -1,6 +1,6 @@
 <template>
   <Container id="business-partners">
-    <!-- <PrevNextButtons :prev="prevLink" :next="nextLink" /> -->
+    <PrevNextButtons :prev="prevLink" :next="nextLink" />
     <Article>
       <div class="text">
         <h1>{{ $tp("title") }}</h1>
@@ -77,10 +77,12 @@ export default {
 #business-partners {
   margin: 0 auto;
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: auto;
+  @include respond-to('large') {
+    width: auto;
+  }
   #prev-next-buttons {
-    position: absolute;
     a {
       width: 10vw;
       height: 100%;
@@ -91,12 +93,9 @@ export default {
       }
     }
   }
-  // .article {
-  //   padding: 0 2em;
-  // }
     .text {
       display: block;
-      padding: 0 2em;
+      padding: 0 4em;
       margin-top: 0;
       @include respond-to('large') {
         display: none;
@@ -113,7 +112,7 @@ export default {
     }
   }
   ul {
-    padding: 2em;
+    padding: 2em 4em;
     list-style: none;
     margin: 0;
     @include respond-to('large') {
