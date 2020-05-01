@@ -133,6 +133,7 @@ $more-height: calc(100vh - #{spacing(frame)});
 .projects-link-non-grid {
   padding: 0.5em;
   margin-top: 4rem;
+  margin-bottom: 2rem;
   a:hover {
     color: color(dark);
     font-weight: 900;

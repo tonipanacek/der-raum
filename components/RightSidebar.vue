@@ -34,7 +34,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 .right-sidebar {
   background: white;
   padding: 0 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   height: 12vh;
   overflow: hidden;
   a,
