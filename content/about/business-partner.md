@@ -11,8 +11,8 @@ meta_tags:
 text_and_link_group:
 - main_text: Warburg Pincus
   text_url: https://www.warburgpincus.com/
-- main_text: A53 Architekten
-  text_url: http://a53-architekten.de/
+- main_text: Universal Music
+  text_url: https://www.universal-music.de/
 - main_text: ''
   text_url: ''
 image: ''
