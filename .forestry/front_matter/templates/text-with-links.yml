@@ -21,3 +21,8 @@ fields:
     max: 
     labelField: 
   label: Text and Link Group
+- name: general_page_info
+  type: include
+  config: {}
+  template: image-and-text
+  label: General Page Info
