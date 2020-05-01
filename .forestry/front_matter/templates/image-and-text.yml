@@ -24,7 +24,7 @@ fields:
 - name: image
   type: file
   config:
-    maxSize: 250
+    maxSize: 
   label: Image
   description: Solo image for the page
 - name: de_title
