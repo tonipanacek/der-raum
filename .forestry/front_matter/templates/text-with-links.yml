@@ -26,3 +26,5 @@ fields:
   config: {}
   template: image-and-text
   label: General Page Info
+pages:
+- content/about/business-partner.md

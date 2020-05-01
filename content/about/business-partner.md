@@ -8,5 +8,13 @@ meta_tags:
   en_title: Business Partner
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
+text_and_link_group:
+- main_text: 50 hertz
+  text_url: https://www.50hertz.com/
+- main_text: ''
+  text_url: ''
+image: ''
+de_description: ''
+en_description: ''
 
 ---
