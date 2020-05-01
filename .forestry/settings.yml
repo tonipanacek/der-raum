@@ -39,7 +39,7 @@ sections:
   label: Data
 - type: directory
   path: content/data
-  label: data files
+  label: Data Files
   create: all
   match: "**/*"
   new_doc_ext: json
