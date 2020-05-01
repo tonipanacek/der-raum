@@ -11,8 +11,8 @@ meta_tags:
 text_and_link_group:
 - main_text: ''
   text_url: ''
-- main_text: ''
-  text_url: ''
+- main_text: Strümpfel Architekten
+  text_url: http://www.struempfel-architekten.de/
 - main_text: Thomas Bendel Architekt
   text_url: http://www.thomasbendel.com/
 - main_text: Universal Music
