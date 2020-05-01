@@ -12,7 +12,7 @@ text_and_link_group:
 - main_text: 50 hertz
   text_url: https://www.50hertz.com/
 - main_text: A53 Architekten
-  text_url: http://a53-architekten.de/
+  text_url: https://a53-architekten.de/
 image: ''
 de_description: ''
 en_description: ''
