@@ -9,10 +9,12 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
-- main_text: 50 hertz
-  text_url: https://www.50hertz.com/
+- main_text: Warburg Pincus
+  text_url: https://www.warburgpincus.com/
 - main_text: A53 Architekten
   text_url: http://a53-architekten.de/
+- main_text: ''
+  text_url: ''
 image: ''
 de_description: ''
 en_description: ''
