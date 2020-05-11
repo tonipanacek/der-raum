@@ -33,7 +33,6 @@ export default {
   },
   watch: {
     page() {
-      console.log(this.page)
       this.updateCssVars({
         'page': this.page + 1
       });

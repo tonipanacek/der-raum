@@ -24,8 +24,8 @@
       @click.native.prevent="handleClick(image, index)"
       >
         <div v-if="mobile" class="frame-wrapper">
-          <Frame :source="image.url" :alt="`${title} ${image.index} of ${totalCount}`">
-            <!-- <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" /> -->
+          <Frame>
+            <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" loading="lazy"/>
           </Frame>
           <p class="image-title">
             {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>

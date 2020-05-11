@@ -37,7 +37,6 @@ import { get, sortBy, isEmpty, chunk, isEqual, kebabCase, flatten } from 'lodash
 import dynamicSEO from '~/plugins/dynamic_seo'
 import Container from "~/components/Container"
 import Article from "~/components/Article"
-import Frame from "~/components/Frame"
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
 
@@ -234,8 +233,7 @@ export default {
   components: {
     Container,
     Article,
-    PrevNextButtons,
-    Frame
+    PrevNextButtons
   }
 }
 </script>
