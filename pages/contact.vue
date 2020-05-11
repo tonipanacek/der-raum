@@ -16,7 +16,7 @@
               <a href="tel:017673564742" class="contact-link tel" id="tel1">
                 {{ $t("contact.tel2") }}
               </a><span class="white-space"></span>
-              <a href="tel:03039375300" class="contact-link tel">
+              <a href="tel:03039375300" class="contact-link tel" id="tel2">
                 {{ $t("contact.tel") }}
               </a>
             </div>
@@ -76,36 +76,22 @@ export default {
       @include respond-to('large') {
         margin-bottom: 3%;
       }
-      p {
-        margin-top: 0;
-      }
-      a {
-        font-size: .8em;
-      }
-      .email, .address {
-        display: block;
-      }
+      p { margin-top: 0; }
+      a { font-size: .8em; }
+      .email, .address { display: block; }
       .justified {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
       }
-      .white-space {
-        padding-right: 15px;
-      }
-      .mobile1 {
-        padding-right: 22.5px;
-      }
-      .mobile2 {
-        padding-right: 58.5px;
-      }
+      .white-space { padding-right: 15px; }
+      .mobile1 { padding-right: 22.5px; }
+      .mobile2 { padding-right: 58.5px; }
+      #tel1 { width:180px; }
+      #tel2 { width:90px; }
       @include respond-to('large') {
-        .white-space {
-          padding-right: 27.5px;
-        }
-        .mobile1, .mobile2 {
-          padding-right: 0px;
-        }
+        .white-space { padding-right: 27.5px; }
+        .mobile1, .mobile2 { padding-right: 0px; }
       }
       .contact-link {
         text-decoration: none;
@@ -123,6 +109,10 @@ export default {
       .hours {
         display: flex;
         justify-content: space-between;
+        width: 300px;
+        @include respond-to('large') {
+          width: 100%;
+        }
       }
     }
   }
