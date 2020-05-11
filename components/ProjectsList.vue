@@ -23,8 +23,8 @@
       :data-orientation="findOrientation(index)"
       >
         <div v-if="mobile" class="frame-wrapper">
-          <Frame>
-            <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
+          <Frame :source="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')">
+            <<!-- img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" /> -->
           </Frame>
           <p class="project-title">
             {{ $ta(project.attributes, 'title') }}

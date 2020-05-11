@@ -6,33 +6,35 @@
           <Logo class="logo" />
         </nuxt-link>
       </li>
-      <div class="nav-items">
-        <li>
-          <nuxt-link :to="localePath({ name: 'projects' })" class="nav-item title link">
-            {{ $t("navbar.projects") }}
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="localePath({ name: 'services' })" class="nav-item title">
-            {{ $t("navbar.services") }}
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="localePath({ name: 'rooms' })" class="nav-item title">
-            {{ $t("navbar.rooms") }}
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="localePath({ name: 'about' })" class="nav-item title">
-            {{ $t("navbar.about") }}
-          </nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="localePath({ name: 'contact' })" class="nav-item title">
-            {{ $t("navbar.contact") }}
-          </nuxt-link>
-        </li>
-      </div>
+      <li>
+        <ul class="nav-items">
+          <li>
+            <nuxt-link :to="localePath({ name: 'projects' })" class="nav-item title link">
+              {{ $t("navbar.projects") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="localePath({ name: 'services' })" class="nav-item title">
+              {{ $t("navbar.services") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="localePath({ name: 'rooms' })" class="nav-item title">
+              {{ $t("navbar.rooms") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="localePath({ name: 'about' })" class="nav-item title">
+              {{ $t("navbar.about") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="localePath({ name: 'contact' })" class="nav-item title">
+              {{ $t("navbar.contact") }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </li>
     </ul>
   </Stack>
 </template>

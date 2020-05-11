@@ -25,8 +25,8 @@
       @click.native.prevent="handleClick(room, index)"
       >
         <div v-if="mobile" class="frame-wrapper">
-          <Frame>
-            <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
+          <Frame :source="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')">
+            <!-- <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" /> -->
           </Frame>
           <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
