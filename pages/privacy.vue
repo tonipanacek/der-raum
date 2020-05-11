@@ -2,31 +2,17 @@
   <div id="privacy">
     <h1 class="title color:dark">{{ $ta(privacyJson, 'intro.title') }}</h1>
     <p v-for="text in $ta(privacyJson, 'intro.text')">{{ text }}</p>
-    <h2 class="title">Datenschutzbeauftragte</h2>
-    <p>Für Auskünfte, Wünsche oder Anregungen zum Thema Datenschutz stehen wir Ihnen gerne zur Verfügung. Sie erreichen unseren betrieblichen Datenschutzbeauftragten unter der E-Mail: datenschutz(at)holz-raum.de
-    <br>Die für Datenschutz und Datensicherheit zuständige Aufsichtsbehörde erreichen Sie unter:
-    <br>Berliner Beauftragte für Datenschutz und Informationsfreiheit
-    <br>An der Urania 4-10
-    <br>10787 Berlin</p>
-    <p class="title">Nutzung von Google Analytics</p>
-    <p>Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc. 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Google Analytics verwendet sogenannte "Cookies". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
-    <p>Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.</p>
-    <p>Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf den folgenden Link klicken. Es wird ein sog. Opt-Out-Cookie gesetzt, durch den die zukünftige Erfassung Ihrer Daten beim Besuch dieses Internetauftritts ausgeschlossen ist: Google Analytics deaktivieren
-    Informationen zum Datenschutzbestimmungen zu Google Analytics finden Sie unter http://www.google.com/intl/de/analytics/privacyoverview.html.</p>
-    <p>Auf dieser Website wurde Google Analytics um den Code „anonymizeIp“ erweitert, um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten.</p>
-    <p class="title">Facebook-Plugins (Like-Button)</p>
-    <p>Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, Anbieter Facebook Inc., 1 Hacker Way, Menlo Park, California 94025, USA, integriert. Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem „Like-Button“ („Gefällt mir“) auf unserer Seite. Eine Übersicht über die Facebook-Plugins finden Sie hier: https://developers.facebook.com/docs/plugins/.</p>
-    <p>Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit Ihrer IPAdresse unsere Seite besucht haben. Wenn Sie den Facebook „Like-Button“ anklicken während Sie in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Facebook unter https://de-de.facebook.com/policy.php.</p>
-    <p>Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem sacebook-Benutzerkonto aus.</p>
+    <h2 class="title">{{ $ta(privacyJson, 'officer.title') }}</h2>
+    <p v-for="text in $ta(privacyJson, 'officer.text')">{{ text }}</p>
+    <p class="list" v-for="text in $ta(privacyJson, 'official.list')">{{ text }}</p>
+    <p class="title">{{ $ta(privacyJson, 'google-analytics.title') }}</p>
+    <p v-for="text in $ta(privacyJson, 'google-analytics.text')">{{ text }}</p>
+    <p class="title">{{ $ta(privacyJson, 'facebook.title') }}</p>
+    <p v-for="text in $ta(privacyJson, 'facebook.text')">{{ text }}</p>
     <h2 class="title">{{ $ta(privacyJson, 'serverlogs.title') }}</h2>
-    <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:
-    <br>Browsertyp/ Browserversion
-    <br>verwendetes Betriebssystem
-    <br>Referrer URL
-    <br>Hostname des zugreifenden Rechners
-    <br>Uhrzeit der Serveranfrage
-    <br>Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachträglich zu prüfen, wenn uns konkrete Anhaltspunkte für eine rechtswidrige Nutzung bekannt werden.
-    <!-- <p v-for="text in $ta(privacyJson, 'serverlogs.text')">{{ text }}</p> -->
+    <p v-for="text in $ta(privacyJson, 'serverlogs.text')">{{ text }}</p>
+    <p class="list" v-for="text in $ta(privacyJson, 'serverlogs.list')">{{ text }}</p>
+    <p v-for="text in $ta(privacyJson, 'serverlogs.text2')">{{ text }}</p>
     <h2 class="title">{{ $ta(privacyJson, 'cookies.title') }}</h2>
     <p v-for="text in $ta(privacyJson, 'cookies.text')">{{ text }}</p>
     <h2 class="title">{{ $ta(privacyJson, 'contactform.title') }}</h2>
@@ -87,5 +73,6 @@ export default {
     @include respond-to('large') {
       padding: 0;
     }
+    .list { margin: 0; }
   }
 </style>
