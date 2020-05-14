@@ -4,7 +4,7 @@ title: Planning
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068217/Planung-Zeichnung-Projektplanung-Architektur_pppc0z.jpg
 de_title: Planung
 en_title: Planning
-de_description: "Der individuellen Gestaltung schließt sich die Umsetzung im Innenausbau
+de_description: "An die individuelle Gestaltung schließt sich die Umsetzung im Innenausbau
   nahtlos an. Mit einem hochmotivierten, eingespielten Team aus Designern, unserer
   eigenen Tischlermanufaktur und optional in Zusammenarbeit mit Architekten setzten
   wir die gemeinsame Vision Ihrer Wohnraumplanung in die Realität um. In der Planungsphase
