@@ -4,16 +4,15 @@ title: Philosophy
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068331/Philosophie-Manufaktur-Tischler-Schreiner_zs856h.jpg
 en_title: Philosophy
 de_title: Philosophie
-en_description: If we need a philosophy? We say yes. Our conscious, attentive and
-  constructive attitude, our curiosity for your idea and the motivation, curiosity
-  and passion with which we accompany you are the tailwind and the common thread of
-  our holistic approach of design, planning and production. We are a family-run company
-  that is committed to design and solid craftsmanship. Working together in interdisciplinary
-  teams guarantees high creative standards, the holistic approach and flat hierarchies
-  enable us to make short and efficient decision-making processes to make your project
-  a one-stop shop. We aim to accompany you optimally from the first consultation to
-  the complete installation, we implement a timely, service-oriented and flawless
-  service for you.
+en_description: Do we need a philosophy? We say yes. Our conscious, attentive and
+  constructive outlook, our curiosity for your ideas, as well as our motivation and
+  passion are the driver for and the common thread in our holistic approach of design,
+  planning and production. We are a family-run company that is committed to design
+  and solid craftsmanship. Working together in interdisciplinary teams guarantees
+  high creative standards. Our holistic approach and flat hierarchies facilitate short
+  and efficient decision-making processes. This way we can implement all steps of
+  your project inhouse. We aim to accompany you from the first consultation to the
+  final and complete installation of your project. In time and always, service-oriented.
 de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste, achtsame
   und konstruktive Haltung, unsere Neugier für Ihre Idee und die Motivation, Neugierde
   und Leidenschaft mit der wir Sie begleiten, sind der Rückenwind und der rote Faden
