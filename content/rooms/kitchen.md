@@ -13,14 +13,14 @@ de_description: |-
 
   Eines ist sicher: In Ihrer exklusiven, individuellen und hochwertigen Einbauküche nach Maß sollte stets genug Raum für die Menschen und die perfekte Zubereitung der Speisen sein, die Gleichgewicht, Freude und Inspiration in Ihr Leben bringen.
 en_description: |-
-  A high quality kitchen is the basis for a healthy lifestyle, hospitality and family conviviality. Here you can get creative while cooking, activate all your senses and enjoy culinary delights. At table it is easy to combine the useful with the beautiful, to eat together, to maintain social relationships and to exchange ideas. No matter which interior design suits your everyday life and your rhythm of life, we as interior designers and designers will develop the right design for you, so that we can have it made in Berlin with our experienced carpenters according to the rules of traditional craftsmanship.
+  A high-quality kitchen is the basis for a healthy lifestyle, hospitality and family conviviality. The kitchen is the place where you can get creative while cooking, activate all your senses, and enjoy culinary delights. At the table, it is easy to combine the useful with pleasure – to eat together, to maintain social relationships and to exchange ideas. No matter which interior design suits your everyday life and rhythm, we will develop the right design for you. Our experienced carpenters will manufacture your ideas in Berlin, according to traditional and sustainable craftsmanship.
 
-  * A cozy kitchen-cum-living room invites you to sit, exchange ideas and linger, with family, friends or your life partner.
+  * A cozy open kitchen invites you to sit and have a chat, with family, friends or your life partner.
   * The functional cooking island impresses with its structure and clear focus. A must for passionate cooks.
   * Aesthetes get a taste of the design kitchen. Light, surfaces and interior design bring tasteful flair to your kitchen.
   * While the exclusive luxury kitchen accommodates particularly demanding guests.
 
-  One thing is certain: in your exclusive, individual, fitted kitchen, there should always be enough space for people and the perfect preparation of the dishes that bring a balance, joy and inspiration to your life.
+  One thing is certain: in your exclusive, individual, first-class kitchen, there should always be enough space for people and the perfect preparation of the dishes that bring balance, joy and inspiration to your life.
 position: 1
 meta_tags:
   de_title: Exklusive Küche, Küchenzeile, Kochinsel, Luxus Küche,  Wohnküche, Einbauküche,
