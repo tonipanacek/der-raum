@@ -14,15 +14,15 @@ de_description: Ihre Idee ist unser kreatives Sprungbrett zur Umsetzung für unk
   wir mit Ihnen in inspirativer Co-Creation Materialkombinationen aus, die wir zunächst
   im Entwurf, dann als detailgetreue Visualisierung präzisieren. Wir entwickeln gemeinsam
   mit Ihnen bereits vor der Planung den kreativen Prozess.
-en_description: Your idea is our creative springboard for implementation for unconventional
-  and demanding projects in interior and interior design. The solid interior design,
-  furnishings and furniture planning form the foundation of the holistic production
-  that we practice. As a design-oriented team with different focuses, we are on the
-  market with a “keen eye”, strongly oriented towards current trends in material,
-  design and design and continuously include new material and shape approaches in
-  the design process. On the basis of an initial sketch, we select inspiring co-creation
-  material combinations that we first specify in the design, then as a detailed visualization.
-  We develop the creative process together with you before planning.
+en_description: Your idea is our creative starting point for the implementation of
+  unconventional and demanding projects in interior architecture and design. Robust
+  spatial structures, furnishings and furniture planning form the guiding principles
+  for our practice of holistic production. We are a design-oriented team with different
+  focuses and a “keen eye” for current trends in materials and design. We continuously
+  include new materials and approaches in our design process. On the basis of an initial
+  sketch and with your input, we select inspiring material combinations and then develop
+  an initial a draft of the design, concluded with a detailed visualization. Together
+  with you, we develop the creative process, even before planning.
 meta_tags:
   de_title: ''
   en_title: ''
