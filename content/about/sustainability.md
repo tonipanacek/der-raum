@@ -5,13 +5,13 @@ image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068432/Nachhaltigk
 en_title: Sustainability
 de_title: Nachhaltigkeit
 en_description: |-
-  In our family-run company, fundamentals such as a transparent and responsible production process, the use of ecologically justifiable materials and fair working conditions are firmly anchored. As a specialized manufacturer, we only develop custom-made products with an extremely long service life and consciously stand against mass production and single-use products with our products. In this way we make a contribution to resource conservation and sustainable consumption.
+  In our family-run company, fundamentals such as a transparent and responsible production process, the use of ecologically sourced materials, and fair working conditions are firmly anchored. As a specialized manufacturer, we only and exclusively develop custom-made and durable products with an extremely lifespan. We actively stand against mass production and single-use products. Correspondingly, we make a contribution to resource conservation and sustainable consumption.
 
-  The processing of the natural and renewable raw material wood guarantees responsible use of existing resources. Our processing standards, such as optimized processes for cutting, ensure maximum use of materials and therefore very little waste in the production of our furniture.
+  By using wood, a natural and renewable raw material, we can guarantee the responsible use of existing resources. Our processing standards, such as optimized cutting procedures, ensure maximum use of materials and therefore very little waste in the production of our products.
 
-  We return the majority of the wood residues to a cycle and heat our operations with our in-house combined heat and power plant. The specially generated solar power enables us to operate our machines in a climate-neutral manner, which corresponds to a CO2 saving of 25 tons of CO2 per year.
+  We return the majority of the wood residues to the recycling process and heat our buildings and workshops with our in-house cogeneration unit. We generate our own solar power which enables us to operate our machines in a climate-neutral manner. As a result, we save approximately 25 tons of CO2-emissions per year.
 
-  The purchase of the material that we process takes place as regionally as possible, the extensive absence of transports by intermediaries saves additional packaging and finite resources. We also want to make our contribution to the preservation of resources globally and in the past have decided to promote the replanting of mangroves as part of the REFORESTATION ([edenprojects.org](https://edenprojects.org/ "edenprojects.org")) with every product sold, because this is where the need is greatest.
+  We aim to purchase all the production material as regionally as possible. The relative absence of transport by intermediaries saves additional packaging and resources. We also want to make our contribution to the preservation of resources globally and in the past have decided to promote the replanting of mangroves as part of the REFORESTATION ([edenprojects.org](https://edenprojects.org/ "edenprojects.org")) with every product sold, because this is where the need is greatest.
 
   We make our first contribution to ecological balance and are continuously striving to be completely climate-neutral in the foreseeable future.
 de_description: |-
