@@ -12,12 +12,9 @@ de_description: "Der individuellen Gestaltung schließt sich die Umsetzung im In
   Fertigung Ihres maßgeschneiderten Entwurfs aus einer Hand vor.  \nUnser Anspruch:
   ästhetisch, technisch und funktional die Gestaltung einer finalen Kontrolle zu unterziehen
   und somit für ein rundum begeisterndes Ergebnis zu sorgen."
-en_description: "The implementation of the interior design is seamlessly followed
-  by the individual design. With a highly motivated, well-coordinated team of designers,
-  our own carpentry manufacturer and in cooperation with architects, we put your shared
-  living space vision into reality. In the planning phase, we prepare the on-time,
-  tailor-made production of your tailor-made design from a single source, always with
-  a permanent contact person.  \n Our claim: aesthetically, technically and functionally
-  to subject the design to a final sample so that you are thrilled with the result."
+en_description: |-
+  The individual design process is seamlessly followed by its implementation. With a highly motivated, well-coordinated team of designers, our own carpentry manufacturer, and in cooperation with architects, we put your living space vision into reality. In the planning phase, accompanied by your personal contact person, we prepare on-time and precise production of your tailor-made design from a single source.
+
+  Our claim: To put the design to a final test based on technical and functional rigor so that you are thrilled with the result.
 
 ---
