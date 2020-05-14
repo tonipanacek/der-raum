@@ -14,16 +14,16 @@ en_description: Do we need a philosophy? We say yes. Our conscious, attentive an
   your project inhouse. We aim to accompany you from the first consultation to the
   final and complete installation of your project. In time and always, service-oriented.
 de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste, achtsame
-  und konstruktive Haltung, unsere Neugier für Ihre Idee und die Motivation, Neugierde
-  und Leidenschaft mit der wir Sie begleiten, sind der Rückenwind und der rote Faden
-  unseres gelebten ganzheitlichen Ansatzes aus Gestaltung, Planung und Fertigung.
-  Wir sind ein familiengeführtes Unternehmen welches sich dem Design und solidem Handwerk
-  verschrieben hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert
-  einen hohen kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien
-  ermöglichen uns kurze und effiziente Arbeits- und Entscheidungswege um Ihr Projekt
-  aus einer Hand Wirklichkeit werden zu lassen. Wir haben den Anspruch Sie optimal
-  ab dem ersten Beratungsgespräch bis zum kompletten Einbau zu begleiten und setzten
-  für Sie eine termingerechte, serviceorientierte und einwandfreie Leistung um.
+  und konstruktive Haltung, unsere Neugier für Ihre Idee sowie die Motivation und
+  Leidenschaft mit der wir Sie begleiten, sind der Rückenwind und der rote Faden unseres
+  gelebten ganzheitlichen Ansatzes aus Gestaltung, Planung und Fertigung. Wir sind
+  ein familiengeführtes Unternehmen welches sich dem Design und solidem Handwerk verschrieben
+  hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert einen hohen
+  kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien ermöglichen
+  uns kurze und effiziente Arbeits- und Entscheidungswege um Ihr Projekt aus einer
+  Hand Wirklichkeit werden zu lassen. Wir haben den Anspruch Sie optimal ab dem ersten
+  Beratungsgespräch bis zum kompletten Einbau zu begleiten und setzten für Sie eine
+  termingerechte, serviceorientierte und einwandfreie Leistung um.
 meta_tags:
   de_title: Philosophie
   en_title: Philosophy
