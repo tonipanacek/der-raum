@@ -13,14 +13,13 @@ de_description: "In der Fertigung ist Ihr Projekt zu jeder Zeit in professionell
   - die gesamte Fertigung findet in unserer eigenen Manufaktur in Berlin statt.  \nUnser
   Schaffenscredo: exzellente Material- und Verarbeitungsqualität. Ihr Produkt: langlebige
   Qualitätsmöbel, die begeistern."
-en_description: 'In production, your project is in professional hands at all times,
-  maximum attention to each product, individual furniture, complete space-building
-  extensions or complex large-scale projects - we are your competent partner in the
-  implementation of the planning. A well-considered handle, a trained eye and the
-  use of modern production technology such as CNC milling and pressing machines are
-  the services of a highly qualified team of carpenters and specialist trades - the
-  entire production takes place in our own factory in Berlin. Our creative credo:
-  Excellent material and processing quality. Your product: durable, quality furniture
-  that inspires.'
+en_description: 'During production, your project is in professional hands at all times.
+  We dedicate our attention to each product, piece of furniture, space-building extensions,
+  and/or complex large-scale projects. We are your capable partner in the production
+  process. A well-considered handle, a trained eye, and the use of modern production
+  technology such as a CNC mill and pressing machines complete the myriad of services
+  our highly qualified team of carpenters and specialist trades have to offer in our
+  Berlin-based factory. Our creative credo: Excellent material and processing efficiency.
+  Your product: durable quality furniture that inspires.'
 
 ---
