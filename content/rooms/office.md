@@ -10,11 +10,11 @@ de_description: |-
 
   Ihre Bedürfnisse sind abhängig von Ihrem Tätigkeitsfeld und Ihren individuellen Vorlieben. Speziell für Ihre Räumlichkeiten geschaffene Büromöbel und Designs erhöhen den Wohlfühlfaktor und tragen positiv zu einer ausgewogenen Work-Life-Balance bei. Individuelle Büromöbel bringen eine persönliche Note an Ihren Arbeitsplatz und sind optimal auf Ihre Nutzung abgestimmt.
 en_description: |-
-  The working world is changing, the boundaries between work and leisure are becoming increasingly blurred. The office is the space in which you should always find focus, regardless of whether you work in your own four walls or in an office building.
+  The working world is changing; the boundaries between work and leisure are becoming increasingly blurred. Your office is a space where you should always find focus regardless of whether your work is within your own four walls or outside in an office building.
 
-  Exclusive, high-quality office furniture and interior fittings that meet your individual needs can help you to keep a cool head even in challenging moments. The properties of the walls and ceiling can play a major role in promoting certain cognitive moods. Optimally used light has been proven to promote concentration. An appropriately dimensioned memo board can become your source of inspiration, and an acoustic solution that is tailored to the interior becomes a boon to success. A functional and well-designed desk enables you to find everything you need with ease.
+  Exclusive, high-quality office furniture and interior fittings that meet your individual needs can help you to keep a cool head even in the most challenging moments. The material qualities of the walls and ceilings can play a major role in maintaining certain cognitive moods. While optimized light orientation has been proved to promote concentration, a proportionately positioned memo board can be a source of inspiration, and an acoustic solution tailored to the interior can become the key to success. Most importantly, a functional, well-designed desk will enable you to find everything you need intuitively.
 
-  Your needs depend on your profession and your individual preferences. We create designs of your office furniture specially tailored to your premises. The design aims to increase the feel-good factor and contribute positively to a healthy work-life balance. Individualized office furniture brings a personal touch to your workplace.
+  Your needs depend on your profession and your individual preferences. We create designs for your office specifically tailored to your premises. Design claims to increase the feel-good factor and contributes positively to a healthy work-life balance. Ultimately, individualized office furniture that brings a personal touch to your home office.
 position: 3
 meta_tags:
   de_title: Arbeitsbereich, Büro, Arbeitszimmer, Büromöbel
