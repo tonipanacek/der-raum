@@ -44,8 +44,8 @@ sections:
   match: "**/*"
   new_doc_ext: json
 upload_dir: ''
-public_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto/f_auto
-front_matter_path: ''
+public_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
+front_matter_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
 use_front_matter_path: false
 file_template: ":filename:"
 build:
