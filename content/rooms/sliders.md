@@ -10,11 +10,11 @@ de_description: |-
 
   Wir entwickeln mit Ihnen gemeinsam verschiedene Lösungen, die Sie flexibel und dauerhaft in Ihrer Immobilie zum Einsatz bringen können.
 en_description: |-
-  Flexibility in work, dynamic change - that means being agile, which means more and more demands on individual rooms and structures in our daily life. Room solutions can adapt to this constant change, so you don’t have to tear down walls. We offer custom-made sliding doors and room dividers providing maximum flexibility and an added aesthetical value to your rooms. You can redefine your interior design and partition your space according to your personal taste.
+  Flexibility in work means dynamic change. Agility indoors demands more from individual rooms and structures in our daily life. We advocate for room solutions that adapt to dynamic change, so that your walls don’t get worn down. We offer custom-made sliding doors and room dividers that provide maximum flexibility, while adding aesthetic value to your rooms. You are free to redefine your interior space and partition it according to your personal taste.
 
-  Do you have an idea and would like to get expert advice before placing your order? We specialize in exclusive interior design and are happy to be of service. We have extensive experience in all types of room dividers, e.g. simple sliding doors made of wood, elaborate wall cladding, well thought-out wall panels, or high-quality wall paneling.
+  Do you have an idea and would like to get expert advice on before placing your order? We specialize in personalized interior design and are happy to be of service. We have extensive experience in all types of room dividers, e.g. simple sliding doors made of wood, elaborate wall cladding, well thought-out wall panels, or high-quality wall paneling.
 
-  We work with you to develop various solutions that you can use flexibly and/or permanently in your home.
+  We will work with you to develop various solutions that you can use flexibly and/or permanently in your home.
 position: 5
 meta_tags:
   de_title: Raumteiler, Schiebetür nach Maß, Wandpaneele, Wandverkleidungen
