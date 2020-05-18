@@ -5,14 +5,15 @@ image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068496/Team-DER-RA
 en_title: Team
 de_title: Team
 en_description: Our team comes from various professional backgrounds with different
-  experiences. Design and craftmanship are closely intertwined, they go hand in hand.
-  Our team consists of carpenters, wood technicians, product and interior designers
-  as well as architects. Together we can provide the most sophisticated, aesthetically
-  pleasing and individualized solutions. You will benefit from our interdisciplinary
-  collective and holistic approach. We strongly believe in the power of synergies
-  and the exchange across professional boundaries. This is how we create unique products
-  that work flawlessly and fulfill the highest standards of structure, function and
-  durability. Our products combine timeless design and our collective vision.
+  experiences. Design and craftsmanship go hand and hand; we make sure this relationship
+  remains intact. Our teach consists of carpenters, wood technicians, product and
+  interior designers as well as architects. Working together, we provide the most
+  sophisticated, aesthetically pleasing, and individualized solutions. You will be
+  satisfied with our interdisciplinary collective and holistic approach. We strongly
+  believe in the power of synergy and mutual exchange across professional boundaries.
+  This is how we create unique products that work flawlessly and fulfill the highest
+  standards of structure, function, and durability. Our products are born out of timeless
+  design and our collective vision.
 de_description: Unser Team bringt bewusst unterschiedliche berufliche Hintergründe
   und Erfahrung mit. Design und Handwerk greifen bei uns eng zusammen und gehen Hand
   in Hand. Als Team vom klassischen Tischler / Schreiner über Holztechniker bis hin
