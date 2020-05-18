@@ -8,9 +8,9 @@ de_description: |-
 
   Gönnen Sie sich ein Design Schlafzimmer, in dem Sie die Ruhe finden, die Sie nach einem ereignisreichen Tag brauchen. Ein Bett nach Maß mit ausreichend Beinfreiheit, ein vom Schlafbereich separierter, begehbarer Kleiderschrank oder ein dezenter Einbauschrank, in dem Unterhaltungselektronik aus Ihrem Sichtfeld verschwindet – all das und weit mehr kann ein Luxus Schlafzimmer bieten. Wir realisieren aufwändige und hochwertige Schlafzimmer mit hohen Anforderungen, integrieren Bäder oder fertigen exklusiv für Sie designte Betten.
 en_description: |-
-  Did you know that you spend almost a third of your life in the bedroom? Sleep is essential for our health. For many people, sleep has become a valuable luxury. Conscious behavior and individualized interior design can positively affect the quality and duration of your sleep.
+  Did you know that you spend almost a third of your life in the bedroom? Sleep is essential for our health. For many people, sleep has become a luxury. Individualized interior design paired with conscious behavior can have positive effects on the quality and duration of your sleep.
 
-  Treat yourself to a design-bedroom where you will find the peace you deserve after an eventful day – be it a custom-made bed with sufficient legroom, a walk-in closet separate from the sleeping area, or a decentralized built-in closet in which your entertainment electronics disappear. We manufacture complex, high-quality bedrooms fulfilling your every requirement, integrated bathrooms, or exclusive beds specially designed for you.
+  So, treat yourself to the design-bedroom of your dreams where you can find the peace you deserve after an eventful day. Be it a custom bed with sufficient legroom, a walk-in closet separate from your sleeping area, or a decentralized built-in shelf into which your entertainment devises can disappear. We create complex, high-quality bedrooms that fulfill your every need from integrated bathrooms to customized beds, specifically for you.
 position: 4
 meta_tags:
   de_title: Schlafzimmer, Einbauschrank, Ankleide, Bett nach Maß
