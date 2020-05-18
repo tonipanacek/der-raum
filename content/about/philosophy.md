@@ -4,15 +4,16 @@ title: Philosophy
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068331/Philosophie-Manufaktur-Tischler-Schreiner_zs856h.jpg
 en_title: Philosophy
 de_title: Philosophie
-en_description: Do we need a philosophy? We say yes. Our conscious, attentive and
-  constructive outlook, our curiosity for your ideas, as well as our motivation and
-  passion are the driver for and the common thread in our holistic approach of design,
-  planning and production. We are a family-run company that is committed to design
-  and solid craftsmanship. Working together in interdisciplinary teams guarantees
-  high creative standards. Our holistic approach and flat hierarchies facilitate short
-  and efficient decision-making processes. This way we can implement all steps of
-  your project inhouse. We aim to accompany you from the first consultation to the
-  final and complete installation of your project. In time and always, service-oriented.
+en_description: Do we need a philosophy? We say yes. Our conscious, attentive, and
+  constructive outlook; our curiosity for your ideas, as well as our motivation and
+  passion are the driving forces of and the thread that binds our holistic approach
+  of design, planning, and production. We are a family-run company that is committed
+  to design and solid craftsmanship. We work in interdisciplinary teams to guarantee
+  high creative standards. Our holistic approach eliminates hierarchies to facilitate
+  efficient decision-making processes. This allows us to implement the entirety of
+  your project in-house. We intend to accompany you from the first consultation, the
+  complete installation, to the final touches of your project. We are here to provide
+  a timely, results-oriented, flawless service for you.
 de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste, achtsame
   und konstruktive Haltung, unsere Neugier für Ihre Idee sowie die Motivation und
   Leidenschaft mit der wir Sie begleiten, sind der Rückenwind und der rote Faden unseres
