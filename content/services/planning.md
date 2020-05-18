@@ -13,7 +13,7 @@ de_description: "An die individuelle Gestaltung schließt sich die Umsetzung im 
   ästhetisch, technisch und funktional die Gestaltung einer finalen Kontrolle zu unterziehen
   und somit für ein rundum begeisterndes Ergebnis zu sorgen."
 en_description: |-
-  The individual design process is seamlessly followed by its implementation. With a highly motivated, well-coordinated team of designers, our own carpentry manufacturer, and in cooperation with architects, we put your living space vision into reality. In the planning phase, accompanied by your personal contact person, we prepare on-time and precise production of your tailor-made design from a single source.
+  A highly motivated, well-coordinated team of designers work with our own carpentry manufacturer and in cooperation with architects to realize your vision of your living space as seamlessly as possible. During the planning phase, you will be guided by a personal contact person as we fulfill on-time and precise production.
 
   Our claim: To put the design to a final test based on technical and functional rigor so that you are thrilled with the result.
 
