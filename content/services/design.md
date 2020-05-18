@@ -15,14 +15,14 @@ de_description: Ihre Idee ist unser kreatives Sprungbrett zur Umsetzung für unk
   im Entwurf, dann als detailgetreue Visualisierung präzisieren. Wir entwickeln gemeinsam
   mit Ihnen bereits vor der Planung den kreativen Prozess.
 en_description: Your idea is our creative starting point for the implementation of
-  unconventional and demanding projects in interior architecture and design. Robust
-  spatial structures, furnishings and furniture planning form the guiding principles
-  for our practice of holistic production. We are a design-oriented team with different
-  focuses and a “keen eye” for current trends in materials and design. We continuously
-  include new materials and approaches in our design process. On the basis of an initial
-  sketch and with your input, we select inspiring material combinations and then develop
-  an initial a draft of the design, concluded with a detailed visualization. Together
-  with you, we develop the creative process, even before planning.
+  unusual and complex projects in interior design and architecture. Robust spatial
+  elements, furnishings, and furniture planning form the guiding principles of our
+  holistic practice. We are a design-oriented team with diverse interests and an eye
+  for current trends in materials and composition. We consistently add new materials
+  and approaches to our process. Based on an initial sketch with your input, we select
+  interesting material combinations. We then develop an initial draft of the design,
+  which is finalized with a detailed visualization. This collaborative process begins
+  with creativity and is planned with your vision in mind.
 meta_tags:
   de_title: ''
   en_title: ''
