@@ -46,7 +46,7 @@ sections:
 upload_dir: ''
 public_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
 front_matter_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
-use_front_matter_path: false
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_output_directory: src/dist
