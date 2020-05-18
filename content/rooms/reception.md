@@ -12,13 +12,13 @@ de_description: |-
 
   Als Planer und Gestalter stehen wir Ihnen bei all Ihren Ideen und Wünschen unterstützend und beratend zur Seite. Gemeinsam mit Ihnen entwickeln wir, selbst auf kleinem Raum, die optimale Lösung.
 en_description: |-
-  Anyone who has ever been a guest with friends or business partners and felt immediately comfortable, almost at home, knows that the first impression and a feeling of good company is already formed in the reception area of your home.
+  A first impression is often the most lasting impression. When you step into in a friend’s or business partners’ home, the feeling of good company and comfort can already be formed in the reception area of your home.
 
-  A warm welcome and additional storage space for jackets and coats, umbrella stands, storage for bags and shoes can win you the sympathy of your guests. A clear, aesthetically pleasing but also functional composition of your reception area provides the space for friendly encounters. Your own wardrobe can be stored in a separate built-in closet.
+  A warm welcome combined with additional storage space for coats, shoes, bags, and even umbrella stands can immediately impress your guests. Not only clear and aesthetically pleasing, such a functional composition of your reception area can provide space for friendly conversation. With your own wardrobe stored in a separate built-in closet, a well-deigned visual axis can direct your guests’ gaze to fresh flowers or art instead.
 
-  If sufficient space is available, extra seating has proven itself advisable. This increases the comfort of your guests and makes it easier to take shoes off and on. Perhaps there is also the possibility of a key panel in the planning. We can also offer to conceal electric distributors behind a custom-fit furniture front.
+  If sufficient space is available, entry-way seating has proved itself indispensable. Seating can improve the comfort of your guests and makes it easier to change in and out of shoes. If the space allows, there is also the possibility of adding a key panel or concealing electric cables behind a customized furniture front.
 
-  We as planners and designers will support you with all your ideas and work with you to develop the optimal solution, even in the smallest of spaces.
+  We as designers and planners will support you all of your ideas and work with you to develop an optimized solution, even in the smallest of spaces.
 position: 6
 meta_tags:
   de_title: Empfangsbereich, Eingangsbereich, Foyer
