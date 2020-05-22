@@ -104,6 +104,7 @@ export default {
     }
   }
   .nav-items {
+    padding-left: 0;
     li:first-child {
       a {
         margin-top: 0;
