@@ -1,7 +1,7 @@
 ---
 position: 3
 title: Production
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068243/Fertigung-Tischlerei-Schreinerei_web_f3zoj3.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1581068243/Fertigung-Tischlerei-Schreinerei_web_f3zoj3.jpg
 de_title: Fertigung
 en_title: Production
 de_description: "In der Fertigung ist Ihr Projekt zu jeder Zeit in professionellen

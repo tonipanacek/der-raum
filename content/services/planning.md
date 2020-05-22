@@ -1,7 +1,7 @@
 ---
 position: 2
 title: Planning
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068217/Planung-Zeichnung-Projektplanung-Architektur_pppc0z.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1581068217/Planung-Zeichnung-Projektplanung-Architektur_pppc0z.jpg
 de_title: Planung
 en_title: Planning
 de_description: "An die individuelle Gestaltung schließt sich die Umsetzung im Innenausbau
