@@ -2,7 +2,7 @@
   <Container id="contact">
     <Article class="contact">
       <div class="image-container">
-        <Frame :image="$t('contact.cloudinaryImageUrl')">
+        <Frame :source="$t('contact.cloudinaryImageUrl')">
           <!-- <img :src="$t('contact.cloudinaryImageUrl')"> -->
         </Frame>
       </div>

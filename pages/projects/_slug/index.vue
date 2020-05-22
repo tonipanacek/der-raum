@@ -54,7 +54,6 @@ import { get, sortBy, isEmpty, chunk, isEqual, flatten, uniq, kebabCase } from '
 import paginate from '~/plugins/paginate'
 import dynamicSEO from '~/plugins/dynamic_seo'
 import Container from "~/components/Container"
-import Frame from "~/components/Frame"
 import ProgressBar from "~/components/ProgressBar"
 import ImagesList from "~/components/ImagesList"
 
@@ -197,8 +196,7 @@ export default {
   components: {
     Container,
     ProgressBar,
-    ImagesList,
-    Frame
+    ImagesList
   }
 }
 </script>

@@ -13,7 +13,7 @@
         @mouseleave.native="hover = ''"
       >
         <div class="image-container">
-          <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" />
+          <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" loading="eager"/>
           <p class="service-title">
             {{ $ta(service.attributes, 'title') }}
           </p>
@@ -43,7 +43,6 @@
 </template>
 
 <script>
-import Frame from '~/components/Frame'
 import Container from '~/components/Container'
 import seo from '../content/data/seo.json'
 export default {
@@ -54,7 +53,6 @@ export default {
     }
   },
   components: {
-    Frame,
     Container
   },
   props: {

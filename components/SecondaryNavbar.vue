@@ -63,7 +63,6 @@ export default {
       })
     },
     beforeEnter: function(el) {
-      console.log(this.pageNumber)
       el.style.opacity = 0
       el.style.transform = "translateY(-50%)"
       el.style.transition = "opacity 200ms ease, transform 200ms ease"

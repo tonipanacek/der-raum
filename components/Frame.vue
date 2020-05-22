@@ -1,5 +1,5 @@
 <template>
-  <div class="frame" :style="{'--n': n, '--d': d, 'background-image': 'url(' + image + ')'}">
+  <div class="frame" :style="{'--n': n, '--d': d, 'background-image': 'url(' + source + ')'}">
     <slot />
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
       type: Number,
       default: 16
     },
-    image: {
+    source: {
       type: String
     }
   }

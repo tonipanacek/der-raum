@@ -2,7 +2,7 @@
   <Container id="room">
     <Article>
       <div class="image-container">
-        <Frame :image="$tp('image')" :title="$tp('title')" :alt="$tp('description')">
+        <Frame :source="$tp('image')" :title="$tp('title')" :alt="$tp('description')">
           <PrevNextButtons :prev="prevLink" :next="nextLink" />
         </Frame>
       </div>
