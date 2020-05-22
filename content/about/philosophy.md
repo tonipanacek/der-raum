@@ -1,7 +1,7 @@
 ---
 position: 2
 title: Philosophy
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1581068331/Philosophie-Manufaktur-Tischler-Schreiner_zs856h.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068331/Philosophie-Manufaktur-Tischler-Schreiner_zs856h.jpg
 en_title: Philosophy
 de_title: Philosophie
 en_description: Do we need a philosophy? We say yes. Our conscious, attentive, and
