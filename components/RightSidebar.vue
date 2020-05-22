@@ -71,7 +71,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
 }
 @include respond-to('large') {
   .right-sidebar {
-    width: 50px;
+    width: 40px;
     position: relative;
     height: $main-height;
     margin: 0 2em;
