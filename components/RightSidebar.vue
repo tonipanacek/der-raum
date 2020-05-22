@@ -35,7 +35,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   background: white;
   padding: 0 2rem;
   margin-top: 2rem;
-  height: 12vh;
+  height: auto;
   overflow: hidden;
   a,
   a:hover,
@@ -54,6 +54,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .right-stack {
     margin-top: 0;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     flex-direction: initial;
@@ -90,6 +91,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   width: 80px;
   margin: 0 auto;
   height: 3rem;
+  align-items: flex-start;
   @include respond-to('large') {
     display: none;
   }
