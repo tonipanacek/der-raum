@@ -31,6 +31,11 @@
               <p class=" contact-link">{{ $t("contact.weekend") }}<span class="mobile2"></span> {{ $t("contact.weekendHours") }}</p>
             </div>
           </div>
+          <div class="info">
+            <h3>Application</h3>
+            <p>CV and Cover Letter</p>
+            <p>to kontakt@holz-raum.de</p>
+          </div>
         </div>
     </Article>
   </Container>
