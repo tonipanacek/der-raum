@@ -85,12 +85,6 @@ export default {
     }
   },
   methods: {
-    getTitle(attrs) {
-      return get(attrs, 'title', '')
-    },
-    getImageId(image) {
-      return this.$data.pages.indexOf(image) + 1
-    },
     handleHover(image) {
       this.hover = image.url
     },
@@ -109,7 +103,6 @@ export default {
       return index === 1 || index === 3 ? "portrait" : "landscape"
     },
     beforeEnter: function(el) {
-      el.classList.add('transition-hide')
       if (this.goingUp) {
         if (el.dataset.orientation === "portrait") {
           el.style.transform = "translateY(120%)"
@@ -127,18 +120,11 @@ export default {
     },
     enter: function(el, done) {
       setTimeout(() => {
-        // let delay = (parseInt(el.dataset.total) - parseInt(el.dataset.index) - 1) * 150
-        // if (this.goingUp) {
-        //   delay = parseInt(el.dataset.index) * 150
-        // }
         setTimeout(() => {
-          el.classList.remove('transition-hide')
-          el.classList.add('transition-show')
           el.style.transform = "translateY(0)"
         }, 0)
         done()
       }, 0)
-      el.classList.remove('transition-show')
     },
     leave: function(el, done) {
       done()
@@ -163,20 +149,6 @@ export default {
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
-.transition-hide {
-  // opacity: 0;
-}
-.transition-show {
-  opacity: 1;
-}
-
-.no-fade-enter-active, .no-fade-leave-active {
-  // transition: opacity .5s;
-  opacity: 1;
-}
-.no-fade-enter, .no-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 1;
-}
 // grid layout for big screens
 @include respond-to('large') {
   .images-grid {
