@@ -33,8 +33,7 @@
           </div>
           <div class="info">
             <h3>Application</h3>
-            <p>CV and Cover Letter</p>
-            <p>to kontakt@holz-raum.de</p>
+            <p class=" contact-link">{{ $t("contact.cvShort") }}</p>
           </div>
         </div>
     </Article>

@@ -33,7 +33,9 @@
     "weekend": "Saturday:",
     "weekendHours": "11:00-17:00",
     "thirdColumn": "Arrange Appointment",
-    "title": "Contact"
+    "title": "Contact",
+    "cvShort": "CV and Cover Letter to kontakt@holz-raum.de",
+    "cvLong": "To apply to the studio or the manufacture, please submit your CV and cover letter by email to kontakt@holz-raum.de"
   },
   "more-button": "More"
 }

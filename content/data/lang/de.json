@@ -34,7 +34,9 @@
     "tel": "030 393753 00",
     "tel2": "+49 176735647 42 (WhatsApp)",
     "email": "derraum@holz-raum.de",
-    "cloudinaryImageUrl": "https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg"
+    "cloudinaryImageUrl": "https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg",
+    "cvShort": "Lebenslauf und Bewerbungsschreiben an kontakt@holz-raum.de",
+    "cvLong": "Für eine Bewerbung bitte senden Sie ihren Lebenslauf und ein Bewerbungsschreiben an kontakt@holz-raum.de"
   },
   "more-button": "Mehr"
 }
