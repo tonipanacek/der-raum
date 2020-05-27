@@ -74,8 +74,8 @@ export default {
     flex-flow: row wrap;
     width: 100%;
     align-items: flex-start;
-    .info {
-      margin-right: 7%;
+    .info:not(:last-child) {
+      margin-right: 5%;
       margin-bottom: 10%;
       @include respond-to('large') {
         margin-bottom: 3%;
