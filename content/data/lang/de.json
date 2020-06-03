@@ -22,19 +22,22 @@
   },
   "contact": {
     "title": "Kontakt",
-    "firstColumn": "Showroom & Planungsstudio",
+    "cloudinaryImageUrl": "https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg",
+    "firstColumn": "Beratungstermin vereinbaren",
+    "telephone1": "030 393753 00",
+    "telephone2": "+49 176735647 42 (WhatsApp)",
+    "email": "derraum@holz-raum.de",
+    "secondColumn": "Showroom & Planungsstudio",
     "streetNumber": "Dunckerstraße 15",
     "cityZip": "10437 Berlin",
-    "secondColumn": "Online-Öffnungszeiten (ab 16.03)",
     "weekdays": "Montag-Freitag:",
     "weekdayHours": "10:00-18:00",
     "weekend": "Samstag:",
     "weekendHours": "11:00-17:00",
-    "thirdColumn": "Beratungstermin vereinbaren",
-    "tel": "030 393753 00",
-    "tel2": "+49 176735647 42 (WhatsApp)",
-    "email": "derraum@holz-raum.de",
-    "cloudinaryImageUrl": "https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg"
+    "thirdColumn": "Bewerbung & Jobs",
+    "cvLine1": "Lebenslauf und Bewerbungsschreiben",
+    "cvLine2": "an kontakt@holz-raum.de",
+    "cvLong": "Für eine Bewerbung bitte senden Sie ihren Lebenslauf und ein Bewerbungsschreiben an kontakt@holz-raum.de"
   },
   "more-button": "Mehr"
 }
