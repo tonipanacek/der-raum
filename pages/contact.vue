@@ -33,7 +33,7 @@
           <div class="info">
             <h3>{{ $t("contact.thirdColumn") }}</h3>
             <p class="no-margin">{{ $t("contact.cvLine1") }}</p>
-            <p class="no-margin">{{ $t("contact.cvLine2") }}</p>
+            <a href="mailto:kontakt@holz-raum.de" class=" contact-link email">{{ $t('contact.cvLine2')}} {{ $t('contact.cvEmail')}}</a>
           </div>
         </div>
     </Article>
