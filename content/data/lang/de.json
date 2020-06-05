@@ -35,9 +35,9 @@
     "weekend": "Samstag:",
     "weekendHours": "11:00-17:00",
     "thirdColumn": "Jobs & Bewerbung",
-    "cvLine1": "Lebenslauf mit Bewerbungsschreiben",
-    "cvLine2": "an",
-    "cvEmail": "kontakt@holz-raum.de",
+    "cvLine1": "Lebenslauf mit Bewerbungsschreiben an",
+    "cvLine2": "",
+    "cvEmail": "ausbildung@holz-raum.de",
     "cvLong": "Für eine Bewerbung bitte senden Sie ihren Lebenslauf und ein Bewerbungsschreiben an kontakt@holz-raum.de"
   },
   "more-button": "Mehr"
