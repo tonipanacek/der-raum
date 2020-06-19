@@ -8,7 +8,7 @@
         <div class="text">
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
-            <a href="mailto:derraum@holz-raum.de" class=" contact-link email">
+            <a :href="'mailto:' + $t('contact.email')" class=" contact-link email">
               {{ $t("contact.email") }}
             </a>
             <div class="justified">
@@ -33,7 +33,8 @@
           <div class="info">
             <h3>{{ $t("contact.thirdColumn") }}</h3>
             <p class="no-margin">{{ $t("contact.cvLine1") }}</p>
-            <a href="mailto:kontakt@holz-raum.de" class=" contact-link email">{{ $t('contact.cvLine2')}} {{ $t('contact.cvEmail')}}</a>
+            <p class="inlined">{{ $t('contact.cvLine2') }}<a :href="'mailto:' + $t('contact.cvEmail')" class=" contact-link email"> {{ $t('contact.cvEmail')}}
+            </a></p>
           </div>
         </div>
     </Article>
@@ -85,7 +86,7 @@ export default {
       &:last-child {
         width: 220px;
       }
-      a { font-size: .8em; }
+      a { font-size: .8rem; }
       h1, h2, h3 { margin: .75rem 0; }
       .email, .address { display: block; }
       .justified {
@@ -118,6 +119,9 @@ export default {
       .no-margin {
         margin-top: 0;
         margin-bottom: .5rem;
+      }
+      .inlined > a {
+        display: inline;
       }
       .hours {
         display: flex;

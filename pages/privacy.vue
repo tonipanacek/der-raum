@@ -65,7 +65,7 @@ export default {
       transition: color 500ms ease;
       text-decoration: none;
       color: color(light);
-      font-size: .85em;
+      font-size: .8rem;
       &:hover {
         color: color(dark);
       }

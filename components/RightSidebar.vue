@@ -59,11 +59,11 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     justify-content: space-between;
     flex-direction: initial;
     align-items: flex-end;
-    height: 2em;
+    height: 1rem;
     p {
       @include smallCaps;
       color: color(light);
-      font-size: 1em;
+      font-size: .6rem;
       writing-mode: horizontal-tb;
       margin: 0;
     }
@@ -74,7 +74,7 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     width: 40px;
     position: relative;
     height: $main-height;
-    margin: 0 2em;
+    margin: 0 2rem;
     padding: 0;
     .right-stack {
       margin-top: 0;
