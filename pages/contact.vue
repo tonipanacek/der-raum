@@ -8,7 +8,7 @@
         <div class="text">
           <div class="info">
             <h1>{{ $t("contact.firstColumn") }}</h1>
-            <a href="mailto:derraum@holz-raum.de" class=" contact-link email">
+            <a :href="'mailto:' + $t('contact.email')" class=" contact-link email">
               {{ $t("contact.email") }}
             </a>
             <div class="justified">
@@ -23,7 +23,7 @@
           <div class="info">
             <h2>{{ $t("contact.secondColumn") }}</h2>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
-              {{ $t("contact.streetNumber") }}<span class="white-space"></span>{{ $t("contact.cityZip") }}
+              {{ $t("contact.streetNumber") }}<span class="white-space"></span> {{ $t("contact.cityZip") }}
             </a>
             <div class="justified hours">
               <p class="no-margin">{{ $t("contact.weekdays") }}<span class="mobile1"></span> {{ $t("contact.weekdayHours") }}</p><span class="white-space"></span>
@@ -33,7 +33,8 @@
           <div class="info">
             <h3>{{ $t("contact.thirdColumn") }}</h3>
             <p class="no-margin">{{ $t("contact.cvLine1") }}</p>
-            <a href="mailto:kontakt@holz-raum.de" class=" contact-link email">{{ $t('contact.cvLine2')}} {{ $t('contact.cvEmail')}}</a>
+            <p class="inlined no-margin">{{ $t('contact.cvLine2') }}<a :href="'mailto:' + $t('contact.cvEmail')" class=" contact-link email"> {{ $t('contact.cvEmail')}}
+            </a></p>
           </div>
         </div>
     </Article>
@@ -75,9 +76,9 @@ export default {
     width: 100%;
     align-items: flex-start;
     .info{
-      margin-bottom: 10%;
+      margin-bottom: 7%;
       @include respond-to('large') {
-        margin-bottom: 3%;
+        margin-bottom: 2%;
       }
       &:not(:last-child) {
         margin-right: 5%;
@@ -85,7 +86,7 @@ export default {
       &:last-child {
         width: 220px;
       }
-      a { font-size: .8em; }
+      a, p { font-size: .8rem; }
       h1, h2, h3 { margin: .75rem 0; }
       .email, .address { display: block; }
       .justified {
@@ -93,10 +94,10 @@ export default {
         width: 100%;
         flex-wrap: wrap;
       }
-      .white-space { padding-right: 15px; }
-      .mobile1 { padding-right: 22.5px; }
+      .white-space { padding-right: 17px; }
+      .mobile1 { padding-right: 22px; }
       .mobile2 { padding-right: 58.5px; }
-      #tel1 { width:180px; }
+      #tel1 { width:190px; }
       #tel2 { width:90px; }
       @include respond-to('large') {
         .white-space { padding-right: 27.5px; }
@@ -118,6 +119,9 @@ export default {
       .no-margin {
         margin-top: 0;
         margin-bottom: .5rem;
+      }
+      .inlined > a {
+        display: inline;
       }
       .hours {
         display: flex;

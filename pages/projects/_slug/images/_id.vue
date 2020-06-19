@@ -309,7 +309,7 @@ margin: 0 auto;
       p {
         @include smallCaps;
         color: color(light);
-        font-size: 0.8em;
+        font-size: 0.8rem;
         margin-bottom: 0;
       }
       #image-count {
@@ -359,12 +359,7 @@ margin: 0 auto;
     }
   }
   .previous-btn {
-    -webkit-transform:rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-    margin-right: spacing(sm);
+    transform: scaleX(-1)
   }
   .no-next {
     visibility: hidden;

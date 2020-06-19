@@ -94,7 +94,7 @@ export default {
   }
   .text {
     display: block;
-    padding: 0 4em;
+    padding: 0 4rem;
     margin-top: 0;
     @include respond-to('large') {
       padding: 0;
@@ -104,7 +104,7 @@ export default {
     }
   }
   ul {
-    padding: 2em 0em;
+    padding: 2rem 0rem;
     list-style: none;
     margin: 0;
     @include respond-to('large') {
@@ -114,7 +114,7 @@ export default {
     }
     li {
       margin-left: 0;
-      font-size: .85em;
+      font-size: .85rem;
       display: block;
       line-height: 1.5rem;
       a {

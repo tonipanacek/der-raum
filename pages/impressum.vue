@@ -47,7 +47,7 @@ export default {
     padding: 0 2em;
     max-width: 1250px;
     margin: 0 auto;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     h1 {
       margin-top: 0;
       font-size: 1rem;
@@ -72,7 +72,7 @@ export default {
       transition: color 500ms ease;
       text-decoration: none;
       color: color(light);
-      font-size: .85em;
+      font-size: .8rem;
       &:hover {
         color: color(dark);
       }
