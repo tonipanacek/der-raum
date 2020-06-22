@@ -3,7 +3,7 @@ orientation: landscape
 page_position: 1
 page: 6
 title: Taube Blau
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592833977/Hochwertig-Kueche-Griffe-grau-design_sectty.jpg
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834090/Altbau-Kueche-Gold-Rahmenbauweise-grau_pvekw3.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834090/Altbau-Kueche-Gold-Rahmenbauweise-grau_pvekw3.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834107/Graue-Kueche-Goldene-Griffe-Rahmenbauweise-Shaker_wqihli.jpg
