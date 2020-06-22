@@ -17,8 +17,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834287/Kueche-Landhausstyle-Amerikanisch-klassisch_b1g4la.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834349/Hochwertig-Kueche-Griffe-grau-design_zmzss7.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834378/Kueche-Design-Armatur-Gold-Hochwertig-Luxus_vrcqvi.jpg
-en_title: Taube Blau
-de_title: Taube Blau
+en_title: 'Design: DER RAUM // Photos: Maximilian Gödecke'
+de_title: 'Gestaltung: DER RAUM // Photos: Maximilian Gödecke'
 en_description: Old country style kitchen
 de_description: Altbau Küche im Landhausstil
 meta_tags:
