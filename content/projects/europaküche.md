@@ -15,7 +15,7 @@ en_title: Europaküche
 de_description: 'Gestaltung: Siemens & Freunde von Freunden // Fotos: Axel Kranz'
 en_description: 'Design: Siemens & Freunde von Freunden // Photos: Axel Kranz'
 orientation: landscape
-page: 1
+page: 6
 page_position: 1
 meta_tags:
   de_title: Schwarzer Küchenblock in Loftstyle Design
