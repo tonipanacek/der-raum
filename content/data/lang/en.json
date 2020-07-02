@@ -14,31 +14,7 @@
     "impressum": "Legal",
     "privacy": "Privacy"
   },
-  "projects": {
-    "link": "Go to projects"
-  },
-  "legal": {
-    "title": "Legal Notice"
-  },
-  "contact": {
-    "title": "Contact",
-    "cloudinaryImageUrl": "https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg",
-    "firstColumn": "Arrange Appointment",
-    "telephone1": "030 393753 00",
-    "telephone2": "+49 176735647 42 (WhatsApp)",
-    "email": "derraum@holz-raum.de",
-    "secondColumn": "Showroom & Design Studio",
-    "streetNumber": "Dunckerstraße 15",
-    "cityZip": "10437 Berlin",
-    "weekdays": "Monday-Friday:",
-    "weekdayHours": "10:00-18:00",
-    "weekend": "Saturday:",
-    "weekendHours": "11:00-17:00",
-    "thirdColumn": "Jobs & Application",
-    "cvLine1": "CV and Cover Letter",
-    "cvLine2": "",
-    "cvEmail": "ausbildung@holz-raum.de",
-    "cvLong": "To apply to the studio or the manufacture, please submit your CV and cover letter by email to kontakt@holz-raum.de"
-  },
+  "landing-page-projects-link": "Go to projects",
+  "legal_title": "Legal Notice",
   "more-button": "More"
 }
