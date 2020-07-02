@@ -60,6 +60,9 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: initial;
     align-items: flex-end;
     height: 1rem;
+    @include respond-to('large') {
+      margin-bottom: 0rem;
+    }
     p {
       @include smallCaps;
       color: color(light);
