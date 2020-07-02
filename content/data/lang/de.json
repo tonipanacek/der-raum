@@ -1,20 +1,20 @@
 {
-  "navbar": {
+  "navbarTitles": {
     "projects": "Projekte",
     "services": "Leistungen",
     "about": "Über",
     "contact": "Kontakt",
     "rooms": "Räume"
   },
-  "secondaryNavbar": {
+  "secondaryNavbarTitles": {
     "businessPartner": "Business Partner",
     "press": "Press"
   },
-  "rightSidebar": {
+  "rightSidebarTitles": {
     "impressum": "Impressum",
     "privacy": "Datenschutz"
   },
-  "landing-page-projects-link": "Zu unseren Projekten",
-  "legal_title": "Impressum",
-  "more-button": "Mehr"
+  "landingPageProjectsLink": "Zu unseren Projekten",
+  "legalTitle": "Impressum",
+  "moreButton": "Mehr"
 }

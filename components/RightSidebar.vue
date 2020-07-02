@@ -8,9 +8,9 @@
         <nuxt-link :to="switchLocalePath('en')" hreflang="en" rel="alternate">En</nuxt-link>
       </p>
       <p>
-        <nuxt-link :to="localePath('impressum')">{{ $t("rightSidebar.impressum") }}</nuxt-link>
+        <nuxt-link :to="localePath('impressum')">{{ $t("rightSidebarTitles.impressum") }}</nuxt-link>
         /
-        <nuxt-link :to="localePath('privacy')">{{ $t("rightSidebar.privacy") }}</nuxt-link>
+        <nuxt-link :to="localePath('privacy')">{{ $t("rightSidebarTitles.privacy") }}</nuxt-link>
       </p>
     </div>
   </Stack>

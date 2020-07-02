@@ -1,20 +1,20 @@
 {
-  "navbar": {
+  "navbarTitles": {
     "projects": "Projects",
     "services": "Services",
     "about": "About",
     "contact": "Contact",
     "rooms": "Rooms"
   },
-  "secondaryNavbar": {
+  "secondaryNavbarTitles": {
     "businessPartner": "Business Partner",
     "press": "Press"
   },
-  "rightSidebar": {
+  "rightSidebarTitles": {
     "impressum": "Legal",
     "privacy": "Privacy"
   },
-  "landing-page-projects-link": "Go to projects",
-  "legal_title": "Legal Notice",
-  "more-button": "More"
+  "landingPageProjectsLink": "Go to projects",
+  "legalTitle": "Legal Notice",
+  "moreButton": "More"
 }

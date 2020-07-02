@@ -51,7 +51,7 @@ import json from "~/content/data/contact.json"
 export default {
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar.contact')}`
+      title: `${seo.shortTitle} | ${this.$t('navbarTitles.contact')}`
     }
   },
   nuxtI18n: {
