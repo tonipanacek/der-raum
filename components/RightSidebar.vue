@@ -8,9 +8,9 @@
         <nuxt-link :to="switchLocalePath('en')" hreflang="en" rel="alternate">En</nuxt-link>
       </p>
       <p>
-        <nuxt-link :to="localePath('impressum')">{{ $t("rightSidebar.impressum") }}</nuxt-link>
+        <nuxt-link :to="localePath('impressum')">{{ $t("rightSidebarTitles.impressum") }}</nuxt-link>
         /
-        <nuxt-link :to="localePath('privacy')">{{ $t("rightSidebar.privacy") }}</nuxt-link>
+        <nuxt-link :to="localePath('privacy')">{{ $t("rightSidebarTitles.privacy") }}</nuxt-link>
       </p>
     </div>
   </Stack>
@@ -60,6 +60,9 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: initial;
     align-items: flex-end;
     height: 1rem;
+    @include respond-to('large') {
+      margin-bottom: 0rem;
+    }
     p {
       @include smallCaps;
       color: color(light);

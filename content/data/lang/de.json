@@ -1,44 +1,20 @@
 {
-  "navbar": {
+  "navbarTitles": {
     "projects": "Projekte",
     "services": "Leistungen",
     "about": "Über",
     "contact": "Kontakt",
     "rooms": "Räume"
   },
-  "secondaryNavbar": {
+  "secondaryNavbarTitles": {
     "businessPartner": "Business Partner",
     "press": "Press"
   },
-  "rightSidebar": {
+  "rightSidebarTitles": {
     "impressum": "Impressum",
     "privacy": "Datenschutz"
   },
-  "projects": {
-    "link": "Zu unseren Projekten"
-  },
-  "legal": {
-    "title": "Impressum"
-  },
-  "contact": {
-    "title": "Kontakt",
-    "cloudinaryImageUrl": "https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776429/Kontakt-Beratung-Termin-Anfrage-Berlin_tkaqug.jpg",
-    "firstColumn": "Beratungstermin vereinbaren",
-    "telephone1": "030 393753 00",
-    "telephone2": "+49 176735647 42 (WhatsApp)",
-    "email": "derraum@holz-raum.de",
-    "secondColumn": "Showroom & Planungsstudio",
-    "streetNumber": "Dunckerstraße 15",
-    "cityZip": "10437 Berlin",
-    "weekdays": "Montag-Freitag:",
-    "weekdayHours": "10:00-18:00",
-    "weekend": "Samstag:",
-    "weekendHours": "11:00-17:00",
-    "thirdColumn": "Jobs & Bewerbung",
-    "cvLine1": "Lebenslauf mit Bewerbungsschreiben",
-    "cvLine2": "",
-    "cvEmail": "ausbildung@holz-raum.de",
-    "cvLong": "Für eine Bewerbung bitte senden Sie ihren Lebenslauf und ein Bewerbungsschreiben an kontakt@holz-raum.de"
-  },
-  "more-button": "Mehr"
+  "landingPageProjectsLink": "Zu unseren Projekten",
+  "legalTitle": "Impressum",
+  "moreButton": "Mehr"
 }

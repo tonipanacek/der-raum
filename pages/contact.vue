@@ -2,38 +2,38 @@
   <Container id="contact">
     <Article class="contact">
       <div class="image-container">
-        <Frame :source="$t('contact.cloudinaryImageUrl')">
+        <Frame :source="contact.imageUrl">
         </Frame>
       </div>
         <div class="text">
           <div class="info">
-            <h1>{{ $t("contact.firstColumn") }}</h1>
-            <a :href="'mailto:' + $t('contact.email')" class=" contact-link email">
-              {{ $t("contact.email") }}
+            <h1>{{ $ta(contact, "firstColumn") }}</h1>
+            <a :href="'mailto:' + contact.email" class=" contact-link email">
+              {{ contact.email }}
             </a>
             <div class="justified">
-              <a href="tel:017673564742" class="contact-link tel" id="tel1">
-                {{ $t("contact.telephone2") }}
+              <a :href="'tel:' + contact.telephone2.replace(/\s|\(WhatsApp\)|\+/g, '')" class="contact-link tel" id="tel1">
+                {{ contact.telephone2 }}
               </a><span class="white-space"></span>
-              <a href="tel:03039375300" class="contact-link tel" id="tel2">
-                {{ $t("contact.telephone1") }}
+              <a :href="'tel:' + contact.telephone1.replace(/\s/g, '')" class="contact-link tel" id="tel2">
+                {{ contact.telephone1 }}
               </a>
             </div>
           </div>
           <div class="info">
-            <h2>{{ $t("contact.secondColumn") }}</h2>
+            <h2>{{ $ta(contact, "secondColumn") }}</h2>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
-              {{ $t("contact.streetNumber") }}<span class="white-space"></span> {{ $t("contact.cityZip") }}
+              {{ contact.streetNumber }}<span class="white-space"></span> {{ cityZip }}
             </a>
             <div class="justified hours">
-              <p class="no-margin">{{ $t("contact.weekdays") }}<span class="mobile1"></span> {{ $t("contact.weekdayHours") }}</p><span class="white-space"></span>
-              <p class="no-margin">{{ $t("contact.weekend") }}<span class="mobile2"></span> {{ $t("contact.weekendHours") }}</p>
+              <p class="no-margin">{{ $ta(contact, "weekdays") }}<span class="mobile1"></span> {{ contact.weekdayHours }}</p><span class="white-space"></span>
+              <p class="no-margin">{{ $ta(contact, "weekend") }}<span class="mobile2"></span> {{ contact.weekendHours }}</p>
             </div>
           </div>
           <div class="info">
-            <h3>{{ $t("contact.thirdColumn") }}</h3>
-            <p class="no-margin">{{ $t("contact.cvLine1") }}</p>
-            <p class="inlined no-margin">{{ $t('contact.cvLine2') }}<a :href="'mailto:' + $t('contact.cvEmail')" class=" contact-link email"> {{ $t('contact.cvEmail')}}
+            <h3>{{ $ta(contact, "thirdColumn") }}</h3>
+            <p class="no-margin">{{ $ta(contact, "cvLine1") }}</p>
+            <p class="inlined no-margin"><a :href="'mailto:' + contact.cvEmail" class=" contact-link email"> {{ contact.cvEmail }}
             </a></p>
           </div>
         </div>
@@ -46,11 +46,12 @@ import Container from '~/components/Container'
 import Frame from '~/components/Frame'
 import Article from "~/components/Article"
 import seo from "~/content/data/seo.json"
+import json from "~/content/data/contact.json"
 
 export default {
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar.contact')}`
+      title: `${seo.shortTitle} | ${this.$t('navbarTitles.contact')}`
     }
   },
   nuxtI18n: {
@@ -63,6 +64,11 @@ export default {
     Container,
     Frame,
     Article
+  },
+  data() {
+    return {
+      contact: json
+    }
   }
 }
 </script>
