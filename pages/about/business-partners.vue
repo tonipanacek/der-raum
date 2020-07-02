@@ -97,6 +97,8 @@ export default {
     padding: 0 4rem;
     margin-top: 0;
     @include respond-to('large') {
+      width: 80%;
+      margin: 0 auto;
       padding: 0;
       h1 {
         display: none;
