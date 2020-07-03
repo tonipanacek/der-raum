@@ -47,7 +47,7 @@ export default {
   name: 'projectsIndex',
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbarTitles.projects')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
     }
   },
   nuxtI18n: {
