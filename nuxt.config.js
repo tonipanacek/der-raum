@@ -88,8 +88,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    "~/plugins/translate_page",
-    "~/plugins/markdown"
+    {src: "~/plugins/translate_page", ssr: true},
+    {src: "~/plugins/markdown", ssr: true},
+    {src: "~/plugins/directives", ssr: false},
   ],
   /*
    ** Nuxt.js dev-modules
