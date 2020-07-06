@@ -25,7 +25,7 @@
           @mouseover.native="hover = 'projects'"
           @mouseleave.native="hover = ''"
           :to="localePath({ name: 'projects' })">
-          {{ $t("landingPageProjectsLink") }}
+          {{ $t("landing_page_projects_link") }}
         </NuxtLink>
       </div>
     </div>
@@ -36,7 +36,7 @@
         @mouseleave.native="hover = ''"
         :to="localePath({ name: 'projects' })"
       >
-        {{ $t("landingPageProjectsLink") }}
+        {{ $t("landing_page_projects_link") }}
       </NuxtLink>
     </div>
   </Container>
