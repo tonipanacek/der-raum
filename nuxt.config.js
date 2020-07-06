@@ -16,17 +16,21 @@ function loadPages (enPrefix, dePrefix) {
 
   pages = pages.map(page => {
     // give back the pages urls as strings in both languages
-    if (enPrefix === 'services' || enPrefix === 'about') {
-      return [
-        `/${dePrefix}#${kebabCase(get(page, 'meta.de_title', ''))}`,
-        `en/${enPrefix}#${kebabCase(get(page, 'meta.en_title', ''))}`
-      ]
-    } else {
-      return [
-        `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
-        `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
-      ]
-    }
+    return [
+      `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
+      `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
+    ]
+    // if (enPrefix === 'services' || enPrefix === 'about') {
+    //   return [
+    //     `/${dePrefix}#${kebabCase(get(page, 'meta.de_title', ''))}`,
+    //     `en/${enPrefix}#${kebabCase(get(page, 'meta.en_title', ''))}`
+    //   ]
+    // } else {
+    //   return [
+    //     `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
+    //     `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
+    //   ]
+    // }
   })
 
   return flatten(pages)
@@ -62,9 +66,9 @@ export default {
 
       return [
         ...loadPages('projects', 'projekte'),
-        ...loadPages('services', 'leistungen'),
-        ...loadPages('rooms', 'raume'),
-        ...loadPages('about', 'uber')
+        // ...loadPages('services', 'leistungen'),
+        ...loadPages('rooms', 'raume')
+        // ...loadPages('about', 'uber')
       ]
     }
   },
