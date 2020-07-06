@@ -10,27 +10,27 @@
         <ul class="nav-items">
           <li>
             <nuxt-link :to="localePath({ name: 'projects' })" class="nav-item title link">
-              {{ $t("navbarTitles.projects") }}
+              {{ $t("navbar_titles.projects") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link :to="localePath({ name: 'services' })" class="nav-item title">
-              {{ $t("navbarTitles.services") }}
+              {{ $t("navbar_titles.services") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link :to="localePath({ name: 'rooms' })" class="nav-item title">
-              {{ $t("navbarTitles.rooms") }}
+              {{ $t("navbar_titles.rooms") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link :to="localePath({ name: 'about' })" class="nav-item title">
-              {{ $t("navbarTitles.about") }}
+              {{ $t("navbar_titles.about") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link :to="localePath({ name: 'contact' })" class="nav-item title">
-              {{ $t("navbarTitles.contact") }}
+              {{ $t("navbar_titles.contact") }}
             </nuxt-link>
           </li>
         </ul>

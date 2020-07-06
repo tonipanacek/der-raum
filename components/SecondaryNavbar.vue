@@ -32,7 +32,7 @@
         @mouseover="handleHover('more')"
         @mouseleave="handleBlur"
       >
-        {{ $t("moreButton")}}+
+        {{ $t("more_button")}}+
       </li>
     </ul>
   </Stack>
