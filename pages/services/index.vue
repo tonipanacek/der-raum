@@ -1,6 +1,6 @@
 <template>
   <Container id="services">
-    <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(page.attributes, 'title'))">
+    <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
       <div class="image-container">
         <Frame :source="$ta(service.attributes, 'image')" :title="$ta(service.attributes,'title')" :alt="$ta(service.attributes, 'description')">
         </Frame>

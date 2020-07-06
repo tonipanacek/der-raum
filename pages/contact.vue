@@ -23,7 +23,7 @@
           <div class="info">
             <h2>{{ $ta(contact, "secondColumn") }}</h2>
             <a href="https://www.google.com/maps/search/?api=1&query=der%20raum" target="_blank" class="contact-link address">
-              {{ contact.streetNumber }}<span class="white-space"></span> {{ cityZip }}
+              {{ contact.streetNumber }}<span class="white-space"></span> {{ contact.cityZip }}
             </a>
             <div class="justified hours">
               <p class="no-margin">{{ $ta(contact, "weekdays") }}<span class="mobile1"></span> {{ contact.weekdayHours }}</p><span class="white-space"></span>
