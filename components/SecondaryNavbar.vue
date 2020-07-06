@@ -55,12 +55,21 @@ export default {
   methods: {
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
-      return this.localePath({
-        name: `${this.pagesPrefix}-slug`,
-        params: {
-          slug
-        }
-      })
+      if (this.pagesPrefix !== 'services') {
+        return this.localePath({
+          name: `${this.pagesPrefix}-slug`,
+          params: {
+            slug
+          }
+        })
+      } else {
+        return this.localePath({
+          name: `${this.pagesPrefix}-slug`,
+          params: {
+            slug
+          }
+        })
+      }
     },
     beforeEnter: function(el) {
       el.style.opacity = 0

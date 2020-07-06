@@ -1,10 +1,25 @@
 <template>
-  <div id="services" />
+  <Container id="services">
+    <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(page.attributes, 'title'))">
+      <div class="image-container">
+        <Frame :source="$ta(service.attributes, 'image')" :title="$ta(service.attributes,'title')" :alt="$ta(service.attributes, 'description')">
+        </Frame>
+      </div>
+      <div class="text">
+        <h1>{{ $ta(service.attributes, "title") }}</h1>
+        <p>{{ $ta(service.attributes, "description") }}</p>
+      </div>
+    </Article>
+  </Container>
 </template>
 
 <script>
 import { get, min, sortBy } from "lodash"
+import { mapActions } from "vuex"
 import seo from "~/content/data/seo"
+import Article from "~/components/Article"
+import Frame from '~/components/Frame'
+import Container from '~/components/Container'
 
 export default {
   nuxtI18n: {
@@ -13,9 +28,14 @@ export default {
       de: '/leistungen'
     }
   },
+  components: {
+    Article,
+    Frame,
+    Container
+  },
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar.rooms')}`
+      title: `${seo.shortTitle} | ${this.$t('navbarTitles.services')}`
     }
   },
   async asyncData() {
@@ -35,22 +55,11 @@ export default {
     }
   },
   mounted() {
-    const pages = this.$data.pages
-    const positions = pages.map(page =>
-      get(page, "attributes.position")
-    )
-    const minPosition = min(positions)
-    const page = pages.find(
-      page => get(page, "attributes.position") === minPosition
-    )
-    const slug = this.formatSlug(this.$ta(page.attributes, "title"))
-    const redirectPath = this.localePath({
-      name: "services-slug",
-      params: {
-        slug
-      }
-    })
-    this.$router.push(redirectPath)
+    this.setPages(this.$data.pages)
+    this.setPagesPrefix("services")
+  },
+  methods: {
+    ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
 </script>
