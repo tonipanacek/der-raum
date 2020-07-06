@@ -14,31 +14,23 @@ function loadPages (enPrefix, dePrefix) {
   // create context via webpack to map over all markdown pages
   let pages = parser(`./content/${enPrefix}`)
 
-  pages = pages.map(service => {
+  pages = pages.map(page => {
     // give back the pages urls as strings in both languages
-    return [
-      `/${dePrefix}/${kebabCase(get(service, 'meta.de_title', ''))}`,
-      `en/${enPrefix}/${kebabCase(get(service, 'meta.en_title', ''))}`
-    ]
+    if (enPrefix === 'services' || enPrefix === 'about') {
+      return [
+        `/${dePrefix}#${kebabCase(get(page, 'meta.de_title', ''))}`,
+        `en/${enPrefix}#${kebabCase(get(page, 'meta.en_title', ''))}`
+      ]
+    } else {
+      return [
+        `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
+        `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
+      ]
+    }
   })
 
   return flatten(pages)
 }
-
-// function loadImagePages (enPrefix, dePrefix) {
-//   // create context via webpack to map over all markdown pages
-//   let pages = parser(`./content/${enPrefix}`)
-
-//   pages = pages.map(service => {
-//     // give back the pages urls as strings in both languages
-//     return [
-//       `/${dePrefix}/${kebabCase(get(service, 'meta.de_title', ''))}`,
-//       `en/${enPrefix}/${kebabCase(get(service, 'meta.en_title', ''))}`
-//     ]
-//   })
-
-//   return flatten(pages)
-// }
 
 export default {
   mode: "universal",
