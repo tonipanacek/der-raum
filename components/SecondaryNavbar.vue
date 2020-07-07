@@ -1,24 +1,40 @@
 <template>
   <Stack class="navbar navbar-secondary">
     <ul>
-      <li
+      <template v-if="pagesPrefix === 'services' || pagesPrefix === 'about'">
+        <li v-for="(page, index) in sortedPages">
+          <a
+            :href="'#' + formatSlug($ta(page.attributes, 'title'))"
+            :class="{
+              'nav-item': true,
+              'title': true,
+              'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
+            }"
+            >
+            {{ $ta(page.attributes, "title") }}
+          </a>
+        </li>
+      </template>
+      <template v-else>
+        <li
         v-for="(page, index) in sortedPages"
         :key="$ta(page.attributes, 'title') + $i18n.locale"
         :data-index="index"
-      >
-        <nuxt-link
-          :class="{
-            'nav-item': true,
-            'title': true,
-            'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
-          }"
-          :to="path(page)"
-          @mouseover.native="handleHover($ta(page.attributes, 'title'))"
-          @mouseleave.native="handleBlur"
         >
-          {{ $ta(page.attributes, "title") }}
-        </nuxt-link>
-      </li>
+          <nuxt-link
+            :class="{
+              'nav-item': true,
+              'title': true,
+              'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
+            }"
+            :to="path(page)"
+            @mouseover.native="handleHover($ta(page.attributes, 'title'))"
+            @mouseleave.native="handleBlur"
+          >
+            {{ $ta(page.attributes, "title") }}
+          </nuxt-link>
+        </li>
+      </template>
       <li
         v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
         :class="{
