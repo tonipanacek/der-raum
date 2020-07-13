@@ -3,16 +3,25 @@
     <ul>
       <template v-if="pagesPrefix === 'services' || pagesPrefix === 'about'">
         <li v-for="(page, index) in sortedPages">
-          <a
+          <!-- <a
             :href="'#' + formatSlug($ta(page.attributes, 'title'))"
             :class="{
               'nav-item': true,
               'title': true,
-              'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
+              'active-anchor': activeAnchorLink(page)
             }"
             >
             {{ $ta(page.attributes, "title") }}
-          </a>
+          </a> -->
+          <nuxt-link
+            :class="{
+              'nav-item': true,
+              'title': true
+            }"
+            :to="'#' + path(page)"
+          >
+            {{ $ta(page.attributes, "title") }}
+          </nuxt-link>
         </li>
       </template>
       <template v-else>
@@ -69,15 +78,24 @@ export default {
     ...mapGetters(["sortedPages"])
   },
   methods: {
+    activeAnchorLink(page) {
+      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
+      console.log(slug)
+      slug === 'team'
+      // this.$route.hash.replace('#', '') === slug
+      // this.$route.hash === '#team'
+      // console.log(this.$route)
+    },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
-      if (this.pagesPrefix !== 'services') {
-        return this.localePath({
-          name: `${this.pagesPrefix}-slug`,
-          params: {
-            slug
-          }
-        })
+      if (this.pagesPrefix !== 'services' || this.pagesPrefix !== 'about') {
+        // return this.localePath({
+        //   name: `${this.pagesPrefix}-slug`,
+        //   params: {
+        //     slug
+        //   }
+        // })
+        return slug
       } else {
         return this.localePath({
           name: `${this.pagesPrefix}-slug`,
@@ -140,6 +158,10 @@ export default {
   }
   .more {
     cursor: pointer;
+  }
+  .active-anchor {
+    font-weight: 900;
+    color: color(black);
   }
 }
 </style>

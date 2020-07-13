@@ -2,7 +2,12 @@
   <Container id="services">
     <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
       <div class="image-container">
-        <Frame :source="$ta(service.attributes, 'image')" :title="$ta(service.attributes,'title')" :alt="$ta(service.attributes, 'description')">
+        <Frame
+          :source="$ta(service.attributes, 'image')"
+          :title="$ta(service.attributes,'title')"
+          :alt="$ta(service.attributes, 'description')"
+          :style="'background-position-y:' + $ta(service.attributes, 'image_crop')"
+          >
         </Frame>
       </div>
       <div class="text">
