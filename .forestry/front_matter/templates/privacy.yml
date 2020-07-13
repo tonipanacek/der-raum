@@ -1,0 +1,222 @@
+---
+label: Privacy
+hide_body: true
+fields:
+- type: field_group
+  name: de_intro
+  label: de_intro
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_intro
+  label: en_intro
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_officer
+  label: de_officer
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+  - type: list
+    name: list
+    label: list
+- type: field_group
+  name: en_officer
+  label: en_officer
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+  - type: list
+    name: list
+    label: list
+- type: field_group
+  name: de_google-analytics
+  label: de_google-analytics
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_google-analytics
+  label: en_google-analytics
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_facebook
+  label: de_facebook
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_facebook
+  label: en_facebook
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_serverlogs
+  label: de_serverlogs
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+  - type: list
+    name: list
+    label: list
+  - type: list
+    name: text2
+    label: text2
+- type: field_group
+  name: en_serverlogs
+  label: en_serverlogs
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+  - type: list
+    name: list
+    label: list
+  - type: list
+    name: text2
+    label: text2
+- type: field_group
+  name: de_cookies
+  label: de_cookies
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_cookies
+  label: en_cookies
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_contactform
+  label: de_contactform
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_contactform
+  label: en_contactform
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_provideinfo
+  label: de_provideinfo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_provideinfo
+  label: en_provideinfo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_security
+  label: de_security
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_security
+  label: en_security
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_ssl
+  label: de_ssl
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_ssl
+  label: en_ssl
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
