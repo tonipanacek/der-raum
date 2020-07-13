@@ -1,6 +1,7 @@
 ---
 title: Reception
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Empfangsbereich-modern-innen-Empfang_duiire.jpg
+image_crop: 25%
 de_title: Empfangsbereich
 en_title: Reception
 de_description: |-

@@ -2,7 +2,12 @@
   <Container id="room">
     <Article>
       <div class="image-container">
-        <Frame :source="$tp('image')" :title="$tp('title')" :alt="$tp('description')">
+        <Frame
+          :source="$tp('image')"
+          :title="$tp('title')"
+          :alt="$tp('description')"
+          :style="'backgroundPositionY:' + $tp('image_crop')"
+          >
           <PrevNextButtons :prev="prevLink" :next="nextLink" />
         </Frame>
       </div>
