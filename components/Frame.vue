@@ -30,8 +30,8 @@ export default {
   position: relative;
   background-size: cover;
   background-position-x: center;
-  background-position-y: center;
-  background-position: center;
+  // background-position-y: center;
+  // background-position: center;
   & /deep/ > * {
     overflow: hidden;
     position: absolute;

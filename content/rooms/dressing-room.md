@@ -2,6 +2,7 @@
 title: Dressing Room
 position: 7
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1585056992/Garderobe-Flurschrank-Eingangsbereich-Empfangsbereich_qrtamc.jpg
+image_crop: center
 de_title: Ankleidezimmer
 en_title: Dressing Room
 de_description: "Für viele Menschen entscheiden die ersten Minuten am Tag nicht nur
