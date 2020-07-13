@@ -8,9 +8,6 @@ fields:
 - type: text
   name: en_title
   label: en_title
-- type: file
-  name: image_url
-  label: image_url
 - name: image
   type: file
   config:
