@@ -97,6 +97,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+  #about > * {
+    margin-bottom: 200px;
+  }
+  #about .article:last-child {
+    margin-bottom: 0px;
+  }
 </style>
 

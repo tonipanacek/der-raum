@@ -63,3 +63,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  #services > * {
+    margin-bottom: 200px;
+  }
+  #services .article:last-child {
+    margin-bottom: 0px;
+  }
+</style>
