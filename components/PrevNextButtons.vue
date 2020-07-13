@@ -26,9 +26,44 @@ export default {
   // position: relative;
   height: 100%;
   width: 100%;
-  @include respond-to(large) {
-    display: none;
+  a,
+  a:visited,
+  a:focus {
+    .arrow {
+      z-index: z(sidebar);
+      height: 2rem;
+      width: 2rem;
+      fill: color(dark);
+      // @include respond-to(large) {
+      //   opacity: 0;
+      // }
+    }
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50vw;
+    padding: .5rem;
   }
+  .prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(-1)
+  }
+  .next {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+#image-gallery {
+  z-index: z(sidebar);
+  // position: relative;
+  height: 100%;
+  width: 100%;
   a,
   a:visited,
   a:focus {

@@ -2,8 +2,9 @@
 position: 2
 title: Planning
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068217/Planung-Zeichnung-Projektplanung-Architektur_pppc0z.jpg
-de_title: planung
-en_title: planning
+image_crop: 60%
+de_title: Planung
+en_title: Planning
 de_description: "An die individuelle Gestaltung schließt sich die Umsetzung im Innenausbau
   nahtlos an. Mit einem hochmotivierten, eingespielten Team aus Designern, unserer
   eigenen Tischlermanufaktur und optional in Zusammenarbeit mit Architekten setzten

@@ -8,7 +8,7 @@
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
         <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
-          <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" />
+          <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" id="image-gallery"/>
         </div>
         <div class="image-footer">
           <aside class="caption">
@@ -240,8 +240,19 @@ export default {
 
 <style lang="scss" scoped>
 #projects.image {
-max-width: 1250px;
-margin: 0 auto;
+  max-width: 1250px;
+  margin: 0 auto;
+  #prev-next-buttons {
+    a,
+    a:visited,
+    a:focus {
+      .arrow {
+        @include respond-to('large') {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
 .project {
   position: relative;

@@ -1,0 +1,132 @@
+---
+label: Legal Page
+hide_body: true
+fields:
+- type: field_group
+  name: de_contact
+  label: de_contact
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_contact
+  label: en_contact
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_tax
+  label: de_tax
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_tax
+  label: en_tax
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_links
+  label: de_links
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_links
+  label: en_links
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_disclaimer
+  label: de_disclaimer
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_disclaimer
+  label: en_disclaimer
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_photos
+  label: de_photos
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: en_photos
+  label: en_photos
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: text
+    label: text
+- type: field_group
+  name: de_website
+  label: de_website
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: text
+    label: text
+  - type: text
+    name: link
+    label: link
+- type: field_group
+  name: en_website
+  label: en_website
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: text
+    label: text
+  - type: text
+    name: link
+    label: link
+pages:
+- content/misc/Legal.md

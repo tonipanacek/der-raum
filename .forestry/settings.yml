@@ -35,6 +35,16 @@ sections:
   match: "**/*"
   templates:
   - text-and-multiple-images
+- type: directory
+  path: content/misc
+  label: Andere
+  create: all
+  match: "**/*"
+  templates:
+  - privacy
+  - legal-page
+  - contact-page
+  - text-with-links
 - type: heading
   label: Data
 - type: directory

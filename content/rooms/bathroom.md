@@ -1,6 +1,7 @@
 ---
 title: Bathroom
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1580464273/060_Badezimmer-Waschtisch-Badmoebel_nuu1kk.jpg
+image_crop: center
 de_title: Badezimmer
 en_title: Bathroom
 de_description: |-
