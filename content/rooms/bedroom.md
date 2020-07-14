@@ -25,6 +25,6 @@ meta_tags:
 
     Treat yourself to a design bedroom where you will find the peace you deserve after an eventful day. A bed made to measure with sufficient legroom, a walk-in closet separate from the sleeping area or a decentralized built-in closet in which the entertainment electronics disappear from your field of vision. We realize complex, high-quality bedrooms with high requirements and integrated bathrooms, or manufacture exclusive beds specially designed for you.
 image_crop_y: 75%
-image_crop_x: ''
+image_crop_x: center
 
 ---
