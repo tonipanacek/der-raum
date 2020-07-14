@@ -32,5 +32,7 @@ meta_tags:
     Hintergründe und Erfahrung mit
   en_description: Our team from Design Handwerk brings different professional backgrounds
     and experience
+image_crop_y: center
+image_crop_x: center
 
 ---
