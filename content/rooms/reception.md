@@ -30,5 +30,7 @@ meta_tags:
   en_description: |-
     As a host, you can win the sympathy of your guests with storage space for jackets and coats, umbrella stands, storage for bags and shoes. Your reception area will be a space for encounters thanks to a clear, aesthetic and at the same time functional design. Your wardrobe can be stored in separate and custom-fit wardrobes. Forward-looking visual axes direct your guests' eyes to art or fresh flowers.
     In addition, planning a seat with sufficient space proves its worth. This increases your and your guests' comfort and makes it easier to take shoes off and on. Perhaps there is also the possibility of a key panel in the planning. With our tailor-made and individually tailored fittings, even unsightly electrical distributors can be easily concealed.
+image_crop_y: 80%
+image_crop_x: center
 
 ---
