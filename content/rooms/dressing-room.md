@@ -35,5 +35,7 @@ meta_tags:
   en_title: Dressing room, dressing room, hall closet, cloakroom
   de_description: Ankleidezimmer, Ankleide, Flurschrank, Garderobe
   en_description: Dressing room, dressing room, hall closet, cloakroom
+image_crop_y: 55%
+image_crop_x: center
 
 ---
