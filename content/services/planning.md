@@ -17,5 +17,7 @@ en_description: |-
   A highly motivated, well-coordinated team of designers work with our own carpentry manufacturer and in cooperation with architects to realize your vision of your living space as seamlessly as possible. During the planning phase, you will be guided by a personal contact person as we fulfill on-time and precise production.
 
   Our claim: To put the design to a final test based on technical and functional rigor so that you are thrilled with the result.
+image_crop_y: 60%
+image_crop_x: center
 
 ---
