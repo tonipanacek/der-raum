@@ -36,5 +36,7 @@ meta_tags:
     on request. In addition, we design guest bathrooms that should be retrofitted
     or converted so that your visit always finds a sophisticated, functionally perfect
     bathroom.
+image_crop_y: center
+image_crop_x: center
 
 ---
