@@ -28,5 +28,7 @@ meta_tags:
     design. We are just as experienced with simple, custom-made wooden sliding doors
     as with elaborate design wall cladding, well-thought-out wall panels and high-quality
     wall paneling.
+image_crop_y: 75%
+image_crop_x: center
 
 ---
