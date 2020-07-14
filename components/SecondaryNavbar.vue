@@ -7,8 +7,8 @@
             :href="'#' + formatSlug($ta(page.attributes, 'title'))"
             :class="{
               'nav-item': true,
-              'title': true,
-              'active-anchor': activeAnchorLink(page)
+              'title': true
+              // 'active-anchor': activeAnchorLink(page)
             }"
             >
             {{ $ta(page.attributes, "title") }}

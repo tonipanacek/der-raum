@@ -40,7 +40,7 @@ export default {
   },
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbarTitles.services')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.services')}`
     }
   },
   async asyncData() {
