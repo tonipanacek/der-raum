@@ -3,25 +3,14 @@
     <ul>
       <template v-if="pagesPrefix === 'services' || pagesPrefix === 'about'">
         <li v-for="(page, index) in sortedPages">
-          <a
-            :href="'#' + formatSlug($ta(page.attributes, 'title'))"
-            :class="{
-              'nav-item': true,
-              'title': true
-              // 'active-anchor': activeAnchorLink(page)
-            }"
-            >
-            {{ $ta(page.attributes, "title") }}
-          </a>
-          <!-- <nuxt-link
-            :class="{
-              'nav-item': true,
-              'title': true
-            }"
-            :to="'#' + path(page)"
+          <nuxt-link
+            :id="page.attributes.title"
+            :key="page.attributes.title"
+            :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
+            :class="{ 'active': hover, hover: hover, 'nav-item': true, 'title': true }"
           >
             {{ $ta(page.attributes, "title") }}
-          </nuxt-link> -->
+          </nuxt-link>
         </li>
       </template>
       <template v-else>
