@@ -63,15 +63,30 @@ export default {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("services")
   },
+  computed: {
+    locale() {
+      return this.$i18n.locale;
+    }
+  },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])
+  },
+  watch: {
+    locale() {
+      const oldHash = this.$route.hash;
+      const newHash = // untranslate and retranslate to new locale
+      console.log(this)
+      this.$router.push({
+        hash: newHash
+      })
+    }
   }
 }
 </script>
 
 <style lang="scss">
   #services > * {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   #services .article:last-child {
     margin-bottom: 0px;

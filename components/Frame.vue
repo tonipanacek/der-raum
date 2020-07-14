@@ -29,7 +29,7 @@ export default {
   padding-bottom: calc(9 / 16 * 100%);
   position: relative;
   background-size: cover;
-  // background-position-x: center;
+  background-position-x: center;
   // background-position-y: center;
   // background-position: center;
   & /deep/ > * {

@@ -78,7 +78,6 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("about")
-    console.log(this.$i18n.locale)
   },
   computed: {
     locale() {
@@ -92,6 +91,7 @@ export default {
     locale() {
       const oldHash = this.$route.hash;
       const newHash = // untranslate and retranslate to new locale
+      console.log(this)
       this.$router.push({
         hash: newHash
       })
@@ -102,7 +102,7 @@ export default {
 
 <style lang="scss">
   #about > * {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   #about .article:last-child {
     margin-bottom: 0px;
