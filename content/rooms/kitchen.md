@@ -44,5 +44,7 @@ meta_tags:
     of life, we as interior designers and designers will develop the perfect design
     for you. Then our experienced carpenters / joiners produce those designs according
     to traditional and sustainable craftsmanship directly in Berlin.
+image_crop_y: center
+image_crop_x: center
 
 ---
