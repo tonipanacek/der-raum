@@ -1,3 +1,4 @@
+const observer = require('intersection-observer');
 const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
 const parser = require('md-yaml-json').default;
