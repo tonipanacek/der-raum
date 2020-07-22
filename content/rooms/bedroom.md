@@ -1,7 +1,6 @@
 ---
 title: Bedroom
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776656/Schlafzimmer-Bett-Ankleide-Schrank_gvuthe.jpg
-image_crop: 75%
 de_title: Schlafzimmer
 en_title: Bedroom
 de_description: |-

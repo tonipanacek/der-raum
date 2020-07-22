@@ -2,7 +2,6 @@
 position: 3
 title: Sustainability
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068432/Nachhaltigkeit-Wald-Natur-Umwelt-Holz_pv33ia.jpg
-image_crop: center
 en_title: Sustainability
 de_title: Nachhaltigkeit
 en_description: |-

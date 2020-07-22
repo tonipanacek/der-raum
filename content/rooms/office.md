@@ -1,7 +1,6 @@
 ---
 title: Office
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Buero-Bueromoebel-Schreibtisch-Office_z6wmlz.jpg
-image_crop: center
 de_title: Arbeitsbereich
 en_title: Office
 de_description: |-

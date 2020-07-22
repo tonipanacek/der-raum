@@ -1,7 +1,6 @@
 ---
 title: Sliders
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Schiebetuer-nach-Ma%C3%9F-Uebergroe%C3%9Fe_u69dez.jpg
-image_crop: 75%
 de_title: Raumteiler & Schiebetür
 en_title: Room divider & Slider
 de_description: |-
