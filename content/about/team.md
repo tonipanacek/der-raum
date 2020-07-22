@@ -2,7 +2,6 @@
 position: 1
 title: Team
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068496/Team-DER-RAUM-Beratung-Kontakt-Experten_grotnu.jpg
-image_crop: center
 en_title: Team
 de_title: Team
 en_description: Our team comes from various professional backgrounds with different
@@ -32,5 +31,7 @@ meta_tags:
     Hintergründe und Erfahrung mit
   en_description: Our team from Design Handwerk brings different professional backgrounds
     and experience
+image_crop_y: center
+image_crop_x: center
 
 ---

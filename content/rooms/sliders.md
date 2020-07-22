@@ -1,7 +1,6 @@
 ---
 title: Sliders
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Schiebetuer-nach-Ma%C3%9F-Uebergroe%C3%9Fe_u69dez.jpg
-image_crop: 75%
 de_title: Raumteiler & Schiebetür
 en_title: Room divider & Slider
 de_description: |-
@@ -28,5 +27,7 @@ meta_tags:
     design. We are just as experienced with simple, custom-made wooden sliding doors
     as with elaborate design wall cladding, well-thought-out wall panels and high-quality
     wall paneling.
+image_crop_y: 75%
+image_crop_x: center
 
 ---

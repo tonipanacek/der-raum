@@ -2,7 +2,6 @@
 title: Dressing Room
 position: 7
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1585056992/Garderobe-Flurschrank-Eingangsbereich-Empfangsbereich_qrtamc.jpg
-image_crop: center
 de_title: Ankleidezimmer
 en_title: Dressing Room
 de_description: "Für viele Menschen entscheiden die ersten Minuten am Tag nicht nur
@@ -35,5 +34,7 @@ meta_tags:
   en_title: Dressing room, dressing room, hall closet, cloakroom
   de_description: Ankleidezimmer, Ankleide, Flurschrank, Garderobe
   en_description: Dressing room, dressing room, hall closet, cloakroom
+image_crop_y: 55%
+image_crop_x: center
 
 ---

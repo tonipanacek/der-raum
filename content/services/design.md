@@ -2,7 +2,6 @@
 position: 1
 title: Design
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581067969/Gestaltung-Design-Materialien_web_xzs6ue.jpg
-image_crop: 25%
 de_title: Gestaltung
 en_title: Design
 de_description: Ihre Idee ist unser kreatives Sprungbrett zur Umsetzung für unkonventionelle
@@ -29,5 +28,7 @@ meta_tags:
   en_title: ''
   de_description: ''
   en_description: ''
+image_crop_y: center
+image_crop_x: center
 
 ---

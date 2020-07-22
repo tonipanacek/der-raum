@@ -1,7 +1,6 @@
 ---
 title: Kitchen
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Exklusive-hochwertige-Kueche-schwarz_bglfhp.jpg
-image_crop: center
 de_title: Küche
 en_title: Kitchen
 de_description: |-
@@ -44,5 +43,7 @@ meta_tags:
     of life, we as interior designers and designers will develop the perfect design
     for you. Then our experienced carpenters / joiners produce those designs according
     to traditional and sustainable craftsmanship directly in Berlin.
+image_crop_y: center
+image_crop_x: center
 
 ---

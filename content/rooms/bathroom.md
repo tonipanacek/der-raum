@@ -1,7 +1,6 @@
 ---
 title: Bathroom
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1580464273/060_Badezimmer-Waschtisch-Badmoebel_nuu1kk.jpg
-image_crop: center
 de_title: Badezimmer
 en_title: Bathroom
 de_description: |-
@@ -36,5 +35,7 @@ meta_tags:
     on request. In addition, we design guest bathrooms that should be retrofitted
     or converted so that your visit always finds a sophisticated, functionally perfect
     bathroom.
+image_crop_y: center
+image_crop_x: center
 
 ---

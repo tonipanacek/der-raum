@@ -27,6 +27,27 @@ fields:
     maxSize: 
   label: Image
   description: Solo image for the page
+- name: image_crop_y
+  type: text
+  config:
+    required: false
+  label: Image crop Y
+  description: If left blank, value will default to 'center'.<br>Positioning the image
+    on the Y-axis. Can use percentages to be specific or a generic 'center', 'top',
+    'bottom'<br>Be aware the 0% is the top of the image, so 75% would be the bottom
+    quarter.
+  default: center
+- name: image_crop_x
+  type: text
+  config:
+    required: false
+  label: Image crop X
+  description: If left blank, value will default to 'center'.<br>Positioning the image
+    on the X-axis. Can use percentages to be specific or a generic 'center', 'left',
+    'right'<br>Be aware the 0% is the left of the image, so 75% would be the right
+    quarter.<br>Most images are already their full width in the webpage, so adjusting
+    this crop probably won't affect the images much.
+  default: center
 - name: de_title
   type: text
   config:

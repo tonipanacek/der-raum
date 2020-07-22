@@ -1,7 +1,6 @@
 ---
 title: Bedroom
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776656/Schlafzimmer-Bett-Ankleide-Schrank_gvuthe.jpg
-image_crop: 75%
 de_title: Schlafzimmer
 en_title: Bedroom
 de_description: |-
@@ -24,5 +23,7 @@ meta_tags:
     Have you ever realized that you spend almost a third of your life in the bedroom? Sleep is essential for our health. For many people, sleep has become a valuable luxury. Because quality and duration of your sleep depend on numerous and sensitive factors, which you can positively influence with conscious behavior and an individual interior design.
 
     Treat yourself to a design bedroom where you will find the peace you deserve after an eventful day. A bed made to measure with sufficient legroom, a walk-in closet separate from the sleeping area or a decentralized built-in closet in which the entertainment electronics disappear from your field of vision. We realize complex, high-quality bedrooms with high requirements and integrated bathrooms, or manufacture exclusive beds specially designed for you.
+image_crop_y: 100%
+image_crop_x: center
 
 ---

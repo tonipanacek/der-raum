@@ -6,7 +6,7 @@
           :source="$ta(service.attributes, 'image')"
           :title="$ta(service.attributes,'title')"
           :alt="$ta(service.attributes, 'description')"
-          :style="'background-position-y:' + $ta(service.attributes, 'image_crop')"
+          :style="'background-position-y:' + $ta(service.attributes, 'image_crop_y')"
           >
         </Frame>
       </div>
