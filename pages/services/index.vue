@@ -29,8 +29,8 @@ import Container from '~/components/Container'
 export default {
   nuxtI18n: {
     paths: {
-      en: '/services',
-      de: '/leistungen'
+      en: '/services#design',
+      de: '/leistungen#gestaltung'
     }
   },
   components: {
@@ -62,6 +62,9 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("services")
+    if (!this.$route.hash) {
+      this.$router.push('#' + this.getTitle())
+    }
   },
   computed: {
     locale() {
@@ -69,24 +72,32 @@ export default {
     }
   },
   methods: {
+    getTitle() {
+      return this.formatSlug(get(this.pages, `[0].attributes[${this.locale}_title]`, ''))
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
   },
   watch: {
     locale() {
       const oldHash = this.$route.hash;
-      const newHash = // untranslate and retranslate to new locale
-      console.log(this)
-      this.$router.push({
-        hash: newHash
-      })
+      const oldLocale = this.locale === "de" ? "en" : "de";
+      // const newHash = this.inView.attributes[`${oldLocale}__title`]
+      // console.log(this)
+      // this.$router.push({
+        // hash: newHash
+      // })
+
+      console.log(this.$route.hash)
     }
   }
 }
 </script>
 
 <style lang="scss">
+  #services { margin-top: -2em; }
   #services > * {
     margin-bottom: 100px;
+    padding-top: 2em;
   }
   #services .article:last-child {
     margin-bottom: 0px;

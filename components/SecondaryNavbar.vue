@@ -7,7 +7,7 @@
             :id="page.attributes.title"
             :key="page.attributes.title"
             :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
-            :class="{ 'active': hover, hover: hover, 'nav-item': true, 'title': true }"
+            :class="{ 'nav-item': true, 'title': true }"
           >
             {{ $ta(page.attributes, "title") }}
           </nuxt-link>
