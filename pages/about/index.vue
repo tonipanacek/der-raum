@@ -78,6 +78,7 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("about")
+    this.scrollIntoView()
   },
   computed: {
     locale() {
@@ -85,27 +86,34 @@ export default {
     }
   },
   methods: {
+    getTitle(page) {
+      return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
+    },
+    scrollIntoView() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.$router.push({ hash: '#' + entry.target.id })
+          }
+        })
+      }, { threshold: 0.6});
+      const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
+      divs.forEach(div => observer.observe(div))
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
-  },
-  watch: {
-    locale() {
-      const oldHash = this.$route.hash;
-      const newHash = // untranslate and retranslate to new locale
-      console.log(this)
-      this.$router.push({
-        hash: newHash
-      })
-    }
   }
 }
 </script>
 
 <style lang="scss">
+  #about { margin-top: -2em; }
   #about > * {
     margin-bottom: 100px;
+    padding-top: 2em;
   }
   #about .article:last-child {
     margin-bottom: 0px;
+    padding-top: 0;
   }
 </style>
 

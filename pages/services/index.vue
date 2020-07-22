@@ -29,8 +29,8 @@ import Container from '~/components/Container'
 export default {
   nuxtI18n: {
     paths: {
-      en: '/services#design',
-      de: '/leistungen#gestaltung'
+      en: '/services',
+      de: '/leistungen'
     }
   },
   components: {
@@ -62,9 +62,7 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("services")
-    if (!this.$route.hash) {
-      this.$router.push('#' + this.getTitle())
-    }
+    this.scrollIntoView()
   },
   computed: {
     locale() {
@@ -72,23 +70,21 @@ export default {
     }
   },
   methods: {
-    getTitle() {
-      return this.formatSlug(get(this.pages, `[0].attributes[${this.locale}_title]`, ''))
+    getTitle(page) {
+      return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
+    },
+    scrollIntoView() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.$router.push({ hash: '#' + entry.target.id })
+          }
+        })
+      }, { threshold: 0.6});
+      const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
+      divs.forEach(div => observer.observe(div))
     },
     ...mapActions(["setPages", "setPagesPrefix"])
-  },
-  watch: {
-    locale() {
-      const oldHash = this.$route.hash;
-      const oldLocale = this.locale === "de" ? "en" : "de";
-      // const newHash = this.inView.attributes[`${oldLocale}__title`]
-      // console.log(this)
-      // this.$router.push({
-        // hash: newHash
-      // })
-
-      console.log(this.$route.hash)
-    }
   }
 }
 </script>
@@ -100,6 +96,7 @@ export default {
     padding-top: 2em;
   }
   #services .article:last-child {
-    margin-bottom: 0px;
+    // padding-top: 0;
+    margin-bottom: 1.5em;
   }
 </style>
