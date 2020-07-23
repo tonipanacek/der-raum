@@ -86,7 +86,8 @@ export default {
    */
   plugins: [
     "~/plugins/translate_page",
-    "~/plugins/markdown"
+    "~/plugins/markdown",
+    { src: '~/plugins/intersection_observer', ssr: false },
   ],
   /*
    ** Nuxt.js dev-modules

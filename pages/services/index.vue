@@ -77,10 +77,13 @@ export default {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            entry.target.style.opacity = 1
             this.$router.push({ hash: '#' + entry.target.id })
+          } else {
+            entry.target.style.opacity = 0.5
           }
         })
-      }, { threshold: 0.6});
+      }, { threshold: 0.5});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },

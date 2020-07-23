@@ -8,6 +8,7 @@
             :key="page.attributes.title"
             :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
             :class="{ 'nav-item': true, 'title': true }"
+            @click="handleAnchorClick(formatSlug($ta(page.attributes, 'title')))"
           >
             {{ $ta(page.attributes, "title") }}
           </nuxt-link>
@@ -63,36 +64,18 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage", "scrollToAnchor"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
-    activeAnchorLink(page) {
-      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
-      console.log(slug)
-      slug === 'team'
-      // this.$route.hash.replace('#', '') === slug
-      // this.$route.hash === '#team'
-      // console.log(this.$route)
-    },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
-      if (this.pagesPrefix !== 'services' || this.pagesPrefix !== 'about') {
-        // return this.localePath({
-        //   name: `${this.pagesPrefix}-slug`,
-        //   params: {
-        //     slug
-        //   }
-        // })
-        return slug
-      } else {
-        return this.localePath({
-          name: `${this.pagesPrefix}-slug`,
-          params: {
-            slug
-          }
-        })
-      }
+      return this.localePath({
+        name: `${this.pagesPrefix}-slug`,
+        params: {
+          slug
+        }
+      })
     },
     beforeEnter: function(el) {
       el.style.opacity = 0
@@ -122,7 +105,16 @@ export default {
     handleClick() {
       this.incrementPageNumber()
     },
-    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem', 'incrementPageNumber'])
+    handleAnchorClick(title) {
+      this.setScrollToAnchorItem(title)
+    },
+    ...mapActions([
+      'setHoveredMenuItem',
+      'unsetHoveredMenuItem',
+      'incrementPageNumber',
+      'setScrollToAnchorItem',
+      'unsetScrollToAnchorItem'
+    ])
   }
 }
 </script>
