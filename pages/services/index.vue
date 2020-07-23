@@ -20,7 +20,7 @@
 
 <script>
 import { get, min, sortBy } from "lodash"
-import { mapActions } from "vuex"
+import { mapActions, mapState } from "vuex"
 import seo from "~/content/data/seo"
 import Article from "~/components/Article"
 import Frame from '~/components/Frame'
@@ -67,7 +67,8 @@ export default {
   computed: {
     locale() {
       return this.$i18n.locale;
-    }
+    },
+    ...mapState(["anchorItem"])
   },
   methods: {
     getTitle(page) {
@@ -78,7 +79,9 @@ export default {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = 1
-            this.$router.push({ hash: '#' + entry.target.id })
+            // this.$router.push({ hash: '#' + entry.target.id })
+            this.setAnchorItem(entry.target.id)
+            this.addParamsToLocation(entry.target.id)
           } else {
             entry.target.style.opacity = 0.5
           }
@@ -87,7 +90,19 @@ export default {
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
-    ...mapActions(["setPages", "setPagesPrefix"])
+    addParamsToLocation(id) {
+      history.pushState(
+        {},
+        null,
+        this.$route.path +
+          '#' +
+          id
+      )
+    },
+    ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
+  },
+  destroyed() {
+    this.unsetAnchorItem()
   }
 }
 </script>
@@ -97,6 +112,9 @@ export default {
   #services > * {
     margin-bottom: 100px;
     padding-top: 2em;
+    .article {
+      transition: opacity 500ms ease;
+    }
   }
   #services .article:last-child {
     // padding-top: 0;

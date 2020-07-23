@@ -7,8 +7,7 @@
             :id="page.attributes.title"
             :key="page.attributes.title"
             :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
-            :class="{ 'nav-item': true, 'title': true }"
-            @click="handleAnchorClick(formatSlug($ta(page.attributes, 'title')))"
+            :class="{ 'nav-item': true, 'title': true, 'anchor': true }"
           >
             {{ $ta(page.attributes, "title") }}
           </nuxt-link>
@@ -55,7 +54,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from "vuex"
-import { get, isEmpty } from 'lodash'
+import { get, isEmpty, flatten } from 'lodash'
 import Stack from "~/components/Stack"
 
 export default {
@@ -64,7 +63,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage", "scrollToAnchor"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage", "anchorItem"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
@@ -76,6 +75,10 @@ export default {
           slug
         }
       })
+    },
+    activeAnchor(page) {
+      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
+      slug === this.$route.hash.replace('#', '')
     },
     beforeEnter: function(el) {
       el.style.opacity = 0
@@ -105,16 +108,23 @@ export default {
     handleClick() {
       this.incrementPageNumber()
     },
-    handleAnchorClick(title) {
-      this.setScrollToAnchorItem(title)
-    },
     ...mapActions([
       'setHoveredMenuItem',
       'unsetHoveredMenuItem',
-      'incrementPageNumber',
-      'setScrollToAnchorItem',
-      'unsetScrollToAnchorItem'
+      'incrementPageNumber'
     ])
+  },
+  watch: {
+    anchorItem() {
+      if (this.pagesPrefix === 'services' || this.pagesPrefix === 'about' && this.anchorItem !== "") {
+        const currentAnchors = document.querySelectorAll('.anchor')
+        console.log(currentAnchors)
+        currentAnchors.forEach(anchor => anchor.classList.remove('active-anchor'))
+        const anchorsArray = Array.from(currentAnchors)
+        const anchor = anchorsArray.filter(anchor => anchor.hash === "#" + this.anchorItem)
+        anchor[0].classList.add('active-anchor')
+      }
+    }
   }
 }
 </script>

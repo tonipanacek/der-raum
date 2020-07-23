@@ -36,7 +36,7 @@
 
 <script>
 import { get, min, sortBy } from "lodash"
-import { mapActions } from "vuex"
+import { mapActions, mapState } from "vuex"
 import seo from "~/content/data/seo"
 import Article from "~/components/Article"
 import Frame from '~/components/Frame'
@@ -83,7 +83,8 @@ export default {
   computed: {
     locale() {
       return this.$i18n.locale;
-    }
+    },
+    ...mapState(["anchorItem"])
   },
   methods: {
     getTitle(page) {
@@ -93,14 +94,28 @@ export default {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            this.$router.push({ hash: '#' + entry.target.id })
+            // this.$router.push({ hash: '#' + entry.target.id })
+            this.setAnchorItem(entry.target.id)
+            this.addParamsToLocation(entry.target.id)
           }
         })
       }, { threshold: 0.6});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
-    ...mapActions(["setPages", "setPagesPrefix"])
+    addParamsToLocation(id) {
+      history.pushState(
+        {},
+        null,
+        this.$route.path +
+          '#' +
+          id
+      )
+    },
+    ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
+  },
+  destroyed() {
+    this.unsetAnchorItem()
   }
 }
 </script>

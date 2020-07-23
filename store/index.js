@@ -7,7 +7,7 @@ export const state = () => {
     hoveredMenuItem: "",
     pageNumber: 0,
     lastPage: 0,
-    scrollToAnchor: ""
+    anchorItem: ""
   }
 }
 
@@ -27,11 +27,11 @@ export const mutations = {
   UNSET_HOVERED_MENU_ITEM(state) {
     state.hoveredMenuItem = ''
   },
-  SET_SCROLL_TO_ANCHOR_ITEM(state, title) {
-    state.hoveredMenuItem = title
+  SET_ANCHOR_ITEM(state, title) {
+    state.anchorItem = title
   },
-  UNSET_SCROLL_TO_ANCHOR_ITEM(state) {
-    state.hoveredMenuItem = ''
+  UNSET_ANCHOR_ITEM(state) {
+    state.anchorItem = ''
   },
   INCREMENT_PAGE_NUMBER(state) {
     state.pageNumber += 1
@@ -66,11 +66,11 @@ export const actions = {
   unsetHoveredMenuItem({ commit }) {
     commit("UNSET_HOVERED_MENU_ITEM")
   },
-  setScrollToAnchorItem({ commit }, title) {
-    commit("SET_SCROLL_TO_ANCHOR_ITEM", title)
+  setAnchorItem({ commit }, title) {
+    commit("SET_ANCHOR_ITEM", title)
   },
-  unsetScrollToAnchorItem({ commit }) {
-    commit("UNSET_SCROLL_TO_ANCHOR_ITEM")
+  unsetAnchorItem({ commit }) {
+    commit("UNSET_ANCHOR_ITEM")
   },
   resetPageNumber({ commit }) {
     commit('RESET_PAGE_NUMBER')

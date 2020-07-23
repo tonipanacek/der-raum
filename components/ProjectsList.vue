@@ -279,12 +279,4 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
 }
-// hovering effect
-// .hover:not(.active) {
-//   opacity: .8;
-//   p {
-//     color: color(dark);
-//     font-weight: 300;
-//   }
-// }
 </style>
