@@ -94,12 +94,15 @@ export default {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // this.$router.push({ hash: '#' + entry.target.id })
+            entry.target.style.opacity = 1
             this.setAnchorItem(entry.target.id)
+            // this.$router.push({ hash: '#' + entry.target.id })
             this.addParamsToLocation(entry.target.id)
+          } else {
+            entry.target.style.opacity = 0.5
           }
         })
-      }, { threshold: 0.6});
+      }, { threshold: 0.4});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
@@ -122,9 +125,10 @@ export default {
 
 <style lang="scss">
   #about { margin-top: -2em; }
-  #about > * {
+  #about .article {
     margin-bottom: 100px;
     padding-top: 2em;
+    transition: opacity 300ms ease;
   }
   #about .article:last-child {
     margin-bottom: 0px;

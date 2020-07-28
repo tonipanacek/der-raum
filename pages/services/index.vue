@@ -86,7 +86,7 @@ export default {
             entry.target.style.opacity = 0.5
           }
         })
-      }, { threshold: .4});
+      }, { threshold: 0.4});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
@@ -119,12 +119,10 @@ export default {
 
 <style lang="scss">
   #services { margin-top: -2em; }
-  #services >  * {
+  #services .article {
     margin-bottom: 100px;
     padding-top: 2em;
-    .article {
-      transition: opacity 300ms ease transform 300ms ease;
-    }
+    transition: opacity 300ms ease;
   }
   #services .article:last-child {
     // padding-top: 0;
