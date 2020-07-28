@@ -109,7 +109,7 @@ export default {
       divs.forEach(div => observer.observe(div))
     },
     addParamsToLocation(id) {
-      history.pushState(
+      history.replaceState(
         {},
         null,
         this.$route.path +
