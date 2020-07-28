@@ -1,20 +1,20 @@
 <template>
   <Container id="services">
-    <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
-      <div class="image-container">
-        <Frame
-          :source="$ta(service.attributes, 'image')"
-          :title="$ta(service.attributes,'title')"
-          :alt="$ta(service.attributes, 'description')"
-          :style="'background-position-y:' + $ta(service.attributes, 'image_crop_y')"
-          >
-        </Frame>
-      </div>
-      <div class="text">
-        <h1>{{ $ta(service.attributes, "title") }}</h1>
-        <p>{{ $ta(service.attributes, "description") }}</p>
-      </div>
-    </Article>
+      <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
+        <div class="image-container">
+          <Frame
+            :source="$ta(service.attributes, 'image')"
+            :title="$ta(service.attributes,'title')"
+            :alt="$ta(service.attributes, 'description')"
+            :style="'background-position-y:' + $ta(service.attributes, 'image_crop_y')"
+            >
+          </Frame>
+        </div>
+        <div class="text">
+          <h1>{{ $ta(service.attributes, "title") }}</h1>
+          <p>{{ $ta(service.attributes, "description") }}</p>
+        </div>
+      </Article>
   </Container>
 </template>
 
@@ -79,25 +79,35 @@ export default {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = 1
-            // this.$router.push({ hash: '#' + entry.target.id })
             this.setAnchorItem(entry.target.id)
+            // this.$router.push({ hash: '#' + entry.target.id })
             this.addParamsToLocation(entry.target.id)
           } else {
             entry.target.style.opacity = 0.5
           }
         })
-      }, { threshold: 0.5});
+      }, { threshold: .4});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
     addParamsToLocation(id) {
-      history.pushState(
+      history.replaceState(
         {},
         null,
         this.$route.path +
           '#' +
           id
       )
+    },
+    beforeEnter: function(el) {
+      el.style.transition = "opacity 300 ease, transform 300 ease"
+    },
+    enter: function(el, done) {
+      el.style.transform = "translateY(0)"
+      el.classList.add('transition-show')
+    },
+    leave: function(el, done) {
+      done()
     },
     ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
   },
@@ -109,11 +119,11 @@ export default {
 
 <style lang="scss">
   #services { margin-top: -2em; }
-  #services > * {
+  #services >  * {
     margin-bottom: 100px;
     padding-top: 2em;
     .article {
-      transition: opacity 500ms ease;
+      transition: opacity 300ms ease transform 300ms ease;
     }
   }
   #services .article:last-child {

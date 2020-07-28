@@ -89,6 +89,26 @@ export default {
     "~/plugins/markdown",
     { src: '~/plugins/intersection_observer', ssr: false },
   ],
+  polyfill: {
+    features: [
+      {
+        require: 'object.entries',
+        detect: () => 'entries' in window.Object,
+        install: entries => entries.shim(),
+      },
+      {
+        require: 'intersection-observer',
+        detect: () => 'IntersectionObserver' in window,
+      },
+      {
+        require: 'smoothscroll-polyfill',
+        detect: () =>
+          'scrollBehavior' in document.documentElement.style &&
+          window.__forceSmoothScrollPolyfill__ !== true,
+        install: smoothscroll => smoothscroll.polyfill(),
+      },
+    ],
+  },
   /*
    ** Nuxt.js dev-modules
    */
@@ -107,7 +127,8 @@ export default {
     "nuxt-i18n",
     "nuxt-svg-loader",
     "@nuxtjs/robots",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+    "nuxt-polyfill"
   ],
   // SCSS resources
   styleResources: {

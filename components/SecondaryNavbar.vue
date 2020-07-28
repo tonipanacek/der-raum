@@ -116,13 +116,19 @@ export default {
   },
   watch: {
     anchorItem() {
-      if (this.pagesPrefix === 'services' || this.pagesPrefix === 'about' && this.anchorItem !== "") {
+      if (this.anchorItem && (this.pagesPrefix === 'services' || this.pagesPrefix === 'about')) {
         const currentAnchors = document.querySelectorAll('.anchor')
-        console.log(currentAnchors)
-        currentAnchors.forEach(anchor => anchor.classList.remove('active-anchor'))
+        currentAnchors.forEach(anchor => {
+          anchor.classList.remove('active-anchor')
+          anchor.classList.remove('nuxt-link-exact-active')
+          anchor.classList.remove('nuxt-link-active')
+
+        })
         const anchorsArray = Array.from(currentAnchors)
         const anchor = anchorsArray.filter(anchor => anchor.hash === "#" + this.anchorItem)
         anchor[0].classList.add('active-anchor')
+        anchor[0].classList.add('nuxt-link-exact-active')
+        anchor[0].classList.add('nuxt-link-active')
       }
     }
   }

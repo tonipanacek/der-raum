@@ -7,7 +7,7 @@ export const state = () => {
     hoveredMenuItem: "",
     pageNumber: 0,
     lastPage: 0,
-    anchorItem: ""
+    anchorItem: false
   }
 }
 
@@ -31,7 +31,7 @@ export const mutations = {
     state.anchorItem = title
   },
   UNSET_ANCHOR_ITEM(state) {
-    state.anchorItem = ''
+    state.anchorItem = false
   },
   INCREMENT_PAGE_NUMBER(state) {
     state.pageNumber += 1
