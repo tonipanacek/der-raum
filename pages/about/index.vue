@@ -94,12 +94,14 @@ export default {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = 1
+            entry.target.firstElementChild.style.opacity = 1
             this.setAnchorItem(entry.target.id)
             // this.$router.push({ hash: '#' + entry.target.id })
             this.addParamsToLocation(entry.target.id)
+          } else if (entry.target.firstElementChild.className === 'text') {
+            entry.target.style.opacity = 1
           } else {
-            entry.target.style.opacity = 0.5
+            entry.target.firstElementChild.style.opacity = 0.5
           }
         })
       }, { threshold: 0.4});
@@ -128,7 +130,9 @@ export default {
   #about .article {
     margin-bottom: 100px;
     padding-top: 2em;
-    transition: opacity 300ms ease;
+    .image-container {
+      transition: opacity 300ms ease;
+    }
   }
   #about .article:last-child {
     margin-bottom: 0px;
