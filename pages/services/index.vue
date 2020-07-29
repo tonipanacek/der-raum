@@ -78,13 +78,14 @@ export default {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log(entry.target.firstElementChild)
-            entry.target.firstElementChild.style.opacity = 1
             this.setAnchorItem(entry.target.id)
-            // this.$router.push({ hash: '#' + entry.target.id })
             this.addParamsToLocation(entry.target.id)
+            this.scrollTransitions(entry.target, 'down')
+            // entry.target.firstElementChild.style.opacity = 1
+            // this.$router.push({ hash: '#' + entry.target.id })
           } else {
-            entry.target.firstElementChild.style.opacity = 0.5
+            this.scrollTransitions(entry.target, 'up')
+            // entry.target.firstElementChild.style.opacity = 0.5
           }
         })
       }, { threshold: 0.4});
@@ -110,6 +111,15 @@ export default {
     leave: function(el, done) {
       done()
     },
+    scrollTransitions(element, direction) {
+      window.addEventListener('scroll', function() {
+        // console.log(element.firstElementChild.scrollTop)
+        const frame = element.firstElementChild
+        if (window.scrollY > frame.offsetTop) {
+          frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+        }
+      })
+    },
     ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
   },
   destroyed() {
@@ -123,12 +133,8 @@ export default {
   #services .article {
     margin-bottom: 100px;
     padding-top: 2em;
-    .image-container {
-      transition: opacity 300ms ease;
-    }
   }
   #services .article:last-child {
-    // padding-top: 0;
     margin-bottom: 1.5em;
   }
 </style>
