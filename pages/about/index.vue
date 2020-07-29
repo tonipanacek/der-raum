@@ -96,16 +96,15 @@ export default {
           if (entry.isIntersecting) {
             this.setAnchorItem(entry.target.id)
             this.addParamsToLocation(entry.target.id)
+            entry.target.firstElementChild.style.opacity = 1
             if (entry.target.firstElementChild.className === 'text') {
               entry.target.style.opacity = 1
             } else {
-              this.scrollTransitions(entry.target, 'down')
+              this.scrollTransitions(entry.target)
             }
-            // entry.target.firstElementChild.style.opacity = 1
             // this.$router.push({ hash: '#' + entry.target.id })
           } else {
-            this.scrollTransitions(entry.target, 'up')
-            // entry.target.firstElementChild.style.opacity = 0.5
+            this.scrollTransitions(entry.target)
           }
         })
       }, { threshold: 0.4});
@@ -121,12 +120,13 @@ export default {
           id
       )
     },
-    scrollTransitions(element, direction) {
+    scrollTransitions(element) {
       window.addEventListener('scroll', function() {
-        // console.log(element.firstElementChild.scrollTop)
-        const frame = element.firstElementChild
-        if (window.scrollY > frame.offsetTop) {
-          frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+        if (element.firstElementChild.className !== 'text') {
+          const frame = element.firstElementChild
+          if (window.scrollY > frame.offsetTop) {
+            frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+          }
         }
       })
     },
@@ -139,13 +139,15 @@ export default {
 </script>
 
 <style lang="scss">
-  #about { margin-top: -2em; }
+  #about {
+    margin-top: -2em;
+  }
   #about .article {
-    margin-bottom: 50px;
+    .image-container {
+      opacity: 1;
+    }
+    margin-bottom: 2em;
     padding-top: 2em;
-    // .image-container {
-    //   transition: opacity 300ms ease;
-    // }
   }
   #about .article:last-child {
     margin-bottom: 0px;

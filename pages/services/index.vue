@@ -80,11 +80,11 @@ export default {
           if (entry.isIntersecting) {
             this.setAnchorItem(entry.target.id)
             this.addParamsToLocation(entry.target.id)
-            this.scrollTransitions(entry.target, 'down')
-            // entry.target.firstElementChild.style.opacity = 1
+            entry.target.firstElementChild.style.opacity = 1
+            this.scrollTransitions(entry.target)
             // this.$router.push({ hash: '#' + entry.target.id })
           } else {
-            this.scrollTransitions(entry.target, 'up')
+            this.scrollTransitions(entry.target)
             // entry.target.firstElementChild.style.opacity = 0.5
           }
         })
@@ -111,7 +111,7 @@ export default {
     leave: function(el, done) {
       done()
     },
-    scrollTransitions(element, direction) {
+    scrollTransitions(element) {
       window.addEventListener('scroll', function() {
         // console.log(element.firstElementChild.scrollTop)
         const frame = element.firstElementChild
@@ -131,7 +131,7 @@ export default {
 <style lang="scss">
   #services { margin-top: -2em; }
   #services .article {
-    margin-bottom: 50px;
+    // margin-bottom: 2em;
     padding-top: 2em;
   }
   #services .article:last-child {

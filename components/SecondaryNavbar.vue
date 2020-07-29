@@ -108,6 +108,13 @@ export default {
     handleClick() {
       this.incrementPageNumber()
     },
+    smoothScroll(id) {
+      const el = document.querySelector(`#${id}`)
+      window.scrollTo({
+        top: el.offsetTop,
+        behavior: 'smooth'
+      });
+    },
     ...mapActions([
       'setHoveredMenuItem',
       'unsetHoveredMenuItem',
