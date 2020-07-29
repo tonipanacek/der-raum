@@ -131,10 +131,11 @@ export default {
 <style lang="scss">
   #services { margin-top: -2em; }
   #services .article {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding-top: 2em;
   }
   #services .article:last-child {
     margin-bottom: 1.5em;
+    padding-top: 0;
   }
 </style>

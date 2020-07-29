@@ -141,7 +141,7 @@ export default {
 <style lang="scss">
   #about { margin-top: -2em; }
   #about .article {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding-top: 2em;
     // .image-container {
     //   transition: opacity 300ms ease;
