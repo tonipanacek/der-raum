@@ -81,14 +81,14 @@ export default {
             this.setAnchorItem(entry.target.id)
             this.addParamsToLocation(entry.target.id)
             entry.target.firstElementChild.style.opacity = 1
-            this.scrollTransitions(entry.target)
+            this.scrollTransitions(entry.target, 1)
             // this.$router.push({ hash: '#' + entry.target.id })
           } else {
-            this.scrollTransitions(entry.target)
             // entry.target.firstElementChild.style.opacity = 0.5
+            this.scrollTransitions(entry.target, 2)
           }
         })
-      }, { threshold: 0.4});
+      }, { threshold: 0.5});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
@@ -111,11 +111,11 @@ export default {
     leave: function(el, done) {
       done()
     },
-    scrollTransitions(element) {
+    scrollTransitions(element, place) {
       window.addEventListener('scroll', function() {
         // console.log(element.firstElementChild.scrollTop)
         const frame = element.firstElementChild
-        if (window.scrollY > frame.offsetTop) {
+        if (place === 1) {
           frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
         }
       })
@@ -129,13 +129,14 @@ export default {
 </script>
 
 <style lang="scss">
-  #services { margin-top: -2em; }
-  #services .article {
-    // margin-bottom: 2em;
-    padding-top: 2em;
-  }
-  #services .article:last-child {
-    margin-bottom: 1.5em;
-    padding-top: 0;
+  #services {
+    margin-top: -2em;
+    margin-bottom: 2em;
+    .text p {
+      margin-bottom: 0;
+    }
+    .article {
+      padding-top: 2em;
+    }
   }
 </style>

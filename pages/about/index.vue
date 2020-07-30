@@ -139,19 +139,18 @@ export default {
 </script>
 
 <style lang="scss">
-  #about {
-    margin-top: -2em;
+#about {
+  margin-top: -2em;
+  margin-bottom: 2em;
+  .image-container {
+    opacity: 1;
   }
-  #about .article {
-    .image-container {
-      opacity: 1;
-    }
-    margin-bottom: 2em;
+  .text p {
+    margin-bottom: 0;
+  }
+  .article {
     padding-top: 2em;
   }
-  #about .article:last-child {
-    margin-bottom: 0px;
-    padding-top: 0;
-  }
+}
 </style>
 
