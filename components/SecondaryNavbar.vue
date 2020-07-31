@@ -6,7 +6,7 @@
           <nuxt-link
             :id="page.attributes.title"
             :key="page.attributes.title"
-            :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title')), behavior: 'smooth'})"
+            :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
             :class="{ 'nav-item': true, 'title': true, 'anchor': true }"
           >
             {{ $ta(page.attributes, "title") }}
