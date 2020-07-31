@@ -88,7 +88,7 @@ export default {
             this.scrollTransitions(entry.target, 2)
           }
         })
-      }, { threshold: 0.65});
+      }, { threshold: 0.8});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
@@ -136,7 +136,7 @@ export default {
       margin-bottom: 0;
     }
     .article {
-      padding-top: 2em;
+      padding: 2em 0 1.75em 0;
     }
   }
 </style>

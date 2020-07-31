@@ -142,14 +142,11 @@ export default {
 #about {
   margin-top: -2em;
   margin-bottom: 2em;
-  .image-container {
-    opacity: 1;
-  }
   .text p {
     margin-bottom: 0;
   }
   .article {
-    padding-top: 2em;
+    padding: 2em 0 1.75em 0;
   }
   #business-partners, #business-partner {
     .text {
