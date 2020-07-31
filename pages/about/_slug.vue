@@ -4,7 +4,7 @@
       <div class="image-container">
         <Frame>
             <PrevNextButtons :prev="prevLink" :next="nextLink" />
-          <img :src="$tp('image')" alt="Image corresponding to about page" />
+          <img :src="cloudinaryBaseUrl + 'f_auto,q_auto,dpr_auto/' + $tp('image')" alt="Image corresponding to about page" />
         </Frame>
       </div>
       <div class="text">
@@ -61,7 +61,8 @@ export default {
       return {
         pages,
         slug,
-        page
+        page,
+        cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/'
       }
     } catch (err) {
       console.debug(err)
