@@ -88,7 +88,7 @@ export default {
             this.scrollTransitions(entry.target, 2)
           }
         })
-      }, { threshold: 0.5});
+      }, { threshold: 0.65});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
