@@ -83,7 +83,7 @@ export default {
         }
       } else {
         if (el.dataset.orientation === "portrait") {
-          el.style.transform = "translateY(-100%)"
+          el.style.transform = "translateY(-120%)"
         } else {
           el.style.transform = "translateY(-180%)"
         }
