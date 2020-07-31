@@ -81,7 +81,7 @@ export default {
 #image-gallery {
   z-index: z(sidebar);
   // position: relative;
-  height: 100%;
+  height: 90%;
   width: 100%;
   a,
   a:visited,

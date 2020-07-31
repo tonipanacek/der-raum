@@ -79,16 +79,16 @@ export default {
         if (el.dataset.orientation === "portrait") {
           el.style.transform = "translateY(120%)"
         } else {
-          el.style.transform = "translateY(200%)"
+          el.style.transform = "translateY(180%)"
         }
       } else {
         if (el.dataset.orientation === "portrait") {
-          el.style.transform = "translateY(-120%)"
+          el.style.transform = "translateY(-100%)"
         } else {
-          el.style.transform = "translateY(-200%)"
+          el.style.transform = "translateY(-180%)"
         }
       }
-      el.style.transition = "opacity 300 ease, transform 300 ease"
+      el.style.transition = "opacity 300 ease, transform 400 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
