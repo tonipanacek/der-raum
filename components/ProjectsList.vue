@@ -31,7 +31,10 @@
           </p>
         </div>
         <div v-else class="image-container">
-          <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
+          <picture>
+            <source>
+            <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
+          </picture>
           <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
           </p>
