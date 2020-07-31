@@ -151,6 +151,11 @@ export default {
   .article {
     padding-top: 2em;
   }
+  #business-partners, #business-partner {
+    .text {
+      margin-top: 0;
+    }
+  }
 }
 </style>
 
