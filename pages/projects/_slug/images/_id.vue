@@ -16,10 +16,10 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
-            <NuxtLink :to="previousImageLink" v-if="previousImageLink">
+            <NuxtLink :to="previousImageLink" v-if="previousImageLink" class="prev">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
-            <NuxtLink :to="nextImageLink" v-if="nextImageLink">
+            <NuxtLink :to="nextImageLink" v-if="nextImageLink" class="next">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
             <div class="no-next right" v-if="!nextImageLink">
@@ -264,7 +264,6 @@ export default {
   .image-container {
     position: relative;
     width: 100%;
-    // height: 90vh;
     height: calc(var(--vh, 1vh) * 100);
     background-position: center;
     background-repeat: no-repeat;
@@ -368,9 +367,10 @@ export default {
     @include respond-to('large') {
       display: block;
     }
+    .prev { padding-right: .5rem; }
   }
   .previous-btn {
-    transform: scaleX(-1)
+    transform: scaleX(-1);
   }
   .no-next {
     visibility: hidden;
