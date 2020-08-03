@@ -30,7 +30,7 @@ export default {
   },
   nuxtI18n: {
     paths: {
-      en: '/impressum',
+      en: '/legal',
       de: '/impressum'
     }
   },

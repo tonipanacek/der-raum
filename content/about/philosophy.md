@@ -30,5 +30,7 @@ meta_tags:
   en_title: Philosophy
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
+image_crop_y: center
+image_crop_x: center
 
 ---

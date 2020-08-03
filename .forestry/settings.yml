@@ -35,6 +35,16 @@ sections:
   match: "**/*"
   templates:
   - text-and-multiple-images
+- type: directory
+  path: content/misc
+  label: Andere
+  create: all
+  match: "**/*"
+  templates:
+  - privacy
+  - legal-page
+  - contact-page
+  - text-with-links
 - type: heading
   label: Data
 - type: directory
@@ -44,9 +54,9 @@ sections:
   match: "**/*"
   new_doc_ext: json
 upload_dir: ''
-public_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
+public_path: ''
 front_matter_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
-use_front_matter_path: true
+use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: src/dist

@@ -79,16 +79,16 @@ export default {
         if (el.dataset.orientation === "portrait") {
           el.style.transform = "translateY(120%)"
         } else {
-          el.style.transform = "translateY(200%)"
+          el.style.transform = "translateY(180%)"
         }
       } else {
         if (el.dataset.orientation === "portrait") {
           el.style.transform = "translateY(-120%)"
         } else {
-          el.style.transform = "translateY(-200%)"
+          el.style.transform = "translateY(-180%)"
         }
       }
-      el.style.transition = "opacity 300 ease, transform 300 ease"
+      el.style.transition = "opacity 300 ease, transform 400 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
@@ -256,12 +256,12 @@ $main-height: calc(100vh - #{spacing(frame)});
   color: color(dark);
   font-weight: 300;
   transition: color 500ms;
-  margin-top: 0.5em;
-  padding-left: 0.5em;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
+  margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
   @include respond-to('large') {
-    padding: 0;
+    padding: 0.5em 0;
+    margin-top: 0;
   }
 }
 

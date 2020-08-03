@@ -21,5 +21,7 @@ en_description: 'During production, your project is in professional hands at all
   our highly qualified team of carpenters and specialist trades have to offer in our
   Berlin-based factory. Our creative credo: Excellent material and processing efficiency.
   Your product: durable quality furniture that inspires.'
+image_crop_y: center
+image_crop_x: center
 
 ---

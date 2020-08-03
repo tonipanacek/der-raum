@@ -32,7 +32,7 @@ import prevNext from '~/plugins/prev_next'
 export default {
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('secondaryNavbarTitles.businessPartner')}`
+      title: `${seo.shortTitle} | ${this.$t('secondary_navbar_titles.businessPartner')}`
     }
   },
   nuxtI18n: {

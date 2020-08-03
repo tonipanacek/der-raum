@@ -30,5 +30,7 @@ meta_tags:
   de_description: Wir stehen für einen verantwortungsvollen Umgang mit natürlichen
     Ressourcen
   en_description: We stand for responsible use of natural resources
+image_crop_y: center
+image_crop_x: center
 
 ---

@@ -21,9 +21,28 @@ export default {
 </script>
 
 <style lang="scss">
+#service, #about, #business-partners, #press {
+  #prev-next-buttons {
+    @include respond-to('large') {
+      display: none;
+    }
+  }
+}
+#room {
+  #prev-next-buttons {
+    a,
+    a:visited,
+    a:focus {
+      .arrow {
+        @include respond-to(large) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
 #prev-next-buttons {
   z-index: z(sidebar);
-  // position: relative;
   height: 100%;
   width: 100%;
   a,
@@ -44,7 +63,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50vw;
+    width: 50%;
     padding: .5rem;
   }
   .prev {
@@ -62,7 +81,7 @@ export default {
 #image-gallery {
   z-index: z(sidebar);
   // position: relative;
-  height: 100%;
+  height: 90%;
   width: 100%;
   a,
   a:visited,

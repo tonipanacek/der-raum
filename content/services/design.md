@@ -28,5 +28,7 @@ meta_tags:
   en_title: ''
   de_description: ''
   en_description: ''
+image_crop_y: center
+image_crop_x: center
 
 ---
