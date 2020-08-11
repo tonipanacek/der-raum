@@ -160,7 +160,7 @@ export default {
         mainContainer.classList.add('mt-lg')
       }
       const setDocHeight = () => {
-        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}`);
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
@@ -285,7 +285,7 @@ export default {
   .image-container {
     position: relative;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 90);
     background-position: center;
     background-repeat: no-repeat;
     &.landscape {
