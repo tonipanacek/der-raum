@@ -42,6 +42,7 @@ import prevNext from '~/plugins/prev_next'
 import TinyGesture from 'tinygesture';
 
 export default {
+  transition: 'something',
   nuxtI18n: {
     paths: {
       de: '/projekte/:slug/bilder/:id',
