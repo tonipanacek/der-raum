@@ -1,24 +1,38 @@
 <template>
   <Stack class="navbar navbar-secondary">
     <ul>
-      <li
+      <template v-if="pagesPrefix === 'services' || pagesPrefix === 'about'">
+        <li v-for="(page, index) in sortedPages">
+          <nuxt-link
+            :id="page.attributes.title"
+            :key="page.attributes.title"
+            :to="localePath({ name: pagesPrefix, hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
+            :class="{ 'nav-item': true, 'title': true, 'anchor': true }"
+          >
+            {{ $ta(page.attributes, "title") }}
+          </nuxt-link>
+        </li>
+      </template>
+      <template v-else>
+        <li
         v-for="(page, index) in sortedPages"
         :key="$ta(page.attributes, 'title') + $i18n.locale"
         :data-index="index"
-      >
-        <nuxt-link
-          :class="{
-            'nav-item': true,
-            'title': true,
-            'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
-          }"
-          :to="path(page)"
-          @mouseover.native="handleHover($ta(page.attributes, 'title'))"
-          @mouseleave.native="handleBlur"
         >
-          {{ $ta(page.attributes, "title") }}
-        </nuxt-link>
-      </li>
+          <nuxt-link
+            :class="{
+              'nav-item': true,
+              'title': true,
+              'hovered': hoveredMenuItem === $ta(page.attributes, 'title')
+            }"
+            :to="path(page)"
+            @mouseover.native="handleHover($ta(page.attributes, 'title'))"
+            @mouseleave.native="handleBlur"
+          >
+            {{ $ta(page.attributes, "title") }}
+          </nuxt-link>
+        </li>
+      </template>
       <li
         v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
         :class="{
@@ -40,7 +54,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from "vuex"
-import { get, isEmpty } from 'lodash'
+import { get, isEmpty, flatten } from 'lodash'
 import Stack from "~/components/Stack"
 
 export default {
@@ -49,7 +63,7 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage"]),
+    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage", "anchorItem"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
@@ -61,6 +75,10 @@ export default {
           slug
         }
       })
+    },
+    activeAnchor(page) {
+      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
+      slug === this.$route.hash.replace('#', '')
     },
     beforeEnter: function(el) {
       el.style.opacity = 0
@@ -90,7 +108,36 @@ export default {
     handleClick() {
       this.incrementPageNumber()
     },
-    ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem', 'incrementPageNumber'])
+    smoothScroll(id) {
+      const el = document.querySelector(`#${id}`)
+      window.scrollTo({
+        top: el.offsetTop,
+        behavior: 'smooth'
+      });
+    },
+    ...mapActions([
+      'setHoveredMenuItem',
+      'unsetHoveredMenuItem',
+      'incrementPageNumber'
+    ])
+  },
+  watch: {
+    anchorItem() {
+      if (this.anchorItem && (this.pagesPrefix === 'services' || this.pagesPrefix === 'about')) {
+        const currentAnchors = document.querySelectorAll('.anchor')
+        currentAnchors.forEach(anchor => {
+          anchor.classList.remove('active-anchor')
+          anchor.classList.remove('nuxt-link-exact-active')
+          anchor.classList.remove('nuxt-link-active')
+
+        })
+        const anchorsArray = Array.from(currentAnchors)
+        const anchor = anchorsArray.filter(anchor => anchor.hash === "#" + this.anchorItem)
+        anchor[0].classList.add('active-anchor')
+        anchor[0].classList.add('nuxt-link-exact-active')
+        anchor[0].classList.add('nuxt-link-active')
+      }
+    }
   }
 }
 </script>
@@ -115,6 +162,10 @@ export default {
   }
   .more {
     cursor: pointer;
+  }
+  .active-anchor {
+    font-weight: 900;
+    color: color(black);
   }
 }
 </style>
