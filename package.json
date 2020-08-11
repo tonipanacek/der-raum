@@ -25,6 +25,7 @@
     "css-vars-ponyfill": "^2.3.0",
     "frontmatter-markdown-loader": "^3.1.0",
     "ie11-custom-properties": "^3.1.0",
+    "intersection-observer": "^0.11.0",
     "lodash": "^4.17.19",
     "md-yaml-json": "^1.1.1",
     "node-sass": "^4.13.0",
@@ -32,7 +33,7 @@
     "nuxt-i18n": "^6.4.1",
     "nuxt-svg-loader": "^1.2.0",
     "sass-loader": "^8.0.0",
-    "tinygesture": "^1.1.4",
+    "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.11",
     "vue-markdown": "^2.2.4"
   },

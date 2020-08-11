@@ -7,7 +7,7 @@
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
+        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation" @touchstart="handleSwipe">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" id="image-gallery"/>
         </div>
         <div class="image-footer">
@@ -161,6 +161,14 @@ export default {
       const mq = window.matchMedia( "(max-width: 1024px)" );
       mq.addListener(widthChange);
       widthChange(mq);
+    },
+    handleSwipe() {
+      document.addEventListener('swiped-left', function(e) {
+        this.$router.push(this.nextImageLink) // element that was swiped
+      });
+      document.addEventListener('swiped-right', function(e) {
+        this.$router.push(this.prevImageLink) // element that was swiped
+      });
     },
     handleKey(event) {
       event.preventDefault();
