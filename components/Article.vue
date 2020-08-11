@@ -1,5 +1,5 @@
 <template>
-  <article class="article" v-swipe>
+  <article class="article">
     <slot />
   </article>
 </template>

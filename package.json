@@ -34,6 +34,7 @@
     "nuxt-svg-loader": "^1.2.0",
     "sass-loader": "^8.0.0",
     "smoothscroll-polyfill": "^0.4.4",
+    "tinygesture": "^1.1.4",
     "vue": "^2.6.11",
     "vue-markdown": "^2.2.4"
   },

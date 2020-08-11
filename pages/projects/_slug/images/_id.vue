@@ -3,11 +3,11 @@
   id="projects"
   class="image">
     <Container>
-      <Article class="project">
+      <Article class="project" v-swipe="handleSwipe">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation" @touchstart="handleSwipe">
+        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" id="image-gallery"/>
         </div>
         <div class="image-footer">
@@ -39,9 +39,9 @@ import Container from "~/components/Container"
 import Article from "~/components/Article"
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
+import TinyGesture from 'tinygesture';
 
 export default {
-  transition: 'something',
   nuxtI18n: {
     paths: {
       de: '/projekte/:slug/bilder/:id',
@@ -51,6 +51,23 @@ export default {
   props: {
     mobile: Boolean,
     orientation: String
+  },
+  directives: {
+    swipe: {
+      bind: function(el, binding) {
+        const gesture = new TinyGesture(el);
+        gesture.on('swiperight', function(event) {
+          // The gesture was a right swipe.
+          console.log('swiped right');
+          binding.value('right')
+        });
+        gesture.on('swipeleft', function(event) {
+          // The gesture was a left swipe.
+          console.log('swiped left');
+          binding.value('left')
+        });
+      }
+    }
   },
   name: 'projectsSlug',
   mixins: [prevNext, dynamicSEO],
@@ -162,13 +179,12 @@ export default {
       mq.addListener(widthChange);
       widthChange(mq);
     },
-    handleSwipe() {
-      document.addEventListener('swiped-left', function(e) {
-        this.$router.push(this.nextImageLink) // element that was swiped
-      });
-      document.addEventListener('swiped-right', function(e) {
-        this.$router.push(this.prevImageLink) // element that was swiped
-      });
+    handleSwipe(direction) {
+      if (direction === 'left') {
+        this.$router.push(this.nextImageLink)
+      } else if (direction === 'right') {
+        this.$router.push(this.previousImageLink)
+      }
     },
     handleKey(event) {
       event.preventDefault();

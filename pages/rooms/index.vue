@@ -44,7 +44,7 @@ export default {
   name: 'roomsIndex',
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar.rooms')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.rooms')}`
     }
   },
   nuxtI18n: {
