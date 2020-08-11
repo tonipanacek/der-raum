@@ -159,7 +159,8 @@ export default {
         mainContainer.classList.add('mt-lg')
       }
       const setDocHeight = () => {
-        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        // document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        document.documentElement.style.height = '100%';
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
