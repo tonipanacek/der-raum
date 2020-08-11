@@ -81,11 +81,11 @@ export default {
             this.setAnchorItem(entry.target.id)
             this.addParamsToLocation(entry.target.id)
             entry.target.firstElementChild.style.opacity = 1
-            this.scrollTransitions(entry.target, 1)
+            this.scrollTransitions(entry.target)
             // this.$router.push({ hash: '#' + entry.target.id })
           } else {
             // entry.target.firstElementChild.style.opacity = 0.5
-            this.scrollTransitions(entry.target, 2)
+            this.scrollTransitions(entry.target)
           }
         })
       }, { threshold: 0.8});
@@ -111,12 +111,13 @@ export default {
     leave: function(el, done) {
       done()
     },
-    scrollTransitions(element, place) {
+    scrollTransitions(element) {
       window.addEventListener('scroll', function() {
-        // console.log(element.firstElementChild.scrollTop)
-        const frame = element.firstElementChild
-        if (place === 1) {
-          frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+        if (element.firstElementChild.className !== 'text') {
+          const frame = element.firstElementChild
+          if (window.scrollY > frame.offsetTop) {
+            frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+          }
         }
       })
     },
