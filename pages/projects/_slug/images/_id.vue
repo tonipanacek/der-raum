@@ -151,6 +151,7 @@ export default {
         mainContainer.classList.remove('mt-lg')
       }
       const showSidebars = () => {
+        document.exitFullscreen();
         navbar.style.display = 'flex'
         footer.style.display = 'flex'
         closeLink.style.left = '-35px'
@@ -163,7 +164,7 @@ export default {
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
-          window.scrollTo(0,1);
+          document.documentElement.requestFullscreen();
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', setDocHeight)
