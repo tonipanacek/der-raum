@@ -57,13 +57,9 @@ export default {
       bind: function(el, binding) {
         const gesture = new TinyGesture(el);
         gesture.on('swiperight', function(event) {
-          // The gesture was a right swipe.
-          console.log('swiped right');
           binding.value('right')
         });
         gesture.on('swipeleft', function(event) {
-          // The gesture was a left swipe.
-          console.log('swiped left');
           binding.value('left')
         });
       }
@@ -167,6 +163,7 @@ export default {
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
+          window.scrollTo(0,1);
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', setDocHeight)

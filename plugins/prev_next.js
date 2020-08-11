@@ -1,5 +1,4 @@
 import { get, isEmpty, findIndex } from 'lodash'
-import TinyGesture from 'tinygesture';
 
 export default {
   computed: {
