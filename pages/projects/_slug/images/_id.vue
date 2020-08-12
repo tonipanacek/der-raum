@@ -289,8 +289,8 @@ export default {
     // margin-top: 5vh;
     position: relative;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
-    // height: 100%;
+    // height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
