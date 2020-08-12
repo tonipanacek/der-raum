@@ -290,7 +290,7 @@ export default {
     position: relative;
     width: 100%;
     // height: calc(var(--vh, 1vh) * 100);
-    height: 100%;
+    height: 90vh;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
@@ -329,12 +329,13 @@ export default {
     align-items: flex-start;
     width: 100%;
     position: absolute;
-    bottom: 0px;
+    bottom: 100px;
     padding: spacing(md);
     @include respond-to('large') {
       position: inherit;
       margin-top: spacing(frame);
       padding: 0;
+      bottom: 0px;
     }
     .caption {
       flex-grow: 1;

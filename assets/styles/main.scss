@@ -22,6 +22,7 @@ body {
   &.no-scroll {
     // position: fixed;
     overflow: hidden;
-    height: calc(var(--vh, 1vh) * 80);
+    // height: calc(var(--vh, 1vh) * 80);
+    height: 90vh;
   }
 }
