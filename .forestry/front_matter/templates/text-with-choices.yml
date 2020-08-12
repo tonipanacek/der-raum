@@ -5,7 +5,10 @@ fields:
 - name: test
   type: blocks
   label: Test
-  template_types: []
+  template_types:
+  - en-de-title-list
+  - en-de-title-paragrah
+  - text-with-links
   config:
     min: 
     max: 
