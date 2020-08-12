@@ -20,7 +20,7 @@ body {
     -webkit-text-size-adjust: inherit;
   }
   &.no-scroll {
-    position: fixed;
-    overflow-y: hidden;
+    // position: fixed;
+    overflow: hidden;
   }
 }
