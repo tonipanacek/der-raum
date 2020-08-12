@@ -131,6 +131,7 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
     this.enterMobileFullScreen()
   },
   destroyed() {
@@ -142,6 +143,7 @@ export default {
       const footer = document.querySelector('#right-sidebar')
       const closeLink = document.querySelector('.close-link')
       const mainContainer = document.querySelector('.main-container')
+      const imageContainer = document.querySelector('.image-container')
       const body = document.querySelector('body');
       const layout = document.querySelector('.layout')
       const hideSidebars = () => {
@@ -164,6 +166,9 @@ export default {
       }
       const setDocHeight = () => {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        // body.style.height = window.screen.availHeight;
+        // mainContainer.style.height = window.screen.availHeight;
+        // imageContainer.style.height = `calc(${window.screen.availHeight/100}px * 100)`
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
@@ -286,12 +291,10 @@ export default {
     max-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .image-container {
-    // margin-top: 5vh;
     position: relative;
     width: 100%;
-    // height: calc(var(--vh, 1vh) * 100);
-    height: 90vh;
-    overflow: hidden;
+    height: calc(var(--vh, 1vh) * 100);
+    // height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
     &.landscape {
@@ -329,7 +332,7 @@ export default {
     align-items: flex-start;
     width: 100%;
     position: absolute;
-    bottom: 100px;
+    bottom: 0px;
     padding: spacing(md);
     @include respond-to('large') {
       position: inherit;
