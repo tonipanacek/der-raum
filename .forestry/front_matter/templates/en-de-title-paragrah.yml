@@ -34,3 +34,10 @@ fields:
       format: markdown
   label: EN_text
   description: English text for this section
+- name: test_again
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Test again
