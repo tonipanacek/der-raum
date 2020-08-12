@@ -28,3 +28,4 @@ fields:
   label: General Page Info
 pages:
 - content/about/business-partner.md
+- content/about/press.md
