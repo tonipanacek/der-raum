@@ -1,4 +1,11 @@
 ---
 label: Text with choices
 hide_body: true
-fields: []
+fields:
+- name: test
+  type: blocks
+  label: Test
+  template_types: []
+  config:
+    min: 
+    max: 
