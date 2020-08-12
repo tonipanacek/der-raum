@@ -19,4 +19,8 @@ body {
   @include respond-to('large') {
     -webkit-text-size-adjust: inherit;
   }
+  &.no-scroll {
+    position: fixed;
+    overflow-y: hidden;
+  }
 }

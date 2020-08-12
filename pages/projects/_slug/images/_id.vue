@@ -142,6 +142,7 @@ export default {
       const footer = document.querySelector('#right-sidebar')
       const closeLink = document.querySelector('.close-link')
       const mainContainer = document.querySelector('.main-container')
+      const body = document.querySelector('body');
       const layout = document.querySelector('.layout')
       const hideSidebars = () => {
         navbar.style.display = 'none'
@@ -150,6 +151,7 @@ export default {
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
         mainContainer.classList.remove('mt-lg')
+        body.classList.add('no-scroll')
       }
       const showSidebars = () => {
         navbar.style.display = 'flex'
@@ -158,6 +160,7 @@ export default {
         closeLink.style.top = '0px'
         layout.style.paddingTop = '2em'
         mainContainer.classList.add('mt-lg')
+        body.classList.remove('no-scroll')
       }
       const setDocHeight = () => {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
@@ -284,10 +287,10 @@ export default {
   }
   .image-container {
     // margin-top: 5vh;
-    position: fixed;
+    position: relative;
     width: 100%;
-    // height: calc(var(--vh, 1vh) * 100);
-    height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    // height: 100%;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
