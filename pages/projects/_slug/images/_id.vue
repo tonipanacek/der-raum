@@ -150,7 +150,6 @@ export default {
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
         mainContainer.classList.remove('mt-lg')
-        mainContainer.classList.add('overflow-hidden')
       }
       const showSidebars = () => {
         navbar.style.display = 'flex'
@@ -159,10 +158,9 @@ export default {
         closeLink.style.top = '0px'
         layout.style.paddingTop = '2em'
         mainContainer.classList.add('mt-lg')
-        mainContainer.classList.remove('overflow-hidden')
       }
       const setDocHeight = () => {
-        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}`);
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
@@ -264,7 +262,6 @@ export default {
 <style lang="scss" scoped>
 #projects.image {
   max-width: 1250px;
-  height: 100%;
   margin: 0 auto;
   #prev-next-buttons {
     a,
@@ -281,16 +278,17 @@ export default {
 .project {
   position: relative;
   width: 100%;
-  height: 100%;
   margin: auto 0;
   @include respond-to('large') {
     max-height: calc(100vh - 2 * #{spacing(frame)});
   }
   .image-container {
-    position: relative;
+    // margin-top: 5vh;
+    position: fixed;
     width: 100%;
-    // height: calc(var(--vh, 1vh) * 90);
+    // height: calc(var(--vh, 1vh) * 100);
     height: 100%;
+    overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     &.landscape {

@@ -11,7 +11,4 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  height: 100%;
-}
 </style>
