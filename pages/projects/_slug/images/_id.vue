@@ -131,7 +131,7 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
-    document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+    this.setDocHeight()
     this.enterMobileFullScreen()
   },
   destroyed() {
@@ -164,18 +164,12 @@ export default {
         mainContainer.classList.add('mt-lg')
         body.classList.remove('no-scroll')
       }
-      const setDocHeight = () => {
-        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
-        // body.style.height = window.screen.availHeight;
-        // mainContainer.style.height = window.screen.availHeight;
-        // imageContainer.style.height = `calc(${window.screen.availHeight/100}px * 100)`
-      }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
-          window.addEventListener('resize', setDocHeight)
-          window.addEventListener('orientationchange', setDocHeight)
+          window.addEventListener('resize', this.setDocHeight)
+          window.addEventListener('orientationchange', this.setDocHeight)
         } else {
           showSidebars();
         }
@@ -183,6 +177,12 @@ export default {
       const mq = window.matchMedia( "(max-width: 1024px)" );
       mq.addListener(widthChange);
       widthChange(mq);
+    },
+    setDocHeight() {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        document.querySelector('body').style.height = window.innerHeight + 'px';
+        document.querySelector('#projects').style.height = window.innerHeight + 'px';
+        // document.querySelector('.image-container').style.height = window.innerHeight + 'px';
     },
     handleSwipe(direction) {
       if (direction === 'left') {
@@ -271,6 +271,7 @@ export default {
 #projects.image {
   max-width: 1250px;
   margin: 0 auto;
+  height: 100%;
   #prev-next-buttons {
     a,
     a:visited,
@@ -286,6 +287,7 @@ export default {
 .project {
   position: relative;
   width: 100%;
+  height: 100%;
   margin: auto 0;
   @include respond-to('large') {
     max-height: calc(100vh - 2 * #{spacing(frame)});
@@ -293,7 +295,8 @@ export default {
   .image-container {
     position: relative;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
+    // height: calc(var(--vh, 1vh) * 100);
     // height: 90vh;
     background-position: center;
     background-repeat: no-repeat;

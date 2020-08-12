@@ -20,7 +20,6 @@ body {
   }
   &.no-scroll {
     overflow: hidden;
-    height: 90vh;
     overscroll-behavior: contain;
   }
 }
