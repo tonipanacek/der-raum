@@ -1,10 +1,30 @@
 <template>
-  <div id="services" />
+  <Container id="services">
+      <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
+        <div class="image-container">
+          <Frame
+            :source="$ta(service.attributes, 'image')"
+            :title="$ta(service.attributes,'title')"
+            :alt="$ta(service.attributes, 'description')"
+            :style="'background-position-y:' + $ta(service.attributes, 'image_crop_y')"
+            >
+          </Frame>
+        </div>
+        <div class="text">
+          <h1>{{ $ta(service.attributes, "title") }}</h1>
+          <p>{{ $ta(service.attributes, "description") }}</p>
+        </div>
+      </Article>
+  </Container>
 </template>
 
 <script>
 import { get, min, sortBy } from "lodash"
+import { mapActions, mapState } from "vuex"
 import seo from "~/content/data/seo"
+import Article from "~/components/Article"
+import Frame from '~/components/Frame'
+import Container from '~/components/Container'
 
 export default {
   nuxtI18n: {
@@ -13,9 +33,14 @@ export default {
       de: '/leistungen'
     }
   },
+  components: {
+    Article,
+    Frame,
+    Container
+  },
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar_titles.rooms')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.services')}`
     }
   },
   async asyncData() {
@@ -35,22 +60,84 @@ export default {
     }
   },
   mounted() {
-    const pages = this.$data.pages
-    const positions = pages.map(page =>
-      get(page, "attributes.position")
-    )
-    const minPosition = min(positions)
-    const page = pages.find(
-      page => get(page, "attributes.position") === minPosition
-    )
-    const slug = this.formatSlug(this.$ta(page.attributes, "title"))
-    const redirectPath = this.localePath({
-      name: "services-slug",
-      params: {
-        slug
-      }
-    })
-    this.$router.push(redirectPath)
+    this.setPages(this.$data.pages)
+    this.setPagesPrefix("services")
+    this.scrollIntoView()
+  },
+  computed: {
+    locale() {
+      return this.$i18n.locale;
+    },
+    ...mapState(["anchorItem"])
+  },
+  methods: {
+    getTitle(page) {
+      return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
+    },
+    scrollIntoView() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.setAnchorItem(entry.target.id)
+            this.addParamsToLocation(entry.target.id)
+            entry.target.firstElementChild.style.opacity = 1
+            this.scrollTransitions(entry.target)
+            // this.$router.push({ hash: '#' + entry.target.id })
+          } else {
+            // entry.target.firstElementChild.style.opacity = 0.5
+            this.scrollTransitions(entry.target)
+          }
+        })
+      }, { threshold: 0.8});
+      const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
+      divs.forEach(div => observer.observe(div))
+    },
+    addParamsToLocation(id) {
+      history.replaceState(
+        {},
+        null,
+        this.$route.path +
+          '#' +
+          id
+      )
+    },
+    beforeEnter: function(el) {
+      el.style.transition = "opacity 300 ease, transform 300 ease"
+    },
+    enter: function(el, done) {
+      el.style.transform = "translateY(0)"
+      el.classList.add('transition-show')
+    },
+    leave: function(el, done) {
+      done()
+    },
+    scrollTransitions(element) {
+      window.addEventListener('scroll', function() {
+        if (element.firstElementChild.className !== 'text') {
+          const frame = element.firstElementChild
+          if (window.scrollY > frame.offsetTop) {
+            frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+          }
+        }
+      })
+    },
+    ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
+  },
+  destroyed() {
+    this.unsetAnchorItem()
   }
 }
 </script>
+
+<style lang="scss">
+  #services {
+    margin-top: -2em;
+    margin-bottom: 2em;
+    .text p {
+      margin-bottom: 0;
+    }
+    .article {
+      padding: 2em 0 1.75em 0;
+    }
+  }
+</style>

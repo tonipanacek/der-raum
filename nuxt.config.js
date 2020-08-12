@@ -1,3 +1,4 @@
+const observer = require('intersection-observer');
 const path = require("path")
 const Mode = require("frontmatter-markdown-loader/mode")
 const parser = require('md-yaml-json').default;
@@ -14,31 +15,27 @@ function loadPages (enPrefix, dePrefix) {
   // create context via webpack to map over all markdown pages
   let pages = parser(`./content/${enPrefix}`)
 
-  pages = pages.map(service => {
+  pages = pages.map(page => {
     // give back the pages urls as strings in both languages
     return [
-      `/${dePrefix}/${kebabCase(get(service, 'meta.de_title', ''))}`,
-      `en/${enPrefix}/${kebabCase(get(service, 'meta.en_title', ''))}`
+      `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
+      `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
     ]
+    // if (enPrefix === 'services' || enPrefix === 'about') {
+    //   return [
+    //     `/${dePrefix}#${kebabCase(get(page, 'meta.de_title', ''))}`,
+    //     `en/${enPrefix}#${kebabCase(get(page, 'meta.en_title', ''))}`
+    //   ]
+    // } else {
+    //   return [
+    //     `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
+    //     `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
+    //   ]
+    // }
   })
 
   return flatten(pages)
 }
-
-// function loadImagePages (enPrefix, dePrefix) {
-//   // create context via webpack to map over all markdown pages
-//   let pages = parser(`./content/${enPrefix}`)
-
-//   pages = pages.map(service => {
-//     // give back the pages urls as strings in both languages
-//     return [
-//       `/${dePrefix}/${kebabCase(get(service, 'meta.de_title', ''))}`,
-//       `en/${enPrefix}/${kebabCase(get(service, 'meta.en_title', ''))}`
-//     ]
-//   })
-
-//   return flatten(pages)
-// }
 
 export default {
   mode: "universal",
@@ -75,9 +72,9 @@ export default {
 
       return [
         ...loadPages('projects', 'projekte'),
-        ...loadPages('services', 'leistungen'),
-        ...loadPages('rooms', 'raume'),
-        ...loadPages('about', 'uber')
+        // ...loadPages('services', 'leistungen'),
+        ...loadPages('rooms', 'raume')
+        // ...loadPages('about', 'uber')
       ]
     }
   },
@@ -93,10 +90,30 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    {src: "~/plugins/translate_page", ssr: true},
-    {src: "~/plugins/markdown", ssr: true},
-    {src: "~/plugins/directives", ssr: false},
+    "~/plugins/translate_page",
+    "~/plugins/markdown",
+    { src: '~/plugins/intersection_observer', ssr: false },
   ],
+  polyfill: {
+    features: [
+      {
+        require: 'object.entries',
+        detect: () => 'entries' in window.Object,
+        install: entries => entries.shim(),
+      },
+      {
+        require: 'intersection-observer',
+        detect: () => 'IntersectionObserver' in window,
+      },
+      {
+        require: 'smoothscroll-polyfill',
+        detect: () =>
+          'scrollBehavior' in document.documentElement.style &&
+          window.__forceSmoothScrollPolyfill__ !== true,
+        install: smoothscroll => smoothscroll.polyfill(),
+      },
+    ],
+  },
   /*
    ** Nuxt.js dev-modules
    */
@@ -115,7 +132,8 @@ export default {
     "nuxt-i18n",
     "nuxt-svg-loader",
     "@nuxtjs/robots",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+    "nuxt-polyfill"
   ],
   // SCSS resources
   styleResources: {

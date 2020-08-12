@@ -44,6 +44,13 @@ export default {
     ul {
       list-style-type: square;
     }
+    .link-list {
+      list-style: none;
+      padding: 0;
+      li {
+        line-height: 1.5rem;
+      }
+    }
     p, ul > li {
       line-height: 2rem;
       color: color(dark);
@@ -68,6 +75,19 @@ export default {
       outline: 0;
     }
   }
-
+}
+#business-partner, #business-partners {
+  @include respond-to('large') {
+    min-height: calc(100vh);
+  }
+  h1 { margin-top: 0; }
+  .link-list { columns: 2; }
+}
+#presse, #press {
+  @include respond-to('large') {
+    min-height: calc(100vh - #{spacing('frame')});
+  }
+  .text { margin-top: 0; }
+  h1 { margin-top: 0; }
 }
 </style>
