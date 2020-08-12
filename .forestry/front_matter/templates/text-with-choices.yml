@@ -12,3 +12,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- content/misc/testing.md
