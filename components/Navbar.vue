@@ -14,7 +14,10 @@
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath({ name: 'services' })" class="nav-item title">
+            <nuxt-link
+              :to="localePath({ name: 'services' })"
+              class="nav-item title"
+            >
               {{ $t("navbar_titles.services") }}
             </nuxt-link>
           </li>
@@ -24,7 +27,10 @@
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath({ name: 'about' })" class="nav-item title">
+            <nuxt-link
+              :to="localePath({ name: 'about' })"
+              class="nav-item title"
+            >
               {{ $t("navbar_titles.about") }}
             </nuxt-link>
           </li>
@@ -48,6 +54,11 @@ export default {
   components: {
     Stack,
     Logo
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({top: 0, behavior: "auto"})
+    }
   }
 }
 </script>

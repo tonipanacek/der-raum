@@ -82,16 +82,16 @@ export default {
         if (el.dataset.orientation === "portrait") {
           el.style.transform = "translateY(120%)"
         } else {
-          el.style.transform = "translateY(200%)"
+          el.style.transform = "translateY(180%)"
         }
       } else {
         if (el.dataset.orientation === "portrait") {
           el.style.transform = "translateY(-120%)"
         } else {
-          el.style.transform = "translateY(-200%)"
+          el.style.transform = "translateY(-180%)"
         }
       }
-      el.style.transition = "opacity 300 ease, transform 300 ease"
+      el.style.transition = "opacity 300 ease, transform 400 ease"
     },
     enter: function(el, done) {
       setTimeout(() => {
@@ -282,12 +282,4 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
 }
-// hovering effect
-// .hover:not(.active) {
-//   opacity: .8;
-//   p {
-//     color: color(dark);
-//     font-weight: 300;
-//   }
-// }
 </style>

@@ -41,6 +41,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - text-with-choices
   - privacy
   - legal-page
   - contact-page
@@ -54,9 +55,9 @@ sections:
   match: "**/*"
   new_doc_ext: json
 upload_dir: ''
-public_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
+public_path: ''
 front_matter_path: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto
-use_front_matter_path: true
+use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: src/dist

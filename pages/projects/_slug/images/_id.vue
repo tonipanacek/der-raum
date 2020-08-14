@@ -3,7 +3,7 @@
   id="projects"
   class="image">
     <Container>
-      <Article class="project">
+      <Article class="project" v-swipe="handleSwipe">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
@@ -16,10 +16,10 @@
             <p>{{ $tp('description') }}</p>
           </aside>
           <nav class="image-nav">
-            <NuxtLink :to="previousImageLink" v-if="previousImageLink">
+            <NuxtLink :to="previousImageLink" v-if="previousImageLink" class="prev">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Previous Button" class="nav previous-btn" />
             </NuxtLink>
-            <NuxtLink :to="nextImageLink" v-if="nextImageLink">
+            <NuxtLink :to="nextImageLink" v-if="nextImageLink" class="next">
               <img svg-inline src="~/assets/images/rightarrow_thin_3.svg" alt="Next Button" class="nav next-btn" />
             </NuxtLink>
             <div class="no-next right" v-if="!nextImageLink">
@@ -39,6 +39,7 @@ import Container from "~/components/Container"
 import Article from "~/components/Article"
 import PrevNextButtons from '~/components/PrevNextButtons'
 import prevNext from '~/plugins/prev_next'
+import TinyGesture from 'tinygesture';
 
 export default {
   transition: 'something',
@@ -51,6 +52,19 @@ export default {
   props: {
     mobile: Boolean,
     orientation: String
+  },
+  directives: {
+    swipe: {
+      bind: function(el, binding) {
+        const gesture = new TinyGesture(el);
+        gesture.on('swiperight', function(event) {
+          binding.value('right')
+        });
+        gesture.on('swipeleft', function(event) {
+          binding.value('left')
+        });
+      }
+    }
   },
   name: 'projectsSlug',
   mixins: [prevNext, dynamicSEO],
@@ -117,6 +131,7 @@ export default {
     this.setPages(this.currentPagesChunk)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
+    this.setDocHeight()
     this.enterMobileFullScreen()
   },
   destroyed() {
@@ -128,6 +143,8 @@ export default {
       const footer = document.querySelector('#right-sidebar')
       const closeLink = document.querySelector('.close-link')
       const mainContainer = document.querySelector('.main-container')
+      const imageContainer = document.querySelector('.image-container')
+      const body = document.querySelector('body');
       const layout = document.querySelector('.layout')
       const hideSidebars = () => {
         navbar.style.display = 'none'
@@ -136,6 +153,7 @@ export default {
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
         mainContainer.classList.remove('mt-lg')
+        body.classList.add('no-scroll')
       }
       const showSidebars = () => {
         navbar.style.display = 'flex'
@@ -144,16 +162,14 @@ export default {
         closeLink.style.top = '0px'
         layout.style.paddingTop = '2em'
         mainContainer.classList.add('mt-lg')
-      }
-      const setDocHeight = () => {
-        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        body.classList.remove('no-scroll')
       }
       const widthChange = (mq) => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
-          window.addEventListener('resize', setDocHeight)
-          window.addEventListener('orientationchange', setDocHeight)
+          window.addEventListener('resize', this.setDocHeight)
+          window.addEventListener('orientationchange', this.setDocHeight)
         } else {
           showSidebars();
         }
@@ -161,6 +177,19 @@ export default {
       const mq = window.matchMedia( "(max-width: 1024px)" );
       mq.addListener(widthChange);
       widthChange(mq);
+    },
+    setDocHeight() {
+        document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+        document.querySelector('body').style.height = window.innerHeight + 'px';
+        document.querySelector('#projects').style.height = window.innerHeight + 'px';
+        // document.querySelector('.image-container').style.height = window.innerHeight + 'px';
+    },
+    handleSwipe(direction) {
+      if (direction === 'left') {
+        this.$router.push(this.nextImageLink)
+      } else if (direction === 'right') {
+        this.$router.push(this.previousImageLink)
+      }
     },
     handleKey(event) {
       event.preventDefault();
@@ -242,6 +271,7 @@ export default {
 #projects.image {
   max-width: 1250px;
   margin: 0 auto;
+  height: 100%;
   #prev-next-buttons {
     a,
     a:visited,
@@ -257,6 +287,7 @@ export default {
 .project {
   position: relative;
   width: 100%;
+  height: 100%;
   margin: auto 0;
   @include respond-to('large') {
     max-height: calc(100vh - 2 * #{spacing(frame)});
@@ -264,8 +295,9 @@ export default {
   .image-container {
     position: relative;
     width: 100%;
+    height: 100%;
+    // height: calc(var(--vh, 1vh) * 100);
     // height: 90vh;
-    height: calc(var(--vh, 1vh) * 100);
     background-position: center;
     background-repeat: no-repeat;
     &.landscape {
@@ -309,6 +341,7 @@ export default {
       position: inherit;
       margin-top: spacing(frame);
       padding: 0;
+      bottom: 0px;
     }
     .caption {
       flex-grow: 1;
@@ -368,9 +401,10 @@ export default {
     @include respond-to('large') {
       display: block;
     }
+    .prev { padding-right: .5rem; }
   }
   .previous-btn {
-    transform: scaleX(-1)
+    transform: scaleX(-1);
   }
   .no-next {
     visibility: hidden;

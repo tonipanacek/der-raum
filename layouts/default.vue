@@ -61,6 +61,7 @@ export default {
 }
 .page-enter, .page-leave-to {
   opacity: 0;
+  transition: opacity .3s ease;
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
@@ -99,13 +100,15 @@ a:visited {
 
 .main-container {
   flex: 2 1 auto;
-  overflow-y: visible;
+  overflow-y: hidden;
   width: 100%;
+  height: 100%;
   background: white;
   margin: 0 auto;
   @include respond-to('large') {
     width: 500px;
     max-width: 1250px;
+    overflow-y: visible;
   }
 }
 
