@@ -7,6 +7,7 @@
           :title="$tp('title')"
           :alt="$tp('description')"
           :style="'backgroundPositionY:' + $tp('image_crop_y')"
+          v-swipe="handleSwipe"
           >
           <PrevNextButtons :prev="prevLink" :next="nextLink" />
         </Frame>
@@ -28,12 +29,26 @@ import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
 import Article from "~/components/Article"
 import prevNext from '~/plugins/prev_next'
+import TinyGesture from 'tinygesture';
 
 export default {
   nuxtI18n: {
     paths: {
       en: `/rooms/:slug`,
       de: '/raume/:slug'
+    }
+  },
+  directives: {
+    swipe: {
+      bind: function(el, binding) {
+        const gesture = new TinyGesture(el);
+        gesture.on('swiperight', function(event) {
+          binding.value('right')
+        });
+        gesture.on('swipeleft', function(event) {
+          binding.value('left')
+        });
+      }
     }
   },
   mixins: [prevNext, dynamicSEO],
@@ -98,6 +113,13 @@ export default {
     },
   },
   methods: {
+    handleSwipe(direction) {
+      if (direction === 'left') {
+        this.$router.push(this.nextLink)
+      } else if (direction === 'right') {
+        this.$router.push(this.prevLink)
+      }
+    },
     ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
