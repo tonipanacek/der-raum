@@ -1,6 +1,6 @@
 ---
 title: Kitchen
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579776657/Exklusive-hochwertige-Kueche-schwarz_bglfhp.jpg
+image: Exklusive-hochwertige-Kueche-schwarz_bglfhp.jpg
 de_title: Küche
 en_title: Kitchen
 de_description: |-

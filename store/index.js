@@ -7,7 +7,8 @@ export const state = () => {
     hoveredMenuItem: "",
     pageNumber: 0,
     lastPage: 0,
-    anchorItem: false
+    anchorItem: false,
+    cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/f_auto,q_auto,dpr_auto/'
   }
 }
 

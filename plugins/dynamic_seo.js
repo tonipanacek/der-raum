@@ -11,6 +11,7 @@ export default {
 
     return {
       title: `${seo.shortTitle} | ${title}`,
+      cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/',
       meta: [
         {
           hid: "description",

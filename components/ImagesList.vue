@@ -25,14 +25,14 @@
       >
         <div v-if="mobile" class="frame-wrapper">
           <Frame>
-            <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" loading="lazy"/>
+            <img :src="cloudinaryBaseUrl + 'w_500/' + image.url" :alt="`${title} ${image.index} of ${totalCount}`" loading="lazy"/>
           </Frame>
           <p class="image-title">
             {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
           </p>
         </div>
         <div v-else class="image-container">
-          <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
+          <img :src="cloudinaryBaseUrl + image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
           <transition name="no-fade">
             <p class="image-title">
               {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
@@ -81,7 +81,8 @@ export default {
   },
   data() {
     return {
-      hover: ''
+      hover: '',
+      cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/f_auto,q_auto,dpr_auto/'
     }
   },
   methods: {

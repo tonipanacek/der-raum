@@ -19,7 +19,7 @@
       <template v-else>
         <div class="image-container">
           <Frame
-            :source="$ta(page.attributes, 'image')"
+            :source="cloudinaryBaseUrl + $ta(page.attributes, 'image')"
             :title="$ta(page.attributes,'title')"
             :alt="$ta(page.attributes, 'description')"
             :style="'background-position-y:' + $ta(page.attributes, 'image_crop')">
@@ -84,7 +84,7 @@ export default {
     locale() {
       return this.$i18n.locale;
     },
-    ...mapState(["anchorItem"])
+    ...mapState(["anchorItem", 'cloudinaryBaseUrl'])
   },
   methods: {
     getTitle(page) {

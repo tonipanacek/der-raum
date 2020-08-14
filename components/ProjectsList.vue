@@ -24,14 +24,17 @@
       >
         <div v-if="mobile" class="frame-wrapper">
           <Frame>
-            <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" loading="lazy"/>
+            <img :src="cloudinaryBaseUrl + 'w_500/' + $ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')"/>
           </Frame>
           <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
           </p>
         </div>
         <div v-else class="image-container">
-          <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
+          <picture>
+            <source>
+            <img :src="cloudinaryBaseUrl + $ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
+          </picture>
           <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
           </p>
@@ -48,6 +51,9 @@ import Frame from '~/components/Frame'
 import dynamicSEO from '~/plugins/dynamic_seo'
 export default {
   name: "ProjectsList",
+  // data: {
+  //   cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/v1592834378/'
+  // },
   components: {
     Frame
   },
@@ -131,7 +137,7 @@ export default {
     this.unsetHoveredMenuItem()
   },
   computed: {
-    ...mapState(['hoveredMenuItem'])
+    ...mapState(['hoveredMenuItem', 'cloudinaryBaseUrl'])
   }
 }
 </script>

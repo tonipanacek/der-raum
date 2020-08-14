@@ -2,7 +2,7 @@
   <Container id="contact">
     <Article class="contact">
       <div class="image-container">
-        <Frame :source="page.attributes.image">
+        <Frame :source="cloudinaryBaseUrl + page.attributes.image">
         </Frame>
       </div>
         <div class="text">
@@ -77,7 +77,8 @@ export default {
     })
     let page = pages[0]
     return {
-      page
+      page,
+      cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/f_auto,q_auto,dpr_auto/'
       // contact: json
     }
   }

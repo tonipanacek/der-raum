@@ -13,7 +13,10 @@
         @mouseleave.native="hover = ''"
       >
         <div class="image-container">
-          <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" loading="eager"/>
+          <img :srcset="setImageSrcset(service.attributes.image)"
+          :src="cloudinaryBaseUrl + service.attributes.image"
+          :title="service.attributes.title"
+          :alt="service.attributes.title"/>
           <p class="service-title">
             {{ $ta(service.attributes, 'title') }}
           </p>
@@ -49,7 +52,8 @@ export default {
   data() {
     return {
       hover: '',
-      seo
+      seo,
+      cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/v1592834378/'
     }
   },
   components: {
@@ -59,6 +63,11 @@ export default {
     services: {
       type: Array,
       required: true
+    }
+  },
+  methods: {
+    setImageSrcset(imageUrl) {
+      console.log('https://res.cloudinary.com/dwvtvuml8/image/upload/')
     }
   },
   computed: {

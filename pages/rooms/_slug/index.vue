@@ -3,7 +3,7 @@
     <Article>
       <div class="image-container">
         <Frame
-          :source="$tp('image')"
+          :source="cloudinaryBaseUrl + $tp('image')"
           :title="$tp('title')"
           :alt="$tp('description')"
           :style="'backgroundPositionY:' + $tp('image_crop_y')"
@@ -87,7 +87,8 @@ export default {
         page,
         slug,
         allPages,
-        pages: allPages
+        pages: allPages,
+        cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/f_auto,q_auto,dpr_auto/'
       }
     } catch (err) {
       console.debug(err)
