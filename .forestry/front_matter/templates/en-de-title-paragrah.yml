@@ -1,0 +1,43 @@
+---
+label: EN/DE Title & Paragrah
+hide_body: true
+fields:
+- name: de_title
+  type: text
+  config:
+    required: false
+  label: DE_title
+  description: German header title for this section
+- name: de_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: DE_text
+  description: German text for this section
+- name: en_title
+  type: text
+  config:
+    required: false
+  label: EN_title
+  description: Header title for a section
+- name: en_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: EN_text
+  description: English text for this section
+- name: test_again
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Test again

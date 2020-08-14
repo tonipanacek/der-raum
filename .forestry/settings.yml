@@ -41,6 +41,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - text-with-choices
   - privacy
   - legal-page
   - contact-page
