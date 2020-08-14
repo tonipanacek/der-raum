@@ -26,14 +26,14 @@
       >
         <div v-if="mobile" class="frame-wrapper">
           <Frame>
-            <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" loading="lazy"/>
+            <img :src="cloudinaryBaseUrl + 'w_500/' + $ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" loading="lazy"/>
           </Frame>
           <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
           </p>
         </div>
         <div v-else class="image-container">
-          <img :src="$ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
+          <img :src="cloudinaryBaseUrl + $ta(room.attributes, 'image')" :alt="$ta(room.attributes, 'title')" />
           <p class="room-title">
             {{ $ta(room.attributes, 'title') }}
           </p>
@@ -139,7 +139,7 @@ export default {
     this.unsetHoveredMenuItem()
   },
   computed: {
-    ...mapState(['hoveredMenuItem'])
+    ...mapState(['hoveredMenuItem', 'cloudinaryBaseUrl'])
   }
 }
 </script>

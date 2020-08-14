@@ -1,13 +1,13 @@
 ---
 title: Winterküche
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
+main_image: Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kuechenzeile-hochwertig-exklusiv_cnttv4.png
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1580482355/Kueche-Dachgeschoss-Loft-Industrie-Design_xhforj.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackier_jz875s.png
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Kacheln-Arbeisplatte_jzck1w.png
+- Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
+- Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
+- Kuechenzeile-hochwertig-exklusiv_cnttv4.png
+- Kueche-Dachgeschoss-Loft-Industrie-Design_xhforj.jpg
+- Kueche-Dachgeschoss-Loft-grau-lackier_jz875s.png
+- Kueche-Kacheln-Arbeisplatte_jzck1w.png
 en_title: Winterküche
 de_title: Winterküche
 en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'

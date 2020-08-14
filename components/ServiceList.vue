@@ -14,7 +14,7 @@
       >
         <div class="image-container">
           <img :srcset="setImageSrcset(service.attributes.image)"
-          :src="cloudinaryBaseUrl + 'q_auto,f_auto,dpr_auto/' + service.attributes.image"
+          :src="cloudinaryBaseUrl + service.attributes.image"
           :title="service.attributes.title"
           :alt="service.attributes.title"/>
           <p class="service-title">
@@ -52,7 +52,8 @@ export default {
   data() {
     return {
       hover: '',
-      seo
+      seo,
+      cloudinaryBaseUrl: 'https://res.cloudinary.com/dwvtvuml8/image/upload/v1592834378/'
     }
   },
   components: {
