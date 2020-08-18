@@ -31,10 +31,14 @@
           </p>
         </div>
         <div v-else class="image-container">
-          <picture>
-            <source>
-            <img :src="cloudinaryBaseUrl + $ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-          </picture>
+<!--           <picture>
+            <source> -->
+            <img
+              :srcset="cloudinaryBaseUrl + 'w_500/' + $ta(project.attributes, 'main_image') + ', 500w,' + cloudinaryBaseUrl + 'w_710/' + $ta(project.attributes, 'main_image') + ', 710w' + cloudinaryBaseUrl + 'w_1000/' + $ta(project.attributes, 'main_image') + ', 1000w' + cloudinaryBaseUrl + 'w_1420/' + $ta(project.attributes, 'main_image') + ', 1420w'
+              "
+              :src="cloudinaryBaseUrl + $ta(project.attributes, 'main_image')"
+              :alt="$ta(project.attributes, 'title')" />
+<!--           </picture> -->
           <p class="project-title">
             {{ $ta(project.attributes, 'title') }}
           </p>
