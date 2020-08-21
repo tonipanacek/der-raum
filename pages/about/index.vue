@@ -149,6 +149,7 @@ export default {
     padding: 2em 0 1.75em 0;
   }
   #business-partners, #business-partner {
+    min-height: unset;
     .text {
       margin-top: 0;
     }
