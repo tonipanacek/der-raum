@@ -13,7 +13,7 @@
           </nuxt-link>
         </li>
       </template>
-      <template v-else-if="pagesPrefix === 'rooms'">
+      <template v-else-if="pagesPrefix === 'rooms' && sortedPages.length === 7">
         <li v-for="(page, index) in sortedPages">
           <nuxt-link
             :id="page.attributes.title"
