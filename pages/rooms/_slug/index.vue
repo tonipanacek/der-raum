@@ -83,11 +83,11 @@ export default {
             this.scrollTransitions(entry.target)
             // this.$router.push({ hash: '#' + entry.target.id })
           } else {
-            // entry.target.firstElementChild.style.opacity = 0.5
+            // entry.target.firstElementChild.style.opacity = 1
             this.scrollTransitions(entry.target)
           }
         })
-      }, { threshold: 0.8});
+      }, { threshold: 0.7});
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
