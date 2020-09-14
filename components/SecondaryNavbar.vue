@@ -13,6 +13,18 @@
           </nuxt-link>
         </li>
       </template>
+      <template v-else-if="pagesPrefix === 'rooms'">
+        <li v-for="(page, index) in sortedPages">
+          <nuxt-link
+            :id="page.attributes.title"
+            :key="page.attributes.title"
+            :to="localePath({ name: 'rooms-slug', hash: '#' + formatSlug($ta(page.attributes, 'title'))})"
+            :class="{ 'nav-item': true, 'title': true, 'anchor': true }"
+          >
+            {{ $ta(page.attributes, "title") }}
+          </nuxt-link>
+        </li>
+      </template>
       <template v-else>
         <li
         v-for="(page, index) in sortedPages"
@@ -123,7 +135,7 @@ export default {
   },
   watch: {
     anchorItem() {
-      if (this.anchorItem && (this.pagesPrefix === 'services' || this.pagesPrefix === 'about')) {
+      if (this.anchorItem && (this.pagesPrefix === 'services' || this.pagesPrefix === 'about' || this.pagesPrefix === 'rooms')) {
         const currentAnchors = document.querySelectorAll('.anchor')
         currentAnchors.forEach(anchor => {
           anchor.classList.remove('active-anchor')

@@ -133,7 +133,7 @@ a:visited {
   @include respond-to('large') {
     width: 300px;
     text-align: left;
-    height: $main-height;
+    // height: $main-height;
     min-height: $main-height;
     padding: 0 2em;
     margin-bottom: 2em;

@@ -14,7 +14,7 @@
       :id="$ta(room.attributes, 'title')"
       v-for="(room, index) in rooms"
       :key="getTitle(room.attributes)"
-      :to="path(room)"
+      :to="localePath({ name: 'rooms-slug', hash: '#' + formatSlug($ta(room.attributes, 'title'))})"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(room.attributes, 'title'), hover: hoveredMenuItem, 'room-link': true, 'extra-margin': rooms.length === 3 && index === rooms.length - 1, 'extra-space': room.attributes === ''}"
       @mouseover.native="handleHover(room)"
       @mouseleave.native="handleBlur"

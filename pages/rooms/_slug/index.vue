@@ -1,6 +1,6 @@
 <template>
-  <Container id="room">
-    <Article v-for="room in rooms" :key="room.attributes.title" :id="formatSlug($ta(room.attributes, 'title'))">
+  <Container id="rooms">
+    <Article v-for="room in pages" :key="room.attributes.title" :id="formatSlug($ta(room.attributes, 'title'))">
       <div class="image-container">
         <Frame
           :source="$ta(room.attributes, 'image')"
@@ -17,31 +17,9 @@
     </Article>
   </Container>
 </template>
-<!--
-<template>
-  <Container id="room">
-    <Article>
-      <div class="image-container">
-        <Frame
-          :source="$tp('image')"
-          :title="$tp('title')"
-          :alt="$tp('description')"
-          :style="'backgroundPositionY:' + $tp('image_crop_y')"
-          v-swipe="handleSwipe"
-          >
-          <PrevNextButtons :prev="prevLink" :next="nextLink" />
-        </Frame>
-      </div>
-      <div class="text">
-        <h1>{{ $tp("title") }}</h1>
-        <vue-markdown>{{ $tp("description") }}</vue-markdown>
-      </div>
-    </Article>
-  </Container>
-</template> -->
 
 <script>
-import { mapActions } from "vuex"
+import { mapActions, mapState } from "vuex"
 import { get, sortBy, isEmpty, chunk, kebabCase } from "lodash"
 import dynamicSEO from '~/plugins/dynamic_seo'
 import Frame from '~/components/Frame'
@@ -49,26 +27,12 @@ import Container from '~/components/Container'
 import PrevNextButtons from '~/components/PrevNextButtons'
 import Article from "~/components/Article"
 import prevNext from '~/plugins/prev_next'
-import TinyGesture from 'tinygesture';
 
 export default {
   nuxtI18n: {
     paths: {
-      en: `/room#:slug`,
-      de: `/raum#:slug`
-    }
-  },
-  directives: {
-    swipe: {
-      bind: function(el, binding) {
-        const gesture = new TinyGesture(el);
-        gesture.on('swiperight', function(event) {
-          binding.value('right')
-        });
-        gesture.on('swipeleft', function(event) {
-          binding.value('left')
-        });
-      }
+      en: `/rooms/room`,
+      de: `/raume/raum`
     }
   },
   mixins: [prevNext, dynamicSEO],
@@ -78,69 +42,101 @@ export default {
     PrevNextButtons,
     Article
   },
-  async asyncData({ app, params, error, store }) {
-    // get the slug as a param to import the correct md file
-    try {
-      const slug = params.slug
-
-      // create context via webpack to map over all pages
-      let allPages = await require.context(
-        "~/content/rooms/",
-        true,
-        /\.md$/
-      )
-      allPages = allPages.keys().map(key => {
-        // give back the value of each page context
-        return allPages(key)
-      })
-      allPages = sortBy(allPages, page => get(page, 'attributes.position'))
-
-      const locale = app.i18n.locale
-      const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
-
-      await store.dispatch('i18n/setRouteParams', {
-        en: { slug: kebabCase(get(page, `attributes.en_title`)) },
-        de: { slug: kebabCase(get(page, `attributes.de_title`)) }
-      })
-
-      return {
-        page,
-        slug,
-        allPages,
-        rooms: allPages
-      }
-    } catch (err) {
-      console.debug(err)
-      error({ statusCode: 404, message: "No room found" })
+  async asyncData() {
+    // create context via webpack to map over all pages
+    const allPages = await require.context(
+      "~/content/rooms/",
+      true,
+      /\.md$/
+    )
+    let pages = allPages.keys().map(key => {
+      // give back the value of each page context
+      return allPages(key)
+    })
+    pages = sortBy(pages, page => get(page, 'attributes.position'))
+    return {
+      pages
     }
   },
   mounted() {
-    this.setPages(this.currentPagesChunk)
+    this.setPages(this.$data.pages)
     this.setPagesPrefix("rooms")
+    this.scrollIntoView()
   },
   computed: {
-    allPagesChunks() {
-      if (isEmpty(this.$data.allPages)) { return [] }
-      const allPages = sortBy(this.$data.allPages, p => get(p, 'attributes.position'))
-      return chunk(allPages, 3)
+    locale() {
+      return this.$i18n.locale;
     },
-    currentPagesChunk() {
-      if (isEmpty(this.allPagesChunks)) { return [] }
-      const position = parseInt(get(this.$data.page, 'attributes.position', 1))
-      const pageNumber = Math.floor((position - 1) / 3)
-      const chunk = this.allPagesChunks[pageNumber] || []
-      return chunk.slice(0, 3)
-    },
+    ...mapState(["anchorItem"])
   },
   methods: {
-    handleSwipe(direction) {
-      if (direction === 'left') {
-        this.$router.push(this.nextLink)
-      } else if (direction === 'right') {
-        this.$router.push(this.prevLink)
-      }
+    getTitle(page) {
+      return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
     },
-    ...mapActions(["setPages", "setPagesPrefix"])
+    scrollIntoView() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.setAnchorItem(entry.target.id)
+            this.addParamsToLocation(entry.target.id)
+            entry.target.firstElementChild.style.opacity = 1
+            this.scrollTransitions(entry.target)
+            // this.$router.push({ hash: '#' + entry.target.id })
+          } else {
+            // entry.target.firstElementChild.style.opacity = 0.5
+            this.scrollTransitions(entry.target)
+          }
+        })
+      }, { threshold: 0.8});
+      const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
+      divs.forEach(div => observer.observe(div))
+    },
+    addParamsToLocation(id) {
+      history.replaceState(
+        {},
+        null,
+        this.$route.path +
+          '#' +
+          id
+      )
+    },
+    beforeEnter: function(el) {
+      el.style.transition = "opacity 300 ease, transform 300 ease"
+    },
+    enter: function(el, done) {
+      el.style.transform = "translateY(0)"
+      el.classList.add('transition-show')
+    },
+    leave: function(el, done) {
+      done()
+    },
+    scrollTransitions(element) {
+      window.addEventListener('scroll', function() {
+        if (element.firstElementChild.className !== 'text') {
+          const frame = element.firstElementChild
+          if (window.scrollY > frame.offsetTop) {
+            frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+          }
+        }
+      })
+    },
+    ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
+  },
+  destroyed() {
+    this.unsetAnchorItem()
   }
 }
 </script>
+
+<style lang="scss">
+  #rooms {
+    margin-top: -2em;
+    margin-bottom: 2em;
+    .text p {
+      margin-bottom: 0;
+    }
+    .article {
+      padding: 2em 0 1.75em 0;
+    }
+  }
+</style>
