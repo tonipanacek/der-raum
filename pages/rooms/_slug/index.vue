@@ -1,5 +1,25 @@
 <template>
   <Container id="room">
+    <Article v-for="room in rooms" :key="room.attributes.title" :id="formatSlug($ta(room.attributes, 'title'))">
+      <div class="image-container">
+        <Frame
+          :source="$ta(room.attributes, 'image')"
+          :title="$ta(room.attributes,'title')"
+          :alt="$ta(room.attributes, 'description')"
+          :style="'background-position-y:' + $ta(room.attributes, 'image_crop_y')"
+          >
+        </Frame>
+      </div>
+      <div class="text">
+        <h1>{{ $ta(room.attributes, "title") }}</h1>
+        <p>{{ $ta(room.attributes, "description") }}</p>
+      </div>
+    </Article>
+  </Container>
+</template>
+<!--
+<template>
+  <Container id="room">
     <Article>
       <div class="image-container">
         <Frame
@@ -18,7 +38,7 @@
       </div>
     </Article>
   </Container>
-</template>
+</template> -->
 
 <script>
 import { mapActions } from "vuex"
@@ -34,8 +54,8 @@ import TinyGesture from 'tinygesture';
 export default {
   nuxtI18n: {
     paths: {
-      en: `/rooms/:slug`,
-      de: '/raume/:slug'
+      en: `/room#:slug`,
+      de: `/raum#:slug`
     }
   },
   directives: {
@@ -87,7 +107,7 @@ export default {
         page,
         slug,
         allPages,
-        pages: allPages
+        rooms: allPages
       }
     } catch (err) {
       console.debug(err)
