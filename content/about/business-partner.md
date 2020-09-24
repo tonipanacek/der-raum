@@ -9,6 +9,8 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: MUJI
+  text_url: www.muji.com
 - main_text: 50 hertz
   text_url: https://www.50hertz.com/
 - main_text: A53 Architekten
@@ -78,5 +80,7 @@ text_and_link_group:
 image: ''
 de_description: ''
 en_description: ''
+image_crop_y: ''
+image_crop_x: ''
 
 ---
