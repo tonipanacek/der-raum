@@ -199,6 +199,7 @@ export default {
    ** Build configuration
    */
   build: {
+    transpile: [ 'tinygesture' ],
     /*
      ** You can extend webpack config here
      */
