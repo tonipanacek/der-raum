@@ -253,10 +253,12 @@ export default {
       return this.$data.images.length
     },
     imageOrientation() {
-      if (!this.$data.image) { return '' }
-      let emptyImage = new Image()
-      emptyImage.src = this.$data.image
-      return emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+      if (process.client) {
+        if (!this.$data.image) { return '' }
+        let emptyImage = new Image()
+        emptyImage.src = this.$data.image
+        return emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+      }
     }
   },
   components: {

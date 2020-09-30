@@ -92,7 +92,7 @@ export default {
   plugins: [
     "~/plugins/translate_page",
     "~/plugins/markdown",
-    { src: '~/plugins/intersection_observer', ssr: false },
+    { src: '~/plugins/intersection_observer', ssr: false }
   ],
   polyfill: {
     features: [
