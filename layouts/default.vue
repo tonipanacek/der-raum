@@ -109,6 +109,7 @@ a:visited {
     width: 500px;
     max-width: 1250px;
     overflow-y: visible;
+    // max-height: $main-height;
   }
 }
 
