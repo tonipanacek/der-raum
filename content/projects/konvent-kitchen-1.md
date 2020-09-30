@@ -3,7 +3,7 @@ orientation: landscape
 page_position: 1
 page: 6
 title: Konvent Kitchen
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601368917/Kueche-Schublade-Auszug-Design-Handwerk-Besteck-Einsatz_dh229y.jpg
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601368846/Einbaukueche-eiche-Naturstein-holz-edel_ygck6q.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601368505/Einbaukueche-eiche-pivot-tuer-raumhoch_vnjo19.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601368803/kueche-nach-mass-kuechenzeile-hochwertig_tj9nfl.jpg
@@ -20,8 +20,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601368924/kuechennische-naturstein-holz-lamellen_wx77mm.jpg
 en_title: Konvent Kitchen
 de_title: Konvent Küchen
-en_description: ''
-de_description: ''
+en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
+de_description: 'Gestaltung: DER RAUM // Fotos: Maximilian Gödecke'
 meta_tags:
   de_title: ''
   en_title: ''
