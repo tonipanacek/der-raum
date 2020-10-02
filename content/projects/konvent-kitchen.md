@@ -26,9 +26,9 @@ de_title: Konvent Kitchen
 en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
 de_description: 'Gestaltung: DER RAUM // Fotos: Maximilian Gödecke'
 meta_tags:
-  de_title: ''
-  en_title: ''
-  de_description: ''
-  en_description: ''
+  de_title: Design Küchenzeile Eiche weisslich geölt mit Natursteinplatte
+  en_title: Design kitchen unit oak white oiled with natural stone top
+  de_description: Küche, Stein, Gaskochfeld, Eiche, Handwerk, Holz, Design
+  en_description: kitchen, stone, gas hob, oak, handicraft, wood, design
 
 ---
