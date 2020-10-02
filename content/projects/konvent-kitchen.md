@@ -8,8 +8,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626107/Einbaukueche-Holz-Front-Design-Handwerk_uim4kq.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601624076/Einbaukueche-eiche-pivot-tuer-raumhoch_alq4un.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626069/kueche-nach-mass-kuechenzeile-hochwertig_lgdbot.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626017/kuechenzeile-einbau-nach-mass-holz-stein_dt8yzx.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626051/holz-lamellen-wandpaneele-design-architektur_q10uuu.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626017/kuechenzeile-einbau-nach-mass-holz-stein_dt8yzx.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626070/Schubladen-auszug-holz-eiche-design-architektur-handwerk_otvja2.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626107/kuechennische-naturstein-holz-lamellen_mahlna.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626107/Einbaukueche-kuechenzeile-eiche-holz_qsdblf.jpg
