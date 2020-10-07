@@ -17,10 +17,10 @@ en_description: Our team comes from various professional backgrounds with differ
 de_description: Unser Team bringt bewusst unterschiedliche berufliche Hintergründe
   und Erfahrung mit. Design und Handwerk greifen bei uns eng zusammen und gehen Hand
   in Hand. Als Team vom klassischen Tischler / Schreiner über Holztechniker bis hin
-  zum Produktdesigner, Architekten und Interiordesigner schaffen wir maximal durchdachte,
-  ästhetisch ansprechende und individuelle Lösungen. Sie profitieren von unserem interdisziplinären
-  Kollektiv und ganzheitlichen Ansatz. Wir glauben stark an die Kraft von Synergien
-  und den Austausch über fachliche Grenzen hinweg. So schaffen wir einzigartige Produkte,
+  zum Produkt- und Interiordesigner schaffen wir maximal durchdachte, ästhetisch ansprechende
+  und individuelle Lösungen. Sie profitieren von unserem interdisziplinären Kollektiv
+  und ganzheitlichen Ansatz. Wir glauben stark an die Kraft von Synergien und den
+  Austausch über fachliche Grenzen hinweg. So schaffen wir einzigartige Produkte,
   welche sowohl in Funktion und Langlebigkeit technisch und konstruktiv einwandfrei
   funktionieren und dabei in Design und Formsprache gemeinsame Visionen Wirklichkeit
   werden lassen.
