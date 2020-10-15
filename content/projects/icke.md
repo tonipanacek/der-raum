@@ -15,7 +15,7 @@ de_description: 'Gestaltung: OuterRim Architecture'
 en_description: 'Design: OuterRim Architecture'
 orientation: portrait
 page: 2
-page_position: 0
+page_position: 1
 meta_tags:
   de_title: Design Einbauküche mit schwrazem Küchenblock
   en_title: Design built-in kitchen with black kitchen block
