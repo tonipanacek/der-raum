@@ -24,7 +24,7 @@ text_and_link_group:
   text_url: https://tmagazine.blogs.nytimes.co/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/?src=xps
 - main_text: Berliner Morgenpost // "Raumwunder in Wandlitz" // 2015
   text_url: https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitzhtml
-- main_text: Deutscher Holzbaupreis // "Einfamlienhaus in Wandlitz" // 2015
+- main_text: Deutscher Holzbaupreis // "Einfamilienhaus in Wandlitz" // 2015
   text_url: https://www.deutscher-holzbaupreis.de/archiv/preistraeger_2015/preise_und_anerkennungen2015/anerkennung_neubau/#c4682
 - main_text: Frankfurter Allgemeine Sonntagszeitung // "Das Wohnmöbel von Wandlitz"
     // 2015
