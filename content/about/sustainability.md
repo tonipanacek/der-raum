@@ -11,7 +11,7 @@ en_description: |-
 
   In this process, we recycle the majority of wood residue and heat our buildings and workshops with our in-house cogeneration unit. We generate our own solar power which enables us to operate our machines in a climate-neutral manner. As a result, we save approximately 25 tons of CO2-emissions per year.
 
-  We aim to purchase all the production materials within our region. The elimination of intermediate transport saves additional packaging and resources. We consistently make our contribution resource preservation globally. In the past, we chose to promote the replanting of mangroves as a part of the REFORESTATION ([edenprojects.org](https://edenprojects.org/ "edenprojects.org")) with each product sold because this is where the need is greatest.
+  We aim to purchase all the production materials within our region. The elimination of intermediate transport saves additional packaging and resources. We consistently make our contribution resource preservation globally. In the past, we chose to promote the replanting of mangroves as a part of the REFORESTATION ([edenprojects.org](www.edenprojects.org "www.edenprojects.org")) with each product sold because this is where the need is greatest.
 
   Our primary contribution is to ecological balance and we are continuously striving toward a climate-neutral future.
 de_description: |-
@@ -21,7 +21,7 @@ de_description: |-
 
   Den überwiegenden Teil der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen, was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.
 
-  Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION ([edenprojects.org](https://edenprojects.org/ "edenprojects.org")) voranzutreiben, da gerade hier der Bedarf am größten ist.
+  Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION ([edenprojects.org](www.edenprojects.org "www.edenprojects.org")) voranzutreiben, da gerade hier der Bedarf am größten ist.
 
   Wir leisten unseren ersten Beitrag am ökologischen Gleichgewicht und sind kontinuierlich bestrebt in absehbarer Zukunft gänzlich klimaneutral zu agieren.
 meta_tags:
