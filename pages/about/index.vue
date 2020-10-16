@@ -27,7 +27,7 @@
         </div>
         <div class="text">
           <h1>{{ $ta(page.attributes, "title") }}</h1>
-          <p>{{ $ta(page.attributes, "description") }}</p>
+          <vue-markdown>{{ $ta(page.attributes, "description") }}</vue-markdown>
         </div>
       </template>
     </Article>
