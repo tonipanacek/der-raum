@@ -12,7 +12,7 @@
         </div>
         <div class="text">
           <h1>{{ $ta(service.attributes, "title") }}</h1>
-          <p>{{ $ta(service.attributes, "description") }}</p>
+          <vue-markdown>{{ $ta(service.attributes, "description") }}</vue-markdown>
         </div>
       </Article>
   </Container>
