@@ -21,9 +21,11 @@ orientation: portrait
 page: 1
 page_position: 1
 meta_tags:
-  de_title: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen
+  de_title: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen,
+    Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Complete office expansion with conference tables, tea kitchen and workplaces
-  de_description: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen
+  de_description: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen,
+    Tischler, Schreiner, Schreinerei, Tischlerei
   en_description: Complete office expansion with conference tables, tea kitchen and
     workplaces
 
