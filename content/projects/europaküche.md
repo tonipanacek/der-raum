@@ -18,9 +18,11 @@ orientation: landscape
 page: 6
 page_position: 1
 meta_tags:
-  de_title: Schwarzer Küchenblock in Loftstyle Design
+  de_title: Schwarzer Küchenblock in Loftstyle Design, Tischler, Schreiner, Schreinerei,
+    Tischlerei
   en_title: Black kitchen block in loft style design
-  de_description: Schwarzer Küchenblock in Loftstyle Design
+  de_description: Schwarzer Küchenblock in Loftstyle Design, Tischler, Schreiner,
+    Schreinerei, Tischlerei
   en_description: Schwarzer Küchenblock in Loftstyle Design
 
 ---
