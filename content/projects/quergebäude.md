@@ -18,9 +18,11 @@ orientation: landscape
 page: 3
 page_position: 1
 meta_tags:
-  de_title: Hochwertige Einbauküche aus Massivholz weiss lackiert
+  de_title: Hochwertige Einbauküche aus Massivholz weiss lackiert, Tischler, Schreiner,
+    Schreinerei, Tischlerei
   en_title: High quality built-in solid wood lacquered white
   de_description: Hochwertige Einbaukueche aus Massivholz mit weiss lackierten Fronten
+    vom Tischler / Schreiner
   en_description: High quality built-in kitchen made of solid wood with white lacquered
     fronts
 
