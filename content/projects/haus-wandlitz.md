@@ -18,9 +18,11 @@ orientation: landscape
 page: 2
 page_position: 1
 meta_tags:
-  de_title: Hochwertiger Innenausbau eines kompletten Einfamilienhauses
+  de_title: Hochwertiger Innenausbau eines kompletten Einfamilienhauses, Tischler,
+    Schreiner, Schreinerei, Tischlerei
   en_title: High quality interior design of a complete single family house
-  de_description: Wohnbereich Kueche Schlafzimmer Hochwertig Exklusiv Holz
+  de_description: Wohnbereich Kueche Schlafzimmer Hochwertig Exklusiv Holz vom Tischler
+    / Schreiner
   en_description: Living area kitchen bedroom high quality exclusive wood
 
 ---
