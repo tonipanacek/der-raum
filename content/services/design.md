@@ -1,6 +1,6 @@
 ---
 position: 1
-title: Consulting
+title: Design
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581067969/Gestaltung-Design-Materialien_web_xzs6ue.jpg
 de_title: Beratung
 en_title: Consulting
