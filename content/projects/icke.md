@@ -17,9 +17,11 @@ orientation: portrait
 page: 2
 page_position: 1
 meta_tags:
-  de_title: Design Einbauküche mit schwrazem Küchenblock
+  de_title: Design Einbauküche mit schwrazem Küchenblock, Tischler, Schreiner, Schreinerei,
+    Tischlerei
   en_title: Design built-in kitchen with black kitchen block
-  de_description: Einbauküche weiss Kochinsel Mittelblock schwarz hochwertig
+  de_description: Einbauküche weiss Kochinsel Mittelblock schwarz hochwertig vom Tischler
+    / Schreiner
   en_description: Built-in kitchen white island central block black high quality
 
 ---
