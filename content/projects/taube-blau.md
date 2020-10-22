@@ -22,9 +22,9 @@ de_title: Taube Blau
 en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
 de_description: 'Gestaltung: DER RAUM // Fotos: Maximilian Gödecke'
 meta_tags:
-  de_title: Altbau Küche im Landhausstil
+  de_title: Altbau Küche im Landhausstil, Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Old country style kitchen shaker, grey
-  de_description: Altbau Küche im Landhausstil
+  de_description: Altbau Küche im Landhausstil vom Tischller / Schreiner
   en_description: Old country style kitchen shaker, grey
 
 ---
