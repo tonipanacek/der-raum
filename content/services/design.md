@@ -1,9 +1,9 @@
 ---
 position: 1
-title: Design
+title: Consulting
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581067969/Gestaltung-Design-Materialien_web_xzs6ue.jpg
-de_title: Gestaltung
-en_title: Design
+de_title: Beratung
+en_title: Consulting
 de_description: Ihre Idee ist unser kreatives Sprungbrett zur Umsetzung für unkonventionelle
   und anspruchsvolle Projekte aus Innenarchitektur und Interior Design. Die solide
   Raumgestaltung, Einrichtung und Möbelplanung bilden das Fundament der von uns gelebten,
