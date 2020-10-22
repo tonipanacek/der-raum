@@ -18,10 +18,11 @@ orientation: landscape
 page: 4
 page_position: 2
 meta_tags:
-  de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design
+  de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design, Tischler, Schreiner, Schreinerei,
+    Tischlerei
   en_title: Exclusive built-in kitchen with marble copper design
   de_description: Exklusive Kueche blau rosa lackiert Marmor Arbeitsplatte Kupfer
-    Griffe
+    Griffe vom Tischler / Schreiner
   en_description: Exclusive kitchen painted blue pink marble countertop copper handles
 
 ---
