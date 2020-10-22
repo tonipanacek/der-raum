@@ -15,9 +15,9 @@ de_title: Zur See
 en_description: Design DER RAUM
 de_description: Gestaltung DER RAUM
 meta_tags:
-  de_title: Küche aus Seekiefer weiß lackiert
+  de_title: Küche aus Seekiefer weiß lackiert, Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Sea pine kitchen painted white
-  de_description: Küche aus Seekiefer weiß lackiert
+  de_description: Küche aus Seekiefer weiß lackiert vom Tischler / Schreiner
   en_description: Sea pine kitchen painted white
 
 ---
