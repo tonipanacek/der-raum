@@ -16,9 +16,11 @@ orientation: landscape
 page: 4
 page_position: 1
 meta_tags:
-  de_title: Luxus Küche mit goldener Kochinsel aus Messing
+  de_title: Luxus Küche mit goldener Kochinsel aus Messing, Tischler, Schreiner, Schreinerei,
+    Tischlerei
   en_title: Luxury kitchen with golden brass cooking unit
-  de_description: Hochwertige Enbauküche Kochinsel gold luxus küche
+  de_description: Hochwertige Enbauküche Kochinsel gold luxus küche, Tischler, Schreiner,
+    Schreinerei, Tischlerei
   en_description: High quality built-in kitchen Gold cooking unit luxury kitchen
 
 ---
