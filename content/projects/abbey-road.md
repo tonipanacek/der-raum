@@ -14,11 +14,13 @@ en_description: 'Design: Bundschuh Architekten'
 de_description: 'Gestaltung: Bundschuh Architekten'
 orientation: portrait
 page: 3
-page_position: 0
+page_position: 
 meta_tags:
-  de_title: Hochwertige Kuechenzeile als Sideboard im Wohnbereich
+  de_title: Hochwertige Kuechenzeile als Sideboard im Wohnbereich, Tischler, Schreiner,
+    Schreinerei, Tischlerei
   en_title: High quality kitchenette as a sideboard in the living area
-  de_description: Hochwertig Kuechenzeile Einbauschrank raumhoch Wohnbereich Sideoboard
+  de_description: Hochwertig Kuechenzeile Einbauschrank raumhoch Wohnbereich Sideoboard,
+    Tischler, Schreiner, Schreinerei, Tischlerei
   en_description: High quality kitchen unit built-in closet floor to ceiling living
     area sideboard
 
