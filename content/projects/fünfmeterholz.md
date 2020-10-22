@@ -17,9 +17,11 @@ orientation: landscape
 page: 2
 page_position: 2
 meta_tags:
-  de_title: Hochwertige Einbauküche schwarz in Dachgeschoss
+  de_title: Hochwertige Einbauküche schwarz in Dachgeschoss, Tischler, Schreiner,
+    Schreinerei, Tischlerei
   en_title: High quality built-in kitchen black in the attic
-  de_description: Küche Mittelblock Massivholz schwarz Dachgeschoss
+  de_description: Küche Mittelblock Massivholz schwarz Dachgeschoss, Tischler, Schreiner,
+    Schreinerei, Tischlerei
   en_description: Kitchen middle block solid wood black attic
 
 ---
