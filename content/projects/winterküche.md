@@ -13,12 +13,14 @@ de_title: Winterküche
 en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
 de_description: 'Gestaltung: DER RAUM // Fotos: Alexander Schlösser'
 orientation: portrait
-page_position: 0
+page_position: 
 page: 5
 meta_tags:
-  de_title: Hochwertige Küche im Dachgeschoss mit Kachel Spritzschutz Design
+  de_title: Hochwertige Küche im Dachgeschoss mit Kachel Spritzschutz Design, Tischler,
+    Schreiner, Schreinerei, Tischlerei
   en_title: High quality kitchen in the attic with a splash guard
-  de_description: Küche Dachgeschoss Spitzschutz dunkel edel Design
+  de_description: Küche Dachgeschoss Spitzschutz dunkel edel Design vom Tischler /
+    Schreiner
   en_description: Kitchen attic pointed protection dark noble design
 
 ---
