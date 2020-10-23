@@ -6,7 +6,7 @@ de_first_column: Beratungstermin vereinbaren
 en_first_column: Arrange Appointment
 telephone_1: 030 927943 501
 telephone_2: "+49 176735647 42 (WhatsApp)"
-email: derraum@holz-raum.de
+email: kontakt@der-raum.de
 de_second_column: Showroom & Planungsstudio
 en_second_column: Showroom & Design Studio
 street_number: Dunckerstraße 15
