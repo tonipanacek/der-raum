@@ -4,7 +4,7 @@ en_title: Contact
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580904552/kontakt3_h6xnua.jpg
 de_first_column: Beratungstermin vereinbaren
 en_first_column: Arrange Appointment
-telephone_1: 030 927943 501
+telephone_1: 030 927943501
 telephone_2: "+49 176735647 42 (WhatsApp)"
 email: kontakt@der-raum.de
 de_second_column: Showroom & Planungsstudio
