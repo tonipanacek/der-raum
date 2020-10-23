@@ -8,7 +8,7 @@ de_description: "An die individuelle Beratung schließt sich die Umsetzung im In
   nahtlos an. Mit einem hochmotivierten, eingespielten Team aus Tischlern / Schreinern,
   unserer eigenen Tischlermanufaktur und optional in Zusammenarbeit mit Architekten
   setzten wir die gemeinsame Vision Ihrer Wohnraumplanung in die Realität um. In der
-  Planungsphase bereiten wir mit Ihrem persönlichen Ansprechpartner die termingerechte
+  Konstruktionsphase bereiten wir mit Ihrem persönlichen Ansprechpartner die termingerechte
   und passgenaue Fertigung Ihres maßgeschneiderten Entwurfs aus einer Hand vor.  \nUnser
   Anspruch: ästhetisch, technisch und funktional die Gestaltung einer finalen Kontrolle
   zu unterziehen und somit für ein rundum begeisterndes Ergebnis zu sorgen."
