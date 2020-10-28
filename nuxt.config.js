@@ -133,7 +133,8 @@ export default {
     "nuxt-svg-loader",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
-    "nuxt-polyfill"
+    "nuxt-polyfill",
+    'nuxt-facebook-pixel-module'
   ],
   // SCSS resources
   styleResources: {
@@ -169,6 +170,13 @@ export default {
   // Google Analytics Config
   googleAnalytics: {
     id: 'UA-1433242-13'
+  },
+  // Facebook Pixel Config
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '2814110635498978',
+    disabled: false
   },
   // Sitemap config
   sitemap: {
