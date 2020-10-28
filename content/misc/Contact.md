@@ -7,8 +7,8 @@ en_first_column: Arrange Appointment
 telephone_1: 030 927943501
 telephone_2: "+49 176735647 42 (WhatsApp)"
 email: kontakt@der-raum.de
-de_second_column: Showroom & Planungsstudio
-en_second_column: Showroom & Design Studio
+de_second_column: Showroom
+en_second_column: Showroom
 street_number: Dunckerstraße 15
 city_zip: 10437 Berlin
 de_weekdays: 'Montag-Freitag:'
