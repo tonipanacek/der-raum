@@ -18,8 +18,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1585052744/Kueche-Griff-Front-Detail-Handwerk-Buster-Punch_l7lpqu.jpg
 en_title: Apartment42
 de_title: Apartment42
-en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
-de_description: 'Gestaltung: DER RAUM // Fotos: Maximilian Gödecke'
+en_description: 'Photos: Maximilian Gödecke'
+de_description: 'Fotos: Maximilian Gödecke'
 meta_tags:
   de_title: Apartment mit Kochinsel, Einbauschränken und Badzimmereinrichtung
   en_title: " Apartment with kitchen island, fitted wardrobes and bathroom furnishings"
