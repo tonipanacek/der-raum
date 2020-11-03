@@ -19,8 +19,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834378/Kueche-Design-Armatur-Gold-Hochwertig-Luxus_vrcqvi.jpg
 en_title: Taube Blau
 de_title: Taube Blau
-en_description: 'Design: DER RAUM // Photos: Maximilian Gödecke'
-de_description: 'Gestaltung: DER RAUM // Fotos: Maximilian Gödecke'
+en_description: 'Photos: Maximilian Gödecke'
+de_description: 'Fotos: Maximilian Gödecke'
 meta_tags:
   de_title: Altbau Küche im Landhausstil, Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Old country style kitchen shaker, grey
