@@ -12,8 +12,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580480545/Glas-Kueche-blau-lackiert-Schrank-Vitrine_y21k4m.jpg
 en_title: Kontrast
 de_title: Kontrast
-en_description: 'Design: DER RAUM // Photos: Michel Sass'
-de_description: 'Gestaltung: DER RAUM // Fotos: Michel Sass'
+en_description: 'Photos: Michel Sass'
+de_description: 'Fotos: Michel Sass'
 orientation: landscape
 page: 4
 page_position: 2
