@@ -10,8 +10,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Kacheln-Arbeisplatte_jzck1w.png
 en_title: Winterküche
 de_title: Winterküche
-en_description: 'Design: DER RAUM // Photos: Alexander Schlösser'
-de_description: 'Gestaltung: DER RAUM // Fotos: Alexander Schlösser'
+en_description: 'Photos: Alexander Schlösser'
+de_description: 'Fotos: Alexander Schlösser'
 orientation: portrait
 page_position: 
 page: 5
