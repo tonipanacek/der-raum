@@ -8,9 +8,10 @@ fields:
 - name: offline
   type: boolean
   label: Offline
-  description: Toggle this if you wish to make the project go from offline (not visible
-    on the live site) to online (visible on the site)
   default: true
+  description: This determines whether the project is "offline" (not visible on the
+    site) versus "online" (visible on the site). <br>If green, the project is offline.
+    <br>If grey, the project is online.
 - name: main_image
   type: file
   config:
