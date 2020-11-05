@@ -12,6 +12,7 @@ en_title: 1 UNZE
 de_title: 1 UNZE
 en_description: 'Photos: Alexander Schlösser'
 de_description: 'Fotos: Alexander Schlösser'
+offline: false
 orientation: landscape
 page: 4
 page_position: 1

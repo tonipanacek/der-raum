@@ -13,6 +13,7 @@ de_title: Fünfmeterholz
 en_title: Fünfmeterholz
 de_description: 'Gestaltung: Reinhard Architekten // Fotos: Phil Dera'
 en_description: 'Design: Reinhard Architekten // Photos: Phil Dera'
+offline: false
 orientation: landscape
 page: 2
 page_position: 2

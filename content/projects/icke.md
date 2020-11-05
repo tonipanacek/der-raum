@@ -13,6 +13,7 @@ de_title: Icke
 en_title: Icke
 de_description: 'Gestaltung: OuterRim Architecture'
 en_description: 'Design: OuterRim Architecture'
+offline: false
 orientation: portrait
 page: 2
 page_position: 1

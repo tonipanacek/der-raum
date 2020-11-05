@@ -12,9 +12,10 @@ en_title: Abbey Road
 de_title: Abbey Road
 en_description: 'Design: Bundschuh Architekten'
 de_description: 'Gestaltung: Bundschuh Architekten'
+offline: false
 orientation: portrait
 page: 3
-page_position: 
+page_position:
 meta_tags:
   de_title: Hochwertige Kuechenzeile als Sideboard im Wohnbereich, Tischler, Schreiner,
     Schreinerei, Tischlerei

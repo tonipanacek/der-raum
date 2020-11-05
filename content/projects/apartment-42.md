@@ -20,6 +20,7 @@ en_title: Apartment42
 de_title: Apartment42
 en_description: 'Photos: Maximilian Gödecke'
 de_description: 'Fotos: Maximilian Gödecke'
+offline: false
 meta_tags:
   de_title: Apartment mit Kochinsel, Einbauschränken und Badzimmereinrichtung
   en_title: " Apartment with kitchen island, fitted wardrobes and bathroom furnishings"

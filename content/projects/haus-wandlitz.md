@@ -14,6 +14,7 @@ de_title: Haus Wandlitz
 en_title: Haus Wandlitz
 de_description: 'Gestaltung: Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
 en_description: 'Design: Bonauer Bölling Architekten // Photos: Tiffany Taraska'
+offline: false
 orientation: landscape
 page: 2
 page_position: 1

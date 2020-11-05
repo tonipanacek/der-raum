@@ -14,6 +14,7 @@ en_title: Kontrast
 de_title: Kontrast
 en_description: 'Photos: Michel Sass'
 de_description: 'Fotos: Michel Sass'
+offline: false
 orientation: landscape
 page: 4
 page_position: 2

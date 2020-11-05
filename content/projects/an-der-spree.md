@@ -17,6 +17,7 @@ de_title: An der Spree
 en_title: An der Spree
 de_description: 'Gestaltung: CBRE // Fotos: Andrea Dingeldein'
 en_description: 'Design: CBRE // Photos: Andrea Dingeldein'
+offline: false
 orientation: portrait
 page: 1
 page_position: 1
