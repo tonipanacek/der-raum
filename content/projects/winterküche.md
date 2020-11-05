@@ -12,8 +12,9 @@ en_title: Winterküche
 de_title: Winterküche
 en_description: 'Photos: Alexander Schlösser'
 de_description: 'Fotos: Alexander Schlösser'
+offline: false
 orientation: portrait
-page_position: 
+page_position:
 page: 5
 meta_tags:
   de_title: Hochwertige Küche im Dachgeschoss mit Kachel Spritzschutz Design, Tischler,

@@ -21,6 +21,7 @@ en_title: Taube Blau
 de_title: Taube Blau
 en_description: 'Photos: Maximilian Gödecke'
 de_description: 'Fotos: Maximilian Gödecke'
+offline: false
 meta_tags:
   de_title: Altbau Küche im Landhausstil, Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Old country style kitchen shaker, grey

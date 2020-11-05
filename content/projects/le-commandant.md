@@ -23,6 +23,7 @@ en_description: 'Design: Sebastian Schwade & Club Marginal Architekten // Photos
   Maximilian Gödecke'
 de_description: 'Gestaltung: Sebastian Schwade & Club Marginal Architekten // Fotos:
   Maximilian Gödecke'
+offline: false
 meta_tags:
   de_title: Treppeneinbau mit Hochschränken, Schiebetür, Küche und Lamellenwand, Tischler,
     Schreiner, Schreinerei, Tischlerei
