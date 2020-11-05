@@ -14,17 +14,10 @@ en_description: Do we need a philosophy? We say yes. Our conscious, attentive, a
   your project in-house. We intend to accompany you from the first consultation, the
   complete installation, to the final touches of your project. We are here to provide
   a timely, results-oriented, flawless service for you.
-de_description: Ob wir eine Philosophie brauchen? Wir sagen ja. Unsere bewusste, achtsame
-  und konstruktive Haltung, unsere Neugier für Ihre Idee sowie die Motivation und
-  Leidenschaft mit der wir Sie begleiten, sind der Rückenwind und der rote Faden unseres
-  gelebten ganzheitlichen Ansatzes aus Gestaltung, Planung und Fertigung. Wir sind
-  ein familiengeführtes Unternehmen welches sich dem Design und solidem Handwerk verschrieben
-  hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert einen hohen
-  kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien ermöglichen
-  uns kurze und effiziente Arbeits- und Entscheidungswege um Ihr Projekt aus einer
-  Hand Wirklichkeit werden zu lassen. Wir haben den Anspruch Sie optimal ab dem ersten
-  Beratungsgespräch bis zum kompletten Einbau zu begleiten und setzten für Sie eine
-  termingerechte, serviceorientierte und einwandfreie Leistung um.
+de_description: |-
+  Wir verstehen unsere Arbeit darin, durch unsere bewusste, achtsame und konstruktive Haltung, unsere Neugier, Motivation und Leidenschaft, architektonische Projekte im Detail zu ergänzen und Wirklichkeit werden zu lassen.
+
+  Wir sind ein familiengeführtes Unternehmen in zweiter Generation, welches sich Design im Detail und solidem Handwerk verschrieben hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert einen hohen kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien ermöglichen uns kurze und effiziente Arbeits- und Entscheidungswege um Projekte umzusetzen. Wir haben den Anspruch ab dem ersten Beratungsgespräch bis zur Fertigstellung den kompletten Einbau zu begleiten und stehen für termingerechte, detailliert Ausführung sowie einwandfreie Leistung.
 meta_tags:
   de_title: Philosophie
   en_title: Philosophy
