@@ -5,6 +5,12 @@ fields:
 - type: text
   name: title
   label: Title
+- name: offline
+  type: boolean
+  label: Offline
+  description: Toggle this if you wish to make the project go from offline (not visible
+    on the live site) to online (visible on the site)
+  default: true
 - name: main_image
   type: file
   config:
