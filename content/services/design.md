@@ -4,16 +4,17 @@ title: Design
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581067969/Gestaltung-Design-Materialien_web_xzs6ue.jpg
 de_title: Beratung
 en_title: Consulting
-de_description: Ihre Idee ist unser kreatives Sprungbrett zur Umsetzung für unkonventionelle
-  und anspruchsvolle Projekte aus Innenarchitektur und Interior Design. Ihre Ideen
-  bilden das Fundament der von uns gelebten, ganzheitlichen Beratung. Als erfahrenes
-  Team aus verschiedenen Bereichen und unterschiedlichen Schwerpunkten sind wir mit
+de_description: Unkonventionelle und anspruchsvolle Projekte aus Innenarchitektur
+  und Interior Design sind der Startschuss für unsere Arbeit. Sie bilden das Fundament
+  der von uns gelebten, ganzheitlichen Beratung. Als erfahrenes Team aus verschiedenen
+  Bereichen und unterschiedlichen Schwerpunkten im Bereich Innenausbau sind wir mit
   „wachem Auge“ am Markt, stark orientiert an aktuellen Strömungen rund um Material,
-  Muster und Einsatzmöglichkeiten. Wir beziehen kontinuierlich neue Material- und
-  Formansätze in den Beratungsprozess mit ein. Anhand der Entwürfe oder Skizzen wählen
-  wir mit Ihnen in gemeinsamer Abstimmung Materialkombinationen aus, die wir zunächst
-  im Entwurf, dann als detailgetreue Visualisierung präzisieren. So entwickeln wir
-  gemeinsam mit Ihnen alle Details für den weiteren Prozess der Konstruktion und Fertigung.
+  Muster und Einsatzmöglichkeiten. Wir beziehen und entwickeln kontinuierlich neue
+  Material- und Formansätze, welche in den Beratungsprozess mit einbezogen werden.
+  Anhand von Entwürfen oder Skizzen wählen wir in gemeinsamer Abstimmung Materialkombinationen
+  aus, die zunächst im Entwurf, dann als detailgetreue Visualisierung präzisiert werden.
+  So entwickeln wir gemeinsam mit Ihnen alle Details für den weiteren Prozess der
+  Konstruktion und Fertigung.
 en_description: Your idea is our creative starting point for the implementation of
   unusual and complex projects in interior design and architecture. Robust spatial
   elements, furnishings, and furniture planning form the guiding principles of our
