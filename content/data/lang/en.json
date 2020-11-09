@@ -1,10 +1,25 @@
 {
   "navbar_titles": {
-    "projects": "Projects",
-    "services": "Services",
-    "about": "About",
-    "contact": "Contact",
-    "rooms": "Rooms"
+    "projects": {
+      "title": "Projects",
+      "online": true
+    },
+    "services": {
+      "title": "Services",
+      "online": true
+    },
+    "about": {
+      "title": "About",
+      "online": true
+    },
+    "contact": {
+      "title": "Contact",
+      "online": true
+    },
+    "rooms": {
+      "title": "Rooms",
+      "online": false
+    }
   },
   "secondary_navbar_titles": {
     "businessPartner": "Business Partner",
