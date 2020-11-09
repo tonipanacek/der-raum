@@ -9,12 +9,17 @@
       <li>
         <ul class="nav-items">
           <li>
-            <nuxt-link :to="localePath({ name: 'projects' })" class="nav-item title link">
+            <nuxt-link
+              v-if="isOnline('projects')"
+              :to="localePath({ name: 'projects' })"
+              class="nav-item title link"
+            >
               {{ $t("navbar_titles.projects") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
+              v-if="isOnline('services')"
               :to="localePath({ name: 'services' })"
               class="nav-item title"
             >
@@ -22,12 +27,17 @@
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath({ name: 'rooms' })" class="nav-item title">
+            <nuxt-link
+              v-if="isOnline('rooms')"
+              :to="localePath({ name: 'rooms' })"
+              class="nav-item title"
+            >
               {{ $t("navbar_titles.rooms") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
+              v-if="isOnline('about')"
               :to="localePath({ name: 'about' })"
               class="nav-item title"
             >
@@ -35,7 +45,11 @@
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath({ name: 'contact' })" class="nav-item title">
+            <nuxt-link
+              v-if="isOnline('contact')"
+              :to="localePath({ name: 'contact' })"
+              class="nav-item title"
+            >
               {{ $t("navbar_titles.contact") }}
             </nuxt-link>
           </li>
@@ -48,16 +62,22 @@
 <script>
 import Stack from "~/components/Stack"
 import Logo from "~/assets/images/logo.svg"
+import menuItems from "~/content/data/navbar.json"
 
 export default {
   name: "Navbar",
+  data() {
+    return {
+      menuItems: menuItems.onlineMenuItems
+    }
+  },
   components: {
     Stack,
     Logo
   },
   methods: {
-    scrollToTop() {
-      window.scrollTo({top: 0, behavior: "auto"})
+    isOnline(menuItem) {
+      return this.menuItems.includes(menuItem)
     }
   }
 }
