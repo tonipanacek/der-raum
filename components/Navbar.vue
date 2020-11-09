@@ -77,7 +77,6 @@ export default {
   },
   methods: {
     isOnline(menuItem) {
-      console.log(this.menuItems)
       return this.menuItems.includes(menuItem)
     }
   }
