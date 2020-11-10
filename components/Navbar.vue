@@ -77,7 +77,8 @@ export default {
   },
   methods: {
     isOnline(menuItem) {
-      return this.menuItems.includes(menuItem)
+      const onlineNavbar = this.menuItems.map(item => item.toLowerCase())
+      return onlineNavbar.includes(menuItem)
     }
   }
 }
