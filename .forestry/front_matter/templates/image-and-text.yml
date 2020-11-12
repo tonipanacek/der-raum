@@ -116,7 +116,6 @@ fields:
   label: Meta Tags
   description: Meta tags for SEO purposes
 pages:
-- content/about/team.md
 - content/rooms/bathroom.md
 - content/rooms/bedroom.md
 - content/rooms/dressing-room.md
