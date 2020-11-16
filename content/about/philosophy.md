@@ -17,7 +17,7 @@ en_description: Do we need a philosophy? We say yes. Our conscious, attentive, a
 de_description: |-
   Wir verstehen unsere Arbeit darin, durch unsere bewusste, achtsame und konstruktive Haltung, unsere Neugier, Motivation und Leidenschaft, architektonische Projekte im Detail zu ergänzen und Wirklichkeit werden zu lassen.
 
-  Wir sind ein familiengeführtes Unternehmen in zweiter Generation, welches sich Design im Detail und solidem Handwerk verschrieben hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert einen hohen kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien ermöglichen uns kurze und effiziente Arbeits- und Entscheidungswege um Projekte umzusetzen. Wir haben den Anspruch ab dem ersten Beratungsgespräch bis zur Fertigstellung den kompletten Einbau zu begleiten und stehen für termingerechte, detailliert Ausführung sowie einwandfreie Leistung.
+  Wir sind ein familiengeführtes Unternehmen in zweiter Generation, welches sich Design im Detail und solidem Handwerk verschrieben hat. Das gemeinsame Arbeiten in interdisziplinären Teams garantiert einen hohen kreativen Anspruch, der ganzheitliche Ansatz und flache Hierarchien ermöglichen uns kurze und effiziente Arbeits- und Entscheidungswege um Projekte umzusetzen. Wir haben den Anspruch ab dem ersten Beratungsgespräch bis zur Fertigstellung den kompletten Einbau zu begleiten und stehen für termingerechte, detaillierte Ausführung sowie einwandfreie Leistung.
 meta_tags:
   de_title: Philosophie
   en_title: Philosophy
