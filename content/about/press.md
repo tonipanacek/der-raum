@@ -11,7 +11,7 @@ meta_tags:
 text_and_link_group:
 - main_text: Beton.org // "Perfekte Kombination" // 2020
   text_url: https://www.beton.org/service/presse/details/perfekte-kombination/
-- main_text: Architektur Berlin | Building Berlin // "Das grüne Wunder" // 2020
+- main_text: Architektur Berlin // Building Berlin // "Das grüne Wunder" // 2020
   text_url: https://www.ak-berlin.de/baukultur/publikationen/jahrbuecher/jahrbuch-detailseite/architektur-berlin-building-berlin-9.html
 - main_text: CUBE Magazin // "Zeitloser Industrielook" // 2018
   text_url: https://www.cube-magazin.de/magazin/berlin/?
