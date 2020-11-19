@@ -19,7 +19,7 @@ de_description: |-
 
   Dabei garantiert die Verarbeitung des natürlichen und nachwachsenden Rohstoffs Holz einen verantwortungsvollen Umgang mit den bestehenden Ressourcen. Unsere Verarbeitungsstandards, wie optimierte Verfahren für den Zuschnitt gewährleisten die maximale Materialnutzung und somit sehr wenig Verschnitt in der Produktion unserer Möbel.
 
-  Den überwiegenden Teil der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen, was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.
+  Den überwiegenden Teil der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte, 100% ökologische, Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen, was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.
 
   Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der REFORESTATION (edenprojects.org) voranzutreiben, da gerade hier der Bedarf am größten ist.
 
