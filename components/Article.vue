@@ -76,7 +76,7 @@ export default {
     }
   }
 }
-#business-partner, #business-partners {
+#partner, #partners {
   @include respond-to('large') {
     min-height: calc(100vh);
   }

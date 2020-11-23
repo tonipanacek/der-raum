@@ -74,7 +74,7 @@ export default {
       return [
         ...loadPages('projects', 'projekte'),
         // ...loadPages('services', 'leistungen'),
-        ...loadPages('rooms', 'raume')
+        // ...loadPages('rooms', 'raume')
         // ...loadPages('about', 'uber')
       ]
     }
