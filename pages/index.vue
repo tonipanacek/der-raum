@@ -1,34 +1,104 @@
 <template>
-  <ServiceList :services="services" />
+  <Container>
+    <h1 class="accessible">{{ seo.projectsOverviewH1 }}</h1>
+    <p class="accessible">{{ seo.projectsOverviewText }}</p>
+    <div
+    id="projects-desktop"
+    class="projects"
+    v-on:wheel.prevent="handleScroll"
+    >
+      <ProjectsList
+      class="section"
+      id="desktop-view"
+      v-if="isChunky"
+      :projects="currentChunk"
+      :goingUp="goingUp"
+      :mobile="false"
+      @increment="incrementPage"
+      />
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" />
+    </div>
+    <div
+    id="projects-mobile"
+    class="projects"
+    >
+      <ProjectsList
+      class="section"
+      id="mobile-view"
+      v-if="isChunky"
+      :projects="allPagesView"
+      :goingUp="goingUp"
+      :mobile="true"
+      />
+    </div>
+  </Container>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
-import { mapActions } from "vuex"
-import ServiceList from "~/components/ServiceList.vue"
+import seo from '~/content/data/seo'
+import paginate from '~/plugins/paginate'
+import Container from "~/components/Container"
+import ProjectsList from "~/components/ProjectsList"
+import ProgressBar from "~/components/ProgressBar"
+
 export default {
-  layout: "layout",
-  components: {
-    ServiceList
+  name: 'projectsIndex',
+  head() {
+    return {
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
+    }
   },
+  nuxtI18n: {
+    paths: {
+      de: '/projekte',
+      en: '/projects'
+    }
+  },
+  mixins: [paginate],
   async asyncData() {
-    // create context via webpack to map over all blog posts
-    const allServices = await require.context(
-      "~/content/services/",
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context(
+      "~/content/projects/",
       true,
       /\.md$/
     )
-    let services = allServices.keys().map(key => {
-      // give back the value of each post context
-      return allServices(key)
+    let pages = allPages.keys().map(key => {
+      // give back the value of each page context
+      return allPages(key)
     })
-    services = sortBy(services, service => get(service, 'attributes.position'))
+    pages = pages.filter(page => !page.attributes.offline)
+    pages = sortBy(pages, page => get(page, 'attributes.page'))
     return {
-      services
+      pages,
+      seo
+    }
+  },
+  components: {
+    Container,
+    ProjectsList,
+    ProgressBar
+  },
+  mounted() {
+    this.setPages(this.currentChunk.slice(0, this.max - 1))
+    this.setPagesPrefix("projects")
+  },
+  destroyed() {
+    this.resetLastPage()
+  },
+  methods: {
+    getTitle(chunk) {
+      return this.formatSlug(get(chunk, '[0].attributes.title', ''))
+    },
+    ...mapActions(["setPages", "setPagesPrefix", "resetLastPage"])
+  },
+  watch: {
+    currentChunk(chunk) {
+      this.setPages(this.currentChunk.slice(0, this.max - 1))
     }
   }
 }
 </script>
-
 
 
