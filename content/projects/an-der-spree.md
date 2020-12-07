@@ -20,7 +20,7 @@ en_description: 'Design: CBRE // Photos: Andrea Dingeldein'
 offline: false
 orientation: portrait
 page: 1
-page_position: 1
+page_position: 2
 meta_tags:
   de_title: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen,
     Tischler, Schreiner, Schreinerei, Tischlerei

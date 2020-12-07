@@ -2,7 +2,7 @@
   <div class="layout">
     <Stack class="left-sidebar">
       <Navbar />
-      <SecondaryNavbar />
+      <!-- <SecondaryNavbar /> -->
       <SocialIcons id="left-social" />
     </Stack>
     <section role="main" class="main-container mt-lg">
@@ -75,12 +75,12 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   @supports (display: grid) {
     max-width: 2000px;
   }
-   @include respond-to('large') {
-    position: relative;
-    flex-direction: initial;
-    padding: none;
-    height: inherit;
-  }
+  //  @include respond-to('large') {
+  //   position: relative;
+  //   flex-direction: initial;
+  //   padding: none;
+  //   height: inherit;
+  // }
 }
 a,
 a:focus,
@@ -105,19 +105,19 @@ a:visited {
   height: 100%;
   background: white;
   margin: 0 auto;
-  @include respond-to('large') {
-    width: 500px;
-    max-width: 1250px;
-    overflow-y: visible;
-    // max-height: $main-height;
-  }
+  // @include respond-to('large') {
+  //   width: 500px;
+  //   max-width: 1250px;
+  //   overflow-y: visible;
+  //   // max-height: $main-height;
+  // }
 }
 
 .mt-lg {
   margin-top: spacing(lg);
-  @include respond-to('large') {
-    margin-top: 0;
-  }
+  // @include respond-to('large') {
+  //   margin-top: 0;
+  // }
 }
 
 .sidebar-wrapper {
@@ -131,36 +131,36 @@ a:visited {
   height: auto;
   text-align: right;
   justify-content: space-between;
-  @include respond-to('large') {
-    width: 300px;
-    text-align: left;
-    height: $main-height;
-    min-height: $main-height;
-    padding: 0 2em;
-    margin-bottom: 2em;
-    @supports (position: sticky) {
-      position: sticky;
-      top: spacing(frame);
-    }
-  }
+  // @include respond-to('large') {
+  //   width: 300px;
+  //   text-align: left;
+  //   height: $main-height;
+  //   min-height: $main-height;
+  //   padding: 0 2em;
+  //   margin-bottom: 2em;
+  //   @supports (position: sticky) {
+  //     position: sticky;
+  //     top: spacing(frame);
+  //   }
+  // }
 }
 
 #left-social {
   display: none;
-  @include respond-to('large') {
-    display: flex;
-    align-items: center;
-    width: 4.5rem;
-    height: 1rem;
-  }
+  // @include respond-to('large') {
+  //   display: flex;
+  //   align-items: center;
+  //   width: 4.5rem;
+  //   height: 1rem;
+  // }
 }
 
 .right-sidebar {
-  @include respond-to('large') {
-    @supports (position: sticky) {
-      position: sticky;
-      top: spacing(frame);
-    }
-  }
+  // @include respond-to('large') {
+  //   @supports (position: sticky) {
+  //     position: sticky;
+  //     top: spacing(frame);
+  //   }
+  // }
 }
 </style>
