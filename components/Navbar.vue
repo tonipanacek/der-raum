@@ -109,11 +109,11 @@ export default {
   padding-left: 0;
 }
 
-@include respond-to('large') {
-  .navbar-list-wrapper {
-    display: block;
-  }
-}
+// @include respond-to('large') {
+//   .navbar-list-wrapper {
+//     display: block;
+//   }
+// }
 
 .navbar {
   .logo {
@@ -145,9 +145,9 @@ export default {
       }
     }
     margin-top: 0;
-    @include respond-to('large') {
-      margin-top: spacing(md);
-    }
+    // @include respond-to('large') {
+    //   margin-top: spacing(md);
+    // }
   }
 }
 

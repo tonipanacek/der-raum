@@ -5,7 +5,21 @@
     <div
     id="projects-desktop"
     class="projects"
-    v-on:wheel.prevent="handleScroll"
+    >
+    <!-- v-on:wheel.prevent="handleScroll" -->
+      <ProjectsList
+      class="section"
+      id="mobile-view"
+      v-if="isChunky"
+      :projects="allPagesView"
+      :goingUp="goingUp"
+      :mobile="true"
+      />
+     <!--  <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" /> -->
+    </div>
+    <div
+    id="projects-mobile"
+    class="projects"
     >
       <ProjectsList
       class="section"
@@ -15,20 +29,6 @@
       :goingUp="goingUp"
       :mobile="false"
       @increment="incrementPage"
-      />
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" />
-    </div>
-    <div
-    id="projects-mobile"
-    class="projects"
-    >
-      <ProjectsList
-      class="section"
-      id="mobile-view"
-      v-if="isChunky"
-      :projects="allPagesView"
-      :goingUp="goingUp"
-      :mobile="true"
       />
     </div>
   </Container>
@@ -119,12 +119,12 @@ export default {
   display: none;
   position: relative;
 }
-@include respond-to('large') {
-  #mobile-view {
-    display: none;
-  }
-  #desktop-view {
-  display: block;
-  }
-}
+// @include respond-to('large') {
+//   #mobile-view {
+//     display: none;
+//   }
+//   #desktop-view {
+//   display: block;
+//   }
+// }
 </style>

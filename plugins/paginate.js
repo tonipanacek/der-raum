@@ -75,9 +75,9 @@ export default {
     isChunky() {
       return !isEmpty(this.currentChunk)
     },
-    throttledHandlePageTransition() {
-      return throttle(this.handlePageTransition, this.refreshRate)
-    },
+    // throttledHandlePageTransition() {
+    //   return throttle(this.handlePageTransition, this.refreshRate)
+    // },
     lastItemScrollOnClick() {
       if (isEmpty(this.pagesChunks)) { return [] }
       if (this.pagesChunks.length === 4) {
@@ -108,9 +108,9 @@ export default {
     },
     handleScroll(event) {
       if (event.wheelDelta) {
-        this.throttledHandlePageTransition(event.wheelDelta, event.deltaMode)
+        // this.throttledHandlePageTransition(event.wheelDelta, event.deltaMode)
       } else {
-        this.throttledHandlePageTransition(-event.deltaY, event.deltaMode)
+        // this.throttledHandlePageTransition(-event.deltaY, event.deltaMode)
       }
       return event
     },
