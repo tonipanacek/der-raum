@@ -17,7 +17,7 @@ en_description: 'Design: Bonauer Bölling Architekten // Photos: Tiffany Taraska
 offline: false
 orientation: landscape
 page: 2
-page_position: 1
+page_position: 2
 meta_tags:
   de_title: Hochwertiger Innenausbau eines kompletten Einfamilienhauses, Tischler,
     Schreiner, Schreinerei, Tischlerei

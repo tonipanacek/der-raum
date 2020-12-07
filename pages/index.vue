@@ -70,6 +70,7 @@ export default {
     })
     pages = pages.filter(page => !page.attributes.offline)
     pages = sortBy(pages, page => get(page, 'attributes.page'))
+    console.log(pages)
     return {
       pages,
       seo
@@ -101,4 +102,29 @@ export default {
 }
 </script>
 
-
+<style lang="scss">
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &, & article, & .container, & .section {
+    // display: block;
+    // max-width: none;
+  }
+}
+#mobile-view {
+  display: block;
+}
+#desktop-view {
+  display: none;
+  position: relative;
+}
+@include respond-to('large') {
+  #mobile-view {
+    display: none;
+  }
+  #desktop-view {
+  display: block;
+  }
+}
+</style>
