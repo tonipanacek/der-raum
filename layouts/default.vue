@@ -105,6 +105,7 @@ a:visited {
   height: 100%;
   background: white;
   margin: 0 9em;
+  padding-top: 2em;
   // margin: 0 auto;
   // @include respond-to('large') {
   //   width: 500px;
@@ -127,7 +128,7 @@ a:visited {
 }
 .left-sidebar {
   padding: 2em;
-  position: sticky;
+  position: fixed;
   top: 0em;
   width: 100%;
   align-self: flex-start;
