@@ -115,13 +115,10 @@ export default {
     currentImages() {
       if (isEmpty(this.currentChunk)) { return [] }
       if (this.pageNumber === 0) {
-        // let emptyImage = new Image()
         const mappedImages = this.currentChunk.map((url) => {
-          // emptyImage.src = url
           return {
             index: this.currentChunk.indexOf(url) + 1,
             url,
-            // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
           }
         })
         return mappedImages
@@ -130,24 +127,18 @@ export default {
         current = [current[1], current[0], current[2], current[3]].filter(i => i)
         if (current.length === 1) {
           current.splice(0, 0, '')
-          // let emptyImage = new Image()
           const switchedImages = current.map((url) => {
-            // emptyImage.src = url
             return {
               index: this.currentChunk.indexOf(url) + 1 || -1,
-              url,
-              // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+              url
             }
           })
           return switchedImages
         } else {
-          // let emptyImage = new Image()
           const switchedImages = current.map((url) => {
-            // emptyImage.src = url
             return {
               index: current.indexOf(url) + 1,
-              url,
-              // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+              url
             }
           })
           return switchedImages
@@ -156,13 +147,10 @@ export default {
     },
     sortedWithUrls() {
       if (isEmpty(this.sortedImages)) { return [] }
-      // let emptyImage = new Image()
       return this.sortedImages.map((url) => {
-        // emptyImage.src = url
         return {
           index: this.sortedImages.indexOf(url) + 1,
-          url,
-          // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+          url
         }
       })
     },
