@@ -19,10 +19,10 @@ export default {
       if (isEmpty(this.pages)) { return [] }
       const allPages = sortBy(this.pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
       let chunks = chunk(allPages, 3)
-      if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
+      if (this.$route.path.match(/^(\/|\/en\/)$/)) {
         chunks = chunks.map((c) => {
           if (c.length === this.max - 1) {
-            return [c[1], c[0], c[2]].filter(c => c)
+            return [c[0], c[1], c[2]].filter(c => c)
           } else {
             return [c[1], c[0]].filter(c => c)
           }
@@ -39,11 +39,11 @@ export default {
         const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
         let chunks = chunk(allPages, 3)
         let chunkers
-        if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
+        if (this.$route.path.match(/^(\/|\/en\/)$/)) {
           chunkers = chunks.map((c, index) => {
-            const nextPortrait = get(chunks, `[${index + 1}][0]`)
+            const nextPortrait = get(chunks, `[${index + 1}][1]`)
             if (c.length === this.max - 1) {
-              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
             } else if (c.length === 1) {
               c.splice(0, 0, '')
               return [c[0], c[1]]

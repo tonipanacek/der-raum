@@ -16,7 +16,7 @@ en_description: 'Design: Reinhard Architekten // Photos: Phil Dera'
 offline: false
 orientation: landscape
 page: 2
-page_position: 2
+page_position: 3
 meta_tags:
   de_title: Hochwertige Einbauküche schwarz in Dachgeschoss, Tischler, Schreiner,
     Schreinerei, Tischlerei

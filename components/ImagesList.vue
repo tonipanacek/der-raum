@@ -130,6 +130,7 @@ export default {
       done()
     },
     path(image) {
+      console.log(image)
       if (!image.index) { return '' }
       return this.localePath({
         name: 'projects-slug-images-id',
