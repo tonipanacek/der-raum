@@ -1,6 +1,6 @@
 <template>
   <div id="legal">
-    <h1 class="title color:dark">{{ $t("legalTitle") }}</h1>
+    <h1 class="title color:dark">{{ $ta(legalJson, 'intro.title') }}</h1>
     <div class="legal-contact">
       <ul class="contact-list">
         <li v-for="text in $ta(legalJson, 'contact.text')">{{ text }}</li>
