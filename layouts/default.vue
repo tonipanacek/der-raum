@@ -69,7 +69,6 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
   // padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
-  max-width: 1650px;
   min-height: 100vh;
   margin: 0 auto;
   // @supports (display: grid) {
@@ -101,10 +100,12 @@ a:visited {
 .main-container {
   flex: 2 1 auto;
   overflow-y: hidden;
-  // width: 100%;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
   background: white;
-  margin: 0 9em;
+  margin: 0 auto;
+  padding: 0 9em;
   // margin: 0 auto;
   // @include respond-to('large') {
   //   width: 500px;
