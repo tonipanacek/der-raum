@@ -6,7 +6,6 @@
     id="projects-desktop"
     class="projects"
     >
-    <!-- v-on:wheel.prevent="handleScroll" -->
       <ProjectsList
       class="section"
       id="mobile-view"
@@ -15,9 +14,8 @@
       :goingUp="goingUp"
       :mobile="true"
       />
-     <!--  <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" /> -->
     </div>
-    <div
+<!--     <div
     id="projects-mobile"
     class="projects"
     >
@@ -30,7 +28,7 @@
       :mobile="false"
       @increment="incrementPage"
       />
-    </div>
+    </div> -->
   </Container>
 </template>
 

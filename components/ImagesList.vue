@@ -18,7 +18,6 @@
       :data-total="images.length"
       :data-orientation="findOrientation(index)"
       :mobile="mobile"
-      event=""
       @mouseover.native="handleHover(image)"
       @mouseleave.native="handleBlur"
       @click.native.prevent="handleClick(image, index)"
@@ -150,113 +149,113 @@ export default {
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
 // grid layout for big screens
-@include respond-to('large') {
-  .images-grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    min-height: 570px;
-    height: $main-height;
-    max-width: 1250px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-bottom: 0px;
-  }
-  .image-link:nth-child(1) {
-    width: 51%;
-    height: 40%;
-    margin-left: 5.5%;
-    display: block;
-    position: relative;
-    align-self: auto;
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    &.extraSpace {
-      @include respond-to('large') {
-        visibility: hidden;
-      }
-    }
-  }
-  .image-link:nth-child(2) {
-    width: 29%;
-    height: 58.5%;
-    margin-left: 0px;
-    display: block;
-    position: relative;
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  .image-link:nth-child(3) {
-    width: 51%;
-    height: 40%;
-    margin-top: -48px;
-    display: block;
-    position: relative;
-    &.extra-margin {
-      margin-top: -104px;
-    }
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  .image-link:nth-child(4) {
-    width: 29%;
-    height: 58.5%;
-    margin-left: 0px;
-    margin-top: 75px;
-    display: block;
-    position: relative;
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-}
+// @include respond-to('large') {
+//   .images-grid {
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: space-between;
+//     min-height: 570px;
+//     height: $main-height;
+//     max-width: 1250px;
+//     margin: 0 auto;
+//     overflow: hidden;
+//     margin-bottom: 0px;
+//   }
+//   .image-link:nth-child(1) {
+//     width: 51%;
+//     height: 40%;
+//     margin-left: 5.5%;
+//     display: block;
+//     position: relative;
+//     align-self: auto;
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//     &.extraSpace {
+//       @include respond-to('large') {
+//         visibility: hidden;
+//       }
+//     }
+//   }
+//   .image-link:nth-child(2) {
+//     width: 29%;
+//     height: 58.5%;
+//     margin-left: 0px;
+//     display: block;
+//     position: relative;
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+//   .image-link:nth-child(3) {
+//     width: 51%;
+//     height: 40%;
+//     margin-top: -48px;
+//     display: block;
+//     position: relative;
+//     &.extra-margin {
+//       margin-top: -104px;
+//     }
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+//   .image-link:nth-child(4) {
+//     width: 29%;
+//     height: 58.5%;
+//     margin-left: 0px;
+//     margin-top: 75px;
+//     display: block;
+//     position: relative;
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+// }
 .image-title {
   @include smallCaps;
   color: color(dark);
@@ -266,9 +265,9 @@ $main-height: calc(100vh - #{spacing(frame)});
   padding-left: 0.5em;
   padding-bottom: 0.5em;
   transition: opacity 750ms ease, color 500ms ease;
-  @include respond-to('large') {
-    padding: 0;
-  }
+  // @include respond-to('large') {
+  //   padding: 0;
+  // }
 }
 
 .image-link {
