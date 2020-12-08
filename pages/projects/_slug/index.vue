@@ -5,27 +5,24 @@
     <div
     id="project-images-desktop"
     class="project-images"
-    v-on:wheel.prevent="handleScroll"
     >
       <article class="project">
         <div v-if="isChunky" class="images section">
           <ImagesList
-          id="desktop-view"
-          :images="currentImages"
+          id="mobile-view"
+          :images="sortedWithUrls"
           :sortedImages="sortedImages"
           :title="$tp('title')"
           :totalCount="sortedImages.length"
           :page="pageNumber"
           :slug="slug"
           :going-up="goingUp"
-          :mobile="false"
-          @increment="incrementPage"
+          :mobile="true"
           />
         </div>
       </article>
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" @increment="incrementPage" @decrement="decrementPage" />
     </div>
-    <div
+<!--     <div
     id="project-images-mobile"
     class="project-images"
     >
@@ -44,7 +41,7 @@
           />
         </div>
       </article>
-  </div>
+  </div> -->
   </Container>
 </template>
 
@@ -213,12 +210,12 @@ export default {
 #desktop-view {
   display: none;
 }
-@include respond-to('large') {
-  #mobile-view {
-    display: none;
-  }
-  #desktop-view {
-    display: block;
-  }
-}
+// @include respond-to('large') {
+//   #mobile-view {
+//     display: none;
+//   }
+//   #desktop-view {
+//     display: block;
+//   }
+// }
 </style>
