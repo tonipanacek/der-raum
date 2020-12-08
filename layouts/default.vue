@@ -127,10 +127,8 @@ a:visited {
 }
 .left-sidebar {
   padding: 2em;
-  // position: sticky;
-  // top: 0em;
-  // background: white;
-  // z-index: 10;
+  position: sticky;
+  top: 0em;
   width: 100%;
   align-self: flex-start;
   height: auto;
