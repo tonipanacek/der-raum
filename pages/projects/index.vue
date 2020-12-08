@@ -17,7 +17,7 @@
       />
       <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" />
     </div>
-    <div
+ <!--    <div
     id="projects-mobile"
     class="projects"
     >
@@ -30,7 +30,7 @@
       :mobile="false"
       @increment="incrementPage"
       />
-    </div>
+    </div> -->
   </Container>
 </template>
 

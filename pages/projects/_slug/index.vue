@@ -22,7 +22,7 @@
         </div>
       </article>
     </div>
-    <div
+<!--     <div
     id="project-images-mobile"
     class="project-images"
     >
@@ -41,7 +41,7 @@
           />
         </div>
       </article>
-  </div>
+  </div> -->
   </Container>
 </template>
 

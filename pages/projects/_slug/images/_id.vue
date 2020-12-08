@@ -164,8 +164,8 @@ export default {
         mainContainer.classList.add('mt-lg')
         body.classList.remove('no-scroll')
       }
-      const widthChange = (mq) => {
-        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
+      const widthChange = () => {
+        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', this.setDocHeight)
@@ -174,9 +174,9 @@ export default {
           showSidebars();
         }
       }
-      const mq = window.matchMedia( "(max-width: 1024px)" );
-      mq.addListener(widthChange);
-      widthChange(mq);
+      // const mq = window.matchMedia( "(max-width: 1024px)" );
+      // mq.addListener(widthChange);
+      widthChange();
     },
     setDocHeight() {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
@@ -279,9 +279,9 @@ export default {
     a:visited,
     a:focus {
       .arrow {
-        @include respond-to('large') {
-          opacity: 0;
-        }
+        // @include respond-to('large') {
+        //   opacity: 0;
+        // }
       }
     }
   }
@@ -291,9 +291,9 @@ export default {
   width: 100%;
   height: 100%;
   margin: auto 0;
-  @include respond-to('large') {
-    max-height: calc(100vh - 2 * #{spacing(frame)});
-  }
+  // @include respond-to('large') {
+  //   max-height: calc(100vh - 2 * #{spacing(frame)});
+  // }
   .image-container {
     position: relative;
     width: 100%;
@@ -316,17 +316,17 @@ export default {
         background-size: contain;
       }
     }
-    @include respond-to('large') {
-      &.landscape {
-      background-size: contain;
-      }
-      &.portrait {
-        background-size: contain;
-      }
-      height: 85vh;
-      background-position: top;
-      position: static;
-    }
+    // @include respond-to('large') {
+    //   &.landscape {
+    //   background-size: contain;
+    //   }
+    //   &.portrait {
+    //     background-size: contain;
+    //   }
+    //   height: 85vh;
+    //   background-position: top;
+    //   position: static;
+    // }
     .image {
       display: flex;
       justify-content: space-around;
@@ -339,12 +339,12 @@ export default {
     position: absolute;
     bottom: 0px;
     padding: spacing(md);
-    @include respond-to('large') {
-      position: inherit;
-      margin-top: spacing(frame);
-      padding: 0;
-      bottom: 0px;
-    }
+    // @include respond-to('large') {
+    //   position: inherit;
+    //   margin-top: spacing(frame);
+    //   padding: 0;
+    //   bottom: 0px;
+    // }
     .caption {
       flex-grow: 1;
       h1 {
@@ -400,9 +400,9 @@ export default {
     display: none;
     width: 20%;
     text-align: right;
-    @include respond-to('large') {
-      display: block;
-    }
+    // @include respond-to('large') {
+    //   display: block;
+    // }
     .prev { padding-right: .5rem; }
   }
   .previous-btn {
