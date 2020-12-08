@@ -21,16 +21,16 @@ de_description: "\"Seit über 25 Jahren verstehen wir unsere Aufgabe darin, durc
   bewusste, achtsame und konstruktive Haltung, unsere Neugier, Motivation und Leidenschaft,
   architektonische Projekte im Detail zu ergänzen und Wirklichkeit werden zu lassen.\n\nAls
   familiengeführtes Unternehmen in zweiter Generation, haben wir es uns zum Ziel gesetzt,
-  solides Handwerk und  Design Hand in Hand gehen zu lassen. Das heißt: keine Kompromisse
+  solides Handwerk und Design Hand in Hand gehen zu lassen. Das heißt: keine Kompromisse
   eingehen und das Machbare bis ins letzte Detail zu hinterfragen. Flache Hierarchien
   und effiziente Arbeits- und Entscheidungswege ermöglichen uns Projekte schnell,
   unkompliziert und zuverlässig umzusetzen.\n\nDas Arbeiten im interdisziplinären
-  Team aus verschiedenen Bereichen vom Holztechniker und Produktdesigner bis zum  Tischlermeister
+  Team aus verschiedenen Bereichen vom Holztechniker und Produktdesigner bis zum Tischlermeister
   ermöglicht uns einen ganzheitlichen Ansatz beim Thema architektonischer Innenausbauten.
   Wir haben den Anspruch ab dem ersten Beratungsgespräch bis zur Fertigstellung den
   kompletten Einbau zu begleiten und stehen für termingerechte, detaillierte Ausführung
-  sowie einwandfreie Leistung.“  \n  \nDieter Baumhoff (Gründer und Geschäftsführer)
-  \  \nMirco Baumhoff (Stellv. Geschäftsführer)"
+  sowie einwandfreie Leistung.“\n\nDieter Baumhoff (Gründer und Geschäftsführer)  \nMirco
+  Baumhoff (Stellv. Geschäftsführer)"
 meta_tags:
   de_title: Philosophie
   en_title: Philosophy
