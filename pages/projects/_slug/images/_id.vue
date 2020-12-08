@@ -160,7 +160,7 @@ export default {
         footer.style.display = 'flex'
         closeLink.style.left = '-35px'
         closeLink.style.top = '0px'
-        layout.style.paddingTop = '2em'
+        // layout.style.paddingTop = '2em'
         mainContainer.classList.add('mt-lg')
         body.classList.remove('no-scroll')
       }

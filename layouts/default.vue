@@ -5,7 +5,7 @@
       <!-- <SecondaryNavbar /> -->
       <SocialIcons id="left-social" />
     </Stack>
-    <section role="main" class="main-container mt-lg">
+    <section role="main" class="main-container">
       <nuxt />
     </section>
     <RightSidebar class="right-sidebar" />
@@ -66,15 +66,15 @@ export default {
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
 .layout {
-  padding-top: spacing(frame);
+  // padding-top: spacing(frame);
   display: flex;
   flex-direction: column;
   max-width: 1650px;
   min-height: 100vh;
   margin: 0 auto;
-  @supports (display: grid) {
-    max-width: 2000px;
-  }
+  // @supports (display: grid) {
+  //   max-width: 2000px;
+  // }
   //  @include respond-to('large') {
   //   position: relative;
   //   flex-direction: initial;
@@ -101,10 +101,11 @@ a:visited {
 .main-container {
   flex: 2 1 auto;
   overflow-y: hidden;
-  width: 100%;
+  // width: 100%;
   height: 100%;
   background: white;
-  margin: 0 auto;
+  margin: 0 9em;
+  // margin: 0 auto;
   // @include respond-to('large') {
   //   width: 500px;
   //   max-width: 1250px;
@@ -113,12 +114,12 @@ a:visited {
   // }
 }
 
-.mt-lg {
-  margin-top: spacing(lg);
+// .mt-lg {
+//   margin-top: spacing(lg);
   // @include respond-to('large') {
   //   margin-top: 0;
   // }
-}
+// }
 
 .sidebar-wrapper {
   display: flex;
@@ -126,6 +127,11 @@ a:visited {
 }
 .left-sidebar {
   padding: 0 2em;
+  padding-top: 2em;
+  position: sticky;
+  top: 0em;
+  background: white;
+  z-index: 10;
   width: 100%;
   align-self: flex-start;
   height: auto;
