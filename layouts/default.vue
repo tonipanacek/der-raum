@@ -126,12 +126,11 @@ a:visited {
   flex-direction: column;
 }
 .left-sidebar {
-  padding: 0 2em;
-  padding-top: 2em;
-  position: sticky;
-  top: 0em;
-  background: white;
-  z-index: 10;
+  padding: 2em;
+  // position: sticky;
+  // top: 0em;
+  // background: white;
+  // z-index: 10;
   width: 100%;
   align-self: flex-start;
   height: auto;
