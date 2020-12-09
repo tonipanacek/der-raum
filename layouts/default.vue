@@ -100,7 +100,7 @@ a:visited {
 .main-container {
   flex: 2 1 auto;
   overflow-y: hidden;
-  max-width: 1200px;
+  max-width: 1250px;
   width: 100%;
   height: 100%;
   background: white;
@@ -127,7 +127,7 @@ a:visited {
   flex-direction: column;
 }
 .left-sidebar {
-  padding: 2em;
+  padding: 2em 2em 1em 2em;
   position: sticky;
   top: 0em;
   width: 100%;
