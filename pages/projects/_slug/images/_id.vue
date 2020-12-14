@@ -146,13 +146,20 @@ export default {
       const imageContainer = document.querySelector('.image-container')
       const body = document.querySelector('body');
       const layout = document.querySelector('.layout')
+      const fixedMenu = () => {
+        navbar.classList.add('fixed-menu')
+        mainContainer.classList.add('padding-fullscreen')
+      }
+      const regularMenu = () => {
+        navbar.classList.remove('fixed-menu')
+        mainContainer.classList.remove('padding-fullscreen')
+      }
       const hideSidebars = () => {
         navbar.style.display = 'none'
         footer.style.display = 'none'
-        layout.style.paddingTop = '0'
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
-        mainContainer.classList.remove('mt-lg')
+        // mainContainer.classList.add('full-screen')
         body.classList.add('no-scroll')
       }
       const showSidebars = () => {
@@ -160,29 +167,30 @@ export default {
         footer.style.display = 'flex'
         closeLink.style.left = '-35px'
         closeLink.style.top = '0px'
-        layout.style.paddingTop = '2em'
-        mainContainer.classList.add('mt-lg')
+        // mainContainer.classList.remove('full-screen')
         body.classList.remove('no-scroll')
       }
-      const widthChange = (mq) => {
-        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
-          hideSidebars();
-          closeLink.addEventListener('click', showSidebars);
+      const widthChange = () => {
+        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
+          fixedMenu();
+          // hideSidebars();
+          // closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', this.setDocHeight)
           window.addEventListener('orientationchange', this.setDocHeight)
         } else {
+          regularMenu();
           showSidebars();
         }
       }
-      const mq = window.matchMedia( "(max-width: 1024px)" );
-      mq.addListener(widthChange);
-      widthChange(mq);
+      // const mq = window.matchMedia( "(max-width: 800px)" );
+      // mq.addListener(widthChange);
+      widthChange();
     },
     setDocHeight() {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
         document.querySelector('body').style.height = window.innerHeight + 'px';
         document.querySelector('#projects').style.height = window.innerHeight + 'px';
-        // document.querySelector('.image-container').style.height = window.innerHeight + 'px';
+        document.querySelector('.image-container').style.height = window.innerHeight + 'px';
     },
     handleSwipe(direction) {
       if (direction === 'left') {
@@ -279,21 +287,21 @@ export default {
     a:visited,
     a:focus {
       .arrow {
-        @include respond-to('large') {
-          opacity: 0;
-        }
+        // @include respond-to('large') {
+        //   opacity: 0;
+        // }
       }
     }
   }
 }
 .project {
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 100%;
   margin: auto 0;
-  @include respond-to('large') {
-    max-height: calc(100vh - 2 * #{spacing(frame)});
-  }
+  // @include respond-to('large') {
+  //   max-height: calc(100vh - 2 * #{spacing(frame)});
+  // }
   .image-container {
     position: relative;
     width: 100%;
@@ -316,17 +324,17 @@ export default {
         background-size: contain;
       }
     }
-    @include respond-to('large') {
-      &.landscape {
-      background-size: contain;
-      }
-      &.portrait {
-        background-size: contain;
-      }
-      height: 85vh;
-      background-position: top;
-      position: static;
-    }
+    // @include respond-to('large') {
+    //   &.landscape {
+    //   background-size: contain;
+    //   }
+    //   &.portrait {
+    //     background-size: contain;
+    //   }
+    //   height: 85vh;
+    //   background-position: top;
+    //   position: static;
+    // }
     .image {
       display: flex;
       justify-content: space-around;
@@ -335,16 +343,16 @@ export default {
   .image-footer {
     display: flex;
     align-items: flex-start;
-    width: 100%;
+    // width: 100%;
     position: absolute;
     bottom: 0px;
     padding: spacing(md);
-    @include respond-to('large') {
-      position: inherit;
-      margin-top: spacing(frame);
-      padding: 0;
-      bottom: 0px;
-    }
+    // @include respond-to('large') {
+    //   position: inherit;
+    //   margin-top: spacing(frame);
+    //   padding: 0;
+    //   bottom: 0px;
+    // }
     .caption {
       flex-grow: 1;
       h1 {
@@ -400,9 +408,9 @@ export default {
     display: none;
     width: 20%;
     text-align: right;
-    @include respond-to('large') {
-      display: block;
-    }
+    // @include respond-to('large') {
+    //   display: block;
+    // }
     .prev { padding-right: .5rem; }
   }
   .previous-btn {
