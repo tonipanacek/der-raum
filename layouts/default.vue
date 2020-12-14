@@ -106,7 +106,6 @@ a:visited {
   background: white;
   margin: 0 auto;
   padding: 0 9em;
-  // margin: 0 auto;
   // @include respond-to('large') {
   //   width: 500px;
   //   max-width: 1250px;
@@ -115,12 +114,11 @@ a:visited {
   // }
 }
 
-// .mt-lg {
-//   margin-top: spacing(lg);
-  // @include respond-to('large') {
-  //   margin-top: 0;
-  // }
-// }
+.full-screen {
+  padding: 0;
+  max-width: none;
+}
+
 
 .sidebar-wrapper {
   display: flex;

@@ -149,10 +149,9 @@ export default {
       const hideSidebars = () => {
         navbar.style.display = 'none'
         footer.style.display = 'none'
-        layout.style.paddingTop = '0'
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
-        mainContainer.classList.remove('mt-lg')
+        mainContainer.classList.add('full-screen')
         body.classList.add('no-scroll')
       }
       const showSidebars = () => {
@@ -160,8 +159,7 @@ export default {
         footer.style.display = 'flex'
         closeLink.style.left = '-35px'
         closeLink.style.top = '0px'
-        // layout.style.paddingTop = '2em'
-        mainContainer.classList.add('mt-lg')
+        mainContainer.classList.remove('full-screen')
         body.classList.remove('no-scroll')
       }
       const widthChange = () => {
@@ -174,7 +172,7 @@ export default {
           showSidebars();
         }
       }
-      // const mq = window.matchMedia( "(max-width: 1024px)" );
+      // const mq = window.matchMedia( "(max-width: 800px)" );
       // mq.addListener(widthChange);
       widthChange();
     },
@@ -182,7 +180,7 @@ export default {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
         document.querySelector('body').style.height = window.innerHeight + 'px';
         document.querySelector('#projects').style.height = window.innerHeight + 'px';
-        // document.querySelector('.image-container').style.height = window.innerHeight + 'px';
+        document.querySelector('.image-container').style.height = window.innerHeight + 'px';
     },
     handleSwipe(direction) {
       if (direction === 'left') {
@@ -287,7 +285,7 @@ export default {
   }
 }
 .project {
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 100%;
   margin: auto 0;
