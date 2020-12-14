@@ -12,7 +12,7 @@
       :id="$ta(project.attributes, 'title')"
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
-      :to="path(project)"
+      :to="imagePath(project)"
       :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
       event=""
       @click.native.prevent="handleClick(project, index)"
@@ -70,6 +70,17 @@ export default {
         name: "projects-slug",
         params: {
           slug
+        }
+      })
+    },
+    imagePath(project) {
+      // if (!image.index) { return '' }
+      const slug = this.formatSlug(this.$ta(project.attributes, 'title'))
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        params: {
+          slug: slug,
+          id: 1
         }
       })
     },
@@ -142,114 +153,114 @@ $main-height: calc(100vh - #{spacing(frame)});
   opacity: 1;
 }
 // grid layout for big screens
-@include respond-to('large') {
-  #projects-grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    min-height: 570px;
-    height: $main-height;
-    max-width: 1250px;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-bottom: 0px;
-  }
-  .project-link:nth-child(1) {
-    width: 51%;
-    height: 40%;
-    margin-left: 5.5%;
-    display: block;
-    position: relative;
-    align-self: auto;
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    &.extra-space {
-      @include respond-to('large') {
-        visibility: hidden;
-      }
-    }
-  }
-  .project-link:nth-child(2) {
-    width: 29%;
-    height: 58.5%;
-    margin-left: 0px;
-    display: block;
-    position: relative;
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
+// @include respond-to('large') {
+//   #projects-grid {
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: space-between;
+//     min-height: 570px;
+//     height: $main-height;
+//     max-width: 1250px;
+//     margin: 0 auto;
+//     overflow: hidden;
+//     margin-bottom: 0px;
+//   }
+//   .project-link:nth-child(1) {
+//     width: 51%;
+//     height: 40%;
+//     margin-left: 5.5%;
+//     display: block;
+//     position: relative;
+//     align-self: auto;
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//     &.extra-space {
+//       @include respond-to('large') {
+//         visibility: hidden;
+//       }
+//     }
+//   }
+//   .project-link:nth-child(2) {
+//     width: 29%;
+//     height: 58.5%;
+//     margin-left: 0px;
+//     display: block;
+//     position: relative;
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//   }
 
-  .project-link:nth-child(3) {
-    width: 51%;
-    height: 40%;
-    margin-top: -48px;
-    display: block;
-    position: relative;
-    &.extra-margin {
-      margin-top: -104px;
-    }
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  .project-link:nth-child(4) {
-    width: 29%;
-    height: 58.5%;
-    margin-left: 0px;
-    margin-top: 75px;
-    display: block;
-    position: relative;
-    > .image-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-}
+//   .project-link:nth-child(3) {
+//     width: 51%;
+//     height: 40%;
+//     margin-top: -48px;
+//     display: block;
+//     position: relative;
+//     &.extra-margin {
+//       margin-top: -104px;
+//     }
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+//   .project-link:nth-child(4) {
+//     width: 29%;
+//     height: 58.5%;
+//     margin-left: 0px;
+//     margin-top: 75px;
+//     display: block;
+//     position: relative;
+//     > .image-container {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+// }
 
 .project-title {
   @include smallCaps;
@@ -259,10 +270,10 @@ $main-height: calc(100vh - #{spacing(frame)});
   padding: 0.5em;
   margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
-  @include respond-to('large') {
-    padding: 0.5em 0;
-    margin-top: 0;
-  }
+  // @include respond-to('large') {
+  //   padding: 0.5em 0;
+  //   margin-top: 0;
+  // }
 }
 
 .project-link {

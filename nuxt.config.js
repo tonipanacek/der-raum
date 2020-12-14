@@ -60,11 +60,6 @@ export default {
         content: seo.description
       }
     ],
-    // script: [
-    //   {
-    //     src: 'https://raw.githubusercontent.com/john-doherty/swiped-events/master/dist/swiped-events.min.js'
-    //   }
-    // ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   generate: {

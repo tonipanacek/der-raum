@@ -9,11 +9,7 @@
       <li>
         <ul class="nav-items">
           <li>
-            <nuxt-link
-              v-if="isOnline('projects')"
-              :to="localePath({ name: 'projects' })"
-              class="nav-item title link"
-            >
+            <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title">
               {{ $t("navbar_titles.projects") }}
             </nuxt-link>
           </li>
@@ -108,11 +104,11 @@ export default {
   padding-left: 0;
 }
 
-@include respond-to('large') {
-  .navbar-list-wrapper {
-    display: block;
-  }
-}
+// @include respond-to('large') {
+//   .navbar-list-wrapper {
+//     display: block;
+//   }
+// }
 
 .navbar {
   .logo {
@@ -144,9 +140,9 @@ export default {
       }
     }
     margin-top: 0;
-    @include respond-to('large') {
-      margin-top: spacing(md);
-    }
+    // @include respond-to('large') {
+    //   margin-top: spacing(md);
+    // }
   }
 }
 

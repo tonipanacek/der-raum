@@ -5,29 +5,6 @@
     <div
     id="project-images-desktop"
     class="project-images"
-    v-on:wheel.prevent="handleScroll"
-    >
-      <article class="project">
-        <div v-if="isChunky" class="images section">
-          <ImagesList
-          id="desktop-view"
-          :images="currentImages"
-          :sortedImages="sortedImages"
-          :title="$tp('title')"
-          :totalCount="sortedImages.length"
-          :page="pageNumber"
-          :slug="slug"
-          :going-up="goingUp"
-          :mobile="false"
-          @increment="incrementPage"
-          />
-        </div>
-      </article>
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" @increment="incrementPage" @decrement="decrementPage" />
-    </div>
-    <div
-    id="project-images-mobile"
-    class="project-images"
     >
       <article class="project">
         <div v-if="isChunky" class="images section">
@@ -44,7 +21,7 @@
           />
         </div>
       </article>
-  </div>
+    </div>
   </Container>
 </template>
 
@@ -115,13 +92,10 @@ export default {
     currentImages() {
       if (isEmpty(this.currentChunk)) { return [] }
       if (this.pageNumber === 0) {
-        // let emptyImage = new Image()
         const mappedImages = this.currentChunk.map((url) => {
-          // emptyImage.src = url
           return {
             index: this.currentChunk.indexOf(url) + 1,
             url,
-            // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
           }
         })
         return mappedImages
@@ -130,24 +104,18 @@ export default {
         current = [current[1], current[0], current[2], current[3]].filter(i => i)
         if (current.length === 1) {
           current.splice(0, 0, '')
-          // let emptyImage = new Image()
           const switchedImages = current.map((url) => {
-            // emptyImage.src = url
             return {
               index: this.currentChunk.indexOf(url) + 1 || -1,
-              url,
-              // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+              url
             }
           })
           return switchedImages
         } else {
-          // let emptyImage = new Image()
           const switchedImages = current.map((url) => {
-            // emptyImage.src = url
             return {
               index: current.indexOf(url) + 1,
-              url,
-              // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+              url
             }
           })
           return switchedImages
@@ -156,13 +124,10 @@ export default {
     },
     sortedWithUrls() {
       if (isEmpty(this.sortedImages)) { return [] }
-      // let emptyImage = new Image()
       return this.sortedImages.map((url) => {
-        // emptyImage.src = url
         return {
           index: this.sortedImages.indexOf(url) + 1,
-          url,
-          // orientation: emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
+          url
         }
       })
     },
@@ -213,12 +178,12 @@ export default {
 #desktop-view {
   display: none;
 }
-@include respond-to('large') {
-  #mobile-view {
-    display: none;
-  }
-  #desktop-view {
-    display: block;
-  }
-}
+// @include respond-to('large') {
+//   #mobile-view {
+//     display: none;
+//   }
+//   #desktop-view {
+//     display: block;
+//   }
+// }
 </style>

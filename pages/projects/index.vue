@@ -9,27 +9,13 @@
     >
       <ProjectsList
       class="section"
-      id="desktop-view"
-      v-if="isChunky"
-      :projects="currentChunk"
-      :goingUp="goingUp"
-      :mobile="false"
-      @increment="incrementPage"
-      />
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" />
-    </div>
-    <div
-    id="projects-mobile"
-    class="projects"
-    >
-      <ProjectsList
-      class="section"
       id="mobile-view"
       v-if="isChunky"
       :projects="allPagesView"
       :goingUp="goingUp"
       :mobile="true"
       />
+      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" />
     </div>
   </Container>
 </template>

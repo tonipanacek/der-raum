@@ -60,9 +60,9 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     flex-direction: initial;
     align-items: flex-end;
     height: 1rem;
-    @include respond-to('large') {
-      margin-bottom: 0rem;
-    }
+    // @include respond-to('large') {
+    //   margin-bottom: 0rem;
+    // }
     p {
       @include smallCaps;
       color: color(light);
@@ -72,31 +72,31 @@ $main-height: calc(100vh - 2 * #{spacing(frame)});
     }
   }
 }
-@include respond-to('large') {
-  .right-sidebar {
-    width: 40px;
-    position: relative;
-    height: $main-height;
-    margin: 0 2rem;
-    padding: 0;
-    .right-stack {
-      margin-top: 0;
-      height: $main-height;
-      flex-direction: column;
-      p {
-        writing-mode: vertical-lr;
-      }
-    }
-  }
-}
+// @include respond-to('large') {
+//   .right-sidebar {
+//     width: 40px;
+//     position: relative;
+//     height: $main-height;
+//     margin: 0 2rem;
+//     padding: 0;
+//     .right-stack {
+//       margin-top: 0;
+//       height: $main-height;
+//       flex-direction: column;
+//       p {
+//         writing-mode: vertical-lr;
+//       }
+//     }
+//   }
+// }
 #right-social {
   display: flex;
   width: 80px;
   margin: 0 auto;
   height: 3rem;
   align-items: flex-start;
-  @include respond-to('large') {
-    display: none;
-  }
+  // @include respond-to('large') {
+  //   display: none;
+  // }
 }
 </style>
