@@ -146,12 +146,20 @@ export default {
       const imageContainer = document.querySelector('.image-container')
       const body = document.querySelector('body');
       const layout = document.querySelector('.layout')
+      const fixedMenu = () => {
+        navbar.classList.add('fixed-menu')
+        mainContainer.classList.add('padding-fullscreen')
+      }
+      const regularMenu = () => {
+        navbar.classList.remove('fixed-menu')
+        mainContainer.classList.remove('padding-fullscreen')
+      }
       const hideSidebars = () => {
         navbar.style.display = 'none'
         footer.style.display = 'none'
         closeLink.style.left = '15px'
         closeLink.style.top = '15px'
-        mainContainer.classList.add('full-screen')
+        // mainContainer.classList.add('full-screen')
         body.classList.add('no-scroll')
       }
       const showSidebars = () => {
@@ -159,16 +167,18 @@ export default {
         footer.style.display = 'flex'
         closeLink.style.left = '-35px'
         closeLink.style.top = '0px'
-        mainContainer.classList.remove('full-screen')
+        // mainContainer.classList.remove('full-screen')
         body.classList.remove('no-scroll')
       }
       const widthChange = () => {
         if ((this.$route.path.includes('bilder') || this.$route.path.includes('images'))) {
-          hideSidebars();
-          closeLink.addEventListener('click', showSidebars);
+          fixedMenu();
+          // hideSidebars();
+          // closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', this.setDocHeight)
           window.addEventListener('orientationchange', this.setDocHeight)
         } else {
+          regularMenu();
           showSidebars();
         }
       }
@@ -333,7 +343,7 @@ export default {
   .image-footer {
     display: flex;
     align-items: flex-start;
-    width: 100%;
+    // width: 100%;
     position: absolute;
     bottom: 0px;
     padding: spacing(md);

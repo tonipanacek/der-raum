@@ -113,6 +113,9 @@ a:visited {
   //   // max-height: $main-height;
   // }
 }
+.padding-fullscreen {
+  padding: 2em 9em;
+}
 
 .full-screen {
   padding: 0;
@@ -145,6 +148,9 @@ a:visited {
   //     top: spacing(frame);
   //   }
   // }
+}
+.fixed-menu {
+  position: fixed;
 }
 
 #left-social {

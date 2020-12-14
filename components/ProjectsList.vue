@@ -129,7 +129,7 @@ export default {
       if (index > 2 && !this.mobile) {
         this.$emit('increment')
       } else {
-        const path = this.path(project)
+        const path = this.imagePath(project)
         this.$router.push(path)
       }
     },
