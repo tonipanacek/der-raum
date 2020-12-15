@@ -14,7 +14,7 @@ de_title: Europaküche
 en_title: Europaküche
 de_description: 'Gestaltung: Siemens & Freunde von Freunden // Fotos: Axel Kranz'
 en_description: 'Design: Siemens & Freunde von Freunden // Photos: Axel Kranz'
-offline: true
+offline: false
 orientation: landscape
 page: 6
 page_position: 1
