@@ -14,7 +14,7 @@ en_description: 'Photos: Alexander Schlösser'
 de_description: 'Fotos: Alexander Schlösser'
 offline: false
 orientation: portrait
-page_position: 1
+page_position: 
 page: 5
 meta_tags:
   de_title: Hochwertige Küche im Dachgeschoss mit Kachel Spritzschutz Design, Tischler,
