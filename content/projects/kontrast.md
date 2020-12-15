@@ -1,6 +1,6 @@
 ---
 title: Kontrast
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480518/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580480475/Kueche-Arbeitsplatte-Rosa-Marmor_hbs1ge.jpg
@@ -15,9 +15,9 @@ de_title: Kontrast
 en_description: 'Photos: Michel Sass'
 de_description: 'Fotos: Michel Sass'
 offline: false
-orientation: landscape
-page: 4
-page_position: 2
+orientation: portrait
+page: 6
+page_position: ''
 meta_tags:
   de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design, Tischler, Schreiner, Schreinerei,
     Tischlerei
