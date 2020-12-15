@@ -1,5 +1,5 @@
 ---
-offline: true
+offline: false
 orientation: landscape
 page_position: 1
 page: 1
