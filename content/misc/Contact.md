@@ -8,7 +8,7 @@ telephone_1: 030 927943501
 telephone_2: "+49 176735647 42 (WhatsApp)"
 email: kontakt@der-raum.de
 de_second_column: Studio (Online-Beratungen möglich)
-en_second_column: Studio (online consultations possible)
+en_second_column: Studio (online appointments possible)
 street_number: Dunckerstraße 15
 city_zip: 10437 Berlin
 de_weekdays: 'Montag-Freitag:'
