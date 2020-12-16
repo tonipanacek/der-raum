@@ -17,9 +17,9 @@ weekday_hours: 10:00-18:00
 de_weekend: 'Samstag:'
 en_weekend: 'Saturday:'
 weekend_hours: 11:00-17:00
-de_third_column: Jobs & Bewerbung
-en_third_column: Jobs & Application
-de_cv_description: Lebenslauf mit Bewerbungsschreiben
+de_third_column: Bewerbung
+en_third_column: Applications
+de_cv_description: Lebenslauf mit Anschreiben
 en_cv_description: CV and Cover Letter
 cv_email: ausbildung@holz-raum.de
 
