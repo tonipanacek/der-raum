@@ -1,6 +1,6 @@
 ---
 orientation: landscape
-page_position: 1
+page_position: 3
 page: 2
 title: Taube Blau
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834090/Altbau-Kueche-Gold-Rahmenbauweise-grau_pvekw3.jpg
