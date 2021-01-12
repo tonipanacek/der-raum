@@ -32,6 +32,17 @@ fields:
       file: 
       path: 
   label: Photo Orientation
+- name: page
+  type: number
+  default: 0
+  required: true
+  config:
+    min: '1'
+    max: 
+    step: '1'
+    required: true
+  label: Page Number
+  description: Which page would you like the project to be displayed on?
 - name: page_position
   type: number
   label: Page Position
@@ -45,17 +56,6 @@ fields:
   description: First (1), second (2), or third (3) position on the page for ordering
     of images. Photo orientation doesn't matter. Only one we won't account for is
     the "next portrait", i.e. bottom right cut off image.
-- name: page
-  type: number
-  default: 0
-  required: true
-  config:
-    min: '1'
-    max: 
-    step: '1'
-    required: true
-  label: Page Number
-  description: Which page would you like the project to be displayed on?
 - name: images
   type: image_gallery
   config: {}
