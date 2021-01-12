@@ -22,9 +22,9 @@ export default {
       if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
         chunks = chunks.map((c) => {
           if (c.length === this.max - 1) {
-            return [c[1], c[0], c[2]].filter(c => c)
+            return [c[0], c[1], c[2]].filter(c => c)
           } else {
-            return [c[1], c[0]].filter(c => c)
+            return [c[0], c[1]].filter(c => c)
           }
         })
         return uniq(flatten(chunks))
@@ -41,14 +41,14 @@ export default {
         let chunkers
         if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
           chunkers = chunks.map((c, index) => {
-            const nextPortrait = get(chunks, `[${index + 1}][0]`)
+            const nextPortrait = get(chunks, `[${index + 1}][1]`)
             if (c.length === this.max - 1) {
-              return [c[1], c[0], c[2], nextPortrait].filter(c => c)
+              return [c[0], c[1], c[2], nextPortrait].filter(c => c)
             } else if (c.length === 1) {
               c.splice(0, 0, '')
               return [c[0], c[1]]
             } else {
-              return [c[1], c[0], nextPortrait].filter(c => c)
+              return [c[0], c[1], nextPortrait].filter(c => c)
             }
           })
         } else {
