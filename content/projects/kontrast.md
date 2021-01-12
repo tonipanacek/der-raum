@@ -17,7 +17,7 @@ de_description: 'Fotos: Michel Sass'
 offline: false
 orientation: portrait
 page: 6
-page_position: ''
+page_position: 2
 meta_tags:
   de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design, Tischler, Schreiner, Schreinerei,
     Tischlerei
