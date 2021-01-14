@@ -3,29 +3,6 @@
     <h1 class="accessible">{{ $tp("title") }}</h1>
     <vue-markdown class="accessible">{{ $tp("description") }}</vue-markdown>
     <div
-    id="project-images-desktop"
-    class="project-images"
-    v-on:wheel.prevent="handleScroll"
-    >
-      <article class="project">
-        <div v-if="isChunky" class="images section">
-          <ImagesList
-          id="desktop-view"
-          :images="currentImages"
-          :sortedImages="sortedImages"
-          :title="$tp('title')"
-          :totalCount="sortedImages.length"
-          :page="pageNumber"
-          :slug="slug"
-          :going-up="goingUp"
-          :mobile="false"
-          @increment="incrementPage"
-          />
-        </div>
-      </article>
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" v-if="isChunky" @increment="incrementPage" @decrement="decrementPage" />
-    </div>
-    <div
     id="project-images-mobile"
     class="project-images"
     >
@@ -44,7 +21,7 @@
           />
         </div>
       </article>
-  </div>
+    </div>
   </Container>
 </template>
 
@@ -202,23 +179,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.project {
-  display: flex;
-  flex-direction: column;
-}
 #mobile-view {
   display: block;
   overflow: visible;
-}
-#desktop-view {
-  display: none;
-}
-@include respond-to('large') {
-  #mobile-view {
-    display: none;
-  }
-  #desktop-view {
-    display: block;
-  }
 }
 </style>

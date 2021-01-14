@@ -38,8 +38,3 @@ $colors: (
 }
 
 // Use `"" + $name` to prevent "did you mean to interpolate" SCSS error message
-
-body {
-  color: color(light);
-  background-color: color(white);
-}

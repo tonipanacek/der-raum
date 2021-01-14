@@ -38,9 +38,8 @@ export default {
         if (isEmpty(pages)) { return [] }
         const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
         let chunks = chunk(allPages, 3)
-        let chunkers
         if (this.$route.path.match(/^(\/projekte|\/en\/projects)$/)) {
-          chunkers = chunks.map((c, index) => {
+          chunks = chunks.map((c, index) => {
             const nextPortrait = get(chunks, `[${index + 1}][1]`)
             if (c.length === this.max - 1) {
               return [c[0], c[1], c[2], nextPortrait].filter(c => c)
@@ -52,7 +51,7 @@ export default {
             }
           })
         } else {
-          chunkers = chunks.map((c, index) => {
+          chunks = chunks.map((c, index) => {
             const nextPortrait = get(chunks, `[${index + 1}][0]`)
             if (get(this.page, 'attributes.orientation') === 'landscape' && index === 0) {
               return [c[0], c[1], c[2], nextPortrait].filter(c => c)
@@ -63,8 +62,8 @@ export default {
             }
           })
         }
-        this.setLastPage(chunkers.length - 1)
-        return chunkers
+        this.setLastPage(chunks.length - 1)
+        return chunks
       }
       return getChunks(this.pages)
     },
@@ -75,22 +74,13 @@ export default {
     isChunky() {
       return !isEmpty(this.currentChunk)
     },
-    throttledHandlePageTransition() {
-      return throttle(this.handlePageTransition, this.refreshRate)
-    },
-    lastItemScrollOnClick() {
-      if (isEmpty(this.pagesChunks)) { return [] }
-      if (this.pagesChunks.length === 4) {
-        this.pagesChunks[3].addEventListener('click', this.handlePageTransition)
-      }
-    },
     ...mapState(['pageNumber'])
   },
   mounted() {
-    window.addEventListener("keyup", this.handleKey)
+    // window.addEventListener("keyup", this.handleKey)
   },
   destroyed() {
-    window.removeEventListener("keyup", this.handleKey)
+    // window.removeEventListener("keyup", this.handleKey)
     this.resetPageNumber()
   },
   methods: {
@@ -104,41 +94,6 @@ export default {
       if (this.pageNumber > 0) {
         this.decrementPageNumber()
         this.goingUp = false
-      }
-    },
-    handleScroll(event) {
-      if (event.wheelDelta) {
-        this.throttledHandlePageTransition(event.wheelDelta, event.deltaMode)
-      } else {
-        this.throttledHandlePageTransition(-event.deltaY, event.deltaMode)
-      }
-      return event
-    },
-    handlePageTransition(change, mode) {
-      if (mode) {
-        if (change < -1 * this.mouseThreshold) {
-          this.incrementPage()
-        } else if (change > this.mouseThreshold) {
-          this.decrementPage()
-        }
-      } else {
-        if (change < -1 * this.trackpadThreshold) {
-          this.incrementPage()
-        } else if (change > this.trackpadThreshold) {
-          this.decrementPage()
-        }
-      }
-    },
-    handleKey(event) {
-      event.preventDefault();
-      if (event.key.match(/(down|right)/i)) {
-        this.incrementPage()
-        event.stopImmediatePropagation()
-        return false;
-      } else if (event.key.match(/(up|left)/i)) {
-        this.decrementPage()
-        event.stopImmediatePropagation()
-        return false;
       }
     },
     ...mapActions([
