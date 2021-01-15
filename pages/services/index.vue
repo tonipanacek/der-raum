@@ -3,11 +3,10 @@
       <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
         <div class="image-container">
           <Frame
-            :source="$ta(service.attributes, 'image')"
             :title="$ta(service.attributes,'title')"
-            :alt="$ta(service.attributes, 'description')"
-            :style="'background-position-y:' + $ta(service.attributes, 'image_crop_y')"
-            >
+            :style="'background-position-y:' + $ta(service.attributes, 'image_crop')">
+            <img :src="$ta(service.attributes, 'image')" :alt="$ta(service.attributes, 'description')">
+          </Frame>
           </Frame>
         </div>
         <div class="text">

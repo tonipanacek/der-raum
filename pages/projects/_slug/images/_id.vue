@@ -86,6 +86,8 @@ export default {
         return allPages(key)
       })
 
+      allPages = sortBy(allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+
       const locale = app.i18n.locale
       const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
@@ -241,7 +243,7 @@ export default {
       if (isEmpty(this.$data.allPages)) { return [] }
       const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
       const chunks = chunk(allPages, 3)
-      return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
+      return chunks.map(chunk => [chunk[0], chunk[1], chunk[2]])
     },
     currentPagesChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }

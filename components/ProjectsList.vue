@@ -32,46 +32,6 @@
     </NuxtLink>
     </div>
   </div>
-  <!-- <div class="projects-list">
-    <transition-group
-      name="insert"
-      tag="div"
-      id="projects-grid"
-      @before-enter="beforeEnter"
-      @enter="enter"
-      @leave="leave"
-    >
-      <NuxtLink
-      :id="$ta(project.attributes, 'title')"
-      v-for="(project, index) in projects"
-      :key="getTitle(project.attributes)"
-      :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
-      event=""
-      @click.native.prevent="handleClick(project, index)"
-      @mouseover.native="handleHover(project, index)"
-      @mouseleave.native="handleBlur"
-      :data-index="index"
-      :data-total="projects.length"
-      :data-orientation="findOrientation(index)"
-      >
-        <div v-if="mobile" class="frame-wrapper">
-          <Frame>
-            <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" loading="lazy"/>
-          </Frame>
-          <p class="project-title">
-            {{ $ta(project.attributes, 'title') }}
-          </p>
-        </div>
-        <div v-else class="image-container">
-          <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-          <p class="project-title">
-            {{ $ta(project.attributes, 'title') }}
-          </p>
-        </div>
-      </NuxtLink>
-    </transition-group>
-  </div> -->
 </template>
 
 <script>
@@ -105,37 +65,6 @@ export default {
           slug
         }
       })
-    },
-    beforeEnter: function(el) {
-      el.classList.add('transition-hide')
-      if (this.goingUp) {
-        if (el.dataset.orientation === "portrait") {
-          el.style.transform = "translateY(120%)"
-        } else {
-          el.style.transform = "translateY(180%)"
-        }
-      } else {
-        if (el.dataset.orientation === "portrait") {
-          el.style.transform = "translateY(-120%)"
-        } else {
-          el.style.transform = "translateY(-180%)"
-        }
-      }
-      el.style.transition = "opacity 300 ease, transform 400 ease"
-    },
-    enter: function(el, done) {
-      setTimeout(() => {
-        setTimeout(() => {
-          el.classList.remove('transition-hide')
-          el.classList.add('transition-show')
-          el.style.transform = "translateY(0)"
-        }, 0)
-        done()
-      }, 0)
-      el.classList.remove('transition-show')
-    },
-    leave: function(el, done) {
-      done()
     },
     handleHover(project, index) {
       if (index === 3) {

@@ -1,5 +1,5 @@
 <template>
-  <div class="frame" :style="{'--n': n, '--d': d, 'background-image': 'url(' + source + ')'}">
+  <div class="frame" :style="{'--n': n, '--d': d}">
     <slot />
   </div>
 </template>
