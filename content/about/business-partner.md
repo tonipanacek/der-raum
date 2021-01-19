@@ -69,7 +69,7 @@ text_and_link_group:
   text_url: https://www.siemens-home.bsh-group.com/de/
 - main_text: Staatsoper Berlin
   text_url: https://www.staatsoper-berlin.de/de/
-- main_text: Strümpfel Architekten
+- main_text: Reinhard Architekten
   text_url: http://www.struempfel-architekten.de/
 - main_text: Thomas Bendel Architekt
   text_url: http://www.thomasbendel.com/
