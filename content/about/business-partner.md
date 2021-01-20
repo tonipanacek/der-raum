@@ -9,6 +9,8 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: Studio Lineatur
+  text_url: https://www.studiolineatur.com/
 - main_text: 50 hertz
   text_url: https://www.50hertz.com/
 - main_text: A53 Architekten
