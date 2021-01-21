@@ -272,6 +272,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#projects {
+  @include respond-to('large') {
+    max-height: 90vh;
+  }
+}
 #projects.image {
   max-width: 1250px;
   margin: 0 auto;
