@@ -1,34 +1,77 @@
 <template>
-  <ServiceList :services="services" />
+  <Container>
+    <h1 class="accessible">{{ seo.projectsOverviewH1 }}</h1>
+    <p class="accessible">{{ seo.projectsOverviewText }}</p>
+    <ProjectsList
+    class="section"
+    id="mobile-view"
+    v-if="isChunky"
+    :projects="allPagesView"
+    :goingUp="goingUp"
+    :mobile="true"
+    />
+  </Container>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
-import { mapActions } from "vuex"
-import ServiceList from "~/components/ServiceList.vue"
+import seo from '~/content/data/seo'
+import paginate from '~/plugins/paginate'
+import Container from "~/components/Container"
+import ProjectsList from "~/components/ProjectsList"
+
 export default {
-  layout: "layout",
-  components: {
-    ServiceList
+  name: 'projectsIndex',
+  head() {
+    return {
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
+    }
   },
+  nuxtI18n: {
+    paths: {
+      de: '/projekte',
+      en: '/projects'
+    }
+  },
+  mixins: [paginate],
   async asyncData() {
-    // create context via webpack to map over all blog posts
-    const allServices = await require.context(
-      "~/content/services/",
+    // create context via webpack to map over all blog pages
+    const allPages = await require.context(
+      "~/content/projects/",
       true,
       /\.md$/
     )
-    let services = allServices.keys().map(key => {
-      // give back the value of each post context
-      return allServices(key)
+    let pages = allPages.keys().map(key => {
+      // give back the value of each page context
+      return allPages(key)
     })
-    services = sortBy(services, service => get(service, 'attributes.position'))
+    pages = pages.filter(page => !page.attributes.offline)
+    pages = sortBy(pages, page => get(page, 'attributes.page'))
     return {
-      services
+      pages,
+      seo
     }
-  }
+  },
+  components: {
+    Container,
+    ProjectsList
+  },
+  mounted() {
+    this.setPages(this.currentChunk.slice(0, this.max - 1))
+    this.setPagesPrefix("projects")
+  },
+  destroyed() {
+    this.resetLastPage()
+  },
+  methods: {
+    ...mapActions(["setPages", "setPagesPrefix", "resetLastPage"])
+  },
 }
 </script>
 
-
-
+<style lang="scss">
+#mobile-view {
+  display: block;
+}
+</style>
