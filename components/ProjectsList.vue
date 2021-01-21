@@ -110,17 +110,19 @@ export default {
 $main-height: calc(100vh - #{spacing(frame)});
 
 #projects-grid {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: fit-content(260px);
-  grid-auto-flow: row dense;
-  .project-link:first-child {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  .portrait {
-    grid-row: span 2;
+  @include respond-to('large') {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: fit-content(260px);
+    grid-auto-flow: row dense;
+    .project-link:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .portrait {
+      grid-row: span 2;
+    }
   }
 }
 

@@ -12,7 +12,7 @@ en_title: Winterküche
 de_title: Winterküche
 en_description: 'Photos: Alexander Schlösser'
 de_description: 'Fotos: Alexander Schlösser'
-offline: false
+offline: true
 orientation: portrait
 page_position: 2
 page: 5
