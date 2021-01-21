@@ -211,32 +211,59 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      if (this.id >= this.length) { return '' }
-      return this.localePath({
-        name: 'projects-slug-images-id',
-        params: {
-          slug: this.$data.slug,
-          id: this.$data.id + 1
-        }
-      })
+      const projectIndex = this.$data.allPages.indexOf(this.$data.page)
+      const nextProject = this.$data.allPages[projectIndex + 1]
+      if (this.id >= this.length && projectIndex === this.$data.allPages.length - 1) {
+        return ''
+      } else if (this.id >= this.length) {
+        const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: nextSlug,
+            id: 1
+          }
+        })
+      } else {
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: this.$data.slug,
+            id: this.$data.id + 1
+          }
+        })
+      }
+
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      if (parseInt(this.id) <= 1) { return '' }
-      return this.localePath({
-        name: 'projects-slug-images-id',
-        params: {
-          slug: this.$data.slug,
-          id: this.$data.id - 1
-        }
-      })
+      const projectIndex = this.$data.allPages.indexOf(this.$data.page)
+      const previousProject = this.$data.allPages[projectIndex - 1]
+      if (parseInt(this.id) <= 1 && projectIndex === 0) {
+        return ''
+      } else if (parseInt(this.id) <= 1) {
+        const previousSlug = this.formatSlug(this.$ta(previousProject.attributes, 'title'))
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: previousSlug,
+            id: previousProject.attributes.images.length
+          }
+        })
+      } else {
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: this.$data.slug,
+            id: this.$data.id - 1
+          }
+        })
+      }
+
     },
     closeLink() {
       return this.localePath({
-        name: 'projects-slug',
-        params: {
-          slug: this.$data.slug
-        }
+        name: 'projects'
       })
     },
     allPagesChunks() {
