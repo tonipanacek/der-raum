@@ -3,7 +3,7 @@ orientation: landscape
 page_position: 3
 title: Commandant
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894612/Einbauschrank-Lamellen-Schiebetuer-Exklusiv-Holz_xbnwtn.jpg
-page: 3
+page: 2
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894671/Einbauschrank-Lamellen-Schiebetuer-Exklusiv-Holz_pjwzsy.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894688/Lamellen-Schiebetuer-Holz-Handwerk_cpz8ce.jpg
