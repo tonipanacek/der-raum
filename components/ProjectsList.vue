@@ -58,7 +58,6 @@ export default {
       return get(attrs, 'title', '')
     },
     imagePath(project) {
-      // if (!image.index) { return '' }
       const slug = this.formatSlug(this.$ta(project.attributes, 'title'))
       return this.localePath({
         name: 'projects-slug-images-id',
@@ -68,15 +67,6 @@ export default {
         }
       })
     },
-    // path(page) {
-    //   const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
-    //   return this.localePath({
-    //     name: "projects-slug",
-    //     params: {
-    //       slug
-    //     }
-    //   })
-    // },
     handleHover(project, index) {
       if (index === 3) {
         this.setHoveredMenuItem('more')
@@ -96,7 +86,7 @@ export default {
       }
     },
     findOrientation(index) {
-      return index === 1 || index === 3 ? "portrait" : "landscape"
+      return index === 1 || index === 4 ? "portrait" : "landscape"
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   },
@@ -111,6 +101,16 @@ export default {
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
+
+#projects-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  .project-link:first-child {
+    grid-column: span 2;
+  }
+}
+
 .project-title {
   @include smallCaps;
   color: color(dark);
@@ -127,7 +127,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 .project-link {
   text-decoration: none;
-  transition: transform 650ms ease, opacity 0.3s ease-in-out;
+  transition: all 500ms;
   &:hover .project-title {
     color: color(dark);
     font-weight: 900;
