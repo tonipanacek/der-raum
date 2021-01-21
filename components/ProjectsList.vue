@@ -6,7 +6,14 @@
     v-for="(project, index) in projects"
     :key="getTitle(project.attributes)"
     :to="imagePath(project)"
-    :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
+    :class="{
+      'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3),
+      'hover': hoveredMenuItem,
+      'project-link': true,
+      'extra-space': projects[0] === '',
+      'extra-margin': projects.length === 3 && index === projects.length - 1,
+      'portrait': findOrientation(index) === 'portrait'
+    }"
     event=""
     @click.native.prevent="handleClick(project, index)"
     @mouseover.native="handleHover(project, index)"
@@ -16,7 +23,7 @@
     :data-orientation="findOrientation(index)"
     >
       <div v-if="mobile" class="frame-wrapper">
-        <Frame>
+        <Frame :n="findOrientation(index) === 'portrait' ? 11 : 9" :d="findOrientation(index) === 'portrait' ? 9 : 16">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" loading="lazy"/>
         </Frame>
         <p class="project-title">
@@ -86,7 +93,7 @@ export default {
       }
     },
     findOrientation(index) {
-      return index === 1 || index === 4 ? "portrait" : "landscape"
+      return index % 2 === 1 ? "portrait" : "landscape"
     },
     ...mapActions(['setHoveredMenuItem', 'unsetHoveredMenuItem'])
   },
@@ -106,8 +113,14 @@ $main-height: calc(100vh - #{spacing(frame)});
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 280px;
+  grid-auto-flow: row dense;
   .project-link:first-child {
-    grid-column: span 2;
+    grid-column: span 2 / auto;
+    grid-row: span 2 / auto
+  }
+  .portrait {
+    grid-row: span 2;
   }
 }
 

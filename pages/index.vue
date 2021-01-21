@@ -22,16 +22,11 @@ import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
 export default {
-  name: 'projectsIndex',
+  layout: 'layout',
+  name: 'index',
   head() {
     return {
       title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
-    }
-  },
-  nuxtI18n: {
-    paths: {
-      de: '/projekte',
-      en: '/projects'
     }
   },
   mixins: [paginate],
