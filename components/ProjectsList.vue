@@ -5,7 +5,7 @@
     :id="$ta(project.attributes, 'title')"
     v-for="(project, index) in projects"
     :key="getTitle(project.attributes)"
-    :to="path(project)"
+    :to="image_path(project)"
     :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
     event=""
     @click.native.prevent="handleClick(project, index)"
@@ -56,6 +56,18 @@ export default {
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
+    },
+    image_path(page) {
+      // if (!image.index) { return '' }
+      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
+
+      return this.localePath({
+        name: 'projects-slug-images-id',
+        params: {
+          slug,
+          id: 1
+        }
+      })
     },
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
