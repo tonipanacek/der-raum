@@ -5,6 +5,12 @@ fields:
 - type: text
   name: title
   label: Title
+- name: architect_name
+  type: text
+  config:
+    required: false
+  label: Architect Name
+  description: 'To be displayed along with the project name '
 - name: offline
   type: boolean
   label: Offline
