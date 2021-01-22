@@ -16,7 +16,7 @@ en_description: 'Design: OuterRim Architecture'
 offline: false
 orientation: portrait
 page: 2
-page_position: 1
+page_position: 2
 meta_tags:
   de_title: Design Einbauküche mit schwarzem Küchenblock, Tischler, Schreiner, Schreinerei,
     Tischlerei

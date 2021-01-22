@@ -5,6 +5,13 @@ fields:
 - type: text
   name: title
   label: Title
+- name: architect_name
+  type: text
+  config:
+    required: false
+  label: Architect Name
+  description: To be displayed along with the project name - ideally 30 characters
+    or less!
 - name: offline
   type: boolean
   label: Offline
@@ -32,17 +39,6 @@ fields:
       file: 
       path: 
   label: Photo Orientation
-- name: page_position
-  type: number
-  label: Page Position
-  default: 0
-  required: true
-  config:
-    min: '1'
-    max: '2'
-    step: '1'
-  description: First (1) or second (2) position on the page for the landscape images.
-    Leave blank if it's a portrait.
 - name: page
   type: number
   default: 0
@@ -54,6 +50,19 @@ fields:
     required: true
   label: Page Number
   description: Which page would you like the project to be displayed on?
+- name: page_position
+  type: number
+  label: Page Position
+  default: 0
+  required: true
+  config:
+    min: '1'
+    max: 3
+    step: '1'
+    required: true
+  description: First (1), second (2), or third (3) position on the page for ordering
+    of images. Photo orientation doesn't matter. Only one we won't account for is
+    the "next portrait", i.e. bottom right cut off image.
 - name: images
   type: image_gallery
   config: {}
@@ -102,6 +111,7 @@ pages:
 - content/projects/abbey-road.md
 - content/projects/apartment-42.md
 - content/projects/f65.md
+- content/projects/haus-wannsee.md
 - content/projects/le-commandant.md
 - content/projects/quergebäude.md
 - content/projects/taube-blau.md

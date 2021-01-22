@@ -7,8 +7,8 @@ en_first_column: Arrange Appointment
 telephone_1: 030 927943501
 telephone_2: "+49 176735647 42 (WhatsApp)"
 email: kontakt@der-raum.de
-de_second_column: Showroom
-en_second_column: Showroom
+de_second_column: Studio (auch Online-Beratungen)
+en_second_column: Studio (also online appointments)
 street_number: Dunckerstraße 15
 city_zip: 10437 Berlin
 de_weekdays: 'Montag-Freitag:'
@@ -17,9 +17,9 @@ weekday_hours: 10:00-18:00
 de_weekend: 'Samstag:'
 en_weekend: 'Saturday:'
 weekend_hours: 11:00-17:00
-de_third_column: Jobs & Bewerbung
-en_third_column: Jobs & Application
-de_cv_description: Lebenslauf mit Bewerbungsschreiben
+de_third_column: Bewerbung
+en_third_column: Applications
+de_cv_description: Lebenslauf mit Anschreiben
 en_cv_description: CV and Cover Letter
 cv_email: ausbildung@holz-raum.de
 

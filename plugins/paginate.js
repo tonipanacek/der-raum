@@ -24,7 +24,7 @@ export default {
           if (c.length === this.max - 1) {
             return [c[0], c[1], c[2]].filter(c => c)
           } else {
-            return [c[1], c[0]].filter(c => c)
+            return [c[0], c[1]].filter(c => c)
           }
         })
         return uniq(flatten(chunks))
@@ -48,7 +48,7 @@ export default {
               c.splice(0, 0, '')
               return [c[0], c[1]]
             } else {
-              return [c[1], c[0], nextPortrait].filter(c => c)
+              return [c[0], c[1], nextPortrait].filter(c => c)
             }
           })
         } else {

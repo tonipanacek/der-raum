@@ -110,7 +110,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     "@nuxtjs/eslint-module",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
   ],
   /*
    ** Nuxt.js modules
@@ -124,7 +124,8 @@ export default {
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "nuxt-polyfill",
-    'nuxt-facebook-pixel-module'
+    'nuxt-facebook-pixel-module',
+    "@nuxtjs/gtm"
   ],
   // SCSS resources
   styleResources: {
@@ -160,6 +161,9 @@ export default {
   // Google Analytics Config
   googleAnalytics: {
     id: 'UA-1433242-13'
+  },
+  gtm: {
+    id: 'GTM-MM8H2V6'
   },
   // Facebook Pixel Config
   facebook: {
