@@ -33,5 +33,6 @@ meta_tags:
     Tischler, Schreiner, Schreinerei, Tischlerei
   en_description: Stair installation with tall cupboards, sliding door, kitchen and
     slat wall
+architect_name: Club Marginal Architekten
 
 ---
