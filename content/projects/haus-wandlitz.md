@@ -25,5 +25,6 @@ meta_tags:
   de_description: Wohnbereich Kueche Schlafzimmer Hochwertig Exklusiv Holz vom Tischler
     / Schreiner
   en_description: Living area kitchen bedroom high quality exclusive wood
+architect_name: Bonauer Bölling PA
 
 ---
