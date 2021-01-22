@@ -12,9 +12,14 @@
       :id="$ta(project.attributes, 'title')"
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
-      :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
-      event=""
+      :to="imagePath(project)"
+      :class="{
+        'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3),
+        hover: hoveredMenuItem,
+        'project-link': true,
+        'extra-space': projects[0] === '',
+        'extra-margin': projects.length === 3 && index === projects.length - 1
+      }"
       @click.native.prevent="handleClick(project, index)"
       @mouseover.native="handleHover(project, index)"
       @mouseleave.native="handleBlur"
@@ -64,12 +69,13 @@ export default {
     getTitle(attrs) {
       return get(attrs, 'title', '')
     },
-    path(page) {
+    imagePath(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
-        name: "projects-slug",
+        name: "projects-slug-images-id",
         params: {
-          slug
+          slug,
+          id: 1
         }
       })
     },
@@ -118,7 +124,7 @@ export default {
       if (index > 2 && !this.mobile) {
         this.$emit('increment')
       } else {
-        const path = this.path(project)
+        const path = this.imagePath(project)
         this.$router.push(path)
       }
     },
