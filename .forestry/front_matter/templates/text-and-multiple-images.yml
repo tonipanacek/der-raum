@@ -10,7 +10,8 @@ fields:
   config:
     required: false
   label: Architect Name
-  description: 'To be displayed along with the project name '
+  description: To be displayed along with the project name - ideally 30 characters
+    or less!
 - name: offline
   type: boolean
   label: Offline
