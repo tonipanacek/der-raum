@@ -12,9 +12,14 @@
       :id="$ta(project.attributes, 'title')"
       v-for="(project, index) in projects"
       :key="getTitle(project.attributes)"
-      :to="path(project)"
-      :class="{ 'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3), hover: hoveredMenuItem, 'project-link': true, 'extra-space': projects[0] === '', 'extra-margin': projects.length === 3 && index === projects.length - 1 }"
-      event=""
+      :to="imagePath(project)"
+      :class="{
+        'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title') || (hoveredMenuItem === 'more' && index === 3),
+        hover: hoveredMenuItem,
+        'project-link': true,
+        'extra-space': projects[0] === '',
+        'extra-margin': projects.length === 3 && index === projects.length - 1
+      }"
       @click.native.prevent="handleClick(project, index)"
       @mouseover.native="handleHover(project, index)"
       @mouseleave.native="handleBlur"
@@ -32,9 +37,12 @@
         </div>
         <div v-else class="image-container">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-          <p class="project-title">
-            {{ $ta(project.attributes, 'title') }}
-          </p>
+          <div class="title-flex">
+            <p class="project-title">
+              {{ $ta(project.attributes, 'title') }}
+            </p>
+            <p class="project-title" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
+          </div>
         </div>
       </NuxtLink>
     </transition-group>
@@ -64,12 +72,13 @@ export default {
     getTitle(attrs) {
       return get(attrs, 'title', '')
     },
-    path(page) {
+    imagePath(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
-        name: "projects-slug",
+        name: "projects-slug-images-id",
         params: {
-          slug
+          slug,
+          id: 1
         }
       })
     },
@@ -118,7 +127,7 @@ export default {
       if (index > 2 && !this.mobile) {
         this.$emit('increment')
       } else {
-        const path = this.path(project)
+        const path = this.imagePath(project)
         this.$router.push(path)
       }
     },
@@ -251,6 +260,13 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
 }
 
+.title-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .project-title {
   @include smallCaps;
   color: color(dark);
@@ -260,8 +276,9 @@ $main-height: calc(100vh - #{spacing(frame)});
   margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
   @include respond-to('large') {
-    padding: 0.5em 0;
-    margin-top: 0;
+    padding: 0;
+    padding-top: 0.5em;
+    margin: 0;
   }
 }
 

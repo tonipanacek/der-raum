@@ -9,11 +9,12 @@
       <li>
         <ul class="nav-items">
           <li>
-            <nuxt-link
+            <!-- <nuxt-link
               v-if="isOnline('projects')"
               :to="localePath({ name: 'projects' })"
               class="nav-item title link"
-            >
+            > -->
+            <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title link">
               {{ $t("navbar_titles.projects") }}
             </nuxt-link>
           </li>
@@ -127,7 +128,7 @@ export default {
       font-weight: 900;
     }
   }
-  .nuxt-link-active {
+  .nuxt-link-exact-active {
     color: color(black);
     font-weight: 900;
     &:hover {

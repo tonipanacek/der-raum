@@ -13,7 +13,7 @@
           </nuxt-link>
         </li>
       </template>
-      <template v-else>
+      <!-- <template v-else>
         <li
         v-for="(page, index) in sortedPages"
         :key="$ta(page.attributes, 'title') + $i18n.locale"
@@ -34,7 +34,7 @@
         </li>
       </template>
       <li
-        v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects|rooms|raume/)"
+        v-if="this.pageNumber < this.lastPage && this.pagesPrefix.match(/projekte|projects/)"
         :class="{
           'nav-item': true,
           'title': true,
@@ -47,7 +47,7 @@
         @mouseleave="handleBlur"
       >
         {{ $t("more_button")}}+
-      </li>
+      </li> -->
     </ul>
   </Stack>
 </template>
@@ -70,9 +70,10 @@ export default {
     path(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       return this.localePath({
-        name: `${this.pagesPrefix}-slug`,
+        name: `${this.pagesPrefix}-slug-images-id`,
         params: {
-          slug
+          slug,
+          id: 1
         }
       })
     },

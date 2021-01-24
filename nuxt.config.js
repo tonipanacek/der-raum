@@ -21,24 +21,12 @@ function loadPages (enPrefix, dePrefix) {
       `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
       `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
     ]
-    // if (enPrefix === 'services' || enPrefix === 'about') {
-    //   return [
-    //     `/${dePrefix}#${kebabCase(get(page, 'meta.de_title', ''))}`,
-    //     `en/${enPrefix}#${kebabCase(get(page, 'meta.en_title', ''))}`
-    //   ]
-    // } else {
-    //   return [
-    //     `/${dePrefix}/${kebabCase(get(page, 'meta.de_title', ''))}`,
-    //     `en/${enPrefix}/${kebabCase(get(page, 'meta.en_title', ''))}`
-    //   ]
-    // }
   })
 
   return flatten(pages)
 }
 
 export default {
-  mode: "universal",
   /*
    ** Headers of the page
    */

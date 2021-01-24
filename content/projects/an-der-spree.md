@@ -29,5 +29,5 @@ meta_tags:
     Tischler, Schreiner, Schreinerei, Tischlerei
   en_description: Complete office expansion with conference tables, tea kitchen and
     workplaces
-
+architect_name: CBRE
 ---

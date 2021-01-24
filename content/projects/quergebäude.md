@@ -17,7 +17,7 @@ de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Roland Unterbus
 offline: false
 orientation: landscape
 page: 3
-page_position: 1
+page_position: 2
 meta_tags:
   de_title: Hochwertige Einbauküche aus Massivholz weiss lackiert, Tischler, Schreiner,
     Schreinerei, Tischlerei
