@@ -1,4 +1,4 @@
-import { sortBy, get } from 'lodash'
+import { sortBy, get, filter } from 'lodash'
 
 export const state = () => {
   return {

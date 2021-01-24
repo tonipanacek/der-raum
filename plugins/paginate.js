@@ -36,6 +36,7 @@ export default {
       if (isEmpty(this.pages)) { return [] }
       const getChunks = (pages) => {
         if (isEmpty(pages)) { return [] }
+
         const allPages = sortBy(pages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
         let chunks = chunk(allPages, 3)
         let chunkers

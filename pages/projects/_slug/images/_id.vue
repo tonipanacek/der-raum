@@ -42,6 +42,7 @@ import prevNext from '~/plugins/prev_next'
 import TinyGesture from 'tinygesture';
 
 export default {
+  transition: 'something',
   nuxtI18n: {
     paths: {
       de: '/projekte/:slug/bilder/:id',
@@ -230,10 +231,7 @@ export default {
     },
     closeLink() {
       return this.localePath({
-        name: 'projects-slug',
-        params: {
-          slug: this.$data.slug
-        }
+        name: 'projects-index'
       })
     },
     allPagesChunks() {
@@ -269,6 +267,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#projects {
+  @include respond-to('large') {
+    max-height: 90vh;
+  }
+}
 #projects.image {
   max-width: 1250px;
   margin: 0 auto;

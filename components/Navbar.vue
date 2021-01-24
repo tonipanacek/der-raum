@@ -14,7 +14,7 @@
               :to="localePath({ name: 'projects' })"
               class="nav-item title link"
             > -->
-            <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title link" exact>
+            <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title link">
               {{ $t("navbar_titles.projects") }}
             </nuxt-link>
           </li>
