@@ -64,7 +64,6 @@ export default {
     })
     pages = pages.filter(page => !page.attributes.offline)
     pages = sortBy(pages, page => get(page, 'attributes.page'))
-    console.log(pages)
     return {
       pages,
       seo
