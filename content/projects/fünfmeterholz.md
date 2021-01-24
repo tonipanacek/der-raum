@@ -24,5 +24,5 @@ meta_tags:
   de_description: Küche Mittelblock Massivholz schwarz Dachgeschoss, Tischler, Schreiner,
     Schreinerei, Tischlerei
   en_description: Kitchen middle block solid wood black attic
-
+architect_name: Reinhard Architekten
 ---

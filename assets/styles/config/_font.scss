@@ -23,7 +23,7 @@ $fonts: (
 }
 
 @mixin smallCaps {
-  font-size: .8rem;
+  font-size: .75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: color(black);

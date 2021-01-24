@@ -13,7 +13,7 @@
           </nuxt-link>
         </li>
       </template>
-      <template v-else>
+      <!-- <template v-else>
         <li
         v-for="(page, index) in sortedPages"
         :key="$ta(page.attributes, 'title') + $i18n.locale"
@@ -47,7 +47,7 @@
         @mouseleave="handleBlur"
       >
         {{ $t("more_button")}}+
-      </li>
+      </li> -->
     </ul>
   </Stack>
 </template>
