@@ -266,9 +266,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 .title-flex {
   display: flex;
   justify-content: space-between;
-  // flex-direction: column;
   @include respond-to('large') {
-    // align-items: center;
     flex-wrap: wrap;
   }
 }
@@ -282,7 +280,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
   text-align: right;
-  flex: 1;
+  flex: 1 0 33%;
   @include respond-to('large') {
     padding: 0;
     padding-top: 0.5em;
@@ -298,6 +296,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   padding: 0.5em;
   margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
+  flex: 2;
   @include respond-to('large') {
     padding: 0;
     padding-top: 0.5em;
