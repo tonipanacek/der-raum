@@ -31,9 +31,12 @@
           <Frame>
             <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" loading="lazy"/>
           </Frame>
-          <p class="project-title">
-            {{ $ta(project.attributes, 'title') }}
-          </p>
+          <div class="title-flex">
+            <p class="project-title">
+              {{ $ta(project.attributes, 'title') }}
+            </p>
+            <p class="project-architect" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
+          </div>
         </div>
         <div v-else class="image-container">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
@@ -41,7 +44,7 @@
             <p class="project-title">
               {{ $ta(project.attributes, 'title') }}
             </p>
-            <p class="project-title" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
+            <p class="project-architect" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
           </div>
         </div>
       </NuxtLink>
@@ -262,9 +265,29 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 .title-flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  // flex-direction: column;
+  @include respond-to('large') {
+    // align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.project-architect {
+  @include smallCaps;
+  color: color(dark);
+  font-weight: 300;
+  transition: color 500ms;
+  padding: 0.5em;
+  margin-top: 0;
+  transition: opacity 750ms ease, color 500ms ease;
+  text-align: right;
+  flex: 1;
+  @include respond-to('large') {
+    padding: 0;
+    padding-top: 0.5em;
+    margin: 0;
+  }
 }
 
 .project-title {
