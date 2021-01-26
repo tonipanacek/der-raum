@@ -27,6 +27,7 @@ function loadPages (enPrefix, dePrefix) {
 }
 
 export default {
+  target: 'static',
   /*
    ** Headers of the page
    */

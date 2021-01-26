@@ -216,7 +216,7 @@ export default {
       const nextProject = onlineProjects[projectIndex + 1]
       if (this.id >= this.length && projectIndex === this.$data.allPages.length - 1) {
         return ''
-      } else if (this.id >= this.length) {
+      } else if (this.id >= this.length && nextProject) {
         const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
         return this.localePath({
           name: 'projects-slug-images-id',
@@ -243,7 +243,7 @@ export default {
       const previousProject = onlineProjects[projectIndex - 1]
       if (parseInt(this.id) <= 1 && projectIndex === 0) {
         return ''
-      } else if (parseInt(this.id) <= 1) {
+      } else if (parseInt(this.id) <= 1 && previousProject) {
         const previousSlug = this.formatSlug(this.$ta(previousProject.attributes, 'title'))
         return this.localePath({
           name: 'projects-slug-images-id',
