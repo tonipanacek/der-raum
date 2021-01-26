@@ -263,7 +263,7 @@ export default {
     },
     closeLink() {
       return this.localePath({
-        name: 'projects'
+        name: 'projects-index'
       })
     },
     allPagesChunks() {

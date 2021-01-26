@@ -1,9 +1,10 @@
 ---
-orientation: landscape
 title: Apartment42
+orientation: landscape
+page: 4
+page_position: 3
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973001/Loft-Kueche-schwarz-hochwertig-Massivholz_g9pnqn.jpg
-page_position: 1
-page: 5
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
@@ -20,7 +21,6 @@ en_title: Apartment42
 de_title: Apartment42
 en_description: 'Photos: Maximilian Gödecke'
 de_description: 'Fotos: Maximilian Gödecke'
-offline: false
 meta_tags:
   de_title: Apartment mit Kochinsel, Einbauschränken und Badzimmereinrichtung
   en_title: " Apartment with kitchen island, fitted wardrobes and bathroom furnishings"

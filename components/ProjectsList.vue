@@ -26,15 +26,21 @@
         <Frame :n="findOrientation(index) === 'portrait' ? 11 : 9" :d="findOrientation(index) === 'portrait' ? 9 : 16">
           <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" loading="lazy"/>
         </Frame>
-        <p class="project-title">
-          {{ $ta(project.attributes, 'title') }}
-        </p>
+        <div class="title-flex">
+            <p class="project-title">
+              {{ $ta(project.attributes, 'title') }}
+            </p>
+            <p class="project-architect" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
+          </div>
       </div>
       <div v-else class="image-container">
         <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" />
-        <p class="project-title">
-          {{ $ta(project.attributes, 'title') }}
-        </p>
+       <div class="title-flex">
+            <p class="project-title">
+              {{ $ta(project.attributes, 'title') }}
+            </p>
+            <p class="project-architect" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
+          </div>
       </div>
     </NuxtLink>
     </div>
@@ -126,6 +132,29 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
 }
 
+.title-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.project-architect {
+  @include smallCaps;
+  color: color(dark);
+  font-weight: 300;
+  transition: color 500ms;
+  padding: 0.5em;
+  margin-top: 0;
+  transition: opacity 750ms ease, color 500ms ease;
+  text-align: right;
+  // flex: 1 0 33%;
+  @include respond-to('large') {
+    // padding: 0;
+    // padding-top: 0.5em;
+    // margin: 0;
+  }
+}
+
 .project-title {
   @include smallCaps;
   color: color(dark);
@@ -134,9 +163,11 @@ $main-height: calc(100vh - #{spacing(frame)});
   padding: 0.5em;
   margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
+  flex: 2;
   @include respond-to('large') {
-    padding: 0.5em 0;
-    margin-top: 0;
+    // padding: 0;
+    // padding-top: 0.5em;
+    // margin: 0;
   }
 }
 
@@ -145,12 +176,12 @@ $main-height: calc(100vh - #{spacing(frame)});
   transition: all 500ms;
   &:hover .project-title {
     color: color(dark);
-    font-weight: 900;
+    font-weight: 600;
   }
   @media(hover: hover) and (pointer: fine) {
     &:hover .project-title {
       color: color(dark);
-      font-weight: 900;
+      // font-weight: 900;
     }
   }
 }

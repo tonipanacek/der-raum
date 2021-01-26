@@ -1,9 +1,10 @@
 ---
-orientation: landscape
-page_position: 3
 title: Commandant
+orientation: landscape
+page: 2
+page_position: 1
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894612/Einbauschrank-Lamellen-Schiebetuer-Exklusiv-Holz_xbnwtn.jpg
-page: 3
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894671/Einbauschrank-Lamellen-Schiebetuer-Exklusiv-Holz_pjwzsy.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1582894688/Lamellen-Schiebetuer-Holz-Handwerk_cpz8ce.jpg
@@ -23,7 +24,6 @@ en_description: 'Design: Sebastian Schwade & Club Marginal Architekten // Photos
   Maximilian Gödecke'
 de_description: 'Gestaltung: Sebastian Schwade & Club Marginal Architekten // Fotos:
   Maximilian Gödecke'
-offline: false
 meta_tags:
   de_title: Treppeneinbau mit Hochschränken, Schiebetür, Küche und Lamellenwand, Tischler,
     Schreiner, Schreinerei, Tischlerei
@@ -33,5 +33,6 @@ meta_tags:
     Tischler, Schreiner, Schreinerei, Tischlerei
   en_description: Stair installation with tall cupboards, sliding door, kitchen and
     slat wall
+architect_name: Club Marginal Architekten
 
 ---

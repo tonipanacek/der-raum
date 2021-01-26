@@ -1,5 +1,9 @@
 ---
 title: Icke
+orientation: portrait
+page: 2
+page_position: 2
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbaukueche-Mittelblock-Einbauschraenke-raumhoch_cgszb2.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz-wohnzimmer_i8kvn0.jpg
@@ -13,10 +17,6 @@ de_title: Icke
 en_title: Icke
 de_description: 'Gestaltung: OuterRim Architecture'
 en_description: 'Design: OuterRim Architecture'
-offline: false
-orientation: portrait
-page: 2
-page_position: 2
 meta_tags:
   de_title: Design Einbauküche mit schwarzem Küchenblock, Tischler, Schreiner, Schreinerei,
     Tischlerei
@@ -24,5 +24,5 @@ meta_tags:
   de_description: Einbauküche weiss Kochinsel Mittelblock schwarz hochwertig vom Tischler
     / Schreiner
   en_description: Built-in kitchen white island central block black high quality
-
+architect_name: OuterRim Architecture
 ---

@@ -1,4 +1,10 @@
 {
+  "de_intro": {
+    "title": "Impressum"
+  },
+  "en_intro": {
+    "title": "Imprint"
+  },
   "de_contact": {
     "title": "Kontakt",
     "text": [
