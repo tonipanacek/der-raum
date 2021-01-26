@@ -211,8 +211,9 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      const projectIndex = this.$data.allPages.indexOf(this.$data.page)
-      const nextProject = this.$data.allPages[projectIndex + 1]
+      const onlineProjects = this.$data.allPages.filter(page => !page.attributes.offline)
+      const projectIndex = onlineProjects.indexOf(this.$data.page)
+      const nextProject = onlineProjects[projectIndex + 1]
       if (this.id >= this.length && projectIndex === this.$data.allPages.length - 1) {
         return ''
       } else if (this.id >= this.length) {
@@ -237,8 +238,9 @@ export default {
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      const projectIndex = this.$data.allPages.indexOf(this.$data.page)
-      const previousProject = this.$data.allPages[projectIndex - 1]
+      const onlineProjects = this.$data.allPages.filter(page => !page.attributes.offline)
+      const projectIndex = onlineProjects.indexOf(this.$data.page)
+      const previousProject = onlineProjects[projectIndex - 1]
       if (parseInt(this.id) <= 1 && projectIndex === 0) {
         return ''
       } else if (parseInt(this.id) <= 1) {
@@ -263,7 +265,7 @@ export default {
     },
     closeLink() {
       return this.localePath({
-        name: 'projects-index'
+        name: 'index'
       })
     },
     allPagesChunks() {
