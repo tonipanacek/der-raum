@@ -105,11 +105,11 @@ a:visited {
   height: 100%;
   background: white;
   margin: 0 auto;
-  padding: 0 2rem;
   @include respond-to('large') {
     width: 500px;
     max-width: 1250px;
     overflow-y: visible;
+    padding: 0 2rem;
     // max-height: $main-height;
   }
 }
