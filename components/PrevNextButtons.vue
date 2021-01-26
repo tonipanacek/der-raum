@@ -42,14 +42,14 @@ export default {
   }
 }
 #prev-next-buttons {
-  z-index: z(sidebar);
+  z-index: 100;
   height: 100%;
   width: 100%;
   a,
   a:visited,
   a:focus {
     .arrow {
-      z-index: z(sidebar);
+      z-index: 100;
       height: 2rem;
       width: 2rem;
       fill: color(dark);
@@ -79,7 +79,7 @@ export default {
   }
 }
 #image-gallery {
-  z-index: z(sidebar);
+  z-index: 100;
   // position: relative;
   height: 90%;
   width: 100%;
@@ -87,7 +87,7 @@ export default {
   a:visited,
   a:focus {
     .arrow {
-      z-index: z(sidebar);
+      z-index: 100;
       height: 2rem;
       width: 2rem;
       fill: color(dark);

@@ -2,35 +2,14 @@
   <Container>
     <h1 class="accessible">{{ seo.projectsOverviewH1 }}</h1>
     <p class="accessible">{{ seo.projectsOverviewText }}</p>
-    <div
-    id="projects-desktop"
-    class="projects"
-    v-on:wheel.prevent="handleScroll"
-    >
-      <ProjectsList
-      class="section"
-      id="desktop-view"
-      v-if="isChunky"
-      :projects="currentChunk"
-      :goingUp="goingUp"
-      :mobile="false"
-      @increment="incrementPage"
-      />
-      <ProgressBar :total="pagesChunks.length - 1" :page="pageNumber" @increment="incrementPage" @decrement="decrementPage" />
-    </div>
-    <div
-    id="projects-mobile"
-    class="projects"
-    >
-      <ProjectsList
-      class="section"
-      id="mobile-view"
-      v-if="isChunky"
-      :projects="allPagesView"
-      :goingUp="goingUp"
-      :mobile="true"
-      />
-    </div>
+    <ProjectsList
+    class="section"
+    id="mobile-view"
+    v-if="isChunky"
+    :projects="allPagesView"
+    :goingUp="goingUp"
+    :mobile="true"
+    />
   </Container>
 </template>
 
@@ -41,10 +20,10 @@ import seo from '~/content/data/seo'
 import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
-import ProgressBar from "~/components/ProgressBar"
 
 export default {
-  name: 'projectsIndex',
+  layout: 'layout',
+  name: 'index',
   head() {
     return {
       title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
@@ -71,8 +50,7 @@ export default {
   },
   components: {
     Container,
-    ProjectsList,
-    ProgressBar
+    ProjectsList
   },
   mounted() {
     this.setPages(this.currentChunk.slice(0, this.max - 1))
@@ -82,42 +60,13 @@ export default {
     this.resetLastPage()
   },
   methods: {
-    getTitle(chunk) {
-      return this.formatSlug(get(chunk, '[0].attributes.title', ''))
-    },
     ...mapActions(["setPages", "setPagesPrefix", "resetLastPage"])
   },
-  watch: {
-    currentChunk(chunk) {
-      this.setPages(this.currentChunk.slice(0, this.max - 1))
-    }
-  }
 }
 </script>
 
 <style lang="scss">
-.projects {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  &, & article, & .container, & .section {
-    // display: block;
-    // max-width: none;
-  }
-}
 #mobile-view {
   display: block;
-}
-#desktop-view {
-  display: none;
-  position: relative;
-}
-@include respond-to('large') {
-  #mobile-view {
-    display: none;
-  }
-  #desktop-view {
-  display: block;
-  }
 }
 </style>

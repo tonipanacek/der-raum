@@ -1,5 +1,9 @@
 ---
 title: Kontrast
+orientation: portrait
+page: 6
+page_position: 2
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480518/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg
@@ -14,10 +18,6 @@ en_title: Kontrast
 de_title: Kontrast
 en_description: 'Photos: Michel Sass'
 de_description: 'Fotos: Michel Sass'
-offline: false
-orientation: portrait
-page: 6
-page_position: 2
 meta_tags:
   de_title: Exklusive Einbaukueche in Marmor-Kupfer-Design, Tischler, Schreiner, Schreinerei,
     Tischlerei

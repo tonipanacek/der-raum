@@ -3,6 +3,7 @@ title: Winterküche
 orientation: portrait
 page: 5
 page_position: 2
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
@@ -15,7 +16,6 @@ en_title: Winterküche
 de_title: Winterküche
 en_description: 'Photos: Alexander Schlösser'
 de_description: 'Fotos: Alexander Schlösser'
-offline: false
 meta_tags:
   de_title: Hochwertige Küche im Dachgeschoss mit Kachel Spritzschutz Design, Tischler,
     Schreiner, Schreinerei, Tischlerei

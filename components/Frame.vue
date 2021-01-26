@@ -1,5 +1,5 @@
 <template>
-  <div class="frame" :style="{'--n': n, '--d': d, 'background-image': 'url(' + source + ')'}">
+  <div class="frame" :style="{'--n': n, '--d': d}">
     <slot />
   </div>
 </template>
@@ -25,8 +25,10 @@ export default {
 
 <style lang="scss" scoped>
 .frame {
-  // padding-bottom: calc(var(--n) / var(--d) * 100%);
   padding-bottom: calc(9 / 16 * 100%);
+  @include respond-to('large') {
+    padding-bottom: calc(var(--n) / var(--d) * 100%);
+  }
   position: relative;
   background-size: cover;
   background-position-x: center;

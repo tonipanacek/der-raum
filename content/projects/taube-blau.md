@@ -1,8 +1,9 @@
 ---
-orientation: landscape
-page_position: 1
-page: 1
 title: Taube Blau
+orientation: landscape
+page: 1
+page_position: 1
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834090/Altbau-Kueche-Gold-Rahmenbauweise-grau_pvekw3.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1592834090/Altbau-Kueche-Gold-Rahmenbauweise-grau_pvekw3.jpg
@@ -21,7 +22,6 @@ en_title: Taube Blau
 de_title: Taube Blau
 en_description: 'Photos: Maximilian Gödecke'
 de_description: 'Fotos: Maximilian Gödecke'
-offline: false
 meta_tags:
   de_title: Altbau Küche im Landhausstil, Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Old country style kitchen shaker, grey

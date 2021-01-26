@@ -1,5 +1,9 @@
 ---
 title: An der Spree
+orientation: portrait
+page: 1
+page_position: 2
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/010-Bueroausbau-Kueche-Tische-Stuhle-schwarz-lackiert_upcpcz.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/011-Bueroausbau-Sprecherbox-schwarz-lackiert_mcd1jb.jpg
@@ -17,10 +21,6 @@ de_title: An der Spree
 en_title: An der Spree
 de_description: 'Gestaltung: CBRE // Fotos: Andrea Dingeldein'
 en_description: 'Design: CBRE // Photos: Andrea Dingeldein'
-offline: false
-orientation: portrait
-page: 1
-page_position: 2
 meta_tags:
   de_title: Kompletter Büroausbau mit Besprechungstischen, Küche und Arbeitsplätzen,
     Tischler, Schreiner, Schreinerei, Tischlerei

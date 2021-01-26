@@ -1,5 +1,9 @@
 ---
 title: Quergebäude
+orientation: landscape
+page: 3
+page_position: 2
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
@@ -14,10 +18,6 @@ en_title: Quergebäude
 de_title: Quergebäude
 en_description: 'Design: Club Marginal Architekten // Photos: Roland Unterbusch'
 de_description: 'Gestaltung: Club Marginal Architekten // Fotos: Roland Unterbusch'
-offline: false
-orientation: landscape
-page: 3
-page_position: 2
 meta_tags:
   de_title: Hochwertige Einbauküche aus Massivholz weiss lackiert, Tischler, Schreiner,
     Schreinerei, Tischlerei

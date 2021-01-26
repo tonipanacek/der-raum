@@ -86,6 +86,8 @@ export default {
         return allPages(key)
       })
 
+      allPages = sortBy(allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+
       const locale = app.i18n.locale
       const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
@@ -209,36 +211,68 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      if (this.id >= this.length) { return '' }
-      return this.localePath({
-        name: 'projects-slug-images-id',
-        params: {
-          slug: this.$data.slug,
-          id: this.$data.id + 1
-        }
-      })
+      const onlineProjects = this.$data.allPages.filter(page => !page.attributes.offline)
+      const projectIndex = onlineProjects.indexOf(this.$data.page)
+      const nextProject = onlineProjects[projectIndex + 1]
+      if (this.id >= this.length && projectIndex === this.$data.allPages.length - 1) {
+        return ''
+      } else if (this.id >= this.length) {
+        const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: nextSlug,
+            id: 1
+          }
+        })
+      } else {
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: this.$data.slug,
+            id: this.$data.id + 1
+          }
+        })
+      }
+
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      if (parseInt(this.id) <= 1) { return '' }
-      return this.localePath({
-        name: 'projects-slug-images-id',
-        params: {
-          slug: this.$data.slug,
-          id: this.$data.id - 1
-        }
-      })
+      const onlineProjects = this.$data.allPages.filter(page => !page.attributes.offline)
+      const projectIndex = onlineProjects.indexOf(this.$data.page)
+      const previousProject = onlineProjects[projectIndex - 1]
+      if (parseInt(this.id) <= 1 && projectIndex === 0) {
+        return ''
+      } else if (parseInt(this.id) <= 1) {
+        const previousSlug = this.formatSlug(this.$ta(previousProject.attributes, 'title'))
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: previousSlug,
+            id: previousProject.attributes.images.length
+          }
+        })
+      } else {
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: this.$data.slug,
+            id: this.$data.id - 1
+          }
+        })
+      }
+
     },
     closeLink() {
       return this.localePath({
-        name: 'projects-index'
+        name: 'index'
       })
     },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }
       const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
       const chunks = chunk(allPages, 3)
-      return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
+      return chunks.map(chunk => [chunk[0], chunk[1], chunk[2]])
     },
     currentPagesChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }

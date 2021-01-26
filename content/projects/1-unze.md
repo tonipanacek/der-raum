@@ -1,5 +1,9 @@
 ---
 title: 1 Unze
+orientation: landscape
+page: 4
+page_position: 2
+offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji.jpg
@@ -12,10 +16,6 @@ en_title: 1 UNZE
 de_title: 1 UNZE
 en_description: 'Photos: Alexander Schlösser'
 de_description: 'Fotos: Alexander Schlösser'
-offline: false
-orientation: landscape
-page: 4
-page_position: 2
 meta_tags:
   de_title: Luxus Küche mit goldener Kochinsel aus Messing, Tischler, Schreiner, Schreinerei,
     Tischlerei

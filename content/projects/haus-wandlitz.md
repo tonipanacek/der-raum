@@ -1,5 +1,9 @@
 ---
 title: Haus Wandlitz
+orientation: landscape
+page: 1
+page_position: 3
+offline: true
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/wohnbereich-kaminzimmer-Einbauschrank_eitk6y.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/wohnbereich-kaminzimmer-Einbauschrank_eitk6y.jpg
@@ -14,10 +18,6 @@ de_title: Haus Wandlitz
 en_title: Haus Wandlitz
 de_description: 'Gestaltung: Bonauer Bölling Architekten // Fotos: Tiffany Taraska'
 en_description: 'Design: Bonauer Bölling Architekten // Photos: Tiffany Taraska'
-offline: true
-orientation: landscape
-page: 1
-page_position: 3
 meta_tags:
   de_title: Hochwertiger Innenausbau eines kompletten Einfamilienhauses, Tischler,
     Schreiner, Schreinerei, Tischlerei
