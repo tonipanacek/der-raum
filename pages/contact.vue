@@ -2,7 +2,8 @@
   <Container id="contact">
     <Article class="contact">
       <div class="image-container">
-        <Frame :source="page.attributes.image">
+        <Frame>
+          <img :src="page.attributes.image" alt="Image of storefront"/>
         </Frame>
       </div>
         <div class="text">
