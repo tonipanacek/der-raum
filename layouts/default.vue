@@ -105,6 +105,7 @@ a:visited {
   height: 100%;
   background: white;
   margin: 0 auto;
+  padding: 0 2rem;
   @include respond-to('large') {
     width: 500px;
     max-width: 1250px;
@@ -132,7 +133,7 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-    width: 300px;
+    width: 200px;
     text-align: left;
     height: $main-height;
     min-height: $main-height;
