@@ -4,7 +4,7 @@ orientation: landscape
 featured_project: false
 group: 3
 group_position: 3
-offline: false
+online: true
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq.jpg
@@ -28,6 +28,5 @@ meta_tags:
   de_description: Apartment mit Kochinsel, Einbauschränken und Badzimmereinrichtung
   en_description: " Apartment with kitchen island, fitted wardrobes and bathroom furnishings"
 architect_name: ''
-online: true
 
 ---

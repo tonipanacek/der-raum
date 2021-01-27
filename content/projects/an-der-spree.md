@@ -1,6 +1,6 @@
 ---
 title: An der Spree
-offline: false
+online: true
 orientation: portrait
 featured_project: false
 group: 1
@@ -31,6 +31,5 @@ meta_tags:
   en_description: Complete office expansion with conference tables, tea kitchen and
     workplaces
 architect_name: CBRE
-online: true
 
 ---

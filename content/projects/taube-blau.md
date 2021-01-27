@@ -1,7 +1,7 @@
 ---
 title: Taube Blau
 orientation: landscape
-offline: false
+online: true
 featured_project: false
 group: 2
 group_position: 2
@@ -29,6 +29,5 @@ meta_tags:
   de_description: Altbau Küche im Landhausstil vom Tischller / Schreiner
   en_description: Old country style kitchen shaker, grey
 architect_name: ''
-online: true
 
 ---

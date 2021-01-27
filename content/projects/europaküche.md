@@ -1,6 +1,6 @@
 ---
 title: Europaküche
-offline: false
+online: true
 orientation: landscape
 featured_project: false
 group: 1
@@ -26,6 +26,5 @@ meta_tags:
   de_description: Schwarzer Küchenblock in Loftstyle Design, Tischler, Schreiner,
     Schreinerei, Tischlerei
   en_description: Schwarzer Küchenblock in Loftstyle Design
-online: true
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Commandant
 orientation: landscape
-offline: false
+online: true
 featured_project: false
 group: 2
 group_position: 4
@@ -35,6 +35,5 @@ meta_tags:
   en_description: Stair installation with tall cupboards, sliding door, kitchen and
     slat wall
 architect_name: Schwade & Club Marginal Architekten
-online: true
 
 ---

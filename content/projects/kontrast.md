@@ -1,6 +1,6 @@
 ---
 title: Kontrast
-offline: false
+online: true
 orientation: portrait
 featured_project: false
 group: 4
@@ -26,6 +26,4 @@ meta_tags:
   de_description: Exklusive Kueche blau rosa lackiert Marmor Arbeitsplatte Kupfer
     Griffe vom Tischler / Schreiner
   en_description: Exclusive kitchen painted blue pink marble countertop copper handles
-online: true
-
 ---

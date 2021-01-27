@@ -1,7 +1,7 @@
 ---
 title: Winterküche
 orientation: portrait
-offline: false
+online: true
 featured_project: false
 group: 4
 group_position: 4
@@ -25,6 +25,5 @@ meta_tags:
     Schreiner
   en_description: Kitchen attic pointed protection dark noble design
 architect_name: ''
-online: true
 
 ---

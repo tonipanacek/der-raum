@@ -211,7 +211,7 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.allPages.filter(page => !page.attributes.offline)
+      const onlineProjects = this.$data.allPages.filter(page => page.attributes.online)
       const projectIndex = onlineProjects.indexOf(this.$data.page)
       const nextProject = onlineProjects[projectIndex + 1]
       if (this.id >= this.length && projectIndex === this.$data.allPages.length - 1) {
@@ -238,7 +238,7 @@ export default {
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.allPages.filter(page => !page.attributes.offline)
+      const onlineProjects = this.$data.allPages.filter(page => page.attributes.online)
       const projectIndex = onlineProjects.indexOf(this.$data.page)
       const previousProject = onlineProjects[projectIndex - 1]
       if (parseInt(this.id) <= 1 && projectIndex === 0) {

@@ -46,7 +46,7 @@ export default {
       // give back the value of each page context
       return allPages(key)
     })
-    pages = pages.filter(page => !page.attributes.offline)
+    pages = pages.filter(page => page.attributes.online)
     pages = sortBy(pages, page => get(page, 'attributes.group'))
     return {
       pages,

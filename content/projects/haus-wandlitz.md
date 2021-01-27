@@ -1,6 +1,6 @@
 ---
 title: Haus Wandlitz
-offline: false
+online: true
 orientation: landscape
 featured_project: false
 group: 3
@@ -27,6 +27,5 @@ meta_tags:
     / Schreiner
   en_description: Living area kitchen bedroom high quality exclusive wood
 architect_name: Bonauer Bölling Architekten
-online: true
 
 ---

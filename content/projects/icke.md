@@ -1,6 +1,6 @@
 ---
 title: Icke
-offline: false
+online: true
 orientation: portrait
 featured_project: false
 group: 2

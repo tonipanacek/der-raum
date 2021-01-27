@@ -1,6 +1,6 @@
 ---
 title: Fünfmeterholz
-offline: false
+online: true
 orientation: landscape
 featured_project: false
 group: 4
@@ -26,6 +26,5 @@ meta_tags:
     Schreinerei, Tischlerei
   en_description: Kitchen middle block solid wood black attic
 architect_name: Reinhard Architekten
-online: true
 
 ---

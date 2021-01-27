@@ -1,6 +1,6 @@
 ---
 title: Haus Wannsee
-offline: false
+online: true
 orientation: landscape
 featured_project: true
 group: 0
@@ -29,6 +29,5 @@ meta_tags:
   de_description: ''
   en_description: ''
 architect_name: Bonauer Bölling Architekten
-online: true
 
 ---

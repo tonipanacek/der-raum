@@ -1,7 +1,7 @@
 ---
 title: Zur See
 orientation: landscape
-offline: false
+online: true
 featured_project: false
 group: 1
 group_position: 4
@@ -22,6 +22,5 @@ meta_tags:
   de_description: Küche aus Seekiefer weiß lackiert vom Tischler / Schreiner
   en_description: Sea pine kitchen painted white
 architect_name: Fabian Schwade
-online: true
 
 ---
