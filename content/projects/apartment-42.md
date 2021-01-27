@@ -1,8 +1,9 @@
 ---
 title: Apartment42
 orientation: landscape
-page: 4
-page_position: 3
+featured_project: false
+group: 4
+group_position: 3
 offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973001/Loft-Kueche-schwarz-hochwertig-Massivholz_g9pnqn.jpg
 images:

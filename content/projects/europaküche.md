@@ -1,5 +1,10 @@
 ---
 title: Europaküche
+offline: false
+orientation: landscape
+featured_project: false
+group: 5
+group_position: 3
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/003-schrank-kueche_Loft-schwarz_hbc1lt.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779229/001-kueche_Loft-schwarz-bar_y3ra7d.jpg
@@ -14,10 +19,6 @@ de_title: Europaküche
 en_title: Europaküche
 de_description: 'Siemens & Freunde von Freunden // Fotos: Axel Kranz'
 en_description: 'Siemens & Freunde von Freunden // Photos: Axel Kranz'
-offline: false
-orientation: landscape
-page: 5
-page_position: 3
 meta_tags:
   de_title: Schwarzer Küchenblock in Loftstyle Design, Tischler, Schreiner, Schreinerei,
     Tischlerei
