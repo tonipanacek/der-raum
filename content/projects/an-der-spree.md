@@ -31,5 +31,6 @@ meta_tags:
   en_description: Complete office expansion with conference tables, tea kitchen and
     workplaces
 architect_name: CBRE
+online: true
 
 ---

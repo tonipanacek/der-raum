@@ -25,5 +25,6 @@ meta_tags:
     Schreinerei, Tischlerei
   en_description: High quality built-in kitchen Gold cooking unit luxury kitchen
 architect_name: ''
+online: true
 
 ---

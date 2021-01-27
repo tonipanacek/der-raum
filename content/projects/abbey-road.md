@@ -26,5 +26,6 @@ meta_tags:
   en_description: High quality kitchen unit built-in closet floor to ceiling living
     area sideboard
 architect_name: Bundschuh Architekten
+online: true
 
 ---

@@ -35,5 +35,6 @@ meta_tags:
   en_description: Stair installation with tall cupboards, sliding door, kitchen and
     slat wall
 architect_name: Schwade & Club Marginal Architekten
+online: true
 
 ---

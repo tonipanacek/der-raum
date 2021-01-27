@@ -28,5 +28,6 @@ meta_tags:
   de_description: Apartment mit Kochinsel, Einbauschränken und Badzimmereinrichtung
   en_description: " Apartment with kitchen island, fitted wardrobes and bathroom furnishings"
 architect_name: ''
+online: true
 
 ---
