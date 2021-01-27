@@ -24,5 +24,7 @@ meta_tags:
   de_description: Küche Dachgeschoss Spitzschutz dunkel edel Design vom Tischler /
     Schreiner
   en_description: Kitchen attic pointed protection dark noble design
+architect_name: ''
+online: true
 
 ---

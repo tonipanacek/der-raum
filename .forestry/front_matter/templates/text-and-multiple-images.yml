@@ -12,13 +12,12 @@ fields:
   label: Architect Name
   description: To be displayed along with the project name - ideally 30 characters
     or less!
-- name: offline
+- name: online
   type: boolean
-  label: Offline
+  label: Online
   default: true
-  description: This determines whether the project is "offline" (not visible on the
-    site) versus "online" (visible on the site). <br>If green, the project is offline.
-    <br>If grey, the project is online.
+  description: By default, a project will be online.<br>Can switch this to being 'offline'
+    (grey).
 - name: featured_project
   type: boolean
   label: Featured Project?

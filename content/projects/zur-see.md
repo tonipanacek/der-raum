@@ -22,5 +22,6 @@ meta_tags:
   de_description: Küche aus Seekiefer weiß lackiert vom Tischler / Schreiner
   en_description: Sea pine kitchen painted white
 architect_name: Fabian Schwade
+online: true
 
 ---
