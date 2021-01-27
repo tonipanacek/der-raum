@@ -23,8 +23,9 @@ fields:
   type: boolean
   label: Featured Project?
   description: Project to be displayed as the header / featured image of the grid.
-    When changing which project is featured, <strong>please make sure to de-select
-    the previous project so there is only ever one feature project.</strong>
+    Need to set both 'Group Number' and 'Group Position' to 0 as well. <br>When changing
+    which project is featured, <strong>please make sure to de-select the previous
+    project so there is only ever one feature project.</strong>
   default: false
 - name: group
   type: number
@@ -40,7 +41,6 @@ fields:
     project to be in. This enables the ability to prioritize certain projects over
     others.
   showOnly:
-    field: featured_project
     value: false
 - name: group_position
   type: number
@@ -57,7 +57,6 @@ fields:
     Top right project -- landscape<br>(3) - Bottom right project -- portrait<br>(4)
     - Bottom left project -- landscape
   showOnly:
-    field: featured_project
     value: false
 - name: main_image
   type: file
