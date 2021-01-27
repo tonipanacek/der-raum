@@ -54,11 +54,14 @@ fields:
     min: '1'
     max: 
     step: '1'
-    required: true
+    required: false
   label: Group Number
   description: Projects are now grouped in 4's. Specify which group you'd like this
     project to be in. This enables the ability to prioritize certain projects over
     others.
+  showOnly:
+    field: featured_project
+    value: false
 - name: group_position
   type: number
   label: Group Position
