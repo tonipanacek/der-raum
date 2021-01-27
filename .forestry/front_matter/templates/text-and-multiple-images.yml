@@ -52,9 +52,10 @@ fields:
     max: 3
     step: '1'
     required: false
-  description: Groups of 4 projects in the grid. Can order them 1-4, which will translate
-    to:<br>(1) - Top left project -- portrait<br>(2) - Top right project -- landscape<br>(3)
-    - Bottom left project -- landscape<br>(4) - Bottom right project -- portait
+  description: Groups of 4 projects in the grid. Can order them 1-4, which will go
+    in a clockwise pattern like so:<br>(1) - Top left project -- portrait<br>(2) -
+    Top right project -- landscape<br>(3) - Bottom right project -- portrait<br>(4)
+    - Bottom left project -- landscape
   showOnly:
     field: featured_project
     value: false
