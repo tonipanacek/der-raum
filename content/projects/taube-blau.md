@@ -29,5 +29,6 @@ meta_tags:
   de_description: Altbau Küche im Landhausstil vom Tischller / Schreiner
   en_description: Old country style kitchen shaker, grey
 architect_name: ''
+online: true
 
 ---
