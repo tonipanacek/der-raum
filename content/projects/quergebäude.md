@@ -4,7 +4,7 @@ online: true
 orientation: landscape
 featured_project: false
 group: 4
-group_position: 2
+group_position: 4
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
