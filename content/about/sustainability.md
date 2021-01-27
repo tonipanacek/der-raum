@@ -11,7 +11,7 @@ en_description: |-
 
   In this process, we recycle the majority of wood residue and heat our buildings and workshops with our in-house cogeneration unit. We generate our own solar power which enables us to operate our machines in a climate-neutral manner. As a result, we save approximately 25 tons of CO2-emissions per year.
 
-  We aim to purchase all the production materials within our region. The elimination of intermediate transport saves additional packaging and resources. We consistently make our contribution resource preservation globally. In the past, we chose to promote the replanting of mangroves as a part of the REFORESTATION ([edenprojects.org] (https://www.edenproject.org)) with each product sold because this is where the need is greatest.
+  We aim to purchase all the production materials within our region. The elimination of intermediate transport saves additional packaging and resources. We consistently make our contribution resource preservation globally. In the past, we chose to promote the replanting of mangroves as a part of the REFORESTATION (edenprojects.org) with each product sold because this is where the need is greatest.
 
   Our primary contribution is to ecological balance and we are continuously striving toward a climate-neutral future.
 de_description: |-

@@ -4,7 +4,7 @@ title: Philosophy
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1581068331/Philosophie-Manufaktur-Tischler-Schreiner_zs856h.jpg
 en_title: Philosophy
 de_title: Philosophie
-en_description: "\"For more than 25 years we have understood our task to be to complement
+en_description: "For more than 25 years we have understood our task to be to complement
   architectural projects in detail and make them a reality through a conscious, attentive
   and constructive attitude, our curiosity, motivation and passion.\n\nAs a family-run
   business in its second generation, we have made it our goal to let solid craftsmanship
@@ -17,7 +17,7 @@ en_description: "\"For more than 25 years we have understood our task to be to c
   installation from the first consultation to the completion and stand for on-time,
   detailed execution and perfect performance.\n\nDieter Baumhoff (Founder and CEO)
   \  \nMirco Baumhoff (Deputy Managing Director)"
-de_description: "\"Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, durch
+de_description: "Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, durch
   eine bewusste, achtsame und konstruktive Haltung, unsere Neugier, Motivation und
   Leidenschaft, architektonische Projekte im Detail zu ergänzen und Wirklichkeit werden
   zu lassen.\n\nAls familiengeführtes Unternehmen in zweiter Generation, haben wir
@@ -29,7 +29,7 @@ de_description: "\"Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, d
   bis zum Tischlermeister ermöglicht uns einen ganzheitlichen Ansatz beim Thema architektonischer
   Innenausbauten. Wir haben den Anspruch ab dem ersten Beratungsgespräch bis zur Fertigstellung
   den kompletten Einbau zu begleiten und stehen für termingerechte, detaillierte Ausführung
-  sowie einwandfreie Leistung.“\n\nDieter Baumhoff (Gründer und Geschäftsführer)  \nMirco
+  sowie einwandfreie Leistung.\n\nDieter Baumhoff (Gründer und Geschäftsführer)  \nMirco
   Baumhoff (Stellv. Geschäftsführer)"
 meta_tags:
   de_title: Philosophie

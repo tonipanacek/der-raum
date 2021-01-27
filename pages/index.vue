@@ -3,12 +3,7 @@
     <h1 class="accessible">{{ seo.projectsOverviewH1 }}</h1>
     <p class="accessible">{{ seo.projectsOverviewText }}</p>
     <ProjectsList
-    class="section"
-    id="mobile-view"
-    v-if="isChunky"
-    :projects="allPagesView"
-    :goingUp="goingUp"
-    :mobile="true"
+    :projects="pages"
     />
   </Container>
 </template>
@@ -17,7 +12,6 @@
 import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
 import seo from '~/content/data/seo'
-import paginate from '~/plugins/paginate'
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
 
@@ -29,7 +23,6 @@ export default {
       title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
     }
   },
-  mixins: [paginate],
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context(
@@ -53,7 +46,7 @@ export default {
     ProjectsList
   },
   mounted() {
-    this.setPages(this.currentChunk.slice(0, this.max - 1))
+    this.setPages(this.$data.pages)
     this.setPagesPrefix("projects")
   },
   destroyed() {
@@ -64,9 +57,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-#mobile-view {
-  display: block;
-}
-</style>
