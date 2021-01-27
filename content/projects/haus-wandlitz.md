@@ -4,7 +4,7 @@ online: true
 orientation: landscape
 featured_project: false
 group: 3
-group_position: 3
+group_position: 2
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/wohnbereich-kaminzimmer-Einbauschrank_eitk6y.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/wohnbereich-kaminzimmer-Einbauschrank_eitk6y.jpg
