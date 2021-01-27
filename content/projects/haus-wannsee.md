@@ -1,10 +1,10 @@
 ---
 title: Haus Wannsee
-offline: false
+offline: true
 orientation: landscape
-featured_project: true
-group: 0
-group_position: 0
+featured_project: false
+group: 
+group_position: 
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1608022693/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_s4tenk.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1608022711/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_ffm6ex.jpg
