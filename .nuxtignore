@@ -1,0 +1,3 @@
+pages/projects/index.vue
+pages/projects/_slug/index.vue
+pages/rooms/*.vue
