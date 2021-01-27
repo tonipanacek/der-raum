@@ -4,7 +4,7 @@ offline: false
 orientation: portrait
 featured_project: false
 group: 1
-group_position: 2
+group_position: 1
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/010-Bueroausbau-Kueche-Tische-Stuhle-schwarz-lackiert_upcpcz.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779094/011-Bueroausbau-Sprecherbox-schwarz-lackiert_mcd1jb.jpg

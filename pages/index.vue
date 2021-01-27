@@ -42,7 +42,7 @@ export default {
       return allPages(key)
     })
     pages = pages.filter(page => !page.attributes.offline)
-    pages = sortBy(pages, page => get(page, 'attributes.page'))
+    pages = sortBy(pages, [page => get(page, 'attributes.group'), page => get(page, 'attributes.group_position')])
     return {
       pages,
       seo

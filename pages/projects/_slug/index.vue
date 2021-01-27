@@ -160,13 +160,13 @@ export default {
     },
     allPagesChunks() {
       if (isEmpty(this.$data.allPages)) { return [] }
-      const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+      const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.group'), p => get(p, 'attributes.group_position')])
       const chunks = chunk(allPages, 3)
-      return chunks.map(chunk => [chunk[1], chunk[0], chunk[2]])
+      return chunks.map(chunk => [chunk[0], chunk[1], chunk[2]])
     },
     currentPagesChunk() {
       if (isEmpty(this.allPagesChunks)) { return [] }
-      let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
+      let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.group', 1) - 1] || []
       return chunk.slice(0, 3)
     },
   },

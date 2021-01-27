@@ -1,9 +1,10 @@
 ---
 title: Kontrast
-orientation: portrait
-page: 6
-page_position: 2
 offline: false
+orientation: portrait
+featured_project: false
+group: 4
+group_position: 3
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480518/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg

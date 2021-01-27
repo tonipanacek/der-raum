@@ -1,9 +1,10 @@
 ---
 title: Winterküche
 orientation: portrait
-page: 5
-page_position: 2
 offline: false
+featured_project: false
+group: 4
+group_position: 4
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
