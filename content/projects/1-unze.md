@@ -2,8 +2,8 @@
 title: 1 Unze
 orientation: landscape
 featured_project: false
-group: 2
-group_position: 3
+group: 3
+group_position: 4
 offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji.jpg
 images:
@@ -24,5 +24,6 @@ meta_tags:
   de_description: Hochwertige Enbauküche Kochinsel gold luxus küche, Tischler, Schreiner,
     Schreinerei, Tischlerei
   en_description: High quality built-in kitchen Gold cooking unit luxury kitchen
+architect_name: ''
 
 ---
