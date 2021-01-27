@@ -12,8 +12,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1587127169/040-Einbauschrank-Arbeitsflaeche-Kuechenzeile_ubi5rd.jpg
 en_title: Zur See
 de_title: Zur See
-en_description: ''
-de_description: ''
+en_description: Fabian Schwade
+de_description: Fabian Schwade
 offline: false
 meta_tags:
   de_title: Küche aus Seekiefer weiß lackiert, Tischler, Schreiner, Schreinerei, Tischlerei
