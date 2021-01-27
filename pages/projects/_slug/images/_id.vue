@@ -50,7 +50,6 @@ export default {
     }
   },
   props: {
-    mobile: Boolean,
     orientation: String
   },
   directives: {
@@ -76,20 +75,20 @@ export default {
       const id = parseInt(params.id)
 
       // create context via webpack to map over all pages
-      let allPages = await require.context(
+      let pages = await require.context(
         "~/content/projects/",
         true,
         /\.md$/
       )
-      allPages = allPages.keys().map(key => {
+      pages = pages.keys().map(key => {
         // give back the value of each page context
-        return allPages(key)
+        return pages(key)
       })
 
-      allPages = sortBy(allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
+      pages = sortBy(pages, [p => get(p, 'attributes.group'), p => get(p, 'attributes.group_position')])
 
       const locale = app.i18n.locale
-      const page = allPages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
+      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
 
       await store.dispatch('i18n/setRouteParams', {
         en: { slug: kebabCase(get(page, `attributes.en_title`)) },
@@ -97,19 +96,6 @@ export default {
       })
 
       let images = get(page, 'attributes.images', [])
-      images = chunk(images, 3)
-      images = images.map(chunk => {
-        if (images.indexOf(chunk) === 0) {
-          const firstThree = chunk.slice(0,3)
-          return firstThree
-        } else {
-          let portrait = chunk.slice(0,1)
-          let rest = chunk.slice(1)
-          rest.splice(1, 0, portrait.join(''))
-          return rest
-        }
-      })
-      images = flatten(images)
       const image = images[id - 1]
 
       if (!image) {
@@ -119,7 +105,7 @@ export default {
       return {
         image,
         images,
-        allPages,
+        pages,
         page,
         slug,
         id
@@ -130,7 +116,7 @@ export default {
     }
   },
   mounted() {
-    this.setPages(this.currentPagesChunk)
+    this.setPages(this.pages)
     this.setPagesPrefix("projects")
     window.addEventListener("keyup", this.handleKey)
     this.setDocHeight()
@@ -211,10 +197,10 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.allPages.filter(page => page.attributes.online)
+      const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
       const projectIndex = onlineProjects.indexOf(this.$data.page)
       const nextProject = onlineProjects[projectIndex + 1]
-      if (this.id >= this.length && projectIndex === this.$data.allPages.length - 1) {
+      if (this.id >= this.length && projectIndex === this.$data.pages.length - 1) {
         return ''
       } else if (this.id >= this.length && nextProject) {
         const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
@@ -238,7 +224,7 @@ export default {
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.allPages.filter(page => page.attributes.online)
+      const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
       const projectIndex = onlineProjects.indexOf(this.$data.page)
       const previousProject = onlineProjects[projectIndex - 1]
       if (parseInt(this.id) <= 1 && projectIndex === 0) {
@@ -267,17 +253,6 @@ export default {
       return this.localePath({
         name: 'index'
       })
-    },
-    allPagesChunks() {
-      if (isEmpty(this.$data.allPages)) { return [] }
-      const allPages = sortBy(this.$data.allPages, [p => get(p, 'attributes.page'), p => get(p, 'attributes.page_position')])
-      const chunks = chunk(allPages, 3)
-      return chunks.map(chunk => [chunk[0], chunk[1], chunk[2]])
-    },
-    currentPagesChunk() {
-      if (isEmpty(this.allPagesChunks)) { return [] }
-      let chunk = this.allPagesChunks[get(this.$data.page, 'attributes.page', 1) - 1] || []
-      return chunk.slice(0, 3)
     },
     length() {
       if (isEmpty(this.$data.images)) { return 0 }

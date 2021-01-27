@@ -1,36 +1,34 @@
 <template>
-  <div class="images-list">
+  <div id="images-grid">
     <NuxtLink
     :id="title"
-    v-for="(image, index) in images"
+    v-for="(image, index) in imagesWithUrls"
     :key="image.url"
     :to="path(image)"
-    :class="{'image-link': true, 'extraSpace': image.index < 0, 'extra-margin': images.length === 3 && index === images.length - 1, 'active': hover && hover === image.url, hover: hover }"
+    :class="{ 'image-link': true, 'portrait': findOrientation(index) === 'portrait' }"
     :data-index="index"
     :data-total="images.length"
     :data-orientation="findOrientation(index)"
     :mobile="mobile"
     event=""
-    @mouseover.native="handleHover(image)"
-    @mouseleave.native="handleBlur"
-    @click.native.prevent="handleClick(image, index)"
+    @click.native.prevent="handleClick(image)"
     >
-      <div v-if="mobile" class="frame-wrapper">
-        <Frame>
+      <div class="frame-wrapper">
+        <Frame :n="findOrientation(index) === 'portrait' ? 11 : 9" :d="findOrientation(index) === 'portrait' ? 9 : 16">
           <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" loading="lazy"/>
         </Frame>
         <p class="image-title">
-          {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
+          {{ title }} <span id="image-count">{{ images.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
         </p>
       </div>
-      <div v-else class="image-container">
+<!--       <div v-else class="image-container">
         <img :src="image.url" :alt="`${title} ${image.index} of ${totalCount}`" />
         <transition name="no-fade">
           <p class="image-title">
-            {{ title }} <span id="image-count">{{ sortedImages.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
+            {{ title }} <span id="image-count">{{ images.indexOf(image.url) + 1 }} / {{ totalCount }}</span>
           </p>
         </transition>
-      </div>
+      </div> -->
     </NuxtLink>
   </div>
 </template>
@@ -45,11 +43,11 @@ export default {
     Frame
   },
   props: {
-    images: {
+    imagesWithUrls: {
       type: Array,
       required: true
     },
-    sortedImages: {
+    images: {
       type: Array,
       required: true
     },
@@ -67,52 +65,50 @@ export default {
     page: {
       type: Number
     },
-    goingUp: Boolean,
     mobile: Boolean
   },
-  data() {
-    return {
-      hover: ''
-    }
-  },
   methods: {
-    handleHover(image) {
-      this.hover = image.url
-    },
-    handleBlur() {
-      this.hover = ''
-    },
-    findOrientation(index) {
-      return index === 1 || index === 3 ? "portrait" : "landscape"
-    },
     path(image) {
       if (!image.index) { return '' }
       return this.localePath({
         name: 'projects-slug-images-id',
         params: {
           slug: this.slug,
-          id: this.sortedImages.indexOf(image.url) + 1
+          id: this.images.indexOf(image.url) + 1
         }
       })
     },
-    handleClick(project, index) {
-      if (index > 2 && !this.mobile) {
-        this.$emit('increment')
-      } else {
-        const path = this.path(project)
-        this.$router.push(path)
-      }
+    handleClick(project) {
+      const path = this.path(project)
+      this.$router.push(path)
     },
-    orientation(image) {
-      if(!image) { return '' }
-      return image.orientation
-    }
+    findOrientation(index) {
+      return index % 2 === 1 ? "portrait" : "landscape"
+    },
   }
 }
 </script>
 
 <style lang="scss" scoped>
 $main-height: calc(100vh - #{spacing(frame)});
+
+#images-grid {
+  @include respond-to('large') {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: fit-content(260px);
+    grid-auto-flow: row dense;
+    .image-link:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .portrait {
+      grid-row: span 2;
+    }
+  }
+}
+
 .image-title {
   @include smallCaps;
   color: color(dark);

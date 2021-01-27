@@ -13,7 +13,7 @@
         @mouseleave.native="hover = ''"
       >
         <div class="image-container">
-          <img :src="service.attributes.image" :title="service.attributes.title" :alt="service.attributes.title" loading="eager"/>
+          <img :src="service.attributes.image" :alt="service.attributes.title" loading="eager"/>
           <p class="service-title">
             {{ $ta(service.attributes, 'title') }}
           </p>
