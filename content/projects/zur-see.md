@@ -4,7 +4,7 @@ orientation: landscape
 online: true
 featured_project: false
 group: 1
-group_position: 4
+group_position: 3
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587126643/_MG_2304_zy2vge.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1587126652/060-Einbauschrank-Arbeitsflaeche-Kuechenzeile_yfhf6k.jpg

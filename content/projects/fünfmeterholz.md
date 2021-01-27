@@ -4,7 +4,7 @@ online: true
 orientation: landscape
 featured_project: false
 group: 4
-group_position: 3
+group_position: 2
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg

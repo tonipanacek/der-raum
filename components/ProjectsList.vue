@@ -93,7 +93,6 @@ $main-height: calc(100vh - #{spacing(frame)});
 .title-flex {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 .project-architect {
@@ -105,6 +104,10 @@ $main-height: calc(100vh - #{spacing(frame)});
   margin-top: 0;
   transition: opacity 750ms ease, color 500ms ease;
   text-align: right;
+  flex: 1 0 33%;
+  @include respond-to('large') {
+    flex: 2;
+  }
 }
 
 .project-title {

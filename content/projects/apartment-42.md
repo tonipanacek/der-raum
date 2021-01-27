@@ -3,7 +3,7 @@ title: Apartment42
 orientation: landscape
 featured_project: false
 group: 3
-group_position: 3
+group_position: 1
 online: true
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
 images:

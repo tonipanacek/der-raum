@@ -49,24 +49,19 @@ export default {
         content: seo.description
       }
     ],
-    // script: [
-    //   {
-    //     src: 'https://raw.githubusercontent.com/john-doherty/swiped-events/master/dist/swiped-events.min.js'
-    //   }
-    // ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
   },
   generate: {
     fallback: true,
-    async routes() {
+    // async routes() {
 
-      return [
-        ...loadPages('projects', 'projekte'),
+      // return [
+        // ...loadPages('projects', 'projekte'),
         // ...loadPages('services', 'leistungen'),
         // ...loadPages('rooms', 'raume')
         // ...loadPages('about', 'uber')
-      ]
-    }
+      // ]
+    // }
   },
   /*
    ** Customize the progress-bar color
@@ -175,18 +170,7 @@ export default {
   // Sitemap config
   sitemap: {
     hostname: 'https://www.der-raum.de',
-    gzip: true,
-    // routes: {
-      // async routes() {
-
-      //   return [
-      //     ...loadPages('projects', 'projekte'),
-      //     ...loadPages('services', 'leistungen'),
-      //     ...loadPages('rooms', 'raume'),
-      //     ...loadPages('about', 'uber')
-      //   ]
-      // }
-    // }
+    gzip: true
   },
   // robots.txt config
   robots: {
