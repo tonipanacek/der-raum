@@ -28,51 +28,13 @@ export default {
     Stack
   },
   computed: {
-    ...mapState(["pagesPrefix", "hoveredMenuItem", "pageNumber", "lastPage", "anchorItem"]),
+    ...mapState(["pagesPrefix", "anchorItem"]),
     ...mapGetters(["sortedPages"])
   },
   methods: {
-    path(page) {
-      const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
-      return this.localePath({
-        name: `${this.pagesPrefix}-slug-images-id`,
-        params: {
-          slug,
-          id: 1
-        }
-      })
-    },
     activeAnchor(page) {
       const slug = this.formatSlug(this.$ta(page.attributes, 'title'))
       slug === this.$route.hash.replace('#', '')
-    },
-    beforeEnter: function(el) {
-      el.style.opacity = 0
-      el.style.transform = "translateY(-50%)"
-      el.style.transition = "opacity 200ms ease, transform 200ms ease"
-    },
-    enter: function(el, done) {
-      setTimeout(() => {
-        el.style.opacity = 1
-        el.style.transform = "translateY(0)"
-        done()
-      }, 50)
-    },
-    leave: function(el, done) {
-      el.style.opacity = 0
-      el.style.transform = "translateY(50%)"
-      setTimeout(() => {
-        done()
-      }, 50)
-    },
-    handleHover(title) {
-      this.setHoveredMenuItem(title)
-    },
-    handleBlur() {
-      this.unsetHoveredMenuItem()
-    },
-    handleClick() {
-      this.incrementPageNumber()
     },
     smoothScroll(id) {
       const el = document.querySelector(`#${id}`)
@@ -81,11 +43,6 @@ export default {
         behavior: 'smooth'
       });
     },
-    ...mapActions([
-      'setHoveredMenuItem',
-      'unsetHoveredMenuItem',
-      'incrementPageNumber'
-    ])
   },
   watch: {
     anchorItem() {
