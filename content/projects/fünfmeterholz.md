@@ -26,5 +26,6 @@ meta_tags:
     Schreinerei, Tischlerei
   en_description: Kitchen middle block solid wood black attic
 architect_name: Reinhard Architekten
+online: true
 
 ---
