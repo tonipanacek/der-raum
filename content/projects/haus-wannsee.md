@@ -29,5 +29,6 @@ meta_tags:
   de_description: ''
   en_description: ''
 architect_name: Bonauer Bölling Architekten
+online: true
 
 ---

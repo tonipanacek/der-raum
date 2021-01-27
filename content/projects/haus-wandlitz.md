@@ -3,8 +3,8 @@ title: Haus Wandlitz
 offline: false
 orientation: landscape
 featured_project: false
-group: 1
-group_position: 2
+group: 3
+group_position: 3
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/wohnbereich-kaminzimmer-Einbauschrank_eitk6y.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779524/wohnbereich-kaminzimmer-Einbauschrank_eitk6y.jpg
@@ -27,5 +27,6 @@ meta_tags:
     / Schreiner
   en_description: Living area kitchen bedroom high quality exclusive wood
 architect_name: Bonauer Bölling Architekten
+online: true
 
 ---
