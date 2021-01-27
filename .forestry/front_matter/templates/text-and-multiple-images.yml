@@ -25,6 +25,7 @@ fields:
   description: Project to be displayed as the header / featured image of the grid.
     When changing which project is featured, <strong>please make sure to de-select
     the previous project so there is only ever one feature project.</strong>
+  default: false
 - name: main_image
   type: file
   config:
