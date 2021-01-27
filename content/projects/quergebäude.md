@@ -3,8 +3,8 @@ title: Quergebäude
 offline: false
 orientation: landscape
 featured_project: false
-group:
-group_position:
+group: 4
+group_position: 2
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579780007/Garderobe-Wandschrank-weiss-lackiert_fhr3os.gif
