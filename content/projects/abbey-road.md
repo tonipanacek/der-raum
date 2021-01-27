@@ -14,8 +14,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580479926/Sideboard-Kuechenzeile-Wohnkueche_bp25zm.jpg
 en_title: Abbey Road
 de_title: Abbey Road
-en_description: 'Design: Bundschuh Architekten'
-de_description: 'Gestaltung: Bundschuh Architekten'
+en_description: Bundschuh Architekten
+de_description: Bundschuh Architekten
 meta_tags:
   de_title: Hochwertige Kuechenzeile als Sideboard im Wohnbereich, Tischler, Schreiner,
     Schreinerei, Tischlerei
@@ -25,4 +25,5 @@ meta_tags:
   en_description: High quality kitchen unit built-in closet floor to ceiling living
     area sideboard
 architect_name: Bundschuh Architekten
+
 ---

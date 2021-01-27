@@ -1,9 +1,5 @@
 ---
 title: Fünfmeterholz
-orientation: landscape
-page: 2
-page_position: 1
-offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
@@ -15,8 +11,12 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz-schwarz_rr5yrt.jpg
 de_title: Fünfmeterholz
 en_title: Fünfmeterholz
-de_description: 'Gestaltung: Reinhard Architekten // Fotos: Phil Dera'
-en_description: 'Design: Reinhard Architekten // Photos: Phil Dera'
+de_description: 'Reinhard Architekten // Fotos: Phil Dera'
+en_description: 'Reinhard Architekten // Photos: Phil Dera'
+offline: false
+orientation: landscape
+page: 2
+page_position: 1
 meta_tags:
   de_title: Hochwertige Einbauküche schwarz in Dachgeschoss, Tischler, Schreiner,
     Schreinerei, Tischlerei
@@ -25,4 +25,5 @@ meta_tags:
     Schreinerei, Tischlerei
   en_description: Kitchen middle block solid wood black attic
 architect_name: Reinhard Architekten
+
 ---
