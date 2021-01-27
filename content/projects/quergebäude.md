@@ -28,5 +28,6 @@ meta_tags:
   en_description: High quality built-in kitchen made of solid wood with white lacquered
     fronts
 architect_name: Club Marginal Architekten
+online: true
 
 ---
