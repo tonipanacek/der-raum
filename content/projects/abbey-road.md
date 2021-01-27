@@ -2,8 +2,9 @@
 title: Abbey Road
 offline: false
 orientation: portrait
-page: 3
-page_position: 2
+featured_project: false
+group: 3
+group_position: 1
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580479885/Kueche-Sideboard--Kuechenzeile--schwarz-Unterschraenke_uxzrod.jpg

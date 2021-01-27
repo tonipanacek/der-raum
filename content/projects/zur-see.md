@@ -1,8 +1,10 @@
 ---
-orientation: landscape
-page_position: 1
-page: 5
 title: Zur See
+orientation: landscape
+offline: false
+featured_project: false
+group: 4
+group_position: 2
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1587126601/030-Einbauschrank-Arbeitsflaeche-Kuechenzeile_jykhhc.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1587126652/060-Einbauschrank-Arbeitsflaeche-Kuechenzeile_yfhf6k.jpg
@@ -14,7 +16,6 @@ en_title: Zur See
 de_title: Zur See
 en_description: Fabian Schwade
 de_description: Fabian Schwade
-offline: false
 meta_tags:
   de_title: Küche aus Seekiefer weiß lackiert, Tischler, Schreiner, Schreinerei, Tischlerei
   en_title: Sea pine kitchen painted white

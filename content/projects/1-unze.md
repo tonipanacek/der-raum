@@ -1,8 +1,9 @@
 ---
 title: 1 Unze
 orientation: landscape
-page: 4
-page_position: 2
+featured_project: false
+group: 2
+group_position: 3
 offline: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579783932/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji.jpg
 images:
