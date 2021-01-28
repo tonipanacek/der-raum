@@ -7,10 +7,13 @@
     :to="imagePath(project)"
     :class="{
       'project-link': true,
-      'portrait': findOrientation(index) === 'portrait'
+      'portrait': findOrientation(index) === 'portrait',
+      'grayscale': hover && hoveredMenuItem !== $ta(project.attributes, 'title'),
+      'active': hoveredMenuItem && hoveredMenuItem === $ta(project.attributes, 'title')
     }"
-    event=""
     @click.native.prevent="handleClick(project)"
+    @mouseover.native="handleHover(project)"
+    @mouseleave.native="handleBlur"
     :data-index="index"
     :data-orientation="findOrientation(index)"
     >
@@ -30,6 +33,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 import { get } from 'lodash'
 import Frame from '~/components/Frame'
 import dynamicSEO from '~/plugins/dynamic_seo'
@@ -43,6 +47,11 @@ export default {
     projects: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {
+      hover: false
     }
   },
   methods: {
@@ -63,9 +72,24 @@ export default {
       const path = this.imagePath(project)
       this.$router.push(path)
     },
+    handleHover(project) {
+      this.setHoveredMenuItem(this.$ta(project.attributes, 'title'))
+      this.hover = true
+    },
+    handleBlur() {
+      this.unsetHoveredMenuItem()
+      this.hover = false
+    },
     findOrientation(index) {
       return index % 2 === 1 ? "portrait" : "landscape"
     },
+    ...mapActions([ 'setHoveredMenuItem', 'unsetHoveredMenuItem'])
+  },
+  destroyed() {
+    this.unsetHoveredMenuItem()
+  },
+  computed: {
+    ...mapState(['hoveredMenuItem'])
   }
 }
 </script>
@@ -133,5 +157,11 @@ $main-height: calc(100vh - #{spacing(frame)});
       color: color(dark);
     }
   }
+}
+.active {
+  opacity: 1;
+}
+.grayscale {
+  opacity: .8;
 }
 </style>
