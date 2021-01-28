@@ -1,7 +1,7 @@
 <template>
-  <Container id="services">
-      <Article v-for="service in pages" :key="service.attributes.title" :id="formatSlug($ta(service.attributes, 'title'))">
-        <div class="image-container">
+  <Container id="services-grid">
+      <template v-for="service in pages" :id="formatSlug($ta(service.attributes, 'title'))">
+        <div class="service-item image-container">
           <Frame
             :title="$ta(service.attributes,'title')"
             :style="'background-position-y:' + $ta(service.attributes, 'image_crop')">
@@ -9,11 +9,11 @@
           </Frame>
           </Frame>
         </div>
-        <div class="text">
+        <div class="service-item text">
           <h1>{{ $ta(service.attributes, "title") }}</h1>
           <vue-markdown>{{ $ta(service.attributes, "description") }}</vue-markdown>
         </div>
-      </Article>
+      </template>
   </Container>
 </template>
 
@@ -61,7 +61,7 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("services")
-    this.scrollIntoView()
+    // this.scrollIntoView()
   },
   computed: {
     locale() {
@@ -73,6 +73,7 @@ export default {
     getTitle(page) {
       return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
     },
+
     scrollIntoView() {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -129,6 +130,24 @@ export default {
 </script>
 
 <style lang="scss">
+  #services-grid {
+    @include respond-to('large') {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: fit-content(260px);
+      grid-auto-flow: row dense;
+      align-items: stretch;
+      .image-container:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .text {
+        grid-row: span 2;
+        // min-height: 600px;
+      }
+    }
+  }
   #services {
     margin-top: -2em;
     margin-bottom: 2em;
