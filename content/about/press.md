@@ -9,7 +9,7 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
-- main_text: Frankfurter Allgemeine Zeitung "Das Beste aus zwei Wohnwelten"
+- main_text: Frankfurter Allgemeine Zeitung "Das Beste aus zwei Wohnwelten" // 2021
   text_url: https://www.faz.net/anbauten-das-beste-aus-zwei-wohnwelten-17171830.html
 - main_text: Beton.org // "Perfekte Kombination" // 2020
   text_url: https://www.beton.org/service/presse/details/perfekte-kombination/
