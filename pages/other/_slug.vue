@@ -1,13 +1,18 @@
 <template>
   <Container class="text-image-grid">
-      <template v-for="section in sections" :id="formatSlug($ta(page.attributes, 'title'))">
+      <template v-for="(section, index) in sections" :id="formatSlug($ta(page.attributes, 'title'))">
         <div v-if="section.image" class="section-item image-container">
-          <Frame
+          <div class="frame-wrapper">
+            <Frame :n="findOrientation(index) === 'portrait' ? 9 : 11" :d="findOrientation(index) === 'portrait' ? 16 : 9">
+              <img :src="$ta(section, 'image')"/>
+            </Frame>
+          </div>
+          <!-- <Frame
             :title="$ta(page.attributes,'title')"
             :n="11"
             :d="9">
             <img :src="$ta(section, 'image')">
-          </Frame>
+          </Frame> -->
         </div>
         <div v-else class="section-item text">
           <h1 v-if="section.title_of_section">{{ $ta(section, "title_of_section") }}</h1>
@@ -80,6 +85,9 @@ export default {
     getTitle(page) {
       return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
     },
+    findOrientation(index) {
+      return index % 2 === 1 ? "portrait" : "landscape"
+    },
     scrollIntoView() {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -117,15 +125,13 @@ export default {
   .text-image-grid {
     @include respond-to('large') {
       display: grid;
-      grid-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: fit-content(260px);
+      grid-template-rows: fit-content(260px);
+      grid-gap: 2rem;
       margin-bottom: spacing(frame);
       grid-auto-flow: row dense;
-      align-items: start;
-      .image-container {
+      .section-item:nth-child(1) {
         grid-row: span 2;
-        min-height: 600px;
       }
     }
   }

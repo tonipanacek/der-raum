@@ -37,6 +37,14 @@
           </li>
           <li>
             <nuxt-link
+              to="/studio-2"
+              class="nav-item title"
+            >
+              Studio 2
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
               v-if="isOnline('rooms')"
               :to="localePath({ name: 'rooms' })"
               class="nav-item title"
