@@ -22,8 +22,14 @@ grid-sections:
     zu gewährleisten?"
 - template: text-section
   group-number: 1
-  group-position: 1
+  group-position: '4'
   title_of_section: ''
-  text-section: ''
+  text-section: "In Skizzen, Entwürfen und präzisen Visualisierungen können Wunsch
+    und Anspruch unserer Auftraggeber von der ersten Idee bis zum letzten Detail entwickelt,
+    weiterentwickelt und ausgestaltet werden. Hier zeigt sich der Vorteil fundierter
+    Fachexpertise unseres eingespielten Teams und räumlich-haptischer Erfahrbarkeit
+    an einem Ort.   \n  \nWir verstehen uns als Architekturpartner indem wir unsere
+    Partner dort abholen wo Sie uns brauchen, von der Beratung bis zur maßgeschneiderten
+    Lösung im Einbau."
 
 ---
