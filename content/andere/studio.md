@@ -1,6 +1,10 @@
 ---
 title: Studio
 grid-sections:
+- template: image-section
+  group-number: 1
+  group-position: 1
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
 - template: text-section
   group-number: 1
   group-position: '2'
@@ -16,10 +20,6 @@ grid-sections:
     werden? Welche Beschläge sind zu empfehlen? Wo können Wir individuelle Lösungen
     entwickeln um ein noch besseres Nutzungs- und gestalterisch ansprechendes Ergebnis
     zu gewährleisten?"
-- template: image-section
-  group-number: 1
-  group-position: 1
-  image: ''
 - template: text-section
   group-number: 1
   group-position: 1
