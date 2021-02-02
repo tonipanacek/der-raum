@@ -7,7 +7,7 @@ grid-sections:
   image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
 - template: text-section
   group-number: 1
-  group-position: '2'
+  group-position: 2
   title_of_section: Studio
   text-section: "Unser Studio in Berlin-Prenzlauer Berg bietet mit einer umfangreichen
     Materialauswahl und unterschiedlichen Raumsituationen Einblicke in unser Leistungsportfolio.
@@ -22,7 +22,7 @@ grid-sections:
     zu gewährleisten?"
 - template: text-section
   group-number: 1
-  group-position: '4'
+  group-position: 4
   title_of_section: ''
   text-section: "In Skizzen, Entwürfen und präzisen Visualisierungen können Wunsch
     und Anspruch unserer Auftraggeber von der ersten Idee bis zum letzten Detail entwickelt,

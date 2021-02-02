@@ -1,25 +1,24 @@
 <template>
-  <Container id="services-grid">
-      <template v-for="service in pages" :id="formatSlug($ta(service.attributes, 'title'))">
-        <div class="service-item image-container">
+  <Container class="text-image-grid">
+      <template v-for="section in sections" :id="formatSlug($ta(page.attributes, 'title'))">
+        <div v-if="section.image" class="section-item image-container">
           <Frame
-            :title="$ta(service.attributes,'title')"
-            :style="'background-position-y:' + $ta(service.attributes, 'image_crop')"
-            :n="9"
+            :title="$ta(page.attributes,'title')"
+            :n="11"
             :d="9">
-            <img :src="$ta(service.attributes, 'image')" :alt="$ta(service.attributes, 'description')">
+            <img :src="$ta(section, 'image')">
           </Frame>
         </div>
-        <div class="service-item text">
-          <h1>{{ $ta(service.attributes, "title") }}</h1>
-          <vue-markdown>{{ $ta(service.attributes, "description") }}</vue-markdown>
+        <div v-else class="section-item text">
+          <h1 v-if="section.title_of_section">{{ $ta(section, "title_of_section") }}</h1>
+          <vue-markdown>{{ $ta(section, "text-section") }}</vue-markdown>
         </div>
       </template>
   </Container>
 </template>
 
 <script>
-import { get, min, sortBy } from "lodash"
+import { get, min, sortBy, kebabCase } from "lodash"
 import { mapActions, mapState } from "vuex"
 import seo from "~/content/data/seo"
 import Article from "~/components/Article"
@@ -29,8 +28,8 @@ import Container from '~/components/Container'
 export default {
   nuxtI18n: {
     paths: {
-      en: '/services',
-      de: '/leistungen'
+      en: '/:slug',
+      de: '/:slug'
     }
   },
   components: {
@@ -43,38 +42,44 @@ export default {
       title: `${seo.shortTitle} | ${this.$t('navbar_titles.services')}`
     }
   },
-  async asyncData() {
+  async asyncData({ params }) {
     // create context via webpack to map over all blog pages
-    const allPages = await require.context(
-      "~/content/services/",
+    const slug = params.slug
+
+    let pages = await require.context(
+      "~/content/andere/",
       true,
       /\.md$/
     )
-    let pages = allPages.keys().map(key => {
+    pages = pages.keys().map(key => {
       // give back the value of each page context
-      return allPages(key)
+      return pages(key)
     })
-    pages = sortBy(pages, page => get(page, 'attributes.position'))
+
+    const page = pages.find(p => kebabCase(get(p, `attributes.title`)) === slug)
+    let sections = get(page, 'attributes.grid-sections')
+    sections = sortBy(sections, [section => get(section, 'group-number'), section => get(section, 'group-position')])
+
     return {
-      pages
+      pages,
+      page,
+      sections
     }
   },
   mounted() {
     this.setPages(this.$data.pages)
-    this.setPagesPrefix("services")
+    this.setPagesPrefix("other")
     // this.scrollIntoView()
   },
   computed: {
     locale() {
       return this.$i18n.locale;
-    },
-    ...mapState(["anchorItem"])
+    }
   },
   methods: {
     getTitle(page) {
       return this.formatSlug(get(page, `attributes[${this.locale}_title]`))
     },
-
     scrollIntoView() {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -93,25 +98,6 @@ export default {
       const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
       divs.forEach(div => observer.observe(div))
     },
-    addParamsToLocation(id) {
-      history.replaceState(
-        {},
-        null,
-        this.$route.path +
-          '#' +
-          id
-      )
-    },
-    beforeEnter: function(el) {
-      el.style.transition = "opacity 300 ease, transform 300 ease"
-    },
-    enter: function(el, done) {
-      el.style.transform = "translateY(0)"
-      el.classList.add('transition-show')
-    },
-    leave: function(el, done) {
-      done()
-    },
     scrollTransitions(element) {
       window.addEventListener('scroll', function() {
         if (element.firstElementChild.className !== 'text') {
@@ -122,16 +108,13 @@ export default {
         }
       })
     },
-    ...mapActions(["setPages", "setPagesPrefix", "setAnchorItem", "unsetAnchorItem"])
-  },
-  destroyed() {
-    this.unsetAnchorItem()
+    ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
 </script>
 
 <style lang="scss">
-  #services-grid {
+  .text-image-grid {
     @include respond-to('large') {
       display: grid;
       grid-gap: 2rem;
@@ -139,21 +122,11 @@ export default {
       grid-auto-rows: fit-content(260px);
       margin-bottom: spacing(frame);
       grid-auto-flow: row dense;
-      align-items: stretch;
+      align-items: start;
       .image-container {
         grid-row: span 2;
-        // min-height: 600px;
+        min-height: 600px;
       }
-    }
-  }
-  #services {
-    margin-top: -2em;
-    margin-bottom: 2em;
-    .text p {
-      margin-bottom: 0;
-    }
-    .article {
-      padding: 2em 0 1.75em 0;
     }
   }
 </style>
