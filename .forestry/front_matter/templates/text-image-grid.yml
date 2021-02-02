@@ -2,6 +2,12 @@
 label: text-image-grid
 hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Page Title
+  description: "(in English please)"
 - name: grid-sections
   type: blocks
   template_types:
