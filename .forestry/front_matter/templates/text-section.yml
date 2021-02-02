@@ -21,7 +21,9 @@ fields:
 - name: group-number
   type: number
   label: group-number
-  description: ''
+  description: In case there is enough content to extend beyond just one group of
+    4 sections in the layout. Can specify which group of 4 to be placed in. Should
+    set it to 1 for most content.
   default: 1
   required: true
   config:
