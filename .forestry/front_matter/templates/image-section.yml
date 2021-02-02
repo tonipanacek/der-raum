@@ -1,4 +1,19 @@
 ---
 label: image-section
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: image
+- name: grid-position
+  type: number
+  label: grid-position
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
