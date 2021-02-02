@@ -36,12 +36,18 @@ sections:
   templates:
   - text-and-multiple-images
 - type: directory
-  path: content/misc
+  path: content/andere
   label: Andere
   create: all
   match: "**/*"
   templates:
-  - text-with-choices
+  - text-image-grid
+- type: directory
+  path: content/misc
+  label: Verschiedenes
+  create: all
+  match: "**/*"
+  templates:
   - privacy
   - legal-page
   - contact-page

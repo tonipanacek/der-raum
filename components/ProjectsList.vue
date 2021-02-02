@@ -45,6 +45,9 @@ export default {
       required: true
     }
   },
+  mounted() {
+    this.scrollIntoView()
+  },
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
@@ -66,6 +69,28 @@ export default {
     findOrientation(index) {
       return index % 2 === 1 ? "portrait" : "landscape"
     },
+    scrollIntoView() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.firstElementChild.style.opacity = 1
+            this.scrollTransitions(entry.target)
+          } else {
+            this.scrollTransitions(entry.target)
+          }
+        })
+      }, { threshold: 0.8});
+      const divs = Array.from(document.querySelectorAll('.project-link'))
+      divs.forEach(div => observer.observe(div))
+    },
+    scrollTransitions(element) {
+      window.addEventListener('scroll', function() {
+        const frame = element.firstElementChild
+        if (window.scrollY > frame.offsetTop) {
+          frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
+        }
+      })
+    }
   }
 }
 </script>

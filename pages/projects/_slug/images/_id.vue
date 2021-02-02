@@ -199,9 +199,17 @@ export default {
       if (!this.length) { return '' }
       const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
       const projectIndex = onlineProjects.indexOf(this.$data.page)
-      const nextProject = onlineProjects[projectIndex + 1]
+      let nextProject = onlineProjects[projectIndex + 1]
       if (this.id >= this.length && projectIndex === this.$data.pages.length - 1) {
-        return ''
+        nextProject = onlineProjects[0]
+        const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: nextSlug,
+            id: 1
+          }
+        })
       } else if (this.id >= this.length && nextProject) {
         const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
         return this.localePath({
@@ -226,9 +234,17 @@ export default {
       if (!this.length) { return '' }
       const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
       const projectIndex = onlineProjects.indexOf(this.$data.page)
-      const previousProject = onlineProjects[projectIndex - 1]
+      let previousProject = onlineProjects[projectIndex - 1]
       if (parseInt(this.id) <= 1 && projectIndex === 0) {
-        return ''
+        previousProject = onlineProjects[onlineProjects.length - 1]
+        const previousSlug = this.formatSlug(this.$ta(previousProject.attributes, 'title'))
+        return this.localePath({
+          name: 'projects-slug-images-id',
+          params: {
+            slug: previousSlug,
+            id: previousProject.attributes.images.length
+          }
+        })
       } else if (parseInt(this.id) <= 1 && previousProject) {
         const previousSlug = this.formatSlug(this.$ta(previousProject.attributes, 'title'))
         return this.localePath({
