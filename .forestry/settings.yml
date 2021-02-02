@@ -4,13 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
-  path: content/andere
-  label: Andere
-  create: all
-  match: "**/*"
-  templates:
-  - text-image-grid
 - type: heading
   label: Content
 - type: directory
@@ -42,6 +35,13 @@ sections:
   match: "**/*"
   templates:
   - text-and-multiple-images
+- type: directory
+  path: content/andere
+  label: Andere
+  create: all
+  match: "**/*"
+  templates:
+  - text-image-grid
 - type: directory
   path: content/misc
   label: Verschiedenes
