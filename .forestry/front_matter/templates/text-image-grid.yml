@@ -20,3 +20,5 @@ fields:
   description: 'Can choose either a text or image section to populate the grid areas.
     Must specify for each section which <strong>group number</strong> (most likely
     1) and which <strong>group position</strong> (position in the group of 4). '
+pages:
+- content/andere/studio.md
