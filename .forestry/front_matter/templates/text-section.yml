@@ -1,4 +1,20 @@
 ---
 label: text-section
 hide_body: true
-fields: []
+fields:
+- name: title_of_section
+  type: text
+  config:
+    required: false
+  label: title-of-section
+  description: If you'd like a title for this section, i.e. STUDIO, TISCHLEREI, etc.
+- name: text-section
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: text-section
+  description: Main text content for this section
