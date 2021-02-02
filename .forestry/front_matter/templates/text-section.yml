@@ -18,3 +18,26 @@ fields:
       format: markdown
   label: text-section
   description: Main text content for this section
+- name: group-number
+  type: number
+  label: group-number
+  description: ''
+  default: 1
+  required: true
+  config:
+    min: 
+    max: 
+    step: 1
+- name: group-position
+  type: number
+  label: group-position
+  description: Groups of 4 content sections in the grid. Can order them 1-4, which
+    will go in a clockwise pattern like so:<br>(1) - Top left section -- portrait<br>(2)
+    - Top right section -- landscape<br>(3) - Bottom right section -- portrait<br>(4)
+    - Bottom left section -- landscape
+  default: 1
+  required: true
+  config:
+    min: 
+    max: 
+    step: 1
