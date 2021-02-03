@@ -5,7 +5,7 @@ online: true
 featured_project: false
 group: 3
 group_position: 3
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579784162/Kueche-Kacheln-Arbeisplatte_jzck1w.png
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Kueche-Dachgeschoss-Loft-grau-lackiert_gxrazc.png
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784162/Einbaukueche-grau-Unterschrank-Oberschrank_byyjyq.png
