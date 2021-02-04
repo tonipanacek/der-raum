@@ -1,14 +1,14 @@
 ---
-title: Studio 2
+title: Tischlerei
 grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1612451853/Studio_Project_jdxmgn.jpg
 - template: text-section
   group-number: 1
   group-position: 2
-  title_of_section: Studio
+  title_of_section: Tischlerei
   text-section: "Unser Studio in Berlin-Prenzlauer Berg bietet mit einer umfangreichen
     Materialauswahl und unterschiedlichen Raumsituationen Einblicke in unser Leistungsportfolio.
     Architekten, Planern und privaten Auftraggebern ermöglichen wir so räumliche und
@@ -26,8 +26,4 @@ grid-sections:
     an einem Ort.   \n  \nWir verstehen uns als Architekturpartner indem wir unsere
     Partner dort abholen wo Sie uns brauchen, von der Beratung bis zur maßgeschneiderten
     Lösung im Einbau."
-- template: image-section
-  group-number: 1
-  group-position: 3
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
 ---

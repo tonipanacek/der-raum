@@ -8,13 +8,13 @@
       </li>
       <li>
         <ul class="nav-items">
-          <li>
+          <!-- <li> -->
             <!-- <nuxt-link
               v-if="isOnline('projects')"
               :to="localePath({ name: 'projects' })"
               class="nav-item title link"
             > -->
-            <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title link">
+            <!-- <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title link">
               {{ $t("navbar_titles.projects") }}
             </nuxt-link>
           </li>
@@ -26,7 +26,7 @@
             >
               {{ $t("navbar_titles.services") }}
             </nuxt-link>
-          </li>
+          </li> -->
           <li>
             <nuxt-link
               to="/studio"
@@ -37,10 +37,10 @@
           </li>
           <li>
             <nuxt-link
-              to="/studio-2"
+              to="/tischlerei"
               class="nav-item title"
             >
-              Studio 2
+              Tischlerei
             </nuxt-link>
           </li>
           <li>

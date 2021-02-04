@@ -19,15 +19,11 @@ grid-sections:
     optimal für die angestrebte Gestaltung? Wie kann Gewicht in der Konstruktion minimiert
     werden? Welche Beschläge sind zu empfehlen? Wo können Wir individuelle Lösungen
     entwickeln um ein noch besseres Nutzungs- und gestalterisch ansprechendes Ergebnis
-    zu gewährleisten? In Skizzen, Entwürfen und präzisen Visualisierungen können Wunsch
+    zu gewährleisten? \n \n In Skizzen, Entwürfen und präzisen Visualisierungen können Wunsch
     und Anspruch unserer Auftraggeber von der ersten Idee bis zum letzten Detail entwickelt,
     weiterentwickelt und ausgestaltet werden. Hier zeigt sich der Vorteil fundierter
     Fachexpertise unseres eingespielten Teams und räumlich-haptischer Erfahrbarkeit
     an einem Ort.   \n  \nWir verstehen uns als Architekturpartner indem wir unsere
     Partner dort abholen wo Sie uns brauchen, von der Beratung bis zur maßgeschneiderten
     Lösung im Einbau."
-- template: image-section
-  group-number: 1
-  group-position: 2
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
 ---

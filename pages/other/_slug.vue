@@ -1,18 +1,12 @@
 <template>
-  <Container class="text-image-grid">
-      <template v-for="(section, index) in sections" :id="formatSlug($ta(page.attributes, 'title'))">
+  <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
+      <template v-for="(section, index) in sections">
         <div v-if="section.image" class="section-item image-container">
           <div class="frame-wrapper">
-            <Frame :n="findOrientation(index) === 'portrait' ? 9 : 11" :d="findOrientation(index) === 'portrait' ? 16 : 9">
+            <Frame :n="findOrientation(index) === 'portrait' ? 9 : 12" :d="findOrientation(index) === 'portrait' ? 16 : 9">
               <img :src="$ta(section, 'image')"/>
             </Frame>
           </div>
-          <!-- <Frame
-            :title="$ta(page.attributes,'title')"
-            :n="11"
-            :d="9">
-            <img :src="$ta(section, 'image')">
-          </Frame> -->
         </div>
         <div v-else class="section-item text">
           <h1 v-if="section.title_of_section">{{ $ta(section, "title_of_section") }}</h1>
@@ -74,7 +68,6 @@ export default {
   mounted() {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("other")
-    // this.scrollIntoView()
   },
   computed: {
     locale() {
@@ -88,51 +81,35 @@ export default {
     findOrientation(index) {
       return index % 2 === 1 ? "portrait" : "landscape"
     },
-    scrollIntoView() {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            this.setAnchorItem(entry.target.id)
-            this.addParamsToLocation(entry.target.id)
-            entry.target.firstElementChild.style.opacity = 1
-            this.scrollTransitions(entry.target)
-            // this.$router.push({ hash: '#' + entry.target.id })
-          } else {
-            // entry.target.firstElementChild.style.opacity = 0.5
-            this.scrollTransitions(entry.target)
-          }
-        })
-      }, { threshold: 0.8});
-      const divs = this.pages.map(page => document.querySelector('#' + this.getTitle(page)))
-      divs.forEach(div => observer.observe(div))
-    },
-    scrollTransitions(element) {
-      window.addEventListener('scroll', function() {
-        if (element.firstElementChild.className !== 'text') {
-          const frame = element.firstElementChild
-          if (window.scrollY > frame.offsetTop) {
-            frame.style.opacity = 1 - (window.scrollY - frame.offsetTop) / frame.offsetHeight
-          }
-        }
-      })
-    },
     ...mapActions(["setPages", "setPagesPrefix"])
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+// .text-image-grid {
+//     @include respond-to('large') {
+//       display: grid;
+//       grid-template-columns: repeat(2, 1fr);
+//       grid-template-rows: fit-content(260px);
+//       grid-gap: 2rem;
+//       margin-bottom: spacing(frame);
+//       grid-auto-flow: row dense;
+//       .section-item:nth-child(1) {
+//         grid-row: span 2;
+//       }
+//     }
+//   }
   .text-image-grid {
     @include respond-to('large') {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: fit-content(260px);
-      grid-gap: 2rem;
-      margin-bottom: spacing(frame);
-      grid-auto-flow: row dense;
-      .section-item:nth-child(1) {
-        grid-row: span 2;
-      }
+    .image-container {
+      float: left;
+      width: 55ch;
+    }
+    .text {
+      padding-left: 3rem;
+    }
+    .frame > img { object-fit: contain }
     }
   }
 </style>

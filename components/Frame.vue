@@ -30,8 +30,8 @@ export default {
     padding-bottom: calc(var(--n) / var(--d) * 100%);
   }
   position: relative;
-  background-size: cover;
-  background-position-x: center;
+  // background-size: cover;
+  // background-position-x: center;
   // background-position-y: center;
   // background-position: center;
   & /deep/ > * {
