@@ -4,7 +4,9 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "rooms": "Rooms"
+    "rooms": "Rooms",
+    "studio": "Studio",
+    "carpentry": "Carpentry"
   },
   "secondary_navbar_titles": {
     "businessPartner": "Business Partner",

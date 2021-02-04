@@ -11,18 +11,6 @@ export default {
 </script>
 
 <style lang="scss">
-.article {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  margin: 0 auto;
-  &.project {
-    justify-content: space-between;
-  }
-  @include respond-to('large') {
-    min-height: calc(100vh - 2 * #{spacing(frame)});
-    width: 100%;
-  }
   .image-container {
     img {
       max-width: 100%;
@@ -32,7 +20,7 @@ export default {
   .text {
     padding: spacing(frame);
     @include respond-to(large) {
-      margin-top: spacing(frame);
+      // margin-top: spacing(frame);
       padding: 0;
       padding-bottom: 1em;
     }
@@ -75,7 +63,7 @@ export default {
       outline: 0;
     }
   }
-}
+// }
 #partner, #partners {
   @include respond-to('large') {
     min-height: calc(100vh);
