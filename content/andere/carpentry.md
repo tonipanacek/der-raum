@@ -1,29 +1,34 @@
 ---
-title: Tischlerei
+title: Carpentry
 grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1612451853/Studio_Project_jdxmgn.jpg
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612451853/Studio_Project_jdxmgn.jpg
 - template: text-section
-  group-number: 1
-  group-position: 2
-  title_of_section: Tischlerei
-  text-section: "Unser Studio in Berlin-Prenzlauer Berg bietet mit einer umfangreichen
-    Materialauswahl und unterschiedlichen Raumsituationen Einblicke in unser Leistungsportfolio.
-    Architekten, Planern und privaten Auftraggebern ermöglichen wir so räumliche und
-    haptische Erfahrungen von Materialien, Oberflächen und Farben, die frei arrangiert
-    und für anstehende Projekte kombiniert werden können.  \nKernbereich unseres Studios
-    ist die professionelle Beratung, immer persönlich terminiert und unerlässlich
-    für ein rundum gelungenes, handwerklich perfektes Ergebnis: Welches Material ist
-    optimal für die angestrebte Gestaltung? Wie kann Gewicht in der Konstruktion minimiert
-    werden? Welche Beschläge sind zu empfehlen? Wo können Wir individuelle Lösungen
-    entwickeln um ein noch besseres Nutzungs- und gestalterisch ansprechendes Ergebnis
-    zu gewährleisten? In Skizzen, Entwürfen und präzisen Visualisierungen können Wunsch
-    und Anspruch unserer Auftraggeber von der ersten Idee bis zum letzten Detail entwickelt,
-    weiterentwickelt und ausgestaltet werden. Hier zeigt sich der Vorteil fundierter
-    Fachexpertise unseres eingespielten Teams und räumlich-haptischer Erfahrbarkeit
-    an einem Ort.   \n  \nWir verstehen uns als Architekturpartner indem wir unsere
-    Partner dort abholen wo Sie uns brauchen, von der Beratung bis zur maßgeschneiderten
-    Lösung im Einbau."
+  group_number: 1
+  group_position: '2'
+  de_title_of_section: Tischlerei
+  en_title_of_section: Carpentry
+  de_text_section: "Um eine qualitativ hochwertige Ausführung zu gewährleisten, produzieren
+    wir ausschließlich in unserer eigenen Bau- und Möbeltischlerei in Berlin-Weißensee.
+    \ \nBei uns kommen neueste Produktionstechniken wie CNC-Säge und -Fräse, Furnier-
+    und Pressmaschinen zum Einsatz. Auf die Konstruktion im digital gestützten CAD-Bereich
+    folgt die direkte und nahtlose Übergabe an unsere Produktionstechnik. Die Genauigkeit
+    der digital gesteuerten Programmierung in Verbindung mit der Erfahrung unseres
+    hochqualifizierten Teams aus Tischlern und Tischlermeistern bietet uns somit ideale
+    Voraussetzungen für eine detaillierte, zeitnahe und ganzheitliche Fertigung. Wir
+    sind in der Lage große Projekte zu betreuen und detailreiche, individuelle Lösungen
+    in der Fertigung zuverlässig umzusetzen.  \nDas veredeln von Oberflächen wie Furnier,
+    Öl- und Lackierarbeiten führen wir ausschließlich mit qualifizierten und erfahrenen
+    Mitarbeitern unserer eigenen Tischlerei durch. Sämtliche Montagetätigkeiten werden
+    durch uns abgebildet, um von Anfang bis zum Ende die volle Qualität unserer Leistung
+    zu gewährleisten.  \nHandwerk bedeutet für uns Verantwortung. Deshalb vermitteln
+    wir durch unsern eigenen Auszubildenden eine qualitativ hochwertige Ausführung
+    und fundierte, handwerkliche Fertigkeiten. Die angehenden Tischler*innen werden
+    nach Ihrer Ausbildung häufig in den Betrieb übernommen und tragen dadurch zu unserem
+    Qualitätsanspruch in den kommenden Jahren bei. Für unsere Ausbildung konnten wir
+    bereits stolz Ausbildungspreise entgegen nehmen."
+  en_text_section: ''
+
 ---

@@ -21,4 +21,5 @@ fields:
     Must specify for each section which <strong>group number</strong> (most likely
     1) and which <strong>group position</strong> (position in the group of 4). '
 pages:
+- content/andere/carpentry.md
 - content/andere/studio.md
