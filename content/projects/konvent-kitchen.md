@@ -8,6 +8,7 @@ architect_name: ''
 featured_project: true
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626107/Einbaukueche-eiche-Naturstein-holz-edel_zzbe1f.jpg
 images:
+- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626107/Einbaukueche-eiche-Naturstein-holz-edel_zzbe1f.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626070/kuechenzeile-einbau-nach-mass-holz-stein_fcccda.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601624076/Einbaukueche-eiche-pivot-tuer-raumhoch_alq4un.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626051/holz-lamellen-wandpaneele-design-architektur_q10uuu.jpg
