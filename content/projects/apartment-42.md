@@ -7,8 +7,8 @@ group_position: 1
 online: true
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973021/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973020/Kochinsel-Kueche-Edel-schwarz-schubkasten_javn0c.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973020/Badezimmer-Einbauschrank-raumhoch-schwarz-edel_vfchut.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1584973022/Schiebetuer-Massivholz-Kochinsel-Steinplatte_rp96co.jpg

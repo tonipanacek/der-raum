@@ -7,8 +7,8 @@ group: 2
 group_position: 1
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbaukueche-Mittelblock-Einbauschraenke-raumhoch_cgszb2.jpg
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz-wohnzimmer_i8kvn0.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbaukueche-Mittelblock-Einbauschraenke-raumhoch_cgszb2.jpg
+- https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz-wohnzimmer_i8kvn0.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz_uzef8m.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779887/Einbauschrank-Hochbett-weiss-lackiert_qpf7kb.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779888/Innenausbau-Unterschraenke-Eiche-Massivholz-wohnbereich_vtqus8.jpg

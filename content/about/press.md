@@ -25,7 +25,7 @@ text_and_link_group:
   text_url: https://www.dds-online.de/allgemein/ueber-das-rendering-auf-die-cnc/#slider-intro-8
 - main_text: The New York Times Magazine // "Just Outside Berlin, a Design and Arts
     Scene Thrives" // 2015
-  text_url: https://tmagazine.blogs.nytimes.co/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/?src=xps
+  text_url: https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/
 - main_text: Berliner Morgenpost // "Raumwunder in Wandlitz" // 2015
   text_url: https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitzhtml
 - main_text: Deutscher Holzbaupreis // "Einfamilienhaus in Wandlitz" // 2015
