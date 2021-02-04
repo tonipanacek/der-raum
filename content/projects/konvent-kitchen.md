@@ -20,8 +20,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626108/Naturstein-Arbeitsplatte-Holz-Front-Korpus-lackiert_r4yjvd.jpg
 en_title: Kovent Kitchen
 de_title: Kovent Kitchen
-en_description: Kovent Kitchen
-de_description: Kovent Kitchen
+en_description: 'Photos: Maximilian Gödecke'
+de_description: 'Fotos: Maximilian Gödecke'
 meta_tags:
   de_title: ''
   en_title: ''
