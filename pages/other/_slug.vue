@@ -9,8 +9,8 @@
           </div>
         </div>
         <div v-else class="section-item text">
-          <h1 v-if="section.title_of_section">{{ $ta(section, "title_of_section") }}</h1>
-          <vue-markdown>{{ $ta(section, "text-section") }}</vue-markdown>
+          <h1 v-if="section.de_title_of_section">{{ $ta(section, "title_of_section") }}</h1>
+          <vue-markdown>{{ $ta(section, "text_section") }}</vue-markdown>
         </div>
       </template>
   </Container>
@@ -41,7 +41,7 @@ export default {
       title: `${seo.shortTitle} | ${this.$t('navbar_titles.services')}`
     }
   },
-  async asyncData({ params }) {
+  async asyncData({ app, store, params }) {
     // create context via webpack to map over all blog pages
     const slug = params.slug
 
@@ -55,9 +55,11 @@ export default {
       return pages(key)
     })
 
+    const locale = app.i18n.locale
     const page = pages.find(p => kebabCase(get(p, `attributes.title`)) === slug)
+
     let sections = get(page, 'attributes.grid-sections')
-    sections = sortBy(sections, [section => get(section, 'group-number'), section => get(section, 'group-position')])
+    sections = sortBy(sections, [section => get(section, 'group_number'), section => get(section, 'group_position')])
 
     return {
       pages,
