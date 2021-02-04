@@ -2,13 +2,19 @@
 label: text-section
 hide_body: true
 fields:
-- name: title_of_section
+- name: de_title_of_section
   type: text
   config:
     required: false
-  label: title-of-section
-  description: If you'd like a title for this section, i.e. STUDIO, TISCHLEREI, etc.
-- name: text-section
+  label: german title of section
+  description: If you'd like a title for this section of text, i.e. STUDIO, TISCHLEREI,
+    etc to show up on the page
+- name: en_title_of_section
+  type: text
+  config:
+    required: false
+  label: english title of section
+- name: de_text_section
   type: textarea
   default: ''
   config:
@@ -16,11 +22,20 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-  label: text-section
-  description: Main text content for this section
-- name: group-number
+  label: german text section
+  description: Main german text content for this section
+- name: en_text_section
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: english text section
+- name: group_number
   type: number
-  label: group-number
+  label: group number
   description: In case there is enough content to extend beyond just one group of
     4 sections in the layout. Can specify which group of 4 to be placed in. Should
     set it to 1 for most content.
@@ -30,9 +45,9 @@ fields:
     min: 
     max: 
     step: 1
-- name: group-position
+- name: group_position
   type: number
-  label: group-position
+  label: group position
   description: Groups of 4 content sections in the grid. Can order them 1-4, which
     will go in a clockwise pattern like so:<br>(1) - Top left section -- portrait<br>(2)
     - Top right section -- landscape<br>(3) - Bottom right section -- portrait<br>(4)
