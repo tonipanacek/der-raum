@@ -17,8 +17,8 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626107/Spuelbecken-Stein-Holz-Nische-Lamellen-Design-Handwerk_kyiych.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626108/Schubladen-auszug-holz-eiche-design-architektur-handwerk_rcx2fr.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626108/Naturstein-Arbeitsplatte-Holz-Front-Korpus-lackiert_r4yjvd.jpg
-en_title: Kovent Kitchen
-de_title: Kovent Kitchen
+en_title: Konvent Kitchen
+de_title: Konvent Kitchen
 en_description: 'Photos: Maximilian Gödecke'
 de_description: 'Fotos: Maximilian Gödecke'
 meta_tags:
