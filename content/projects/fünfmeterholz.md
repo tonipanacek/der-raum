@@ -5,7 +5,7 @@ orientation: landscape
 featured_project: false
 group: 4
 group_position: 2
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579779796/Kueche-Schublaeden-Eiche-massiv-geoelt_dclr9t.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779796/Kueche-Mittelblock-Dachgeschoss-holz_ec8xfk.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/v1580477191/Kueche-Steinplatte-schwarz-Granit-Massivholz-Armatur_jxv35p.jpg
