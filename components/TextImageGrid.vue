@@ -1,30 +1,35 @@
 <template>
-  <div id="sections-grid">
-    <div class="frame-wrapper">
-      <Frame :n="findOrientation(index) === 'portrait' ? 11 : 9" :d="findOrientation(index) === 'portrait' ? 9 : 16">
-        <img :src="$ta(project.attributes, 'main_image')" :alt="$ta(project.attributes, 'title')" loading="lazy"/>
-      </Frame>
-      <div class="title-flex">
-          <p class="project-title">
-            {{ $ta(project.attributes, 'title') }}
-          </p>
-          <p class="project-architect" v-if="project.attributes.architect_name"> {{ $ta(project.attributes, 'architect_name') }}</p>
+  <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
+    <template v-for="(section, index) in sections">
+      <div v-if="section.image" class="section-item image-container">
+        <div class="frame-wrapper">
+          <Frame :n="findOrientation(index) === 'portrait' ? 9 : 12" :d="findOrientation(index) === 'portrait' ? 16 : 9">
+            <img :src="$ta(section, 'image')"/>
+          </Frame>
         </div>
-    </div>
-  </div>
+      </div>
+      <div v-else class="section-item text">
+        <h1 v-if="section.de_title_of_section">{{ $ta(section, "title_of_section") }}</h1>
+        <vue-markdown>{{ $ta(section, "text_section") }}</vue-markdown>
+      </div>
+    </template>
+  </Container>
 </template>
 
 <script>
 import { get } from 'lodash'
 import Frame from '~/components/Frame'
-import dynamicSEO from '~/plugins/dynamic_seo'
+
 export default {
   name: "TextImageGrid",
   components: {
     Frame
   },
-  mixins: [dynamicSEO],
   props: {
+    page: {
+      type: Object,
+      required: true
+    },
     sections: {
       type: Array,
       required: true
@@ -42,23 +47,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$main-height: calc(100vh - #{spacing(frame)});
-
-#sections-grid {
-  @include respond-to('large') {
-    display: grid;
-    column-gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: fit-content(260px);
-    grid-auto-flow: row dense;
-    .project-link:first-child {
-      grid-column: span 2;
-      grid-row: span 2;
+  .text-image-grid {
+    @include respond-to('large') {
+    .image-container {
+      float: left;
+      width: 55ch;
     }
-    .portrait {
-      grid-row: span 2;
+    .text {
+      padding-left: 3rem;
+    }
+    .frame > img { object-fit: contain }
     }
   }
-}
-
 </style>
