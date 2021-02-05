@@ -1,32 +1,32 @@
 <template>
-  <Container>
-    <h1 class="accessible">{{ seo.projectsOverviewH1 }}</h1>
-    <p class="accessible">{{ seo.projectsOverviewText }}</p>
-    <ProjectsList
-    :projects="pages"
-    />
-  </Container>
+  <TextImageGrid :page="page" :sections="sections" />
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
-import seo from '~/content/data/seo'
-import Container from "~/components/Container"
-import ProjectsList from "~/components/ProjectsList"
+import seo from "~/content/data/seo"
+import Article from "~/components/Article"
+import TextImageGrid from "~/components/TextImageGrid"
 
 export default {
   layout: 'layout',
-  name: 'index',
+  name: 'carpentry',
+  nuxtI18n: {
+    paths: {
+      en: '/carpentry',
+      de: '/tischlerei'
+    }
+  },
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.carpentry')}`
     }
   },
   async asyncData() {
     // create context via webpack to map over all blog pages
     const allPages = await require.context(
-      "~/content/projects/",
+      "~/content/andere/",
       true,
       /\.md$/
     )
@@ -34,16 +34,18 @@ export default {
       // give back the value of each page context
       return allPages(key)
     })
-    pages = pages.filter(page => page.attributes.online)
-    pages = sortBy(pages, [page => get(page, 'attributes.group'), page => get(page, 'attributes.group_position')])
+
+    const page = pages.find(p => get(p, `attributes.title`) === 'Carpentry')
+    const sections = get(page.attributes, 'grid-sections')
     return {
       pages,
-      seo
+      page,
+      sections
     }
   },
   components: {
-    Container,
-    ProjectsList
+    Article,
+    TextImageGrid
   },
   mounted() {
     this.setPages(this.$data.pages)

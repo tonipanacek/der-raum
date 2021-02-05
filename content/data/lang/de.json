@@ -4,7 +4,10 @@
     "services": "Leistungen",
     "about": "Über",
     "contact": "Kontakt",
-    "rooms": "Räume"
+    "rooms": "Räume",
+    "studio": "Studio",
+    "carpentry": "Tischlerei",
+    "product": "Produktentwicklung"
   },
   "secondary_navbar_titles": {
     "businessPartner": "Business Partner",

@@ -1,10 +1,12 @@
 ---
 title: Carpentry
+de_title: Tischlerei
+en_title: Carpentry
 grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612521139/WhatsApp_Image_2021-02-04_at_18.22.14_ilmrfd.jpg
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1612451853/Studio_Project_jdxmgn.jpg
   group_number: '1'
   group_position: '1'
 - template: text-section
@@ -48,7 +50,5 @@ grid-sections:
     skills. The prospective carpenters are often taken on in the company after their
     training and thus contribute to our quality standards in the years to come. We
     have already proudly received training awards for our training."
-de_title: Tischlerei
-en_title: Carpentry
 
 ---

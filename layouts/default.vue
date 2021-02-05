@@ -110,6 +110,7 @@ a:visited {
     max-width: 1250px;
     overflow-y: visible;
     padding: 0 2rem;
+    margin: 0 auto;
     // max-height: $main-height;
   }
 }
