@@ -1,33 +1,33 @@
 <template>
   <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
-      <template v-for="(section, index) in sections">
-        <div v-if="section.image" class="section-item image-container">
-          <div class="frame-wrapper">
-            <Frame :n="findOrientation(index) === 'portrait' ? 9 : 12" :d="findOrientation(index) === 'portrait' ? 16 : 9">
-              <img :src="$ta(section, 'image')"/>
-            </Frame>
-          </div>
+    <template v-for="(section, index) in sections">
+      <div v-if="section.image" class="section-item image-container">
+        <div class="frame-wrapper">
+          <Frame :n="findOrientation(index) === 'portrait' ? 9 : 12" :d="findOrientation(index) === 'portrait' ? 16 : 9">
+            <img :src="$ta(section, 'image')"/>
+          </Frame>
         </div>
-        <div v-else class="section-item text">
-          <h1 v-if="section.de_title_of_section">{{ $ta(section, "title_of_section") }}</h1>
-          <vue-markdown>{{ $ta(section, "text_section") }}</vue-markdown>
-        </div>
-      </template>
+      </div>
+      <div v-else class="section-item text">
+        <h1 v-if="section.de_title_of_section">{{ $ta(section, "title_of_section") }}</h1>
+        <vue-markdown>{{ $ta(section, "text_section") }}</vue-markdown>
+      </div>
+    </template>
   </Container>
 </template>
 
 <script>
 import { get } from 'lodash'
+import Article from '~/components/Article'
 import Frame from '~/components/Frame'
 import Container from '~/components/Container'
-import Article from '~/components/Article'
 
 export default {
   name: "TextImageGrid",
   components: {
+    Article,
     Frame,
-    Container,
-    Article
+    Container
   },
   props: {
     page: {
@@ -57,10 +57,41 @@ export default {
       float: left;
       width: 55ch;
     }
-    .text {
+    .frame > img { object-fit: contain }
+    }
+  }
+  .text {
+    padding: spacing(frame);
+    @include respond-to('large') {
+      padding: 0;
       padding-left: 3rem;
     }
-    .frame > img { object-fit: contain }
+    h1 {
+      @include smallCaps;
+      color: color(black);
+      font-weight: 600;
+      @include respond-to('large') {
+        margin-top: 0;
+      }
+    }
+    ul {
+      list-style-type: square;
+    }
+    .link-list {
+      list-style: none;
+      padding: 0;
+      li {
+        line-height: 1.5rem;
+      }
+    }
+    p, ul > li {
+      line-height: 2rem;
+      color: color(dark);
+      font-size: .85rem;
+    }
+    strong {
+      color: color(dark);
+      font-weight: 600;
     }
   }
 </style>

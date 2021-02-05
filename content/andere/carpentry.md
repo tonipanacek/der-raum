@@ -6,7 +6,7 @@ grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612521139/WhatsApp_Image_2021-02-04_at_18.22.14_ilmrfd.jpg
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1612526445/Studio_Project_3_uaca4s.jpg
   group_number: '1'
   group_position: '1'
 - template: text-section

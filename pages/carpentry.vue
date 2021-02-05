@@ -5,7 +5,8 @@
 <script>
 import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
-import Container from "~/components/Container"
+import seo from "~/content/data/seo"
+import Article from "~/components/Article"
 import TextImageGrid from "~/components/TextImageGrid"
 
 export default {
@@ -19,7 +20,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.$t('navbar_titles.carpentry')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.carpentry')}`
     }
   },
   async asyncData() {
@@ -43,7 +44,7 @@ export default {
     }
   },
   components: {
-    Container,
+    Article,
     TextImageGrid
   },
   mounted() {
