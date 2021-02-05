@@ -5,6 +5,8 @@ grid-sections:
   group-number: 1
   group-position: 1
   image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
+  group_number: '1'
+  group_position: '1'
 - template: text-section
   group-number: 1
   group-position: '2'
@@ -20,6 +22,12 @@ grid-sections:
     werden? Welche Beschläge sind zu empfehlen? Wo können Wir individuelle Lösungen
     entwickeln um ein noch besseres Nutzungs- und gestalterisch ansprechendes Ergebnis
     zu gewährleisten?"
+  de_title_of_section: ''
+  en_title_of_section: ''
+  de_text_section: ''
+  en_text_section: ''
+  group_number: 
+  group_position: 
 - template: text-section
   group-number: 1
   group-position: '4'
@@ -31,5 +39,13 @@ grid-sections:
     an einem Ort.   \n  \nWir verstehen uns als Architekturpartner indem wir unsere
     Partner dort abholen wo Sie uns brauchen, von der Beratung bis zur maßgeschneiderten
     Lösung im Einbau."
+  de_title_of_section: ''
+  en_title_of_section: ''
+  de_text_section: ''
+  en_text_section: ''
+  group_number: 
+  group_position: 
+de_title: Studio
+en_title: Studio
 
 ---
