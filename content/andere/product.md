@@ -1,5 +1,5 @@
 ---
-title: Carpentry
+title: Product
 grid-sections:
 - template: image-section
   group-number: 1
@@ -8,8 +8,8 @@ grid-sections:
 - template: text-section
   group_number: 1
   group_position: '2'
-  de_title_of_section: Tischlerei
-  en_title_of_section: Carpentry
+  de_title_of_section: Produktentwicklung
+  en_title_of_section: Product Development
   de_text_section: "Um eine qualitativ hochwertige Ausführung zu gewährleisten, produzieren
     wir ausschließlich in unserer eigenen Bau- und Möbeltischlerei in Berlin-Weißensee.
     \ \nBei uns kommen neueste Produktionstechniken wie CNC-Säge und -Fräse, Furnier-

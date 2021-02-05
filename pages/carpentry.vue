@@ -17,10 +17,16 @@ import ProjectsList from "~/components/ProjectsList"
 
 export default {
   layout: 'layout',
-  name: 'index',
+  name: 'carpentry',
+  nuxtI18n: {
+    paths: {
+      en: '/carpentry',
+      de: '/tischlerei'
+    }
+  },
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar_titles.projects')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.carpentry')}`
     }
   },
   async asyncData() {
@@ -49,8 +55,11 @@ export default {
     this.setPages(this.$data.pages)
     this.setPagesPrefix("projects")
   },
+  destroyed() {
+    this.resetLastPage()
+  },
   methods: {
-    ...mapActions(["setPages", "setPagesPrefix"])
+    ...mapActions(["setPages", "setPagesPrefix", "resetLastPage"])
   },
 }
 </script>

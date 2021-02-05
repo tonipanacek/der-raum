@@ -9,31 +9,30 @@
       <li>
         <ul class="nav-items">
           <li>
-            <!-- <nuxt-link
-              v-if="isOnline('projects')"
-              :to="localePath({ name: 'projects' })"
+            <nuxt-link
+              v-if="isOnline('studio')"
+              :to="localePath({ name: 'studio' })"
               class="nav-item title link"
-            > -->
-            <nuxt-link :to="localePath({ name: 'index' })" class="nav-item title link">
-              {{ $t("navbar_titles.projects") }}
+            >
+              {{ $t("navbar_titles.studio") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
-              v-if="isOnline('services')"
-              :to="localePath({ name: 'services' })"
+              v-if="isOnline('carpentry')"
+              :to="localePath({ name: 'carpentry' })"
               class="nav-item title"
             >
-              {{ $t("navbar_titles.services") }}
+              {{ $t("navbar_titles.carpentry") }}
             </nuxt-link>
           </li>
           <li>
             <nuxt-link
-              v-if="isOnline('rooms')"
-              :to="localePath({ name: 'rooms' })"
+              v-if="isOnline('product')"
+              :to="localePath({ name: 'product' })"
               class="nav-item title"
             >
-              {{ $t("navbar_titles.rooms") }}
+              {{ $t("navbar_titles.product") }}
             </nuxt-link>
           </li>
           <li>
