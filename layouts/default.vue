@@ -134,7 +134,7 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-    width: 255px;
+    width: 200px;
     text-align: left;
     height: $main-height;
     min-height: $main-height;

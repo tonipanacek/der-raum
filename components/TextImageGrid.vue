@@ -53,15 +53,15 @@ export default {
     @include respond-to('large') {
       .image-container {
         float: left;
-        width: 370px;
-        height: 80vh;
-        margin-right: 2rem;
+        width: 55ch;
+        // margin-right: 2rem;
         margin-bottom: 2rem;
+      }
+      .text {
+        padding-left: 3.5rem;
       }
       .frame > img {
         object-fit: contain;
-        width: unset;
-        height: 80vh;
       }
     }
   }
