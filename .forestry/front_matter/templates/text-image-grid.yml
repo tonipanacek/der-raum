@@ -33,4 +33,5 @@ fields:
     1) and which <strong>group position</strong> (position in the group of 4). '
 pages:
 - content/andere/carpentry.md
+- content/andere/product.md
 - content/andere/studio.md
