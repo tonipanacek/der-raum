@@ -33,6 +33,8 @@ text_and_link_group:
   text_url: https://www.clubmarginal.com/
 - main_text: Deutscher Bundestag
   text_url: https://www.bundestag.de/
+- main_text: Fabian Schwade
+  text_url: http://www.fabianschwade.de/
 - main_text: Freunde von Freunden
   text_url: https://www.freundevonfreunden.com/
 - main_text: Friedrichstadt-Palast Berlin
