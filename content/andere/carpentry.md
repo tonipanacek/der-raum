@@ -29,6 +29,24 @@ grid-sections:
     nach Ihrer Ausbildung häufig in den Betrieb übernommen und tragen dadurch zu unserem
     Qualitätsanspruch in den kommenden Jahren bei. Für unsere Ausbildung konnten wir
     bereits stolz Ausbildungspreise entgegen nehmen."
-  en_text_section: ''
+  en_text_section: 'In order to guarantee a high quality finish, we produce exclusively
+    in our own construction and furniture joinery in Berlin-Weißensee. We use the
+    latest production techniques such as CNC saws and milling machines, veneer and
+    pressing machines. The design in the digitally supported CAD area is followed
+    by the direct and seamless transfer to our production technology. The accuracy
+    of digitally controlled programming combined with the experience of our highly
+    skilled team of carpenters and master carpenters thus provides us with ideal conditions
+    for detailed, timely and integrated production. We are able to supervise large
+    projects and reliably implement detailed, individual solutions in production.
+    The finishing of surfaces such as veneer, oil and varnish work is carried out
+    exclusively by qualified and experienced employees of our own joinery. All assembly
+    activities are mapped by us to ensure the full quality of our performance from
+    start to finish.Handicraft means responsibility for us. That''s why we teach our
+    own apprentices high quality workmanship and solid craftsmanship skills. The prospective
+    carpenters are often taken on in the company after their training and thus contribute
+    to our quality standards in the years to come. We have already proudly received
+    training awards for our training.
+
+'
 
 ---
