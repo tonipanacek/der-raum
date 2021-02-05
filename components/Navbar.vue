@@ -10,6 +10,15 @@
         <ul class="nav-items">
           <li>
             <nuxt-link
+              v-if="isOnline('projects')"
+              :to="localePath({ name: 'index' })"
+              class="nav-item title link"
+            >
+              {{ $t("navbar_titles.projects") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
               v-if="isOnline('studio')"
               :to="localePath({ name: 'studio' })"
               class="nav-item title link"
