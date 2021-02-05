@@ -4,10 +4,12 @@ grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612451853/Studio_Project_jdxmgn.jpg
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612521139/WhatsApp_Image_2021-02-04_at_18.22.14_ilmrfd.jpg
+  group_number: 
+  group_position: 
 - template: text-section
   group_number: 1
-  group_position: '2'
+  group_position: 2
   de_title_of_section: Tischlerei
   en_title_of_section: Carpentry
   de_text_section: "Um eine qualitativ hochwertige Ausführung zu gewährleisten, produzieren
@@ -48,5 +50,7 @@ grid-sections:
     training awards for our training.
 
 '
+de_title: Tischlerei
+en_title: Carpentry
 
 ---
