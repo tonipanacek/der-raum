@@ -7,7 +7,7 @@ fields:
   config:
     maxSize: 64
   label: image
-- name: group-number
+- name: group_number
   type: number
   description: In case there is enough content to extend beyond just one group of
     4 sections in the layout. Can specify which group of 4 to be placed in. Should
@@ -18,10 +18,10 @@ fields:
     min: 
     max: 
     step: 1
-  label: group-number
-- name: group-position
+  label: group number
+- name: group_position
   type: number
-  label: group-position
+  label: group position
   description: Groups of 4 content sections in the grid. Can order them 1-4, which
     will go in a clockwise pattern like so:<br>(1) - Top left section -- portrait<br>(2)
     - Top right section -- landscape<br>(3) - Bottom right section -- portrait<br>(4)

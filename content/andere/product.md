@@ -1,33 +1,36 @@
 ---
 title: Product
+de_title: Produktentwicklung
+en_title: Product Development
 grid-sections:
 - template: image-section
-  group-number: 1
-  group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612451853/Studio_Project_jdxmgn.jpg
+  group_number: 1
+  group_position: 1
+  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612521270/WhatsApp_Image_2021-02-04_at_18.25.10_khw38g.jpg
 - template: text-section
   group_number: 1
-  group_position: '2'
+  group_position: 2
   de_title_of_section: Produktentwicklung
   en_title_of_section: Product Development
-  de_text_section: "Um eine qualitativ hochwertige Ausführung zu gewährleisten, produzieren
-    wir ausschließlich in unserer eigenen Bau- und Möbeltischlerei in Berlin-Weißensee.
-    \ \nBei uns kommen neueste Produktionstechniken wie CNC-Säge und -Fräse, Furnier-
-    und Pressmaschinen zum Einsatz. Auf die Konstruktion im digital gestützten CAD-Bereich
-    folgt die direkte und nahtlose Übergabe an unsere Produktionstechnik. Die Genauigkeit
-    der digital gesteuerten Programmierung in Verbindung mit der Erfahrung unseres
-    hochqualifizierten Teams aus Tischlern und Tischlermeistern bietet uns somit ideale
-    Voraussetzungen für eine detaillierte, zeitnahe und ganzheitliche Fertigung. Wir
-    sind in der Lage große Projekte zu betreuen und detailreiche, individuelle Lösungen
-    in der Fertigung zuverlässig umzusetzen.  \nDas veredeln von Oberflächen wie Furnier,
-    Öl- und Lackierarbeiten führen wir ausschließlich mit qualifizierten und erfahrenen
-    Mitarbeitern unserer eigenen Tischlerei durch. Sämtliche Montagetätigkeiten werden
-    durch uns abgebildet, um von Anfang bis zum Ende die volle Qualität unserer Leistung
-    zu gewährleisten.  \nHandwerk bedeutet für uns Verantwortung. Deshalb vermitteln
-    wir durch unsern eigenen Auszubildenden eine qualitativ hochwertige Ausführung
-    und fundierte, handwerkliche Fertigkeiten. Die angehenden Tischler*innen werden
-    nach Ihrer Ausbildung häufig in den Betrieb übernommen und tragen dadurch zu unserem
-    Qualitätsanspruch in den kommenden Jahren bei. Für unsere Ausbildung konnten wir
-    bereits stolz Ausbildungspreise entgegen nehmen."
-  en_text_section: ''
+  de_text_section: "Wir verstehen unsere Aufgabe darin, architektonische Projekte
+    im Detail zu ergänzen.   \n  \nDa, wo uns das Angebot unserer Lieferanten nicht
+    ausreicht, setzen wir an uns entwickeln eigene Produkte. Von Griffsituationen
+    und Gewürzaufbewahrungen über Garderobenstangen bis hin zum eigenen Gemüse-Abfallsammler,
+    verstehen wir unsere Aufgabe darin, uns und unsere Produktionsvielfalt jeden Tag
+    auf Neue zu hinterfragen und verbessern.  \n  \nUnser Ziel ist es dabei nicht,
+    ein Massentaugliches Produkt auf den Markt zu bringen. Wir arbeiten ausschließlich
+    dafür, vorhandene, architektonische Gesamtkonzepte im Detail zu veredeln und den
+    Gegebenheiten mit unserer Erfahrung und Know-How noch optimaler anzupassen. Nur
+    so kommen wir unserem Anspruch nah, unsere Erfahrung optimal für jedes Projekt
+    einzusetzen."
+  en_text_section: "We understand our task to complement architectural projects in
+    detail.   \n  \nWhere the offer of our suppliers is not enough for us, we start
+    to develop our own products. From handles and spice racks to coat racks and our
+    own vegetable waste collector, we see our task in questioning and improving ourselves
+    and our production diversity every day anew.  \n  \nOur goal is not to bring a
+    mass-produced product to the market. We work exclusively to refine existing, overall
+    architectural concepts in detail and to adapt them even more optimally to the
+    circumstances with our experience and know-how. Only in this way do we come close
+    to our claim of optimally applying our experience to every project."
+
 ---
