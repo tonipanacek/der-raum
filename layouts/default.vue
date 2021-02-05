@@ -110,6 +110,7 @@ a:visited {
     max-width: 1250px;
     overflow-y: visible;
     padding: 0 2rem;
+    margin: 0 auto;
     // max-height: $main-height;
   }
 }
@@ -133,7 +134,7 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-    width: 225px;
+    width: 255px;
     text-align: left;
     height: $main-height;
     min-height: $main-height;

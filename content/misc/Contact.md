@@ -1,7 +1,7 @@
 ---
 de_title: Kontakt
 en_title: Contact
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580904552/kontakt3_h6xnua.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1612529664/Studio_Project_4_sffiyy.jpg
 de_first_column: Beratungstermin vereinbaren
 en_first_column: Arrange Appointment
 telephone_1: 030 927943501
