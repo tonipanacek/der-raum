@@ -5,8 +5,8 @@ grid-sections:
   group-number: 1
   group-position: 1
   image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612521139/WhatsApp_Image_2021-02-04_at_18.22.14_ilmrfd.jpg
-  group_number: 
-  group_position: 
+  group_number: '1'
+  group_position: '1'
 - template: text-section
   group_number: 1
   group_position: 2
