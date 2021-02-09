@@ -1,6 +1,6 @@
 ---
 title: Haus Wandlitz
-online: true
+online: false
 orientation: landscape
 featured_project: false
 group: 2
