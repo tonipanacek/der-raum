@@ -62,7 +62,7 @@ text_and_link_group:
 - main_text: OuterRim Architecture
   text_url: https://www.or-architecture.de/
 - main_text: Reinhard Architekten
-  text_url: http://www.struempfel-architekten.de/
+  text_url: https://reinhard-architekten.de/
 - main_text: RBB
   text_url: https://www.rbb24.de/
 - main_text: Schindler
