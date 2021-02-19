@@ -13,10 +13,10 @@ images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1613736625/Einbauschrank-Homeoffice_p4jctf.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1613736625/Einbaukueche-Einbauschrank-lila-weiss-lackiert_d6d7vs.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1613736625/Badezimmer-Waschtisch-weiss-Einbauschrank_i45nsv.jpg
-en_title: 'Thomas Bendel Architekt / Photos: Christina Dimitriadis'
-de_title: 'Thomas Bendel Architekt / Fotos: Christina Dimitriadis'
+en_title: Kubus
+de_title: 'Thomas Bendel Architekt / Photos: Christina Dimitriadis'
 en_description: ''
-de_description: ''
+de_description: 'Thomas Bendel Architekt / Fotos: Christina Dimitriadis'
 meta_tags:
   de_title: ''
   en_title: ''
