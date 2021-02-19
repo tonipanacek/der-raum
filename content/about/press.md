@@ -9,7 +9,7 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
-- main_text: AD "Highend-Handwerk aus Weißensee" / 2021
+- main_text: AD "Highend-Handwerk aus Weißensee" // 2021
   text_url: https://www.ad-magazin.de/article/highend-handwerk-kuechen-der-tischlerei-der-raum-berlin
 - main_text: Frankfurter Allgemeine Zeitung "Das Beste aus zwei Wohnwelten" // 2021
   text_url: https://www.faz.net/anbauten-das-beste-aus-zwei-wohnwelten-17171830.html
