@@ -122,6 +122,7 @@ fields:
   description: For SEO
 pages:
 - content/projects/1-unze.md
+- content/projects/3-kuben.md
 - content/projects/abbey-road.md
 - content/projects/apartment-42.md
 - content/projects/f65.md
