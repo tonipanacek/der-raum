@@ -3,7 +3,7 @@ online: true
 group: 4
 group_position: 3
 orientation: landscape
-title: 3 Kuben
+title: Kubus
 architect_name: Thomas Bendel Architekt
 featured_project: false
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1613736608/Kochinsel-Kueche-Einbauschrank-lila-weiss-lackiert_xr75zw.jpg
