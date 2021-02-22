@@ -2,7 +2,7 @@
   <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
     <template v-for="(section, index) in sections">
       <div v-if="section.image" class="section-item image-container">
-        <Frame :n="findOrientation(index) === 'portrait' ? 9 : 12" :d="findOrientation(index) === 'portrait' ? 16 : 9">
+        <Frame :n="findOrientation(index) === 'portrait' ? 9 : 16" :d="findOrientation(index) === 'portrait' ? 16 : 9">
           <img :src="$ta(section, 'image')"/>
         </Frame>
       </div>
@@ -49,22 +49,22 @@ export default {
 </script>
 
 <style lang="scss">
-  .text-image-grid {
-    @include respond-to('large') {
-      .image-container {
-        float: left;
-        width: 55ch;
-        // margin-right: 2rem;
-        margin-bottom: 2rem;
-      }
-      .text {
-        padding-left: 3.5rem;
-      }
-      .frame > img {
-        object-fit: contain;
-      }
-    }
+$main-height: calc(100vh - #{spacing(frame)});
+.text-image-grid {
+  @include respond-to('large') {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: fit-content(260px);
+    grid-auto-flow: row dense;
   }
+  .image-container {
+    // max-height: $main-height;
+    // overflow: hidden;
+    position: sticky;
+    top: 2rem;
+  }
+}
   .text {
     padding: spacing(frame);
     @include respond-to('large') {
