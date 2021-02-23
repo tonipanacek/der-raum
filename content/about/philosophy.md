@@ -1,7 +1,7 @@
 ---
 position: 2
 title: Philosophy
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1614098872/Baumhoff-DER-RAUM_rsnpbr.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1614099569/Baumhoff-DER-RAUM-Philosophie_pjq40x.png
 en_title: Philosophy
 de_title: Philosophie
 en_description: "For more than 25 years, we see our mission to add detail to architectural
