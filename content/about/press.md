@@ -9,9 +9,8 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
-- main_text: Brandenburgische Architektenkammer // "Ein Wohnmöbel in Holzbauweise"
-    // 2015
-  text_url: https://www.ak-brandenburg.de/content/haus-wandlitz-ein-wohnm%C3%B6bel-holzbauweise
+- main_text: Deutsche BauZeitschrift // "Erweiterungsbau für eine Villa" // 2021
+  text_url: https://www.dbz.de/artikel/dbz_Erweiterungsbau_fuer_eine_Villa_Berlin_3601249.html
 - main_text: AD "Highend-Handwerk aus Weißensee" // 2021
   text_url: https://www.ad-magazin.de/article/highend-handwerk-kuechen-der-tischlerei-der-raum-berlin
 - main_text: Frankfurter Allgemeine Zeitung "Das Beste aus zwei Wohnwelten" // 2021
@@ -28,6 +27,9 @@ text_and_link_group:
   text_url: https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten
 - main_text: DDS // "Über das Rendering auf die CNC" // 2016
   text_url: https://www.dds-online.de/allgemein/ueber-das-rendering-auf-die-cnc/#slider-intro-8
+- main_text: Brandenburgische Architektenkammer // "Ein Wohnmöbel in Holzbauweise"
+    // 2015
+  text_url: https://www.ak-brandenburg.de/content/haus-wandlitz-ein-wohnm%C3%B6bel-holzbauweise
 - main_text: The New York Times Magazine // "Just Outside Berlin, a Design and Arts
     Scene Thrives" // 2015
   text_url: https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/
