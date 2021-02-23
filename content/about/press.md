@@ -9,6 +9,9 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: Brandenburgische Architektenkammer // "Ein Wohnmöbel in Holzbauweise"
+    // 2015
+  text_url: https://www.ak-brandenburg.de/content/haus-wandlitz-ein-wohnm%C3%B6bel-holzbauweise
 - main_text: AD "Highend-Handwerk aus Weißensee" // 2021
   text_url: https://www.ad-magazin.de/article/highend-handwerk-kuechen-der-tischlerei-der-raum-berlin
 - main_text: Frankfurter Allgemeine Zeitung "Das Beste aus zwei Wohnwelten" // 2021
