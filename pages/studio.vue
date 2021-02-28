@@ -1,5 +1,5 @@
 <template>
-  <TextImageGrid :page="page" :sections="sections" />
+  <TextImageGrid :page="page" />
 </template>
 
 <script>
@@ -36,11 +36,9 @@ export default {
     })
 
     const page = pages.find(p => get(p, `attributes.title`) === 'Studio')
-    const sections = get(page.attributes, 'grid-sections')
     return {
       pages,
-      page,
-      sections
+      page
     }
   },
   components: {

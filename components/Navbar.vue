@@ -46,11 +46,29 @@
           </li>
           <li>
             <nuxt-link
-              v-if="isOnline('about')"
-              :to="localePath({ name: 'about' })"
+              v-if="isOnline('philosophy')"
+              :to="localePath({ name: 'philosophy' })"
               class="nav-item title"
             >
-              {{ $t("navbar_titles.about") }}
+              {{ $t("navbar_titles.philosophy") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              v-if="isOnline('partners')"
+              :to="localePath({ name: 'partners' })"
+              class="nav-item title"
+            >
+              {{ $t("navbar_titles.partners") }}
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link
+              v-if="isOnline('press')"
+              :to="localePath({ name: 'press' })"
+              class="nav-item title"
+            >
+              {{ $t("navbar_titles.press") }}
             </nuxt-link>
           </li>
           <li>

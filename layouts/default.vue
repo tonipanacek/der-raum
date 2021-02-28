@@ -109,14 +109,14 @@ a:visited {
     width: 500px;
     max-width: 1250px;
     overflow-y: visible;
-    padding: 0 2rem;
     margin: 0 auto;
+    padding: 0 1rem;
     // max-height: $main-height;
   }
 }
 
 .mt-lg {
-  margin-top: spacing(lg);
+  margin-top: 1rem;
   @include respond-to('large') {
     margin-top: 0;
   }
@@ -134,7 +134,7 @@ a:visited {
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-    width: 200px;
+    width: 250px;
     text-align: left;
     height: $main-height;
     min-height: $main-height;

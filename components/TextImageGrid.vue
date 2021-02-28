@@ -1,16 +1,14 @@
 <template>
   <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
-    <template v-for="(section, index) in sections">
-      <div v-if="section.image" class="section-item image-container">
-        <Frame :n="findOrientation(index) === 'portrait' ? 9 : 16" :d="findOrientation(index) === 'portrait' ? 16 : 9">
-          <img :src="$ta(section, 'image')"/>
-        </Frame>
-      </div>
-      <div v-else class="section-item text">
-        <h1 v-if="section.de_title_of_section">{{ $ta(section, "title_of_section") }}</h1>
-        <vue-markdown>{{ $ta(section, "text_section") }}</vue-markdown>
-      </div>
-    </template>
+    <div class="section-item image-container">
+      <Frame :n="16" :d="9">
+        <img :src="$ta(page.attributes, 'image')"/>
+      </Frame>
+    </div>
+    <div class="section-item text">
+      <h1>{{ $ta(page.attributes, "title_of_section") }}</h1>
+      <vue-markdown>{{ $ta(page.attributes, "text_section") }}</vue-markdown>
+    </div>
   </Container>
 </template>
 
@@ -31,18 +29,11 @@ export default {
     page: {
       type: Object,
       required: true
-    },
-    sections: {
-      type: Array,
-      required: true
     }
   },
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
-    },
-    findOrientation(index) {
-      return index % 2 === 1 ? "portrait" : "landscape"
     }
   }
 }
@@ -54,21 +45,29 @@ $main-height: calc(100vh - #{spacing(frame)});
   @include respond-to('large') {
     display: grid;
     column-gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: fit-content(260px);
     grid-auto-flow: row dense;
   }
+  @include respond-to('xl') {
+    grid-template-columns: 1fr 200px 1fr;
+  }
   .image-container {
-    // max-height: $main-height;
-    // overflow: hidden;
-    position: sticky;
-    top: 2rem;
+    @include respond-to('large') {
+      position: sticky;
+      top: 2rem;
+      height: calc(100vh - 4rem);
+      overflow: hidden;
+    }
   }
 }
   .text {
     padding: spacing(frame);
     @include respond-to('large') {
       padding: 0;
+    }
+    @include respond-to('xl') {
+      grid-column: span 2;
     }
     h1 {
       @include smallCaps;
@@ -96,6 +95,12 @@ $main-height: calc(100vh - #{spacing(frame)});
     strong {
       color: color(dark);
       font-weight: 600;
+    }
+  }
+
+  #philosophy, #philosophie {
+    .frame > img {
+      object-position: top;
     }
   }
 </style>
