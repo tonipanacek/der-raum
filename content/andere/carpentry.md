@@ -2,7 +2,7 @@
 title: Carpentry
 de_title: Tischlerei
 en_title: Carpentry
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612451853/Studio_Project_jdxmgn.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1614542167/tischlerei_mj0q3t.jpg
 de_title_of_section: Tischlerei
 en_title_of_section: Carpentry
 de_text_section: |-

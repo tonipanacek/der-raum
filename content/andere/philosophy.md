@@ -2,7 +2,7 @@
 title: Philosophy
 de_title: Philosophie
 en_title: Philosophy
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1614097844/241120-07-165-online_mwyu8n.jpg
+image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1614097844/q_auto,f_auto,dpr_auto/241120-07-165-online_mwyu8n.jpg
 de_title_of_section: Philosophie
 en_title_of_section: Philosophy
 de_text_section: |-

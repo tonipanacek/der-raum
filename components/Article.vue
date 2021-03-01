@@ -32,7 +32,7 @@ export default {
   .text {
     padding: spacing(frame);
     @include respond-to(large) {
-      margin-top: spacing(frame);
+      // margin-top: spacing(frame);
       padding: 0;
       padding-bottom: 1em;
     }

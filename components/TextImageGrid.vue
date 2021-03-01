@@ -1,5 +1,5 @@
 <template>
-  <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
+  <Container class="text-image-grid article" :id="formatSlug($ta(page.attributes, 'title'))">
     <div class="section-item image-container">
       <Frame :n="16" :d="9">
         <img :src="$ta(page.attributes, 'image')"/>
@@ -87,7 +87,7 @@ $main-height: calc(100vh - #{spacing(frame)});
         line-height: 1.5rem;
       }
     }
-    p, ul > li {
+    p, a, ul > li {
       line-height: 2rem;
       color: color(dark);
       font-size: .85rem;
@@ -103,4 +103,6 @@ $main-height: calc(100vh - #{spacing(frame)});
       object-position: top;
     }
   }
+
+
 </style>

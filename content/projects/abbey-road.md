@@ -5,7 +5,7 @@ orientation: portrait
 featured_project: false
 group: 2
 group_position: 3
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
+main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
 images:
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580479885/Kueche-Sideboard--Kuechenzeile--schwarz-Unterschraenke_uxzrod.jpg
