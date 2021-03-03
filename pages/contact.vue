@@ -69,12 +69,9 @@ $main-height: calc(100vh - #{spacing(frame)});
   @include respond-to('large') {
     display: grid;
     column-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 200px 1fr;
     grid-auto-rows: fit-content(260px);
     grid-auto-flow: row dense;
-  }
-  @include respond-to('xl') {
-    grid-template-columns: 1fr 200px 1fr;
   }
   .image-container {
     @include respond-to('large') {
@@ -89,8 +86,6 @@ $main-height: calc(100vh - #{spacing(frame)});
     padding: spacing(frame);
     @include respond-to('large') {
       padding: 0;
-    }
-    @include respond-to('xl') {
       grid-column: span 2;
     }
     h1 {
