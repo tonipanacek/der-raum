@@ -6,9 +6,9 @@ grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1614542167/tischlerei_mj0q3t.jpg
-  group_number: '1'
-  group_position: '1'
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1615055239/tischlerei_mj0q3t_a0zsll.jpg
+  group_number: 1
+  group_position: 1
 - template: text-section
   group_number: 1
   group_position: 2
