@@ -5,16 +5,17 @@ orientation: portrait
 featured_project: false
 group: 4
 group_position: 1
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480518/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1615057740/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq_t6y4q2.jpg
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480518/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579779372/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480475/Kueche-Arbeitsplatte-Rosa-Marmor_hbs1ge.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480496/040-Kueche-blau-lackiert-Schrank-Vitrine_a2seyk.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480517/Kueche-rosa-lackiert-Marmor-Griffe-weiss_vyyd1k.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480517/011-Kueche-blau-lackiert-Schrank-Vitrine_xkdlkm.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480545/Kueche-blau-lackiert-Schrank-Wohnkueche_htldow.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580480545/Glas-Kueche-blau-lackiert-Schrank-Vitrine_y21k4m.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1615057740/Kueche-blau-lackiert-Schrank-Vitrine-Griffe_tqzrzq_t6y4q2.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948034/012-Kueche-blau-lackiert-Schrank-Vitrine_zhxlqz_fgyadl.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948034/011-Kueche-blau-lackiert-Schrank-Vitrine_vmgb9l_mjhdkv.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948034/030-Kueche-rosa-lackiert-Marmor-Griffe-weiss_exwq2m_dbrhbe.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948035/031Kueche-rosa-lackiert-Marmor-Griffe-weiss_vg0cix_h9su8r.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948034/020-Kueche-rosa-lackiert-Kuechenzeile_jq8oes_tt0hc7.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614949164/040-Kueche-blau-lackiert-Schrank-Vitrine_ub8m0e-min_vqcrrp.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948034/010-Kueche-blau-lackiert-Schrank-Vitrine_kcyeed_fvd74s.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614949164/050-Kueche-blau-lackiert-Schrank-Vitrine_drflhn-min_vxjoa0.jpg
 en_title: Kontrast
 de_title: Kontrast
 en_description: 'Photos: Michel Sass'
