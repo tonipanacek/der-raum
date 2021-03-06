@@ -6,7 +6,7 @@ grid-sections:
 - template: image-section
   group_number: 1
   group_position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1612526156/Studio_Project_1_z7ljbq.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1615055239/tischlerei_mj0q3t_a0zsll.jpg
 - template: text-section
   group_number: 1
   group_position: 2
