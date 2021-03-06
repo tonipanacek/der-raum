@@ -6,9 +6,9 @@ grid-sections:
 - template: image-section
   group-number: 1
   group-position: 1
-  image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
-  group_number: '1'
-  group_position: '1'
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947617/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg_u2ydip.jpg
+  group_number: 1
+  group_position: 1
 - template: text-section
   group-number: 1
   group-position: '2'
