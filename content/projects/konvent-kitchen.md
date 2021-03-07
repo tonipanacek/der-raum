@@ -13,7 +13,6 @@ images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947621/Einbaukueche-eiche-pivot-tuer-raumhoch_vnjo19_azmajw.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947634/holz-lamellen-wandpaneele-design-architektur_zi2igq_scxo87.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947646/Kuechenzeile-Eiche-Front-Hochwertig_fwj9a1_l3pjvx.jpg
-- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947644/kuechennische-naturstein-holz-lamellen_mahlna_mky4x3.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947642/kueche-nach-mass-kuechenzeile-hochwertig_tj9nfl_zeftfp.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947659/Spuelbecken-Stein-Holz-Nische-Lamellen-Design-Handwerk_an8lwm_igrdbv.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947657/Schubladen-auszug-holz-eiche-design-architektur-handwerk_rcx2fr_sa7wqb.jpg
