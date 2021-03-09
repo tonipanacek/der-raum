@@ -21,6 +21,4 @@ en_text_section: |-
   In sketches, drafts and precise visualizations, the wishes and requirements of our clients can be developed, refined and shaped from the first idea to the last detail. This is where the advantage of well-founded technical expertise of our well-coordinated team and spatial-haptic experience in one place becomes apparent.
 
   We see ourselves as an architectural partner by picking up our partners where they need us, from the consultation to the customized solution in the installation.
-group_number: 1
-group_position: 2
 ---

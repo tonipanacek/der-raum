@@ -1,5 +1,5 @@
 <template>
-  <Container class="text-image-grid article" :id="formatSlug($ta(page.attributes, 'title'))">
+  <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
     <div class="section-item image-container">
       <Frame :n="16" :d="9">
         <img :src="$ta(page.attributes, 'image')"/>
@@ -45,12 +45,9 @@ $main-height: calc(100vh - #{spacing(frame)});
   @include respond-to('large') {
     display: grid;
     column-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 200px 1fr;
     grid-auto-rows: fit-content(260px);
     grid-auto-flow: row dense;
-  }
-  @include respond-to('xl') {
-    grid-template-columns: 1fr 200px 1fr;
   }
   .image-container {
     @include respond-to('large') {
@@ -61,48 +58,44 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
 }
-  .text {
-    padding: spacing(frame);
+.text {
+  padding: spacing(frame);
+  @include respond-to('large') {
+    padding: 0;
+    grid-column: span 2;
+  }
+  h1 {
+    @include smallCaps;
+    color: color(black);
+    font-weight: 600;
     @include respond-to('large') {
-      padding: 0;
-    }
-    @include respond-to('xl') {
-      grid-column: span 2;
-    }
-    h1 {
-      @include smallCaps;
-      color: color(black);
-      font-weight: 600;
-      @include respond-to('large') {
-        margin-top: 0;
-      }
-    }
-    ul {
-      list-style-type: square;
-    }
-    .link-list {
-      list-style: none;
-      padding: 0;
-      li {
-        line-height: 1.5rem;
-      }
-    }
-    p, a, ul > li {
-      line-height: 2rem;
-      color: color(dark);
-      font-size: .85rem;
-    }
-    strong {
-      color: color(dark);
-      font-weight: 600;
+      margin-top: 0;
     }
   }
-
-  #philosophy, #philosophie {
-    .frame > img {
-      object-position: top;
+  ul {
+    list-style-type: square;
+  }
+  .link-list {
+    list-style: none;
+    padding: 0;
+    li {
+      line-height: 1.5rem;
     }
   }
+  p, a, ul > li {
+    line-height: 2rem;
+    color: color(dark);
+    font-size: .85rem;
+  }
+  strong {
+    color: color(dark);
+    font-weight: 600;
+  }
+}
 
-
+#philosophy, #philosophie {
+  .frame > img {
+    object-position: top;
+  }
+}
 </style>

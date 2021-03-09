@@ -1,7 +1,7 @@
 ---
 de_title: Kontakt
 en_title: Contact
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1601626106/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947617/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg_u2ydip.jpg
 de_first_column: Beratungstermin vereinbaren
 en_first_column: Arrange Appointment
 email: kontakt@der-raum.de

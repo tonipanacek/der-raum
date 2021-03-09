@@ -2,7 +2,7 @@
 title: Product
 de_title: Produktentwicklung
 en_title: Product Development
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579779230/q_auto,f_auto,dpr_auto/006-kueche_Loft-schwarz-schublade_yb2xqu.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948788/040_Buero-Office-Griff-Schattenfuge_ueokzn_giz22l.jpg
 de_title_of_section: Produktentwicklung
 en_title_of_section: Product Development
 de_text_section: |-
