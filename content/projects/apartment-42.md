@@ -7,17 +7,17 @@ group_position: 1
 online: true
 main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
 images:
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947651/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq_h1bbp8.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947635/Kochinsel-Kueche-Edel-schwarz-schubkasten_javn0c_n1ci8w.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947609/Badezimmer-Einbauschrank-raumhoch-schwarz-edel_vfchut_z8pz0o.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947655/Schiebetuer-Massivholz-Kochinsel-Steinplatte_rp96co_hefvmb.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947650/Loft-Kueche-schwarz-hochwertig-Massivholz_g9pnqn_o9b4wo.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947662/Treppe-Massivholz-Schiebetuer-Holz-Eiche_ejvwxr_tqatwn.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947633/Hochwertiger-Einbauschrank-nach-mass_waitib_ybgfbn.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947633/hochwertige-kueche-Kochinsel-Mittelblock-schwarz_ceycus_gotivv.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947653/perfekter-Einbauschrank-nach-mass-schwarz-hochwertig_sypj1m_b6sgd1.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947639/Kueche-Griff-Front-Detail-Handwerk-Buster-Punch_l7lpqu_hcmfk0.jpg
 - https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973020/Kochinsel-Kueche-Edel-schwarz-schubkasten_javn0c.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973020/Badezimmer-Einbauschrank-raumhoch-schwarz-edel_vfchut.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973022/Schiebetuer-Massivholz-Kochinsel-Steinplatte_rp96co.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973020/Loft-Kueche-schwarz-hochwertig-Massivholz_n8gzxf.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/Treppe-Massivholz-Schiebetuer-Holz-Eiche_ejvwxr.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/Hochwertiger-Einbauschrank-nach-mass_waitib.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973019/hochwertige-kueche-Kochinsel-Mittelblock-schwarz_ceycus.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/perfekter-Einbauschrank-nach-mass-schwarz-hochwertig_sypj1m.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1585052744/Kueche-Griff-Front-Detail-Handwerk-Buster-Punch_l7lpqu.jpg
 en_title: Apartment42
 de_title: Apartment42
 en_description: 'Photos: Maximilian Gödecke'

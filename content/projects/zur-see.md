@@ -5,13 +5,14 @@ online: true
 featured_project: false
 group: 1
 group_position: 3
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587126643/_MG_2304_zy2vge.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947602/_MG_2304_zy2vge_ldjteu.jpg
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587126643/_MG_2304_zy2vge.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587126652/060-Einbauschrank-Arbeitsflaeche-Kuechenzeile_yfhf6k.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587126652/050-Einbauschrank-Arbeitsflaeche-Kuechenzeile_riqalf.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587126618/010-Einbauschrank-Arbeitsflaeche-Kueche_a3dkdc.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1587127169/040-Einbauschrank-Arbeitsflaeche-Kuechenzeile_ubi5rd.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947602/_MG_2304_zy2vge_ldjteu.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947606/060-Einbauschrank-Arbeitsflaeche-Kuechenzeile_yfhf6k_d7doad.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947604/050-Einbauschrank-Arbeitsflaeche-Kuechenzeile_riqalf_vri6s5.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947602/010-Einbauschrank-Arbeitsflaeche-Kueche_a3dkdc_dwfz76.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947602/040-Einbauschrank-Arbeitsflaeche-Kuechenzeile_ubi5rd_tiskur.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947602/030-Einbauschrank-Arbeitsflaeche-Kuechenzeile_jykhhc_jzwbie.jpg
 en_title: Zur See
 de_title: Zur See
 en_description: Fabian Schwade

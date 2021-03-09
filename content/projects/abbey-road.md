@@ -5,14 +5,16 @@ orientation: portrait
 featured_project: false
 group: 2
 group_position: 3
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948535/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h_fzc35q.jpg
 images:
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579784087/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580479885/Kueche-Sideboard--Kuechenzeile--schwarz-Unterschraenke_uxzrod.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580479900/Kueche-raeuchereiche-schwarz-naturstein-Armatur-gold-rose_mtfyhw.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579784088/Einbauschrank-wandhoch-Eiche-Schrank_si84rx.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1579784088/Kuechenzeile-Arbeitsplatte-Stein-Kueche-schwarz_qogimv.jpg
-- https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1580479926/Sideboard-Kuechenzeile-Wohnkueche_bp25zm.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948535/Kuechenzeile-Sideboard-Wohnzimmer-Einbauschrank_yx4i2h_fzc35q.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614949165/Kueche-Sideboard--Kuechenzeile--schwarz-Unterschraenke_uxzrod_dvrvwy.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614949165/Kueche-raeuchereiche-schwarz-naturstein-Armatur-gold-rose_mtfyhw_r4kipu.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948535/Einbauschrank-wandhoch-Eiche-Schrank_si84rx_rdxcfe.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948533/Einbauschrank-wandhoch-Fronten-Einteilung_mrltcv_oxsctt.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948533/Einbauschrank-schwarz-wandhoch-hochwertig_k9pxex_cyoih5.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948534/Kuechenzeile-Arbeitsplatte-Stein-Kueche-schwarz_qogimv_dowqv1.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614949166/Sideboard-Kuechenzeile-Wohnkueche_bp25zm_cklhga.jpg
 en_title: Abbey Road
 de_title: Abbey Road
 en_description: Bundschuh Architekten
