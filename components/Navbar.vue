@@ -130,7 +130,6 @@ export default {
   },
   watch: {
     $route (to, from) {
-      console.log(to.path.match(/projekte/))
       if (window.matchMedia( "(max-width: 1024px)" ).matches && to.path !== '/') {
         if (to.path.match(/projekte/)) {
           document.body.classList.remove('no-scroll');
