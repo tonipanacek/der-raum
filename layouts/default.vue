@@ -57,11 +57,11 @@ export default {
 <style scoped lang="scss">
 
 .page-enter-active, .page-leave-active {
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.5s ease;
 }
 .page-enter, .page-leave-to {
   opacity: 0;
-  transition: opacity .3s ease;
+  // transition: opacity .1s ease;
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});

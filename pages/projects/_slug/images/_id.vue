@@ -167,10 +167,11 @@ export default {
       widthChange(mq);
     },
     setDocHeight() {
+      if (this.$route.path.includes('bilder') || this.$route.path.includes('images')) {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
         document.querySelector('body').style.height = window.innerHeight + 'px';
         document.querySelector('#projects').style.height = window.innerHeight + 'px';
-        // document.querySelector('.image-container').style.height = window.innerHeight + 'px';
+      }
     },
     handleSwipe(direction) {
       if (direction === 'left') {
@@ -305,8 +306,6 @@ export default {
     position: relative;
     width: 100%;
     height: 100%;
-    // height: calc(var(--vh, 1vh) * 100);
-    // height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
     &.landscape {
@@ -315,7 +314,7 @@ export default {
     &.portrait {
       background-size: cover;
     }
-    @media (orientation: landscape) {
+    @media screen and (min-width: 30em) and (orientation: landscape) {
       &.landscape {
         background-size: cover;
       }

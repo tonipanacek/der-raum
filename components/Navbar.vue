@@ -7,16 +7,23 @@
         </nuxt-link>
       </li>
       <li>
+        <button
+          aria-expanded="false"
+          aria-controls="menu-list"
+          class="btn btn-burger"
+          @click="toggleMobileMenu"
+        >
+          <img src="~/assets/images/burgermenu.png" alt="Hamburger Menu">
+        </button>
+        <button
+          aria-expanded="true"
+          aria-controls="menu-list"
+          class="btn btn-close hidden"
+          @click="toggleMobileMenu"
+        >
+          <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Menu" />
+        </button>
         <ul class="nav-items">
-          <li>
-            <nuxt-link
-              v-if="isOnline('projects')"
-              :to="localePath({ name: 'index' })"
-              class="nav-item title link"
-            >
-              {{ $t("navbar_titles.projects") }}
-            </nuxt-link>
-          </li>
           <li>
             <nuxt-link
               v-if="isOnline('studio')"
@@ -41,7 +48,7 @@
               :to="localePath({ name: 'product' })"
               class="nav-item title"
             >
-              {{ $t("navbar_titles.product") }}
+              {{ $t('navbar_titles.product') }}
             </nuxt-link>
           </li>
           <li>
@@ -106,24 +113,65 @@ export default {
     isOnline(menuItem) {
       const onlineNavbar = this.menuItems.map(item => item.toLowerCase())
       return onlineNavbar.includes(menuItem)
+    },
+    widthChange() {
+      const mq = window.matchMedia( "(max-width: 1024px)" );
+      return mq.matches
+    },
+    toggleMobileMenu() {
+      const navItems = document.querySelector('.nav-items');
+      const hamburger = document.querySelector('.btn-burger');
+      const close = document.querySelector('.btn-close');
+      navItems.classList.toggle('show');
+      document.body.classList.toggle('no-scroll');
+      hamburger.classList.toggle('hidden');
+      close.classList.toggle('hidden');
+    }
+  },
+  watch: {
+    $route (to, from) {
+      console.log(to.path.match(/projekte/))
+      if (window.matchMedia( "(max-width: 1024px)" ).matches && to.path !== '/') {
+        if (to.path.match(/projekte/)) {
+          document.body.classList.remove('no-scroll');
+        } else {
+          this.toggleMobileMenu();
+        }
+      }
     }
   }
 }
 </script>
 
 <style lang="scss">
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background: inherit;
+  padding: 0;
+  cursor: pointer;
+  @include respond-to('large') {
+    display: none;
+  }
+}
+.btn-close {
+  img, svg {
+    width: 30px;
+    height: 25px;
+  }
+}
 .navbar ul {
   list-style: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
-  padding-inline-end: 0;
-  padding-block-start: 0;
-  padding-block-end: 0;
-  -webkit-padding-start: 0;
-
+  margin: 0;
+  padding: 0;
   li {
     display: block;
   }
@@ -163,16 +211,20 @@ export default {
     }
   }
   .nav-items {
-    padding-left: 0;
-    li:first-child {
-      a {
-        margin-top: 0;
-        line-height: .7rem;
-      }
-    }
-    margin-top: 0;
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    bottom: 0;
+    left: calc(4rem + 80px);
+    z-index: 10;
+    padding-right: 2rem;
+    background: white;
+    display: none;
     @include respond-to('large') {
+      display: block;
       margin-top: spacing(md);
+      padding-right: 0;
+      position: static;
     }
   }
 }

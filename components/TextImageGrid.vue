@@ -1,5 +1,5 @@
 <template>
-  <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
+  <Container class="text-image-grid article" :id="formatSlug($ta(page.attributes, 'title'))">
     <div class="section-item image-container">
       <Frame :n="16" :d="9">
         <img :src="$ta(page.attributes, 'image')"/>
@@ -96,6 +96,11 @@ $main-height: calc(100vh - #{spacing(frame)});
 #philosophy, #philosophie {
   .frame > img {
     object-position: top;
+  }
+}
+#partners, #partner {
+  .frame > img {
+    object-position: bottom;
   }
 }
 </style>
