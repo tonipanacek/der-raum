@@ -21,6 +21,6 @@ de_third_column: Wir suchen ein/e Berater*in!
 en_third_column: We are looking for a consultant!
 de_cv_description: Lebenslauf mit Anschreiben
 en_cv_description: CV and Cover Letter
-cv_email: ausbildung@holz-raum.de
+cv_email: kontakt@der-raum.de
 
 ---
