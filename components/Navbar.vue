@@ -216,7 +216,7 @@ export default {
     bottom: 0;
     left: calc(4rem + 80px);
     z-index: 10;
-    padding-right: 2rem;
+    padding-right: 1rem;
     background: white;
     display: none;
     @include respond-to('large') {

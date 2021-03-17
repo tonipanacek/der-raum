@@ -127,7 +127,7 @@ a:visited {
   flex-direction: column;
 }
 .left-sidebar {
-  padding: 0 2em;
+  padding: 0 1em 0 2em;
   width: 100%;
   align-self: flex-start;
   height: auto;
