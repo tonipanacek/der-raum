@@ -9,7 +9,7 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
-- main_text: Das Ideale Heim // 02/2021 //
+- main_text: Das Ideale Heim // 2021
   text_url: https://issuu.com/archithema_verlag/docs/_ih_02_2021_issuu
 - main_text: AD "Highend-Handwerk aus Weißensee" // 2021
   text_url: https://www.ad-magazin.de/article/highend-handwerk-kuechen-der-tischlerei-der-raum-berlin
