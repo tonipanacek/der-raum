@@ -165,6 +165,9 @@ export default {
   img, svg {
     width: 30px;
     height: 25px;
+    &:focus {
+      outline: 0;
+    }
   }
 }
 .navbar ul {
