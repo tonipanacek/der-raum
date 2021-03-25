@@ -23,13 +23,6 @@ de_cv_description: Lebenslauf mit Anschreiben
 en_cv_description: CV and Cover Letter
 cv_email: kontakt@der-raum.de
 column_header_and_text:
-- de_group_header: Wir suchen ein/e Berater*in!
-  en_group_header: We are looking for a consultant!
-  group_subtext:
-  - de_text: Lebenslauf mit Anschreiben
-    en_text: CV and Cover Letter
-  - de_text: kontakt@der-raum.de
-    en_text: kontakt@der-raum.de
 - de_group_header: Beratungstermin vereinbaren
   en_group_header: Arrange Appointment
   group_subtext:
@@ -48,5 +41,12 @@ column_header_and_text:
     en_text: 'Monday-Friday: 10:00-18:00'
   - en_text: 'Saturday: 11:00-17:00'
     de_text: 'Samstag: 11:00-17:00'
+- de_group_header: Wir suchen ein/e Berater*in!
+  en_group_header: We are looking for a consultant!
+  group_subtext:
+  - de_text: Lebenslauf mit Anschreiben
+    en_text: CV and Cover Letter
+  - de_text: kontakt@der-raum.de
+    en_text: kontakt@der-raum.de
 
 ---
