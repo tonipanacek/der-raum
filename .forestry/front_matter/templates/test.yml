@@ -47,5 +47,3 @@ fields:
     labelField: 
   label: Column header and text
   description: group with a header and additional text items within
-pages:
-- content/misc/contact.md
