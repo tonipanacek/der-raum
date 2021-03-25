@@ -73,5 +73,11 @@ fields:
 - type: text
   name: cv_email
   label: cv_email
+- name: sections
+  type: include
+  config: {}
+  template: test
+  label: sections
+  description: header/sub text sections for contact page
 pages:
 - content/misc/Contact.md
