@@ -47,6 +47,7 @@
               v-if="isOnline('product')"
               :to="localePath({ name: 'product' })"
               class="nav-item title"
+              id="product-nav-item"
             >
               {{ $t('navbar_titles.product') }}
             </nuxt-link>
@@ -109,6 +110,9 @@ export default {
     Stack,
     Logo
   },
+  mounted() {
+    // this.productNav();
+  },
   methods: {
     isOnline(menuItem) {
       const onlineNavbar = this.menuItems.map(item => item.toLowerCase())
@@ -126,7 +130,16 @@ export default {
       document.body.classList.toggle('no-scroll');
       hamburger.classList.toggle('hidden');
       close.classList.toggle('hidden');
-    }
+    },
+    // productNav() {
+    //   const productNav = document.querySelector('#product-nav-item');
+    //  if (productNav.innerText.includes('-')) {
+    //   productNav.
+    //  }
+    //   if (this.$i18n.locale === 'de') {
+    //     productNav.
+    //   }
+    // }
   },
   watch: {
     $route (to, from) {
@@ -220,12 +233,14 @@ export default {
     left: calc(4rem + 80px);
     z-index: 10;
     padding-right: 1rem;
+    // padding-left: 3rem;
     background: white;
     display: none;
     @include respond-to('large') {
       display: block;
       margin-top: spacing(md);
       padding-right: 0;
+      padding-left: 0;
       position: static;
     }
   }
