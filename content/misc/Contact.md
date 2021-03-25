@@ -55,6 +55,6 @@ column_header_and_text:
     is_email_link: false
   - de_text: kontakt@der-raum.de
     en_text: kontakt@der-raum.de
-    is_email_link: false
+    is_email_link: true
 
 ---
