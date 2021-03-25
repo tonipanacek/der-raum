@@ -36,6 +36,11 @@ fields:
         schema:
           format: markdown
       label: EN text
+    - name: is_email_link
+      type: boolean
+      label: is an email link?
+      description: toggle to yes if the text needs to link to an email
+      default: false
     config:
       min: 
       max: 
