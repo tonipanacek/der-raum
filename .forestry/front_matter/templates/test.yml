@@ -2,11 +2,6 @@
 label: Repeatable Groups
 hide_body: false
 fields:
-- name: title
-  type: text
-  config:
-    required: false
-  label: title
 - name: column_header_and_text
   type: field_group_list
   fields:
