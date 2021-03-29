@@ -1,0 +1,54 @@
+---
+label: Repeatable Groups
+hide_body: false
+fields:
+- name: column_header_and_text
+  type: field_group_list
+  fields:
+  - name: de_group_header
+    type: text
+    config:
+      required: false
+    label: DE group header
+  - name: en_group_header
+    type: text
+    config:
+      required: false
+    label: EN group header
+  - name: group_subtext
+    type: field_group_list
+    fields:
+    - name: de_text
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: DE_text
+    - name: en_text
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: EN text
+    - name: is_email_link
+      type: boolean
+      label: is an email link?
+      description: toggle to yes if the text needs to link to an email
+      default: false
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: group subtext
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Column header and text
+  description: group with a header and additional text items within
