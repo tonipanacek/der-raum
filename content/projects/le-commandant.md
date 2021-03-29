@@ -20,10 +20,10 @@ images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947613/Badezimmer-exklusiv-Masterbad-Marmor-Stein_yi68d9_v2a5fg.jpg
 en_title: Commandant
 de_title: Commandant
-en_description: 'Sebastian Schwade & Club Marginal Architekten // Photos: Maximilian
-  Gödecke'
-de_description: 'Sebastian Schwade & Club Marginal Architekten // Fotos: Maximilian
-  Gödecke'
+en_description: 'Fabian Schwade Architekten & Club Marginal Architekten // Photos:
+  Maximilian Gödecke'
+de_description: 'Fabian Schwade Architekten & Club Marginal Architekten // Fotos:
+  Maximilian Gödecke'
 meta_tags:
   de_title: Treppeneinbau mit Hochschränken, Schiebetür, Küche und Lamellenwand, Tischler,
     Schreiner, Schreinerei, Tischlerei
