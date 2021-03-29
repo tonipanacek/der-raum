@@ -36,5 +36,13 @@ column_header_and_text:
   - de_text: kontakt@der-raum.de
     en_text: kontakt@der-raum.de
     is_email_link: true
-
+- de_group_header: hallo!
+  en_group_header: hello!
+  group_subtext:
+  - de_text: Lebenslauf mit Anschreiben
+    en_text: CV and Cover Letter
+    is_email_link: false
+  - de_text: kontakt@der-raum.de
+    en_text: kontakt@der-raum.de
+    is_email_link: true
 ---

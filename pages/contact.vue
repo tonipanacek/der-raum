@@ -8,11 +8,13 @@
     <div class="section-item text">
       <h1 class="hidden">{{ $ta(page.attributes, 'title') }}</h1>
       <template v-for="(column, index) in page.attributes.column_header_and_text">
-        <h2>{{ $ta(column, "group_header") }}</h2>
-        <template v-for="subtext in column.group_subtext">
-          <a v-if="subtext.is_email_link" :href="'mailto:' + $ta(subtext, 'text')">{{ $ta(subtext, "text") }}</a>
-          <p v-else>{{ $ta(subtext, "text") }}</p>
-        </template>
+        <div class="text-group">
+          <h2>{{ $ta(column, "group_header") }}</h2>
+          <template v-for="subtext in column.group_subtext">
+            <a v-if="subtext.is_email_link" :href="'mailto:' + $ta(subtext, 'text')">{{ $ta(subtext, "text") }}</a>
+            <p v-else>{{ $ta(subtext, "text") }}</p>
+          </template>
+        </div>
       </template>
     </div>
   </Container>
@@ -93,33 +95,22 @@ $main-height: calc(100vh - #{spacing(frame)});
         margin-top: 0;
       }
     }
-    .mt-2 {
-      margin-top: 2rem;
-    }
-    ul {
-      list-style-type: square;
-    }
-    .link-list {
-      list-style: none;
-      padding: 0;
-      li {
-        line-height: 1.5rem;
-      }
-    }
-    p, a, ul > li {
+    p, a {
+      display: block;
       line-height: 2rem;
       color: color(dark);
       font-size: .85rem;
+      &:last-child {
+        margin: 0;
+        padding: 0;
+      }
     }
     strong {
       color: color(dark);
       font-weight: 600;
     }
-  }
-
-  #philosophy, #philosophie {
-    .frame > img {
-      object-position: top;
+    .text-group {
+      margin-bottom: 1rem;
     }
   }
 </style>
