@@ -96,6 +96,7 @@ $main-height: calc(100vh - #{spacing(frame)});
 #philosophy, #philosophie {
   .frame > img {
     object-position: top;
+    // object-fit: contain;
   }
 }
 #partners, #partner {

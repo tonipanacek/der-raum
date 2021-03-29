@@ -1,9 +1,9 @@
 <template>
   <div
-  id="projects"
+  id="press"
   class="image">
     <Container>
-      <Article class="project" v-swipe="handleSwipe">
+      <Article class="press" v-swipe="handleSwipe">
         <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
@@ -83,23 +83,10 @@ export default {
         // give back the value of each page context
         return pages(key)
       })
-
-      const locale = app.i18n.locale
-      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
-
-      let images = get(page, 'attributes.images', [])
-      const image = images[id - 1]
-
-      if (!image) {
-        throw "No image found!"
-      }
+      console.log(pages)
 
       return {
-        image,
-        images,
         pages,
-        page,
-        slug,
         id
       }
     } catch (err) {
@@ -109,7 +96,7 @@ export default {
   },
   mounted() {
     this.setPages(this.pages)
-    this.setPagesPrefix("projects")
+    this.setPagesPrefix("press")
     window.addEventListener("keyup", this.handleKey)
     this.setDocHeight()
     this.enterMobileFullScreen()
@@ -211,7 +198,6 @@ export default {
           }
         })
       }
-
     },
     previousImageLink() {
       if (!this.length) { return '' }
