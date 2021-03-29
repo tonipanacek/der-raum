@@ -2,6 +2,16 @@
 label: Text with Links
 hide_body: true
 fields:
+- name: de_title
+  type: text
+  config:
+    required: false
+  label: DE Title
+- name: en_title
+  type: text
+  config:
+    required: false
+  label: EN title
 - name: text_and_link_group
   type: field_group_list
   fields:
@@ -26,11 +36,6 @@ fields:
     max: 
     labelField: 
   label: Text and Link Group
-- name: general_page_info
-  type: include
-  config: {}
-  template: image-and-text
-  label: General Page Info
 pages:
 - content/about/business-partner.md
 - content/about/press.md
