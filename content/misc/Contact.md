@@ -33,5 +33,8 @@ column_header_and_text:
   - de_text: kontakt@der-raum.de
     en_text: kontakt@der-raum.de
     is_email_link: true
+- en_group_header: Applications / Apprenticeship
+  group_subtext: []
+  de_group_header: Bewerbungen / Ausbildung
 
 ---
