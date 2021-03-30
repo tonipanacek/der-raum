@@ -13,7 +13,11 @@
           class="btn btn-burger"
           @click="toggleMobileMenu"
         >
-          <img src="~/assets/images/burgermenu.png" alt="Hamburger Menu">
+          <svg viewBox="0 0 100 80" width="30" height="25">
+            <rect width="100" height="5"></rect>
+            <rect y="30" width="100" height="5"></rect>
+            <rect y="60" width="100" height="5"></rect>
+          </svg>
         </button>
         <button
           aria-expanded="true"
