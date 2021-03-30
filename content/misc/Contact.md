@@ -15,8 +15,8 @@ column_header_and_text:
   - de_text: 10437 Berlin
     en_text: 10437 Berlin
     is_email_link: false
-- de_group_header: TISCHLEREI
-  en_group_header: CARPENTRY
+- de_group_header: Tischlerei
+  en_group_header: Carpentry
   group_subtext:
   - de_text: Roelckestraße 152/153
     en_text: Roelckestraße 152/153
@@ -45,5 +45,6 @@ column_header_and_text:
   - de_text: Melden Sie sich hier für unseren Newsletter an.
     en_text: Sign up for our newsletter here.
     is_email_link: false
+main_text: "<p></p>"
 
 ---
