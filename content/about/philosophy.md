@@ -1,7 +1,7 @@
 ---
 position: 2
 title: Philosophy
-image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1615055240/241120-07-165-online_mwyu8n_lasfv0.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616169819/Baumhoff_web_aajkbs.jpg
 en_title: Philosophy
 de_title: Philosophie
 en_description: "For more than 25 years, we see our mission to add detail to architectural
@@ -44,7 +44,7 @@ de_description: "Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, dur
   haben wir es uns zum Ziel gesetzt, solides Handwerk und Design Hand in Hand gehen
   zu lassen. Das heißt: Keine Kompromisse und das Machbare bis ins letzte Detail zu
   hinterfragen. Flache Hierarchien und effiziente Arbeits- und Entscheidungswege ermöglichen
-  uns Projekte schnell, unkompliziert und zuverlässig umzusetzen.\n\nDabei garantiert
+  uns Projekte schnell, unkompliziert und zuverlässig umzusetzen. Dabei garantiert
   die Verarbeitung des natürlichen und nachwachsenden Rohstoffs Holz einen verantwortungsvollen
   Umgang mit den bestehenden Ressourcen. Unsere Verarbeitungsstandards, wie optimierte
   Verfahren für den Zuschnitt gewährleisten die maximale Materialnutzung und somit
@@ -52,7 +52,7 @@ de_description: "Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, dur
   der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen
   unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte,
   100% ökologische, Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen,
-  was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.   \nDer Bezug
+  was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht. Der Bezug
   des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende
   Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und
   endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen
