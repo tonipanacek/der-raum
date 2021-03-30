@@ -39,11 +39,11 @@ column_header_and_text:
     en_text: ausbildung@holz-raum.de
     is_email_link: true
   de_group_header: Bewerbungen / Ausbildung
-- de_group_header: Melden Sie sich hier für unseren Newsletter an.
-  en_group_header: Sign up for our newsletter here.
+- de_group_header: Newsletter
+  en_group_header: Newsletter
   group_subtext:
   - de_text: Melden Sie sich hier für unseren Newsletter an.
-    en_text: Melden Sie sich hier für unseren Newsletter an.
+    en_text: Sign up for our newsletter here.
     is_email_link: false
 
 ---
