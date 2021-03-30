@@ -3,6 +3,9 @@ de_title: Kontakt
 en_title: Contact
 image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947617/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg_u2ydip.jpg
 column_header_and_text:
+- de_group_header: Melden Sie sich hier für unseren Newsletter an.
+  en_group_header: Sign up for our newsletter here.
+  group_subtext: []
 - de_group_header: STUDIO
   en_group_header: STUDIO
   group_subtext:
