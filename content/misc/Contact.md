@@ -12,8 +12,8 @@ column_header_and_text:
   - de_text: Dunckerstraße 15
     en_text: Dunckerstraße 15
     is_email_link: false
-  - de_text: "+49 176735647 42 (WhatsApp)"
-    en_text: "+49 176735647 42 (WhatsApp)"
+  - de_text: 10437 Berlin
+    en_text: 10437 Berlin
     is_email_link: false
 - de_group_header: Studio (auch Online-Beratungen)
   en_group_header: Studio (also online appointments)
