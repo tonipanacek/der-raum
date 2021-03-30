@@ -30,8 +30,8 @@ column_header_and_text:
   - de_text: Montag bis Freitag von 10-18 uhr
     en_text: Monday to friday from 10am-6pm
     is_email_link: false
-  - de_text: Samstag
-    en_text: Saturday
+  - de_text: Samstag 11-17 uhr
+    en_text: Saturday 11am-5pm
     is_email_link: false
   - de_text: 030 927 943 501 / +49 176 735 647 42
     en_text: 030 927 943 501 / +49 176 735 647 42
