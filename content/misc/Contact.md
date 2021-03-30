@@ -9,8 +9,8 @@ column_header_and_text:
   - de_text: Felix Lühring
     en_text: Felix Lühring
     is_email_link: false
-  - de_text: 030 927943501
-    en_text: 030 927943501
+  - de_text: Dunckerstraße 15
+    en_text: Dunckerstraße 15
     is_email_link: false
   - de_text: "+49 176735647 42 (WhatsApp)"
     en_text: "+49 176735647 42 (WhatsApp)"
