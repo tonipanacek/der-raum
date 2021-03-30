@@ -15,11 +15,11 @@ column_header_and_text:
   - de_text: 10437 Berlin
     en_text: 10437 Berlin
     is_email_link: false
-- de_group_header: Studio (auch Online-Beratungen)
-  en_group_header: Studio (also online appointments)
+- de_group_header: TISCHLEREI
+  en_group_header: CARPENTRY
   group_subtext:
-  - de_text: Dunckerstraße 15 10437 Berlin
-    en_text: Dunckerstraße 15 10437 Berlin
+  - de_text: Roelckestraße 152/153
+    en_text: Roelckestraße 152/153
     is_email_link: false
   - de_text: 'Montag-Freitag: 10:00-18:00'
     en_text: 'Monday-Friday: 10:00-18:00'
