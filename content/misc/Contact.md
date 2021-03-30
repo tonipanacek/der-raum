@@ -24,14 +24,11 @@ column_header_and_text:
   - de_text: 13086 Berlin
     en_text: 13086 Berlin
     is_email_link: false
-  - en_text: 'Saturday: 11:00-17:00'
-    de_text: 'Samstag: 11:00-17:00'
-    is_email_link: false
-- de_group_header: Wir suchen ein/e Berater*in!
-  en_group_header: We are looking for a consultant!
+- de_group_header: Beratungstermin vereinbaren
+  en_group_header: Arrange Appointment
   group_subtext:
-  - de_text: Lebenslauf mit Anschreiben
-    en_text: CV and Cover Letter
+  - de_text: 030 927 943 501 / +49 176 735 647 42
+    en_text: 030 927 943 501 / +49 176 735 647 42
     is_email_link: false
   - de_text: kontakt@der-raum.de
     en_text: kontakt@der-raum.de
