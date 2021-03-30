@@ -11,7 +11,7 @@ meta_tags:
 text_and_link_group:
 - main_text: Das Ideale Heim // "Konvent Kitchen" // 2021
   text_url: https://issuu.com/archithema_verlag/docs/_ih_02_2021_issuu
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617107348/Das-Ideale-Heim1_qlrgau.png
 - main_text: AD "Highend-Handwerk aus Weißensee" // 2021
   text_url: https://www.ad-magazin.de/article/highend-handwerk-kuechen-der-tischlerei-der-raum-berlin
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
