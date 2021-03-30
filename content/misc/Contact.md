@@ -3,8 +3,8 @@ de_title: Kontakt
 en_title: Contact
 image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947617/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg_u2ydip.jpg
 column_header_and_text:
-- de_group_header: STUDIO
-  en_group_header: STUDIO
+- de_group_header: Studio
+  en_group_header: Studio
   group_subtext:
   - de_text: Felix Lühring
     en_text: Felix Lühring
@@ -15,8 +15,8 @@ column_header_and_text:
   - de_text: 10437 Berlin
     en_text: 10437 Berlin
     is_email_link: false
-- de_group_header: TISCHLEREI
-  en_group_header: CARPENTRY
+- de_group_header: Tischlerei
+  en_group_header: Carpentry
   group_subtext:
   - de_text: Roelckestraße 152/153
     en_text: Roelckestraße 152/153
@@ -24,9 +24,15 @@ column_header_and_text:
   - de_text: 13086 Berlin
     en_text: 13086 Berlin
     is_email_link: false
-- de_group_header: Beratungstermin vereinbaren
+- de_group_header: Beratung nach Vereinbarung
   en_group_header: Arrange Appointment
   group_subtext:
+  - de_text: Montag bis Freitag von 10-18 uhr
+    en_text: Monday to friday from 10am-6pm
+    is_email_link: false
+  - de_text: Samstag 11-17 uhr
+    en_text: Saturday 11am-5pm
+    is_email_link: false
   - de_text: 030 927 943 501 / +49 176 735 647 42
     en_text: 030 927 943 501 / +49 176 735 647 42
     is_email_link: false
@@ -45,5 +51,6 @@ column_header_and_text:
   - de_text: Melden Sie sich hier für unseren Newsletter an.
     en_text: Sign up for our newsletter here.
     is_email_link: false
+main_text: "<p></p>"
 
 ---
