@@ -4,16 +4,16 @@
   class="image">
     <Container>
       <Article class="press" v-swipe="handleSwipe">
-        <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
+        <NuxtLink :to="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
+        <div class="image-container" :style="{ backgroundImage: `url(${current.image})` }" :class="imageOrientation">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" id="image-gallery"/>
         </div>
         <div class="image-footer">
           <aside class="caption">
             <h1>{{ $tp('title') }} <span id="image-count">{{ id }} / {{ length }}</span></h1>
-            <p>{{ $tp('description') }}</p>
+            <a :href="current.text_url" target="_blank">{{ $ta(current, 'main_text') }}</a>
           </aside>
           <nav class="image-nav">
             <NuxtLink :to="previousImageLink" v-if="previousImageLink" class="prev">
@@ -52,6 +52,11 @@ export default {
   props: {
     orientation: String
   },
+  components: {
+    Container,
+    Article,
+    PrevNextButtons
+  },
   directives: {
     swipe: {
       bind: function(el, binding) {
@@ -75,7 +80,7 @@ export default {
 
       // create context via webpack to map over all pages
       let pages = await require.context(
-        "~/content/press/",
+        "~/content/about/",
         true,
         /\.md$/
       )
@@ -83,10 +88,17 @@ export default {
         // give back the value of each page context
         return pages(key)
       })
-      console.log(pages)
+      const page = pages.find(p => get(p, `attributes.title`) === 'Press' )
+      const allImages = page.attributes.text_and_link_group.map(group => group.image)
+      const currentPress = page.attributes.text_and_link_group[id - 1]
+      const currentImage = currentPress.image
 
       return {
+        page,
         pages,
+        images: allImages,
+        image: currentImage,
+        current: currentPress,
         id
       }
     } catch (err) {
@@ -132,7 +144,8 @@ export default {
         body.classList.remove('no-scroll')
       }
       const widthChange = (mq) => {
-        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
+        const matcher = /(bilder|images|presse|press)/
+        if (this.$route.path.match(matcher) && mq.matches) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', this.setDocHeight)
@@ -146,10 +159,11 @@ export default {
       widthChange(mq);
     },
     setDocHeight() {
-      if (this.$route.path.includes('bilder') || this.$route.path.includes('images')) {
+      const matcher = /(bilder|images|presse|press)/
+      if (this.$route.path.match(matcher)) {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
         document.querySelector('body').style.height = window.innerHeight + 'px';
-        document.querySelector('#projects').style.height = window.innerHeight + 'px';
+        document.querySelector('#press').style.height = window.innerHeight + 'px';
       }
     },
     handleSwipe(direction) {
@@ -177,52 +191,21 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
-      const projectIndex = onlineProjects.indexOf(this.$data.page)
-      let nextProject = projectIndex === onlineProjects.length - 1 ? onlineProjects[0] : onlineProjects[projectIndex + 1]
-      if (this.id >= this.length) {
-        const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: nextSlug,
-            id: 1
-          }
-        })
-      } else {
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: this.$data.slug,
-            id: this.$data.id + 1
-          }
-        })
-      }
+      return this.localePath({
+        name: 'press-id',
+        params: {
+          id: this.id + 1 > 17 ? 1 : this.id + 1
+        }
+      })
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
-      const projectIndex = onlineProjects.indexOf(this.$data.page)
-      let prevProject = projectIndex === 0 ? onlineProjects[onlineProjects.length - 1] : onlineProjects[projectIndex - 1]
-      if (parseInt(this.id) <= 1) {
-        const previousSlug = this.formatSlug(this.$ta(prevProject.attributes, 'title'))
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: previousSlug,
-            id: prevProject.attributes.images.length
-          }
-        })
-      } else {
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: this.$data.slug,
-            id: this.$data.id - 1
-          }
-        })
-      }
-
+      return this.localePath({
+        name: 'press-id',
+        params: {
+          id: this.id - 1 === 0 ? this.length : this.id - 1
+        }
+      })
     },
     closeLink() {
       return this.localePath({
@@ -241,22 +224,17 @@ export default {
         return emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
       }
     }
-  },
-  components: {
-    Container,
-    Article,
-    PrevNextButtons
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#projects {
+#press {
   @include respond-to('large') {
     max-height: 90vh;
   }
 }
-#projects.image {
+#press.image {
   max-width: 1250px;
   margin: 0 auto;
   height: 100%;
@@ -272,7 +250,7 @@ export default {
     }
   }
 }
-.project {
+.press {
   position: relative;
   width: 100%;
   height: 100%;

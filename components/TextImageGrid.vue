@@ -100,6 +100,7 @@ $main-height: calc(100vh - #{spacing(frame)});
   }
 }
 #partners, #partner {
+  a { display: inline; }
   .frame > img {
     object-position: bottom;
   }

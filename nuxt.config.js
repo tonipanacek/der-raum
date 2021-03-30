@@ -126,6 +126,10 @@ export default {
   styleResources: {
     scss: ["assets/styles/main.scss"]
   },
+  css: [
+    "@/assets/styles/config/toolbox.scss",
+    "@/assets/styles/main.scss"
+  ],
   // Localization
   i18n: {
     locales: [

@@ -110,9 +110,6 @@ export default {
     Stack,
     Logo
   },
-  mounted() {
-    // this.productNav();
-  },
   methods: {
     isOnline(menuItem) {
       const onlineNavbar = this.menuItems.map(item => item.toLowerCase())
@@ -131,20 +128,12 @@ export default {
       hamburger.classList.toggle('hidden');
       close.classList.toggle('hidden');
     },
-    // productNav() {
-    //   const productNav = document.querySelector('#product-nav-item');
-    //  if (productNav.innerText.includes('-')) {
-    //   productNav.
-    //  }
-    //   if (this.$i18n.locale === 'de') {
-    //     productNav.
-    //   }
-    // }
   },
   watch: {
     $route (to, from) {
       if (window.matchMedia( "(max-width: 1024px)" ).matches && to.path !== '/') {
-        if (to.path.match(/projekte/)) {
+        // const matcher = /(projekte|presse|project|press)/
+        if (to.path.match(/projekte|presse/)) {
           document.body.classList.remove('no-scroll');
         } else {
           this.toggleMobileMenu();
@@ -217,7 +206,7 @@ export default {
       font-weight: 900;
     }
   }
-  .nuxt-link-exact-active {
+  .nuxt-link-active {
     color: color(black);
     font-weight: 900;
     &:hover {
@@ -225,6 +214,7 @@ export default {
       font-weight: 900;
     }
   }
+
   .nav-items {
     position: fixed;
     top: 6rem;
