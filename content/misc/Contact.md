@@ -24,9 +24,12 @@ column_header_and_text:
   - de_text: 13086 Berlin
     en_text: 13086 Berlin
     is_email_link: false
-- de_group_header: Beratungstermin vereinbaren
+- de_group_header: Beratung nach Vereinbarung
   en_group_header: Arrange Appointment
   group_subtext:
+  - de_text: Montag bis Freitag von 10-18 uhr
+    en_text: Monday to friday from 10am-6pm
+    is_email_link: false
   - de_text: 030 927 943 501 / +49 176 735 647 42
     en_text: 030 927 943 501 / +49 176 735 647 42
     is_email_link: false
