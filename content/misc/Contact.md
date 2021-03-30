@@ -21,8 +21,8 @@ column_header_and_text:
   - de_text: Roelckestraße 152/153
     en_text: Roelckestraße 152/153
     is_email_link: false
-  - de_text: 'Montag-Freitag: 10:00-18:00'
-    en_text: 'Monday-Friday: 10:00-18:00'
+  - de_text: 13086 Berlin
+    en_text: 13086 Berlin
     is_email_link: false
   - en_text: 'Saturday: 11:00-17:00'
     de_text: 'Samstag: 11:00-17:00'
