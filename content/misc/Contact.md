@@ -3,12 +3,12 @@ de_title: Kontakt
 en_title: Contact
 image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947617/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg_u2ydip.jpg
 column_header_and_text:
-- de_group_header: Beratungstermin vereinbaren
-  en_group_header: Arrange Appointment
+- de_group_header: STUDIO
+  en_group_header: STUDIO
   group_subtext:
-  - de_text: kontakt@der-raum.de
-    en_text: kontakt@der-raum.de
-    is_email_link: true
+  - de_text: Felix Lühring
+    en_text: Felix Lühring
+    is_email_link: false
   - de_text: 030 927943501
     en_text: 030 927943501
     is_email_link: false
@@ -36,4 +36,5 @@ column_header_and_text:
   - de_text: kontakt@der-raum.de
     en_text: kontakt@der-raum.de
     is_email_link: true
+
 ---
