@@ -34,7 +34,10 @@ column_header_and_text:
     en_text: kontakt@der-raum.de
     is_email_link: true
 - en_group_header: Applications / Apprenticeship
-  group_subtext: []
+  group_subtext:
+  - de_text: ausbildung@holz-raum.de
+    en_text: ausbildung@holz-raum.de
+    is_email_link: true
   de_group_header: Bewerbungen / Ausbildung
 
 ---
