@@ -63,7 +63,7 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287830/FAZ_2015_vud3gt.png
 - main_text: Häuser – Das Magazin // "Häuser des Jahres 2015" // 2015
   text_url: https://www.callwey.de/buecher/haeuser-des-jahres/
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287852/H%C3%84USER_2015_vksnka.jpg
 - main_text: The Wallstreet Journal // "A communist era home is overthrown" // 2014
   text_url: https://www.wsj.com/articles/a-communist-era-home-is-overthrown-1418229684
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
