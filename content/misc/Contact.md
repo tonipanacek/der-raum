@@ -6,7 +6,7 @@ column_header_and_text:
 - de_group_header: Studio
   en_group_header: Studio
   group_subtext:
-  - de_text: Felix Lühring
+  - de_text: Felix Lühring / Studioleitung
     en_text: Felix Lühring
     is_email_link: false
   - de_text: Dunckerstraße 15
