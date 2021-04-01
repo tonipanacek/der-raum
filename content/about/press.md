@@ -56,7 +56,7 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287726/Morgenpost_Wandlitz_page-0001_lm4tjt.jpg
 - main_text: Deutscher Holzbaupreis // "Einfamilienhaus in Wandlitz" // 2015
   text_url: https://www.deutscher-holzbaupreis.de/archiv/preistraeger_2015/preise_und_anerkennungen2015/anerkennung_neubau/#c4682
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287790/Anerkennung_Deutscher-Holzbau-Preis-Doppelseite_e54ybq.jpg
 - main_text: Frankfurter Allgemeine Sonntagszeitung // "Das Wohnmöbel von Wandlitz"
     // 2015
   text_url: https://www.faz.net/aktuell/wirtschaft/wohnen/bauen/neue-haeuserneue-haeuser-das-wohnmoebel-von-wandlitz-13862346.html
