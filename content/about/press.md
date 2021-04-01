@@ -9,6 +9,9 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: md // "In der Küche aus der Krise" // 2021
+  text_url: https://www.konradin-service.de/pdfarchiv7/share/md_2021-004_96.pdf#page=28
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617281478/md_j5cnxb.jpg
 - main_text: Das Ideale Heim // "Konvent Kitchen" // 2021
   text_url: https://issuu.com/archithema_verlag/docs/_ih_02_2021_issuu
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617107348/Das-Ideale-Heim1_qlrgau.png
