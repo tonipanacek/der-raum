@@ -20,16 +20,17 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617107474/AD-Magazin1_q9j7c9.png
 - main_text: Deutsche BauZeitschrift // "Erweiterungsbau für eine Villa" // 2021
   text_url: https://www.dbz.de/artikel/dbz_Erweiterungsbau_fuer_eine_Villa_Berlin_3601249.html
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
-- main_text: Frankfurter Allgemeine Zeitung "Das Beste aus zwei Wohnwelten" // 2021
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287310/DBZ_baer4c.jpg
+- main_text: Frankfurter Allgemeine Zeitung // "Das Beste aus zwei Wohnwelten" //
+    2021
   text_url: https://www.faz.net/anbauten-das-beste-aus-zwei-wohnwelten-17171830.html
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287366/FAZ_to8yge.png
 - main_text: Beton.org // "Perfekte Kombination" // 2020
   text_url: https://www.beton.org/service/presse/details/perfekte-kombination/
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287427/Beton_r9zyis.png
 - main_text: Architektur Berlin // Building Berlin // "Das grüne Wunder" // 2020
   text_url: https://www.ak-berlin.de/baukultur/publikationen/jahrbuecher/jahrbuch-detailseite/architektur-berlin-building-berlin-9.html
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287454/ARCHITEKTUR-BERLIN_b6re7c.jpg
 - main_text: CUBE Magazin // "Zeitloser Industrielook" // 2018
   text_url: https://www.cube-magazin.de/magazin/berlin/?
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
