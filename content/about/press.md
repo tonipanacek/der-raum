@@ -53,7 +53,7 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287629/NYT_dlywoq.png
 - main_text: Berliner Morgenpost // "Raumwunder in Wandlitz" // 2015
   text_url: https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitzhtml
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287726/Morgenpost_Wandlitz_page-0001_lm4tjt.jpg
 - main_text: Deutscher Holzbaupreis // "Einfamilienhaus in Wandlitz" // 2015
   text_url: https://www.deutscher-holzbaupreis.de/archiv/preistraeger_2015/preise_und_anerkennungen2015/anerkennung_neubau/#c4682
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
