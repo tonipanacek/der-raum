@@ -1,16 +1,14 @@
 <template>
-  <Container class="text-image-grid" :id="formatSlug($ta(page.attributes, 'title'))">
-    <template v-for="(section, index) in sections">
-      <div v-if="section.image" class="section-item image-container">
-        <Frame n="16" d="9">
-          <img :src="$ta(section, 'image')"/>
-        </Frame>
-      </div>
-      <div v-else class="section-item text">
-        <h1 v-if="section.de_title_of_section">{{ $ta(section, "title_of_section") }}</h1>
-        <vue-markdown>{{ $ta(section, "text_section") }}</vue-markdown>
-      </div>
-    </template>
+  <Container class="text-image-grid article" :id="formatSlug($ta(page.attributes, 'title'))">
+    <div class="section-item image-container">
+      <Frame :n="16" :d="9">
+        <img :src="$ta(page.attributes, 'image')"/>
+      </Frame>
+    </div>
+    <div class="section-item text">
+      <h1>{{ $ta(page.attributes, "title_of_section") }}</h1>
+      <vue-markdown>{{ $ta(page.attributes, "text_section") }}</vue-markdown>
+    </div>
   </Container>
 </template>
 
@@ -31,18 +29,11 @@ export default {
     page: {
       type: Object,
       required: true
-    },
-    sections: {
-      type: Array,
-      required: true
     }
   },
   methods: {
     getTitle(attrs) {
       return get(attrs, 'title', '')
-    },
-    findOrientation(index) {
-      return index % 2 === 1 ? "portrait" : "landscape"
     }
   }
 }
@@ -67,53 +58,60 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
 }
-  // .text-image-grid {
-  //   @include respond-to('large') {
-  //     .image-container {
-  //       float: left;
-  //       width: 55ch;
-  //       // margin-right: 2rem;
-  //       margin-bottom: 2rem;
-  //     }
-  //     .text {
-  //       padding-left: 3.5rem;
-  //     }
-  //     .frame > img {
-  //       object-fit: contain;
-  //     }
-  //   }
-  // }
-  .text {
-    padding: spacing(frame);
+.text {
+  padding: spacing(frame);
+  @include respond-to('large') {
+    padding: 0;
+    grid-column: span 2;
+  }
+  h1 {
+    @include smallCaps;
+    color: color(black);
+    font-weight: 600;
     @include respond-to('large') {
-      padding: 0;
-    }
-    h1 {
-      @include smallCaps;
-      color: color(black);
-      font-weight: 600;
-      @include respond-to('large') {
-        margin-top: 0;
-      }
-    }
-    ul {
-      list-style-type: square;
-    }
-    .link-list {
-      list-style: none;
-      padding: 0;
-      li {
-        line-height: 1.5rem;
-      }
-    }
-    p, ul > li {
-      line-height: 2rem;
-      color: color(dark);
-      font-size: .85rem;
-    }
-    strong {
-      color: color(dark);
-      font-weight: 600;
+      margin-top: 0;
     }
   }
+  ul {
+    list-style-type: square;
+  }
+  .link-list {
+    list-style: none;
+    padding: 0;
+    li {
+      line-height: 1.5rem;
+    }
+  }
+  p, a, ul > li {
+    // line-height: 2rem;
+    color: color(dark);
+    font-size: .85rem;
+  }
+  strong {
+    color: color(dark);
+    font-weight: 600;
+  }
+}
+
+#philosophy, #philosophie {
+  .frame > img {
+    object-position: top;
+    // object-fit: contain;
+  }
+}
+#partners, #partner {
+  h1 { margin-top: 0; }
+  a { display: inline; }
+  .frame > img {
+    object-position: bottom;
+  }
+  @include respond-to('large') {
+    .text > div {
+      columns: 2;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
 </style>

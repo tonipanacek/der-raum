@@ -57,11 +57,11 @@ export default {
 <style scoped lang="scss">
 
 .page-enter-active, .page-leave-active {
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.5s ease;
 }
 .page-enter, .page-leave-to {
   opacity: 0;
-  transition: opacity .3s ease;
+  // transition: opacity .1s ease;
 }
 
 $main-height: calc(100vh - 2 * #{spacing(frame)});
@@ -109,14 +109,14 @@ a:visited {
     width: 500px;
     max-width: 1250px;
     overflow-y: visible;
-    padding: 0 2rem;
     margin: 0 auto;
+    padding: 0 1rem;
     // max-height: $main-height;
   }
 }
 
 .mt-lg {
-  margin-top: spacing(lg);
+  margin-top: 1rem;
   @include respond-to('large') {
     margin-top: 0;
   }
@@ -127,14 +127,14 @@ a:visited {
   flex-direction: column;
 }
 .left-sidebar {
-  padding: 0 2em;
+  padding: 0 1em 0 2em;
   width: 100%;
   align-self: flex-start;
   height: auto;
   text-align: right;
   justify-content: space-between;
   @include respond-to('large') {
-    width: 200px;
+    width: 250px;
     text-align: left;
     height: $main-height;
     min-height: $main-height;

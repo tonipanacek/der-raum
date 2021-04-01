@@ -19,18 +19,41 @@ fields:
   config:
     required: false
   label: English Title
-- name: grid-sections
-  type: blocks
-  template_types:
-  - image-section
-  - text-section
+- name: image
+  type: file
   config:
-    min: 
-    max: 
-  label: grid-sections
-  description: 'Can choose either a text or image section to populate the grid areas.
-    Must specify for each section which <strong>group number</strong> (most likely
-    1) and which <strong>group position</strong> (position in the group of 4). '
+    maxSize: 64
+  label: image
+- name: de_title_of_section
+  type: text
+  config:
+    required: false
+  label: german title of section
+  description: Title for this section of text, i.e. STUDIO, TISCHLEREI, etc
+- name: en_title_of_section
+  type: text
+  config:
+    required: false
+  label: English title of section
+- name: de_text_section
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: german text section
+  description: Main german text content for this section
+- name: en_text_section
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: english text section
 pages:
 - content/andere/carpentry.md
 - content/andere/product.md

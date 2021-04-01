@@ -52,8 +52,8 @@ column_header_and_text:
     en_text: Sign up for our newsletter here.
     is_email_link: false
 main_text: "<p></p>"
-de_main_text: <h2>Studio</h2><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>10437 Berlin</p><h2>Tischlerei</h2><p>Roelckestraße
-  152/153</p><p>13086 Berlin</p><h2>Beratung nach Vereinbarung</h2><p>Montag bis Freitag
+de_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>10437 Berlin</p><h2>Tischlerei</h2><p>Roelckestraße
+  152/153</p><p>13086 Berlin</p><h3>Beratung nach Vereinbarung</h3><p>Montag bis Freitag
   von 10-18 uhr</p><p>Samstag 11-17 uhr</p><p>030 927 943 501 / +49 176 735 647 42</p><p><a
   href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Bewerbungen / Ausbildung</h2><p><a
   href="mailto:ausbildung@holz-raum.de">ausbildung@holz-raum.de</a></p><h2>Newsletter</h2><p>Melden

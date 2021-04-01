@@ -6,21 +6,21 @@
 import { mapActions } from 'vuex'
 import { get, sortBy } from "lodash"
 import seo from "~/content/data/seo"
-import Article from "~/components/Article"
+import Container from "~/components/Container"
 import TextImageGrid from "~/components/TextImageGrid"
 
 export default {
   layout: 'layout',
-  name: 'carpentry',
+  name: 'partners',
   nuxtI18n: {
     paths: {
-      en: '/carpentry',
-      de: '/tischlerei'
+      en: '/partners',
+      de: '/partner'
     }
   },
   head() {
     return {
-      title: `${seo.shortTitle} | ${this.$t('navbar_titles.carpentry')}`
+      title: `${seo.shortTitle} | ${this.$t('navbar_titles.partners')}`
     }
   },
   async asyncData() {
@@ -35,14 +35,14 @@ export default {
       return allPages(key)
     })
 
-    const page = pages.find(p => get(p, `attributes.title`) === 'Carpentry')
+    const page = pages.find(p => get(p, `attributes.title`) === 'Partners')
     return {
       pages,
       page
     }
   },
   components: {
-    Article,
+    Container,
     TextImageGrid
   },
   mounted() {

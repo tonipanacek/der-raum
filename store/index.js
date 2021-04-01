@@ -6,7 +6,8 @@ export const state = () => {
     pagesPrefix: "",
     hoveredMenuItem: "",
     lastPage: 0,
-    anchorItem: false
+    anchorItem: false,
+    menuOpen: false
   }
 }
 
@@ -37,6 +38,12 @@ export const mutations = {
   },
   RESET_LAST_PAGE(state) {
     state.lastPage = 0
+  },
+  SET_MENU_OPEN(state) {
+    state.menuOpen = true
+  },
+  UNSET_MENU_OPEN(state) {
+    state.menuOpen = false
   }
 }
 
@@ -67,6 +74,12 @@ export const actions = {
   },
   resetLastPage({ commit }) {
     commit('RESET_LAST_PAGE')
+  },
+  setMenuOpen({ commit }) {
+    commit('SET_MENU_OPEN')
+  },
+  unsetMenuOpen({ commit }) {
+    commit('UNSET_MENU_OPEN')
   }
 }
 

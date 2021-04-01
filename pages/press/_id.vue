@@ -1,19 +1,18 @@
 <template>
   <div
-  id="projects"
+  id="press"
   class="image">
     <Container>
-      <Article class="project" v-swipe="handleSwipe">
-        <NuxtLink :to="closeLink" v-if="closeLink" class="close-link">
+      <Article class="press" v-swipe="handleSwipe">
+        <NuxtLink :to="closeLink" class="close-link">
           <img svg-inline src="~/assets/images/X_thick_2.svg" alt="Close Button" class="nav close-btn" />
         </NuxtLink>
-        <div class="image-container" :style="{ backgroundImage: `url(${image})` }" :class="imageOrientation">
+        <div class="image-container" :style="{ backgroundImage: `url(${current.image})` }" :class="imageOrientation">
           <PrevNextButtons :prev="previousImageLink" :next="nextImageLink" id="image-gallery"/>
         </div>
         <div class="image-footer">
           <aside class="caption">
-            <h1>{{ $tp('title') }} <span id="image-count">{{ id }} / {{ length }}</span></h1>
-            <p>{{ $tp('description') }}</p>
+            <h1><a :href="current.text_url" target="_blank">{{ $ta(current, 'main_text') }}</a></h1>
           </aside>
           <nav class="image-nav">
             <NuxtLink :to="previousImageLink" v-if="previousImageLink" class="prev">
@@ -45,12 +44,17 @@ export default {
   transition: 'something',
   nuxtI18n: {
     paths: {
-      de: '/projekte/:slug/bilder/:id',
-      en: '/projects/:slug/images/:id'
+      de: '/presse/:id',
+      en: '/press/:id'
     }
   },
   props: {
     orientation: String
+  },
+  components: {
+    Container,
+    Article,
+    PrevNextButtons
   },
   directives: {
     swipe: {
@@ -65,18 +69,17 @@ export default {
       }
     }
   },
-  name: 'projectsSlug',
+  name: 'pressSlug',
   mixins: [prevNext, dynamicSEO],
   async asyncData({ app, params, error, store }) {
     // get the slug as a param to import the correct md file
     try {
       // get current page data
-      const slug = params.slug
       const id = parseInt(params.id)
 
       // create context via webpack to map over all pages
       let pages = await require.context(
-        "~/content/projects/",
+        "~/content/about/",
         true,
         /\.md$/
       )
@@ -84,30 +87,17 @@ export default {
         // give back the value of each page context
         return pages(key)
       })
-
-      pages = sortBy(pages, [p => get(p, 'attributes.group'), p => get(p, 'attributes.group_position')])
-
-      const locale = app.i18n.locale
-      const page = pages.find(p => kebabCase(get(p, `attributes.${locale}_title`)) === slug)
-
-      await store.dispatch('i18n/setRouteParams', {
-        en: { slug: kebabCase(get(page, `attributes.en_title`)) },
-        de: { slug: kebabCase(get(page, `attributes.de_title`)) }
-      })
-
-      let images = get(page, 'attributes.images', [])
-      const image = images[id - 1]
-
-      if (!image) {
-        throw "No image found!"
-      }
+      const page = pages.find(p => get(p, `attributes.title`) === 'Press' )
+      const allImages = page.attributes.text_and_link_group.map(group => group.image)
+      const currentPress = page.attributes.text_and_link_group[id - 1]
+      const currentImage = currentPress.image
 
       return {
-        image,
-        images,
-        pages,
         page,
-        slug,
+        pages,
+        images: allImages,
+        image: currentImage,
+        current: currentPress,
         id
       }
     } catch (err) {
@@ -117,7 +107,7 @@ export default {
   },
   mounted() {
     this.setPages(this.pages)
-    this.setPagesPrefix("projects")
+    this.setPagesPrefix("press")
     window.addEventListener("keyup", this.handleKey)
     this.setDocHeight()
     this.enterMobileFullScreen()
@@ -153,7 +143,8 @@ export default {
         body.classList.remove('no-scroll')
       }
       const widthChange = (mq) => {
-        if ((this.$route.path.includes('bilder') || this.$route.path.includes('images')) && mq.matches) {
+        const matcher = /(bilder|images|presse|press)/
+        if (this.$route.path.match(matcher) && mq.matches) {
           hideSidebars();
           closeLink.addEventListener('click', showSidebars);
           window.addEventListener('resize', this.setDocHeight)
@@ -167,10 +158,11 @@ export default {
       widthChange(mq);
     },
     setDocHeight() {
-      if (this.$route.path.includes('bilder') || this.$route.path.includes('images')) {
+      const matcher = /(bilder|images|presse|press)/
+      if (this.$route.path.match(matcher)) {
         document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
         document.querySelector('body').style.height = window.innerHeight + 'px';
-        document.querySelector('#projects').style.height = window.innerHeight + 'px';
+        document.querySelector('#press').style.height = window.innerHeight + 'px';
       }
     },
     handleSwipe(direction) {
@@ -198,53 +190,21 @@ export default {
   computed: {
     nextImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
-      const projectIndex = onlineProjects.indexOf(this.$data.page)
-      let nextProject = projectIndex === onlineProjects.length - 1 ? onlineProjects[0] : onlineProjects[projectIndex + 1]
-      if (this.id >= this.length) {
-        const nextSlug = this.formatSlug(this.$ta(nextProject.attributes, 'title'))
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: nextSlug,
-            id: 1
-          }
-        })
-      } else {
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: this.$data.slug,
-            id: this.$data.id + 1
-          }
-        })
-      }
-
+      return this.localePath({
+        name: 'press-id',
+        params: {
+          id: this.id + 1 > 17 ? 1 : this.id + 1
+        }
+      })
     },
     previousImageLink() {
       if (!this.length) { return '' }
-      const onlineProjects = this.$data.pages.filter(page => page.attributes.online)
-      const projectIndex = onlineProjects.indexOf(this.$data.page)
-      let prevProject = projectIndex === 0 ? onlineProjects[onlineProjects.length - 1] : onlineProjects[projectIndex - 1]
-      if (parseInt(this.id) <= 1) {
-        const previousSlug = this.formatSlug(this.$ta(prevProject.attributes, 'title'))
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: previousSlug,
-            id: prevProject.attributes.images.length
-          }
-        })
-      } else {
-        return this.localePath({
-          name: 'projects-slug-images-id',
-          params: {
-            slug: this.$data.slug,
-            id: this.$data.id - 1
-          }
-        })
-      }
-
+      return this.localePath({
+        name: 'press-id',
+        params: {
+          id: this.id - 1 === 0 ? this.length : this.id - 1
+        }
+      })
     },
     closeLink() {
       return this.localePath({
@@ -263,22 +223,17 @@ export default {
         return emptyImage.width > emptyImage.height ? 'landscape' : 'portrait'
       }
     }
-  },
-  components: {
-    Container,
-    Article,
-    PrevNextButtons
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#projects {
+#press {
   @include respond-to('large') {
     max-height: 90vh;
   }
 }
-#projects.image {
+#press.image {
   max-width: 1250px;
   margin: 0 auto;
   height: 100%;
@@ -294,7 +249,7 @@ export default {
     }
   }
 }
-.project {
+.press {
   position: relative;
   width: 100%;
   height: 100%;
@@ -312,7 +267,7 @@ export default {
       background-size: contain;
     }
     &.portrait {
-      background-size: cover;
+      background-size: contain;
     }
     @media screen and (min-width: 30em) and (orientation: landscape) {
       &.landscape {
@@ -357,6 +312,7 @@ export default {
         @include smallCaps;
         color: color(black);
         margin-top: 0;
+        font-weight: 300;
       }
       p {
         @include smallCaps;

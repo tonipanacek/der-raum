@@ -32,7 +32,7 @@ export default {
   .text {
     padding: spacing(frame);
     @include respond-to(large) {
-      margin-top: spacing(frame);
+      // margin-top: spacing(frame);
       padding: 0;
       padding-bottom: 1em;
     }
@@ -75,13 +75,6 @@ export default {
       outline: 0;
     }
   }
-}
-#partner, #partners {
-  @include respond-to('large') {
-    min-height: calc(100vh);
-  }
-  h1 { margin-top: 0; }
-  .link-list { columns: 2; }
 }
 #presse, #press {
   @include respond-to('large') {
