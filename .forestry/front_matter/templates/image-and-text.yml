@@ -115,12 +115,3 @@ fields:
     label: English Description
   label: Meta Tags
   description: Meta tags for SEO purposes
-pages:
-- content/rooms/bathroom.md
-- content/rooms/bedroom.md
-- content/rooms/dressing-room.md
-- content/rooms/kitchen.md
-- content/rooms/office.md
-- content/rooms/reception.md
-- content/rooms/sliders.md
-- content/services/design.md

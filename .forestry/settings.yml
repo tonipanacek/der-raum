@@ -7,28 +7,6 @@ sections:
 - type: heading
   label: Content
 - type: directory
-  path: content/rooms
-  label: Räume
-  create: documents
-  match: "**/*"
-  templates:
-  - image-and-text
-- type: directory
-  path: content/about
-  label: Über
-  create: documents
-  match: "**/*"
-  templates:
-  - image-and-text
-  - text-with-links
-- type: directory
-  path: content/services
-  label: Leistung
-  create: documents
-  match: "**/*"
-  templates:
-  - image-and-text
-- type: directory
   path: content/projects
   label: Projekte
   create: documents
@@ -41,6 +19,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - text-with-links
   - text-image-grid
 - type: directory
   path: content/misc

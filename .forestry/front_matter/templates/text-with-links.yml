@@ -36,6 +36,3 @@ fields:
     max: 
     labelField: 
   label: Text and Link Group
-pages:
-- content/about/business-partner.md
-- content/about/press.md
