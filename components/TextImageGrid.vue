@@ -108,6 +108,9 @@ $main-height: calc(100vh - #{spacing(frame)});
   @include respond-to('large') {
     .text > div {
       columns: 2;
+      p {
+        margin: 0;
+      }
     }
   }
 }
