@@ -1,6 +1,6 @@
 ---
 title: Partners
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/perfekter-Einbauschrank-nach-mass-schwarz-hochwertig_sypj1m.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617288436/Architekturpartner-Tischlerei-Schreinerei_qldwyo.jpg
 de_title_of_section: Partner
 en_title_of_section: Partners
 de_text_section: |-
@@ -77,4 +77,5 @@ en_text_section: |-
   [Thomas Bendel Architekt](http://www.thomasbendel.com/)
   [Universal Music](https://www.universal-music.de/)
   [Warburg Pincus](https://www.warburgpincus.com/)
+
 ---
