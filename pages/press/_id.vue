@@ -268,7 +268,7 @@ export default {
       background-size: contain;
     }
     &.portrait {
-      background-size: cover;
+      background-size: contain;
     }
     @media screen and (min-width: 30em) and (orientation: landscape) {
       &.landscape {

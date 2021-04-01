@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     this.setPages(this.$data.pages)
-    this.setPagesPrefix("projects")
+    this.setPagesPrefix("other")
   },
   methods: {
     ...mapActions(["setPages", "setPagesPrefix"])

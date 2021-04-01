@@ -76,13 +76,6 @@ export default {
     }
   }
 }
-#partner, #partners {
-  @include respond-to('large') {
-    min-height: calc(100vh);
-  }
-  h1 { margin-top: 0; }
-  .link-list { columns: 2; }
-}
 #presse, #press {
   @include respond-to('large') {
     min-height: calc(100vh - #{spacing('frame')});

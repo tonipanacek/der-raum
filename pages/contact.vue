@@ -80,7 +80,6 @@ $main-height: calc(100vh - #{spacing(frame)});
       overflow: hidden;
     }
   }
-}
   .text {
     padding: spacing(frame);
     @include respond-to('large') {
@@ -96,6 +95,7 @@ $main-height: calc(100vh - #{spacing(frame)});
         margin-top: 2rem;
       }
     }
+    h1 { margin-top: 0; }
     p, a {
       color: color(dark);
       font-size: .85rem;
@@ -112,4 +112,5 @@ $main-height: calc(100vh - #{spacing(frame)});
       margin-bottom: 1.5rem;
     }
   }
+}
 </style>

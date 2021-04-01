@@ -99,6 +99,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex"
 import Stack from "~/components/Stack"
 import Logo from "~/assets/images/logo.svg"
 import menuItems from "~/content/data/navbar.json"
@@ -114,6 +115,9 @@ export default {
     Stack,
     Logo
   },
+  computed: {
+    ...mapState(["menuOpen"]),
+  },
   methods: {
     isOnline(menuItem) {
       const onlineNavbar = this.menuItems.map(item => item.toLowerCase())
@@ -123,25 +127,42 @@ export default {
       const mq = window.matchMedia( "(max-width: 1024px)" );
       return mq.matches
     },
+    hideMenu(navItems, hamburger, close) {
+      this.unsetMenuOpen();
+      navItems.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+      hamburger.classList.remove('hidden');
+      close.classList.add('hidden');
+    },
+    showMenu(navItems, hamburger, close) {
+      this.setMenuOpen();
+      navItems.classList.add('show');
+      document.body.classList.add('no-scroll');
+      hamburger.classList.add('hidden');
+      close.classList.remove('hidden');
+    },
     toggleMobileMenu() {
       const navItems = document.querySelector('.nav-items');
       const hamburger = document.querySelector('.btn-burger');
       const close = document.querySelector('.btn-close');
-      navItems.classList.toggle('show');
-      document.body.classList.toggle('no-scroll');
-      hamburger.classList.toggle('hidden');
-      close.classList.toggle('hidden');
+      if (this.menuOpen) {
+        this.hideMenu(navItems, hamburger, close);
+      } else {
+        this.showMenu(navItems, hamburger, close);
+      }
     },
+    ...mapActions(['setMenuOpen', 'unsetMenuOpen'])
   },
   watch: {
     $route (to, from) {
-      if (window.matchMedia( "(max-width: 1024px)" ).matches && to.path !== '/') {
-        // const matcher = /(projekte|presse|project|press)/
-        if (to.path.match(/projekte|presse/)) {
-          document.body.classList.remove('no-scroll');
-        } else {
-          this.toggleMobileMenu();
-        }
+      if (window.matchMedia( "(max-width: 1024px)" ).matches) {
+        const navItems = document.querySelector('.nav-items');
+        const hamburger = document.querySelector('.btn-burger');
+        const close = document.querySelector('.btn-close');
+        this.hideMenu(navItems, hamburger, close);
+        // if (to.path === '/' && this.menuOpen) {
+        //   this.toggleMobileMenu();
+        // }
       }
     }
   }
