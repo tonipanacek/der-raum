@@ -59,8 +59,8 @@ de_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>104
   href="mailto:ausbildung@holz-raum.de">ausbildung@holz-raum.de</a></p><h2>Newsletter</h2><p>Melden
   Sie sich <a href="https://der-raum.us17.list-manage.com/subscribe?u=b32a0040ceab7ef9b05439b54&amp;id=e3edf14ae1"
   title="hier">hier</a> für unseren Newsletter an.</p>
-en_main_text: <h2>Studio</h2><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>10437 Berlin</p><h2>Carpentry</h2><p>Roelckestraße
-  152/153</p><p>13086 Berlin</p><h2>Arrange Appointment</h2><p>Monday to friday from
+en_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>10437 Berlin</p><h2>Carpentry</h2><p>Roelckestraße
+  152/153</p><p>13086 Berlin</p><h3>Arrange Appointment</h3><p>Monday to friday from
   10am-6pm</p><p>Saturday 11am-5pm</p><p>030 927 943 501 / +49 176 735 647 42</p><p><a
   href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Applications /
   Apprenticeship</h2><p><a href="mailto:ausbildung@holz-raum.de">ausbildung@holz-raum.de</a></p><h2>Newsletter</h2><p>Sign
