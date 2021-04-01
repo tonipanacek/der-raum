@@ -19,14 +19,23 @@ fields:
   template: test
   label: sections
   description: header/sub text sections for contact page
-- name: main_text
+- name: de_main_text
   type: textarea
   default: ''
   config:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
-  label: Main text
+      format: html-blocks
+  label: DE main text
+- name: en_main_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: EN main text
 pages:
 - content/misc/Contact.md
