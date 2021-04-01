@@ -13,12 +13,6 @@ fields:
   config:
     maxSize: 64
   label: image
-- name: sections
-  type: include
-  config: {}
-  template: test
-  label: sections
-  description: header/sub text sections for contact page
 - name: de_main_text
   type: textarea
   default: ''
