@@ -66,7 +66,7 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287852/H%C3%84USER_2015_vksnka.jpg
 - main_text: The Wallstreet Journal // "A communist era home is overthrown" // 2014
   text_url: https://www.wsj.com/articles/a-communist-era-home-is-overthrown-1418229684
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287955/The_wsj-1_xa85u0.jpg
 image: ''
 image_crop_y: ''
 image_crop_x: ''
