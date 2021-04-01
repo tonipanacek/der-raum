@@ -83,7 +83,7 @@ $main-height: calc(100vh - #{spacing(frame)});
     }
   }
   p, a, ul > li {
-    line-height: 2rem;
+    // line-height: 2rem;
     color: color(dark);
     font-size: .85rem;
   }

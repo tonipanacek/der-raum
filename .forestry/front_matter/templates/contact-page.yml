@@ -26,7 +26,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Main text
 pages:
 - content/misc/Contact.md

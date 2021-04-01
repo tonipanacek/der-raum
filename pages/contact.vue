@@ -92,12 +92,13 @@ $main-height: calc(100vh - #{spacing(frame)});
       color: color(black);
       font-weight: 600;
       @include respond-to('large') {
+        margin-bottom: 1.5rem;
         margin-top: 0;
       }
     }
     p, a {
       display: block;
-      line-height: 2rem;
+      // line-height: 2rem;
       color: color(dark);
       font-size: .85rem;
       &:last-child {
@@ -110,7 +111,7 @@ $main-height: calc(100vh - #{spacing(frame)});
       font-weight: 600;
     }
     .text-group {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
   }
 </style>
