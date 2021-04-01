@@ -39,7 +39,7 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287526/Heinze_eiapbg.png
 - main_text: Häuser Award // "Die 20 Finalisten" // 2016
   text_url: https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287567/H%C3%84USER_2015_rdwe9s.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287866/H%C3%84USER_2016_irpscx.jpg
 - main_text: DDS // "Über das Rendering auf die CNC" // 2016
   text_url: https://www.dds-online.de/allgemein/ueber-das-rendering-auf-die-cnc/#slider-intro-8
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287590/dds-Cover_jkjec2.jpg
