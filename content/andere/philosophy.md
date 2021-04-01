@@ -2,7 +2,7 @@
 title: Philosophy
 de_title: Philosophie
 en_title: Philosophy
-image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616590776/baumhoff-cropped_pxyzyg.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617288006/241120-07-76-1824-Print_kyp5pi.jpg
 de_title_of_section: Philosophie
 en_title_of_section: Philosophy
 de_text_section: |-
@@ -39,4 +39,5 @@ en_text_section: |-
 
   Dieter Baumhoff (Founder and CEO)
   Mirco Baumhoff (Deputy Managing Director)"
+
 ---
