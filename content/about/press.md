@@ -39,18 +39,18 @@ text_and_link_group:
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287526/Heinze_eiapbg.png
 - main_text: Häuser Award // "Die 20 Finalisten" // 2016
   text_url: https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287567/H%C3%84USER_2015_rdwe9s.jpg
 - main_text: DDS // "Über das Rendering auf die CNC" // 2016
   text_url: https://www.dds-online.de/allgemein/ueber-das-rendering-auf-die-cnc/#slider-intro-8
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287590/dds-Cover_jkjec2.jpg
 - main_text: Brandenburgische Architektenkammer // "Ein Wohnmöbel in Holzbauweise"
     // 2015
   text_url: https://www.ak-brandenburg.de/content/haus-wandlitz-ein-wohnm%C3%B6bel-holzbauweise
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287611/AK-Brandenburg_ioymi0.png
 - main_text: The New York Times Magazine // "Just Outside Berlin, a Design and Arts
     Scene Thrives" // 2015
   text_url: https://tmagazine.blogs.nytimes.com/2015/02/25/berlin-brandenburg-design-and-arts-scene-thrives/
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287629/NYT_dlywoq.png
 - main_text: Berliner Morgenpost // "Raumwunder in Wandlitz" // 2015
   text_url: https://www.morgenpost.de/printarchiv/immobilien/article143842007/Raumwunder-in-Wandlitzhtml
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
