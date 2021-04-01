@@ -52,11 +52,11 @@ export default {
 $main-height: calc(100vh - #{spacing(frame)});
 .text-image-grid {
   @include respond-to('large') {
+    display: -ms-grid;
     display: grid;
     column-gap: 2rem;
+    -ms-grid-columns: 1fr 200px 1fr;
     grid-template-columns: 1fr 200px 1fr;
-    grid-auto-rows: fit-content(260px);
-    grid-auto-flow: row dense;
   }
   .image-container {
     @include respond-to('large') {
@@ -66,23 +66,6 @@ $main-height: calc(100vh - #{spacing(frame)});
       overflow: hidden;
     }
   }
-}
-  // .text-image-grid {
-  //   @include respond-to('large') {
-  //     .image-container {
-  //       float: left;
-  //       width: 55ch;
-  //       // margin-right: 2rem;
-  //       margin-bottom: 2rem;
-  //     }
-  //     .text {
-  //       padding-left: 3.5rem;
-  //     }
-  //     .frame > img {
-  //       object-fit: contain;
-  //     }
-  //   }
-  // }
   .text {
     padding: spacing(frame);
     @include respond-to('large') {
@@ -116,4 +99,5 @@ $main-height: calc(100vh - #{spacing(frame)});
       font-weight: 600;
     }
   }
+}
 </style>

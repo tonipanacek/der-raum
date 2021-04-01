@@ -100,16 +100,19 @@ $main-height: calc(100vh - #{spacing(frame)});
 
 #projects-grid {
   @include respond-to('large') {
+    display: -ms-grid;
     display: grid;
     column-gap: 2rem;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: fit-content(260px);
-    grid-auto-flow: row dense;
     .project-link:first-child {
+      grid-column-span: 2;
+      grid-row-span: 2;
       grid-column: span 2;
       grid-row: span 2;
     }
     .portrait {
+      grid-row-span: 2;
       grid-row: span 2;
     }
   }
