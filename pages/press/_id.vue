@@ -79,7 +79,7 @@ export default {
 
       // create context via webpack to map over all pages
       let pages = await require.context(
-        "~/content/about/",
+        "~/content/andere/",
         true,
         /\.md$/
       )
@@ -87,7 +87,7 @@ export default {
         // give back the value of each page context
         return pages(key)
       })
-      const page = pages.find(p => get(p, `attributes.title`) === 'Press' )
+      const page = pages.find(p => get(p, `attributes.en_title`) === 'Press' )
       const allImages = page.attributes.text_and_link_group.map(group => group.image)
       const currentPress = page.attributes.text_and_link_group[id - 1]
       const currentImage = currentPress.image

@@ -1,6 +1,4 @@
 ---
-position: 5
-title: Press
 en_title: Press
 de_title: Presse
 meta_tags:
@@ -67,10 +65,5 @@ text_and_link_group:
 - main_text: The Wallstreet Journal // "A communist era home is overthrown" // 2014
   text_url: https://www.wsj.com/articles/a-communist-era-home-is-overthrown-1418229684
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287955/The_wsj-1_xa85u0.jpg
-image: ''
-image_crop_y: ''
-image_crop_x: ''
-de_description: ''
-en_description: ''
 
 ---

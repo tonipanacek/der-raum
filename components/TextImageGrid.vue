@@ -102,9 +102,6 @@ $main-height: calc(100vh - #{spacing(frame)});
 #partners, #partner {
   h1 { margin-top: 0; }
   a { display: inline; }
-  .frame > img {
-    object-position: bottom;
-  }
   @include respond-to('large') {
     .text > div {
       columns: 2;
