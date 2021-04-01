@@ -6,8 +6,8 @@
       </Frame>
     </div>
     <div class="section-item text">
-      <h1 class="hidden">{{ $ta(page.attributes, 'title') }}</h1>
-      <template v-for="(column, index) in page.attributes.column_header_and_text">
+      <vue-markdown>{{ $ta(page.attributes, 'main_text')}}</vue-markdown>
+      <!-- <template v-for="(column, index) in page.attributes.column_header_and_text">
         <div class="text-group">
           <h2>{{ $ta(column, "group_header") }}</h2>
           <template v-for="subtext in column.group_subtext">
@@ -15,7 +15,7 @@
             <p v-else>{{ $ta(subtext, "text") }}</p>
           </template>
         </div>
-      </template>
+      </template> -->
     </div>
   </Container>
 </template>
@@ -93,12 +93,10 @@ $main-height: calc(100vh - #{spacing(frame)});
       font-weight: 600;
       @include respond-to('large') {
         margin-bottom: 1.5rem;
-        margin-top: 0;
+        margin-top: 2rem;
       }
     }
     p, a {
-      display: block;
-      // line-height: 2rem;
       color: color(dark);
       font-size: .85rem;
       &:last-child {
