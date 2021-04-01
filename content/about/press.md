@@ -60,7 +60,7 @@ text_and_link_group:
 - main_text: Frankfurter Allgemeine Sonntagszeitung // "Das Wohnmöbel von Wandlitz"
     // 2015
   text_url: https://www.faz.net/aktuell/wirtschaft/wohnen/bauen/neue-haeuserneue-haeuser-das-wohnmoebel-von-wandlitz-13862346.html
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287830/FAZ_2015_vud3gt.png
 - main_text: Häuser – Das Magazin // "Häuser des Jahres 2015" // 2015
   text_url: https://www.callwey.de/buecher/haeuser-des-jahres/
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
