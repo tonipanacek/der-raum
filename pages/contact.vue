@@ -91,18 +91,15 @@ $main-height: calc(100vh - #{spacing(frame)});
       color: color(black);
       font-weight: 600;
       @include respond-to('large') {
-        margin-bottom: 1.5rem;
-        margin-top: 2rem;
+        margin-bottom: .5rem;
+        margin-top: 3rem;
       }
     }
     h1 { margin-top: 0; }
     p, a {
       color: color(dark);
       font-size: .85rem;
-      &:last-child {
-        margin: 0;
-        padding: 0;
-      }
+      margin: .5rem 0;
     }
     strong {
       color: color(dark);

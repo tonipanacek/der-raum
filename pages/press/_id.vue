@@ -12,8 +12,7 @@
         </div>
         <div class="image-footer">
           <aside class="caption">
-            <h1>{{ $tp('title') }} <span id="image-count">{{ id }} / {{ length }}</span></h1>
-            <a :href="current.text_url" target="_blank">{{ $ta(current, 'main_text') }}</a>
+            <h1><a :href="current.text_url" target="_blank">{{ $ta(current, 'main_text') }}</a></h1>
           </aside>
           <nav class="image-nav">
             <NuxtLink :to="previousImageLink" v-if="previousImageLink" class="prev">
@@ -313,6 +312,7 @@ export default {
         @include smallCaps;
         color: color(black);
         margin-top: 0;
+        font-weight: 300;
       }
       p {
         @include smallCaps;

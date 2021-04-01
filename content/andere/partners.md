@@ -1,7 +1,5 @@
 ---
 title: Partners
-de_title: Partner
-en_title: Partners
 image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/perfekter-Einbauschrank-nach-mass-schwarz-hochwertig_sypj1m.jpg
 de_title_of_section: Partner
 en_title_of_section: Partners
