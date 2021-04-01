@@ -31,12 +31,12 @@ text_and_link_group:
 - main_text: Architektur Berlin // Building Berlin // "Das grüne Wunder" // 2020
   text_url: https://www.ak-berlin.de/baukultur/publikationen/jahrbuecher/jahrbuch-detailseite/architektur-berlin-building-berlin-9.html
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287454/ARCHITEKTUR-BERLIN_b6re7c.jpg
-- main_text: CUBE Magazin // "Zeitloser Industrielook" // 2018
+- main_text: CUBE Magazin // "Zeitloser Industrielook" // 2020
   text_url: https://www.cube-magazin.de/magazin/berlin/?
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287477/CUBE_eze0ne.png
 - main_text: Heinze ArchitektenAWARD // "Holistic Living" // 2016
   text_url: https://www.heinze.de/architekturobjekt/holistic-living/12647189/
-  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599878/ARCHITEKTUR-BERLIN_o1nt8j.jpg
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287526/Heinze_eiapbg.png
 - main_text: Häuser Award // "Die 20 Finalisten" // 2016
   text_url: https://www.schoener-wohnen.de/architektur/haeuser-awards/38556-bstr-haeuser-award-2016-die-20-finalisten
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1616599876/AD-Magazin_xawane.png
