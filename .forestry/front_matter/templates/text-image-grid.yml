@@ -45,5 +45,6 @@ fields:
   label: english text section
 pages:
 - content/andere/carpentry.md
+- content/andere/philosophy.md
 - content/andere/product.md
 - content/andere/studio.md
