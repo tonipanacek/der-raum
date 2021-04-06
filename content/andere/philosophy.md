@@ -5,23 +5,36 @@ en_title: Philosophy
 image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617288006/241120-07-76-1824-Print_kyp5pi.jpg
 de_title_of_section: Philosophie
 en_title_of_section: Philosophy
-de_text_section: |-
-  Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, durch eine bewusste, achtsame und konstruktive Haltung, unsere Neugier, Motivation und Leidenschaft, architektonische Projekte im Detail zu ergänzen und Wirklichkeit werden zu lassen.
-
-  In unserem Unternehmen sind Grundlagen wie ein transparenter und verantwortungsvoller Produktionsprozess, der Einsatz ökologisch vertretbarer Materialien und faire Arbeitsbedingungen fest verankert. Wir als spezialisierte Manufaktur entwickeln ausschließlich Maßanfertigungenmit einer enorm hohen Langlebigkeit und stehen mit unseren Produkten bewusst gegen Massenproduktion und Einwegprodukte. So leisten wir einen Beitrag zum Ressourcenerhalt und nachhaltigen Konsum.
-
-  Als familiengeführtes Unternehmen in zweiter Generation, haben wir es uns zum Ziel gesetzt, solides Handwerk und Design Hand in Hand gehen zu lassen. Das heißt: Keine Kompromisse und das Machbare bis ins letzte Detail zuhinterfragen. Flache Hierarchien und effiziente Arbeits- und Entscheidungswege ermöglichen uns Projekte schnell, unkompliziert und zuverlässig umzusetzen.
-
-  Dabei garantiert die Verarbeitung des natürlichen und nachwachsenden Rohstoffs Holz einen verantwortungsvollen Umgang mit den bestehenden Ressourcen. Unsere Verarbeitungsstandards, wie optimierte Verfahren für den Zuschnitt gewährleisten die maximale Materialnutzung und somit sehr wenig Verschnitt in der Produktion unserer Möbel.
-
-  Den überwiegenden Teil der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte, 100% ökologische, Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen, was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht.
-
-  Der Bezug des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt die Neupflanzung von Mangroven im Rahmen der [REFORESTATION](edenprojects.org) voranzutreiben, da gerade hier der Bedarf am größten ist.
-
-  Wir leisten unseren ersten Beitrag am ökologischen Gleichgewicht und sind kontinuierlich bestrebt in absehbarer Zukunft gänzlich klimaneutral zu agieren.
-
-  Dieter Baumhoff (Gründer und Geschäftsführer)
-  Mirco Baumhoff (Stellv. Geschäftsführer)
+de_text_section: "Seit mehr als 25 Jahren verstehen wir unsere Aufgabe darin, durch
+  eine bewusste, achtsame und konstruktive Haltung, unsere Neugier, Motivation und
+  Leidenschaft, architektonische Projekte im Detail zu ergänzen und Wirklichkeit werden
+  zu lassen. In unserem Unternehmen sind Grundlagen wie ein transparenter und verantwortungsvoller
+  Produktionsprozess, der Einsatz ökologisch vertretbarer Materialien und faire Arbeitsbedingungen
+  fest verankert. Wir als spezialisierte Manufaktur entwickeln ausschließlich Maßanfertigungenmit
+  einer enorm hohen Langlebigkeit und stehen mit unseren Produkten bewusst gegen Massenproduktion
+  und Einwegprodukte. So leisten wir einen Beitrag zum Ressourcenerhalt und nachhaltigen
+  Konsum.\n\nAls familiengeführtes Unternehmen in zweiter Generation, haben wir es
+  uns zum Ziel gesetzt, solides Handwerk und Design Hand in Hand gehen zu lassen.
+  Das heißt: Keine Kompromisse und das Machbare bis ins letzte Detail zuhinterfragen.
+  Flache Hierarchien und effiziente Arbeits- und Entscheidungswege ermöglichen uns
+  Projekte schnell, unkompliziert und zuverlässig umzusetzen.  \nDabei garantiert
+  die Verarbeitung des natürlichen und nachwachsenden Rohstoffs Holz einen verantwortungsvollen
+  Umgang mit den bestehenden Ressourcen. Unsere Verarbeitungsstandards, wie optimierte
+  Verfahren für den Zuschnitt gewährleisten die maximale Materialnutzung und somit
+  sehr wenig Verschnitt in der Produktion unserer Möbel.\n\nDen überwiegenden Teil
+  der anfallenden Holzreste führen wir sinnvoll in einen Kreislauf zurück und heizen
+  unsere Betriebsstätten mit dem hauseigenen Blockheizkraftwerk. Der eigens generierte,
+  100% ökologische, Solarstrom ermöglicht uns den klimaneutralen Betrieb unserer Maschinen,
+  was in etwa einer CO2 Einsparung von 25 Tonnen CO2 im Jahr entspricht. Der Bezug
+  des Materials, welches wir verarbeiten, geschieht möglichst regional. Der weitgehende
+  Verzicht auf Transporte durch Zwischenhändler spart zusätzliche Umverpackungen und
+  endliche Ressourcen. Auch global leisten wir ein Stück zum Erhalt der natürlichen
+  Ressourcen Holz und haben uns daher dazu entschieden, mit jedem verkauften Produkt
+  die Neupflanzung von Mangroven im Rahmen der [REFORESTATION](edenprojects.org) voranzutreiben,
+  da gerade hier der Bedarf am größten ist.\n\nWir leisten unseren ersten Beitrag
+  am ökologischen Gleichgewicht und sind kontinuierlich bestrebt in absehbarer Zukunft
+  gänzlich klimaneutral zu agieren.\n\nDieter Baumhoff (Gründer und Geschäftsführer)\nMirco
+  Baumhoff (Stellv. Geschäftsführer)"
 en_text_section: |-
   For more than 25 years, we see our mission to add detail to architectural projects and realize them through a conscious, mindful and constructive attitude, our curiosity, motivation and passion.
 
