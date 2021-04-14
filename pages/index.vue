@@ -10,7 +10,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { get, sortBy } from "lodash"
+import { get, sortBy, orderBy } from "lodash"
 import seo from '~/content/data/seo'
 import Container from "~/components/Container"
 import ProjectsList from "~/components/ProjectsList"
@@ -35,7 +35,9 @@ export default {
       return allPages(key)
     })
     pages = pages.filter(page => page.attributes.online)
+    // pages = orderBy(pages, [page => get(page, 'attributes.featured_project')], ['desc'])
     pages = sortBy(pages, [page => get(page, 'attributes.group'), page => get(page, 'attributes.group_position')])
+    pages = orderBy(pages, [page => get(page, 'attributes.featured_project')], ['desc'])
     return {
       pages,
       seo
