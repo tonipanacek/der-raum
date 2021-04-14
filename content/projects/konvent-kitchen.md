@@ -1,7 +1,7 @@
 ---
 online: true
-group:
-group_position:
+group: 0
+group_position: 0
 orientation: landscape
 title: Konvent Kitchen
 architect_name: ''
