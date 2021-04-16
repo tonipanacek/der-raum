@@ -2,7 +2,7 @@
 title: Carpentry
 de_title: Tischlerei
 en_title: Carpentry
-image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1614542167/tischlerei_mj0q3t.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1618554042/Tischlerei-Schreinerei-Platten-Holz-Werkstatt_qkhgl2.jpg
 de_title_of_section: Tischlerei
 en_title_of_section: Carpentry
 de_text_section: |-
@@ -21,4 +21,5 @@ en_text_section: |-
   The finishing of surfaces such as veneer, oil and varnish work is carried out exclusively by qualified and experienced employees of our own joinery. All assembly activities are mapped by us to ensure the full quality of our performance from start to finish.
 
   Handicraft means responsibility for us. That's why we teach our own apprentices high quality workmanship and solid craftsmanship skills. The prospective carpenters are often taken on in the company after their training and thus contribute to our quality standards in the years to come. We have already proudly received training awards for our training."
+
 ---
