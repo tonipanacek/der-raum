@@ -2,7 +2,7 @@
 title: Carpentry
 de_title: Tischlerei
 en_title: Carpentry
-image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1618554042/Tischlerei-Schreinerei-Platten-Holz-Werkstatt_qkhgl2.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1618572684/Tischlerei-Schreinerei-Platten-Holz-Werkstatt-Handwerk_z1acz5.jpg
 de_title_of_section: Tischlerei
 en_title_of_section: Carpentry
 de_text_section: |-
