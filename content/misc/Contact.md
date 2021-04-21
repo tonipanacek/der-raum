@@ -55,7 +55,7 @@ main_text: "<p></p>"
 de_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>10437 Berlin</p><h2>Tischlerei</h2><p>Roelckestraße
   152/153</p><p>13086 Berlin</p><h3>Beratung nach Vereinbarung</h3><p>Montag bis Freitag
   10-18 uhr</p><p>Samstag 11-17 uhr</p><p>030 927 943 501 / +49 176 735 647 42</p><p><a
-  href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Bewerbungen / Ausbildung</h2><p>Akuell
+  href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Jobs / Ausbildung</h2><p>Akuell
   suchen wir Verstärkung für die Bereiche:</p><p><strong>Arbeitsvorbereitung (Konstruktion)
   / Projektleitung /</strong></p><p><strong>Arbeitsvorbereitung (CAM/CNC) /</strong>
   <strong>Visualisierung</strong></p><p>Azubi-Bewerbungen bitte erst wieder für 2022</p><p><a
