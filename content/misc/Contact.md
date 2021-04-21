@@ -58,7 +58,7 @@ de_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>104
   href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Jobs / Ausbildung</h2><p>Akuell
   suchen wir Verstärkung für die Bereiche:</p><p><strong>Arbeitsvorbereitung (Konstruktion)
   / Projektleitung /</strong></p><p><strong>Arbeitsvorbereitung (CAM/CNC) /</strong>
-  <a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1617881092/kueche-nach-mass-kuechenzeile-hochwertig_tnjuti.jpg"
+  <a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1619013568/Stellenausschreibung_Visualisierung_cvclyy.pdf"
   title="Visualisierung"><strong>Visualisierung</strong></a></p><p>Azubi-Bewerbungen
   bitte erst wieder für 2022</p><p><a href="mailto:ausbildung@holz-raum.de">ausbildung@holz-raum.de</a></p><h2>Newsletter</h2><p>Melden
   Sie sich <a href="https://der-raum.us17.list-manage.com/subscribe?u=b32a0040ceab7ef9b05439b54&amp;id=e3edf14ae1"
