@@ -7,6 +7,9 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: baunetz id // "Marmor, Stein und Eisen" // 2021
+  text_url: https://www.baunetz-id.de/stories/marmor-stein-und-eisen-20060016
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1619433800/Baunetz_id_Der_Raum-1_xthkb0.jpg
 - main_text: md // "In der Küche aus der Krise" // 2021
   text_url: https://www.konradin-service.de/pdfarchiv7/share/md_2021-004_96.pdf#page=28
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617281478/md_j5cnxb.jpg
