@@ -2,7 +2,7 @@
 title: Studio
 de_title: Studio
 en_title: Studio
-image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947617/DER-RAUM-Kueche-Holz-Lamellen-Kitchen_njsnwg_u2ydip.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1619443519/Studio-Tischlerei-Schreinerei-Showroom_kxsjgj.jpg
 de_title_of_section: Studio
 en_title_of_section: Studio
 de_text_section: |-
@@ -21,4 +21,5 @@ en_text_section: |-
   In sketches, drafts and precise visualizations, the wishes and requirements of our clients can be developed, refined and shaped from the first idea to the last detail. This is where the advantage of well-founded technical expertise of our well-coordinated team and spatial-haptic experience in one place becomes apparent.
 
   We see ourselves as an architectural partner by picking up our partners where they need us, from the consultation to the customized solution in the installation.
+
 ---
