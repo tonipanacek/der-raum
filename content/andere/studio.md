@@ -2,7 +2,7 @@
 title: Studio
 de_title: Studio
 en_title: Studio
-image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1619443519/Studio-Tischlerei-Schreinerei-Showroom_kxsjgj.jpg
+image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1619512622/STUDIO-Tischlerei-Beratung-Showroom-Tisch_stiyzq.jpg
 de_title_of_section: Studio
 en_title_of_section: Studio
 de_text_section: |-
