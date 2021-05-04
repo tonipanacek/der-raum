@@ -5,7 +5,7 @@ featured_project: false
 group: 3
 group_position: 1
 online: true
-main_image: https://res.cloudinary.com/dwvtvuml8/image/upload/q_auto,f_auto,dpr_auto/v1584973021/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947658/schwarzer-Einbauschrank-raumhoch-perfekt_dbjupm_vw39cl.jpg
 images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947651/Loft-Kueche-schwarz-Massivholz-Einbauschrank_mixlvq_h1bbp8.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947635/Kochinsel-Kueche-Edel-schwarz-schubkasten_javn0c_n1ci8w.jpg
