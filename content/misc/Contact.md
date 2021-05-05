@@ -58,7 +58,7 @@ de_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>104
   href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Jobs / Ausbildung</h2><p>Akuell
   suchen wir Verstärkung für die Bereiche:</p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1619111714/Visualisierung-Bauzeichner_srz8si.jpg"
   title="Visualisierung"><strong>Visualisierung</strong></a></p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1620217518/0001_puzs8a.jpg"
-  title="CNC-Fahrer*in"><strong>CNC-Fahrer*in</strong></a></p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1619529703/Projektleitung_Arbeitsvorbereitung_oqmmil.jpg"
+  title="CNC-Fahrer*in"><strong>CNC-Bediener*in/-Fahrer*in</strong></a></p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1619529703/Projektleitung_Arbeitsvorbereitung_oqmmil.jpg"
   title="Arbeitsvorbereitung (CAD/Projektleitung)"><strong>Arbeitsvorbereitung (CAD/Projektleitung)</strong></a></p><p>Azubi-Bewerbungen
   bitte erst wieder für 2022</p><p><a href="mailto:ausbildung@holz-raum.de">ausbildung@holz-raum.de</a></p><h2>Newsletter</h2><p>Melden
   Sie sich <a href="https://der-raum.us17.list-manage.com/subscribe?u=b32a0040ceab7ef9b05439b54&amp;id=e3edf14ae1"
