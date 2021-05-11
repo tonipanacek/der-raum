@@ -57,8 +57,8 @@ de_main_text: <h1>Studio</h1><p>Felix Lühring</p><p>Dunckerstraße 15</p><p>104
   10-18 uhr / Samstag 11-17 uhr</p><p>030 927 943 501 / +49 176 735 647 42</p><p><a
   href="mailto:kontakt@der-raum.de">kontakt@der-raum.de</a></p><h2>Jobs / Ausbildung</h2><p>Akuell
   suchen wir Verstärkung für die Bereiche:</p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1619111714/Visualisierung-Bauzeichner_srz8si.jpg"
-  title="Visualisierung"><strong>Visualisierung</strong></a></p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1620309941/0002_qzaipw.jpg"
-  title="CNC-Bediener*in/Fahrer*in"><strong>CNC-Bediener*in/-Fahrer*in</strong></a></p><p><a
+  title="Visualisierung"><strong>Visualisierung</strong></a></p><p><a href="https://res.cloudinary.com/der-raum-v2/image/upload/v1620733343/CNC-Fahrer-Bediener_cpkbb0.jpg"
+  title="CNC-Bediener*in"><strong>CNC-Bediener*in/-Fahrer*in</strong></a></p><p><a
   href="https://res.cloudinary.com/der-raum-v2/image/upload/v1620721110/0001_vyusdx.jpg"
   title="Beratung / Verkauf"><strong>Beratung / Verkauf</strong></a></p><p>Azubi-Bewerbungen
   bitte erst wieder für 2022</p><p><a href="mailto:ausbildung@holz-raum.de">ausbildung@holz-raum.de</a></p><h2>Newsletter</h2><p>Melden
