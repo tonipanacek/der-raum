@@ -33,7 +33,7 @@ text_and_link_group:
 - main_text: Beton.org // "Perfekte Kombination" // 2020
   text_url: https://www.beton.org/service/presse/details/perfekte-kombination/
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617287427/Beton_r9zyis.png
-- main_text: Architektur Berlin // Building Berlin 9 // "Das grüne Wunder" // 2020
+- main_text: Architektur Berlin Building Berlin 9 // "Das grüne Wunder" // 2020
   text_url: https://www.ak-berlin.de/baukultur/publikationen/jahrbuecher/jahrbuch-detailseite/architektur-berlin-building-berlin-9.html
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1621235984/ARCHITEKTUR-BERLIN_ppkmme.jpg
 - main_text: CUBE Magazin // "Zeitloser Industrielook" // 2020
