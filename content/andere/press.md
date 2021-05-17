@@ -7,6 +7,10 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: Architektur Berlin // Building Berlin // "Penthouse am Strausberger Platz"
+    // 2021
+  text_url: https://www.braun-publishing.ch/de/architektur/architektur-berlin-bd-10-building-berlin-vol-10.html
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1621235819/ARCHITEKTUR-BERLIN2_mo7laq.jpg
 - main_text: md // "In der Küche aus der Krise" // 2021
   text_url: https://www.konradin-service.de/pdfarchiv7/share/md_2021-004_96.pdf#page=28
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617281478/md_j5cnxb.jpg
