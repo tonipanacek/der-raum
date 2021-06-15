@@ -3,9 +3,9 @@ title: 1 Unze
 orientation: landscape
 featured_project: false
 group: 5
-group_position: 1
+group_position: 2
 online: true
-main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948534/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji_hu1lnh.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948533/Kueche-Kochinsel-Einbauschrank-Loft-schwarz_f0nzpy_qt2rcr.jpg
 images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948534/Kueche-Mittelblock-Messing-Einbauschrank-Loft_ixi4ji_hu1lnh.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948533/Kueche-Kochinsel-Gold-Messing-Einbauschrank-Loft_iarblh_vnvw20.jpg
