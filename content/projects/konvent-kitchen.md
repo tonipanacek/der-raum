@@ -6,7 +6,7 @@ orientation: landscape
 title: Konvent Kitchen
 architect_name: ''
 featured_project: false
-main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617880989/holz-lamellen-wandpaneele-design-architektur_zvpunl.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617881014/Spuelbecken-Stein-Holz-Nische-Lamellen-Design-Handwerk_fpcqml.jpg
 images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617880933/Einbaukueche-eiche-Naturstein-holz-edel_mz8ic4.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947647/kuechenzeile-einbau-nach-mass-holz-stein_dt8yzx_snneej.jpg
