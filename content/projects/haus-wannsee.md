@@ -5,9 +5,9 @@ orientation: landscape
 featured_project: true
 group: 
 group_position: 
-main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947663/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_s4tenk_zvmly1.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1623749301/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_vdvgqt.jpg
 images:
-- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947663/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_s4tenk_zvmly1.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1623749222/Architekturpartner-Tischlerei-Innenausbau-hochwertig-individuell_qhgzsf.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947639/Kueche-Kochinsel-Eiche-Furnier-Beton-modern_vngigc_fvw3jv.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947638/Kueche-Eiche-Furnier-Beton-Edelstahl-Tischler_jgeyre_v3rhdp.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947637/Kueche-Arbeitsplatte-Edelstahl-Detail_ozdmhr_c3c2q7.jpg
