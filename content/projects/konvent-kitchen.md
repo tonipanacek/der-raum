@@ -1,11 +1,11 @@
 ---
 online: true
-group: 0
-group_position: 0
+group: 4
+group_position: 4
 orientation: landscape
 title: Konvent Kitchen
 architect_name: ''
-featured_project: true
+featured_project: false
 main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947620/Einbaukueche-eiche-Naturstein-holz-edel_zzbe1f_z06l60.jpg
 images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1617880933/Einbaukueche-eiche-Naturstein-holz-edel_mz8ic4.jpg

@@ -1,8 +1,8 @@
 ---
-title: Haus Wannsee
-online: false
+title: Bonauer Bölling Architekten
+online: true
 orientation: landscape
-featured_project: false
+featured_project: true
 group: 
 group_position: 
 main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947663/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_s4tenk_zvmly1.jpg
@@ -19,8 +19,8 @@ images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947628/EInbauschrank-Treppe-Umbau-Wandverkleidung-Eiche-Holz-Schreiner_vietoy_yg2vlg.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947631/Haus-Wannsee-Tischler-Schreiner-Villa_sglt3t_ekz3qj.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614947629/Einbauschrank-wandhoch-Eiche-Furnier-Fugenlos_ltjyc5_ge72il.jpg
-en_title: Haus Wannsee
-de_title: Haus Wannsee
+en_title: Bonauer Bölling Architekten // Haus Wannsee
+de_title: Bonauer Bölling Architekten // Haus Wannsee
 en_description: 'Bonauer Bölling Architekten // Photos: Markus Bonauer'
 de_description: 'Bonauer Bölling Architekten // Fotos: Markus Bonauer'
 meta_tags:
