@@ -1,7 +1,7 @@
 ---
 online: true
-group: 4
-group_position: 3
+group: 5
+group_position: 2
 orientation: landscape
 title: Kubus
 architect_name: Thomas Bendel Architekt

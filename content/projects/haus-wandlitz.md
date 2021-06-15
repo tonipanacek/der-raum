@@ -1,9 +1,9 @@
 ---
 title: Haus Wandlitz
-online: false
+online: true
 orientation: landscape
 featured_project: false
-group: 2
+group: 4
 group_position: 2
 main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948397/wohnbereich-kaminzimmer-Einbauschrank_eitk6y_znuwff.jpg
 images:
