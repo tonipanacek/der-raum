@@ -7,6 +7,9 @@ meta_tags:
   de_description: Wir pflegen eine bewusste, achtsame und konstruktive Haltung
   en_description: We maintain a conscious, mindful and constructive attitude
 text_and_link_group:
+- main_text: baunetz id // "Die Raumausstatter" // 2021
+  text_url: https://www.baunetz-id.de/stories/die-raumausstatter-20111015
+  image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1624351428/baunetz_d45y0q.png
 - main_text: CUBE Magazin // "Leben unter freiem Himmel" // 2021
   text_url: https://www.cube-magazin.de/pub/berlin/2021_02/10/
   image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1624021373/CUBE_02_21_tfacw5.png
