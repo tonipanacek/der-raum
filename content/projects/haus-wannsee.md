@@ -2,9 +2,9 @@
 title: Haus Wannsee
 online: true
 orientation: landscape
-featured_project: true
-group: 
-group_position: 
+featured_project: false
+group: 1
+group_position: 2
 main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1623749301/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_vdvgqt.jpg
 images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1623749301/Villa-Innenausbau-Wannsee-Luxus-Architekturpartner_vdvgqt.jpg
