@@ -1,11 +1,11 @@
 ---
 online: true
-group: 5
-group_position: 3
+group: 
+group_position: 
 orientation: landscape
 title: Chisana
 architect_name: ''
-featured_project: false
+featured_project: true
 main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626098905/Kueche-nach-mass-Einbauschrank-Yogabereich-Living_a8rrr3.jpg
 images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Kueche-nach-mass-Einbauschrank-Yogabereich-Living_dwkbjz.jpg
