@@ -3,7 +3,7 @@ title: Europaküche
 online: true
 orientation: landscape
 featured_project: false
-group: 1
+group: 5
 group_position: 2
 main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1614948032/002-kueche_Loft-schwarz-L-foermig_m43iej_ffnnqq.jpg
 images:
