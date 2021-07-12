@@ -17,6 +17,7 @@ images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099006/Schlafbereich-Rattangeflecht-Einbauschrank-Raumhoch-nach-mass_p7wdo0.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Einbauschrank-Rattangeflecht_lackiert-Detail_atrzhp.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099018/Einbauschrank-flur-schrank-weiss-lackiert_etk2wo.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099080/Privatwohnung_Flurbereich-Garderobe-Sitzpolster-lackiert_gzg5jf.jpg
 en_title: Chisana
 de_title: Chisana
 en_description: ''
