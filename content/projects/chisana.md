@@ -23,9 +23,9 @@ de_title: Chisana
 en_description: ''
 de_description: ''
 meta_tags:
-  de_title: ''
-  en_title: ''
-  de_description: ''
-  en_description: ''
+  de_title: Tiny Apartment / Studio in Berlin
+  en_title: Tiny Apartment / Studio in Berlin
+  de_description: Tiny Apartment / Studio in Berlin
+  en_description: Tiny Apartment / Studio in Berlin
 
 ---
