@@ -6,12 +6,11 @@ orientation: landscape
 title: Chisana
 architect_name: ''
 featured_project: true
-main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626098905/Kueche-nach-mass-Einbauschrank-Yogabereich-Living_a8rrr3.jpg
+main_image: https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099034/Privatwohnung_Wohnbereich_Kuechenblock_Yogabereich_Sitzecke_pwtp0f.jpg
 images:
-- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Kueche-nach-mass-Einbauschrank-Yogabereich-Living_dwkbjz.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099034/Privatwohnung_Wohnbereich_Kuechenblock_Yogabereich_Sitzecke_pwtp0f.jpg
+- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Kueche-nach-mass-Einbauschrank-Yogabereich-Living_dwkbjz.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Privatwohnung_Wohnbereich_Yogabereich_Wiener-Geflecht_Rattangeflecht_aufgezogene-Tapete_vd0hpd.jpg
-- https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Sitzecke-Podest-Wohnungsausbau-Innenausbau-modern-hochwertig_jj9x0v.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099035/Privatwohnung_Wohnbereich_Kueche-nach-mass-Schreiner-Tischler_cacb1g.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099036/Einbauschrank-tiny-appartment-gruen-rattan_lmq9dw.jpg
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099006/Schlafbereich-Rattangeflecht-Einbauschrank-Raumhoch-nach-mass_p7wdo0.jpg
