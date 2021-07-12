@@ -19,8 +19,8 @@ images:
 - https://res.cloudinary.com/der-raum-v2/image/upload/q_auto,f_auto,dpr_auto/v1626099080/Privatwohnung_Flurbereich-Garderobe-Sitzpolster-lackiert_gzg5jf.jpg
 en_title: Chisana
 de_title: Chisana
-en_description: ''
-de_description: ''
+en_description: 'Photos: Maximilian Gödecke'
+de_description: 'Fotos: Maximilian Gödecke'
 meta_tags:
   de_title: Tiny Apartment / Studio in Berlin
   en_title: Tiny Apartment / Studio in Berlin
